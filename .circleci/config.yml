@@ -188,22 +188,8 @@ jobs:
         command: | 
           echo "$DOCKERHUB_PASSWORD" | docker login --username $DOCKERHUB_USERNAME --password-stdin
           docker push usdotfhwaops/v2xhubamd:carma-streets
-workflows:
-  version: 2
-  build:
-    jobs:
-      - docker_build&push_develop:
-          filters:
-            branches:
-              only: develop
-      - docker_build&push:
-          filters:
-           branches:
-              ignore: develop
-      - build
-workflows:
-jobs:
-  build:
+  Doxygen_Githubpages:
+  machine:
     docker:
       - image: circleci/python:3.8.1
     working_directory: ~/repo
@@ -277,4 +263,18 @@ jobs:
                 -H "X-Auth-Key: $CF_AUTH_KEY" \
                 -H "Content-Type: application/json" \
                 --data '{"purge_everything":true}'
-            fi 
+            fi
+workflows:
+  version: 2
+  build:
+    jobs:
+      - docker_build&push_develop:
+          filters:
+            branches:
+              only: develop
+      - docker_build&push:
+          filters:
+           branches:
+              ignore: develop
+      - build            
+            
