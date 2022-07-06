@@ -1,3 +1,9 @@
+| CicleCI Build Status | Sonar Code Quality | Dockerhub Builds |Scheduling service | message service | intersection_model |
+|----------------------|--------------------|------------------|--------------------|-----------------|-------------------|
+                                            
+[![CircleCI](https://circleci.com/gh/usdot-fhwa-stol/carma-streets.svg?style=svg)](https://circleci.com/gh/usdot-fhwa-stol/carma-streets) | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=usdot-fhwa-stol_carma-streets&metric=alert_status)](https://sonarcloud.io/dashboard?id=usdot-fhwa-stol_carma-streets)       | [![Docker Automated build](https://img.shields.io/docker/automated/usdotfhwastoldev/message_services?color=%232496ED)]( https://dockerbuildbadges.quelltext.eu/status.svg?organization=usdotfhwastoldev&repository=message_services)        | [![Docker Automated build](https://img.shields.io/docker/automated/usdotfhwastoldev/scheduling_service?color=%232496ED)]( https://dockerbuildbadges.quelltext.eu/status.svg?organization=usdotfhwastoldev&repository=scheduling_service)        | [![Docker Automated build](https://img.shields.io/docker/automated/usdotfhwastoldev/intersection_model?color=%232496ED)]( https://dockerbuildbadges.quelltext.eu/status.svg?organization=usdotfhwastoldev&repository=intersection_model)
+
+
 # carma-streets
 
 CARMA Streets is a component of CARMA ecosystem, which enables such a coordination among different transportation users. This component provides an interface for CDA participants to interact with the road infrastructure. CARMA Streets is also an edge-computing unit that improves the efficiency and performance of the Transportation Systems Management and Operations (TSMO) strategies.
