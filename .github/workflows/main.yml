@@ -22,15 +22,12 @@ jobs:
       # 3. Create the doxygen pages.
       - name: Create the doxygen
         run: | 
-          cd kafka_clients
-          mkdir build && cd build
-          cmake -DOPTION_BUILD_DOCS=ON ..
-          make api-docs
+          bash build.sh 
           ls -la
           pwd
       - name: Moving Files
         run: |
-          mv ./kafka_clients/build/docs/api-docs ./api
+          mv ./kafka_client/build/docs/api-docs ./api
 
       # Deploy to GitHub Pages
       - name: Deploy
