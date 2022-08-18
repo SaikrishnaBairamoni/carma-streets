@@ -1,0 +1,40 @@
+name: Doxygen
+
+on:
+  repository_dispatch:
+  push:
+    branches:
+      - develop
+      - gh-pages
+
+# In that case do the job 'make_and_deploy_doxygen'
+jobs:
+  make_and_deploy_doxygen:
+    runs-on: ubuntu-18.04
+    # which needs the following steps to be executed:
+    steps:
+      # 1. Checkout current branch of GitHub repository.
+      - name: Checkout current branch
+        uses: actions/checkout@v2
+      # 2. Install doxygen and its auxiliary components.
+      - name: Install doxygen and latex components
+        run: sudo apt-get update; sudo apt-get install -y doxygen graphviz texlive-full cmake git build-essential libboost1.65-all-dev curl unzip gcc-7 g++-7 autotools-dev automake qtbase5-dev qtbase5-dev-tools libqhttpengine-dev libssl-dev libpugixml-dev libgeographic-dev sqlite3 libsqlite3-dev python3-pip
+      # 3. Create the doxygen pages.
+      - name: Create the doxygen
+        run: | 
+          cd kafka_clients
+          mkdir build && cd build
+          cmake -DOPTION_BUILD_DOCS=ON ..
+          make api-docs
+          ls -la
+          pwd
+      - name: Moving Files
+        run: |
+          mv ./kafka_clients/build/docs/api-docs ./api
+
+      # Deploy to GitHub Pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
