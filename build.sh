@@ -23,35 +23,35 @@ cd /home/carma-streets/streets_utils/streets_service_base
 mkdir build
 cd /home/carma-streets/streets_utils/streets_service_base/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
-make
+make api-docs
 make install
 
 cd /home/carma-streets/streets_utils/streets_vehicle_list
 mkdir build
 cd /home/carma-streets/streets_utils/streets_vehicle_list/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
-make
+make api-docs
 make install
 
 cd /home/carma-streets/streets_utils/streets_signal_phase_and_timing
 mkdir build
 cd /home/carma-streets/streets_utils/streets_signal_phase_and_timing/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
-make
+make api-docs
 make install
 
 cd /home/carma-streets/streets_utils/streets_api/intersection_client_api
 mkdir build
 cd /home/carma-streets/streets_utils/streets_api/intersection_client_api/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
-make
+make api-docs
 make install
 
 cd /home/carma-streets/streets_utils/streets_vehicle_scheduler
 mkdir build
 cd /home/carma-streets/streets_utils/streets_vehicle_scheduler/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
-make
+make api-docs
 make install
 
 cd /home/carma-streets/streets_utils/streets_api/intersection_server_api
@@ -64,7 +64,7 @@ cd /home/carma-streets/kafka_clients
 mkdir build
 cd /home/carma-streets/kafka_clients/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
-make
+make api-docs
 make install
 
 
@@ -72,30 +72,30 @@ cd /home/carma-streets/scheduling_service
 mkdir build
 cd /home/carma-streets/scheduling_service/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
-make
+make api-docs
 
 cd /home/carma-streets/intersection_model
 mkdir build
 cd /home/carma-streets/intersection_model/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
-make
+make api-docs
 
 cd /home/carma-streets/message_services
 mkdir build
 cd /home/carma-streets/message_services/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
-make
+make api-docs
 
 
 cd /home/carma-streets/signal_opt_service
 mkdir build
 cd /home/carma-streets/signal_opt_service/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
-make
+make api-docs
 
 cd /home/carma-streets/tsc_client_service
 mkdir build
 cd /home/carma-streets/tsc_client_service/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
-make
+make api-docs
 
