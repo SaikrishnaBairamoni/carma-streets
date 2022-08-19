@@ -50,4 +50,4 @@ jobs:
             mv html api-doc
             git add api-doc/**
             git commit -am "Generated API doc"
-            git push -f mine gh-pages:gh-pages
+            git push -f mine gh-pages    
