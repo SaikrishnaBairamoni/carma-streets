@@ -18,29 +18,30 @@
 set -e
 
 COVERAGE_FLAGS="-g --coverage -fprofile-arcs -ftest-coverage"
-
-cd /home/carma-streets/streets_utils/streets_service_base
+ls -la
+pwd
+cd /streets_utils/streets_service_base
 mkdir build
-cd /home/carma-streets/streets_utils/streets_service_base/build
+cd /ststreets_service_base/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
 make api-docs
 make install
 
-cd /home/carma-streets/streets_utils/streets_vehicle_list
+cd /streets_utils/streets_vehicle_list
 mkdir build
-cd /home/carma-streets/streets_utils/streets_vehicle_list/build
+cd /streets_utils/streets_vehicle_list/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
 make api-docs
 make install
 
-cd /home/carma-streets/streets_utils/streets_signal_phase_and_timing
+cd /streets_utils/streets_signal_phase_and_timing
 mkdir build
-cd /home/carma-streets/streets_utils/streets_signal_phase_and_timing/build
+cd /streets_utils/streets_signal_phase_and_timing/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
 make api-docs
 make install
 
-cd /home/carma-streets/streets_utils/streets_api/intersection_client_api
+cd /streets_utils/streets_api/intersection_client_api
 mkdir build
 cd /home/carma-streets/streets_utils/streets_api/intersection_client_api/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
