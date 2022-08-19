@@ -22,7 +22,7 @@ ls -la
 pwd
 cd /home/runner/work/carma-streets/carma-streets/streets_utils/streets_service_base
 mkdir build
-cd /home/runner/work/carma-streets/carma-streets/ststreets_service_base/build
+cd /home/runner/work/carma-streets/carma-streets/streets_service_base/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
 make api-docs
 make install
@@ -69,32 +69,32 @@ make api-docs
 make install
 
 
-cd /home/carma-streets/scheduling_service
+cd /home/runner/work/carma-streets/carma-streets/scheduling_service
 mkdir build
 cd /home/carma-streets/scheduling_service/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
 make api-docs
 
-cd /home/carma-streets/intersection_model
+cd /home/runner/work/carma-streets/carma-streets/intersection_model
 mkdir build
 cd /home/carma-streets/intersection_model/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
 make api-docs
 
-cd /home/carma-streets/message_services
+cd /home/runner/work/carma-streets/carma-streets/message_services
 mkdir build
 cd /home/carma-streets/message_services/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
 make api-docs
 
 
-cd /home/carma-streets/signal_opt_service
+cd /home/runner/work/carma-streets/carma-streets/signal_opt_service
 mkdir build
 cd /home/carma-streets/signal_opt_service/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
 make api-docs
 
-cd /home/carma-streets/tsc_client_service
+cd /home/runner/work/carma-streets/carma-streets/tsc_client_service
 mkdir build
 cd /home/carma-streets/tsc_client_service/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
