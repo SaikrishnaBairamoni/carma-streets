@@ -39,17 +39,17 @@ jobs:
       - run:
           name: Create the Doxygen
           command: |
-            #git clone -o mine git@github.com:shundhammer/libyui.git
-            git clone -b develop -o mine https://github.com/SaikrishnaBairamoni/carma-streets.git
-            cd carma-streets
+            git clone -o mine git@github.com:shundhammer/libyui.git
+            #git clone -b develop -o mine https://github.com/SaikrishnaBairamoni/carma-streets.git
+            cd libyui
             git checkout gh-pages
             ls -la
             pwd
-            make -C carma-streets -f Makefile.repo doc
+            make -C libyui -f Makefile.repo doc
             ls -la
             pwd
             rm -rf api-doc
-            mv carma-steets/build/doc/html api-doc
+            mv libyui/build/doc/html api-doc
             git add api-doc/**
             git commit -am "Generated API doc"
             git push -f mine gh-pages:gh-pages
