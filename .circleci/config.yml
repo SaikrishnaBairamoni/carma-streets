@@ -43,4 +43,4 @@ jobs:
             # Perfom the commit
             git commit -m "moved html from develop"
             # And push
-            git push 
+            git push https://${GIT_TOKEN}@github.com/SaikrishnaBairamoni/carma-streets.git
