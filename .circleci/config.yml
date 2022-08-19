@@ -40,6 +40,8 @@ jobs:
           name: Create the Doxygen
           command: |
             #git clone -o mine git@github.com:shundhammer/libyui.git
+            git config --global user.email "Saikrishna.Bairamoni@leidos.com"
+            git config --global user.name "SaikrishnaBairamoni"
             git clone -b develop -o mine https://github.com/SaikrishnaBairamoni/carma-streets.git
             cd carma-streets
             mkdir api-doc
