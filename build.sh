@@ -22,7 +22,7 @@ ls -la
 pwd
 cd /home/runner/work/carma-streets/carma-streets/streets_utils/streets_service_base
 mkdir build
-cd /home/runner/work/carma-streets/carma-streets/streets_service_base/build
+cd /home/runner/work/carma-streets/carma-streets/streets_utils/streets_service_base/build
 cmake -DOPTION_BUILD_DOCS=ON -DCMAKE_CXX_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_C_FLAGS="${COVERAGE_FLAGS}" -DCMAKE_BUILD_TYPE="Debug" ..
 make api-docs
 make install
