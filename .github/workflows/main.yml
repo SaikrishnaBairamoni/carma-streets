@@ -19,17 +19,30 @@ jobs:
       # 2. Install doxygen and its auxiliary components.
       - name: Install doxygen and latex components
         run: sudo apt-get update; sudo apt-get install -y doxygen graphviz texlive-full cmake git build-essential libboost1.65-all-dev curl unzip gcc-7 g++-7 autotools-dev automake qtbase5-dev qtbase5-dev-tools libqhttpengine-dev libssl-dev libpugixml-dev libgeographic-dev sqlite3 libsqlite3-dev python3-pip   
+      - name: spg
+        run: git clone https://github.com/gabime/spdlog.git
+             cd spdlog/
+             mkdir build && cd build
+             cmake .. && make -j
+             make install && \
+             git clone  https://github.com/Tencent/rapidjson
+             cd rapidjson/
+             mkdir build && cd build
+             cmake .. && make -j
+             make install && \
+             ls -a      
+      
       # 3. Create the doxygen pages.
       - name: Create the doxygen
         run: | 
-          #bash build.sh
-          mkdir api-docs
-          mv html api-docs
+          bash build.sh
+          #mkdir api-docs
+          #mv html api-docs
           ls -la
           pwd
       - name: Moving Files
         run: |
-          mv ./api-docs ./api
+          mv ./kafka_client/build/docs/api-docs ./api
 
       # Deploy to GitHub Pages
       - name: Deploy
