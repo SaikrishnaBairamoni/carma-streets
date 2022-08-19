@@ -1,0 +1,191 @@
+\hypertarget{classmessage__services_1_1workers_1_1mobilitypath__worker}{}\doxysection{message\+\_\+services\+::workers\+::mobilitypath\+\_\+worker Class Reference}
+\label{classmessage__services_1_1workers_1_1mobilitypath__worker}\index{message\_services::workers::mobilitypath\_worker@{message\_services::workers::mobilitypath\_worker}}
+
+
+{\ttfamily \#include $<$mobilitypath\+\_\+worker.\+h$>$}
+
+
+
+Inheritance diagram for message\+\_\+services\+::workers\+::mobilitypath\+\_\+worker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classmessage__services_1_1workers_1_1mobilitypath__worker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for message\+\_\+services\+::workers\+::mobilitypath\+\_\+worker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classmessage__services_1_1workers_1_1mobilitypath__worker__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmessage__services_1_1workers_1_1mobilitypath__worker_a5bfa32c6925ca529926d59494985c93a}{mobilitypath\+\_\+worker}} ()
+\item 
+\mbox{\hyperlink{classmessage__services_1_1workers_1_1mobilitypath__worker_a569eb29be6e00a8fe755a842fe0a0ce9}{$\sim$mobilitypath\+\_\+worker}} ()
+\item 
+std\+::deque$<$ \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilitypath}{models\+::mobilitypath}} $>$ \& \mbox{\hyperlink{classmessage__services_1_1workers_1_1mobilitypath__worker_afb0f176823c4c9f243e710410119968f}{get\+\_\+curr\+\_\+list}} ()
+\begin{DoxyCompactList}\small\item\em Return the vector of mobilitypath stored in the \mbox{\hyperlink{classmessage__services_1_1workers_1_1mobilitypath__worker}{mobilitypath\+\_\+worker}}. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string,\mbox{\hyperlink{classmessage__services_1_1models_1_1mobilitypath}{message\+\_\+services\+::models\+::mobilitypath}} $>$ \& \mbox{\hyperlink{classmessage__services_1_1workers_1_1mobilitypath__worker_a7248055cafa4f1b218933b1e8d0aa944}{get\+\_\+curr\+\_\+map}} ()
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1workers_1_1mobilitypath__worker_af0507254a31f916e0944e5801f29b38c}{process\+\_\+incoming\+\_\+msg}} (const std\+::string json\+\_\+str)
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1workers_1_1mobilitypath__worker_a65f91ac4048380768a197b71a70abec1}{pop\+\_\+cur\+\_\+element\+\_\+from\+\_\+list}} (long element\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Remove an element from mobilitypath vector based on the element position. If the position is greater than the deque current size, the last element is removed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mutex \mbox{\hyperlink{classmessage__services_1_1workers_1_1mobilitypath__worker_a241f051dde9daefe9b62ad3136d8f73c}{worker\+\_\+mtx}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classmessage__services_1_1workers_1_1mobilitypath__worker_a7b63b4c4b109938549b5a40ce918b5fe}{MOBILITY\+\_\+\+OPERATION\+\_\+\+PATH\+\_\+\+MAX\+\_\+\+DURATION}} = 1000
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 14 of file mobilitypath\+\_\+worker.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1workers_1_1mobilitypath__worker_a5bfa32c6925ca529926d59494985c93a}\label{classmessage__services_1_1workers_1_1mobilitypath__worker_a5bfa32c6925ca529926d59494985c93a}} 
+\index{message\_services::workers::mobilitypath\_worker@{message\_services::workers::mobilitypath\_worker}!mobilitypath\_worker@{mobilitypath\_worker}}
+\index{mobilitypath\_worker@{mobilitypath\_worker}!message\_services::workers::mobilitypath\_worker@{message\_services::workers::mobilitypath\_worker}}
+\doxysubsubsection{\texorpdfstring{mobilitypath\_worker()}{mobilitypath\_worker()}}
+{\footnotesize\ttfamily message\+\_\+services\+::workers\+::mobilitypath\+\_\+worker\+::mobilitypath\+\_\+worker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file mobilitypath\+\_\+worker.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1workers_1_1mobilitypath__worker_a569eb29be6e00a8fe755a842fe0a0ce9}\label{classmessage__services_1_1workers_1_1mobilitypath__worker_a569eb29be6e00a8fe755a842fe0a0ce9}} 
+\index{message\_services::workers::mobilitypath\_worker@{message\_services::workers::mobilitypath\_worker}!````~mobilitypath\_worker@{$\sim$mobilitypath\_worker}}
+\index{````~mobilitypath\_worker@{$\sim$mobilitypath\_worker}!message\_services::workers::mobilitypath\_worker@{message\_services::workers::mobilitypath\_worker}}
+\doxysubsubsection{\texorpdfstring{$\sim$mobilitypath\_worker()}{~mobilitypath\_worker()}}
+{\footnotesize\ttfamily message\+\_\+services\+::workers\+::mobilitypath\+\_\+worker\+::$\sim$mobilitypath\+\_\+worker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 10 of file mobilitypath\+\_\+worker.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1workers_1_1mobilitypath__worker_afb0f176823c4c9f243e710410119968f}\label{classmessage__services_1_1workers_1_1mobilitypath__worker_afb0f176823c4c9f243e710410119968f}} 
+\index{message\_services::workers::mobilitypath\_worker@{message\_services::workers::mobilitypath\_worker}!get\_curr\_list@{get\_curr\_list}}
+\index{get\_curr\_list@{get\_curr\_list}!message\_services::workers::mobilitypath\_worker@{message\_services::workers::mobilitypath\_worker}}
+\doxysubsubsection{\texorpdfstring{get\_curr\_list()}{get\_curr\_list()}}
+{\footnotesize\ttfamily std\+::deque$<$ \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilitypath}{models\+::mobilitypath}} $>$ \& message\+\_\+services\+::workers\+::mobilitypath\+\_\+worker\+::get\+\_\+curr\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the vector of mobilitypath stored in the \mbox{\hyperlink{classmessage__services_1_1workers_1_1mobilitypath__worker}{mobilitypath\+\_\+worker}}. 
+
+
+
+Definition at line 15 of file mobilitypath\+\_\+worker.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1workers_1_1mobilitypath__worker_a7248055cafa4f1b218933b1e8d0aa944}\label{classmessage__services_1_1workers_1_1mobilitypath__worker_a7248055cafa4f1b218933b1e8d0aa944}} 
+\index{message\_services::workers::mobilitypath\_worker@{message\_services::workers::mobilitypath\_worker}!get\_curr\_map@{get\_curr\_map}}
+\index{get\_curr\_map@{get\_curr\_map}!message\_services::workers::mobilitypath\_worker@{message\_services::workers::mobilitypath\_worker}}
+\doxysubsubsection{\texorpdfstring{get\_curr\_map()}{get\_curr\_map()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilitypath}{message\+\_\+services\+::models\+::mobilitypath}} $>$ \& message\+\_\+services\+::workers\+::mobilitypath\+\_\+worker\+::get\+\_\+curr\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file mobilitypath\+\_\+worker.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{classmessage__services_1_1workers_1_1mobilitypath__worker_a7248055cafa4f1b218933b1e8d0aa944_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1workers_1_1mobilitypath__worker_a65f91ac4048380768a197b71a70abec1}\label{classmessage__services_1_1workers_1_1mobilitypath__worker_a65f91ac4048380768a197b71a70abec1}} 
+\index{message\_services::workers::mobilitypath\_worker@{message\_services::workers::mobilitypath\_worker}!pop\_cur\_element\_from\_list@{pop\_cur\_element\_from\_list}}
+\index{pop\_cur\_element\_from\_list@{pop\_cur\_element\_from\_list}!message\_services::workers::mobilitypath\_worker@{message\_services::workers::mobilitypath\_worker}}
+\doxysubsubsection{\texorpdfstring{pop\_cur\_element\_from\_list()}{pop\_cur\_element\_from\_list()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::workers\+::mobilitypath\+\_\+worker\+::pop\+\_\+cur\+\_\+element\+\_\+from\+\_\+list (\begin{DoxyParamCaption}\item[{long}]{element\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Remove an element from mobilitypath vector based on the element position. If the position is greater than the deque current size, the last element is removed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em long} & Current element position in the mobilitypath deque. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file mobilitypath\+\_\+worker.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1workers_1_1mobilitypath__worker_af0507254a31f916e0944e5801f29b38c}\label{classmessage__services_1_1workers_1_1mobilitypath__worker_af0507254a31f916e0944e5801f29b38c}} 
+\index{message\_services::workers::mobilitypath\_worker@{message\_services::workers::mobilitypath\_worker}!process\_incoming\_msg@{process\_incoming\_msg}}
+\index{process\_incoming\_msg@{process\_incoming\_msg}!message\_services::workers::mobilitypath\_worker@{message\_services::workers::mobilitypath\_worker}}
+\doxysubsubsection{\texorpdfstring{process\_incoming\_msg()}{process\_incoming\_msg()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::workers\+::mobilitypath\+\_\+worker\+::process\+\_\+incoming\+\_\+msg (\begin{DoxyParamCaption}\item[{const std\+::string}]{json\+\_\+str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classmessage__services_1_1workers_1_1base__worker_a2ad5dc4783ea3fe10147aa8d3e1f0e27}{message\+\_\+services\+::workers\+::base\+\_\+worker}}.
+
+
+
+Definition at line 23 of file mobilitypath\+\_\+worker.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1workers_1_1mobilitypath__worker_af0507254a31f916e0944e5801f29b38c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{classmessage__services_1_1workers_1_1mobilitypath__worker_af0507254a31f916e0944e5801f29b38c_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1workers_1_1mobilitypath__worker_a7b63b4c4b109938549b5a40ce918b5fe}\label{classmessage__services_1_1workers_1_1mobilitypath__worker_a7b63b4c4b109938549b5a40ce918b5fe}} 
+\index{message\_services::workers::mobilitypath\_worker@{message\_services::workers::mobilitypath\_worker}!MOBILITY\_OPERATION\_PATH\_MAX\_DURATION@{MOBILITY\_OPERATION\_PATH\_MAX\_DURATION}}
+\index{MOBILITY\_OPERATION\_PATH\_MAX\_DURATION@{MOBILITY\_OPERATION\_PATH\_MAX\_DURATION}!message\_services::workers::mobilitypath\_worker@{message\_services::workers::mobilitypath\_worker}}
+\doxysubsubsection{\texorpdfstring{MOBILITY\_OPERATION\_PATH\_MAX\_DURATION}{MOBILITY\_OPERATION\_PATH\_MAX\_DURATION}}
+{\footnotesize\ttfamily uint16\+\_\+t message\+\_\+services\+::workers\+::mobilitypath\+\_\+worker\+::\+MOBILITY\+\_\+\+OPERATION\+\_\+\+PATH\+\_\+\+MAX\+\_\+\+DURATION = 1000}
+
+
+
+Definition at line 25 of file mobilitypath\+\_\+worker.\+h.
+
+\mbox{\Hypertarget{classmessage__services_1_1workers_1_1mobilitypath__worker_a241f051dde9daefe9b62ad3136d8f73c}\label{classmessage__services_1_1workers_1_1mobilitypath__worker_a241f051dde9daefe9b62ad3136d8f73c}} 
+\index{message\_services::workers::mobilitypath\_worker@{message\_services::workers::mobilitypath\_worker}!worker\_mtx@{worker\_mtx}}
+\index{worker\_mtx@{worker\_mtx}!message\_services::workers::mobilitypath\_worker@{message\_services::workers::mobilitypath\_worker}}
+\doxysubsubsection{\texorpdfstring{worker\_mtx}{worker\_mtx}}
+{\footnotesize\ttfamily std\+::mutex message\+\_\+services\+::workers\+::mobilitypath\+\_\+worker\+::worker\+\_\+mtx}
+
+
+
+Definition at line 24 of file mobilitypath\+\_\+worker.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+message\+\_\+services/include/\mbox{\hyperlink{mobilitypath__worker_8h}{mobilitypath\+\_\+worker.\+h}}\item 
+message\+\_\+services/src/workers/\mbox{\hyperlink{mobilitypath__worker_8cpp}{mobilitypath\+\_\+worker.\+cpp}}\end{DoxyCompactItemize}

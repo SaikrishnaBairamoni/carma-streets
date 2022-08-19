@@ -1,0 +1,400 @@
+\hypertarget{classtraffic__signal__controller__service_1_1tsc__service}{}\doxysection{traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+service Class Reference}
+\label{classtraffic__signal__controller__service_1_1tsc__service}\index{traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}}
+
+
+{\ttfamily \#include $<$tsc\+\_\+service.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service_abfe9b97a69e5c4c8c614ed2f7bfda80d}{tsc\+\_\+service}} ()=default
+\item 
+\mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service_aa82f97b9874e91dd19f3557d8fc4905f}{$\sim$tsc\+\_\+service}} ()
+\item 
+\mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service_af1557609aa8e488d04f646e09cde9414}{tsc\+\_\+service}} (const \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service}{tsc\+\_\+service}} \&)=delete
+\item 
+\mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service}{tsc\+\_\+service}} \& \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service_aa56edb85e80f0b92f4b5f8077c8308ff}{operator=}} (const \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service}{tsc\+\_\+service}} \&)=delete
+\item 
+bool \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service_a0f10530cccdd582172877692d6f480f5}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Method to initialize the \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service}{tsc\+\_\+service}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service_ac8b524b54e3db0a25765546e2c136dd2}{initialize\+\_\+kafka\+\_\+producer}} (const std\+::string \&bootstap\+\_\+server, const std\+::string \&spat\+\_\+producer\+\_\+topic)
+\begin{DoxyCompactList}\small\item\em Initialize Kafka SPaT producer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service_a0bbce68544a01f99199a07fb642342f9}{initialize\+\_\+snmp\+\_\+client}} (const std\+::string \&server\+\_\+ip, const int server\+\_\+port, const std\+::string \&community, const int snmp\+\_\+version, const int timeout)
+\begin{DoxyCompactList}\small\item\em Initialize SNMP Client to make SNMP calls to Traffic Signal Controller. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service_adad711d135587e232d5cd92447b9a5af}{initialize\+\_\+tsc\+\_\+state}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtraffic__signal__controller__service_1_1snmp__client}{snmp\+\_\+client}} $>$ \+\_\+snmp\+\_\+client\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Initialize TSC State object which uses an SNMP Client to query initial information from the Traffic Signal Controller including default phase sequence, phase timing information, and phase number to signal group mapping. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service_a34c50831f1ed8f48d8123b05b6724b32}{enable\+\_\+spat}} () const
+\begin{DoxyCompactList}\small\item\em Method to enable spat using the TSC Service SNMP Client. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service_a470c3a6c64e310bc4ac0da205a2aeafb}{initialize\+\_\+spat\+\_\+worker}} (const std\+::string \&udp\+\_\+socket\+\_\+ip, const int udp\+\_\+socket\+\_\+port, const int timeout, const bool use\+\_\+tsc\+\_\+timestamp)
+\begin{DoxyCompactList}\small\item\em Initialize SPaT Worker which is responsible for standing up UDP Socket Listener and consuming Traffic Signal Controller NTCIP UDP SPaT messages and updating the SPaT object using this information. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service_aac8bd449d953386ac8db45dd89a5ec4d}{initialize\+\_\+intersection\+\_\+client}} ()
+\begin{DoxyCompactList}\small\item\em Initialize Intersection Client used to query Intersection Model REST API for Intersection Name and Intersection ID for SPaT message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service_a54e9845c840c058c682e215fe39a6e0c}{initialize\+\_\+spat}} (const std\+::string \&intersection\+\_\+name, const int intersection\+\_\+id, const std\+::unordered\+\_\+map$<$ int, int $>$ \&phase\+\_\+number\+\_\+to\+\_\+signal\+\_\+group)
+\begin{DoxyCompactList}\small\item\em Initialize SPaT pointer with intersection name, intersection id and phase number to signal group mapping not provided in NTCIP UDP messages from TSC but required for interpretation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service_a9e2ac871cb45ef4a98354ca5bc49b25b}{start}} ()
+\begin{DoxyCompactList}\small\item\em Method to start all threads included in the \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service}{tsc\+\_\+service}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service_aa4fb7763e7ae8b9e630fd7fa10bc2479}{produce\+\_\+spat\+\_\+json}} () const
+\begin{DoxyCompactList}\small\item\em Method to receive UDP data from traffic signal controller and broadcast spat JSON data to the carma-\/streets kafka broker. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 17 of file tsc\+\_\+service.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__service_abfe9b97a69e5c4c8c614ed2f7bfda80d}\label{classtraffic__signal__controller__service_1_1tsc__service_abfe9b97a69e5c4c8c614ed2f7bfda80d}} 
+\index{traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}!tsc\_service@{tsc\_service}}
+\index{tsc\_service@{tsc\_service}!traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}}
+\doxysubsubsection{\texorpdfstring{tsc\_service()}{tsc\_service()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+service\+::tsc\+\_\+service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__service_aa82f97b9874e91dd19f3557d8fc4905f}\label{classtraffic__signal__controller__service_1_1tsc__service_aa82f97b9874e91dd19f3557d8fc4905f}} 
+\index{traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}!````~tsc\_service@{$\sim$tsc\_service}}
+\index{````~tsc\_service@{$\sim$tsc\_service}!traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}}
+\doxysubsubsection{\texorpdfstring{$\sim$tsc\_service()}{~tsc\_service()}}
+{\footnotesize\ttfamily traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+service\+::$\sim$tsc\+\_\+service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 177 of file tsc\+\_\+service.\+cpp.
+
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__service_af1557609aa8e488d04f646e09cde9414}\label{classtraffic__signal__controller__service_1_1tsc__service_af1557609aa8e488d04f646e09cde9414}} 
+\index{traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}!tsc\_service@{tsc\_service}}
+\index{tsc\_service@{tsc\_service}!traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}}
+\doxysubsubsection{\texorpdfstring{tsc\_service()}{tsc\_service()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+service\+::tsc\+\_\+service (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service}{tsc\+\_\+service}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__service_a34c50831f1ed8f48d8123b05b6724b32}\label{classtraffic__signal__controller__service_1_1tsc__service_a34c50831f1ed8f48d8123b05b6724b32}} 
+\index{traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}!enable\_spat@{enable\_spat}}
+\index{enable\_spat@{enable\_spat}!traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}}
+\doxysubsubsection{\texorpdfstring{enable\_spat()}{enable\_spat()}}
+{\footnotesize\ttfamily bool traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+service\+::enable\+\_\+spat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method to enable spat using the TSC Service SNMP Client. 
+
+\begin{DoxyReturn}{Returns}
+true if SET operation is successful. 
+
+false if SET operation is not successful. 
+\end{DoxyReturn}
+
+
+Definition at line 98 of file tsc\+\_\+service.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1tsc__service_a34c50831f1ed8f48d8123b05b6724b32_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__service_a0f10530cccdd582172877692d6f480f5}\label{classtraffic__signal__controller__service_1_1tsc__service_a0f10530cccdd582172877692d6f480f5}} 
+\index{traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}!initialize@{initialize}}
+\index{initialize@{initialize}!traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily bool traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+service\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to initialize the \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service}{tsc\+\_\+service}}. 
+
+\begin{DoxyReturn}{Returns}
+true if successful. 
+
+false if not successful. 
+\end{DoxyReturn}
+
+
+Definition at line 6 of file tsc\+\_\+service.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1tsc__service_a0f10530cccdd582172877692d6f480f5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{classtraffic__signal__controller__service_1_1tsc__service_a0f10530cccdd582172877692d6f480f5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__service_aac8bd449d953386ac8db45dd89a5ec4d}\label{classtraffic__signal__controller__service_1_1tsc__service_aac8bd449d953386ac8db45dd89a5ec4d}} 
+\index{traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}!initialize\_intersection\_client@{initialize\_intersection\_client}}
+\index{initialize\_intersection\_client@{initialize\_intersection\_client}!traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}}
+\doxysubsubsection{\texorpdfstring{initialize\_intersection\_client()}{initialize\_intersection\_client()}}
+{\footnotesize\ttfamily bool traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+service\+::initialize\+\_\+intersection\+\_\+client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize Intersection Client used to query Intersection Model REST API for Intersection Name and Intersection ID for SPaT message. 
+
+\begin{DoxyReturn}{Returns}
+true if initialization is successful. 
+
+false if initialization is not successful. 
+\end{DoxyReturn}
+
+
+Definition at line 124 of file tsc\+\_\+service.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1tsc__service_aac8bd449d953386ac8db45dd89a5ec4d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__service_ac8b524b54e3db0a25765546e2c136dd2}\label{classtraffic__signal__controller__service_1_1tsc__service_ac8b524b54e3db0a25765546e2c136dd2}} 
+\index{traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}!initialize\_kafka\_producer@{initialize\_kafka\_producer}}
+\index{initialize\_kafka\_producer@{initialize\_kafka\_producer}!traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}}
+\doxysubsubsection{\texorpdfstring{initialize\_kafka\_producer()}{initialize\_kafka\_producer()}}
+{\footnotesize\ttfamily bool traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+service\+::initialize\+\_\+kafka\+\_\+producer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{bootstap\+\_\+server,  }\item[{const std\+::string \&}]{spat\+\_\+producer\+\_\+topic }\end{DoxyParamCaption})}
+
+
+
+Initialize Kafka SPaT producer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bootstap\+\_\+server} & for CARMA-\/\+Streets Kafka broker. \\
+\hline
+{\em spat\+\_\+producer\+\_\+topic} & name of topic to produce to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if initialization is successful. 
+
+false if initialization is not successful. 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file tsc\+\_\+service.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1tsc__service_ac8b524b54e3db0a25765546e2c136dd2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__service_a0bbce68544a01f99199a07fb642342f9}\label{classtraffic__signal__controller__service_1_1tsc__service_a0bbce68544a01f99199a07fb642342f9}} 
+\index{traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}!initialize\_snmp\_client@{initialize\_snmp\_client}}
+\index{initialize\_snmp\_client@{initialize\_snmp\_client}!traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}}
+\doxysubsubsection{\texorpdfstring{initialize\_snmp\_client()}{initialize\_snmp\_client()}}
+{\footnotesize\ttfamily bool traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+service\+::initialize\+\_\+snmp\+\_\+client (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{server\+\_\+ip,  }\item[{const int}]{server\+\_\+port,  }\item[{const std\+::string \&}]{community,  }\item[{const int}]{snmp\+\_\+version,  }\item[{const int}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Initialize SNMP Client to make SNMP calls to Traffic Signal Controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em server\+\_\+ip} & of Traffic Signal Controller. \\
+\hline
+{\em server\+\_\+port} & of Traffic Signal Controller NTCIP Server. \\
+\hline
+{\em community} & of SNMP communication used. \\
+\hline
+{\em snmp\+\_\+version} & of SNMP communication used. \\
+\hline
+{\em timeout} & timeout micro seconds of SNMP connection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if initialization is successful. 
+
+false if initialization is not successful. 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file tsc\+\_\+service.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1tsc__service_a0bbce68544a01f99199a07fb642342f9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__service_a54e9845c840c058c682e215fe39a6e0c}\label{classtraffic__signal__controller__service_1_1tsc__service_a54e9845c840c058c682e215fe39a6e0c}} 
+\index{traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}!initialize\_spat@{initialize\_spat}}
+\index{initialize\_spat@{initialize\_spat}!traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}}
+\doxysubsubsection{\texorpdfstring{initialize\_spat()}{initialize\_spat()}}
+{\footnotesize\ttfamily void traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+service\+::initialize\+\_\+spat (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{intersection\+\_\+name,  }\item[{const int}]{intersection\+\_\+id,  }\item[{const std\+::unordered\+\_\+map$<$ int, int $>$ \&}]{phase\+\_\+number\+\_\+to\+\_\+signal\+\_\+group }\end{DoxyParamCaption})}
+
+
+
+Initialize SPaT pointer with intersection name, intersection id and phase number to signal group mapping not provided in NTCIP UDP messages from TSC but required for interpretation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intersection\+\_\+name} & J2735 Intersection name \\
+\hline
+{\em intersection\+\_\+id} & J2735 Intersection ID \\
+\hline
+{\em phase\+\_\+number\+\_\+to\+\_\+signal\+\_\+group} & map of phase numbers (NTCIP) to signal groups provided by TSC State \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 134 of file tsc\+\_\+service.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1tsc__service_a54e9845c840c058c682e215fe39a6e0c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__service_a470c3a6c64e310bc4ac0da205a2aeafb}\label{classtraffic__signal__controller__service_1_1tsc__service_a470c3a6c64e310bc4ac0da205a2aeafb}} 
+\index{traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}!initialize\_spat\_worker@{initialize\_spat\_worker}}
+\index{initialize\_spat\_worker@{initialize\_spat\_worker}!traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}}
+\doxysubsubsection{\texorpdfstring{initialize\_spat\_worker()}{initialize\_spat\_worker()}}
+{\footnotesize\ttfamily bool traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+service\+::initialize\+\_\+spat\+\_\+worker (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{udp\+\_\+socket\+\_\+ip,  }\item[{const int}]{udp\+\_\+socket\+\_\+port,  }\item[{const int}]{timeout,  }\item[{const bool}]{use\+\_\+tsc\+\_\+timestamp }\end{DoxyParamCaption})}
+
+
+
+Initialize SPaT Worker which is responsible for standing up UDP Socket Listener and consuming Traffic Signal Controller NTCIP UDP SPaT messages and updating the SPaT object using this information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em udp\+\_\+socket\+\_\+ip} & IP of localhost where UDP packets will be received. \\
+\hline
+{\em udp\+\_\+socket\+\_\+port} & Port of localhost where UDP packets will be received. \\
+\hline
+{\em timeout} & Timeout in seconds for UDP client. UDP socket will throw an exception if no messages are receive for timeount window. \\
+\hline
+{\em use\+\_\+tsc\+\_\+timestamp} & bool flag to indicate whether to use TSC timestamp provided in UDP packet. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if initialization is successful. 
+
+false if initialization is not successful. 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file tsc\+\_\+service.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1tsc__service_a470c3a6c64e310bc4ac0da205a2aeafb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__service_adad711d135587e232d5cd92447b9a5af}\label{classtraffic__signal__controller__service_1_1tsc__service_adad711d135587e232d5cd92447b9a5af}} 
+\index{traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}!initialize\_tsc\_state@{initialize\_tsc\_state}}
+\index{initialize\_tsc\_state@{initialize\_tsc\_state}!traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}}
+\doxysubsubsection{\texorpdfstring{initialize\_tsc\_state()}{initialize\_tsc\_state()}}
+{\footnotesize\ttfamily bool traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+service\+::initialize\+\_\+tsc\+\_\+state (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtraffic__signal__controller__service_1_1snmp__client}{snmp\+\_\+client}} $>$}]{\+\_\+snmp\+\_\+client\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Initialize TSC State object which uses an SNMP Client to query initial information from the Traffic Signal Controller including default phase sequence, phase timing information, and phase number to signal group mapping. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+snmp\+\_\+client\+\_\+ptr} & SNMP client to use for querying initial information. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if initialization is successful. 
+
+false if initialization is not successful. 
+\end{DoxyReturn}
+
+
+Definition at line 89 of file tsc\+\_\+service.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1tsc__service_adad711d135587e232d5cd92447b9a5af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__service_aa56edb85e80f0b92f4b5f8077c8308ff}\label{classtraffic__signal__controller__service_1_1tsc__service_aa56edb85e80f0b92f4b5f8077c8308ff}} 
+\index{traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}!operator=@{operator=}}
+\index{operator=@{operator=}!traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service}{tsc\+\_\+service}}\& traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+service\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service}{tsc\+\_\+service}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__service_aa4fb7763e7ae8b9e630fd7fa10bc2479}\label{classtraffic__signal__controller__service_1_1tsc__service_aa4fb7763e7ae8b9e630fd7fa10bc2479}} 
+\index{traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}!produce\_spat\_json@{produce\_spat\_json}}
+\index{produce\_spat\_json@{produce\_spat\_json}!traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}}
+\doxysubsubsection{\texorpdfstring{produce\_spat\_json()}{produce\_spat\_json()}}
+{\footnotesize\ttfamily void traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+service\+::produce\+\_\+spat\+\_\+json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method to receive UDP data from traffic signal controller and broadcast spat JSON data to the carma-\/streets kafka broker. 
+
+
+
+Definition at line 141 of file tsc\+\_\+service.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1tsc__service_aa4fb7763e7ae8b9e630fd7fa10bc2479_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__service_a9e2ac871cb45ef4a98354ca5bc49b25b}\label{classtraffic__signal__controller__service_1_1tsc__service_a9e2ac871cb45ef4a98354ca5bc49b25b}} 
+\index{traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}!start@{start}}
+\index{start@{start}!traffic\_signal\_controller\_service::tsc\_service@{traffic\_signal\_controller\_service::tsc\_service}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+service\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to start all threads included in the \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service}{tsc\+\_\+service}}. 
+
+
+
+Definition at line 172 of file tsc\+\_\+service.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1tsc__service_a9e2ac871cb45ef4a98354ca5bc49b25b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classtraffic__signal__controller__service_1_1tsc__service_a9e2ac871cb45ef4a98354ca5bc49b25b_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tsc\+\_\+client\+\_\+service/include/\mbox{\hyperlink{tsc__service_8h}{tsc\+\_\+service.\+h}}\item 
+tsc\+\_\+client\+\_\+service/src/\mbox{\hyperlink{tsc__service_8cpp}{tsc\+\_\+service.\+cpp}}\end{DoxyCompactItemize}

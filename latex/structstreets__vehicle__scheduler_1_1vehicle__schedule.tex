@@ -1,0 +1,144 @@
+\hypertarget{structstreets__vehicle__scheduler_1_1vehicle__schedule}{}\doxysection{streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+schedule Struct Reference}
+\label{structstreets__vehicle__scheduler_1_1vehicle__schedule}\index{streets\_vehicle\_scheduler::vehicle\_schedule@{streets\_vehicle\_scheduler::vehicle\_schedule}}
+
+
+Object to represent schedule for single vehicle.  
+
+
+
+
+{\ttfamily \#include $<$intersection\+\_\+schedule.\+h$>$}
+
+
+
+Inheritance diagram for streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+schedule\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structstreets__vehicle__scheduler_1_1vehicle__schedule__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structstreets__vehicle__scheduler_1_1vehicle__schedule_a90a83cf7bcbae1a25a2367a092281929}{vehicle\+\_\+schedule}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new vehicle schedule object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1vehicle__schedule_acbacfc0a4c092253495fb90c47031089}{$\sim$vehicle\+\_\+schedule}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the vehicle schedule object. \end{DoxyCompactList}\item 
+virtual rapidjson\+::\+Value \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1vehicle__schedule_ab1a23876fbb6958eb224d8ce05a52d2e}{to\+Json}} (rapidjson\+::\+Document\+::\+Allocator\+Type \&allocator) const =0
+\begin{DoxyCompactList}\small\item\em Write vehicle schedule as rapidjson\+::\+Value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1vehicle__schedule_ad9c43fcd19029d3f8ddc56486a0a2cf1}{v\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em string unique static vehicle id. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1vehicle__schedule_a84fbf12e6e10638b71247bb9435aa3a5}{entry\+\_\+lane}} = 0
+\begin{DoxyCompactList}\small\item\em Entry lanelet id of vehicle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1vehicle__schedule_a7329784dde8da0782afa24ae9473a12d}{link\+\_\+id}} = 0
+\begin{DoxyCompactList}\small\item\em Intended lanelet id of link lanelet used to travel through intersection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Object to represent schedule for single vehicle. 
+
+Definition at line 13 of file intersection\+\_\+schedule.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1vehicle__schedule_a90a83cf7bcbae1a25a2367a092281929}\label{structstreets__vehicle__scheduler_1_1vehicle__schedule_a90a83cf7bcbae1a25a2367a092281929}} 
+\index{streets\_vehicle\_scheduler::vehicle\_schedule@{streets\_vehicle\_scheduler::vehicle\_schedule}!vehicle\_schedule@{vehicle\_schedule}}
+\index{vehicle\_schedule@{vehicle\_schedule}!streets\_vehicle\_scheduler::vehicle\_schedule@{streets\_vehicle\_scheduler::vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{vehicle\_schedule()}{vehicle\_schedule()}}
+{\footnotesize\ttfamily streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+schedule\+::vehicle\+\_\+schedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new vehicle schedule object. 
+
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1vehicle__schedule_acbacfc0a4c092253495fb90c47031089}\label{structstreets__vehicle__scheduler_1_1vehicle__schedule_acbacfc0a4c092253495fb90c47031089}} 
+\index{streets\_vehicle\_scheduler::vehicle\_schedule@{streets\_vehicle\_scheduler::vehicle\_schedule}!````~vehicle\_schedule@{$\sim$vehicle\_schedule}}
+\index{````~vehicle\_schedule@{$\sim$vehicle\_schedule}!streets\_vehicle\_scheduler::vehicle\_schedule@{streets\_vehicle\_scheduler::vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{$\sim$vehicle\_schedule()}{~vehicle\_schedule()}}
+{\footnotesize\ttfamily virtual streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+schedule\+::$\sim$vehicle\+\_\+schedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroy the vehicle schedule object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1vehicle__schedule_ab1a23876fbb6958eb224d8ce05a52d2e}\label{structstreets__vehicle__scheduler_1_1vehicle__schedule_ab1a23876fbb6958eb224d8ce05a52d2e}} 
+\index{streets\_vehicle\_scheduler::vehicle\_schedule@{streets\_vehicle\_scheduler::vehicle\_schedule}!toJson@{toJson}}
+\index{toJson@{toJson}!streets\_vehicle\_scheduler::vehicle\_schedule@{streets\_vehicle\_scheduler::vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily virtual rapidjson\+::\+Value streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+schedule\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Document\+::\+Allocator\+Type \&}]{allocator }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Write vehicle schedule as rapidjson\+::\+Value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allocator} & json document allocator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rapidjson\+::\+Value 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_a2d0dca64d4ca5b4bc3ec690f03575f56}{streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+schedule}}, and \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a2726d915b4abd31525531fd583aafc50}{streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+schedule}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1vehicle__schedule_a84fbf12e6e10638b71247bb9435aa3a5}\label{structstreets__vehicle__scheduler_1_1vehicle__schedule_a84fbf12e6e10638b71247bb9435aa3a5}} 
+\index{streets\_vehicle\_scheduler::vehicle\_schedule@{streets\_vehicle\_scheduler::vehicle\_schedule}!entry\_lane@{entry\_lane}}
+\index{entry\_lane@{entry\_lane}!streets\_vehicle\_scheduler::vehicle\_schedule@{streets\_vehicle\_scheduler::vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{entry\_lane}{entry\_lane}}
+{\footnotesize\ttfamily int streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+schedule\+::entry\+\_\+lane = 0}
+
+
+
+Entry lanelet id of vehicle. 
+
+
+
+Definition at line 32 of file intersection\+\_\+schedule.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1vehicle__schedule_a7329784dde8da0782afa24ae9473a12d}\label{structstreets__vehicle__scheduler_1_1vehicle__schedule_a7329784dde8da0782afa24ae9473a12d}} 
+\index{streets\_vehicle\_scheduler::vehicle\_schedule@{streets\_vehicle\_scheduler::vehicle\_schedule}!link\_id@{link\_id}}
+\index{link\_id@{link\_id}!streets\_vehicle\_scheduler::vehicle\_schedule@{streets\_vehicle\_scheduler::vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{link\_id}{link\_id}}
+{\footnotesize\ttfamily int streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+schedule\+::link\+\_\+id = 0}
+
+
+
+Intended lanelet id of link lanelet used to travel through intersection. 
+
+
+
+Definition at line 36 of file intersection\+\_\+schedule.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1vehicle__schedule_ad9c43fcd19029d3f8ddc56486a0a2cf1}\label{structstreets__vehicle__scheduler_1_1vehicle__schedule_ad9c43fcd19029d3f8ddc56486a0a2cf1}} 
+\index{streets\_vehicle\_scheduler::vehicle\_schedule@{streets\_vehicle\_scheduler::vehicle\_schedule}!v\_id@{v\_id}}
+\index{v\_id@{v\_id}!streets\_vehicle\_scheduler::vehicle\_schedule@{streets\_vehicle\_scheduler::vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{v\_id}{v\_id}}
+{\footnotesize\ttfamily std\+::string streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+schedule\+::v\+\_\+id}
+
+
+
+string unique static vehicle id. 
+
+
+
+Definition at line 28 of file intersection\+\_\+schedule.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/include/\mbox{\hyperlink{intersection__schedule_8h}{intersection\+\_\+schedule.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,600 @@
+\hypertarget{structsignal__phase__and__timing_1_1intersection__state}{}\doxysection{signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state Struct Reference}
+\label{structsignal__phase__and__timing_1_1intersection__state}\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+
+
+{\ttfamily \#include $<$intersection\+\_\+state.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+rapidjson\+::\+Value \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_ae992920af2fdef8ffd0cf29da74e0ac9}{to\+Json}} (rapidjson\+::\+Document\+::\+Allocator\+Type \&allocator) const
+\begin{DoxyCompactList}\small\item\em Serialize Intersection State object to rapidjson\+::\+Value for writing as JSON string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_ac73d712ab8edf86b8d9c892f6bdff5e0}{from\+Json}} (const rapidjson\+::\+Value \&val)
+\begin{DoxyCompactList}\small\item\em Deserialize Intersection State JSON into Intersection State object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_ac42d471e1b9b4bf7924ffb93bd6892e9}{operator==}} (const \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state}{intersection\+\_\+state}} \&other) const
+\begin{DoxyCompactList}\small\item\em Equals operator to asses whether two objects contain equivalent data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_a19acfe5a1d6bdd80a61d086b52579f8b}{operator!=}} (const \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state}{intersection\+\_\+state}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns the inverse of equals operator. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_a4fde3ad2fb225f963f411ad66e72066f}{convert\+\_\+min\+\_\+mills2epoch\+\_\+ts}} (uint32\+\_\+t moy\+\_\+ll, uint16\+\_\+t min\+\_\+mills\+\_\+timestamp) const
+\begin{DoxyCompactList}\small\item\em Convert current mimutes of the year and milliseconds of the current minute into epoch timestamp in milliseconds. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_a8bc23ba89dd6c079735485173ba6d6d5}{get\+\_\+epoch\+\_\+timestamp}} () const
+\begin{DoxyCompactList}\small\item\em Get the epoch timestamp of the intersection state timestamp. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_a5aa5329bedd738f5579cf045975d87a9}{set\+\_\+timestamp\+\_\+ntcip}} (const uint32\+\_\+t second\+\_\+of\+\_\+day, const uint16\+\_\+t millisecond\+\_\+of\+\_\+second)
+\begin{DoxyCompactList}\small\item\em Set timestamp for intersection state based on NTCIP SPaT UDP message timestamp which is transmitted as second of the UTC day and millisecond of the UTC second. This information can be combined with the unix host time day of the year to get minute of the UTC year and millisecond of the UTC minute (J2735 Intersection State time\+Stamp units). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_a480dafe7aae5c872f14d1f60c8627636}{set\+\_\+timestamp\+\_\+local}} ()
+\begin{DoxyCompactList}\small\item\em Set timestamp for intersection state based on host machine unix time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_a01285f8060241eec1adbaa0c5e97a1df}{update\+\_\+movement\+\_\+state}} (\mbox{\hyperlink{structntcip_1_1ntcip__1202__ext}{ntcip\+::ntcip\+\_\+1202\+\_\+ext}} \&spat\+\_\+data, const int signal\+\_\+group\+\_\+id, const int \mbox{\hyperlink{ntcip__1202__ext__phasetime_8h_a818606b5263ca9418c2a574097a9503a}{phase\+\_\+number}})
+\begin{DoxyCompactList}\small\item\em Method to update \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state}{movement\+\_\+state}} with signal\+\_\+group\+\_\+id using ntcip spat data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_adb8a7d8693ba85ab08f3c0e31afe4935}{update\+\_\+movements}} (\mbox{\hyperlink{structntcip_1_1ntcip__1202__ext}{ntcip\+::ntcip\+\_\+1202\+\_\+ext}} \&spat\+\_\+data, const std\+::unordered\+\_\+map$<$ int, int $>$ \&phase\+\_\+number\+\_\+to\+\_\+signal\+\_\+group)
+\begin{DoxyCompactList}\small\item\em Clears old movement event data for all movement\+\_\+states. Adds one \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__event}{movement\+\_\+event}} to the state\+\_\+time\+\_\+speed list as the current event for each movement state. Then calls update\+\_\+movement\+\_\+state on every phase number/signal group mapping included in the phase\+\_\+number to signal group map. This method is meant to be executed each time a nticp\+\_\+1202\+\_\+ext UDP packet is received to update the current movement event data of each phase with the timing information received. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state}{movement\+\_\+state}} \& \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_a0212a92fdea9a7f1f5959d002ba7dda9}{get\+\_\+movement}} (const int signal\+\_\+group\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Return reference to \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state}{movement\+\_\+state}} for signal group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_aca7f3528dc9e42b152c0e4537468fd79}{initialize\+\_\+movement\+\_\+states}} (const std\+::unordered\+\_\+map$<$ int, int $>$ \&phase\+\_\+number\+\_\+to\+\_\+signal\+\_\+group)
+\begin{DoxyCompactList}\small\item\em Initialize list$<$movement\+\_\+state$>$ to include a movement for each phase\+\_\+numer/signal\+\_\+group entry in the phase number to signal group map. This method is meant to be run once, while initializing the spat object to contain movement states for all relevant signal groups. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_a7f3126c08963787918c8d007255b4193}{convert\+\_\+offset}} (const uint16\+\_\+t offset\+\_\+tenths\+\_\+of\+\_\+sec) const
+\begin{DoxyCompactList}\small\item\em Convert time offset (in tenths of seconds) from current time (NTCIP SPaT timing information units) to tenths of seconds from current hour (J2735 SPaT timing information units). For reference please see J2735 and NTCIP documentation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_ad71bed5c8cd56cac8dcd041c5fd5a83e}{MIN\+\_\+\+TO\+\_\+\+SECONDS}} = 60
+\item 
+int \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_aebaed676aff07f126fe01e1319b4c605}{SECOND\+\_\+\+TO\+\_\+\+MILLISECONDS}} = 1000
+\item 
+std\+::string \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_a6da9216f423d4fdb2d754ea68e276e73}{name}}
+\begin{DoxyCompactList}\small\item\em Descriptive name for this collection. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_ada34bde87ec24eb85810d408cd13f69f}{id}} = 0
+\begin{DoxyCompactList}\small\item\em A globally unique value set and consisting of region\+ID and intersection ID assignment. Provides unique mapping to the intersection MAP in question which provides complete location and approach/move/lane data. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_a7ec8a1a400233389a5640c48bda4d1e3}{revision}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_abbd9ce5f7a9b4930e5cdfeaf84ddbe02}{status}}
+\begin{DoxyCompactList}\small\item\em BIT String of Intersection\+Status\+Object\+: \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_a0a0ee55cccc9fb11add9902564ad504e}{moy}} = 0
+\begin{DoxyCompactList}\small\item\em Minute of current UTC year. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_a51c19a8652fc7761cb9e632fc01a9dd2}{time\+\_\+stamp}} = 0
+\begin{DoxyCompactList}\small\item\em Millisecond point in the current UTC minute that this message was created. \end{DoxyCompactList}\item 
+std\+::list$<$ int $>$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_a8c616e91f927f3803dcd2367e12a4eb9}{enabled\+\_\+lanes}}
+\begin{DoxyCompactList}\small\item\em A list of unique lane ID for each lane object which is active. Refers to dynamic MAP contents. \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state}{movement\+\_\+state}} $>$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_a7ede63a37705e6c5cdce68883fe78a7d}{states}}
+\begin{DoxyCompactList}\small\item\em Each Movement is given in turn and contains its signal phase state, mapping to the lanes it applies to, and point in time it will and. It may contain both active and future states. \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist}{connection\+\_\+maneuver\+\_\+assist}} $>$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state_a608bced258a6e40c5b975021b3a6bc02}{maneuver\+\_\+assist\+\_\+list}}
+\begin{DoxyCompactList}\small\item\em Assist Data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 16 of file intersection\+\_\+state.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_a4fde3ad2fb225f963f411ad66e72066f}\label{structsignal__phase__and__timing_1_1intersection__state_a4fde3ad2fb225f963f411ad66e72066f}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!convert\_min\_mills2epoch\_ts@{convert\_min\_mills2epoch\_ts}}
+\index{convert\_min\_mills2epoch\_ts@{convert\_min\_mills2epoch\_ts}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{convert\_min\_mills2epoch\_ts()}{convert\_min\_mills2epoch\_ts()}}
+{\footnotesize\ttfamily uint64\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::convert\+\_\+min\+\_\+mills2epoch\+\_\+ts (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{moy\+\_\+ll,  }\item[{uint16\+\_\+t}]{min\+\_\+mills\+\_\+timestamp }\end{DoxyParamCaption}) const}
+
+
+
+Convert current mimutes of the year and milliseconds of the current minute into epoch timestamp in milliseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em moy\+\_\+ll} & The current minutes of the year \\
+\hline
+{\em min\+\_\+mills\+\_\+timestamp} & The milliseconds of the current minute \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t epoch timestamp in milliseconds 
+\end{DoxyReturn}
+
+
+Definition at line 142 of file intersection\+\_\+state.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1intersection__state_a4fde3ad2fb225f963f411ad66e72066f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_a7f3126c08963787918c8d007255b4193}\label{structsignal__phase__and__timing_1_1intersection__state_a7f3126c08963787918c8d007255b4193}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!convert\_offset@{convert\_offset}}
+\index{convert\_offset@{convert\_offset}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{convert\_offset()}{convert\_offset()}}
+{\footnotesize\ttfamily uint16\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::convert\+\_\+offset (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{offset\+\_\+tenths\+\_\+of\+\_\+sec }\end{DoxyParamCaption}) const}
+
+
+
+Convert time offset (in tenths of seconds) from current time (NTCIP SPaT timing information units) to tenths of seconds from current hour (J2735 SPaT timing information units). For reference please see J2735 and NTCIP documentation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset\+\_\+tenths\+\_\+of\+\_\+sec} & tenths of seconds from current time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t tenths of seconds from current hour. 
+\end{DoxyReturn}
+
+
+Definition at line 292 of file intersection\+\_\+state.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1intersection__state_a7f3126c08963787918c8d007255b4193_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_ac73d712ab8edf86b8d9c892f6bdff5e0}\label{structsignal__phase__and__timing_1_1intersection__state_ac73d712ab8edf86b8d9c892f6bdff5e0}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily void signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::from\+Json (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Deserialize Intersection State JSON into Intersection State object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Intersection State JSON. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 60 of file intersection\+\_\+state.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1intersection__state_ac73d712ab8edf86b8d9c892f6bdff5e0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1intersection__state_ac73d712ab8edf86b8d9c892f6bdff5e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_a8bc23ba89dd6c079735485173ba6d6d5}\label{structsignal__phase__and__timing_1_1intersection__state_a8bc23ba89dd6c079735485173ba6d6d5}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!get\_epoch\_timestamp@{get\_epoch\_timestamp}}
+\index{get\_epoch\_timestamp@{get\_epoch\_timestamp}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{get\_epoch\_timestamp()}{get\_epoch\_timestamp()}}
+{\footnotesize\ttfamily uint64\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::get\+\_\+epoch\+\_\+timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the epoch timestamp of the intersection state timestamp. 
+
+\begin{DoxyReturn}{Returns}
+$\ast$$\ast$ uint64\+\_\+t epoch timestamp in unit of milliseconds 
+\end{DoxyReturn}
+
+
+Definition at line 162 of file intersection\+\_\+state.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1intersection__state_a8bc23ba89dd6c079735485173ba6d6d5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_a0212a92fdea9a7f1f5959d002ba7dda9}\label{structsignal__phase__and__timing_1_1intersection__state_a0212a92fdea9a7f1f5959d002ba7dda9}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!get\_movement@{get\_movement}}
+\index{get\_movement@{get\_movement}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{get\_movement()}{get\_movement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state}{movement\+\_\+state}} \& signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::get\+\_\+movement (\begin{DoxyParamCaption}\item[{const int}]{signal\+\_\+group\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Return reference to \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state}{movement\+\_\+state}} for signal group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signal\+\_\+group\+\_\+id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state}{movement\+\_\+state}}\& 
+\end{DoxyReturn}
+
+
+Definition at line 191 of file intersection\+\_\+state.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{structsignal__phase__and__timing_1_1intersection__state_a0212a92fdea9a7f1f5959d002ba7dda9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1intersection__state_a0212a92fdea9a7f1f5959d002ba7dda9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_aca7f3528dc9e42b152c0e4537468fd79}\label{structsignal__phase__and__timing_1_1intersection__state_aca7f3528dc9e42b152c0e4537468fd79}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!initialize\_movement\_states@{initialize\_movement\_states}}
+\index{initialize\_movement\_states@{initialize\_movement\_states}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{initialize\_movement\_states()}{initialize\_movement\_states()}}
+{\footnotesize\ttfamily void signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::initialize\+\_\+movement\+\_\+states (\begin{DoxyParamCaption}\item[{const std\+::unordered\+\_\+map$<$ int, int $>$ \&}]{phase\+\_\+number\+\_\+to\+\_\+signal\+\_\+group }\end{DoxyParamCaption})}
+
+
+
+Initialize list$<$movement\+\_\+state$>$ to include a movement for each phase\+\_\+numer/signal\+\_\+group entry in the phase number to signal group map. This method is meant to be run once, while initializing the spat object to contain movement states for all relevant signal groups. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phase\+\_\+number\+\_\+to\+\_\+signal\+\_\+group} & std\+::unordered\+\_\+map$<$int,int$>$ of phase number (keys) to signal group (values). Map used to translate phase\+\_\+number (NTCIP) to signal group (J2735). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 200 of file intersection\+\_\+state.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1intersection__state_aca7f3528dc9e42b152c0e4537468fd79_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_a19acfe5a1d6bdd80a61d086b52579f8b}\label{structsignal__phase__and__timing_1_1intersection__state_a19acfe5a1d6bdd80a61d086b52579f8b}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state}{intersection\+\_\+state}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns the inverse of equals operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & second object to compare current object with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both objects do not contain equivalent data. 
+
+false if both objects do contain equivalent data. 
+\end{DoxyReturn}
+
+
+Definition at line 138 of file intersection\+\_\+state.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1intersection__state_a19acfe5a1d6bdd80a61d086b52579f8b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_ac42d471e1b9b4bf7924ffb93bd6892e9}\label{structsignal__phase__and__timing_1_1intersection__state_ac42d471e1b9b4bf7924ffb93bd6892e9}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!operator==@{operator==}}
+\index{operator==@{operator==}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state}{intersection\+\_\+state}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Equals operator to asses whether two objects contain equivalent data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em compare} & second object to compare current object with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both object contain equivalent data. 
+
+false if not. 
+\end{DoxyReturn}
+
+
+Definition at line 132 of file intersection\+\_\+state.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1intersection__state_ac42d471e1b9b4bf7924ffb93bd6892e9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_a480dafe7aae5c872f14d1f60c8627636}\label{structsignal__phase__and__timing_1_1intersection__state_a480dafe7aae5c872f14d1f60c8627636}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!set\_timestamp\_local@{set\_timestamp\_local}}
+\index{set\_timestamp\_local@{set\_timestamp\_local}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{set\_timestamp\_local()}{set\_timestamp\_local()}}
+{\footnotesize\ttfamily void signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::set\+\_\+timestamp\+\_\+local (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set timestamp for intersection state based on host machine unix time. 
+
+
+
+Definition at line 179 of file intersection\+\_\+state.\+cpp.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_a5aa5329bedd738f5579cf045975d87a9}\label{structsignal__phase__and__timing_1_1intersection__state_a5aa5329bedd738f5579cf045975d87a9}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!set\_timestamp\_ntcip@{set\_timestamp\_ntcip}}
+\index{set\_timestamp\_ntcip@{set\_timestamp\_ntcip}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{set\_timestamp\_ntcip()}{set\_timestamp\_ntcip()}}
+{\footnotesize\ttfamily void signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::set\+\_\+timestamp\+\_\+ntcip (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{second\+\_\+of\+\_\+day,  }\item[{const uint16\+\_\+t}]{millisecond\+\_\+of\+\_\+second }\end{DoxyParamCaption})}
+
+
+
+Set timestamp for intersection state based on NTCIP SPaT UDP message timestamp which is transmitted as second of the UTC day and millisecond of the UTC second. This information can be combined with the unix host time day of the year to get minute of the UTC year and millisecond of the UTC minute (J2735 Intersection State time\+Stamp units). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em second\+\_\+of\+\_\+day} & second of the UTC year. \\
+\hline
+{\em millisecond\+\_\+of\+\_\+second} & millisecond of the UTC second. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 167 of file intersection\+\_\+state.\+cpp.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_ae992920af2fdef8ffd0cf29da74e0ac9}\label{structsignal__phase__and__timing_1_1intersection__state_ae992920af2fdef8ffd0cf29da74e0ac9}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!toJson@{toJson}}
+\index{toJson@{toJson}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily rapidjson\+::\+Value signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Document\+::\+Allocator\+Type \&}]{allocator }\end{DoxyParamCaption}) const}
+
+
+
+Serialize Intersection State object to rapidjson\+::\+Value for writing as JSON string. 
+
+\begin{DoxyReturn}{Returns}
+rapidjson\+::\+Value serialize Intersection State object 
+\end{DoxyReturn}
+
+
+Definition at line 5 of file intersection\+\_\+state.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{structsignal__phase__and__timing_1_1intersection__state_ae992920af2fdef8ffd0cf29da74e0ac9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_a01285f8060241eec1adbaa0c5e97a1df}\label{structsignal__phase__and__timing_1_1intersection__state_a01285f8060241eec1adbaa0c5e97a1df}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!update\_movement\_state@{update\_movement\_state}}
+\index{update\_movement\_state@{update\_movement\_state}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{update\_movement\_state()}{update\_movement\_state()}}
+{\footnotesize\ttfamily void signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::update\+\_\+movement\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structntcip_1_1ntcip__1202__ext}{ntcip\+::ntcip\+\_\+1202\+\_\+ext}} \&}]{spat\+\_\+data,  }\item[{const int}]{signal\+\_\+group\+\_\+id,  }\item[{const int}]{phase\+\_\+number }\end{DoxyParamCaption})}
+
+
+
+Method to update \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state}{movement\+\_\+state}} with signal\+\_\+group\+\_\+id using ntcip spat data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spat\+\_\+data} & NTCIP SPaT data. \\
+\hline
+{\em signal\+\_\+group\+\_\+id} & signal group id of movement to update. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 211 of file intersection\+\_\+state.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1intersection__state_a01285f8060241eec1adbaa0c5e97a1df_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1intersection__state_a01285f8060241eec1adbaa0c5e97a1df_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_adb8a7d8693ba85ab08f3c0e31afe4935}\label{structsignal__phase__and__timing_1_1intersection__state_adb8a7d8693ba85ab08f3c0e31afe4935}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!update\_movements@{update\_movements}}
+\index{update\_movements@{update\_movements}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{update\_movements()}{update\_movements()}}
+{\footnotesize\ttfamily void signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::update\+\_\+movements (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structntcip_1_1ntcip__1202__ext}{ntcip\+::ntcip\+\_\+1202\+\_\+ext}} \&}]{spat\+\_\+data,  }\item[{const std\+::unordered\+\_\+map$<$ int, int $>$ \&}]{phase\+\_\+number\+\_\+to\+\_\+signal\+\_\+group }\end{DoxyParamCaption})}
+
+
+
+Clears old movement event data for all movement\+\_\+states. Adds one \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__event}{movement\+\_\+event}} to the state\+\_\+time\+\_\+speed list as the current event for each movement state. Then calls update\+\_\+movement\+\_\+state on every phase number/signal group mapping included in the phase\+\_\+number to signal group map. This method is meant to be executed each time a nticp\+\_\+1202\+\_\+ext UDP packet is received to update the current movement event data of each phase with the timing information received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spat\+\_\+data} & UDP TSC information. \\
+\hline
+{\em phase\+\_\+number\+\_\+to\+\_\+signal\+\_\+group} & phase number to signal group map. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 269 of file intersection\+\_\+state.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1intersection__state_adb8a7d8693ba85ab08f3c0e31afe4935_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_a8c616e91f927f3803dcd2367e12a4eb9}\label{structsignal__phase__and__timing_1_1intersection__state_a8c616e91f927f3803dcd2367e12a4eb9}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!enabled\_lanes@{enabled\_lanes}}
+\index{enabled\_lanes@{enabled\_lanes}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{enabled\_lanes}{enabled\_lanes}}
+{\footnotesize\ttfamily std\+::list$<$int$>$ signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::enabled\+\_\+lanes}
+
+
+
+A list of unique lane ID for each lane object which is active. Refers to dynamic MAP contents. 
+
+
+
+Definition at line 88 of file intersection\+\_\+state.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_ada34bde87ec24eb85810d408cd13f69f}\label{structsignal__phase__and__timing_1_1intersection__state_ada34bde87ec24eb85810d408cd13f69f}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!id@{id}}
+\index{id@{id}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily uint16\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::id = 0}
+
+
+
+A globally unique value set and consisting of region\+ID and intersection ID assignment. Provides unique mapping to the intersection MAP in question which provides complete location and approach/move/lane data. 
+
+
+
+Definition at line 31 of file intersection\+\_\+state.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_a608bced258a6e40c5b975021b3a6bc02}\label{structsignal__phase__and__timing_1_1intersection__state_a608bced258a6e40c5b975021b3a6bc02}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!maneuver\_assist\_list@{maneuver\_assist\_list}}
+\index{maneuver\_assist\_list@{maneuver\_assist\_list}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{maneuver\_assist\_list}{maneuver\_assist\_list}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist}{connection\+\_\+maneuver\+\_\+assist}}$>$ signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::maneuver\+\_\+assist\+\_\+list}
+
+
+
+Assist Data. 
+
+
+
+Definition at line 99 of file intersection\+\_\+state.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_ad71bed5c8cd56cac8dcd041c5fd5a83e}\label{structsignal__phase__and__timing_1_1intersection__state_ad71bed5c8cd56cac8dcd041c5fd5a83e}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!MIN\_TO\_SECONDS@{MIN\_TO\_SECONDS}}
+\index{MIN\_TO\_SECONDS@{MIN\_TO\_SECONDS}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{MIN\_TO\_SECONDS}{MIN\_TO\_SECONDS}}
+{\footnotesize\ttfamily int signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::\+MIN\+\_\+\+TO\+\_\+\+SECONDS = 60}
+
+
+
+Definition at line 18 of file intersection\+\_\+state.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_a0a0ee55cccc9fb11add9902564ad504e}\label{structsignal__phase__and__timing_1_1intersection__state_a0a0ee55cccc9fb11add9902564ad504e}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!moy@{moy}}
+\index{moy@{moy}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{moy}{moy}}
+{\footnotesize\ttfamily uint32\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::moy = 0}
+
+
+
+Minute of current UTC year. 
+
+
+
+Definition at line 80 of file intersection\+\_\+state.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_a6da9216f423d4fdb2d754ea68e276e73}\label{structsignal__phase__and__timing_1_1intersection__state_a6da9216f423d4fdb2d754ea68e276e73}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!name@{name}}
+\index{name@{name}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::name}
+
+
+
+Descriptive name for this collection. 
+
+
+
+Definition at line 24 of file intersection\+\_\+state.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_a7ec8a1a400233389a5640c48bda4d1e3}\label{structsignal__phase__and__timing_1_1intersection__state_a7ec8a1a400233389a5640c48bda4d1e3}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!revision@{revision}}
+\index{revision@{revision}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{revision}{revision}}
+{\footnotesize\ttfamily uint8\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::revision = 0}
+
+
+
+Definition at line 33 of file intersection\+\_\+state.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_aebaed676aff07f126fe01e1319b4c605}\label{structsignal__phase__and__timing_1_1intersection__state_aebaed676aff07f126fe01e1319b4c605}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!SECOND\_TO\_MILLISECONDS@{SECOND\_TO\_MILLISECONDS}}
+\index{SECOND\_TO\_MILLISECONDS@{SECOND\_TO\_MILLISECONDS}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{SECOND\_TO\_MILLISECONDS}{SECOND\_TO\_MILLISECONDS}}
+{\footnotesize\ttfamily int signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::\+SECOND\+\_\+\+TO\+\_\+\+MILLISECONDS = 1000}
+
+
+
+Definition at line 19 of file intersection\+\_\+state.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_a7ede63a37705e6c5cdce68883fe78a7d}\label{structsignal__phase__and__timing_1_1intersection__state_a7ede63a37705e6c5cdce68883fe78a7d}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!states@{states}}
+\index{states@{states}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{states}{states}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state}{movement\+\_\+state}}$>$ signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::states}
+
+
+
+Each Movement is given in turn and contains its signal phase state, mapping to the lanes it applies to, and point in time it will and. It may contain both active and future states. 
+
+
+
+Definition at line 94 of file intersection\+\_\+state.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_abbd9ce5f7a9b4930e5cdfeaf84ddbe02}\label{structsignal__phase__and__timing_1_1intersection__state_abbd9ce5f7a9b4930e5cdfeaf84ddbe02}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!status@{status}}
+\index{status@{status}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily uint8\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::status}
+
+
+
+BIT String of Intersection\+Status\+Object\+: 
+
+manual\+Control\+Is\+Enabled (0), -- Timing reported is per programmed values, etc. but person -- at cabinet can manually request that certain intervals are -- terminated early (e.\+g. green). stop\+Time\+Is\+Activated (1), -- And all counting/timing has stopped. failure\+Flash (2), -- Above to be used for any detected hardware failures, -- e.\+g. conflict monitor as well as for police flash preempt\+Is\+Active (3), signal\+Priority\+Is\+Active (4), ~\newline
+ -- Additional states fixed\+Time\+Operation (5), -- Schedule of signals is based on time only -- (i.\+e. the state can be calculated) traffic\+Dependent\+Operation (6), -- Operation is based on different levels of traffic parameters -- (requests, duration of gaps or more complex parameters) standby\+Operation (7), -- Controller\+: partially switched off or partially amber flashing failure\+Mode (8), -- Controller has a problem or failure in operation off (9), -- Controller is switched off -- Related to MAP and SPAT bindings recent\+MAPmessage\+Update (10), -- Map revision with content changes recent\+Change\+In\+MAPassigned\+Lanes\+IDs\+Used (11), -- Change in MAP\textquotesingle{}s assigned lanes used (lane changes) -- Changes in the active lane list description no\+Valid\+MAPis\+Available\+At\+This\+Time (12), -- MAP (and various lanes indexes) not available no\+Valid\+SPATis\+Available\+At\+This\+Time (13) -- SPAT system is not working at this time ~\newline
+ -- Bits 14,15 reserved at this time and shall be zero \} (SIZE(16)) 
+
+Definition at line 76 of file intersection\+\_\+state.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1intersection__state_a51c19a8652fc7761cb9e632fc01a9dd2}\label{structsignal__phase__and__timing_1_1intersection__state_a51c19a8652fc7761cb9e632fc01a9dd2}} 
+\index{signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}!time\_stamp@{time\_stamp}}
+\index{time\_stamp@{time\_stamp}!signal\_phase\_and\_timing::intersection\_state@{signal\_phase\_and\_timing::intersection\_state}}
+\doxysubsubsection{\texorpdfstring{time\_stamp}{time\_stamp}}
+{\footnotesize\ttfamily uint16\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::intersection\+\_\+state\+::time\+\_\+stamp = 0}
+
+
+
+Millisecond point in the current UTC minute that this message was created. 
+
+
+
+Definition at line 84 of file intersection\+\_\+state.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing/include/\mbox{\hyperlink{intersection__state_8h}{intersection\+\_\+state.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing/src/models/\mbox{\hyperlink{intersection__state_8cpp}{intersection\+\_\+state.\+cpp}}\end{DoxyCompactItemize}

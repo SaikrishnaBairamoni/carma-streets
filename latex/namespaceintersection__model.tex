@@ -1,0 +1,215 @@
+\hypertarget{namespaceintersection__model}{}\doxysection{intersection\+\_\+model Namespace Reference}
+\label{namespaceintersection__model}\index{intersection\_model@{intersection\_model}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1lanelet__info__t}{lanelet\+\_\+info\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1intersection__info__t}{intersection\+\_\+info\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1signalized__intersection__lanelets}{signalized\+\_\+intersection\+\_\+lanelets}}
+\item 
+class \mbox{\hyperlink{classintersection__model_1_1intersection__model}{intersection\+\_\+model}}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1map__referencelane}{map\+\_\+referencelane}}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1map__connection}{map\+\_\+connection}}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1map__node}{map\+\_\+node}}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1map__lane}{map\+\_\+lane}}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1map__group}{map\+\_\+group}}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1map__referencepoint}{map\+\_\+referencepoint}}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1map__geometry}{map\+\_\+geometry}}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1intersection__map}{intersection\+\_\+map}}
+\item 
+class \mbox{\hyperlink{classintersection__model_1_1map__msg__worker}{map\+\_\+msg\+\_\+worker}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespaceintersection__model_a9665ff9720af0b25d1c6a216e7bf66b4}{map\+\_\+type}} \{ \mbox{\hyperlink{namespaceintersection__model_a9665ff9720af0b25d1c6a216e7bf66b4a26fef4087b2c10cb5ab7e4a5f5436ff4}{intersection}} = 1
+, \mbox{\hyperlink{namespaceintersection__model_a9665ff9720af0b25d1c6a216e7bf66b4a63f15d788c265b303ddfebff7b8503d3}{roadway}} = 2
+ \}
+\item 
+enum class \mbox{\hyperlink{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5a}{map\+\_\+message\+\_\+attributes}} \{ \mbox{\hyperlink{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5aa8c6ac9887f33b5f79188a4eae7fb2803}{elevation}} = 1
+, \mbox{\hyperlink{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5aa5f7e3405d1d04dae7c8affc36714d0fe}{decimeter}} = 2
+, \mbox{\hyperlink{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5aa65a383f3960a0cb2b8b0ace54817d575}{geometric}} = 4
+, \mbox{\hyperlink{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5aa8e204e51a4d94ac694300a67a5793078}{navigational}} = 8
+ \}
+\item 
+enum class \mbox{\hyperlink{namespaceintersection__model_a636d7a45dcacadc8139f3e24e3d6393d}{map\+\_\+node\+\_\+attributes}} \{ \mbox{\hyperlink{namespaceintersection__model_a636d7a45dcacadc8139f3e24e3d6393daeaae26a6fb20ed3ef54fb23bfa0b1fcc}{width}} = 1
+, \mbox{\hyperlink{namespaceintersection__model_a636d7a45dcacadc8139f3e24e3d6393daf59dcd306ec32930f1e78a1d82280b48}{packed}} = 2
+ \}
+\item 
+enum class \mbox{\hyperlink{namespaceintersection__model_ae4b706d1cdee7b78ec5df5cf141a3e1a}{map\+\_\+group\+\_\+direction}} \{ \mbox{\hyperlink{namespaceintersection__model_ae4b706d1cdee7b78ec5df5cf141a3e1aaf36acfa3674037fc4f43dab0f06c14b0}{approach}} = 1
+, \mbox{\hyperlink{namespaceintersection__model_ae4b706d1cdee7b78ec5df5cf141a3e1aa9928c88a1235388e8d82bcc09db13c7c}{egress}} = 2
+ \}
+\item 
+enum class \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8}{map\+\_\+lane\+\_\+type}} \{ \newline
+\mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a5a76e813d6a0a40548b91acc11557bd2}{vehicle}} = 1
+, \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a5a317d3dd3f7a2f675975a6d0c11c629}{computed}} = 2
+, \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a9d12c2a0e16c88b9a8d8e8f9f05350bc}{pedestrian}} = 3
+, \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a0bd6506986ec42e732ffb866d33bb14e}{special}} = 4
+, \newline
+\mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a0e6f2aa57946950687930fd3e48c11ff}{crosswalk}} = 10
+, \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8adde2c7ad63ad86d6a18de781205d194f}{bike}} = 11
+, \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8ab788ae8f05bb1f7184564c71a5963d95}{sidewalk}} = 12
+, \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8afa9c8ab925b4a1cd4c75b1886fac8f61}{barrier}} = 13
+, \newline
+\mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a409b522f10afa7c261f950129ce23ba8}{striping}} = 14
+, \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a8caf877ecc26ccba4de1770e20a71605}{tracked\+Vehicle}} = 15
+, \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a3ac156eead4ae6b40e9c498d532b4448}{parking}} = 16
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespaceintersection__model_ae4b706d1cdee7b78ec5df5cf141a3e1a}\label{namespaceintersection__model_ae4b706d1cdee7b78ec5df5cf141a3e1a}} 
+\index{intersection\_model@{intersection\_model}!map\_group\_direction@{map\_group\_direction}}
+\index{map\_group\_direction@{map\_group\_direction}!intersection\_model@{intersection\_model}}
+\doxysubsubsection{\texorpdfstring{map\_group\_direction}{map\_group\_direction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceintersection__model_ae4b706d1cdee7b78ec5df5cf141a3e1a}{intersection\+\_\+model\+::map\+\_\+group\+\_\+direction}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{approach@{approach}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!approach@{approach}}}\mbox{\Hypertarget{namespaceintersection__model_ae4b706d1cdee7b78ec5df5cf141a3e1aaf36acfa3674037fc4f43dab0f06c14b0}\label{namespaceintersection__model_ae4b706d1cdee7b78ec5df5cf141a3e1aaf36acfa3674037fc4f43dab0f06c14b0}} 
+approach&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{egress@{egress}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!egress@{egress}}}\mbox{\Hypertarget{namespaceintersection__model_ae4b706d1cdee7b78ec5df5cf141a3e1aa9928c88a1235388e8d82bcc09db13c7c}\label{namespaceintersection__model_ae4b706d1cdee7b78ec5df5cf141a3e1aa9928c88a1235388e8d82bcc09db13c7c}} 
+egress&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 28 of file map.\+h.
+
+\mbox{\Hypertarget{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8}\label{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8}} 
+\index{intersection\_model@{intersection\_model}!map\_lane\_type@{map\_lane\_type}}
+\index{map\_lane\_type@{map\_lane\_type}!intersection\_model@{intersection\_model}}
+\doxysubsubsection{\texorpdfstring{map\_lane\_type}{map\_lane\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8}{intersection\+\_\+model\+::map\+\_\+lane\+\_\+type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{vehicle@{vehicle}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!vehicle@{vehicle}}}\mbox{\Hypertarget{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a5a76e813d6a0a40548b91acc11557bd2}\label{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a5a76e813d6a0a40548b91acc11557bd2}} 
+vehicle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{computed@{computed}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!computed@{computed}}}\mbox{\Hypertarget{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a5a317d3dd3f7a2f675975a6d0c11c629}\label{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a5a317d3dd3f7a2f675975a6d0c11c629}} 
+computed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pedestrian@{pedestrian}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!pedestrian@{pedestrian}}}\mbox{\Hypertarget{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a9d12c2a0e16c88b9a8d8e8f9f05350bc}\label{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a9d12c2a0e16c88b9a8d8e8f9f05350bc}} 
+pedestrian&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{special@{special}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!special@{special}}}\mbox{\Hypertarget{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a0bd6506986ec42e732ffb866d33bb14e}\label{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a0bd6506986ec42e732ffb866d33bb14e}} 
+special&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{crosswalk@{crosswalk}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!crosswalk@{crosswalk}}}\mbox{\Hypertarget{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a0e6f2aa57946950687930fd3e48c11ff}\label{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a0e6f2aa57946950687930fd3e48c11ff}} 
+crosswalk&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bike@{bike}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!bike@{bike}}}\mbox{\Hypertarget{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8adde2c7ad63ad86d6a18de781205d194f}\label{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8adde2c7ad63ad86d6a18de781205d194f}} 
+bike&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sidewalk@{sidewalk}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!sidewalk@{sidewalk}}}\mbox{\Hypertarget{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8ab788ae8f05bb1f7184564c71a5963d95}\label{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8ab788ae8f05bb1f7184564c71a5963d95}} 
+sidewalk&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{barrier@{barrier}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!barrier@{barrier}}}\mbox{\Hypertarget{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8afa9c8ab925b4a1cd4c75b1886fac8f61}\label{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8afa9c8ab925b4a1cd4c75b1886fac8f61}} 
+barrier&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{striping@{striping}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!striping@{striping}}}\mbox{\Hypertarget{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a409b522f10afa7c261f950129ce23ba8}\label{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a409b522f10afa7c261f950129ce23ba8}} 
+striping&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{trackedVehicle@{trackedVehicle}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!trackedVehicle@{trackedVehicle}}}\mbox{\Hypertarget{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a8caf877ecc26ccba4de1770e20a71605}\label{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a8caf877ecc26ccba4de1770e20a71605}} 
+tracked\+Vehicle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{parking@{parking}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!parking@{parking}}}\mbox{\Hypertarget{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a3ac156eead4ae6b40e9c498d532b4448}\label{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a3ac156eead4ae6b40e9c498d532b4448}} 
+parking&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 33 of file map.\+h.
+
+\mbox{\Hypertarget{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5a}\label{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5a}} 
+\index{intersection\_model@{intersection\_model}!map\_message\_attributes@{map\_message\_attributes}}
+\index{map\_message\_attributes@{map\_message\_attributes}!intersection\_model@{intersection\_model}}
+\doxysubsubsection{\texorpdfstring{map\_message\_attributes}{map\_message\_attributes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5a}{intersection\+\_\+model\+::map\+\_\+message\+\_\+attributes}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{elevation@{elevation}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!elevation@{elevation}}}\mbox{\Hypertarget{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5aa8c6ac9887f33b5f79188a4eae7fb2803}\label{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5aa8c6ac9887f33b5f79188a4eae7fb2803}} 
+elevation&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{decimeter@{decimeter}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!decimeter@{decimeter}}}\mbox{\Hypertarget{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5aa5f7e3405d1d04dae7c8affc36714d0fe}\label{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5aa5f7e3405d1d04dae7c8affc36714d0fe}} 
+decimeter&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{geometric@{geometric}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!geometric@{geometric}}}\mbox{\Hypertarget{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5aa65a383f3960a0cb2b8b0ace54817d575}\label{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5aa65a383f3960a0cb2b8b0ace54817d575}} 
+geometric&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{navigational@{navigational}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!navigational@{navigational}}}\mbox{\Hypertarget{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5aa8e204e51a4d94ac694300a67a5793078}\label{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5aa8e204e51a4d94ac694300a67a5793078}} 
+navigational&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 16 of file map.\+h.
+
+\mbox{\Hypertarget{namespaceintersection__model_a636d7a45dcacadc8139f3e24e3d6393d}\label{namespaceintersection__model_a636d7a45dcacadc8139f3e24e3d6393d}} 
+\index{intersection\_model@{intersection\_model}!map\_node\_attributes@{map\_node\_attributes}}
+\index{map\_node\_attributes@{map\_node\_attributes}!intersection\_model@{intersection\_model}}
+\doxysubsubsection{\texorpdfstring{map\_node\_attributes}{map\_node\_attributes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceintersection__model_a636d7a45dcacadc8139f3e24e3d6393d}{intersection\+\_\+model\+::map\+\_\+node\+\_\+attributes}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{width@{width}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!width@{width}}}\mbox{\Hypertarget{namespaceintersection__model_a636d7a45dcacadc8139f3e24e3d6393daeaae26a6fb20ed3ef54fb23bfa0b1fcc}\label{namespaceintersection__model_a636d7a45dcacadc8139f3e24e3d6393daeaae26a6fb20ed3ef54fb23bfa0b1fcc}} 
+width&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{packed@{packed}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!packed@{packed}}}\mbox{\Hypertarget{namespaceintersection__model_a636d7a45dcacadc8139f3e24e3d6393daf59dcd306ec32930f1e78a1d82280b48}\label{namespaceintersection__model_a636d7a45dcacadc8139f3e24e3d6393daf59dcd306ec32930f1e78a1d82280b48}} 
+packed&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 23 of file map.\+h.
+
+\mbox{\Hypertarget{namespaceintersection__model_a9665ff9720af0b25d1c6a216e7bf66b4}\label{namespaceintersection__model_a9665ff9720af0b25d1c6a216e7bf66b4}} 
+\index{intersection\_model@{intersection\_model}!map\_type@{map\_type}}
+\index{map\_type@{map\_type}!intersection\_model@{intersection\_model}}
+\doxysubsubsection{\texorpdfstring{map\_type}{map\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceintersection__model_a9665ff9720af0b25d1c6a216e7bf66b4}{intersection\+\_\+model\+::map\+\_\+type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{intersection@{intersection}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!intersection@{intersection}}}\mbox{\Hypertarget{namespaceintersection__model_a9665ff9720af0b25d1c6a216e7bf66b4a26fef4087b2c10cb5ab7e4a5f5436ff4}\label{namespaceintersection__model_a9665ff9720af0b25d1c6a216e7bf66b4a26fef4087b2c10cb5ab7e4a5f5436ff4}} 
+intersection&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{roadway@{roadway}!intersection\_model@{intersection\_model}}\index{intersection\_model@{intersection\_model}!roadway@{roadway}}}\mbox{\Hypertarget{namespaceintersection__model_a9665ff9720af0b25d1c6a216e7bf66b4a63f15d788c265b303ddfebff7b8503d3}\label{namespaceintersection__model_a9665ff9720af0b25d1c6a216e7bf66b4a63f15d788c265b303ddfebff7b8503d3}} 
+roadway&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 11 of file map.\+h.
+

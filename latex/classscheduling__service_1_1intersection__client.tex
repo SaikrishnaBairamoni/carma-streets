@@ -1,0 +1,135 @@
+\hypertarget{classscheduling__service_1_1intersection__client}{}\doxysection{scheduling\+\_\+service\+::intersection\+\_\+client Class Reference}
+\label{classscheduling__service_1_1intersection__client}\index{scheduling\_service::intersection\_client@{scheduling\_service::intersection\_client}}
+
+
+{\ttfamily \#include $<$intersection\+\_\+client.\+h$>$}
+
+
+
+Inheritance diagram for scheduling\+\_\+service\+::intersection\+\_\+client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classscheduling__service_1_1intersection__client__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for scheduling\+\_\+service\+::intersection\+\_\+client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classscheduling__service_1_1intersection__client__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classscheduling__service_1_1intersection__client_ac510cca78365a620384ff9faeaad572f}{update\+\_\+intersection\+\_\+info}} (const int sleep\+\_\+millisecs, const int int\+\_\+client\+\_\+request\+\_\+attempts)
+\begin{DoxyCompactList}\small\item\em Updating the intersection info. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classscheduling__service_1_1intersection__client_ad6bd9f3f48ee4e352798f418b88b730a}{request\+\_\+intersection\+\_\+info}} ()
+\begin{DoxyCompactList}\small\item\em Send http GET request to intersection model at rate of configured HZ until it gets the intersection info. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classOpenAPI_1_1OAIIntersection__info}{Open\+API\+::\+OAIIntersection\+\_\+info}} $>$ \mbox{\hyperlink{classscheduling__service_1_1intersection__client_ad3f7253d9f88279fde9ae9eeb2552459}{get\+\_\+intersection\+\_\+info}} () const
+\begin{DoxyCompactList}\small\item\em Get the intersection info object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 17 of file intersection\+\_\+client.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classscheduling__service_1_1intersection__client_ad3f7253d9f88279fde9ae9eeb2552459}\label{classscheduling__service_1_1intersection__client_ad3f7253d9f88279fde9ae9eeb2552459}} 
+\index{scheduling\_service::intersection\_client@{scheduling\_service::intersection\_client}!get\_intersection\_info@{get\_intersection\_info}}
+\index{get\_intersection\_info@{get\_intersection\_info}!scheduling\_service::intersection\_client@{scheduling\_service::intersection\_client}}
+\doxysubsubsection{\texorpdfstring{get\_intersection\_info()}{get\_intersection\_info()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classOpenAPI_1_1OAIIntersection__info}{Open\+API\+::\+OAIIntersection\+\_\+info}} $>$ intersection\+\_\+client\+::get\+\_\+intersection\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the intersection info object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Open\+API\+::\+OAIIntersection\+\_\+info$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file intersection\+\_\+client.\+cpp.
+
+\mbox{\Hypertarget{classscheduling__service_1_1intersection__client_ad6bd9f3f48ee4e352798f418b88b730a}\label{classscheduling__service_1_1intersection__client_ad6bd9f3f48ee4e352798f418b88b730a}} 
+\index{scheduling\_service::intersection\_client@{scheduling\_service::intersection\_client}!request\_intersection\_info@{request\_intersection\_info}}
+\index{request\_intersection\_info@{request\_intersection\_info}!scheduling\_service::intersection\_client@{scheduling\_service::intersection\_client}}
+\doxysubsubsection{\texorpdfstring{request\_intersection\_info()}{request\_intersection\_info()}}
+{\footnotesize\ttfamily bool intersection\+\_\+client\+::request\+\_\+intersection\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Send http GET request to intersection model at rate of configured HZ until it gets the intersection info. 
+
+\begin{DoxyReturn}{Returns}
+true if intersection information is updated. 
+
+false if intersection information is not updated. 
+\end{DoxyReturn}
+
+
+Definition at line 28 of file intersection\+\_\+client.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscheduling__service_1_1intersection__client_ad6bd9f3f48ee4e352798f418b88b730a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscheduling__service_1_1intersection__client_ad6bd9f3f48ee4e352798f418b88b730a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscheduling__service_1_1intersection__client_ac510cca78365a620384ff9faeaad572f}\label{classscheduling__service_1_1intersection__client_ac510cca78365a620384ff9faeaad572f}} 
+\index{scheduling\_service::intersection\_client@{scheduling\_service::intersection\_client}!update\_intersection\_info@{update\_intersection\_info}}
+\index{update\_intersection\_info@{update\_intersection\_info}!scheduling\_service::intersection\_client@{scheduling\_service::intersection\_client}}
+\doxysubsubsection{\texorpdfstring{update\_intersection\_info()}{update\_intersection\_info()}}
+{\footnotesize\ttfamily bool intersection\+\_\+client\+::update\+\_\+intersection\+\_\+info (\begin{DoxyParamCaption}\item[{const int}]{sleep\+\_\+millisecs,  }\item[{const int}]{int\+\_\+client\+\_\+request\+\_\+attempts }\end{DoxyParamCaption})}
+
+
+
+Updating the intersection info. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sleep\+\_\+millisecs} & The current thread sleep for milliseconds after each update attempt. \\
+\hline
+{\em int\+\_\+client\+\_\+request\+\_\+attempts} & The number of attempts for the loop. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean. True if intersection information is updated, otherwise failed to update intersection information. 
+\end{DoxyReturn}
+
+
+Definition at line 6 of file intersection\+\_\+client.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscheduling__service_1_1intersection__client_ac510cca78365a620384ff9faeaad572f_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+scheduling\+\_\+service/include/\mbox{\hyperlink{scheduling__service_2include_2intersection__client_8h}{intersection\+\_\+client.\+h}}\item 
+scheduling\+\_\+service/src/\mbox{\hyperlink{scheduling__service_2src_2intersection__client_8cpp}{intersection\+\_\+client.\+cpp}}\end{DoxyCompactItemize}

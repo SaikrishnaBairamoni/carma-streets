@@ -1,0 +1,4 @@
+<map id="scheduling_service::scheduling_service::schedule_veh" name="scheduling_service::scheduling_service::schedule_veh">
+<area shape="rect" id="node1" title="Schedule vehicles and produce the schedule plan." alt="" coords="5,5,160,61"/>
+<area shape="rect" id="node2" href="$classstreets__service_1_1streets__configuration.html#ae1ce5cdd4b4d28cc8e4034c429aabb66" title="Retreive configuration parameter double value with provide name." alt="" coords="208,13,448,54"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="traffic_signal_controller_service::tsc_service::start" name="traffic_signal_controller_service::tsc_service::start">
+<area shape="rect" id="node1" title="Method to start all threads included in the tsc_service." alt="" coords="5,13,200,54"/>
+<area shape="rect" id="node2" href="$classtraffic__signal__controller__service_1_1tsc__service.html#aa4fb7763e7ae8b9e630fd7fa10bc2479" title="Method to receive UDP data from traffic signal controller and broadcast spat JSON data to the carma&#45;s..." alt="" coords="248,5,423,61"/>
+</map>

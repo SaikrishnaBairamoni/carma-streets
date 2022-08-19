@@ -1,0 +1,6 @@
+<map id="streets_service::streets_configuration::initialize_logger" name="streets_service::streets_configuration::initialize_logger">
+<area shape="rect" id="node1" title="Static method to initialize spdlog default logger." alt="" coords="228,49,455,90"/>
+<area shape="rect" id="node2" href="$intersection__model_2src_2server_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="65,5,120,32"/>
+<area shape="rect" id="node3" href="$test__streets__configuration_8cpp.html#a0ff8330bebe170a7c6d66028ac75ee5d" title="Tested get_config methods with created manifest.json file including updates." alt="" coords="65,56,120,83"/>
+<area shape="rect" id="node4" href="$namespacetraffic__signal__controller__service.html#a1a1dc1930253a08735579df21709cd07" title=" " alt="" coords="5,107,180,149"/>
+</map>

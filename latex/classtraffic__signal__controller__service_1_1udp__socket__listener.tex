@@ -1,0 +1,141 @@
+\hypertarget{classtraffic__signal__controller__service_1_1udp__socket__listener}{}\doxysection{traffic\+\_\+signal\+\_\+controller\+\_\+service\+::udp\+\_\+socket\+\_\+listener Class Reference}
+\label{classtraffic__signal__controller__service_1_1udp__socket__listener}\index{traffic\_signal\_controller\_service::udp\_socket\_listener@{traffic\_signal\_controller\_service::udp\_socket\_listener}}
+
+
+{\ttfamily \#include $<$udp\+\_\+socket\+\_\+listener.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraffic__signal__controller__service_1_1udp__socket__listener_abb74b3fc2e393afda366987d4eef108f}{udp\+\_\+socket\+\_\+listener}} (const std\+::string \&ip, const int port, const int socket\+\_\+timeout)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classtraffic__signal__controller__service_1_1udp__socket__listener}{udp\+\_\+socket\+\_\+listener}} object. This will initialize the member variables to the values assigned in the manifest json file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtraffic__signal__controller__service_1_1udp__socket__listener_a31b4e86e82539c46c84578142eddadef}{$\sim$udp\+\_\+socket\+\_\+listener}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the udp socket listener. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtraffic__signal__controller__service_1_1udp__socket__listener_a05faa09034e8685d279639706ad8e092}{udp\+\_\+socket\+\_\+listener}} (const \mbox{\hyperlink{classtraffic__signal__controller__service_1_1udp__socket__listener}{udp\+\_\+socket\+\_\+listener}} \&)=delete
+\item 
+\mbox{\hyperlink{classtraffic__signal__controller__service_1_1udp__socket__listener}{udp\+\_\+socket\+\_\+listener}} \& \mbox{\hyperlink{classtraffic__signal__controller__service_1_1udp__socket__listener_afd35b2dfba454e3264fff1b9470932ee}{operator=}} (const \mbox{\hyperlink{classtraffic__signal__controller__service_1_1udp__socket__listener}{udp\+\_\+socket\+\_\+listener}} \&)=delete
+\item 
+bool \mbox{\hyperlink{classtraffic__signal__controller__service_1_1udp__socket__listener_ab8db65687e8eaf74c7eb8142af58f9e0}{initialize}} ()
+\item 
+std\+::vector$<$ char $>$ \mbox{\hyperlink{classtraffic__signal__controller__service_1_1udp__socket__listener_af588b9deae54432dcc82cb9541ab5992}{receive}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 13 of file udp\+\_\+socket\+\_\+listener.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1udp__socket__listener_abb74b3fc2e393afda366987d4eef108f}\label{classtraffic__signal__controller__service_1_1udp__socket__listener_abb74b3fc2e393afda366987d4eef108f}} 
+\index{traffic\_signal\_controller\_service::udp\_socket\_listener@{traffic\_signal\_controller\_service::udp\_socket\_listener}!udp\_socket\_listener@{udp\_socket\_listener}}
+\index{udp\_socket\_listener@{udp\_socket\_listener}!traffic\_signal\_controller\_service::udp\_socket\_listener@{traffic\_signal\_controller\_service::udp\_socket\_listener}}
+\doxysubsubsection{\texorpdfstring{udp\_socket\_listener()}{udp\_socket\_listener()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily traffic\+\_\+signal\+\_\+controller\+\_\+service\+::udp\+\_\+socket\+\_\+listener\+::udp\+\_\+socket\+\_\+listener (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ip,  }\item[{const int}]{port,  }\item[{const int}]{socket\+\_\+timeout }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classtraffic__signal__controller__service_1_1udp__socket__listener}{udp\+\_\+socket\+\_\+listener}} object. This will initialize the member variables to the values assigned in the manifest json file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip} & The ip address of the \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service}{tsc\+\_\+service}} \\
+\hline
+{\em port} & The ethernet port to receive spat messages on \\
+\hline
+{\em socket\+Timeout} & Timeout, in seconds, for udp socket to TSC \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file udp\+\_\+socket\+\_\+listener.\+cpp.
+
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1udp__socket__listener_a31b4e86e82539c46c84578142eddadef}\label{classtraffic__signal__controller__service_1_1udp__socket__listener_a31b4e86e82539c46c84578142eddadef}} 
+\index{traffic\_signal\_controller\_service::udp\_socket\_listener@{traffic\_signal\_controller\_service::udp\_socket\_listener}!````~udp\_socket\_listener@{$\sim$udp\_socket\_listener}}
+\index{````~udp\_socket\_listener@{$\sim$udp\_socket\_listener}!traffic\_signal\_controller\_service::udp\_socket\_listener@{traffic\_signal\_controller\_service::udp\_socket\_listener}}
+\doxysubsubsection{\texorpdfstring{$\sim$udp\_socket\_listener()}{~udp\_socket\_listener()}}
+{\footnotesize\ttfamily traffic\+\_\+signal\+\_\+controller\+\_\+service\+::udp\+\_\+socket\+\_\+listener\+::$\sim$udp\+\_\+socket\+\_\+listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the udp socket listener. 
+
+
+
+Definition at line 10 of file udp\+\_\+socket\+\_\+listener.\+cpp.
+
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1udp__socket__listener_a05faa09034e8685d279639706ad8e092}\label{classtraffic__signal__controller__service_1_1udp__socket__listener_a05faa09034e8685d279639706ad8e092}} 
+\index{traffic\_signal\_controller\_service::udp\_socket\_listener@{traffic\_signal\_controller\_service::udp\_socket\_listener}!udp\_socket\_listener@{udp\_socket\_listener}}
+\index{udp\_socket\_listener@{udp\_socket\_listener}!traffic\_signal\_controller\_service::udp\_socket\_listener@{traffic\_signal\_controller\_service::udp\_socket\_listener}}
+\doxysubsubsection{\texorpdfstring{udp\_socket\_listener()}{udp\_socket\_listener()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily traffic\+\_\+signal\+\_\+controller\+\_\+service\+::udp\+\_\+socket\+\_\+listener\+::udp\+\_\+socket\+\_\+listener (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtraffic__signal__controller__service_1_1udp__socket__listener}{udp\+\_\+socket\+\_\+listener}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1udp__socket__listener_ab8db65687e8eaf74c7eb8142af58f9e0}\label{classtraffic__signal__controller__service_1_1udp__socket__listener_ab8db65687e8eaf74c7eb8142af58f9e0}} 
+\index{traffic\_signal\_controller\_service::udp\_socket\_listener@{traffic\_signal\_controller\_service::udp\_socket\_listener}!initialize@{initialize}}
+\index{initialize@{initialize}!traffic\_signal\_controller\_service::udp\_socket\_listener@{traffic\_signal\_controller\_service::udp\_socket\_listener}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily bool traffic\+\_\+signal\+\_\+controller\+\_\+service\+::udp\+\_\+socket\+\_\+listener\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file udp\+\_\+socket\+\_\+listener.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{classtraffic__signal__controller__service_1_1udp__socket__listener_ab8db65687e8eaf74c7eb8142af58f9e0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1udp__socket__listener_ab8db65687e8eaf74c7eb8142af58f9e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1udp__socket__listener_afd35b2dfba454e3264fff1b9470932ee}\label{classtraffic__signal__controller__service_1_1udp__socket__listener_afd35b2dfba454e3264fff1b9470932ee}} 
+\index{traffic\_signal\_controller\_service::udp\_socket\_listener@{traffic\_signal\_controller\_service::udp\_socket\_listener}!operator=@{operator=}}
+\index{operator=@{operator=}!traffic\_signal\_controller\_service::udp\_socket\_listener@{traffic\_signal\_controller\_service::udp\_socket\_listener}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtraffic__signal__controller__service_1_1udp__socket__listener}{udp\+\_\+socket\+\_\+listener}}\& traffic\+\_\+signal\+\_\+controller\+\_\+service\+::udp\+\_\+socket\+\_\+listener\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtraffic__signal__controller__service_1_1udp__socket__listener}{udp\+\_\+socket\+\_\+listener}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1udp__socket__listener_af588b9deae54432dcc82cb9541ab5992}\label{classtraffic__signal__controller__service_1_1udp__socket__listener_af588b9deae54432dcc82cb9541ab5992}} 
+\index{traffic\_signal\_controller\_service::udp\_socket\_listener@{traffic\_signal\_controller\_service::udp\_socket\_listener}!receive@{receive}}
+\index{receive@{receive}!traffic\_signal\_controller\_service::udp\_socket\_listener@{traffic\_signal\_controller\_service::udp\_socket\_listener}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily std\+::vector$<$ char $>$ traffic\+\_\+signal\+\_\+controller\+\_\+service\+::udp\+\_\+socket\+\_\+listener\+::receive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 54 of file udp\+\_\+socket\+\_\+listener.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{classtraffic__signal__controller__service_1_1udp__socket__listener_af588b9deae54432dcc82cb9541ab5992_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1udp__socket__listener_af588b9deae54432dcc82cb9541ab5992_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tsc\+\_\+client\+\_\+service/include/\mbox{\hyperlink{udp__socket__listener_8h}{udp\+\_\+socket\+\_\+listener.\+h}}\item 
+tsc\+\_\+client\+\_\+service/src/\mbox{\hyperlink{udp__socket__listener_8cpp}{udp\+\_\+socket\+\_\+listener.\+cpp}}\end{DoxyCompactItemize}

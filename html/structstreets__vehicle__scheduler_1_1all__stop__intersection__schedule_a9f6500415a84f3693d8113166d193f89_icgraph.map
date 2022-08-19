@@ -1,0 +1,4 @@
+<map id="streets_vehicle_scheduler::all_stop_intersection_schedule::toJson" name="streets_vehicle_scheduler::all_stop_intersection_schedule::toJson">
+<area shape="rect" id="node1" title="Method to write intersection schedule as JSON scheduling message." alt="" coords="123,5,313,61"/>
+<area shape="rect" id="node2" href="$test__all__stop__json__csv__schedule_8cpp.html#ac447501fbf3f7f15e3112c7ef986497c" title="Test with multiple vehicle for json schedule." alt="" coords="5,20,75,47"/>
+</map>

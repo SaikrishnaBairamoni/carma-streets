@@ -1,0 +1,4 @@
+<map id="signal_phase_and_timing::intersection_state::toJson" name="signal_phase_and_timing::intersection_state::toJson">
+<area shape="rect" id="node1" title="Serialize Intersection State object to rapidjson::Value for writing as JSON string." alt="" coords="123,5,309,61"/>
+<area shape="rect" id="node2" href="$test__intersection__state_8cpp.html#a36993b098304ac5242a7ac54d227d58a" title=" " alt="" coords="5,20,75,47"/>
+</map>

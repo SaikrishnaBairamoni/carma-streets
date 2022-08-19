@@ -1,0 +1,202 @@
+\hypertarget{classOpenAPI_1_1OAIHttpRequestInput}{}\doxysection{Open\+API\+::OAIHttp\+Request\+Input Class Reference}
+\label{classOpenAPI_1_1OAIHttpRequestInput}\index{OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}}
+
+
+{\ttfamily \#include $<$OAIHttp\+Request.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestInput_ae42e5ffef3a34cc8fba75c09c81001a8}{OAIHttp\+Request\+Input}} ()
+\item 
+\mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestInput_a5a2303ef8028aa44bda2e80130a27df3}{OAIHttp\+Request\+Input}} (QString v\+\_\+url\+\_\+str, QString v\+\_\+http\+\_\+method)
+\item 
+void \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestInput_a768470088686c8f3f4b80cb570237aff}{initialize}} ()
+\item 
+void \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestInput_a6fe9c0b8ca106f04a7ea034a73f2f905}{add\+\_\+var}} (QString key, QString value)
+\item 
+void \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestInput_a8bb8ec3ee758dd84769fd9837ba0da89}{add\+\_\+file}} (QString variable\+\_\+name, QString local\+\_\+filename, QString request\+\_\+filename, QString mime\+\_\+type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+QString \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestInput_aa460e5d2424779878f2a98ab036bfcb4}{url\+\_\+str}}
+\item 
+QString \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestInput_a7fa83f18ce449cb11ae50cbd1aa5d659}{http\+\_\+method}}
+\item 
+\mbox{\hyperlink{namespaceOpenAPI_a01f5551f0ce7e6159bde77dabe47aebe}{OAIHttp\+Request\+Var\+Layout}} \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestInput_a603e7f6bdf29c9f912263142b305bb81}{var\+\_\+layout}}
+\item 
+QMap$<$ QString, QString $>$ \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestInput_a2f59faf0f73096e5c5afc35471310eb4}{vars}}
+\item 
+QMap$<$ QString, QString $>$ \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestInput_a3aa129b819ceab8cad92aaf7abc51c97}{headers}}
+\item 
+QList$<$ \mbox{\hyperlink{classOpenAPI_1_1OAIHttpFileElement}{OAIHttp\+File\+Element}} $>$ \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestInput_a51eb830dfb68016cec5b7a8666be7484}{files}}
+\item 
+QByte\+Array \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestInput_a8a20de2c3c50c6bd6af760f2985033b8}{request\+\_\+body}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 42 of file OAIHttp\+Request.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestInput_ae42e5ffef3a34cc8fba75c09c81001a8}\label{classOpenAPI_1_1OAIHttpRequestInput_ae42e5ffef3a34cc8fba75c09c81001a8}} 
+\index{OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}!OAIHttpRequestInput@{OAIHttpRequestInput}}
+\index{OAIHttpRequestInput@{OAIHttpRequestInput}!OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}}
+\doxysubsubsection{\texorpdfstring{OAIHttpRequestInput()}{OAIHttpRequestInput()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Open\+API\+::\+OAIHttp\+Request\+Input\+::\+OAIHttp\+Request\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file OAIHttp\+Request.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenAPI_1_1OAIHttpRequestInput_ae42e5ffef3a34cc8fba75c09c81001a8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestInput_a5a2303ef8028aa44bda2e80130a27df3}\label{classOpenAPI_1_1OAIHttpRequestInput_a5a2303ef8028aa44bda2e80130a27df3}} 
+\index{OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}!OAIHttpRequestInput@{OAIHttpRequestInput}}
+\index{OAIHttpRequestInput@{OAIHttpRequestInput}!OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}}
+\doxysubsubsection{\texorpdfstring{OAIHttpRequestInput()}{OAIHttpRequestInput()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Open\+API\+::\+OAIHttp\+Request\+Input\+::\+OAIHttp\+Request\+Input (\begin{DoxyParamCaption}\item[{QString}]{v\+\_\+url\+\_\+str,  }\item[{QString}]{v\+\_\+http\+\_\+method }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file OAIHttp\+Request.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenAPI_1_1OAIHttpRequestInput_a5a2303ef8028aa44bda2e80130a27df3_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestInput_a8bb8ec3ee758dd84769fd9837ba0da89}\label{classOpenAPI_1_1OAIHttpRequestInput_a8bb8ec3ee758dd84769fd9837ba0da89}} 
+\index{OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}!add\_file@{add\_file}}
+\index{add\_file@{add\_file}!OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}}
+\doxysubsubsection{\texorpdfstring{add\_file()}{add\_file()}}
+{\footnotesize\ttfamily void Open\+API\+::\+OAIHttp\+Request\+Input\+::add\+\_\+file (\begin{DoxyParamCaption}\item[{QString}]{variable\+\_\+name,  }\item[{QString}]{local\+\_\+filename,  }\item[{QString}]{request\+\_\+filename,  }\item[{QString}]{mime\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 50 of file OAIHttp\+Request.\+cpp.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestInput_a6fe9c0b8ca106f04a7ea034a73f2f905}\label{classOpenAPI_1_1OAIHttpRequestInput_a6fe9c0b8ca106f04a7ea034a73f2f905}} 
+\index{OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}!add\_var@{add\_var}}
+\index{add\_var@{add\_var}!OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}}
+\doxysubsubsection{\texorpdfstring{add\_var()}{add\_var()}}
+{\footnotesize\ttfamily void Open\+API\+::\+OAIHttp\+Request\+Input\+::add\+\_\+var (\begin{DoxyParamCaption}\item[{QString}]{key,  }\item[{QString}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 46 of file OAIHttp\+Request.\+cpp.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestInput_a768470088686c8f3f4b80cb570237aff}\label{classOpenAPI_1_1OAIHttpRequestInput_a768470088686c8f3f4b80cb570237aff}} 
+\index{OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}!initialize@{initialize}}
+\index{initialize@{initialize}!OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Open\+API\+::\+OAIHttp\+Request\+Input\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file OAIHttp\+Request.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenAPI_1_1OAIHttpRequestInput_a768470088686c8f3f4b80cb570237aff_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestInput_a51eb830dfb68016cec5b7a8666be7484}\label{classOpenAPI_1_1OAIHttpRequestInput_a51eb830dfb68016cec5b7a8666be7484}} 
+\index{OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}!files@{files}}
+\index{files@{files}!OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}}
+\doxysubsubsection{\texorpdfstring{files}{files}}
+{\footnotesize\ttfamily QList$<$\mbox{\hyperlink{classOpenAPI_1_1OAIHttpFileElement}{OAIHttp\+File\+Element}}$>$ Open\+API\+::\+OAIHttp\+Request\+Input\+::files}
+
+
+
+Definition at line 50 of file OAIHttp\+Request.\+h.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestInput_a3aa129b819ceab8cad92aaf7abc51c97}\label{classOpenAPI_1_1OAIHttpRequestInput_a3aa129b819ceab8cad92aaf7abc51c97}} 
+\index{OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}!headers@{headers}}
+\index{headers@{headers}!OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}}
+\doxysubsubsection{\texorpdfstring{headers}{headers}}
+{\footnotesize\ttfamily QMap$<$QString, QString$>$ Open\+API\+::\+OAIHttp\+Request\+Input\+::headers}
+
+
+
+Definition at line 49 of file OAIHttp\+Request.\+h.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestInput_a7fa83f18ce449cb11ae50cbd1aa5d659}\label{classOpenAPI_1_1OAIHttpRequestInput_a7fa83f18ce449cb11ae50cbd1aa5d659}} 
+\index{OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}!http\_method@{http\_method}}
+\index{http\_method@{http\_method}!OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}}
+\doxysubsubsection{\texorpdfstring{http\_method}{http\_method}}
+{\footnotesize\ttfamily QString Open\+API\+::\+OAIHttp\+Request\+Input\+::http\+\_\+method}
+
+
+
+Definition at line 46 of file OAIHttp\+Request.\+h.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestInput_a8a20de2c3c50c6bd6af760f2985033b8}\label{classOpenAPI_1_1OAIHttpRequestInput_a8a20de2c3c50c6bd6af760f2985033b8}} 
+\index{OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}!request\_body@{request\_body}}
+\index{request\_body@{request\_body}!OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}}
+\doxysubsubsection{\texorpdfstring{request\_body}{request\_body}}
+{\footnotesize\ttfamily QByte\+Array Open\+API\+::\+OAIHttp\+Request\+Input\+::request\+\_\+body}
+
+
+
+Definition at line 51 of file OAIHttp\+Request.\+h.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestInput_aa460e5d2424779878f2a98ab036bfcb4}\label{classOpenAPI_1_1OAIHttpRequestInput_aa460e5d2424779878f2a98ab036bfcb4}} 
+\index{OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}!url\_str@{url\_str}}
+\index{url\_str@{url\_str}!OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}}
+\doxysubsubsection{\texorpdfstring{url\_str}{url\_str}}
+{\footnotesize\ttfamily QString Open\+API\+::\+OAIHttp\+Request\+Input\+::url\+\_\+str}
+
+
+
+Definition at line 45 of file OAIHttp\+Request.\+h.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestInput_a603e7f6bdf29c9f912263142b305bb81}\label{classOpenAPI_1_1OAIHttpRequestInput_a603e7f6bdf29c9f912263142b305bb81}} 
+\index{OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}!var\_layout@{var\_layout}}
+\index{var\_layout@{var\_layout}!OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}}
+\doxysubsubsection{\texorpdfstring{var\_layout}{var\_layout}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceOpenAPI_a01f5551f0ce7e6159bde77dabe47aebe}{OAIHttp\+Request\+Var\+Layout}} Open\+API\+::\+OAIHttp\+Request\+Input\+::var\+\_\+layout}
+
+
+
+Definition at line 47 of file OAIHttp\+Request.\+h.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestInput_a2f59faf0f73096e5c5afc35471310eb4}\label{classOpenAPI_1_1OAIHttpRequestInput_a2f59faf0f73096e5c5afc35471310eb4}} 
+\index{OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}!vars@{vars}}
+\index{vars@{vars}!OpenAPI::OAIHttpRequestInput@{OpenAPI::OAIHttpRequestInput}}
+\doxysubsubsection{\texorpdfstring{vars}{vars}}
+{\footnotesize\ttfamily QMap$<$QString, QString$>$ Open\+API\+::\+OAIHttp\+Request\+Input\+::vars}
+
+
+
+Definition at line 48 of file OAIHttp\+Request.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+api/intersection\+\_\+client\+\_\+api/\mbox{\hyperlink{OAIHttpRequest_8h}{OAIHttp\+Request.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+api/intersection\+\_\+client\+\_\+api/\mbox{\hyperlink{OAIHttpRequest_8cpp}{OAIHttp\+Request.\+cpp}}\end{DoxyCompactItemize}

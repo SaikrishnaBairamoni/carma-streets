@@ -1,0 +1,4 @@
+<map id="message_services::workers::mobilityoperation_worker::get_curr_list" name="message_services::workers::mobilityoperation_worker::get_curr_list">
+<area shape="rect" id="node1" title="Return the vector of mobilityoperation stored in the mobilityoperation_worker." alt="" coords="108,5,309,61"/>
+<area shape="rect" id="node2" href="$test__mobilityoperation__worker_8cpp.html#acb0864e3bbda3dac1d4a594654bf5ecc" title=" " alt="" coords="5,20,60,47"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node1" title=" " alt="" coords="5,115,60,142"/>
+<area shape="rect" id="node2" href="$classintersection__model_1_1intersection__model.html#a41573ac5b4ab6f0c1a6533f52e558056" title="Determine the connection lanelet for a pair of enter and departure lanelet at the intersection." alt="" coords="108,5,321,76"/>
+<area shape="rect" id="node3" href="$classintersection__model_1_1intersection__model.html#a96cf039df5fc9902a44258e73e81f67b" title="Read lanelet2 map." alt="" coords="137,101,292,157"/>
+<area shape="rect" id="node4" href="$classintersection__model_1_1intersection__model.html#aee444e73411f8593b4ad579849fc87b7" title="Read the OSM map, project the map, and initialize all the intersection related info including: inters..." alt="" coords="119,181,310,237"/>
+</map>

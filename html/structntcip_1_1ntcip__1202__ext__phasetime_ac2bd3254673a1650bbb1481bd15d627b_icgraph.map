@@ -1,0 +1,6 @@
+<map id="ntcip::ntcip_1202_ext_phasetime::get_spat_veh_max_time_to_change" name="ntcip::ntcip_1202_ext_phasetime::get_spat_veh_max_time_to_change">
+<area shape="rect" id="node1" title="Get spat_veh_max_time_to_change and convert from network byte order to host byte order." alt="" coords="475,35,675,91"/>
+<area shape="rect" id="node2" href="$structntcip_1_1ntcip__1202__ext__phasetime.html#a6821fa39f38b2204fac86cc42235fcd2" title="Convert information to string." alt="" coords="252,5,415,47"/>
+<area shape="rect" id="node3" href="$structsignal__phase__and__timing_1_1intersection__state.html#a01285f8060241eec1adbaa0c5e97a1df" title="Method to update movement_state with signal_group_id using ntcip spat data." alt="" coords="240,71,427,127"/>
+<area shape="rect" id="node4" href="$structsignal__phase__and__timing_1_1intersection__state.html#adb8a7d8693ba85ab08f3c0e31afe4935" title="Clears old movement event data for all movement_states. Adds one movement_event to the state_time_spe..." alt="" coords="5,71,192,127"/>
+</map>

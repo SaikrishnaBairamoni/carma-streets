@@ -1,0 +1,178 @@
+\hypertarget{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule}{}\doxysection{streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+schedule Struct Reference}
+\label{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule}\index{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule@{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule}}
+
+
+Object to represent schedule for single vehicle.  
+
+
+
+
+{\ttfamily \#include $<$signalized\+\_\+intersection\+\_\+schedule.\+h$>$}
+
+
+
+Inheritance diagram for streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+schedule\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+schedule\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_ad3e240d142020d6a4c1dbd637966a64a}{signalized\+\_\+vehicle\+\_\+schedule}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new signalized vehicle schedule object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_af8fec3e8ad40b590bad19192d114ca4f}{$\sim$signalized\+\_\+vehicle\+\_\+schedule}} () override=default
+\begin{DoxyCompactList}\small\item\em Destroy the signalized vehicle schedule object. \end{DoxyCompactList}\item 
+rapidjson\+::\+Value \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_a2d0dca64d4ca5b4bc3ec690f03575f56}{to\+Json}} (rapidjson\+::\+Document\+::\+Allocator\+Type \&allocator) const override
+\begin{DoxyCompactList}\small\item\em Write vehicle schedule as rapidjson\+::\+Value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+u\+\_\+int64\+\_\+t \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_afa9ea3f6d6edea565e80cd279f69df0b}{eet}} = 0
+\begin{DoxyCompactList}\small\item\em Earliest possible entering time based on kinematic information and lanelet speed limit and length. entering time is the time since epoch in milliseconds when the vehicle will arrive at the stop bar. \end{DoxyCompactList}\item 
+u\+\_\+int64\+\_\+t \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_a508a6d75fcf630309aa378c4fbeb3171}{et}} = 0
+\begin{DoxyCompactList}\small\item\em Entering time considering the preceding vehicles and the modified spat. Entering time is the time since epoch in milliseconds when the vehicle will enter the intersection box. \end{DoxyCompactList}\item 
+u\+\_\+int64\+\_\+t \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_a4e258c3309f6d86f85f5fb36e801ee5d}{dt}} = 0
+\begin{DoxyCompactList}\small\item\em Departure time considering the preceding vehicles and the modified spat. Departure time is the time since epoch in milliseconds when the vehicle will depart from the intersection box. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405ac}{streets\+\_\+vehicles\+::vehicle\+\_\+state}} \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_afdb3b1e43d8f12071f3e4b6b5780ef99}{state}} = \mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405aca9a116c50d133c8648404081885194300}{streets\+\_\+vehicles\+::vehicle\+\_\+state\+::\+ND}}
+\begin{DoxyCompactList}\small\item\em Vehicle State (. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Object to represent schedule for single vehicle. 
+
+Definition at line 13 of file signalized\+\_\+intersection\+\_\+schedule.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_ad3e240d142020d6a4c1dbd637966a64a}\label{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_ad3e240d142020d6a4c1dbd637966a64a}} 
+\index{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule@{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule}!signalized\_vehicle\_schedule@{signalized\_vehicle\_schedule}}
+\index{signalized\_vehicle\_schedule@{signalized\_vehicle\_schedule}!streets\_vehicle\_scheduler::signalized\_vehicle\_schedule@{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{signalized\_vehicle\_schedule()}{signalized\_vehicle\_schedule()}}
+{\footnotesize\ttfamily streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+schedule\+::signalized\+\_\+vehicle\+\_\+schedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new signalized vehicle schedule object. 
+
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_af8fec3e8ad40b590bad19192d114ca4f}\label{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_af8fec3e8ad40b590bad19192d114ca4f}} 
+\index{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule@{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule}!````~signalized\_vehicle\_schedule@{$\sim$signalized\_vehicle\_schedule}}
+\index{````~signalized\_vehicle\_schedule@{$\sim$signalized\_vehicle\_schedule}!streets\_vehicle\_scheduler::signalized\_vehicle\_schedule@{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{$\sim$signalized\_vehicle\_schedule()}{~signalized\_vehicle\_schedule()}}
+{\footnotesize\ttfamily streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+schedule\+::$\sim$signalized\+\_\+vehicle\+\_\+schedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+Destroy the signalized vehicle schedule object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_a2d0dca64d4ca5b4bc3ec690f03575f56}\label{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_a2d0dca64d4ca5b4bc3ec690f03575f56}} 
+\index{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule@{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule}!toJson@{toJson}}
+\index{toJson@{toJson}!streets\_vehicle\_scheduler::signalized\_vehicle\_schedule@{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily rapidjson\+::\+Value streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+schedule\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Document\+::\+Allocator\+Type \&}]{allocator }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Write vehicle schedule as rapidjson\+::\+Value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allocator} & json document allocator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rapidjson\+::\+Value 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1vehicle__schedule_ab1a23876fbb6958eb224d8ce05a52d2e}{streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+schedule}}.
+
+
+
+Definition at line 57 of file signalized\+\_\+intersection\+\_\+schedule.\+cpp.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_a4e258c3309f6d86f85f5fb36e801ee5d}\label{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_a4e258c3309f6d86f85f5fb36e801ee5d}} 
+\index{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule@{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule}!dt@{dt}}
+\index{dt@{dt}!streets\_vehicle\_scheduler::signalized\_vehicle\_schedule@{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{dt}{dt}}
+{\footnotesize\ttfamily u\+\_\+int64\+\_\+t streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+schedule\+::dt = 0}
+
+
+
+Departure time considering the preceding vehicles and the modified spat. Departure time is the time since epoch in milliseconds when the vehicle will depart from the intersection box. 
+
+
+
+Definition at line 40 of file signalized\+\_\+intersection\+\_\+schedule.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_afa9ea3f6d6edea565e80cd279f69df0b}\label{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_afa9ea3f6d6edea565e80cd279f69df0b}} 
+\index{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule@{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule}!eet@{eet}}
+\index{eet@{eet}!streets\_vehicle\_scheduler::signalized\_vehicle\_schedule@{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{eet}{eet}}
+{\footnotesize\ttfamily u\+\_\+int64\+\_\+t streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+schedule\+::eet = 0}
+
+
+
+Earliest possible entering time based on kinematic information and lanelet speed limit and length. entering time is the time since epoch in milliseconds when the vehicle will arrive at the stop bar. 
+
+
+
+Definition at line 29 of file signalized\+\_\+intersection\+\_\+schedule.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_a508a6d75fcf630309aa378c4fbeb3171}\label{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_a508a6d75fcf630309aa378c4fbeb3171}} 
+\index{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule@{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule}!et@{et}}
+\index{et@{et}!streets\_vehicle\_scheduler::signalized\_vehicle\_schedule@{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{et}{et}}
+{\footnotesize\ttfamily u\+\_\+int64\+\_\+t streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+schedule\+::et = 0}
+
+
+
+Entering time considering the preceding vehicles and the modified spat. Entering time is the time since epoch in milliseconds when the vehicle will enter the intersection box. 
+
+
+
+Definition at line 34 of file signalized\+\_\+intersection\+\_\+schedule.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_afdb3b1e43d8f12071f3e4b6b5780ef99}\label{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule_afdb3b1e43d8f12071f3e4b6b5780ef99}} 
+\index{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule@{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule}!state@{state}}
+\index{state@{state}!streets\_vehicle\_scheduler::signalized\_vehicle\_schedule@{streets\_vehicle\_scheduler::signalized\_vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405ac}{streets\+\_\+vehicles\+::vehicle\+\_\+state}} streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+schedule\+::state = \mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405aca9a116c50d133c8648404081885194300}{streets\+\_\+vehicles\+::vehicle\+\_\+state\+::\+ND}}}
+
+
+
+Vehicle State (. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}}) 
+\end{DoxySeeAlso}
+
+
+Definition at line 44 of file signalized\+\_\+intersection\+\_\+schedule.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/include/\mbox{\hyperlink{signalized__intersection__schedule_8h}{signalized\+\_\+intersection\+\_\+schedule.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/src/\mbox{\hyperlink{signalized__intersection__schedule_8cpp}{signalized\+\_\+intersection\+\_\+schedule.\+cpp}}\end{DoxyCompactItemize}

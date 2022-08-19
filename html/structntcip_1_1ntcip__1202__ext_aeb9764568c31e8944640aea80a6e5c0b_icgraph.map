@@ -1,0 +1,4 @@
+<map id="ntcip::ntcip_1202_ext::get_phase_walk" name="ntcip::ntcip_1202_ext::get_phase_walk">
+<area shape="rect" id="node1" title="Returns walk state of phase. Only applies to pedestrian phases." alt="" coords="215,5,376,47"/>
+<area shape="rect" id="node2" href="$structntcip_1_1ntcip__1202__ext.html#a3599a4daef1eff847beb567329bb364e" title="Returns std::string representation of ntcip_1202_ext message including phase_times array." alt="" coords="5,5,167,47"/>
+</map>

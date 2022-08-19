@@ -1,0 +1,50 @@
+\hypertarget{md_streets_utils_streets_service_base_README_autotoc_md85}{}\doxysection{Introduction}\label{md_streets_utils_streets_service_base_README_autotoc_md85}
+This is the {\ttfamily streets\+\_\+service\+\_\+base} library meant to be the base of each new CARMA-\/\+Streets service. It contains a extensible templated singleton implementation that allows for the creation of singleton scoped objects in CARMA-\/\+Streets services with static access. This means that by extending this class you can implement a class of which there can only ever be a single instance and which is statically retrievable using the {\ttfamily streets\+\_\+singleton\+::get\+\_\+singleton()} method. This library also includes an implemented singleton {\ttfamily streets\+\_\+configuration} class which standardizes how CARMA-\/\+Streets services will read configuration parameters from {\ttfamily manifest.\+json} configuration files. This {\ttfamily streets\+\_\+configuration} singleton parses the {\ttfamily manifest.\+json} configuration file and then allows for static retrieval of configuration parameters using the {\ttfamily get\+\_\+int\+\_\+config()},{\ttfamily get\+\_\+double\+\_\+config},{\ttfamily get\+\_\+string\+\_\+config()}, and {\ttfamily get\+\_\+bool\+\_\+config()} methods.\hypertarget{md_streets_utils_streets_service_base_README_autotoc_md86}{}\doxysection{Streets Singleton}\label{md_streets_utils_streets_service_base_README_autotoc_md86}
+Library offers access to the {\ttfamily streets\+\_\+singleton} class. This is a templated, extensible class that stores and offers static retrieval of a single instance of itself, which is lazily initialized (not initialized until retrieved for the first time). To ensure that new instances of this class can not be created the constructors are deleted or hidden using private or protected access.\hypertarget{md_streets_utils_streets_service_base_README_autotoc_md87}{}\doxysection{Streets Configuration}\label{md_streets_utils_streets_service_base_README_autotoc_md87}
+Library creates {\ttfamily streets\+\_\+configuration} singleton which standardizes the {\ttfamily manifest.\+json} configuration file parsing and configuration parameter retrieval. Extending {\ttfamily streets\+\_\+singleton} allows {\ttfamily streets\+\_\+configuration} to be limited to singleton scope ( single instance ) and offer static methods for configuration parameter retrieval. {\ttfamily streets\+\_\+configuration} also parses some service required configurations like {\bfseries{loglevel}} and {\bfseries{service\+\_\+name}} to create and configure a {\ttfamily spdlog\+::async\+\_\+loggerr} with a {\ttfamily spdlog\+::sinks\+::daily\+\_\+file\+\_\+sink\+\_\+mt} and a {\ttfamily spdlog\+::sinks\+::stdout\+\_\+color\+\_\+sink\+\_\+mt}.
+
+Example {\ttfamily manifest.\+json} configuration file. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    "{}service\_name"{}: "{}test\_service"{},}
+\DoxyCodeLine{    "{}loglevel"{}: "{}info"{},}
+\DoxyCodeLine{    "{}configurations"{}: [}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            "{}name"{}: "{}param\_1"{},}
+\DoxyCodeLine{            "{}value"{}: 1,}
+\DoxyCodeLine{            "{}description"{}: "{}Test Parameter 1"{},}
+\DoxyCodeLine{            "{}type"{}: "{}INTEGER"{}}
+\DoxyCodeLine{        \},}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            "{}name"{}: "{}param\_2"{},}
+\DoxyCodeLine{            "{}value"{}: "{}Second Parameter"{},}
+\DoxyCodeLine{            "{}description"{}: "{}Test Parameter 2"{},}
+\DoxyCodeLine{            "{}type"{}: "{}STRING"{}}
+\DoxyCodeLine{        \},}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            "{}name"{}: "{}param\_3"{},}
+\DoxyCodeLine{            "{}value"{}: 123.2,}
+\DoxyCodeLine{            "{}description"{}: "{}Test Parameter 3"{},}
+\DoxyCodeLine{            "{}type"{}: "{}DOUBLE"{}}
+\DoxyCodeLine{        \},}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            "{}name"{}: "{}param\_4"{},}
+\DoxyCodeLine{            "{}value"{}: true,}
+\DoxyCodeLine{            "{}description"{}: "{}Test Parameter 3"{},}
+\DoxyCodeLine{            "{}type"{}: "{}BOOL"{}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    ]}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_streets_utils_streets_service_base_README_autotoc_md88}{}\doxysection{Include streets\+\_\+service\+\_\+base\+\_\+lib\+::streets\+\_\+service\+\_\+base\+\_\+lib}\label{md_streets_utils_streets_service_base_README_autotoc_md88}
+Streets Service Base {\ttfamily CMake\+List.\+txt} includes an install target which will install this library as a CMake package. The library along with it\textquotesingle{}s dependencies can then be included by simply using the find\+\_\+package() instruction.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{find\_package(streets\_service\_base\_lib COMPONENT streets\_service\_base\_lib)}
+\DoxyCodeLine{...}
+\DoxyCodeLine{target\_link\_library( target PUBLIC streets\_service\_base\_lib::streets\_service\_base\_lib)}
+
+\end{DoxyCode}
+ 

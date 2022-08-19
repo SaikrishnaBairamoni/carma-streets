@@ -1,0 +1,182 @@
+\hypertarget{namespacetraffic__signal__controller__service}{}\doxysection{traffic\+\_\+signal\+\_\+controller\+\_\+service Namespace Reference}
+\label{namespacetraffic__signal__controller__service}\index{traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtraffic__signal__controller__service_1_1intersection__client}{intersection\+\_\+client}}
+\item 
+class \mbox{\hyperlink{classtraffic__signal__controller__service_1_1monitor__states__exception}{monitor\+\_\+states\+\_\+exception}}
+\begin{DoxyCompactList}\small\item\em Runtime error related to SNMP client used to communicate with Traffic Signal Controller (NTCIP). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtraffic__signal__controller__service_1_1signal__group__state}{signal\+\_\+group\+\_\+state}}
+\item 
+class \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__state}{tsc\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{structtraffic__signal__controller__service_1_1snmp__response__obj}{snmp\+\_\+response\+\_\+obj}}
+\begin{DoxyCompactList}\small\item\em A struct to hold the value being sent to the TSC, can be integer or string. Type needs to be defined. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtraffic__signal__controller__service_1_1snmp__client}{snmp\+\_\+client}}
+\item 
+class \mbox{\hyperlink{classtraffic__signal__controller__service_1_1snmp__client__exception}{snmp\+\_\+client\+\_\+exception}}
+\begin{DoxyCompactList}\small\item\em Runtime error related to SNMP client used to communicate with Traffic Signal Controller (NTCIP). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtraffic__signal__controller__service_1_1spat__worker}{spat\+\_\+worker}}
+\item 
+class \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service}{tsc\+\_\+service}}
+\item 
+class \mbox{\hyperlink{classtraffic__signal__controller__service_1_1udp__socket__listener}{udp\+\_\+socket\+\_\+listener}}
+\item 
+class \mbox{\hyperlink{classtraffic__signal__controller__service_1_1udp__socket__listener__exception}{udp\+\_\+socket\+\_\+listener\+\_\+exception}}
+\begin{DoxyCompactList}\small\item\em Runtime error related to spat worker and the UDP socket it uses to listen for incoming UDP NTCIP SPaT data. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtraffic__signal__controller__service_1_1mock__snmp__client}{mock\+\_\+snmp\+\_\+client}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61}{request\+\_\+type}} \{ \mbox{\hyperlink{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61a7528035a93ee69cedb1dbddb2f0bfcc8}{GET}}
+, \mbox{\hyperlink{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61a8c52684db8f49511e9b44471716bf164}{SET}}
+, \mbox{\hyperlink{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61a03570470bad94692ce93e32700d2e1cb}{OTHER}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacetraffic__signal__controller__service_a1a1dc1930253a08735579df21709cd07}{TEST}} (traffic\+\_\+signal\+\_\+controller\+\_\+service, test\+\_\+get\+\_\+tsc\+\_\+state)
+\item 
+\mbox{\hyperlink{namespacetraffic__signal__controller__service_a2e61301881178ff2164bf915d22837bb}{TEST}} (traffic\+\_\+signal\+\_\+controller\+\_\+service, test\+\_\+get\+\_\+following\+\_\+movement\+\_\+events)
+\item 
+\mbox{\hyperlink{namespacetraffic__signal__controller__service_a3b622a1b855872c019df384f4e639e30}{TEST}} (udp\+\_\+socket\+\_\+listener\+\_\+test, test\+\_\+create\+\_\+socket)
+\begin{DoxyCompactList}\small\item\em Attempt to listen on a IP that is not the host of the service should fail. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetraffic__signal__controller__service_ac96a7df8c6fd2892468eb64569f5dde8}{TEST}} (udp\+\_\+socket\+\_\+listener\+\_\+test, test\+\_\+create\+\_\+socket\+\_\+timeout)
+\begin{DoxyCompactList}\small\item\em Test UDP socket timeout parameter. Test should timeout after 2 seconds of not receiving data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetraffic__signal__controller__service_a4b841c1ea4dca792696a503aed38d761}{TEST}} (udp\+\_\+socket\+\_\+listener\+\_\+test, test\+\_\+invalid\+\_\+ip)
+\begin{DoxyCompactList}\small\item\em Test UDP socket with invaild host address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61}\label{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61}} 
+\index{traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}!request\_type@{request\_type}}
+\index{request\_type@{request\_type}!traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}}
+\doxysubsubsection{\texorpdfstring{request\_type}{request\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61}{traffic\+\_\+signal\+\_\+controller\+\_\+service\+::request\+\_\+type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GET@{GET}!traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}}\index{traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}!GET@{GET}}}\mbox{\Hypertarget{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61a7528035a93ee69cedb1dbddb2f0bfcc8}\label{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61a7528035a93ee69cedb1dbddb2f0bfcc8}} 
+GET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SET@{SET}!traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}}\index{traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}!SET@{SET}}}\mbox{\Hypertarget{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61a8c52684db8f49511e9b44471716bf164}\label{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61a8c52684db8f49511e9b44471716bf164}} 
+SET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OTHER@{OTHER}!traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}}\index{traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}!OTHER@{OTHER}}}\mbox{\Hypertarget{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61a03570470bad94692ce93e32700d2e1cb}\label{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61a03570470bad94692ce93e32700d2e1cb}} 
+OTHER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 18 of file snmp\+\_\+client.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetraffic__signal__controller__service_a2e61301881178ff2164bf915d22837bb}\label{namespacetraffic__signal__controller__service_a2e61301881178ff2164bf915d22837bb}} 
+\index{traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}!TEST@{TEST}}
+\index{TEST@{TEST}!traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily traffic\+\_\+signal\+\_\+controller\+\_\+service\+::\+TEST (\begin{DoxyParamCaption}\item[{traffic\+\_\+signal\+\_\+controller\+\_\+service}]{,  }\item[{test\+\_\+get\+\_\+following\+\_\+movement\+\_\+events}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 139 of file test\+\_\+monitor\+\_\+state.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetraffic__signal__controller__service_a2e61301881178ff2164bf915d22837bb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetraffic__signal__controller__service_a1a1dc1930253a08735579df21709cd07}\label{namespacetraffic__signal__controller__service_a1a1dc1930253a08735579df21709cd07}} 
+\index{traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}!TEST@{TEST}}
+\index{TEST@{TEST}!traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily traffic\+\_\+signal\+\_\+controller\+\_\+service\+::\+TEST (\begin{DoxyParamCaption}\item[{traffic\+\_\+signal\+\_\+controller\+\_\+service}]{,  }\item[{test\+\_\+get\+\_\+tsc\+\_\+state}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file test\+\_\+monitor\+\_\+state.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetraffic__signal__controller__service_a1a1dc1930253a08735579df21709cd07_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetraffic__signal__controller__service_a3b622a1b855872c019df384f4e639e30}\label{namespacetraffic__signal__controller__service_a3b622a1b855872c019df384f4e639e30}} 
+\index{traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}!TEST@{TEST}}
+\index{TEST@{TEST}!traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily traffic\+\_\+signal\+\_\+controller\+\_\+service\+::\+TEST (\begin{DoxyParamCaption}\item[{udp\+\_\+socket\+\_\+listener\+\_\+test}]{,  }\item[{test\+\_\+create\+\_\+socket}]{ }\end{DoxyParamCaption})}
+
+
+
+Attempt to listen on a IP that is not the host of the service should fail. 
+
+
+
+Definition at line 16 of file test\+\_\+udp\+\_\+socket\+\_\+listener.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetraffic__signal__controller__service_a3b622a1b855872c019df384f4e639e30_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetraffic__signal__controller__service_ac96a7df8c6fd2892468eb64569f5dde8}\label{namespacetraffic__signal__controller__service_ac96a7df8c6fd2892468eb64569f5dde8}} 
+\index{traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}!TEST@{TEST}}
+\index{TEST@{TEST}!traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily traffic\+\_\+signal\+\_\+controller\+\_\+service\+::\+TEST (\begin{DoxyParamCaption}\item[{udp\+\_\+socket\+\_\+listener\+\_\+test}]{,  }\item[{test\+\_\+create\+\_\+socket\+\_\+timeout}]{ }\end{DoxyParamCaption})}
+
+
+
+Test UDP socket timeout parameter. Test should timeout after 2 seconds of not receiving data. 
+
+
+
+Definition at line 31 of file test\+\_\+udp\+\_\+socket\+\_\+listener.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetraffic__signal__controller__service_ac96a7df8c6fd2892468eb64569f5dde8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacetraffic__signal__controller__service_a4b841c1ea4dca792696a503aed38d761}\label{namespacetraffic__signal__controller__service_a4b841c1ea4dca792696a503aed38d761}} 
+\index{traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}!TEST@{TEST}}
+\index{TEST@{TEST}!traffic\_signal\_controller\_service@{traffic\_signal\_controller\_service}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily traffic\+\_\+signal\+\_\+controller\+\_\+service\+::\+TEST (\begin{DoxyParamCaption}\item[{udp\+\_\+socket\+\_\+listener\+\_\+test}]{,  }\item[{test\+\_\+invalid\+\_\+ip}]{ }\end{DoxyParamCaption})}
+
+
+
+Test UDP socket with invaild host address. 
+
+
+
+Definition at line 55 of file test\+\_\+udp\+\_\+socket\+\_\+listener.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacetraffic__signal__controller__service_a4b841c1ea4dca792696a503aed38d761_cgraph}
+\end{center}
+\end{figure}

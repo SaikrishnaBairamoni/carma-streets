@@ -1,0 +1,5 @@
+<map id="scheduling_service::scheduling_service::config_scheduler" name="scheduling_service::scheduling_service::config_scheduler">
+<area shape="rect" id="node1" title="Configure the scheduler object." alt="" coords="5,31,160,87"/>
+<area shape="rect" id="node2" href="$classstreets__service_1_1streets__configuration.html#ab33a5d183c0ca2b2f0d757f5466f200b" title="Retreive configuration parameter integer value with provided name." alt="" coords="218,5,431,47"/>
+<area shape="rect" id="node3" href="$classstreets__service_1_1streets__configuration.html#a03603871626201e07690effb9f2440bf" title="Retreive configuration parameter string value with provided name." alt="" coords="208,71,441,112"/>
+</map>

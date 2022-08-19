@@ -1,0 +1,4 @@
+<map id="intersection_model::intersection_model::convert_lane_path_2_basic_points" name="intersection_model::intersection_model::convert_lane_path_2_basic_points">
+<area shape="rect" id="node1" title="Convert the centerline geometry of lane defined in J2735 MAP to a list of lanelet2 points in the OSM ..." alt="" coords="108,5,273,76"/>
+<area shape="rect" id="node2" href="$test__intersection__model_8cpp.html#af16092c1bd613460baa8afe71e9dfb6b" title=" " alt="" coords="5,27,60,54"/>
+</map>

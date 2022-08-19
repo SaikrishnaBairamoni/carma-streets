@@ -1,0 +1,417 @@
+\hypertarget{structsignal__phase__and__timing_1_1time__change__details}{}\doxysection{signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details Struct Reference}
+\label{structsignal__phase__and__timing_1_1time__change__details}\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+
+
+{\ttfamily \#include $<$time\+\_\+change\+\_\+details.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+rapidjson\+::\+Value \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details_ad64ed49770771638b68dfb90c848bade}{to\+Json}} (rapidjson\+::\+Document\+::\+Allocator\+Type \&allocator) const
+\begin{DoxyCompactList}\small\item\em Serialize Time Change Details object to rapidjson\+::\+Value for writing as JSON string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details_ae11ac44a006b7b7d43c64b764d8ede52}{from\+Json}} (const rapidjson\+::\+Value \&val)
+\begin{DoxyCompactList}\small\item\em Deserialize Time Change Details JSON into Time Change Details object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details_a8a8ecb987289e06a00febf4e7fec9fbf}{operator==}} (const \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details}{time\+\_\+change\+\_\+details}} \&other) const
+\begin{DoxyCompactList}\small\item\em Equals operator to asses whether two objects contain equivalent data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details_a8f7f83f5dd14d64339395741e4eb957c}{operator!=}} (const \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details}{time\+\_\+change\+\_\+details}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns the inverse of equals operator. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details_a74ace40856526a37410e434bcee7917a}{convert\+\_\+hour\+\_\+tenth\+\_\+secs2epoch\+\_\+ts}} (uint16\+\_\+t hour\+\_\+tenth\+\_\+secs) const
+\begin{DoxyCompactList}\small\item\em Convert current hours of the year and milliseconds of the current hours into epoch timestamp in milliseconds. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details_a650a958f01c7a1fd2e845c08e27fb88e}{get\+\_\+epoch\+\_\+start\+\_\+time}} () const
+\begin{DoxyCompactList}\small\item\em Get the epoch timestamp of the start timestamp. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details_ace57d6d7e92d000560753346277a4e20}{get\+\_\+epoch\+\_\+min\+\_\+end\+\_\+time}} () const
+\begin{DoxyCompactList}\small\item\em Get the epoch timestamp of the min end timestamp. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details_a37e66edff4920b53af3e3a268186f407}{get\+\_\+epoch\+\_\+max\+\_\+end\+\_\+time}} () const
+\begin{DoxyCompactList}\small\item\em Get the epoch timestamp of the max end timestamp. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details_adeca62d30921732346c615faaf64a9ec}{get\+\_\+epoch\+\_\+next\+\_\+time}} () const
+\begin{DoxyCompactList}\small\item\em Get the epoch timestamp of the next end timestamp ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details_a00485dd9201e04b0098432a82eb3fee8}{HOUR\+\_\+\+TO\+\_\+\+SECONDS}} = 3600
+\item 
+int \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details_ad113c5a526aa240f00f9203edc24af8d}{SECOND\+\_\+\+TO\+\_\+\+MILLISECONDS}} = 1000
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details_aa43eafdf46377a5743e82b5be8ce3133}{start\+\_\+time}} = 36001
+\begin{DoxyCompactList}\small\item\em When this phase first started. (tenths of a second in current or next hour) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details_ad39cfa60daafb321241d3a00fea563e5}{min\+\_\+end\+\_\+time}} = 36001
+\begin{DoxyCompactList}\small\item\em Expected shortest end time. (tenths of a second in current or next hour) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details_a1c9501b5a44c66a178b8753db439a753}{max\+\_\+end\+\_\+time}} = 36001
+\begin{DoxyCompactList}\small\item\em Expected longest end time. (tenths of a second in current or next hour) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details_a6351871d46c1e47aab9589c11836e50b}{likely\+\_\+time}} = 36001
+\begin{DoxyCompactList}\small\item\em Best predicted value based on other data (tenths of a second in current or next hour) \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details_a93d23e5cd628d55957a45255fbec51a3}{confidence}} = 0
+\begin{DoxyCompactList}\small\item\em Applies to the above time interval only -- Value Probability -- 0 21\% -- 1 36\% -- 2 47\% -- 3 56\% -- 4 62\% -- 5 68\% -- 6 73\% -- 7 77\% -- 8 81\% -- 9 85\% -- 10 88\% -- 11 91\% -- 12 94\% -- 13 96\% -- 14 98\% -- 15 100\%. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details_a57ea53825ad4df7b1dff194a151ffa8a}{next\+\_\+time}} = 36001
+\begin{DoxyCompactList}\small\item\em A rough estimate of time when this phase may next occur. (tenths of a second in current or next hour) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 11 of file time\+\_\+change\+\_\+details.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1time__change__details_a74ace40856526a37410e434bcee7917a}\label{structsignal__phase__and__timing_1_1time__change__details_a74ace40856526a37410e434bcee7917a}} 
+\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}!convert\_hour\_tenth\_secs2epoch\_ts@{convert\_hour\_tenth\_secs2epoch\_ts}}
+\index{convert\_hour\_tenth\_secs2epoch\_ts@{convert\_hour\_tenth\_secs2epoch\_ts}!signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+\doxysubsubsection{\texorpdfstring{convert\_hour\_tenth\_secs2epoch\_ts()}{convert\_hour\_tenth\_secs2epoch\_ts()}}
+{\footnotesize\ttfamily uint64\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details\+::convert\+\_\+hour\+\_\+tenth\+\_\+secs2epoch\+\_\+ts (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{hour\+\_\+tenth\+\_\+secs }\end{DoxyParamCaption}) const}
+
+
+
+Convert current hours of the year and milliseconds of the current hours into epoch timestamp in milliseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hour\+\_\+tenth\+\_\+secs} & The tenth of seconds of the current hour \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t epoch timestamp in milliseconds 
+\end{DoxyReturn}
+
+
+Definition at line 84 of file time\+\_\+change\+\_\+details.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1time__change__details_a74ace40856526a37410e434bcee7917a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1time__change__details_ae11ac44a006b7b7d43c64b764d8ede52}\label{structsignal__phase__and__timing_1_1time__change__details_ae11ac44a006b7b7d43c64b764d8ede52}} 
+\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily void signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details\+::from\+Json (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Deserialize Time Change Details JSON into Time Change Details object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Time Change Details JSON. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 35 of file time\+\_\+change\+\_\+details.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1time__change__details_ae11ac44a006b7b7d43c64b764d8ede52_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1time__change__details_a37e66edff4920b53af3e3a268186f407}\label{structsignal__phase__and__timing_1_1time__change__details_a37e66edff4920b53af3e3a268186f407}} 
+\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}!get\_epoch\_max\_end\_time@{get\_epoch\_max\_end\_time}}
+\index{get\_epoch\_max\_end\_time@{get\_epoch\_max\_end\_time}!signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+\doxysubsubsection{\texorpdfstring{get\_epoch\_max\_end\_time()}{get\_epoch\_max\_end\_time()}}
+{\footnotesize\ttfamily uint64\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details\+::get\+\_\+epoch\+\_\+max\+\_\+end\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the epoch timestamp of the max end timestamp. 
+
+\begin{DoxyReturn}{Returns}
+$\ast$$\ast$ uint64\+\_\+t epoch timestamp in unit of milliseconds 
+\end{DoxyReturn}
+
+
+Definition at line 100 of file time\+\_\+change\+\_\+details.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1time__change__details_a37e66edff4920b53af3e3a268186f407_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1time__change__details_ace57d6d7e92d000560753346277a4e20}\label{structsignal__phase__and__timing_1_1time__change__details_ace57d6d7e92d000560753346277a4e20}} 
+\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}!get\_epoch\_min\_end\_time@{get\_epoch\_min\_end\_time}}
+\index{get\_epoch\_min\_end\_time@{get\_epoch\_min\_end\_time}!signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+\doxysubsubsection{\texorpdfstring{get\_epoch\_min\_end\_time()}{get\_epoch\_min\_end\_time()}}
+{\footnotesize\ttfamily uint64\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details\+::get\+\_\+epoch\+\_\+min\+\_\+end\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the epoch timestamp of the min end timestamp. 
+
+\begin{DoxyReturn}{Returns}
+$\ast$$\ast$ uint64\+\_\+t epoch timestamp in unit of milliseconds 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file time\+\_\+change\+\_\+details.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1time__change__details_ace57d6d7e92d000560753346277a4e20_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1time__change__details_adeca62d30921732346c615faaf64a9ec}\label{structsignal__phase__and__timing_1_1time__change__details_adeca62d30921732346c615faaf64a9ec}} 
+\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}!get\_epoch\_next\_time@{get\_epoch\_next\_time}}
+\index{get\_epoch\_next\_time@{get\_epoch\_next\_time}!signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+\doxysubsubsection{\texorpdfstring{get\_epoch\_next\_time()}{get\_epoch\_next\_time()}}
+{\footnotesize\ttfamily uint64\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details\+::get\+\_\+epoch\+\_\+next\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the epoch timestamp of the next end timestamp ~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+$\ast$$\ast$ uint64\+\_\+t epoch timestamp in unit of milliseconds 
+\end{DoxyReturn}
+
+
+Definition at line 104 of file time\+\_\+change\+\_\+details.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1time__change__details_adeca62d30921732346c615faaf64a9ec_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1time__change__details_a650a958f01c7a1fd2e845c08e27fb88e}\label{structsignal__phase__and__timing_1_1time__change__details_a650a958f01c7a1fd2e845c08e27fb88e}} 
+\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}!get\_epoch\_start\_time@{get\_epoch\_start\_time}}
+\index{get\_epoch\_start\_time@{get\_epoch\_start\_time}!signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+\doxysubsubsection{\texorpdfstring{get\_epoch\_start\_time()}{get\_epoch\_start\_time()}}
+{\footnotesize\ttfamily uint64\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details\+::get\+\_\+epoch\+\_\+start\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the epoch timestamp of the start timestamp. 
+
+\begin{DoxyReturn}{Returns}
+$\ast$$\ast$ uint64\+\_\+t epoch timestamp in unit of milliseconds 
+\end{DoxyReturn}
+
+
+Definition at line 92 of file time\+\_\+change\+\_\+details.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1time__change__details_a650a958f01c7a1fd2e845c08e27fb88e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1time__change__details_a8f7f83f5dd14d64339395741e4eb957c}\label{structsignal__phase__and__timing_1_1time__change__details_a8f7f83f5dd14d64339395741e4eb957c}} 
+\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details}{time\+\_\+change\+\_\+details}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns the inverse of equals operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & second object to compare current object with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both objects do not contain equivalent data. 
+
+false if both objects do contain equivalent data. 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file time\+\_\+change\+\_\+details.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1time__change__details_a8f7f83f5dd14d64339395741e4eb957c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1time__change__details_a8a8ecb987289e06a00febf4e7fec9fbf}\label{structsignal__phase__and__timing_1_1time__change__details_a8a8ecb987289e06a00febf4e7fec9fbf}} 
+\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}!operator==@{operator==}}
+\index{operator==@{operator==}!signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details}{time\+\_\+change\+\_\+details}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Equals operator to asses whether two objects contain equivalent data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em compare} & second object to compare current object with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both object contain equivalent data. 
+
+false if not. 
+\end{DoxyReturn}
+
+
+Definition at line 75 of file time\+\_\+change\+\_\+details.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1time__change__details_a8a8ecb987289e06a00febf4e7fec9fbf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1time__change__details_ad64ed49770771638b68dfb90c848bade}\label{structsignal__phase__and__timing_1_1time__change__details_ad64ed49770771638b68dfb90c848bade}} 
+\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}!toJson@{toJson}}
+\index{toJson@{toJson}!signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily rapidjson\+::\+Value signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Document\+::\+Allocator\+Type \&}]{allocator }\end{DoxyParamCaption}) const}
+
+
+
+Serialize Time Change Details object to rapidjson\+::\+Value for writing as JSON string. 
+
+\begin{DoxyReturn}{Returns}
+rapidjson\+::\+Value serialize Time Change Details object 
+\end{DoxyReturn}
+
+
+Definition at line 5 of file time\+\_\+change\+\_\+details.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1time__change__details_ad64ed49770771638b68dfb90c848bade_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1time__change__details_a93d23e5cd628d55957a45255fbec51a3}\label{structsignal__phase__and__timing_1_1time__change__details_a93d23e5cd628d55957a45255fbec51a3}} 
+\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}!confidence@{confidence}}
+\index{confidence@{confidence}!signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+\doxysubsubsection{\texorpdfstring{confidence}{confidence}}
+{\footnotesize\ttfamily uint8\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details\+::confidence = 0}
+
+
+
+Applies to the above time interval only -- Value Probability -- 0 21\% -- 1 36\% -- 2 47\% -- 3 56\% -- 4 62\% -- 5 68\% -- 6 73\% -- 7 77\% -- 8 81\% -- 9 85\% -- 10 88\% -- 11 91\% -- 12 94\% -- 13 96\% -- 14 98\% -- 15 100\%. 
+
+
+
+Definition at line 50 of file time\+\_\+change\+\_\+details.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1time__change__details_a00485dd9201e04b0098432a82eb3fee8}\label{structsignal__phase__and__timing_1_1time__change__details_a00485dd9201e04b0098432a82eb3fee8}} 
+\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}!HOUR\_TO\_SECONDS@{HOUR\_TO\_SECONDS}}
+\index{HOUR\_TO\_SECONDS@{HOUR\_TO\_SECONDS}!signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+\doxysubsubsection{\texorpdfstring{HOUR\_TO\_SECONDS}{HOUR\_TO\_SECONDS}}
+{\footnotesize\ttfamily int signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details\+::\+HOUR\+\_\+\+TO\+\_\+\+SECONDS = 3600}
+
+
+
+Definition at line 12 of file time\+\_\+change\+\_\+details.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1time__change__details_a6351871d46c1e47aab9589c11836e50b}\label{structsignal__phase__and__timing_1_1time__change__details_a6351871d46c1e47aab9589c11836e50b}} 
+\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}!likely\_time@{likely\_time}}
+\index{likely\_time@{likely\_time}!signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+\doxysubsubsection{\texorpdfstring{likely\_time}{likely\_time}}
+{\footnotesize\ttfamily uint16\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details\+::likely\+\_\+time = 36001}
+
+
+
+Best predicted value based on other data (tenths of a second in current or next hour) 
+
+
+
+Definition at line 29 of file time\+\_\+change\+\_\+details.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1time__change__details_a1c9501b5a44c66a178b8753db439a753}\label{structsignal__phase__and__timing_1_1time__change__details_a1c9501b5a44c66a178b8753db439a753}} 
+\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}!max\_end\_time@{max\_end\_time}}
+\index{max\_end\_time@{max\_end\_time}!signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+\doxysubsubsection{\texorpdfstring{max\_end\_time}{max\_end\_time}}
+{\footnotesize\ttfamily uint16\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details\+::max\+\_\+end\+\_\+time = 36001}
+
+
+
+Expected longest end time. (tenths of a second in current or next hour) 
+
+
+
+Definition at line 25 of file time\+\_\+change\+\_\+details.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1time__change__details_ad39cfa60daafb321241d3a00fea563e5}\label{structsignal__phase__and__timing_1_1time__change__details_ad39cfa60daafb321241d3a00fea563e5}} 
+\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}!min\_end\_time@{min\_end\_time}}
+\index{min\_end\_time@{min\_end\_time}!signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+\doxysubsubsection{\texorpdfstring{min\_end\_time}{min\_end\_time}}
+{\footnotesize\ttfamily uint16\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details\+::min\+\_\+end\+\_\+time = 36001}
+
+
+
+Expected shortest end time. (tenths of a second in current or next hour) 
+
+
+
+Definition at line 21 of file time\+\_\+change\+\_\+details.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1time__change__details_a57ea53825ad4df7b1dff194a151ffa8a}\label{structsignal__phase__and__timing_1_1time__change__details_a57ea53825ad4df7b1dff194a151ffa8a}} 
+\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}!next\_time@{next\_time}}
+\index{next\_time@{next\_time}!signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+\doxysubsubsection{\texorpdfstring{next\_time}{next\_time}}
+{\footnotesize\ttfamily uint16\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details\+::next\+\_\+time = 36001}
+
+
+
+A rough estimate of time when this phase may next occur. (tenths of a second in current or next hour) 
+
+
+
+Definition at line 55 of file time\+\_\+change\+\_\+details.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1time__change__details_ad113c5a526aa240f00f9203edc24af8d}\label{structsignal__phase__and__timing_1_1time__change__details_ad113c5a526aa240f00f9203edc24af8d}} 
+\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}!SECOND\_TO\_MILLISECONDS@{SECOND\_TO\_MILLISECONDS}}
+\index{SECOND\_TO\_MILLISECONDS@{SECOND\_TO\_MILLISECONDS}!signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+\doxysubsubsection{\texorpdfstring{SECOND\_TO\_MILLISECONDS}{SECOND\_TO\_MILLISECONDS}}
+{\footnotesize\ttfamily int signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details\+::\+SECOND\+\_\+\+TO\+\_\+\+MILLISECONDS = 1000}
+
+
+
+Definition at line 13 of file time\+\_\+change\+\_\+details.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1time__change__details_aa43eafdf46377a5743e82b5be8ce3133}\label{structsignal__phase__and__timing_1_1time__change__details_aa43eafdf46377a5743e82b5be8ce3133}} 
+\index{signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}!start\_time@{start\_time}}
+\index{start\_time@{start\_time}!signal\_phase\_and\_timing::time\_change\_details@{signal\_phase\_and\_timing::time\_change\_details}}
+\doxysubsubsection{\texorpdfstring{start\_time}{start\_time}}
+{\footnotesize\ttfamily uint16\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::time\+\_\+change\+\_\+details\+::start\+\_\+time = 36001}
+
+
+
+When this phase first started. (tenths of a second in current or next hour) 
+
+
+
+Definition at line 17 of file time\+\_\+change\+\_\+details.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing/include/\mbox{\hyperlink{time__change__details_8h}{time\+\_\+change\+\_\+details.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing/src/models/\mbox{\hyperlink{time__change__details_8cpp}{time\+\_\+change\+\_\+details.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,189 @@
+\hypertarget{classstreets__vehicles_1_1status__intent__processor}{}\doxysection{streets\+\_\+vehicles\+::status\+\_\+intent\+\_\+processor Class Reference}
+\label{classstreets__vehicles_1_1status__intent__processor}\index{streets\_vehicles::status\_intent\_processor@{streets\_vehicles::status\_intent\_processor}}
+
+
+Abstract Class to allow for customizable processing of status and intent vehicle updates. Simply inherit \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} and implement custom from\+\_\+json logic to override processing logic.  
+
+
+
+
+{\ttfamily \#include $<$status\+\_\+intent\+\_\+processor.\+h$>$}
+
+
+
+Inheritance diagram for streets\+\_\+vehicles\+::status\+\_\+intent\+\_\+processor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classstreets__vehicles_1_1status__intent__processor__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor_abafa7673c5b8a3d39a33d3d9bd5b12b6}{process\+\_\+status\+\_\+intent}} (const rapidjson\+::\+Document \&doc, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} \&\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}}) const
+\begin{DoxyCompactList}\small\item\em Process JSON status and intent update and convert it to an streets\+\_\+vehicle\+\_\+update. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor_aade7f4f98fdf41c0c9d512f6a9494d95}{from\+\_\+json}} (const rapidjson\+::\+Generic\+Object$<$ true, rapidjson\+::\+Value $>$ \&json, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} \&\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}}) const =0
+\begin{DoxyCompactList}\small\item\em Process JSON status and intent Object and update vehicle. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor_a99f7eca3d48118e9323f869b112a2f20}{get\+\_\+vehicle\+\_\+id}} (const std\+::string \&status\+\_\+intent\+\_\+msg, rapidjson\+::\+Document \&doc) const
+\begin{DoxyCompactList}\small\item\em Get the vehicle id string from status and intent message. \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor_a59822b56e0589dba350c907f79385e76}{get\+\_\+timeout}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the timeout Any vehicle status and intent updates after this will be considered timed out and any vehicles with timed out updates as their most recent update will be purged from the vehicle list. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor_a274ba0955f451100de8e340545538542}{set\+\_\+timeout}} (uint64\+\_\+t timeout)=0
+\begin{DoxyCompactList}\small\item\em Set the timeout in milliseconds for the \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}}. Any vehicle status and intent updates after this will be considered timed out and any vehicles with timed out updates as their most recent update will be purged from the vehicle list. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor_ab18c9308681a12b7b2406da61e538c72}{$\sim$status\+\_\+intent\+\_\+processor}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the status intent processor object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract Class to allow for customizable processing of status and intent vehicle updates. Simply inherit \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} and implement custom from\+\_\+json logic to override processing logic. 
+
+\begin{DoxyAuthor}{Author}
+Paul Bourelly 
+\end{DoxyAuthor}
+
+
+Definition at line 18 of file status\+\_\+intent\+\_\+processor.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstreets__vehicles_1_1status__intent__processor_ab18c9308681a12b7b2406da61e538c72}\label{classstreets__vehicles_1_1status__intent__processor_ab18c9308681a12b7b2406da61e538c72}} 
+\index{streets\_vehicles::status\_intent\_processor@{streets\_vehicles::status\_intent\_processor}!````~status\_intent\_processor@{$\sim$status\_intent\_processor}}
+\index{````~status\_intent\_processor@{$\sim$status\_intent\_processor}!streets\_vehicles::status\_intent\_processor@{streets\_vehicles::status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{$\sim$status\_intent\_processor()}{~status\_intent\_processor()}}
+{\footnotesize\ttfamily virtual streets\+\_\+vehicles\+::status\+\_\+intent\+\_\+processor\+::$\sim$status\+\_\+intent\+\_\+processor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroy the status intent processor object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstreets__vehicles_1_1status__intent__processor_aade7f4f98fdf41c0c9d512f6a9494d95}\label{classstreets__vehicles_1_1status__intent__processor_aade7f4f98fdf41c0c9d512f6a9494d95}} 
+\index{streets\_vehicles::status\_intent\_processor@{streets\_vehicles::status\_intent\_processor}!from\_json@{from\_json}}
+\index{from\_json@{from\_json}!streets\_vehicles::status\_intent\_processor@{streets\_vehicles::status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{from\_json()}{from\_json()}}
+{\footnotesize\ttfamily virtual void streets\+\_\+vehicles\+::status\+\_\+intent\+\_\+processor\+::from\+\_\+json (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Generic\+Object$<$ true, rapidjson\+::\+Value $>$ \&}]{json,  }\item[{\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} \&}]{vehicle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Process JSON status and intent Object and update vehicle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & rapidjson\+::\+Generic\+Object status and intent update. \\
+\hline
+{\em vehicle} & vehicle to update. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classstreets__vehicles_1_1all__stop__status__intent__processor_a7308fe8b861031993792d0c95cf82d90}{streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__vehicles_1_1status__intent__processor_aade7f4f98fdf41c0c9d512f6a9494d95_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__vehicles_1_1status__intent__processor_a59822b56e0589dba350c907f79385e76}\label{classstreets__vehicles_1_1status__intent__processor_a59822b56e0589dba350c907f79385e76}} 
+\index{streets\_vehicles::status\_intent\_processor@{streets\_vehicles::status\_intent\_processor}!get\_timeout@{get\_timeout}}
+\index{get\_timeout@{get\_timeout}!streets\_vehicles::status\_intent\_processor@{streets\_vehicles::status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{get\_timeout()}{get\_timeout()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t streets\+\_\+vehicles\+::status\+\_\+intent\+\_\+processor\+::get\+\_\+timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the timeout Any vehicle status and intent updates after this will be considered timed out and any vehicles with timed out updates as their most recent update will be purged from the vehicle list. 
+
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classstreets__vehicles_1_1all__stop__status__intent__processor_a701e67611fa726d7693f82b3302f0324}{streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor}}.
+
+\mbox{\Hypertarget{classstreets__vehicles_1_1status__intent__processor_a99f7eca3d48118e9323f869b112a2f20}\label{classstreets__vehicles_1_1status__intent__processor_a99f7eca3d48118e9323f869b112a2f20}} 
+\index{streets\_vehicles::status\_intent\_processor@{streets\_vehicles::status\_intent\_processor}!get\_vehicle\_id@{get\_vehicle\_id}}
+\index{get\_vehicle\_id@{get\_vehicle\_id}!streets\_vehicles::status\_intent\_processor@{streets\_vehicles::status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{get\_vehicle\_id()}{get\_vehicle\_id()}}
+{\footnotesize\ttfamily std\+::string streets\+\_\+vehicles\+::status\+\_\+intent\+\_\+processor\+::get\+\_\+vehicle\+\_\+id (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{status\+\_\+intent\+\_\+msg,  }\item[{rapidjson\+::\+Document \&}]{doc }\end{DoxyParamCaption}) const}
+
+
+
+Get the vehicle id string from status and intent message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status\+\_\+intent\+\_\+msg} & string status and intent message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string vehicle id. 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file status\+\_\+intent\+\_\+processor.\+cpp.
+
+\mbox{\Hypertarget{classstreets__vehicles_1_1status__intent__processor_abafa7673c5b8a3d39a33d3d9bd5b12b6}\label{classstreets__vehicles_1_1status__intent__processor_abafa7673c5b8a3d39a33d3d9bd5b12b6}} 
+\index{streets\_vehicles::status\_intent\_processor@{streets\_vehicles::status\_intent\_processor}!process\_status\_intent@{process\_status\_intent}}
+\index{process\_status\_intent@{process\_status\_intent}!streets\_vehicles::status\_intent\_processor@{streets\_vehicles::status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{process\_status\_intent()}{process\_status\_intent()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicles\+::status\+\_\+intent\+\_\+processor\+::process\+\_\+status\+\_\+intent (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Document \&}]{doc,  }\item[{\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} \&}]{vehicle }\end{DoxyParamCaption}) const}
+
+
+
+Process JSON status and intent update and convert it to an streets\+\_\+vehicle\+\_\+update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status\+\_\+intent\+\_\+msg} & string JSON status and intent update. \\
+\hline
+{\em vehicle} & vehicle to update. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+streets\+\_\+vehicle\+\_\+update. 
+\end{DoxyReturn}
+
+
+Definition at line 5 of file status\+\_\+intent\+\_\+processor.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__vehicles_1_1status__intent__processor_abafa7673c5b8a3d39a33d3d9bd5b12b6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__vehicles_1_1status__intent__processor_a274ba0955f451100de8e340545538542}\label{classstreets__vehicles_1_1status__intent__processor_a274ba0955f451100de8e340545538542}} 
+\index{streets\_vehicles::status\_intent\_processor@{streets\_vehicles::status\_intent\_processor}!set\_timeout@{set\_timeout}}
+\index{set\_timeout@{set\_timeout}!streets\_vehicles::status\_intent\_processor@{streets\_vehicles::status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{set\_timeout()}{set\_timeout()}}
+{\footnotesize\ttfamily virtual void streets\+\_\+vehicles\+::status\+\_\+intent\+\_\+processor\+::set\+\_\+timeout (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the timeout in milliseconds for the \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}}. Any vehicle status and intent updates after this will be considered timed out and any vehicles with timed out updates as their most recent update will be purged from the vehicle list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timeout} & in milliseconds \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classstreets__vehicles_1_1all__stop__status__intent__processor_a12a1b270d0eced95feb9e5062420a6f6}{streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+list/include/\mbox{\hyperlink{status__intent__processor_8h}{status\+\_\+intent\+\_\+processor.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+list/src/message\+\_\+processors/\mbox{\hyperlink{status__intent__processor_8cpp}{status\+\_\+intent\+\_\+processor.\+cpp}}\end{DoxyCompactItemize}

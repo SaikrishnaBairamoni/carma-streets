@@ -1,0 +1,4 @@
+<map id="message_services::workers::bsm_worker::get_curr_list" name="message_services::workers::bsm_worker::get_curr_list">
+<area shape="rect" id="node1" title="Return the vector of bsm stored in the bsm_worker." alt="" coords="108,5,309,47"/>
+<area shape="rect" id="node2" href="$test__bsm__worker_8cpp.html#ad12befebc221c0f79c22fb7158dbd667" title=" " alt="" coords="5,13,60,39"/>
+</map>

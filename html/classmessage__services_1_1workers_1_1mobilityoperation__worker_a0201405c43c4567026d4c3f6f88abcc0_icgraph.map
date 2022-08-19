@@ -1,0 +1,4 @@
+<map id="message_services::workers::mobilityoperation_worker::pop_cur_element_from_list" name="message_services::workers::mobilityoperation_worker::pop_cur_element_from_list">
+<area shape="rect" id="node1" title="Remove an element from mobilityoperation vector based on the element position. If the position is gre..." alt="" coords="108,5,315,61"/>
+<area shape="rect" id="node2" href="$test__mobilityoperation__worker_8cpp.html#a8f86f6b91fa9f4e55d95291f8e0df51a" title=" " alt="" coords="5,20,60,47"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="message_services::models::vehicle_status_intent::setDest_lanelet_id" name="message_services::models::vehicle_status_intent::setDest_lanelet_id">
+<area shape="rect" id="node1" title=" " alt="" coords="1073,13,1272,69"/>
+<area shape="rect" id="node2" href="$classmessage__services_1_1services_1_1vehicle__status__intent__service.html#a3e4969a209c1a53596fff646a47fe34b" title="Generate the vehicle status and intent message based on the latest bsm , MobilityOperation and Mobili..." alt="" coords="821,5,1025,76"/>
+<area shape="rect" id="node3" href="$classmessage__services_1_1services_1_1vehicle__status__intent__service.html#ad24055517d5aaa2f6ea44b7f35f3e0e9" title="Creating and running threads. Each thread is acting as consumer or producer to consume or produce mes..." alt="" coords="569,13,773,69"/>
+<area shape="rect" id="node4" href="$classmessage__services_1_1services_1_1vehicle__status__intent__service.html#a1f00f479f5268cf6cd38a128d009b184" title="initialize variables and call run() methods to spin up threads." alt="" coords="317,13,521,69"/>
+<area shape="rect" id="node5" href="$message__services_8cpp.html#ab4838180becdec72c62eb8756c933d97" title=" " alt="" coords="108,20,269,61"/>
+<area shape="rect" id="node6" href="$message__services_8cpp.html#a217dbf8b442f20279ea00b898af96f52" title=" " alt="" coords="5,27,60,54"/>
+</map>

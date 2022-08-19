@@ -1,0 +1,766 @@
+\hypertarget{ntcip__1202__ext_8h}{}\doxysection{streets\+\_\+utils/streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing/include/ntcip\+\_\+1202\+\_\+ext.h File Reference}
+\label{ntcip__1202__ext_8h}\index{streets\_utils/streets\_signal\_phase\_and\_timing/include/ntcip\_1202\_ext.h@{streets\_utils/streets\_signal\_phase\_and\_timing/include/ntcip\_1202\_ext.h}}
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$bitset$>$}\newline
+{\ttfamily \#include \char`\"{}ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}signal\+\_\+phase\+\_\+and\+\_\+timing\+\_\+exception.\+h\char`\"{}}\newline
+Include dependency graph for ntcip\+\_\+1202\+\_\+ext.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ntcip__1202__ext_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ntcip__1202__ext_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structntcip_1_1ntcip__1202__ext}{ntcip\+::ntcip\+\_\+1202\+\_\+ext}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacentcip}{ntcip}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structntcip_1_1ntcip__1202__ext}{ntcip\+::ntcip\+\_\+1202\+\_\+ext}} \mbox{\hyperlink{namespacentcip_a30b98f3e4707331e91051bced71454bf}{ntcip\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((packed))
+\item 
+bool \mbox{\hyperlink{ntcip__1202__ext_8h_adfce4779290496145f7f556a1c900676}{get\+\_\+phase\+\_\+red\+\_\+status}} (const int \mbox{\hyperlink{ntcip__1202__ext__phasetime_8h_a818606b5263ca9418c2a574097a9503a}{phase\+\_\+number}}) const
+\begin{DoxyCompactList}\small\item\em Returns red state of phase. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ntcip__1202__ext_8h_addf24ecda2435ddbe1edd26300e22374}{get\+\_\+phase\+\_\+yellow\+\_\+status}} (const int \mbox{\hyperlink{ntcip__1202__ext__phasetime_8h_a818606b5263ca9418c2a574097a9503a}{phase\+\_\+number}}) const
+\begin{DoxyCompactList}\small\item\em Returns yellow state of phase. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ntcip__1202__ext_8h_a32d0523a9da2af17c80e36743331b1e7}{get\+\_\+phase\+\_\+green\+\_\+status}} (const int \mbox{\hyperlink{ntcip__1202__ext__phasetime_8h_a818606b5263ca9418c2a574097a9503a}{phase\+\_\+number}}) const
+\begin{DoxyCompactList}\small\item\em Returns green state of phase. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ntcip__1202__ext_8h_abd5fa3d9c64839918fff34363a61b640}{get\+\_\+phase\+\_\+dont\+\_\+walk}} (const int \mbox{\hyperlink{ntcip__1202__ext__phasetime_8h_a818606b5263ca9418c2a574097a9503a}{phase\+\_\+number}}) const
+\begin{DoxyCompactList}\small\item\em Returns dont walk state of phase. Only applies to pedestrian phases. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ntcip__1202__ext_8h_a1eb354f39fc56aa98d8b699503bf5b14}{get\+\_\+phase\+\_\+ped\+\_\+clear}} (const int \mbox{\hyperlink{ntcip__1202__ext__phasetime_8h_a818606b5263ca9418c2a574097a9503a}{phase\+\_\+number}}) const
+\begin{DoxyCompactList}\small\item\em Returns pedestrian clear state of phase. Only applies to pedestrian phases. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ntcip__1202__ext_8h_af87e4fa7c0030f5ba5c14c2e8232e122}{get\+\_\+phase\+\_\+walk}} (const int \mbox{\hyperlink{ntcip__1202__ext__phasetime_8h_a818606b5263ca9418c2a574097a9503a}{phase\+\_\+number}}) const
+\begin{DoxyCompactList}\small\item\em Returns walk state of phase. Only applies to pedestrian phases. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ntcip__1202__ext_8h_a8ff6817e7e6dd64df541afc477ed7874}{get\+\_\+overlap\+\_\+red\+\_\+status}} (const int \mbox{\hyperlink{ntcip__1202__ext__phasetime_8h_a818606b5263ca9418c2a574097a9503a}{phase\+\_\+number}}) const
+\begin{DoxyCompactList}\small\item\em Returns red overlap state of phase. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ntcip__1202__ext_8h_a74e13a1dd9fa575a525d2d11b25d71e2}{get\+\_\+overlap\+\_\+yellow\+\_\+status}} (const int \mbox{\hyperlink{ntcip__1202__ext__phasetime_8h_a818606b5263ca9418c2a574097a9503a}{phase\+\_\+number}}) const
+\begin{DoxyCompactList}\small\item\em Returns yellow overlap state of phase. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ntcip__1202__ext_8h_ae3975a3ff3b2f7c056f69fe67c68f51b}{get\+\_\+overlap\+\_\+green\+\_\+status}} (const int \mbox{\hyperlink{ntcip__1202__ext__phasetime_8h_a818606b5263ca9418c2a574097a9503a}{phase\+\_\+number}}) const
+\begin{DoxyCompactList}\small\item\em Returns green overlap state of phase. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ntcip__1202__ext_8h_aa0ecdae94d5ab3b837e5e20e8866ddb3}{get\+\_\+phase\+\_\+flashing\+\_\+status}} (const int \mbox{\hyperlink{ntcip__1202__ext__phasetime_8h_a818606b5263ca9418c2a574097a9503a}{phase\+\_\+number}}) const
+\begin{DoxyCompactList}\small\item\em Returns flashing state of phase. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ntcip__1202__ext_8h_a9a8ba33601293e12c5122de5bcccedc3}{get\+\_\+overlap\+\_\+flashing\+\_\+status}} (const int \mbox{\hyperlink{ntcip__1202__ext__phasetime_8h_a818606b5263ca9418c2a574097a9503a}{phase\+\_\+number}}) const
+\begin{DoxyCompactList}\small\item\em Returns flashing state of overlap phase. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ntcip__1202__ext_8h_aff7a8e87d57486000bf8d7b45757ecee}{get\+\_\+spat\+\_\+pedestrian\+\_\+call}} (const int \mbox{\hyperlink{ntcip__1202__ext__phasetime_8h_a818606b5263ca9418c2a574097a9503a}{phase\+\_\+number}}) const
+\begin{DoxyCompactList}\small\item\em Returns state of pedestrian calls on phase. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ntcip__1202__ext_8h_a4b9fe877cf5349a1000ac13fb7c68a84}{get\+\_\+spat\+\_\+pedestrian\+\_\+detect}} (const int \mbox{\hyperlink{ntcip__1202__ext__phasetime_8h_a818606b5263ca9418c2a574097a9503a}{phase\+\_\+number}}) const
+\begin{DoxyCompactList}\small\item\em Returns state of pedestrian detect on phase. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_a5108908d37cea949b0e81e3ecbaaa0c2}{get\+\_\+timestamp\+\_\+seconds\+\_\+of\+\_\+day}} () const
+\begin{DoxyCompactList}\small\item\em Returns 3 bytes translated into seconds of the UTC day message timestamp. \end{DoxyCompactList}\item 
+ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime \& \mbox{\hyperlink{ntcip__1202__ext_8h_acf23409ef3a9b57865cb0ad178f3341d}{get\+\_\+phasetime}} (const int \mbox{\hyperlink{ntcip__1202__ext__phasetime_8h_a818606b5263ca9418c2a574097a9503a}{phase\+\_\+number}})
+\begin{DoxyCompactList}\small\item\em Returns reference to ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime of phase. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{ntcip__1202__ext_8h_a576de7b60eacee3f1a70393a005502cd}{to\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Returns std\+::string representation of ntcip\+\_\+1202\+\_\+ext message including phase\+\_\+times array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int8\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_a99005febfbff3af69e81b42ffcbbe3fb}{header}} = 0
+\begin{DoxyCompactList}\small\item\em header \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_a30753ca578a919a51441d2434e0e4e39}{num\+\_\+of\+\_\+phases}} = 0
+\begin{DoxyCompactList}\small\item\em number of phases \end{DoxyCompactList}\item 
+ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime \mbox{\hyperlink{ntcip__1202__ext_8h_a82c74342f3a5499c2d917b05612ee014}{phase\+\_\+times}} \mbox{[}16\mbox{]}
+\begin{DoxyCompactList}\small\item\em phase\+\_\+time object for each phase \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_ad90ea0b6d53c66dbbe7fc1694dca0834}{phase\+\_\+status\+\_\+group\+\_\+reds}} = 0
+\begin{DoxyCompactList}\small\item\em int where each bit indicates whether that phase is red (1-\/16) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_a71e538a579eb50365b9ea196739c59c5}{phase\+\_\+status\+\_\+group\+\_\+yellows}} = 0
+\begin{DoxyCompactList}\small\item\em int where each bit indicates whether that phase is yellow (1-\/16) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_a587a7394f848174222fb2c2e44de5503}{phase\+\_\+status\+\_\+group\+\_\+greens}} = 0
+\begin{DoxyCompactList}\small\item\em int where each bit indicates whether that phase is green (1-\/16) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_a9c6eb4129bbadb309cd6a3b826e0640e}{phase\+\_\+status\+\_\+group\+\_\+dont\+\_\+walks}} = 0
+\begin{DoxyCompactList}\small\item\em int where each bit indicates whether that phase is dont walk (Pedestrian Phases) (1-\/16) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_ae52d98773c54474a627a87dd8f4561ae}{phase\+\_\+status\+\_\+group\+\_\+ped\+\_\+clears}} = 0
+\begin{DoxyCompactList}\small\item\em int where each bit indicates whether that phase is pedestrian clear (Pedestrian Phases) (1-\/16) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_acc78b7c54eb03766db7412e35751f1bf}{phase\+\_\+status\+\_\+group\+\_\+walks}} = 0
+\begin{DoxyCompactList}\small\item\em int where each bit indicates whether that phase is walk (Pedestrian Phases) (1-\/16) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_a1bc8386b620479ba0dddf6820bb5bc96}{overlap\+\_\+status\+\_\+group\+\_\+reds}} = 0
+\begin{DoxyCompactList}\small\item\em int where each bit indicates whether that overlap is red (1-\/16) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_a47d12e74e8e8a1c3079c2d14e8d70231}{overlap\+\_\+status\+\_\+group\+\_\+yellows}} = 0
+\begin{DoxyCompactList}\small\item\em int where each bit indicates whether that overlap is yellow (1-\/16) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_a2fb23abc33f2b1ec2b144c80ef877172}{overlap\+\_\+status\+\_\+group\+\_\+greens}} = 0
+\begin{DoxyCompactList}\small\item\em int where each bit indicates whether that overlap is green (1-\/16) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_af5248a8bc279657b7a8debd350652a25}{flashing\+\_\+output\+\_\+phase\+\_\+status}} = 0
+\begin{DoxyCompactList}\small\item\em int where each bit indicates whether that phase is flashing (1-\/16) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_adf48cbfcffad03034a8cfe727f8a58da}{flashing\+\_\+output\+\_\+overlap\+\_\+status}} = 0
+\begin{DoxyCompactList}\small\item\em int where each bit indicates whether that overlap is flashing (1-\/16) \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_a0c0fc5aa2fd9ca4fca1d032ccf7144cb}{spat\+\_\+intersection\+\_\+status}} = 0
+\begin{DoxyCompactList}\small\item\em bit string for intersection status ~\newline
+ \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_aef9af72f9a2b4ba7addcf18e067215b3}{timebase\+\_\+asc\+\_\+action\+\_\+status}} = 0
+\begin{DoxyCompactList}\small\item\em current action plan \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_a765598363fd1889e7648146677eea4ef}{spat\+\_\+discontinuous\+\_\+change\+\_\+flag}} = 0
+\begin{DoxyCompactList}\small\item\em upper 5 bits are msg version \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_ab31434f7d385ebc7095d52c05f822758}{spat\+\_\+message\+\_\+seq\+\_\+counter}} = 0
+\begin{DoxyCompactList}\small\item\em lower byte of up-\/time in deciseconds \end{DoxyCompactList}\item 
+u\+\_\+char \mbox{\hyperlink{ntcip__1202__ext_8h_a4204cf1735cde488c89b22e76d48b480}{spat\+\_\+timestamp\+\_\+second\+\_\+byte1}} = 0
+\item 
+u\+\_\+char \mbox{\hyperlink{ntcip__1202__ext_8h_aeaf06f9dd9d5d211562b221800af5ec8}{spat\+\_\+timestamp\+\_\+second\+\_\+byte2}} = 0
+\item 
+u\+\_\+char \mbox{\hyperlink{ntcip__1202__ext_8h_a6346e90e8cb9b9b7f4458e2065d7863f}{spat\+\_\+timestamp\+\_\+second\+\_\+byte3}} = 0
+\item 
+uint16\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_aec5da33945072297857a9b1c36b09395}{spat\+\_\+timestamp\+\_\+msec}} = 0
+\begin{DoxyCompactList}\small\item\em milliseconds of current second \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_a8eb30c035826979a364d52effba9b5b1}{spat\+\_\+pedestrian\+\_\+call}} = 0
+\begin{DoxyCompactList}\small\item\em int where each bit indicates whether there is a pedestrian call on a phase (Pedestrian Phases) (1-\/16) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{ntcip__1202__ext_8h_a83d66d99f6fe76890e9be2df8939d6a5}{spat\+\_\+pedestrian\+\_\+detect}} = 0
+\begin{DoxyCompactList}\small\item\em int where each bit indicates whether there is a pedestrian detect on a phase (Pedestrian Phases) (1-\/16) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a9a8ba33601293e12c5122de5bcccedc3}\label{ntcip__1202__ext_8h_a9a8ba33601293e12c5122de5bcccedc3}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!get\_overlap\_flashing\_status@{get\_overlap\_flashing\_status}}
+\index{get\_overlap\_flashing\_status@{get\_overlap\_flashing\_status}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{get\_overlap\_flashing\_status()}{get\_overlap\_flashing\_status()}}
+{\footnotesize\ttfamily bool \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::get\+\_\+overlap\+\_\+flashing\+\_\+status (\begin{DoxyParamCaption}\item[{const int}]{phase\+\_\+number }\end{DoxyParamCaption}) const}
+
+
+
+Returns flashing state of overlap phase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phase\+\_\+number} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntcip__1202__ext_8h_ae3975a3ff3b2f7c056f69fe67c68f51b}\label{ntcip__1202__ext_8h_ae3975a3ff3b2f7c056f69fe67c68f51b}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!get\_overlap\_green\_status@{get\_overlap\_green\_status}}
+\index{get\_overlap\_green\_status@{get\_overlap\_green\_status}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{get\_overlap\_green\_status()}{get\_overlap\_green\_status()}}
+{\footnotesize\ttfamily bool \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::get\+\_\+overlap\+\_\+green\+\_\+status (\begin{DoxyParamCaption}\item[{const int}]{phase\+\_\+number }\end{DoxyParamCaption}) const}
+
+
+
+Returns green overlap state of phase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phase\+\_\+number} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a8ff6817e7e6dd64df541afc477ed7874}\label{ntcip__1202__ext_8h_a8ff6817e7e6dd64df541afc477ed7874}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!get\_overlap\_red\_status@{get\_overlap\_red\_status}}
+\index{get\_overlap\_red\_status@{get\_overlap\_red\_status}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{get\_overlap\_red\_status()}{get\_overlap\_red\_status()}}
+{\footnotesize\ttfamily bool \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::get\+\_\+overlap\+\_\+red\+\_\+status (\begin{DoxyParamCaption}\item[{const int}]{phase\+\_\+number }\end{DoxyParamCaption}) const}
+
+
+
+Returns red overlap state of phase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phase\+\_\+number} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a74e13a1dd9fa575a525d2d11b25d71e2}\label{ntcip__1202__ext_8h_a74e13a1dd9fa575a525d2d11b25d71e2}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!get\_overlap\_yellow\_status@{get\_overlap\_yellow\_status}}
+\index{get\_overlap\_yellow\_status@{get\_overlap\_yellow\_status}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{get\_overlap\_yellow\_status()}{get\_overlap\_yellow\_status()}}
+{\footnotesize\ttfamily bool \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::get\+\_\+overlap\+\_\+yellow\+\_\+status (\begin{DoxyParamCaption}\item[{const int}]{phase\+\_\+number }\end{DoxyParamCaption}) const}
+
+
+
+Returns yellow overlap state of phase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phase\+\_\+number} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntcip__1202__ext_8h_abd5fa3d9c64839918fff34363a61b640}\label{ntcip__1202__ext_8h_abd5fa3d9c64839918fff34363a61b640}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!get\_phase\_dont\_walk@{get\_phase\_dont\_walk}}
+\index{get\_phase\_dont\_walk@{get\_phase\_dont\_walk}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{get\_phase\_dont\_walk()}{get\_phase\_dont\_walk()}}
+{\footnotesize\ttfamily bool \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::get\+\_\+phase\+\_\+dont\+\_\+walk (\begin{DoxyParamCaption}\item[{const int}]{phase\+\_\+number }\end{DoxyParamCaption}) const}
+
+
+
+Returns dont walk state of phase. Only applies to pedestrian phases. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phase\+\_\+number} & of phase. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if phase is dont walk. 
+
+false if phase is not dont walk. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntcip__1202__ext_8h_aa0ecdae94d5ab3b837e5e20e8866ddb3}\label{ntcip__1202__ext_8h_aa0ecdae94d5ab3b837e5e20e8866ddb3}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!get\_phase\_flashing\_status@{get\_phase\_flashing\_status}}
+\index{get\_phase\_flashing\_status@{get\_phase\_flashing\_status}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{get\_phase\_flashing\_status()}{get\_phase\_flashing\_status()}}
+{\footnotesize\ttfamily bool \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::get\+\_\+phase\+\_\+flashing\+\_\+status (\begin{DoxyParamCaption}\item[{const int}]{phase\+\_\+number }\end{DoxyParamCaption}) const}
+
+
+
+Returns flashing state of phase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phase\+\_\+number} & of phase. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if phase is flashing. 
+
+false if phase is not flashing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a32d0523a9da2af17c80e36743331b1e7}\label{ntcip__1202__ext_8h_a32d0523a9da2af17c80e36743331b1e7}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!get\_phase\_green\_status@{get\_phase\_green\_status}}
+\index{get\_phase\_green\_status@{get\_phase\_green\_status}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{get\_phase\_green\_status()}{get\_phase\_green\_status()}}
+{\footnotesize\ttfamily bool \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::get\+\_\+phase\+\_\+green\+\_\+status (\begin{DoxyParamCaption}\item[{const int}]{phase\+\_\+number }\end{DoxyParamCaption}) const}
+
+
+
+Returns green state of phase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phase\+\_\+number} & of phase. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if phase is green. 
+
+false if phase is not green. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a1eb354f39fc56aa98d8b699503bf5b14}\label{ntcip__1202__ext_8h_a1eb354f39fc56aa98d8b699503bf5b14}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!get\_phase\_ped\_clear@{get\_phase\_ped\_clear}}
+\index{get\_phase\_ped\_clear@{get\_phase\_ped\_clear}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{get\_phase\_ped\_clear()}{get\_phase\_ped\_clear()}}
+{\footnotesize\ttfamily bool \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::get\+\_\+phase\+\_\+ped\+\_\+clear (\begin{DoxyParamCaption}\item[{const int}]{phase\+\_\+number }\end{DoxyParamCaption}) const}
+
+
+
+Returns pedestrian clear state of phase. Only applies to pedestrian phases. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phase\+\_\+number} & of phase. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if phase is pedestrian clear. 
+
+false if phase is not pedestrian clear. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntcip__1202__ext_8h_adfce4779290496145f7f556a1c900676}\label{ntcip__1202__ext_8h_adfce4779290496145f7f556a1c900676}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!get\_phase\_red\_status@{get\_phase\_red\_status}}
+\index{get\_phase\_red\_status@{get\_phase\_red\_status}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{get\_phase\_red\_status()}{get\_phase\_red\_status()}}
+{\footnotesize\ttfamily bool \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::get\+\_\+phase\+\_\+red\+\_\+status (\begin{DoxyParamCaption}\item[{const int}]{phase\+\_\+number }\end{DoxyParamCaption}) const}
+
+
+
+Returns red state of phase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phase\+\_\+number} & of phase. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if phase is red. 
+
+false if phase is not red. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntcip__1202__ext_8h_af87e4fa7c0030f5ba5c14c2e8232e122}\label{ntcip__1202__ext_8h_af87e4fa7c0030f5ba5c14c2e8232e122}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!get\_phase\_walk@{get\_phase\_walk}}
+\index{get\_phase\_walk@{get\_phase\_walk}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{get\_phase\_walk()}{get\_phase\_walk()}}
+{\footnotesize\ttfamily bool \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::get\+\_\+phase\+\_\+walk (\begin{DoxyParamCaption}\item[{const int}]{phase\+\_\+number }\end{DoxyParamCaption}) const}
+
+
+
+Returns walk state of phase. Only applies to pedestrian phases. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phase\+\_\+number} & of phase/ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if phase is walk. 
+
+false if phase is not walk. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntcip__1202__ext_8h_addf24ecda2435ddbe1edd26300e22374}\label{ntcip__1202__ext_8h_addf24ecda2435ddbe1edd26300e22374}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!get\_phase\_yellow\_status@{get\_phase\_yellow\_status}}
+\index{get\_phase\_yellow\_status@{get\_phase\_yellow\_status}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{get\_phase\_yellow\_status()}{get\_phase\_yellow\_status()}}
+{\footnotesize\ttfamily bool \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::get\+\_\+phase\+\_\+yellow\+\_\+status (\begin{DoxyParamCaption}\item[{const int}]{phase\+\_\+number }\end{DoxyParamCaption}) const}
+
+
+
+Returns yellow state of phase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phase\+\_\+number} & of phase. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if phase is yellow. 
+
+false if phase is not yellow. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntcip__1202__ext_8h_acf23409ef3a9b57865cb0ad178f3341d}\label{ntcip__1202__ext_8h_acf23409ef3a9b57865cb0ad178f3341d}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!get\_phasetime@{get\_phasetime}}
+\index{get\_phasetime@{get\_phasetime}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{get\_phasetime()}{get\_phasetime()}}
+{\footnotesize\ttfamily ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime\& \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::get\+\_\+phasetime (\begin{DoxyParamCaption}\item[{const int}]{phase\+\_\+number }\end{DoxyParamCaption})}
+
+
+
+Returns reference to ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime of phase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phase\+\_\+number} & of phase \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntcip__1202__ext_8h_aff7a8e87d57486000bf8d7b45757ecee}\label{ntcip__1202__ext_8h_aff7a8e87d57486000bf8d7b45757ecee}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!get\_spat\_pedestrian\_call@{get\_spat\_pedestrian\_call}}
+\index{get\_spat\_pedestrian\_call@{get\_spat\_pedestrian\_call}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{get\_spat\_pedestrian\_call()}{get\_spat\_pedestrian\_call()}}
+{\footnotesize\ttfamily bool \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::get\+\_\+spat\+\_\+pedestrian\+\_\+call (\begin{DoxyParamCaption}\item[{const int}]{phase\+\_\+number }\end{DoxyParamCaption}) const}
+
+
+
+Returns state of pedestrian calls on phase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phase\+\_\+number} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a4b9fe877cf5349a1000ac13fb7c68a84}\label{ntcip__1202__ext_8h_a4b9fe877cf5349a1000ac13fb7c68a84}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!get\_spat\_pedestrian\_detect@{get\_spat\_pedestrian\_detect}}
+\index{get\_spat\_pedestrian\_detect@{get\_spat\_pedestrian\_detect}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{get\_spat\_pedestrian\_detect()}{get\_spat\_pedestrian\_detect()}}
+{\footnotesize\ttfamily bool \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::get\+\_\+spat\+\_\+pedestrian\+\_\+detect (\begin{DoxyParamCaption}\item[{const int}]{phase\+\_\+number }\end{DoxyParamCaption}) const}
+
+
+
+Returns state of pedestrian detect on phase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phase\+\_\+number} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a5108908d37cea949b0e81e3ecbaaa0c2}\label{ntcip__1202__ext_8h_a5108908d37cea949b0e81e3ecbaaa0c2}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!get\_timestamp\_seconds\_of\_day@{get\_timestamp\_seconds\_of\_day}}
+\index{get\_timestamp\_seconds\_of\_day@{get\_timestamp\_seconds\_of\_day}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{get\_timestamp\_seconds\_of\_day()}{get\_timestamp\_seconds\_of\_day()}}
+{\footnotesize\ttfamily uint32\+\_\+t \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::get\+\_\+timestamp\+\_\+seconds\+\_\+of\+\_\+day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns 3 bytes translated into seconds of the UTC day message timestamp. 
+
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t message timestamp in seconds of UTC day 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a576de7b60eacee3f1a70393a005502cd}\label{ntcip__1202__ext_8h_a576de7b60eacee3f1a70393a005502cd}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string \+\_\+\+\_\+attribute\+\_\+\+\_\+\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns std\+::string representation of ntcip\+\_\+1202\+\_\+ext message including phase\+\_\+times array. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{ntcip__1202__ext_8h_a576de7b60eacee3f1a70393a005502cd_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ntcip__1202__ext_8h_adf48cbfcffad03034a8cfe727f8a58da}\label{ntcip__1202__ext_8h_adf48cbfcffad03034a8cfe727f8a58da}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!flashing\_output\_overlap\_status@{flashing\_output\_overlap\_status}}
+\index{flashing\_output\_overlap\_status@{flashing\_output\_overlap\_status}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{flashing\_output\_overlap\_status}{flashing\_output\_overlap\_status}}
+{\footnotesize\ttfamily uint16\+\_\+t flashing\+\_\+output\+\_\+overlap\+\_\+status = 0}
+
+
+
+int where each bit indicates whether that overlap is flashing (1-\/16) 
+
+
+
+Definition at line 27 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_af5248a8bc279657b7a8debd350652a25}\label{ntcip__1202__ext_8h_af5248a8bc279657b7a8debd350652a25}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!flashing\_output\_phase\_status@{flashing\_output\_phase\_status}}
+\index{flashing\_output\_phase\_status@{flashing\_output\_phase\_status}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{flashing\_output\_phase\_status}{flashing\_output\_phase\_status}}
+{\footnotesize\ttfamily uint16\+\_\+t flashing\+\_\+output\+\_\+phase\+\_\+status = 0}
+
+
+
+int where each bit indicates whether that phase is flashing (1-\/16) 
+
+
+
+Definition at line 25 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a99005febfbff3af69e81b42ffcbbe3fb}\label{ntcip__1202__ext_8h_a99005febfbff3af69e81b42ffcbbe3fb}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!header@{header}}
+\index{header@{header}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{header}{header}}
+{\footnotesize\ttfamily int8\+\_\+t header = 0}
+
+
+
+header 
+
+
+
+Definition at line 1 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a30753ca578a919a51441d2434e0e4e39}\label{ntcip__1202__ext_8h_a30753ca578a919a51441d2434e0e4e39}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!num\_of\_phases@{num\_of\_phases}}
+\index{num\_of\_phases@{num\_of\_phases}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{num\_of\_phases}{num\_of\_phases}}
+{\footnotesize\ttfamily int8\+\_\+t num\+\_\+of\+\_\+phases = 0}
+
+
+
+number of phases 
+
+
+
+Definition at line 3 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a2fb23abc33f2b1ec2b144c80ef877172}\label{ntcip__1202__ext_8h_a2fb23abc33f2b1ec2b144c80ef877172}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!overlap\_status\_group\_greens@{overlap\_status\_group\_greens}}
+\index{overlap\_status\_group\_greens@{overlap\_status\_group\_greens}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{overlap\_status\_group\_greens}{overlap\_status\_group\_greens}}
+{\footnotesize\ttfamily uint16\+\_\+t overlap\+\_\+status\+\_\+group\+\_\+greens = 0}
+
+
+
+int where each bit indicates whether that overlap is green (1-\/16) 
+
+
+
+Definition at line 23 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a1bc8386b620479ba0dddf6820bb5bc96}\label{ntcip__1202__ext_8h_a1bc8386b620479ba0dddf6820bb5bc96}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!overlap\_status\_group\_reds@{overlap\_status\_group\_reds}}
+\index{overlap\_status\_group\_reds@{overlap\_status\_group\_reds}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{overlap\_status\_group\_reds}{overlap\_status\_group\_reds}}
+{\footnotesize\ttfamily uint16\+\_\+t overlap\+\_\+status\+\_\+group\+\_\+reds = 0}
+
+
+
+int where each bit indicates whether that overlap is red (1-\/16) 
+
+
+
+Definition at line 19 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a47d12e74e8e8a1c3079c2d14e8d70231}\label{ntcip__1202__ext_8h_a47d12e74e8e8a1c3079c2d14e8d70231}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!overlap\_status\_group\_yellows@{overlap\_status\_group\_yellows}}
+\index{overlap\_status\_group\_yellows@{overlap\_status\_group\_yellows}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{overlap\_status\_group\_yellows}{overlap\_status\_group\_yellows}}
+{\footnotesize\ttfamily uint16\+\_\+t overlap\+\_\+status\+\_\+group\+\_\+yellows = 0}
+
+
+
+int where each bit indicates whether that overlap is yellow (1-\/16) 
+
+
+
+Definition at line 21 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a9c6eb4129bbadb309cd6a3b826e0640e}\label{ntcip__1202__ext_8h_a9c6eb4129bbadb309cd6a3b826e0640e}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!phase\_status\_group\_dont\_walks@{phase\_status\_group\_dont\_walks}}
+\index{phase\_status\_group\_dont\_walks@{phase\_status\_group\_dont\_walks}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{phase\_status\_group\_dont\_walks}{phase\_status\_group\_dont\_walks}}
+{\footnotesize\ttfamily uint16\+\_\+t phase\+\_\+status\+\_\+group\+\_\+dont\+\_\+walks = 0}
+
+
+
+int where each bit indicates whether that phase is dont walk (Pedestrian Phases) (1-\/16) 
+
+
+
+Definition at line 13 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a587a7394f848174222fb2c2e44de5503}\label{ntcip__1202__ext_8h_a587a7394f848174222fb2c2e44de5503}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!phase\_status\_group\_greens@{phase\_status\_group\_greens}}
+\index{phase\_status\_group\_greens@{phase\_status\_group\_greens}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{phase\_status\_group\_greens}{phase\_status\_group\_greens}}
+{\footnotesize\ttfamily uint16\+\_\+t phase\+\_\+status\+\_\+group\+\_\+greens = 0}
+
+
+
+int where each bit indicates whether that phase is green (1-\/16) 
+
+
+
+Definition at line 11 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_ae52d98773c54474a627a87dd8f4561ae}\label{ntcip__1202__ext_8h_ae52d98773c54474a627a87dd8f4561ae}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!phase\_status\_group\_ped\_clears@{phase\_status\_group\_ped\_clears}}
+\index{phase\_status\_group\_ped\_clears@{phase\_status\_group\_ped\_clears}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{phase\_status\_group\_ped\_clears}{phase\_status\_group\_ped\_clears}}
+{\footnotesize\ttfamily uint16\+\_\+t phase\+\_\+status\+\_\+group\+\_\+ped\+\_\+clears = 0}
+
+
+
+int where each bit indicates whether that phase is pedestrian clear (Pedestrian Phases) (1-\/16) 
+
+
+
+Definition at line 15 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_ad90ea0b6d53c66dbbe7fc1694dca0834}\label{ntcip__1202__ext_8h_ad90ea0b6d53c66dbbe7fc1694dca0834}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!phase\_status\_group\_reds@{phase\_status\_group\_reds}}
+\index{phase\_status\_group\_reds@{phase\_status\_group\_reds}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{phase\_status\_group\_reds}{phase\_status\_group\_reds}}
+{\footnotesize\ttfamily uint16\+\_\+t phase\+\_\+status\+\_\+group\+\_\+reds = 0}
+
+
+
+int where each bit indicates whether that phase is red (1-\/16) 
+
+
+
+Definition at line 7 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_acc78b7c54eb03766db7412e35751f1bf}\label{ntcip__1202__ext_8h_acc78b7c54eb03766db7412e35751f1bf}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!phase\_status\_group\_walks@{phase\_status\_group\_walks}}
+\index{phase\_status\_group\_walks@{phase\_status\_group\_walks}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{phase\_status\_group\_walks}{phase\_status\_group\_walks}}
+{\footnotesize\ttfamily uint16\+\_\+t phase\+\_\+status\+\_\+group\+\_\+walks = 0}
+
+
+
+int where each bit indicates whether that phase is walk (Pedestrian Phases) (1-\/16) 
+
+
+
+Definition at line 17 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a71e538a579eb50365b9ea196739c59c5}\label{ntcip__1202__ext_8h_a71e538a579eb50365b9ea196739c59c5}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!phase\_status\_group\_yellows@{phase\_status\_group\_yellows}}
+\index{phase\_status\_group\_yellows@{phase\_status\_group\_yellows}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{phase\_status\_group\_yellows}{phase\_status\_group\_yellows}}
+{\footnotesize\ttfamily uint16\+\_\+t phase\+\_\+status\+\_\+group\+\_\+yellows = 0}
+
+
+
+int where each bit indicates whether that phase is yellow (1-\/16) 
+
+
+
+Definition at line 9 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a82c74342f3a5499c2d917b05612ee014}\label{ntcip__1202__ext_8h_a82c74342f3a5499c2d917b05612ee014}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!phase\_times@{phase\_times}}
+\index{phase\_times@{phase\_times}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{phase\_times}{phase\_times}}
+{\footnotesize\ttfamily ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime phase\+\_\+times\mbox{[}16\mbox{]}}
+
+
+
+phase\+\_\+time object for each phase 
+
+
+
+Definition at line 5 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a765598363fd1889e7648146677eea4ef}\label{ntcip__1202__ext_8h_a765598363fd1889e7648146677eea4ef}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!spat\_discontinuous\_change\_flag@{spat\_discontinuous\_change\_flag}}
+\index{spat\_discontinuous\_change\_flag@{spat\_discontinuous\_change\_flag}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{spat\_discontinuous\_change\_flag}{spat\_discontinuous\_change\_flag}}
+{\footnotesize\ttfamily uint8\+\_\+t spat\+\_\+discontinuous\+\_\+change\+\_\+flag = 0}
+
+
+
+upper 5 bits are msg version 
+
+
+
+Definition at line 33 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a0c0fc5aa2fd9ca4fca1d032ccf7144cb}\label{ntcip__1202__ext_8h_a0c0fc5aa2fd9ca4fca1d032ccf7144cb}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!spat\_intersection\_status@{spat\_intersection\_status}}
+\index{spat\_intersection\_status@{spat\_intersection\_status}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{spat\_intersection\_status}{spat\_intersection\_status}}
+{\footnotesize\ttfamily uint8\+\_\+t spat\+\_\+intersection\+\_\+status = 0}
+
+
+
+bit string for intersection status ~\newline
+ 
+
+
+
+Definition at line 29 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_ab31434f7d385ebc7095d52c05f822758}\label{ntcip__1202__ext_8h_ab31434f7d385ebc7095d52c05f822758}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!spat\_message\_seq\_counter@{spat\_message\_seq\_counter}}
+\index{spat\_message\_seq\_counter@{spat\_message\_seq\_counter}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{spat\_message\_seq\_counter}{spat\_message\_seq\_counter}}
+{\footnotesize\ttfamily uint8\+\_\+t spat\+\_\+message\+\_\+seq\+\_\+counter = 0}
+
+
+
+lower byte of up-\/time in deciseconds 
+
+
+
+Definition at line 35 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a8eb30c035826979a364d52effba9b5b1}\label{ntcip__1202__ext_8h_a8eb30c035826979a364d52effba9b5b1}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!spat\_pedestrian\_call@{spat\_pedestrian\_call}}
+\index{spat\_pedestrian\_call@{spat\_pedestrian\_call}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{spat\_pedestrian\_call}{spat\_pedestrian\_call}}
+{\footnotesize\ttfamily uint16\+\_\+t spat\+\_\+pedestrian\+\_\+call = 0}
+
+
+
+int where each bit indicates whether there is a pedestrian call on a phase (Pedestrian Phases) (1-\/16) 
+
+
+
+Definition at line 43 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a83d66d99f6fe76890e9be2df8939d6a5}\label{ntcip__1202__ext_8h_a83d66d99f6fe76890e9be2df8939d6a5}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!spat\_pedestrian\_detect@{spat\_pedestrian\_detect}}
+\index{spat\_pedestrian\_detect@{spat\_pedestrian\_detect}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{spat\_pedestrian\_detect}{spat\_pedestrian\_detect}}
+{\footnotesize\ttfamily uint16\+\_\+t spat\+\_\+pedestrian\+\_\+detect = 0}
+
+
+
+int where each bit indicates whether there is a pedestrian detect on a phase (Pedestrian Phases) (1-\/16) 
+
+
+
+Definition at line 45 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_aec5da33945072297857a9b1c36b09395}\label{ntcip__1202__ext_8h_aec5da33945072297857a9b1c36b09395}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!spat\_timestamp\_msec@{spat\_timestamp\_msec}}
+\index{spat\_timestamp\_msec@{spat\_timestamp\_msec}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{spat\_timestamp\_msec}{spat\_timestamp\_msec}}
+{\footnotesize\ttfamily uint16\+\_\+t spat\+\_\+timestamp\+\_\+msec = 0}
+
+
+
+milliseconds of current second 
+
+
+
+Definition at line 41 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a4204cf1735cde488c89b22e76d48b480}\label{ntcip__1202__ext_8h_a4204cf1735cde488c89b22e76d48b480}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!spat\_timestamp\_second\_byte1@{spat\_timestamp\_second\_byte1}}
+\index{spat\_timestamp\_second\_byte1@{spat\_timestamp\_second\_byte1}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{spat\_timestamp\_second\_byte1}{spat\_timestamp\_second\_byte1}}
+{\footnotesize\ttfamily u\+\_\+char spat\+\_\+timestamp\+\_\+second\+\_\+byte1 = 0}
+
+3 bytes for second of the UTC day 
+
+Definition at line 37 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_aeaf06f9dd9d5d211562b221800af5ec8}\label{ntcip__1202__ext_8h_aeaf06f9dd9d5d211562b221800af5ec8}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!spat\_timestamp\_second\_byte2@{spat\_timestamp\_second\_byte2}}
+\index{spat\_timestamp\_second\_byte2@{spat\_timestamp\_second\_byte2}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{spat\_timestamp\_second\_byte2}{spat\_timestamp\_second\_byte2}}
+{\footnotesize\ttfamily u\+\_\+char spat\+\_\+timestamp\+\_\+second\+\_\+byte2 = 0}
+
+
+
+Definition at line 38 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_a6346e90e8cb9b9b7f4458e2065d7863f}\label{ntcip__1202__ext_8h_a6346e90e8cb9b9b7f4458e2065d7863f}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!spat\_timestamp\_second\_byte3@{spat\_timestamp\_second\_byte3}}
+\index{spat\_timestamp\_second\_byte3@{spat\_timestamp\_second\_byte3}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{spat\_timestamp\_second\_byte3}{spat\_timestamp\_second\_byte3}}
+{\footnotesize\ttfamily u\+\_\+char spat\+\_\+timestamp\+\_\+second\+\_\+byte3 = 0}
+
+
+
+Definition at line 39 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+
+\mbox{\Hypertarget{ntcip__1202__ext_8h_aef9af72f9a2b4ba7addcf18e067215b3}\label{ntcip__1202__ext_8h_aef9af72f9a2b4ba7addcf18e067215b3}} 
+\index{ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}!timebase\_asc\_action\_status@{timebase\_asc\_action\_status}}
+\index{timebase\_asc\_action\_status@{timebase\_asc\_action\_status}!ntcip\_1202\_ext.h@{ntcip\_1202\_ext.h}}
+\doxysubsubsection{\texorpdfstring{timebase\_asc\_action\_status}{timebase\_asc\_action\_status}}
+{\footnotesize\ttfamily uint8\+\_\+t timebase\+\_\+asc\+\_\+action\+\_\+status = 0}
+
+
+
+current action plan 
+
+
+
+Definition at line 31 of file ntcip\+\_\+1202\+\_\+ext.\+h.
+

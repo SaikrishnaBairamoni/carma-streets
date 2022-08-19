@@ -1,0 +1,41 @@
+\hypertarget{streets__configuration_8h}{}\doxysection{streets\+\_\+utils/streets\+\_\+service\+\_\+base/include/streets\+\_\+configuration.h File Reference}
+\label{streets__configuration_8h}\index{streets\_utils/streets\_service\_base/include/streets\_configuration.h@{streets\_utils/streets\_service\_base/include/streets\_configuration.h}}
+{\ttfamily \#include \char`\"{}streets\+\_\+singleton.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}streets\+\_\+configuration\+\_\+exception.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}configuration.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$spdlog/spdlog.\+h$>$}\newline
+{\ttfamily \#include $<$spdlog/async.\+h$>$}\newline
+{\ttfamily \#include $<$spdlog/sinks/daily\+\_\+file\+\_\+sink.\+h$>$}\newline
+{\ttfamily \#include $<$spdlog/sinks/stdout\+\_\+color\+\_\+sinks.\+h$>$}\newline
+{\ttfamily \#include $<$rapidjson/document.\+h$>$}\newline
+{\ttfamily \#include $<$rapidjson/istreamwrapper.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$boost/filesystem/operations.\+hpp$>$}\newline
+Include dependency graph for streets\+\_\+configuration.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{streets__configuration_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{streets__configuration_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classstreets__service_1_1streets__configuration}{streets\+\_\+service\+::streets\+\_\+configuration}}
+\begin{DoxyCompactList}\small\item\em Streets \mbox{\hyperlink{structConfiguration}{Configuration}} singleton scoped object that parses manifest.\+json configuration file and offers static access to the configuration parameter values. Singleton also configures default multisink logger file and terminal logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacestreets__service}{streets\+\_\+service}}
+\end{DoxyCompactItemize}

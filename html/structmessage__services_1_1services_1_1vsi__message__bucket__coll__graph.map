@@ -1,0 +1,7 @@
+<map id="message_services::services::vsi_message_bucket" name="message_services::services::vsi_message_bucket">
+<area shape="rect" id="node1" title=" " alt="" coords="569,57,773,98"/>
+<area shape="rect" id="node2" href="$classmessage__services_1_1models_1_1bsm.html" title=" " alt="" coords="253,5,488,32"/>
+<area shape="rect" id="node3" href="$classmessage__services_1_1models_1_1baseMessage.html" title=" " alt="" coords="5,57,204,98"/>
+<area shape="rect" id="node4" href="$classmessage__services_1_1models_1_1mobilityoperation.html" title=" " alt="" coords="271,57,470,98"/>
+<area shape="rect" id="node5" href="$classmessage__services_1_1models_1_1mobilitypath.html" title=" " alt="" coords="271,122,470,163"/>
+</map>

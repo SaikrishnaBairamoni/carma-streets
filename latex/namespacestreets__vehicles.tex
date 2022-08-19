@@ -1,0 +1,70 @@
+\hypertarget{namespacestreets__vehicles}{}\doxysection{streets\+\_\+vehicles Namespace Reference}
+\label{namespacestreets__vehicles}\index{streets\_vehicles@{streets\_vehicles}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classstreets__vehicles_1_1all__stop__status__intent__processor}{all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor}}
+\begin{DoxyCompactList}\small\item\em Status Intent processor implementation for all stop use case. Updates vehicle states based on the condition that all vehicles must stop before entering a stop sign controlled intersection. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classstreets__vehicles_1_1signalized__status__intent__processor}{signalized\+\_\+status\+\_\+intent\+\_\+processor}}
+\item 
+class \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processing__exception}{status\+\_\+intent\+\_\+processing\+\_\+exception}}
+\begin{DoxyCompactList}\small\item\em Runtime error related to processing status intent vehicle updates. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}}
+\begin{DoxyCompactList}\small\item\em Abstract Class to allow for customizable processing of status and intent vehicle updates. Simply inherit \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} and implement custom from\+\_\+json logic to override processing logic. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstreets__vehicles_1_1future__information}{future\+\_\+information}}
+\begin{DoxyCompactList}\small\item\em Future path information for vehicles. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}}
+\begin{DoxyCompactList}\small\item\em Data struct for vehicle status and intent information. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classstreets__vehicles_1_1vehicle__list}{vehicle\+\_\+list}}
+\begin{DoxyCompactList}\small\item\em Class to store vehicle information for all vehicles in an intersection. Contains pointer to a \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} which holds business logic to process status and intent vehicle updates. To implement custom message processing simply extend \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} and set this object to be the message processor for you vehicle list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405ac}{vehicle\+\_\+state}} \{ \newline
+\mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405aca834d41112f2943c357f660165b6eb6de}{EV}} =0
+, \mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405acab08ef04fe84cf4f6645fef073717f36f}{RDV}} =1
+, \mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405aca58d6a88f13e2db7f5059c41047876f00}{DV}} =2
+, \mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405acaa7bdee32cb21f0abbf9f878cb06cfe16}{LV}} =3
+, \newline
+\mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405aca9a116c50d133c8648404081885194300}{ND}} =-\/1
+ \}
+\begin{DoxyCompactList}\small\item\em Vehicle State Enum. EV (Entering Vehicle), RDV (Ready to Depart Vehicle), DV (Departing Vehicle), LV (Leaving Vehicle), ND (Not Defined). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405ac}\label{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405ac}} 
+\index{streets\_vehicles@{streets\_vehicles}!vehicle\_state@{vehicle\_state}}
+\index{vehicle\_state@{vehicle\_state}!streets\_vehicles@{streets\_vehicles}}
+\doxysubsubsection{\texorpdfstring{vehicle\_state}{vehicle\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405ac}{streets\+\_\+vehicles\+::vehicle\+\_\+state}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Vehicle State Enum. EV (Entering Vehicle), RDV (Ready to Depart Vehicle), DV (Departing Vehicle), LV (Leaving Vehicle), ND (Not Defined). 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EV@{EV}!streets\_vehicles@{streets\_vehicles}}\index{streets\_vehicles@{streets\_vehicles}!EV@{EV}}}\mbox{\Hypertarget{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405aca834d41112f2943c357f660165b6eb6de}\label{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405aca834d41112f2943c357f660165b6eb6de}} 
+EV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RDV@{RDV}!streets\_vehicles@{streets\_vehicles}}\index{streets\_vehicles@{streets\_vehicles}!RDV@{RDV}}}\mbox{\Hypertarget{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405acab08ef04fe84cf4f6645fef073717f36f}\label{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405acab08ef04fe84cf4f6645fef073717f36f}} 
+RDV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DV@{DV}!streets\_vehicles@{streets\_vehicles}}\index{streets\_vehicles@{streets\_vehicles}!DV@{DV}}}\mbox{\Hypertarget{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405aca58d6a88f13e2db7f5059c41047876f00}\label{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405aca58d6a88f13e2db7f5059c41047876f00}} 
+DV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LV@{LV}!streets\_vehicles@{streets\_vehicles}}\index{streets\_vehicles@{streets\_vehicles}!LV@{LV}}}\mbox{\Hypertarget{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405acaa7bdee32cb21f0abbf9f878cb06cfe16}\label{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405acaa7bdee32cb21f0abbf9f878cb06cfe16}} 
+LV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ND@{ND}!streets\_vehicles@{streets\_vehicles}}\index{streets\_vehicles@{streets\_vehicles}!ND@{ND}}}\mbox{\Hypertarget{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405aca9a116c50d133c8648404081885194300}\label{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405aca9a116c50d133c8648404081885194300}} 
+ND&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 27 of file vehicle.\+h.
+

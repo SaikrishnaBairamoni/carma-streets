@@ -1,0 +1,5 @@
+<map id="ntcip::ntcip_1202_ext::get_timestamp_seconds_of_day" name="ntcip::ntcip_1202_ext::get_timestamp_seconds_of_day">
+<area shape="rect" id="node1" title="Returns 3 bytes translated into seconds of the UTC day message timestamp." alt="" coords="240,31,429,87"/>
+<area shape="rect" id="node2" href="$structntcip_1_1ntcip__1202__ext.html#a3599a4daef1eff847beb567329bb364e" title="Returns std::string representation of ntcip_1202_ext message including phase_times array." alt="" coords="18,5,179,47"/>
+<area shape="rect" id="node3" href="$structsignal__phase__and__timing_1_1spat.html#abf3e0ae490abd77f4c168e34222c21dc" title="Update spat object data using ntcip_1202_ext data received via UDP socket. Bool flag to control wheth..." alt="" coords="5,71,192,112"/>
+</map>

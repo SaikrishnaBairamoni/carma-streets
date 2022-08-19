@@ -1,0 +1,52 @@
+\hypertarget{movement__event_8h}{}\doxysection{streets\+\_\+utils/streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing/include/movement\+\_\+event.h File Reference}
+\label{movement__event_8h}\index{streets\_utils/streets\_signal\_phase\_and\_timing/include/movement\_event.h@{streets\_utils/streets\_signal\_phase\_and\_timing/include/movement\_event.h}}
+{\ttfamily \#include \char`\"{}time\+\_\+change\+\_\+details.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}advisory\+\_\+speed.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$rapidjson/rapidjson.\+h$>$}\newline
+{\ttfamily \#include $<$rapidjson/document.\+h$>$}\newline
+{\ttfamily \#include $<$spdlog/spdlog.\+h$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+Include dependency graph for movement\+\_\+event.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{movement__event_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{movement__event_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__event}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+event}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesignal__phase__and__timing}{signal\+\_\+phase\+\_\+and\+\_\+timing}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+phase\+\_\+state}} \{ \newline
+\mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a7060e0481896e00b3f7d20f1e8e2749a}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::unavailable}} =0
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14aa82fd95db10ff25dfad39f07372ebe37}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::dark}} =1
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a82f58c8125d6f043623349cf7330ef62}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::stop\+\_\+then\+\_\+proceed}} =2
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a03e3f63efcce21f01897bc0583979afa}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::stop\+\_\+and\+\_\+remain}} =3
+, \newline
+\mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a87c08d3cfcc8f1c4b35d27cc42281892}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::pre\+\_\+movement}} =4
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14ad88202b8707e05ada4e0e40c2264acc3}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::permissive\+\_\+movement\+\_\+allowed}} =5
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14ababa6a65d4933ea6229e61b20668218b}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::protected\+\_\+movement\+\_\+allowed}} =6
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a1ea68c259bac2ecedc44812d4913c4d2}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::permissive\+\_\+clearance}} =7
+, \newline
+\mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a909f43d0494b87359c21298b5310e4fc}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::protected\+\_\+clearance}} =8
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14ae7bfb5169b6040cc3adbcaa21dd1bc38}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::caution\+\_\+conflicting\+\_\+traffic}} =9
+ \}
+\end{DoxyCompactItemize}

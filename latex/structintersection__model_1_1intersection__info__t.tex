@@ -1,0 +1,85 @@
+\hypertarget{structintersection__model_1_1intersection__info__t}{}\doxysection{intersection\+\_\+model\+::intersection\+\_\+info\+\_\+t Struct Reference}
+\label{structintersection__model_1_1intersection__info__t}\index{intersection\_model::intersection\_info\_t@{intersection\_model::intersection\_info\_t}}
+
+
+{\ttfamily \#include $<$intersection\+\_\+model.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structintersection__model_1_1intersection__info__t_abcc95c3378f3a915c718e3804315f42b}{intersection\+\_\+name}} = \char`\"{}\char`\"{}
+\item 
+std\+::int64\+\_\+t \mbox{\hyperlink{structintersection__model_1_1intersection__info__t_a4acc0084181c1fbdb453f5301998a2ed}{intersection\+\_\+id}} = 0
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structintersection__model_1_1lanelet__info__t}{lanelet\+\_\+info\+\_\+t}} $>$ \mbox{\hyperlink{structintersection__model_1_1intersection__info__t_a98ef36c3c2bcb89fe26f277a0e6f13b5}{link\+\_\+lanelets\+\_\+info}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structintersection__model_1_1lanelet__info__t}{lanelet\+\_\+info\+\_\+t}} $>$ \mbox{\hyperlink{structintersection__model_1_1intersection__info__t_aaec275e8e8b2d9ab62c83f6e04087f15}{entering\+\_\+lanelets\+\_\+info}}
+\item 
+std\+::set$<$ \mbox{\hyperlink{structintersection__model_1_1lanelet__info__t}{lanelet\+\_\+info\+\_\+t}} $>$ \mbox{\hyperlink{structintersection__model_1_1intersection__info__t_a3247132d260b9048c39f51d33d1cb0bb}{departure\+\_\+lanelets\+\_\+info}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 70 of file intersection\+\_\+model.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structintersection__model_1_1intersection__info__t_a3247132d260b9048c39f51d33d1cb0bb}\label{structintersection__model_1_1intersection__info__t_a3247132d260b9048c39f51d33d1cb0bb}} 
+\index{intersection\_model::intersection\_info\_t@{intersection\_model::intersection\_info\_t}!departure\_lanelets\_info@{departure\_lanelets\_info}}
+\index{departure\_lanelets\_info@{departure\_lanelets\_info}!intersection\_model::intersection\_info\_t@{intersection\_model::intersection\_info\_t}}
+\doxysubsubsection{\texorpdfstring{departure\_lanelets\_info}{departure\_lanelets\_info}}
+{\footnotesize\ttfamily std\+::set$<$\mbox{\hyperlink{structintersection__model_1_1lanelet__info__t}{lanelet\+\_\+info\+\_\+t}}$>$ intersection\+\_\+model\+::intersection\+\_\+info\+\_\+t\+::departure\+\_\+lanelets\+\_\+info}
+
+The departure lanelet is an atomic lane segment where vehicles have already safely exited the intersection, and is allowed to ignore any further signals from infrastructure. ~\newline
+ 
+
+Definition at line 85 of file intersection\+\_\+model.\+h.
+
+\mbox{\Hypertarget{structintersection__model_1_1intersection__info__t_aaec275e8e8b2d9ab62c83f6e04087f15}\label{structintersection__model_1_1intersection__info__t_aaec275e8e8b2d9ab62c83f6e04087f15}} 
+\index{intersection\_model::intersection\_info\_t@{intersection\_model::intersection\_info\_t}!entering\_lanelets\_info@{entering\_lanelets\_info}}
+\index{entering\_lanelets\_info@{entering\_lanelets\_info}!intersection\_model::intersection\_info\_t@{intersection\_model::intersection\_info\_t}}
+\doxysubsubsection{\texorpdfstring{entering\_lanelets\_info}{entering\_lanelets\_info}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structintersection__model_1_1lanelet__info__t}{lanelet\+\_\+info\+\_\+t}}$>$ intersection\+\_\+model\+::intersection\+\_\+info\+\_\+t\+::entering\+\_\+lanelets\+\_\+info}
+
+
+
+Definition at line 79 of file intersection\+\_\+model.\+h.
+
+\mbox{\Hypertarget{structintersection__model_1_1intersection__info__t_a4acc0084181c1fbdb453f5301998a2ed}\label{structintersection__model_1_1intersection__info__t_a4acc0084181c1fbdb453f5301998a2ed}} 
+\index{intersection\_model::intersection\_info\_t@{intersection\_model::intersection\_info\_t}!intersection\_id@{intersection\_id}}
+\index{intersection\_id@{intersection\_id}!intersection\_model::intersection\_info\_t@{intersection\_model::intersection\_info\_t}}
+\doxysubsubsection{\texorpdfstring{intersection\_id}{intersection\_id}}
+{\footnotesize\ttfamily std\+::int64\+\_\+t intersection\+\_\+model\+::intersection\+\_\+info\+\_\+t\+::intersection\+\_\+id = 0}
+
+
+
+Definition at line 73 of file intersection\+\_\+model.\+h.
+
+\mbox{\Hypertarget{structintersection__model_1_1intersection__info__t_abcc95c3378f3a915c718e3804315f42b}\label{structintersection__model_1_1intersection__info__t_abcc95c3378f3a915c718e3804315f42b}} 
+\index{intersection\_model::intersection\_info\_t@{intersection\_model::intersection\_info\_t}!intersection\_name@{intersection\_name}}
+\index{intersection\_name@{intersection\_name}!intersection\_model::intersection\_info\_t@{intersection\_model::intersection\_info\_t}}
+\doxysubsubsection{\texorpdfstring{intersection\_name}{intersection\_name}}
+{\footnotesize\ttfamily std\+::string intersection\+\_\+model\+::intersection\+\_\+info\+\_\+t\+::intersection\+\_\+name = \char`\"{}\char`\"{}}
+
+
+
+Definition at line 72 of file intersection\+\_\+model.\+h.
+
+\mbox{\Hypertarget{structintersection__model_1_1intersection__info__t_a98ef36c3c2bcb89fe26f277a0e6f13b5}\label{structintersection__model_1_1intersection__info__t_a98ef36c3c2bcb89fe26f277a0e6f13b5}} 
+\index{intersection\_model::intersection\_info\_t@{intersection\_model::intersection\_info\_t}!link\_lanelets\_info@{link\_lanelets\_info}}
+\index{link\_lanelets\_info@{link\_lanelets\_info}!intersection\_model::intersection\_info\_t@{intersection\_model::intersection\_info\_t}}
+\doxysubsubsection{\texorpdfstring{link\_lanelets\_info}{link\_lanelets\_info}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structintersection__model_1_1lanelet__info__t}{lanelet\+\_\+info\+\_\+t}}$>$ intersection\+\_\+model\+::intersection\+\_\+info\+\_\+t\+::link\+\_\+lanelets\+\_\+info}
+
+
+
+Definition at line 76 of file intersection\+\_\+model.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+intersection\+\_\+model/include/\mbox{\hyperlink{intersection__model_8h}{intersection\+\_\+model.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,332 @@
+\hypertarget{structntcip_1_1ntcip__1202__ext__phasetime}{}\doxysection{ntcip\+::ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime Struct Reference}
+\label{structntcip_1_1ntcip__1202__ext__phasetime}\index{ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}}
+
+
+{\ttfamily \#include $<$ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structntcip_1_1ntcip__1202__ext__phasetime_ac4be29069aab2d1659df59c7e3a92dc7}{get\+\_\+spat\+\_\+veh\+\_\+min\+\_\+time\+\_\+to\+\_\+change}} () const
+\begin{DoxyCompactList}\small\item\em Get spat\+\_\+veh\+\_\+min\+\_\+time\+\_\+to\+\_\+change and convert from network byte order to host byte order. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structntcip_1_1ntcip__1202__ext__phasetime_ac2bd3254673a1650bbb1481bd15d627b}{get\+\_\+spat\+\_\+veh\+\_\+max\+\_\+time\+\_\+to\+\_\+change}} () const
+\begin{DoxyCompactList}\small\item\em Get spat\+\_\+veh\+\_\+max\+\_\+time\+\_\+to\+\_\+change and convert from network byte order to host byte order. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structntcip_1_1ntcip__1202__ext__phasetime_a548dd68cfd66875e8ecbe58476dc3b68}{get\+\_\+spat\+\_\+ped\+\_\+min\+\_\+time\+\_\+to\+\_\+change}} () const
+\begin{DoxyCompactList}\small\item\em Get spat\+\_\+ped\+\_\+min\+\_\+time\+\_\+to\+\_\+change and convert from network byte order to host byte order. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structntcip_1_1ntcip__1202__ext__phasetime_a049d356d8cab07bce07d9f908a35cc25}{get\+\_\+spat\+\_\+ped\+\_\+max\+\_\+time\+\_\+to\+\_\+change}} () const
+\begin{DoxyCompactList}\small\item\em Get spat\+\_\+ped\+\_\+max\+\_\+time\+\_\+to\+\_\+change and convert from network byte order to host byte order. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structntcip_1_1ntcip__1202__ext__phasetime_aed0404092067db5bed08b7190431d4e3}{get\+\_\+spat\+\_\+ovlp\+\_\+min\+\_\+time\+\_\+to\+\_\+change}} () const
+\begin{DoxyCompactList}\small\item\em Get spat\+Ovlp\+Min\+Time\+To\+Change and convert from network byte order to host byte order. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structntcip_1_1ntcip__1202__ext__phasetime_ad20e0ca9f9317b9d4ce30cd445e52299}{get\+\_\+spat\+\_\+ovp\+\_\+max\+\_\+time\+\_\+to\+\_\+change}} () const
+\begin{DoxyCompactList}\small\item\em Get spat\+\_\+ovp\+\_\+max\+\_\+time\+\_\+to\+\_\+change and convert from netwrok byte order to host byte order. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structntcip_1_1ntcip__1202__ext__phasetime_a6821fa39f38b2204fac86cc42235fcd2}{to\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Convert information to string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structntcip_1_1ntcip__1202__ext__phasetime_ae39b3c776f79ef365e0d563d0f7861e2}{phase\+\_\+number}} = 0
+\begin{DoxyCompactList}\small\item\em Phase number (NTCIP) of phase. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structntcip_1_1ntcip__1202__ext__phasetime_a0acc582fc9ed531cfa78a2630e2595c3}{spat\+\_\+veh\+\_\+min\+\_\+time\+\_\+to\+\_\+change}} = 0
+\begin{DoxyCompactList}\small\item\em Time offset in deciseconds to min end time elapse for vehicle phase. DO NOT use member directly, stored in Network Byte Order. Use getter to intpret correctly. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structntcip_1_1ntcip__1202__ext__phasetime_a10b8fd3525f891388f68360fddef3946}{spat\+\_\+veh\+\_\+max\+\_\+time\+\_\+to\+\_\+change}} = 0
+\begin{DoxyCompactList}\small\item\em Time offset in deciseconds to max end time elapse for vehicle phase. DO NOT use member directly, stored in Network Byte Order. Use getter to intpret correctly. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structntcip_1_1ntcip__1202__ext__phasetime_abc377d5f0d48a0c00b91d2db89b3a353}{spat\+\_\+ped\+\_\+min\+\_\+time\+\_\+to\+\_\+change}} = 0
+\begin{DoxyCompactList}\small\item\em Time offset in deciseconds to min end time elapse for pedestrian phase. DO NOT use member directly, stored in Network Byte Order. Use getter to intpret correctly. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structntcip_1_1ntcip__1202__ext__phasetime_a62c7b0c42ef2195ba30a66f2f5fcda69}{spat\+\_\+ped\+\_\+max\+\_\+time\+\_\+to\+\_\+change}} = 0
+\begin{DoxyCompactList}\small\item\em Time offset in deciseconds to max end time elapse for pedestrian phase. DO NOT use member directly, stored in Network Byte Order. Use getter to intpret correctly. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structntcip_1_1ntcip__1202__ext__phasetime_ae1e3e90ddb7a9d4ff4fb03948197579d}{spat\+\_\+ovlp\+\_\+min\+\_\+time\+\_\+to\+\_\+change}} = 0
+\begin{DoxyCompactList}\small\item\em Time offset in deciseconds to min end time elapse for overlap. DO NOT use member directly, stored in Network Byte Order. Use getter to intpret correctly. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structntcip_1_1ntcip__1202__ext__phasetime_a10f98b62daa8ead70eda2f18ec9f6f8e}{spat\+\_\+ovp\+\_\+max\+\_\+time\+\_\+to\+\_\+change}} = 0
+\begin{DoxyCompactList}\small\item\em Time offset in deciseconds to max end time elapse for overlap. DO NOT use member directly, stored in Network Byte Order. Use getter to intpret correctly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 8 of file ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structntcip_1_1ntcip__1202__ext__phasetime_aed0404092067db5bed08b7190431d4e3}\label{structntcip_1_1ntcip__1202__ext__phasetime_aed0404092067db5bed08b7190431d4e3}} 
+\index{ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}!get\_spat\_ovlp\_min\_time\_to\_change@{get\_spat\_ovlp\_min\_time\_to\_change}}
+\index{get\_spat\_ovlp\_min\_time\_to\_change@{get\_spat\_ovlp\_min\_time\_to\_change}!ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}}
+\doxysubsubsection{\texorpdfstring{get\_spat\_ovlp\_min\_time\_to\_change()}{get\_spat\_ovlp\_min\_time\_to\_change()}}
+{\footnotesize\ttfamily uint16\+\_\+t ntcip\+::ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime\+::get\+\_\+spat\+\_\+ovlp\+\_\+min\+\_\+time\+\_\+to\+\_\+change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get spat\+Ovlp\+Min\+Time\+To\+Change and convert from network byte order to host byte order. 
+
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structntcip_1_1ntcip__1202__ext__phasetime_aed0404092067db5bed08b7190431d4e3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structntcip_1_1ntcip__1202__ext__phasetime_ad20e0ca9f9317b9d4ce30cd445e52299}\label{structntcip_1_1ntcip__1202__ext__phasetime_ad20e0ca9f9317b9d4ce30cd445e52299}} 
+\index{ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}!get\_spat\_ovp\_max\_time\_to\_change@{get\_spat\_ovp\_max\_time\_to\_change}}
+\index{get\_spat\_ovp\_max\_time\_to\_change@{get\_spat\_ovp\_max\_time\_to\_change}!ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}}
+\doxysubsubsection{\texorpdfstring{get\_spat\_ovp\_max\_time\_to\_change()}{get\_spat\_ovp\_max\_time\_to\_change()}}
+{\footnotesize\ttfamily uint16\+\_\+t ntcip\+::ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime\+::get\+\_\+spat\+\_\+ovp\+\_\+max\+\_\+time\+\_\+to\+\_\+change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get spat\+\_\+ovp\+\_\+max\+\_\+time\+\_\+to\+\_\+change and convert from netwrok byte order to host byte order. 
+
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structntcip_1_1ntcip__1202__ext__phasetime_ad20e0ca9f9317b9d4ce30cd445e52299_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structntcip_1_1ntcip__1202__ext__phasetime_a049d356d8cab07bce07d9f908a35cc25}\label{structntcip_1_1ntcip__1202__ext__phasetime_a049d356d8cab07bce07d9f908a35cc25}} 
+\index{ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}!get\_spat\_ped\_max\_time\_to\_change@{get\_spat\_ped\_max\_time\_to\_change}}
+\index{get\_spat\_ped\_max\_time\_to\_change@{get\_spat\_ped\_max\_time\_to\_change}!ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}}
+\doxysubsubsection{\texorpdfstring{get\_spat\_ped\_max\_time\_to\_change()}{get\_spat\_ped\_max\_time\_to\_change()}}
+{\footnotesize\ttfamily uint16\+\_\+t ntcip\+::ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime\+::get\+\_\+spat\+\_\+ped\+\_\+max\+\_\+time\+\_\+to\+\_\+change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get spat\+\_\+ped\+\_\+max\+\_\+time\+\_\+to\+\_\+change and convert from network byte order to host byte order. 
+
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t 
+\end{DoxyReturn}
+
+
+Definition at line 28 of file ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structntcip_1_1ntcip__1202__ext__phasetime_a049d356d8cab07bce07d9f908a35cc25_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structntcip_1_1ntcip__1202__ext__phasetime_a548dd68cfd66875e8ecbe58476dc3b68}\label{structntcip_1_1ntcip__1202__ext__phasetime_a548dd68cfd66875e8ecbe58476dc3b68}} 
+\index{ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}!get\_spat\_ped\_min\_time\_to\_change@{get\_spat\_ped\_min\_time\_to\_change}}
+\index{get\_spat\_ped\_min\_time\_to\_change@{get\_spat\_ped\_min\_time\_to\_change}!ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}}
+\doxysubsubsection{\texorpdfstring{get\_spat\_ped\_min\_time\_to\_change()}{get\_spat\_ped\_min\_time\_to\_change()}}
+{\footnotesize\ttfamily uint16\+\_\+t ntcip\+::ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime\+::get\+\_\+spat\+\_\+ped\+\_\+min\+\_\+time\+\_\+to\+\_\+change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get spat\+\_\+ped\+\_\+min\+\_\+time\+\_\+to\+\_\+change and convert from network byte order to host byte order. 
+
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t 
+\end{DoxyReturn}
+
+
+Definition at line 24 of file ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structntcip_1_1ntcip__1202__ext__phasetime_a548dd68cfd66875e8ecbe58476dc3b68_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structntcip_1_1ntcip__1202__ext__phasetime_ac2bd3254673a1650bbb1481bd15d627b}\label{structntcip_1_1ntcip__1202__ext__phasetime_ac2bd3254673a1650bbb1481bd15d627b}} 
+\index{ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}!get\_spat\_veh\_max\_time\_to\_change@{get\_spat\_veh\_max\_time\_to\_change}}
+\index{get\_spat\_veh\_max\_time\_to\_change@{get\_spat\_veh\_max\_time\_to\_change}!ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}}
+\doxysubsubsection{\texorpdfstring{get\_spat\_veh\_max\_time\_to\_change()}{get\_spat\_veh\_max\_time\_to\_change()}}
+{\footnotesize\ttfamily uint16\+\_\+t ntcip\+::ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime\+::get\+\_\+spat\+\_\+veh\+\_\+max\+\_\+time\+\_\+to\+\_\+change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get spat\+\_\+veh\+\_\+max\+\_\+time\+\_\+to\+\_\+change and convert from network byte order to host byte order. 
+
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structntcip_1_1ntcip__1202__ext__phasetime_ac2bd3254673a1650bbb1481bd15d627b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structntcip_1_1ntcip__1202__ext__phasetime_ac4be29069aab2d1659df59c7e3a92dc7}\label{structntcip_1_1ntcip__1202__ext__phasetime_ac4be29069aab2d1659df59c7e3a92dc7}} 
+\index{ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}!get\_spat\_veh\_min\_time\_to\_change@{get\_spat\_veh\_min\_time\_to\_change}}
+\index{get\_spat\_veh\_min\_time\_to\_change@{get\_spat\_veh\_min\_time\_to\_change}!ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}}
+\doxysubsubsection{\texorpdfstring{get\_spat\_veh\_min\_time\_to\_change()}{get\_spat\_veh\_min\_time\_to\_change()}}
+{\footnotesize\ttfamily uint16\+\_\+t ntcip\+::ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime\+::get\+\_\+spat\+\_\+veh\+\_\+min\+\_\+time\+\_\+to\+\_\+change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get spat\+\_\+veh\+\_\+min\+\_\+time\+\_\+to\+\_\+change and convert from network byte order to host byte order. 
+
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structntcip_1_1ntcip__1202__ext__phasetime_ac4be29069aab2d1659df59c7e3a92dc7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structntcip_1_1ntcip__1202__ext__phasetime_a6821fa39f38b2204fac86cc42235fcd2}\label{structntcip_1_1ntcip__1202__ext__phasetime_a6821fa39f38b2204fac86cc42235fcd2}} 
+\index{ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string ntcip\+::ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Convert information to string. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definition at line 4 of file ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structntcip_1_1ntcip__1202__ext__phasetime_a6821fa39f38b2204fac86cc42235fcd2_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structntcip_1_1ntcip__1202__ext__phasetime_ae39b3c776f79ef365e0d563d0f7861e2}\label{structntcip_1_1ntcip__1202__ext__phasetime_ae39b3c776f79ef365e0d563d0f7861e2}} 
+\index{ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}!phase\_number@{phase\_number}}
+\index{phase\_number@{phase\_number}!ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}}
+\doxysubsubsection{\texorpdfstring{phase\_number}{phase\_number}}
+{\footnotesize\ttfamily uint8\+\_\+t ntcip\+::ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime\+::phase\+\_\+number = 0}
+
+
+
+Phase number (NTCIP) of phase. 
+
+
+
+Definition at line 11 of file ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+h.
+
+\mbox{\Hypertarget{structntcip_1_1ntcip__1202__ext__phasetime_ae1e3e90ddb7a9d4ff4fb03948197579d}\label{structntcip_1_1ntcip__1202__ext__phasetime_ae1e3e90ddb7a9d4ff4fb03948197579d}} 
+\index{ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}!spat\_ovlp\_min\_time\_to\_change@{spat\_ovlp\_min\_time\_to\_change}}
+\index{spat\_ovlp\_min\_time\_to\_change@{spat\_ovlp\_min\_time\_to\_change}!ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}}
+\doxysubsubsection{\texorpdfstring{spat\_ovlp\_min\_time\_to\_change}{spat\_ovlp\_min\_time\_to\_change}}
+{\footnotesize\ttfamily uint16\+\_\+t ntcip\+::ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime\+::spat\+\_\+ovlp\+\_\+min\+\_\+time\+\_\+to\+\_\+change = 0}
+
+
+
+Time offset in deciseconds to min end time elapse for overlap. DO NOT use member directly, stored in Network Byte Order. Use getter to intpret correctly. 
+
+
+
+Definition at line 36 of file ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+h.
+
+\mbox{\Hypertarget{structntcip_1_1ntcip__1202__ext__phasetime_a10f98b62daa8ead70eda2f18ec9f6f8e}\label{structntcip_1_1ntcip__1202__ext__phasetime_a10f98b62daa8ead70eda2f18ec9f6f8e}} 
+\index{ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}!spat\_ovp\_max\_time\_to\_change@{spat\_ovp\_max\_time\_to\_change}}
+\index{spat\_ovp\_max\_time\_to\_change@{spat\_ovp\_max\_time\_to\_change}!ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}}
+\doxysubsubsection{\texorpdfstring{spat\_ovp\_max\_time\_to\_change}{spat\_ovp\_max\_time\_to\_change}}
+{\footnotesize\ttfamily uint16\+\_\+t ntcip\+::ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime\+::spat\+\_\+ovp\+\_\+max\+\_\+time\+\_\+to\+\_\+change = 0}
+
+
+
+Time offset in deciseconds to max end time elapse for overlap. DO NOT use member directly, stored in Network Byte Order. Use getter to intpret correctly. 
+
+
+
+Definition at line 41 of file ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+h.
+
+\mbox{\Hypertarget{structntcip_1_1ntcip__1202__ext__phasetime_a62c7b0c42ef2195ba30a66f2f5fcda69}\label{structntcip_1_1ntcip__1202__ext__phasetime_a62c7b0c42ef2195ba30a66f2f5fcda69}} 
+\index{ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}!spat\_ped\_max\_time\_to\_change@{spat\_ped\_max\_time\_to\_change}}
+\index{spat\_ped\_max\_time\_to\_change@{spat\_ped\_max\_time\_to\_change}!ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}}
+\doxysubsubsection{\texorpdfstring{spat\_ped\_max\_time\_to\_change}{spat\_ped\_max\_time\_to\_change}}
+{\footnotesize\ttfamily uint16\+\_\+t ntcip\+::ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime\+::spat\+\_\+ped\+\_\+max\+\_\+time\+\_\+to\+\_\+change = 0}
+
+
+
+Time offset in deciseconds to max end time elapse for pedestrian phase. DO NOT use member directly, stored in Network Byte Order. Use getter to intpret correctly. 
+
+
+
+Definition at line 31 of file ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+h.
+
+\mbox{\Hypertarget{structntcip_1_1ntcip__1202__ext__phasetime_abc377d5f0d48a0c00b91d2db89b3a353}\label{structntcip_1_1ntcip__1202__ext__phasetime_abc377d5f0d48a0c00b91d2db89b3a353}} 
+\index{ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}!spat\_ped\_min\_time\_to\_change@{spat\_ped\_min\_time\_to\_change}}
+\index{spat\_ped\_min\_time\_to\_change@{spat\_ped\_min\_time\_to\_change}!ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}}
+\doxysubsubsection{\texorpdfstring{spat\_ped\_min\_time\_to\_change}{spat\_ped\_min\_time\_to\_change}}
+{\footnotesize\ttfamily uint16\+\_\+t ntcip\+::ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime\+::spat\+\_\+ped\+\_\+min\+\_\+time\+\_\+to\+\_\+change = 0}
+
+
+
+Time offset in deciseconds to min end time elapse for pedestrian phase. DO NOT use member directly, stored in Network Byte Order. Use getter to intpret correctly. 
+
+
+
+Definition at line 26 of file ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+h.
+
+\mbox{\Hypertarget{structntcip_1_1ntcip__1202__ext__phasetime_a10b8fd3525f891388f68360fddef3946}\label{structntcip_1_1ntcip__1202__ext__phasetime_a10b8fd3525f891388f68360fddef3946}} 
+\index{ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}!spat\_veh\_max\_time\_to\_change@{spat\_veh\_max\_time\_to\_change}}
+\index{spat\_veh\_max\_time\_to\_change@{spat\_veh\_max\_time\_to\_change}!ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}}
+\doxysubsubsection{\texorpdfstring{spat\_veh\_max\_time\_to\_change}{spat\_veh\_max\_time\_to\_change}}
+{\footnotesize\ttfamily uint16\+\_\+t ntcip\+::ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime\+::spat\+\_\+veh\+\_\+max\+\_\+time\+\_\+to\+\_\+change = 0}
+
+
+
+Time offset in deciseconds to max end time elapse for vehicle phase. DO NOT use member directly, stored in Network Byte Order. Use getter to intpret correctly. 
+
+
+
+Definition at line 21 of file ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+h.
+
+\mbox{\Hypertarget{structntcip_1_1ntcip__1202__ext__phasetime_a0acc582fc9ed531cfa78a2630e2595c3}\label{structntcip_1_1ntcip__1202__ext__phasetime_a0acc582fc9ed531cfa78a2630e2595c3}} 
+\index{ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}!spat\_veh\_min\_time\_to\_change@{spat\_veh\_min\_time\_to\_change}}
+\index{spat\_veh\_min\_time\_to\_change@{spat\_veh\_min\_time\_to\_change}!ntcip::ntcip\_1202\_ext\_phasetime@{ntcip::ntcip\_1202\_ext\_phasetime}}
+\doxysubsubsection{\texorpdfstring{spat\_veh\_min\_time\_to\_change}{spat\_veh\_min\_time\_to\_change}}
+{\footnotesize\ttfamily uint16\+\_\+t ntcip\+::ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime\+::spat\+\_\+veh\+\_\+min\+\_\+time\+\_\+to\+\_\+change = 0}
+
+
+
+Time offset in deciseconds to min end time elapse for vehicle phase. DO NOT use member directly, stored in Network Byte Order. Use getter to intpret correctly. 
+
+
+
+Definition at line 16 of file ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing/include/\mbox{\hyperlink{ntcip__1202__ext__phasetime_8h}{ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing/src/models/\mbox{\hyperlink{ntcip__1202__ext__phasetime_8cpp}{ntcip\+\_\+1202\+\_\+ext\+\_\+phasetime.\+cpp}}\end{DoxyCompactItemize}

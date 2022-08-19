@@ -1,0 +1,115 @@
+\hypertarget{test__signalized__scheduler_8cpp}{}\doxysection{streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/test/test\+\_\+signalized\+\_\+scheduler.cpp File Reference}
+\label{test__signalized__scheduler_8cpp}\index{streets\_utils/streets\_vehicle\_scheduler/test/test\_signalized\_scheduler.cpp@{streets\_utils/streets\_vehicle\_scheduler/test/test\_signalized\_scheduler.cpp}}
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$spdlog/spdlog.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}vehicle\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}signalized\+\_\+vehicle\+\_\+scheduler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}signalized\+\_\+intersection\+\_\+schedule.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}spat.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}signal\+\_\+phase\+\_\+and\+\_\+timing\+\_\+exception.\+h\char`\"{}}\newline
+Include dependency graph for test\+\_\+signalized\+\_\+scheduler.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__signalized__scheduler_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__signalized__scheduler_8cpp_aa33d5fd455e3b811b72f23bc2e5266a7}{TEST\+\_\+F}} (signalized\+\_\+scheduler\+\_\+test, schedule\+\_\+empty\+\_\+vehicle\+\_\+list)
+\item 
+\mbox{\hyperlink{test__signalized__scheduler_8cpp_a46cbfad69d438451d39731b0aba14222}{TEST\+\_\+F}} (signalized\+\_\+scheduler\+\_\+test, one\+\_\+dv)
+\begin{DoxyCompactList}\small\item\em Test case with single DV. This test checks if the departure time (DT) of a Departing Vehicle (DV) is calculated correctly. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__signalized__scheduler_8cpp_ad13163a731e5aa3501f554835e6e6341}{TEST\+\_\+F}} (signalized\+\_\+scheduler\+\_\+test, one\+\_\+ev\+\_\+one\+\_\+decelration)
+\begin{DoxyCompactList}\small\item\em Test case with single EV. (delta\+\_\+x $<$ delta\+\_\+x\+\_\+zegond $<$ delta\+\_\+x\+\_\+prime) (eet within green and et = eet) Speed limit, acceleration/deceleration limits, vehicle\textquotesingle{}s current distance, and intersection geometry should allow this EV to reach the entering speed. This means that the vehicle trajectory will include one piece of acceleration\textbackslash{}deceleration and its actual entering speed will be slightly lower\textbackslash{}higher than the desired entering speed. Also, the vehicle\textquotesingle{}s estimated EET is within a green phase and therefore, its estimated ET shall be equal to its estimated EET. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__signalized__scheduler_8cpp_a840f6273b6abd94c1306a34de1b4fcc7}{TEST\+\_\+F}} (signalized\+\_\+scheduler\+\_\+test, one\+\_\+ev\+\_\+without\+\_\+cruising)
+\begin{DoxyCompactList}\small\item\em Test case with single EV. (delta\+\_\+x\+\_\+zegond $<$ delta\+\_\+x $<$ delta\+\_\+x\+\_\+prime) (eet within green and et = eet) Speed limit, acceleration/deceleration limits, vehicle\textquotesingle{}s current distance, and intersection geometry should allow this EV to reach a speed higher than max(current speed, entering speed) before slowing down\textbackslash{}speeding up to the entering speed. This means the vehicle trajectory will include two pieces of acceleration and deceleration. But it should not allow this EV to reach lanelet speed limit in entry lane. This means the vehicle trajectory will not include cruising. Also, the vehicle\textquotesingle{}s estimated EET is within a green phase and therefore, its estimated ET shall be equal to its estimated EET. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__signalized__scheduler_8cpp_aea030b6ead6b40a8abbc06533382a0ba}{TEST\+\_\+F}} (signalized\+\_\+scheduler\+\_\+test, one\+\_\+ev\+\_\+with\+\_\+cruising\+\_\+1)
+\begin{DoxyCompactList}\small\item\em Test case with single EV. (delta\+\_\+x\+\_\+zegond $<$ delta\+\_\+x\+\_\+prime $<$ delta\+\_\+x) (eet NOT within green and et = begining of TBD + initial\+\_\+green\+\_\+buffer) Speed limit, acceleration/deceleration limits, vehicle\textquotesingle{}s current distance, and intersection geometry should allow this EV to reach lanelet speed limit in entry lane. This means the vehicle trajectory will include two pieces of acceleration and deceleration and one piece of cruising. Also, the vehicle\textquotesingle{}s estimated EET is NOT within a green phase and therefore, its estimated ET shall be equal to beginning of the next green phase (TBD in this example) plus the initial\+\_\+green\+\_\+buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__signalized__scheduler_8cpp_a13911cccc33be6e237a65a205602f6c0}{TEST\+\_\+F}} (signalized\+\_\+scheduler\+\_\+test, one\+\_\+ev\+\_\+with\+\_\+cruising\+\_\+2)
+\begin{DoxyCompactList}\small\item\em Test case with single EV. (delta\+\_\+x\+\_\+zegond $<$ delta\+\_\+x\+\_\+prime $<$ delta\+\_\+x) (eet within final\+\_\+green\+\_\+buffer of the green green and et = begining of TBD + initial\+\_\+green\+\_\+buffer) Speed limit, acceleration/deceleration limits, vehicle\textquotesingle{}s current distance, and intersection geometry should allow this EV to reach lanelet speed limit in entry lane. This means the vehicle trajectory will include two pieces of acceleration and deceleration and one piece of cruising. Also, the vehicle\textquotesingle{}s estimated EET is within final\+\_\+green\+\_\+buffer of the green phase and therefore, its estimated ET shall be equal to beginning of the next green phase (TBD in this example) plus the initial\+\_\+green\+\_\+buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__signalized__scheduler_8cpp_a46cbfad69d438451d39731b0aba14222}\label{test__signalized__scheduler_8cpp_a46cbfad69d438451d39731b0aba14222}} 
+\index{test\_signalized\_scheduler.cpp@{test\_signalized\_scheduler.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_signalized\_scheduler.cpp@{test\_signalized\_scheduler.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{signalized\+\_\+scheduler\+\_\+test}]{,  }\item[{one\+\_\+dv}]{ }\end{DoxyParamCaption})}
+
+
+
+Test case with single DV. This test checks if the departure time (DT) of a Departing Vehicle (DV) is calculated correctly. 
+
+
+
+Definition at line 96 of file test\+\_\+signalized\+\_\+scheduler.\+cpp.
+
+\mbox{\Hypertarget{test__signalized__scheduler_8cpp_ad13163a731e5aa3501f554835e6e6341}\label{test__signalized__scheduler_8cpp_ad13163a731e5aa3501f554835e6e6341}} 
+\index{test\_signalized\_scheduler.cpp@{test\_signalized\_scheduler.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_signalized\_scheduler.cpp@{test\_signalized\_scheduler.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{signalized\+\_\+scheduler\+\_\+test}]{,  }\item[{one\+\_\+ev\+\_\+one\+\_\+decelration}]{ }\end{DoxyParamCaption})}
+
+
+
+Test case with single EV. (delta\+\_\+x $<$ delta\+\_\+x\+\_\+zegond $<$ delta\+\_\+x\+\_\+prime) (eet within green and et = eet) Speed limit, acceleration/deceleration limits, vehicle\textquotesingle{}s current distance, and intersection geometry should allow this EV to reach the entering speed. This means that the vehicle trajectory will include one piece of acceleration\textbackslash{}deceleration and its actual entering speed will be slightly lower\textbackslash{}higher than the desired entering speed. Also, the vehicle\textquotesingle{}s estimated EET is within a green phase and therefore, its estimated ET shall be equal to its estimated EET. 
+
+
+
+Definition at line 138 of file test\+\_\+signalized\+\_\+scheduler.\+cpp.
+
+\mbox{\Hypertarget{test__signalized__scheduler_8cpp_aea030b6ead6b40a8abbc06533382a0ba}\label{test__signalized__scheduler_8cpp_aea030b6ead6b40a8abbc06533382a0ba}} 
+\index{test\_signalized\_scheduler.cpp@{test\_signalized\_scheduler.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_signalized\_scheduler.cpp@{test\_signalized\_scheduler.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{signalized\+\_\+scheduler\+\_\+test}]{,  }\item[{one\+\_\+ev\+\_\+with\+\_\+cruising\+\_\+1}]{ }\end{DoxyParamCaption})}
+
+
+
+Test case with single EV. (delta\+\_\+x\+\_\+zegond $<$ delta\+\_\+x\+\_\+prime $<$ delta\+\_\+x) (eet NOT within green and et = begining of TBD + initial\+\_\+green\+\_\+buffer) Speed limit, acceleration/deceleration limits, vehicle\textquotesingle{}s current distance, and intersection geometry should allow this EV to reach lanelet speed limit in entry lane. This means the vehicle trajectory will include two pieces of acceleration and deceleration and one piece of cruising. Also, the vehicle\textquotesingle{}s estimated EET is NOT within a green phase and therefore, its estimated ET shall be equal to beginning of the next green phase (TBD in this example) plus the initial\+\_\+green\+\_\+buffer. 
+
+
+
+Definition at line 239 of file test\+\_\+signalized\+\_\+scheduler.\+cpp.
+
+\mbox{\Hypertarget{test__signalized__scheduler_8cpp_a13911cccc33be6e237a65a205602f6c0}\label{test__signalized__scheduler_8cpp_a13911cccc33be6e237a65a205602f6c0}} 
+\index{test\_signalized\_scheduler.cpp@{test\_signalized\_scheduler.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_signalized\_scheduler.cpp@{test\_signalized\_scheduler.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{signalized\+\_\+scheduler\+\_\+test}]{,  }\item[{one\+\_\+ev\+\_\+with\+\_\+cruising\+\_\+2}]{ }\end{DoxyParamCaption})}
+
+
+
+Test case with single EV. (delta\+\_\+x\+\_\+zegond $<$ delta\+\_\+x\+\_\+prime $<$ delta\+\_\+x) (eet within final\+\_\+green\+\_\+buffer of the green green and et = begining of TBD + initial\+\_\+green\+\_\+buffer) Speed limit, acceleration/deceleration limits, vehicle\textquotesingle{}s current distance, and intersection geometry should allow this EV to reach lanelet speed limit in entry lane. This means the vehicle trajectory will include two pieces of acceleration and deceleration and one piece of cruising. Also, the vehicle\textquotesingle{}s estimated EET is within final\+\_\+green\+\_\+buffer of the green phase and therefore, its estimated ET shall be equal to beginning of the next green phase (TBD in this example) plus the initial\+\_\+green\+\_\+buffer. 
+
+
+
+Definition at line 292 of file test\+\_\+signalized\+\_\+scheduler.\+cpp.
+
+\mbox{\Hypertarget{test__signalized__scheduler_8cpp_a840f6273b6abd94c1306a34de1b4fcc7}\label{test__signalized__scheduler_8cpp_a840f6273b6abd94c1306a34de1b4fcc7}} 
+\index{test\_signalized\_scheduler.cpp@{test\_signalized\_scheduler.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_signalized\_scheduler.cpp@{test\_signalized\_scheduler.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{signalized\+\_\+scheduler\+\_\+test}]{,  }\item[{one\+\_\+ev\+\_\+without\+\_\+cruising}]{ }\end{DoxyParamCaption})}
+
+
+
+Test case with single EV. (delta\+\_\+x\+\_\+zegond $<$ delta\+\_\+x $<$ delta\+\_\+x\+\_\+prime) (eet within green and et = eet) Speed limit, acceleration/deceleration limits, vehicle\textquotesingle{}s current distance, and intersection geometry should allow this EV to reach a speed higher than max(current speed, entering speed) before slowing down\textbackslash{}speeding up to the entering speed. This means the vehicle trajectory will include two pieces of acceleration and deceleration. But it should not allow this EV to reach lanelet speed limit in entry lane. This means the vehicle trajectory will not include cruising. Also, the vehicle\textquotesingle{}s estimated EET is within a green phase and therefore, its estimated ET shall be equal to its estimated EET. 
+
+
+
+Definition at line 188 of file test\+\_\+signalized\+\_\+scheduler.\+cpp.
+
+\mbox{\Hypertarget{test__signalized__scheduler_8cpp_aa33d5fd455e3b811b72f23bc2e5266a7}\label{test__signalized__scheduler_8cpp_aa33d5fd455e3b811b72f23bc2e5266a7}} 
+\index{test\_signalized\_scheduler.cpp@{test\_signalized\_scheduler.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_signalized\_scheduler.cpp@{test\_signalized\_scheduler.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{signalized\+\_\+scheduler\+\_\+test}]{,  }\item[{schedule\+\_\+empty\+\_\+vehicle\+\_\+list}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 84 of file test\+\_\+signalized\+\_\+scheduler.\+cpp.
+

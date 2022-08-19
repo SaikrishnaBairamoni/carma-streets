@@ -1,0 +1,219 @@
+\hypertarget{structsignal__phase__and__timing_1_1movement__state}{}\doxysection{signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+state Struct Reference}
+\label{structsignal__phase__and__timing_1_1movement__state}\index{signal\_phase\_and\_timing::movement\_state@{signal\_phase\_and\_timing::movement\_state}}
+
+
+{\ttfamily \#include $<$movement\+\_\+state.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+rapidjson\+::\+Value \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state_aa872f4da276fd17264851264ed1dde73}{to\+Json}} (rapidjson\+::\+Document\+::\+Allocator\+Type \&allocator) const
+\begin{DoxyCompactList}\small\item\em Serialize Movement State object to rapidjson\+::\+Value for writing as JSON string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state_add078711d1cf73ce1f433c4b34532fcc}{from\+Json}} (const rapidjson\+::\+Value \&val)
+\begin{DoxyCompactList}\small\item\em Deserialize Movement State JSON into Movement State object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state_a5d194d48be7e68acd6725161fbd9b00d}{operator==}} (const \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state}{movement\+\_\+state}} \&other) const
+\begin{DoxyCompactList}\small\item\em Equals operator to asses whether two objects contain equivalent data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state_aa13a66411886587bb468d9bfb9ab94cd}{operator!=}} (const \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state}{movement\+\_\+state}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns the inverse of equals operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state_a1de3e024b500c0b85ebc30fcfba0f9ab}{movement\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em Uniquely defines movement by name human readable for intersection to used only in debug mode. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state_ad403f25c761b6ef77b4bbc6bacbfc888}{signal\+\_\+group}} = 0
+\begin{DoxyCompactList}\small\item\em The group id is used to map to list of lanes (and their descriptions) which this Movement\+State data applies to. \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__event}{movement\+\_\+event}} $>$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state_a087beaba691971b31df26e90bf4e81c4}{state\+\_\+time\+\_\+speed}}
+\begin{DoxyCompactList}\small\item\em Consisting of sets of movement data with\+: Signal\+Phase\+State Time\+Change\+Details Advisory Speeds (optional) Note one or more of the movement events may be for a future time and that this allows conveying multiple predictive phase and movement timing for various uses for the current signal group. \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist}{connection\+\_\+maneuver\+\_\+assist}} $>$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state_aa3d4d3985d6aeb065506bc71a30479d3}{maneuver\+\_\+assist\+\_\+list}}
+\begin{DoxyCompactList}\small\item\em This information may also be placed in the Intersection\+State when common information applies to different lanes in the same way. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 15 of file movement\+\_\+state.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1movement__state_add078711d1cf73ce1f433c4b34532fcc}\label{structsignal__phase__and__timing_1_1movement__state_add078711d1cf73ce1f433c4b34532fcc}} 
+\index{signal\_phase\_and\_timing::movement\_state@{signal\_phase\_and\_timing::movement\_state}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!signal\_phase\_and\_timing::movement\_state@{signal\_phase\_and\_timing::movement\_state}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily void signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+state\+::from\+Json (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Deserialize Movement State JSON into Movement State object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Movement State JSON. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file movement\+\_\+state.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1movement__state_add078711d1cf73ce1f433c4b34532fcc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1movement__state_add078711d1cf73ce1f433c4b34532fcc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1movement__state_aa13a66411886587bb468d9bfb9ab94cd}\label{structsignal__phase__and__timing_1_1movement__state_aa13a66411886587bb468d9bfb9ab94cd}} 
+\index{signal\_phase\_and\_timing::movement\_state@{signal\_phase\_and\_timing::movement\_state}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!signal\_phase\_and\_timing::movement\_state@{signal\_phase\_and\_timing::movement\_state}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+state\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state}{movement\+\_\+state}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns the inverse of equals operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & second object to compare current object with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both objects do not contain equivalent data. 
+
+false if both objects do contain equivalent data. 
+\end{DoxyReturn}
+
+
+Definition at line 70 of file movement\+\_\+state.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1movement__state_aa13a66411886587bb468d9bfb9ab94cd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1movement__state_a5d194d48be7e68acd6725161fbd9b00d}\label{structsignal__phase__and__timing_1_1movement__state_a5d194d48be7e68acd6725161fbd9b00d}} 
+\index{signal\_phase\_and\_timing::movement\_state@{signal\_phase\_and\_timing::movement\_state}!operator==@{operator==}}
+\index{operator==@{operator==}!signal\_phase\_and\_timing::movement\_state@{signal\_phase\_and\_timing::movement\_state}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+state\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state}{movement\+\_\+state}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Equals operator to asses whether two objects contain equivalent data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em compare} & second object to compare current object with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both object contain equivalent data. 
+
+false if not. 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file movement\+\_\+state.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1movement__state_a5d194d48be7e68acd6725161fbd9b00d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1movement__state_aa872f4da276fd17264851264ed1dde73}\label{structsignal__phase__and__timing_1_1movement__state_aa872f4da276fd17264851264ed1dde73}} 
+\index{signal\_phase\_and\_timing::movement\_state@{signal\_phase\_and\_timing::movement\_state}!toJson@{toJson}}
+\index{toJson@{toJson}!signal\_phase\_and\_timing::movement\_state@{signal\_phase\_and\_timing::movement\_state}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily rapidjson\+::\+Value signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+state\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Document\+::\+Allocator\+Type \&}]{allocator }\end{DoxyParamCaption}) const}
+
+
+
+Serialize Movement State object to rapidjson\+::\+Value for writing as JSON string. 
+
+\begin{DoxyReturn}{Returns}
+rapidjson\+::\+Value serialize SPaT object 
+\end{DoxyReturn}
+
+
+Definition at line 4 of file movement\+\_\+state.\+cpp.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1movement__state_aa3d4d3985d6aeb065506bc71a30479d3}\label{structsignal__phase__and__timing_1_1movement__state_aa3d4d3985d6aeb065506bc71a30479d3}} 
+\index{signal\_phase\_and\_timing::movement\_state@{signal\_phase\_and\_timing::movement\_state}!maneuver\_assist\_list@{maneuver\_assist\_list}}
+\index{maneuver\_assist\_list@{maneuver\_assist\_list}!signal\_phase\_and\_timing::movement\_state@{signal\_phase\_and\_timing::movement\_state}}
+\doxysubsubsection{\texorpdfstring{maneuver\_assist\_list}{maneuver\_assist\_list}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist}{connection\+\_\+maneuver\+\_\+assist}}$>$ signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+state\+::maneuver\+\_\+assist\+\_\+list}
+
+
+
+This information may also be placed in the Intersection\+State when common information applies to different lanes in the same way. 
+
+
+
+Definition at line 39 of file movement\+\_\+state.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1movement__state_a1de3e024b500c0b85ebc30fcfba0f9ab}\label{structsignal__phase__and__timing_1_1movement__state_a1de3e024b500c0b85ebc30fcfba0f9ab}} 
+\index{signal\_phase\_and\_timing::movement\_state@{signal\_phase\_and\_timing::movement\_state}!movement\_name@{movement\_name}}
+\index{movement\_name@{movement\_name}!signal\_phase\_and\_timing::movement\_state@{signal\_phase\_and\_timing::movement\_state}}
+\doxysubsubsection{\texorpdfstring{movement\_name}{movement\_name}}
+{\footnotesize\ttfamily std\+::string signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+state\+::movement\+\_\+name}
+
+
+
+Uniquely defines movement by name human readable for intersection to used only in debug mode. 
+
+
+
+Definition at line 20 of file movement\+\_\+state.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1movement__state_ad403f25c761b6ef77b4bbc6bacbfc888}\label{structsignal__phase__and__timing_1_1movement__state_ad403f25c761b6ef77b4bbc6bacbfc888}} 
+\index{signal\_phase\_and\_timing::movement\_state@{signal\_phase\_and\_timing::movement\_state}!signal\_group@{signal\_group}}
+\index{signal\_group@{signal\_group}!signal\_phase\_and\_timing::movement\_state@{signal\_phase\_and\_timing::movement\_state}}
+\doxysubsubsection{\texorpdfstring{signal\_group}{signal\_group}}
+{\footnotesize\ttfamily uint8\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+state\+::signal\+\_\+group = 0}
+
+
+
+The group id is used to map to list of lanes (and their descriptions) which this Movement\+State data applies to. 
+
+
+
+Definition at line 25 of file movement\+\_\+state.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1movement__state_a087beaba691971b31df26e90bf4e81c4}\label{structsignal__phase__and__timing_1_1movement__state_a087beaba691971b31df26e90bf4e81c4}} 
+\index{signal\_phase\_and\_timing::movement\_state@{signal\_phase\_and\_timing::movement\_state}!state\_time\_speed@{state\_time\_speed}}
+\index{state\_time\_speed@{state\_time\_speed}!signal\_phase\_and\_timing::movement\_state@{signal\_phase\_and\_timing::movement\_state}}
+\doxysubsubsection{\texorpdfstring{state\_time\_speed}{state\_time\_speed}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__event}{movement\+\_\+event}}$>$ signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+state\+::state\+\_\+time\+\_\+speed}
+
+
+
+Consisting of sets of movement data with\+: Signal\+Phase\+State Time\+Change\+Details Advisory Speeds (optional) Note one or more of the movement events may be for a future time and that this allows conveying multiple predictive phase and movement timing for various uses for the current signal group. 
+
+
+
+Definition at line 34 of file movement\+\_\+state.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing/include/\mbox{\hyperlink{movement__state_8h}{movement\+\_\+state.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing/src/models/\mbox{\hyperlink{movement__state_8cpp}{movement\+\_\+state.\+cpp}}\end{DoxyCompactItemize}

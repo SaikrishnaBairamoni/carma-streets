@@ -1,0 +1,198 @@
+\hypertarget{classintersection__model_1_1map__msg__worker}{}\doxysection{intersection\+\_\+model\+::map\+\_\+msg\+\_\+worker Class Reference}
+\label{classintersection__model_1_1map__msg__worker}\index{intersection\_model::map\_msg\_worker@{intersection\_model::map\_msg\_worker}}
+
+
+{\ttfamily \#include $<$map\+\_\+msg\+\_\+worker.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classintersection__model_1_1map__msg__worker_a1d38d57d4d790484936839a3ddd8f4dd}{map\+\_\+msg\+\_\+worker}} ()=default
+\item 
+\mbox{\hyperlink{classintersection__model_1_1map__msg__worker_ad60ea9e2f1b18e870fbb17c52fdaf512}{map\+\_\+msg\+\_\+worker}} (const int intersection\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Construct a new map msg worker object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classintersection__model_1_1map__msg__worker_a4e23adab93b592974e71481e85ef6c5c}{map\+\_\+msg\+\_\+worker}} (const int intersection\+\_\+id, const std\+::string \&bootstrap\+\_\+server, const std\+::string \&map\+\_\+msg\+\_\+group\+\_\+id, const std\+::string \&map\+\_\+msg\+\_\+topic\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Construct a new map msg worker object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classintersection__model_1_1map__msg__worker_a24ba3b8fbac71ec535483c400beabd99}{$\sim$map\+\_\+msg\+\_\+worker}} ()=default
+\item 
+bool \mbox{\hyperlink{classintersection__model_1_1map__msg__worker_ad59f4cb6f6e4afc090fdda3937f1b672}{update\+\_\+map\+\_\+msg}} (const std\+::string \&payload)
+\begin{DoxyCompactList}\small\item\em Update intesection map structure. It will only update when both kafka consumer consumes MAP message and intersection id from MAP message matches id from MAP message. \end{DoxyCompactList}\item 
+const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structintersection__model_1_1intersection__map}{intersection\+\_\+map}} $>$ \& \mbox{\hyperlink{classintersection__model_1_1map__msg__worker_aa18c01177386e52a8c31c185ac3a9f9b}{get\+\_\+map\+\_\+msg\+\_\+ptr}} () const
+\begin{DoxyCompactList}\small\item\em Get the const map msg ptr object and prevent external class from modifying it. \end{DoxyCompactList}\item 
+const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker}{kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker}} $>$ \& \mbox{\hyperlink{classintersection__model_1_1map__msg__worker_a0379ce194582140e930c2e3b3ccc5ad8}{get\+\_\+map\+\_\+msg\+\_\+consumer\+\_\+ptr}} () const
+\begin{DoxyCompactList}\small\item\em Get the map msg consumer ptr object and prevent external class from modifying it. \end{DoxyCompactList}\item 
+rapidjson\+::\+Document \mbox{\hyperlink{classintersection__model_1_1map__msg__worker_a0d72b27c573747d7dd6b32ef6fae34ab}{parse\+\_\+\+JSON\+\_\+string}} (const std\+::string \&json\+String) const
+\begin{DoxyCompactList}\small\item\em parse MAP msg json string with rapidjson document \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 18 of file map\+\_\+msg\+\_\+worker.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classintersection__model_1_1map__msg__worker_a1d38d57d4d790484936839a3ddd8f4dd}\label{classintersection__model_1_1map__msg__worker_a1d38d57d4d790484936839a3ddd8f4dd}} 
+\index{intersection\_model::map\_msg\_worker@{intersection\_model::map\_msg\_worker}!map\_msg\_worker@{map\_msg\_worker}}
+\index{map\_msg\_worker@{map\_msg\_worker}!intersection\_model::map\_msg\_worker@{intersection\_model::map\_msg\_worker}}
+\doxysubsubsection{\texorpdfstring{map\_msg\_worker()}{map\_msg\_worker()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily intersection\+\_\+model\+::map\+\_\+msg\+\_\+worker\+::map\+\_\+msg\+\_\+worker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classintersection__model_1_1map__msg__worker_ad60ea9e2f1b18e870fbb17c52fdaf512}\label{classintersection__model_1_1map__msg__worker_ad60ea9e2f1b18e870fbb17c52fdaf512}} 
+\index{intersection\_model::map\_msg\_worker@{intersection\_model::map\_msg\_worker}!map\_msg\_worker@{map\_msg\_worker}}
+\index{map\_msg\_worker@{map\_msg\_worker}!intersection\_model::map\_msg\_worker@{intersection\_model::map\_msg\_worker}}
+\doxysubsubsection{\texorpdfstring{map\_msg\_worker()}{map\_msg\_worker()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily intersection\+\_\+model\+::map\+\_\+msg\+\_\+worker\+::map\+\_\+msg\+\_\+worker (\begin{DoxyParamCaption}\item[{const int}]{intersection\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new map msg worker object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intersection\+\_\+id} & configuration value from intersection model manifest.\+json. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file map\+\_\+msg\+\_\+worker.\+cpp.
+
+\mbox{\Hypertarget{classintersection__model_1_1map__msg__worker_a4e23adab93b592974e71481e85ef6c5c}\label{classintersection__model_1_1map__msg__worker_a4e23adab93b592974e71481e85ef6c5c}} 
+\index{intersection\_model::map\_msg\_worker@{intersection\_model::map\_msg\_worker}!map\_msg\_worker@{map\_msg\_worker}}
+\index{map\_msg\_worker@{map\_msg\_worker}!intersection\_model::map\_msg\_worker@{intersection\_model::map\_msg\_worker}}
+\doxysubsubsection{\texorpdfstring{map\_msg\_worker()}{map\_msg\_worker()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily intersection\+\_\+model\+::map\+\_\+msg\+\_\+worker\+::map\+\_\+msg\+\_\+worker (\begin{DoxyParamCaption}\item[{const int}]{intersection\+\_\+id,  }\item[{const std\+::string \&}]{bootstrap\+\_\+server,  }\item[{const std\+::string \&}]{map\+\_\+msg\+\_\+group\+\_\+id,  }\item[{const std\+::string \&}]{map\+\_\+msg\+\_\+topic\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Construct a new map msg worker object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intersection\+\_\+id} & configuration value from intersection model manifest.\+json. It is used to identofy the intersection from MAP message. \\
+\hline
+\end{DoxyParams}
+Kafka client config
+
+Definition at line 7 of file map\+\_\+msg\+\_\+worker.\+cpp.
+
+\mbox{\Hypertarget{classintersection__model_1_1map__msg__worker_a24ba3b8fbac71ec535483c400beabd99}\label{classintersection__model_1_1map__msg__worker_a24ba3b8fbac71ec535483c400beabd99}} 
+\index{intersection\_model::map\_msg\_worker@{intersection\_model::map\_msg\_worker}!````~map\_msg\_worker@{$\sim$map\_msg\_worker}}
+\index{````~map\_msg\_worker@{$\sim$map\_msg\_worker}!intersection\_model::map\_msg\_worker@{intersection\_model::map\_msg\_worker}}
+\doxysubsubsection{\texorpdfstring{$\sim$map\_msg\_worker()}{~map\_msg\_worker()}}
+{\footnotesize\ttfamily intersection\+\_\+model\+::map\+\_\+msg\+\_\+worker\+::$\sim$map\+\_\+msg\+\_\+worker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classintersection__model_1_1map__msg__worker_a0379ce194582140e930c2e3b3ccc5ad8}\label{classintersection__model_1_1map__msg__worker_a0379ce194582140e930c2e3b3ccc5ad8}} 
+\index{intersection\_model::map\_msg\_worker@{intersection\_model::map\_msg\_worker}!get\_map\_msg\_consumer\_ptr@{get\_map\_msg\_consumer\_ptr}}
+\index{get\_map\_msg\_consumer\_ptr@{get\_map\_msg\_consumer\_ptr}!intersection\_model::map\_msg\_worker@{intersection\_model::map\_msg\_worker}}
+\doxysubsubsection{\texorpdfstring{get\_map\_msg\_consumer\_ptr()}{get\_map\_msg\_consumer\_ptr()}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker}{kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker}} $>$ \& intersection\+\_\+model\+::map\+\_\+msg\+\_\+worker\+::get\+\_\+map\+\_\+msg\+\_\+consumer\+\_\+ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the map msg consumer ptr object and prevent external class from modifying it. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::shared\+\_\+ptr$<$kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 135 of file map\+\_\+msg\+\_\+worker.\+cpp.
+
+\mbox{\Hypertarget{classintersection__model_1_1map__msg__worker_aa18c01177386e52a8c31c185ac3a9f9b}\label{classintersection__model_1_1map__msg__worker_aa18c01177386e52a8c31c185ac3a9f9b}} 
+\index{intersection\_model::map\_msg\_worker@{intersection\_model::map\_msg\_worker}!get\_map\_msg\_ptr@{get\_map\_msg\_ptr}}
+\index{get\_map\_msg\_ptr@{get\_map\_msg\_ptr}!intersection\_model::map\_msg\_worker@{intersection\_model::map\_msg\_worker}}
+\doxysubsubsection{\texorpdfstring{get\_map\_msg\_ptr()}{get\_map\_msg\_ptr()}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structintersection__model_1_1intersection__map}{intersection\+\_\+map}} $>$ \& intersection\+\_\+model\+::map\+\_\+msg\+\_\+worker\+::get\+\_\+map\+\_\+msg\+\_\+ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the const map msg ptr object and prevent external class from modifying it. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::shared\+\_\+ptr$<$intersection\+\_\+map$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 130 of file map\+\_\+msg\+\_\+worker.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classintersection__model_1_1map__msg__worker_aa18c01177386e52a8c31c185ac3a9f9b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1map__msg__worker_a0d72b27c573747d7dd6b32ef6fae34ab}\label{classintersection__model_1_1map__msg__worker_a0d72b27c573747d7dd6b32ef6fae34ab}} 
+\index{intersection\_model::map\_msg\_worker@{intersection\_model::map\_msg\_worker}!parse\_JSON\_string@{parse\_JSON\_string}}
+\index{parse\_JSON\_string@{parse\_JSON\_string}!intersection\_model::map\_msg\_worker@{intersection\_model::map\_msg\_worker}}
+\doxysubsubsection{\texorpdfstring{parse\_JSON\_string()}{parse\_JSON\_string()}}
+{\footnotesize\ttfamily rapidjson\+::\+Document intersection\+\_\+model\+::map\+\_\+msg\+\_\+worker\+::parse\+\_\+\+JSON\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+String }\end{DoxyParamCaption}) const}
+
+
+
+parse MAP msg json string with rapidjson document 
+
+
+
+Definition at line 140 of file map\+\_\+msg\+\_\+worker.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classintersection__model_1_1map__msg__worker_a0d72b27c573747d7dd6b32ef6fae34ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1map__msg__worker_ad59f4cb6f6e4afc090fdda3937f1b672}\label{classintersection__model_1_1map__msg__worker_ad59f4cb6f6e4afc090fdda3937f1b672}} 
+\index{intersection\_model::map\_msg\_worker@{intersection\_model::map\_msg\_worker}!update\_map\_msg@{update\_map\_msg}}
+\index{update\_map\_msg@{update\_map\_msg}!intersection\_model::map\_msg\_worker@{intersection\_model::map\_msg\_worker}}
+\doxysubsubsection{\texorpdfstring{update\_map\_msg()}{update\_map\_msg()}}
+{\footnotesize\ttfamily bool intersection\+\_\+model\+::map\+\_\+msg\+\_\+worker\+::update\+\_\+map\+\_\+msg (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{payload }\end{DoxyParamCaption})}
+
+
+
+Update intesection map structure. It will only update when both kafka consumer consumes MAP message and intersection id from MAP message matches id from MAP message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em payload} & from consumed MAP message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if intersection map is updated 
+
+false if intersection map is not updated 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file map\+\_\+msg\+\_\+worker.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classintersection__model_1_1map__msg__worker_ad59f4cb6f6e4afc090fdda3937f1b672_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classintersection__model_1_1map__msg__worker_ad59f4cb6f6e4afc090fdda3937f1b672_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+intersection\+\_\+model/include/\mbox{\hyperlink{map__msg__worker_8h}{map\+\_\+msg\+\_\+worker.\+h}}\item 
+intersection\+\_\+model/src/\mbox{\hyperlink{map__msg__worker_8cpp}{map\+\_\+msg\+\_\+worker.\+cpp}}\end{DoxyCompactItemize}

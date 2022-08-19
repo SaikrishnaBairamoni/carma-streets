@@ -1,0 +1,34 @@
+\hypertarget{vehicle__list_8h}{}\doxysection{streets\+\_\+utils/streets\+\_\+vehicle\+\_\+list/include/vehicle\+\_\+list.h File Reference}
+\label{vehicle__list_8h}\index{streets\_utils/streets\_vehicle\_list/include/vehicle\_list.h@{streets\_utils/streets\_vehicle\_list/include/vehicle\_list.h}}
+{\ttfamily \#include \char`\"{}vehicle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}status\+\_\+intent\+\_\+processing\+\_\+exception.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}status\+\_\+intent\+\_\+processor.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$shared\+\_\+mutex$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+Include dependency graph for vehicle\+\_\+list.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vehicle__list_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vehicle__list_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classstreets__vehicles_1_1vehicle__list}{streets\+\_\+vehicles\+::vehicle\+\_\+list}}
+\begin{DoxyCompactList}\small\item\em Class to store vehicle information for all vehicles in an intersection. Contains pointer to a \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} which holds business logic to process status and intent vehicle updates. To implement custom message processing simply extend \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} and set this object to be the message processor for you vehicle list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacestreets__vehicles}{streets\+\_\+vehicles}}
+\end{DoxyCompactItemize}

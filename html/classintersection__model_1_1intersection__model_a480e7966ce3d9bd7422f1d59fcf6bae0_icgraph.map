@@ -1,0 +1,4 @@
+<map id="intersection_model::intersection_model::get_speed_limit_by_lanelet" name="intersection_model::intersection_model::get_speed_limit_by_lanelet">
+<area shape="rect" id="node1" title="Retrieve the speed_limit of the current lanelet." alt="" coords="108,5,265,76"/>
+<area shape="rect" id="node2" href="$test__intersection__model_8cpp.html#a4154430f126f8a83b71fcf3a2b314e1b" title=" " alt="" coords="5,27,60,54"/>
+</map>

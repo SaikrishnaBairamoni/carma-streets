@@ -1,0 +1,113 @@
+\hypertarget{test__all__stop__scheduler_8cpp}{}\doxysection{streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/test/test\+\_\+all\+\_\+stop\+\_\+scheduler.cpp File Reference}
+\label{test__all__stop__scheduler_8cpp}\index{streets\_utils/streets\_vehicle\_scheduler/test/test\_all\_stop\_scheduler.cpp@{streets\_utils/streets\_vehicle\_scheduler/test/test\_all\_stop\_scheduler.cpp}}
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$spdlog/spdlog.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}vehicle\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}all\+\_\+stop\+\_\+vehicle\+\_\+scheduler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}all\+\_\+stop\+\_\+intersection\+\_\+schedule.\+h\char`\"{}}\newline
+Include dependency graph for test\+\_\+all\+\_\+stop\+\_\+scheduler.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__all__stop__scheduler_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__all__stop__scheduler_8cpp_a3b7405c245f3b0a2d4b745f6a40b7638}{TEST\+\_\+F}} (all\+\_\+stop\+\_\+scheduler\+\_\+test, schedule\+\_\+empty\+\_\+vehicle\+\_\+list)
+\item 
+\mbox{\hyperlink{test__all__stop__scheduler_8cpp_a22aca70994da48526eb21036efda92c6}{TEST\+\_\+F}} (all\+\_\+stop\+\_\+scheduler\+\_\+test, one\+\_\+ev\+\_\+without\+\_\+cruising)
+\begin{DoxyCompactList}\small\item\em Test case with single EV. Speed limit, acceleration/deceleration limits and intersection geometry should not allow this EV to reach lanelet speed limit in entry lane or link lane. This means the vehicle never reaches a cruising speed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__all__stop__scheduler_8cpp_aa201f3dea610d49ce0b3bcad029df64f}{TEST\+\_\+F}} (all\+\_\+stop\+\_\+scheduler\+\_\+test, one\+\_\+vehicle\+\_\+with\+\_\+cruising)
+\begin{DoxyCompactList}\small\item\em Test case with single EV. Speed limit and intersection geometry should allow EV to reach speed limit and cruise shortly in both the entry lane and the link lane. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__all__stop__scheduler_8cpp_a92276defb2906134a02727b7b3d8cb73}{TEST\+\_\+F}} (all\+\_\+stop\+\_\+scheduler\+\_\+test, one\+\_\+vehicle\+\_\+with\+\_\+future\+\_\+time\+\_\+estimate)
+\begin{DoxyCompactList}\small\item\em Test one EV future time kinematics estimate given no possible lane transition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__all__stop__scheduler_8cpp_a609364e5743c35cff9b97395f6556c56}{TEST\+\_\+F}} (all\+\_\+stop\+\_\+scheduler\+\_\+test, one\+\_\+vehicle\+\_\+lane\+\_\+transition\+\_\+with\+\_\+future\+\_\+time\+\_\+estimate)
+\begin{DoxyCompactList}\small\item\em Test one EV future time kinematics estimate given possible lane transition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__all__stop__scheduler_8cpp_a14bb99a19ee41b9ee6c466e9cdd585c3}{TEST\+\_\+F}} (all\+\_\+stop\+\_\+scheduler\+\_\+test, one\+\_\+vehicle\+\_\+lane\+\_\+with\+\_\+zero\+\_\+acceleration\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Test one EV. Kinematics and deceleration limit only allow for trajectory of deceleration at constant max deceleration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__all__stop__scheduler_8cpp_a22aca70994da48526eb21036efda92c6}\label{test__all__stop__scheduler_8cpp_a22aca70994da48526eb21036efda92c6}} 
+\index{test\_all\_stop\_scheduler.cpp@{test\_all\_stop\_scheduler.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_all\_stop\_scheduler.cpp@{test\_all\_stop\_scheduler.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{all\+\_\+stop\+\_\+scheduler\+\_\+test}]{,  }\item[{one\+\_\+ev\+\_\+without\+\_\+cruising}]{ }\end{DoxyParamCaption})}
+
+
+
+Test case with single EV. Speed limit, acceleration/deceleration limits and intersection geometry should not allow this EV to reach lanelet speed limit in entry lane or link lane. This means the vehicle never reaches a cruising speed. 
+
+
+
+Definition at line 69 of file test\+\_\+all\+\_\+stop\+\_\+scheduler.\+cpp.
+
+\mbox{\Hypertarget{test__all__stop__scheduler_8cpp_a609364e5743c35cff9b97395f6556c56}\label{test__all__stop__scheduler_8cpp_a609364e5743c35cff9b97395f6556c56}} 
+\index{test\_all\_stop\_scheduler.cpp@{test\_all\_stop\_scheduler.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_all\_stop\_scheduler.cpp@{test\_all\_stop\_scheduler.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{all\+\_\+stop\+\_\+scheduler\+\_\+test}]{,  }\item[{one\+\_\+vehicle\+\_\+lane\+\_\+transition\+\_\+with\+\_\+future\+\_\+time\+\_\+estimate}]{ }\end{DoxyParamCaption})}
+
+
+
+Test one EV future time kinematics estimate given possible lane transition. 
+
+
+
+Definition at line 189 of file test\+\_\+all\+\_\+stop\+\_\+scheduler.\+cpp.
+
+\mbox{\Hypertarget{test__all__stop__scheduler_8cpp_a14bb99a19ee41b9ee6c466e9cdd585c3}\label{test__all__stop__scheduler_8cpp_a14bb99a19ee41b9ee6c466e9cdd585c3}} 
+\index{test\_all\_stop\_scheduler.cpp@{test\_all\_stop\_scheduler.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_all\_stop\_scheduler.cpp@{test\_all\_stop\_scheduler.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{all\+\_\+stop\+\_\+scheduler\+\_\+test}]{,  }\item[{one\+\_\+vehicle\+\_\+lane\+\_\+with\+\_\+zero\+\_\+acceleration\+\_\+time}]{ }\end{DoxyParamCaption})}
+
+
+
+Test one EV. Kinematics and deceleration limit only allow for trajectory of deceleration at constant max deceleration. 
+
+
+
+Definition at line 232 of file test\+\_\+all\+\_\+stop\+\_\+scheduler.\+cpp.
+
+\mbox{\Hypertarget{test__all__stop__scheduler_8cpp_aa201f3dea610d49ce0b3bcad029df64f}\label{test__all__stop__scheduler_8cpp_aa201f3dea610d49ce0b3bcad029df64f}} 
+\index{test\_all\_stop\_scheduler.cpp@{test\_all\_stop\_scheduler.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_all\_stop\_scheduler.cpp@{test\_all\_stop\_scheduler.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{all\+\_\+stop\+\_\+scheduler\+\_\+test}]{,  }\item[{one\+\_\+vehicle\+\_\+with\+\_\+cruising}]{ }\end{DoxyParamCaption})}
+
+
+
+Test case with single EV. Speed limit and intersection geometry should allow EV to reach speed limit and cruise shortly in both the entry lane and the link lane. 
+
+
+
+Definition at line 111 of file test\+\_\+all\+\_\+stop\+\_\+scheduler.\+cpp.
+
+\mbox{\Hypertarget{test__all__stop__scheduler_8cpp_a92276defb2906134a02727b7b3d8cb73}\label{test__all__stop__scheduler_8cpp_a92276defb2906134a02727b7b3d8cb73}} 
+\index{test\_all\_stop\_scheduler.cpp@{test\_all\_stop\_scheduler.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_all\_stop\_scheduler.cpp@{test\_all\_stop\_scheduler.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{all\+\_\+stop\+\_\+scheduler\+\_\+test}]{,  }\item[{one\+\_\+vehicle\+\_\+with\+\_\+future\+\_\+time\+\_\+estimate}]{ }\end{DoxyParamCaption})}
+
+
+
+Test one EV future time kinematics estimate given no possible lane transition. 
+
+
+
+Definition at line 151 of file test\+\_\+all\+\_\+stop\+\_\+scheduler.\+cpp.
+
+\mbox{\Hypertarget{test__all__stop__scheduler_8cpp_a3b7405c245f3b0a2d4b745f6a40b7638}\label{test__all__stop__scheduler_8cpp_a3b7405c245f3b0a2d4b745f6a40b7638}} 
+\index{test\_all\_stop\_scheduler.cpp@{test\_all\_stop\_scheduler.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_all\_stop\_scheduler.cpp@{test\_all\_stop\_scheduler.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{all\+\_\+stop\+\_\+scheduler\+\_\+test}]{,  }\item[{schedule\+\_\+empty\+\_\+vehicle\+\_\+list}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file test\+\_\+all\+\_\+stop\+\_\+scheduler.\+cpp.
+

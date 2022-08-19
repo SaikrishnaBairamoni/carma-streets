@@ -1,0 +1,863 @@
+\hypertarget{classintersection__model_1_1intersection__model}{}\doxysection{intersection\+\_\+model\+::intersection\+\_\+model Class Reference}
+\label{classintersection__model_1_1intersection__model}\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+
+
+{\ttfamily \#include $<$intersection\+\_\+model.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classintersection__model_1_1intersection__model_a3809622500b524209ff1f6789974755f}{intersection\+\_\+model}} ()=default
+\item 
+\mbox{\hyperlink{classintersection__model_1_1intersection__model_a67836f52e7223d46b2ec0fe0227e4160}{intersection\+\_\+model}} (const std\+::string \&intersection\+\_\+name, const int intersection\+\_\+id, const std\+::string \&osm\+\_\+file\+\_\+path)
+\item 
+\mbox{\hyperlink{classintersection__model_1_1intersection__model_a702859699d08fa112c32d2e1654c4c78}{$\sim$intersection\+\_\+model}} ()
+\item 
+void \mbox{\hyperlink{classintersection__model_1_1intersection__model_a3c83614bebf32e0f192e43b2cd384e30}{initialization}} (const std\+::string \&intersection\+\_\+name, const int intersection\+\_\+id, const std\+::string \&osm\+\_\+file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Read the manifest.\+json configuration file and initialize intersection information. \end{DoxyCompactList}\item 
+lanelet\+::\+Lanelet\+Map\+Ptr \mbox{\hyperlink{classintersection__model_1_1intersection__model_a3b97832c22d8c30c2530e1f523c809b6}{get\+\_\+lanelet2\+\_\+map}} ()
+\begin{DoxyCompactList}\small\item\em Getter for lanelet2 map. \end{DoxyCompactList}\item 
+lanelet\+::\+Lanelet \mbox{\hyperlink{classintersection__model_1_1intersection__model_a5bba3dd07a77fa83c09a5b49751fcaae}{get\+\_\+lanelet}} (double lat, double lon)
+\begin{DoxyCompactList}\small\item\em Retreive lanelet information given lat,long location. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classintersection__model_1_1intersection__model_aee444e73411f8593b4ad579849fc87b7}{update\+\_\+intersection\+\_\+info}} ()
+\begin{DoxyCompactList}\small\item\em Read the OSM map, project the map, and initialize all the intersection related info including\+: intersection id, intersection name, entry\+\_\+lanelet\+\_\+ids, link\+\_\+lanelet\+\_\+ids and departure\+\_\+lanelet\+\_\+ids. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structintersection__model_1_1intersection__info__t}{intersection\+\_\+info\+\_\+t}} \& \mbox{\hyperlink{classintersection__model_1_1intersection__model_a3deb407fbd9c48e6ad4e2ced720cabb0}{get\+\_\+intersection\+\_\+info}} () const
+\begin{DoxyCompactList}\small\item\em Get intersection metadata. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{structintersection__model_1_1lanelet__info__t}{lanelet\+\_\+info\+\_\+t}} $>$ \& \mbox{\hyperlink{classintersection__model_1_1intersection__model_a332baac17fc17875f98425e734f7b1e7}{get\+\_\+entry\+\_\+lanelets\+\_\+info}} () const
+\begin{DoxyCompactList}\small\item\em Get list of entry lanelet ids. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{structintersection__model_1_1lanelet__info__t}{lanelet\+\_\+info\+\_\+t}} $>$ \& \mbox{\hyperlink{classintersection__model_1_1intersection__model_a29c8437e12de93e4c9860fbf09a4bc4e}{get\+\_\+link\+\_\+lanelets\+\_\+info}} () const
+\begin{DoxyCompactList}\small\item\em Get list of link lanelet ids. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{structintersection__model_1_1lanelet__info__t}{lanelet\+\_\+info\+\_\+t}} $>$ \mbox{\hyperlink{classintersection__model_1_1intersection__model_a6ec7708265368ee4240cb057193ad568}{get\+\_\+conflict\+\_\+lanelets\+\_\+info}} (int64\+\_\+t sub\+\_\+link\+\_\+lanelet\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get list of conflict lanelet ids relative to the given link lanelet id. \end{DoxyCompactList}\item 
+const std\+::set$<$ \mbox{\hyperlink{structintersection__model_1_1lanelet__info__t}{lanelet\+\_\+info\+\_\+t}} $>$ \& \mbox{\hyperlink{classintersection__model_1_1intersection__model_ab01756af0b2c31c639795a5f04a8adf4}{get\+\_\+departure\+\_\+lanelets\+\_\+info}} () const
+\begin{DoxyCompactList}\small\item\em Get list of departure lanelet ids. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classintersection__model_1_1intersection__model_a5de61330c7ff6b874ceea907bdf0a579}{is\+\_\+valid\+\_\+link\+\_\+lanelet\+\_\+id}} (int64\+\_\+t lanelet\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Comparing the given lanelet id with all link lanelet ids in the current intersection information to determin if a lanelet id is a link lanelet id. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classintersection__model_1_1intersection__model_a480e7966ce3d9bd7422f1d59fcf6bae0}{get\+\_\+speed\+\_\+limit\+\_\+by\+\_\+lanelet}} (const lanelet\+::\+Const\+Lanelet \&subj\+\_\+lanelet) const
+\begin{DoxyCompactList}\small\item\em Retrieve the speed\+\_\+limit of the current lanelet. \end{DoxyCompactList}\item 
+const std\+::vector$<$ int $>$ \mbox{\hyperlink{classintersection__model_1_1intersection__model_aeebb161d09289ec701f6e8a4aec3b7a6}{get\+\_\+shared\+\_\+entry\+\_\+link\+\_\+lanelet\+\_\+ids}} (int64\+\_\+t subject\+\_\+link\+\_\+lanelet\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get the list of link lanelets that has the same entry lanelet as the subject link lanelet. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classintersection__model_1_1intersection__model_a2bfd4216fee2946a52babc8eb008c975}{update\+\_\+intersection\+\_\+info\+\_\+by\+\_\+all\+\_\+way\+\_\+stop\+\_\+reg}} (const lanelet\+::\+Regulatory\+Element $\ast$all\+\_\+way\+\_\+stop\+\_\+reg\+\_\+elem\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Based on the all\+\_\+way\+\_\+stop regulatory element and routing graph, it is able to retrieve all the entry lanelets, link lanelets and depature lanelets. If the method call is successful, return true; otherwise return false. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classintersection__model_1_1intersection__model_a5cf97605f6557f75d1452da9536e7118}{update\+\_\+link\+\_\+departure\+\_\+lanelets\+\_\+info\+\_\+by\+\_\+entry\+\_\+lanelet}} (const lanelet\+::\+Lanelet \&entry\+\_\+lanelet)
+\begin{DoxyCompactList}\small\item\em Get the following link lanelets information from the entering lanelet. Based on the link lanelets, it retrieves the following depature lanelets. \end{DoxyCompactList}\item 
+rapidjson\+::\+Document \mbox{\hyperlink{classintersection__model_1_1intersection__model_a184d2317731c78f5ed4084b9bd5ef23a}{read\+\_\+json\+\_\+file}} (const std\+::string \&json\+\_\+file\+\_\+name) const
+\begin{DoxyCompactList}\small\item\em Read the manifest.\+json configuration file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classintersection__model_1_1intersection__model_a96cf039df5fc9902a44258e73e81f67b}{read\+\_\+lanelet2\+\_\+map}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Read lanelet2 map. \end{DoxyCompactList}\item 
+const std\+::shared\+\_\+ptr$<$ lanelet\+::routing\+::\+Routing\+Graph $>$ \mbox{\hyperlink{classintersection__model_1_1intersection__model_a9dc2ebcc772b15ece501feb9fff2d01e}{get\+\_\+vehicle\+Graph\+\_\+ptr}} () const
+\item 
+bool \mbox{\hyperlink{classintersection__model_1_1intersection__model_a2356a55b5dd997c37d63e84581f44559}{update\+\_\+vehicle\+\_\+routing\+\_\+graph}} ()
+\begin{DoxyCompactList}\small\item\em Initialize vehicle routing graph. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classintersection__model_1_1intersection__model_ab3512b1195acfea750a228f6c4fc2cd0}{update\+\_\+intersecion\+\_\+info\+\_\+by\+\_\+map\+\_\+msg}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structintersection__model_1_1intersection__map}{intersection\+\_\+map}} $>$ int\+\_\+map\+\_\+msg)
+\item 
+void \mbox{\hyperlink{classintersection__model_1_1intersection__model_a9f4abd2a92777fdcf9891b2dc91fee6b}{mapping\+\_\+lane\+\_\+id\+\_\+2\+\_\+lanelet\+\_\+id}} (const \mbox{\hyperlink{structintersection__model_1_1map__referencepoint}{map\+\_\+referencepoint}} \&ref\+\_\+point, const \mbox{\hyperlink{structintersection__model_1_1map__lane}{map\+\_\+lane}} \&lane, const long lane\+\_\+width, const std\+::vector$<$ lanelet\+::\+Const\+Lanelet $>$ \&subj\+\_\+lanelets, std\+::unordered\+\_\+map$<$ long, lanelet\+::\+Const\+Lanelet $>$ \&lane2lanelet\+\_\+m) const
+\begin{DoxyCompactList}\small\item\em Comparing the geometry between lane in the MAP message and geometry of the list of lanelets to determine which lanelet this lane path fall into. \end{DoxyCompactList}\item 
+std\+::vector$<$ lanelet\+::\+Basic\+Point3d $>$ \mbox{\hyperlink{classintersection__model_1_1intersection__model_a9dcde064181b3547cf611adf4af8a9da}{convert\+\_\+lane\+\_\+path\+\_\+2\+\_\+basic\+\_\+points}} (const \mbox{\hyperlink{structintersection__model_1_1map__referencepoint}{map\+\_\+referencepoint}} \&ref\+\_\+point, const \mbox{\hyperlink{structintersection__model_1_1map__lane}{map\+\_\+lane}} \&lane) const
+\begin{DoxyCompactList}\small\item\em Convert the centerline geometry of lane defined in J2735 MAP to a list of lanelet2 points in the OSM map. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classintersection__model_1_1intersection__model_ab9dcb476a9265db49cfdc49fc7c51590}{compute\+\_\+points\+\_\+2\+\_\+lanelet\+\_\+avg\+\_\+distance}} (const std\+::vector$<$ lanelet\+::\+Basic\+Point3d $>$ \&basic\+\_\+points, lanelet\+::\+Const\+Lanelet subj\+\_\+lanelet) const
+\begin{DoxyCompactList}\small\item\em Compute the average distance between a linestring and lanelet. \end{DoxyCompactList}\item 
+lanelet\+::\+Basic\+Point3d \mbox{\hyperlink{classintersection__model_1_1intersection__model_a7967e15bbce9062a48c43f82b6d89124}{gps\+\_\+2\+\_\+map\+\_\+point}} (double lat, double lon, double elev) const
+\begin{DoxyCompactList}\small\item\em Transform the GPS location into map point using porjector. \end{DoxyCompactList}\item 
+lanelet\+::\+GPSPoint \mbox{\hyperlink{classintersection__model_1_1intersection__model_ad26188c4208541965a452bb4a920c113}{map\+\_\+point2\+\_\+gps}} (double x, double y, double z) const
+\begin{DoxyCompactList}\small\item\em Transform the map point to gps location. \end{DoxyCompactList}\item 
+lanelet\+::\+Id \mbox{\hyperlink{classintersection__model_1_1intersection__model_a41573ac5b4ab6f0c1a6533f52e558056}{find\+\_\+link\+\_\+lanelet\+\_\+id\+\_\+by\+\_\+enter\+\_\+depart\+\_\+lanelet\+\_\+ids}} (const lanelet\+::\+Id enter\+\_\+lanelet\+\_\+id, const lanelet\+::\+Id depart\+\_\+lanelet\+\_\+id) const
+\begin{DoxyCompactList}\small\item\em Determine the connection lanelet for a pair of enter and departure lanelet at the intersection. \end{DoxyCompactList}\item 
+lanelet\+::\+Const\+Lanelet \mbox{\hyperlink{classintersection__model_1_1intersection__model_a7ff3964a9bf2d85e2223d066cf405bc7}{get\+\_\+enter\+\_\+lanelet\+\_\+by\+\_\+id}} (lanelet\+::\+Id id) const
+\begin{DoxyCompactList}\small\item\em Get the enter lanelet by id object from the list of intersection entering lanelets. \end{DoxyCompactList}\item 
+lanelet\+::\+Const\+Lanelet \mbox{\hyperlink{classintersection__model_1_1intersection__model_a8bee9ae6e1a3a1c6be299005bda953e0}{get\+\_\+link\+\_\+lanelet\+\_\+by\+\_\+id}} (lanelet\+::\+Id id) const
+\begin{DoxyCompactList}\small\item\em Get the link lanelet by id object from the list of intersection link lanelets. \end{DoxyCompactList}\item 
+lanelet\+::\+Const\+Lanelet \mbox{\hyperlink{classintersection__model_1_1intersection__model_adf6507902505cd058d3756e1a2f9ef80}{get\+\_\+departure\+\_\+lanelet\+\_\+by\+\_\+id}} (lanelet\+::\+Id id) const
+\begin{DoxyCompactList}\small\item\em Get the deaparture lanelet by id object from the list of intersection deaparture lanelets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 96 of file intersection\+\_\+model.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a3809622500b524209ff1f6789974755f}\label{classintersection__model_1_1intersection__model_a3809622500b524209ff1f6789974755f}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!intersection\_model@{intersection\_model}}
+\index{intersection\_model@{intersection\_model}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{intersection\_model()}{intersection\_model()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily intersection\+\_\+model\+::intersection\+\_\+model\+::intersection\+\_\+model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a67836f52e7223d46b2ec0fe0227e4160}\label{classintersection__model_1_1intersection__model_a67836f52e7223d46b2ec0fe0227e4160}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!intersection\_model@{intersection\_model}}
+\index{intersection\_model@{intersection\_model}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{intersection\_model()}{intersection\_model()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily intersection\+\_\+model\+::intersection\+\_\+model\+::intersection\+\_\+model (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{intersection\+\_\+name,  }\item[{const int}]{intersection\+\_\+id,  }\item[{const std\+::string \&}]{osm\+\_\+file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file intersection\+\_\+model.\+cpp.
+
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a702859699d08fa112c32d2e1654c4c78}\label{classintersection__model_1_1intersection__model_a702859699d08fa112c32d2e1654c4c78}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!````~intersection\_model@{$\sim$intersection\_model}}
+\index{````~intersection\_model@{$\sim$intersection\_model}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{$\sim$intersection\_model()}{~intersection\_model()}}
+{\footnotesize\ttfamily intersection\+\_\+model\+::intersection\+\_\+model\+::$\sim$intersection\+\_\+model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 637 of file intersection\+\_\+model.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_ab9dcb476a9265db49cfdc49fc7c51590}\label{classintersection__model_1_1intersection__model_ab9dcb476a9265db49cfdc49fc7c51590}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!compute\_points\_2\_lanelet\_avg\_distance@{compute\_points\_2\_lanelet\_avg\_distance}}
+\index{compute\_points\_2\_lanelet\_avg\_distance@{compute\_points\_2\_lanelet\_avg\_distance}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{compute\_points\_2\_lanelet\_avg\_distance()}{compute\_points\_2\_lanelet\_avg\_distance()}}
+{\footnotesize\ttfamily double intersection\+\_\+model\+::intersection\+\_\+model\+::compute\+\_\+points\+\_\+2\+\_\+lanelet\+\_\+avg\+\_\+distance (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ lanelet\+::\+Basic\+Point3d $>$ \&}]{basic\+\_\+points,  }\item[{lanelet\+::\+Const\+Lanelet}]{subj\+\_\+lanelet }\end{DoxyParamCaption}) const}
+
+
+
+Compute the average distance between a linestring and lanelet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em basic\+\_\+points} & a list of points that form a line \\
+\hline
+{\em subj\+\_\+lanelet} & the lanelet geometry \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The average distance between line and lanelet 
+\end{DoxyReturn}
+
+
+Definition at line 546 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{classintersection__model_1_1intersection__model_ab9dcb476a9265db49cfdc49fc7c51590_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a9dcde064181b3547cf611adf4af8a9da}\label{classintersection__model_1_1intersection__model_a9dcde064181b3547cf611adf4af8a9da}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!convert\_lane\_path\_2\_basic\_points@{convert\_lane\_path\_2\_basic\_points}}
+\index{convert\_lane\_path\_2\_basic\_points@{convert\_lane\_path\_2\_basic\_points}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{convert\_lane\_path\_2\_basic\_points()}{convert\_lane\_path\_2\_basic\_points()}}
+{\footnotesize\ttfamily std\+::vector$<$ lanelet\+::\+Basic\+Point3d $>$ intersection\+\_\+model\+::intersection\+\_\+model\+::convert\+\_\+lane\+\_\+path\+\_\+2\+\_\+basic\+\_\+points (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structintersection__model_1_1map__referencepoint}{map\+\_\+referencepoint}} \&}]{ref\+\_\+point,  }\item[{const \mbox{\hyperlink{structintersection__model_1_1map__lane}{map\+\_\+lane}} \&}]{lane }\end{DoxyParamCaption}) const}
+
+
+
+Convert the centerline geometry of lane defined in J2735 MAP to a list of lanelet2 points in the OSM map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ref\+\_\+point} & GPS location for a reference point inside an intersection \\
+\hline
+{\em lane} & defind in the J2735 MAP message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list of lanelet2 map points 
+\end{DoxyReturn}
+
+
+Definition at line 520 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{classintersection__model_1_1intersection__model_a9dcde064181b3547cf611adf4af8a9da_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a41573ac5b4ab6f0c1a6533f52e558056}\label{classintersection__model_1_1intersection__model_a41573ac5b4ab6f0c1a6533f52e558056}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!find\_link\_lanelet\_id\_by\_enter\_depart\_lanelet\_ids@{find\_link\_lanelet\_id\_by\_enter\_depart\_lanelet\_ids}}
+\index{find\_link\_lanelet\_id\_by\_enter\_depart\_lanelet\_ids@{find\_link\_lanelet\_id\_by\_enter\_depart\_lanelet\_ids}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{find\_link\_lanelet\_id\_by\_enter\_depart\_lanelet\_ids()}{find\_link\_lanelet\_id\_by\_enter\_depart\_lanelet\_ids()}}
+{\footnotesize\ttfamily lanelet\+::\+Id intersection\+\_\+model\+::intersection\+\_\+model\+::find\+\_\+link\+\_\+lanelet\+\_\+id\+\_\+by\+\_\+enter\+\_\+depart\+\_\+lanelet\+\_\+ids (\begin{DoxyParamCaption}\item[{const lanelet\+::\+Id}]{enter\+\_\+lanelet\+\_\+id,  }\item[{const lanelet\+::\+Id}]{depart\+\_\+lanelet\+\_\+id }\end{DoxyParamCaption}) const}
+
+
+
+Determine the connection lanelet for a pair of enter and departure lanelet at the intersection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enter\+\_\+lanelet\+\_\+id} & Entry lanelet id at the intersection \\
+\hline
+{\em depart\+\_\+lanelet\+\_\+id} & Exit lanelet id at the intersection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The connection/link lanelet id if found. Otherwise return an invalid lanelet id 
+\end{DoxyReturn}
+
+
+Definition at line 462 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{classintersection__model_1_1intersection__model_a41573ac5b4ab6f0c1a6533f52e558056_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a6ec7708265368ee4240cb057193ad568}\label{classintersection__model_1_1intersection__model_a6ec7708265368ee4240cb057193ad568}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!get\_conflict\_lanelets\_info@{get\_conflict\_lanelets\_info}}
+\index{get\_conflict\_lanelets\_info@{get\_conflict\_lanelets\_info}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{get\_conflict\_lanelets\_info()}{get\_conflict\_lanelets\_info()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{structintersection__model_1_1lanelet__info__t}{lanelet\+\_\+info\+\_\+t}} $>$ intersection\+\_\+model\+::intersection\+\_\+model\+::get\+\_\+conflict\+\_\+lanelets\+\_\+info (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{sub\+\_\+link\+\_\+lanelet\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Get list of conflict lanelet ids relative to the given link lanelet id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sub\+\_\+link\+\_\+lanelet\+\_\+id} & is validated, and has to be link lanelet within an intersection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of lanelet information struct 
+\end{DoxyReturn}
+
+
+Definition at line 274 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classintersection__model_1_1intersection__model_a6ec7708265368ee4240cb057193ad568_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_adf6507902505cd058d3756e1a2f9ef80}\label{classintersection__model_1_1intersection__model_adf6507902505cd058d3756e1a2f9ef80}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!get\_departure\_lanelet\_by\_id@{get\_departure\_lanelet\_by\_id}}
+\index{get\_departure\_lanelet\_by\_id@{get\_departure\_lanelet\_by\_id}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{get\_departure\_lanelet\_by\_id()}{get\_departure\_lanelet\_by\_id()}}
+{\footnotesize\ttfamily lanelet\+::\+Const\+Lanelet intersection\+\_\+model\+::intersection\+\_\+model\+::get\+\_\+departure\+\_\+lanelet\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{lanelet\+::\+Id}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Get the deaparture lanelet by id object from the list of intersection deaparture lanelets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Lanelet id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+lanelet\+::\+Const\+Lanelet. If not matching, the it returns invalid lanelet 
+\end{DoxyReturn}
+
+
+Definition at line 624 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classintersection__model_1_1intersection__model_adf6507902505cd058d3756e1a2f9ef80_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_ab01756af0b2c31c639795a5f04a8adf4}\label{classintersection__model_1_1intersection__model_ab01756af0b2c31c639795a5f04a8adf4}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!get\_departure\_lanelets\_info@{get\_departure\_lanelets\_info}}
+\index{get\_departure\_lanelets\_info@{get\_departure\_lanelets\_info}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{get\_departure\_lanelets\_info()}{get\_departure\_lanelets\_info()}}
+{\footnotesize\ttfamily const std\+::set$<$ \mbox{\hyperlink{structintersection__model_1_1lanelet__info__t}{lanelet\+\_\+info\+\_\+t}} $>$ \& intersection\+\_\+model\+::intersection\+\_\+model\+::get\+\_\+departure\+\_\+lanelets\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get list of departure lanelet ids. 
+
+\begin{DoxyReturn}{Returns}
+A vector of lanelet information struct 
+\end{DoxyReturn}
+
+
+Definition at line 367 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classintersection__model_1_1intersection__model_ab01756af0b2c31c639795a5f04a8adf4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a7ff3964a9bf2d85e2223d066cf405bc7}\label{classintersection__model_1_1intersection__model_a7ff3964a9bf2d85e2223d066cf405bc7}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!get\_enter\_lanelet\_by\_id@{get\_enter\_lanelet\_by\_id}}
+\index{get\_enter\_lanelet\_by\_id@{get\_enter\_lanelet\_by\_id}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{get\_enter\_lanelet\_by\_id()}{get\_enter\_lanelet\_by\_id()}}
+{\footnotesize\ttfamily lanelet\+::\+Const\+Lanelet intersection\+\_\+model\+::intersection\+\_\+model\+::get\+\_\+enter\+\_\+lanelet\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{lanelet\+::\+Id}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Get the enter lanelet by id object from the list of intersection entering lanelets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Lanelet id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+lanelet\+::\+Const\+Lanelet . If not matching, the it returns invalid lanelet 
+\end{DoxyReturn}
+
+
+Definition at line 598 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{classintersection__model_1_1intersection__model_a7ff3964a9bf2d85e2223d066cf405bc7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a332baac17fc17875f98425e734f7b1e7}\label{classintersection__model_1_1intersection__model_a332baac17fc17875f98425e734f7b1e7}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!get\_entry\_lanelets\_info@{get\_entry\_lanelets\_info}}
+\index{get\_entry\_lanelets\_info@{get\_entry\_lanelets\_info}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{get\_entry\_lanelets\_info()}{get\_entry\_lanelets\_info()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{structintersection__model_1_1lanelet__info__t}{lanelet\+\_\+info\+\_\+t}} $>$ \& intersection\+\_\+model\+::intersection\+\_\+model\+::get\+\_\+entry\+\_\+lanelets\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get list of entry lanelet ids. 
+
+\begin{DoxyReturn}{Returns}
+A vector of lanelet information struct 
+\end{DoxyReturn}
+
+
+Definition at line 235 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{classintersection__model_1_1intersection__model_a332baac17fc17875f98425e734f7b1e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a3deb407fbd9c48e6ad4e2ced720cabb0}\label{classintersection__model_1_1intersection__model_a3deb407fbd9c48e6ad4e2ced720cabb0}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!get\_intersection\_info@{get\_intersection\_info}}
+\index{get\_intersection\_info@{get\_intersection\_info}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{get\_intersection\_info()}{get\_intersection\_info()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structintersection__model_1_1intersection__info__t}{intersection\+\_\+info\+\_\+t}} \& intersection\+\_\+model\+::intersection\+\_\+model\+::get\+\_\+intersection\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get intersection metadata. 
+
+\begin{DoxyReturn}{Returns}
+intersection information struct 
+\end{DoxyReturn}
+
+
+Definition at line 230 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classintersection__model_1_1intersection__model_a3deb407fbd9c48e6ad4e2ced720cabb0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a5bba3dd07a77fa83c09a5b49751fcaae}\label{classintersection__model_1_1intersection__model_a5bba3dd07a77fa83c09a5b49751fcaae}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!get\_lanelet@{get\_lanelet}}
+\index{get\_lanelet@{get\_lanelet}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{get\_lanelet()}{get\_lanelet()}}
+{\footnotesize\ttfamily lanelet\+::\+Lanelet intersection\+\_\+model\+::intersection\+\_\+model\+::get\+\_\+lanelet (\begin{DoxyParamCaption}\item[{double}]{lat,  }\item[{double}]{lon }\end{DoxyParamCaption})}
+
+
+
+Retreive lanelet information given lat,long location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lat} & latitude \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lanelet2 primitives. The atomic section of a lane. ~\newline
+ 
+\end{DoxyReturn}
+
+
+Definition at line 62 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classintersection__model_1_1intersection__model_a5bba3dd07a77fa83c09a5b49751fcaae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a3b97832c22d8c30c2530e1f523c809b6}\label{classintersection__model_1_1intersection__model_a3b97832c22d8c30c2530e1f523c809b6}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!get\_lanelet2\_map@{get\_lanelet2\_map}}
+\index{get\_lanelet2\_map@{get\_lanelet2\_map}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{get\_lanelet2\_map()}{get\_lanelet2\_map()}}
+{\footnotesize\ttfamily lanelet\+::\+Lanelet\+Map\+Ptr intersection\+\_\+model\+::intersection\+\_\+model\+::get\+\_\+lanelet2\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for lanelet2 map. 
+
+\begin{DoxyReturn}{Returns}
+lanelet map object 
+\end{DoxyReturn}
+
+
+Definition at line 58 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classintersection__model_1_1intersection__model_a3b97832c22d8c30c2530e1f523c809b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a8bee9ae6e1a3a1c6be299005bda953e0}\label{classintersection__model_1_1intersection__model_a8bee9ae6e1a3a1c6be299005bda953e0}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!get\_link\_lanelet\_by\_id@{get\_link\_lanelet\_by\_id}}
+\index{get\_link\_lanelet\_by\_id@{get\_link\_lanelet\_by\_id}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{get\_link\_lanelet\_by\_id()}{get\_link\_lanelet\_by\_id()}}
+{\footnotesize\ttfamily lanelet\+::\+Const\+Lanelet intersection\+\_\+model\+::intersection\+\_\+model\+::get\+\_\+link\+\_\+lanelet\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{lanelet\+::\+Id}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Get the link lanelet by id object from the list of intersection link lanelets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Lanelet id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+lanelet\+::\+Const\+Lanelet . If not matching, the it returns invalid lanelet 
+\end{DoxyReturn}
+
+
+Definition at line 611 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{classintersection__model_1_1intersection__model_a8bee9ae6e1a3a1c6be299005bda953e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a29c8437e12de93e4c9860fbf09a4bc4e}\label{classintersection__model_1_1intersection__model_a29c8437e12de93e4c9860fbf09a4bc4e}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!get\_link\_lanelets\_info@{get\_link\_lanelets\_info}}
+\index{get\_link\_lanelets\_info@{get\_link\_lanelets\_info}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{get\_link\_lanelets\_info()}{get\_link\_lanelets\_info()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{structintersection__model_1_1lanelet__info__t}{lanelet\+\_\+info\+\_\+t}} $>$ \& intersection\+\_\+model\+::intersection\+\_\+model\+::get\+\_\+link\+\_\+lanelets\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get list of link lanelet ids. 
+
+\begin{DoxyReturn}{Returns}
+A vector of lanelet information struct 
+\end{DoxyReturn}
+
+
+Definition at line 269 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{classintersection__model_1_1intersection__model_a29c8437e12de93e4c9860fbf09a4bc4e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_aeebb161d09289ec701f6e8a4aec3b7a6}\label{classintersection__model_1_1intersection__model_aeebb161d09289ec701f6e8a4aec3b7a6}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!get\_shared\_entry\_link\_lanelet\_ids@{get\_shared\_entry\_link\_lanelet\_ids}}
+\index{get\_shared\_entry\_link\_lanelet\_ids@{get\_shared\_entry\_link\_lanelet\_ids}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{get\_shared\_entry\_link\_lanelet\_ids()}{get\_shared\_entry\_link\_lanelet\_ids()}}
+{\footnotesize\ttfamily const std\+::vector$<$ int $>$ intersection\+\_\+model\+::intersection\+\_\+model\+::get\+\_\+shared\+\_\+entry\+\_\+link\+\_\+lanelet\+\_\+ids (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{subject\+\_\+link\+\_\+lanelet\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Get the list of link lanelets that has the same entry lanelet as the subject link lanelet. 
+
+\begin{DoxyReturn}{Returns}
+A vector of link lanelet ids 
+\end{DoxyReturn}
+
+
+Definition at line 323 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classintersection__model_1_1intersection__model_aeebb161d09289ec701f6e8a4aec3b7a6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a480e7966ce3d9bd7422f1d59fcf6bae0}\label{classintersection__model_1_1intersection__model_a480e7966ce3d9bd7422f1d59fcf6bae0}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!get\_speed\_limit\_by\_lanelet@{get\_speed\_limit\_by\_lanelet}}
+\index{get\_speed\_limit\_by\_lanelet@{get\_speed\_limit\_by\_lanelet}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{get\_speed\_limit\_by\_lanelet()}{get\_speed\_limit\_by\_lanelet()}}
+{\footnotesize\ttfamily double intersection\+\_\+model\+::intersection\+\_\+model\+::get\+\_\+speed\+\_\+limit\+\_\+by\+\_\+lanelet (\begin{DoxyParamCaption}\item[{const lanelet\+::\+Const\+Lanelet \&}]{subj\+\_\+lanelet }\end{DoxyParamCaption}) const}
+
+
+
+Retrieve the speed\+\_\+limit of the current lanelet. 
+
+\begin{DoxyReturn}{Returns}
+speed\+\_\+limit regulatory element that is attached to this lanelet 
+\end{DoxyReturn}
+
+
+Definition at line 240 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{classintersection__model_1_1intersection__model_a480e7966ce3d9bd7422f1d59fcf6bae0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a9dc2ebcc772b15ece501feb9fff2d01e}\label{classintersection__model_1_1intersection__model_a9dc2ebcc772b15ece501feb9fff2d01e}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!get\_vehicleGraph\_ptr@{get\_vehicleGraph\_ptr}}
+\index{get\_vehicleGraph\_ptr@{get\_vehicleGraph\_ptr}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{get\_vehicleGraph\_ptr()}{get\_vehicleGraph\_ptr()}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$ lanelet\+::routing\+::\+Routing\+Graph $>$ intersection\+\_\+model\+::intersection\+\_\+model\+::get\+\_\+vehicle\+Graph\+\_\+ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 372 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{classintersection__model_1_1intersection__model_a9dc2ebcc772b15ece501feb9fff2d01e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a7967e15bbce9062a48c43f82b6d89124}\label{classintersection__model_1_1intersection__model_a7967e15bbce9062a48c43f82b6d89124}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!gps\_2\_map\_point@{gps\_2\_map\_point}}
+\index{gps\_2\_map\_point@{gps\_2\_map\_point}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{gps\_2\_map\_point()}{gps\_2\_map\_point()}}
+{\footnotesize\ttfamily lanelet\+::\+Basic\+Point3d intersection\+\_\+model\+::intersection\+\_\+model\+::gps\+\_\+2\+\_\+map\+\_\+point (\begin{DoxyParamCaption}\item[{double}]{lat,  }\item[{double}]{lon,  }\item[{double}]{elev }\end{DoxyParamCaption}) const}
+
+
+
+Transform the GPS location into map point using porjector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lat} & decimal degree \\
+\hline
+{\em lon} & decimal degree \\
+\hline
+{\em elev} & decimal degree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+lanelet\+::\+Basic\+Point3d 
+\end{DoxyReturn}
+
+
+Definition at line 562 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classintersection__model_1_1intersection__model_a7967e15bbce9062a48c43f82b6d89124_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a3c83614bebf32e0f192e43b2cd384e30}\label{classintersection__model_1_1intersection__model_a3c83614bebf32e0f192e43b2cd384e30}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!initialization@{initialization}}
+\index{initialization@{initialization}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{initialization()}{initialization()}}
+{\footnotesize\ttfamily void intersection\+\_\+model\+::intersection\+\_\+model\+::initialization (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{intersection\+\_\+name,  }\item[{const int}]{intersection\+\_\+id,  }\item[{const std\+::string \&}]{osm\+\_\+file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Read the manifest.\+json configuration file and initialize intersection information. 
+
+
+
+Definition at line 10 of file intersection\+\_\+model.\+cpp.
+
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a5de61330c7ff6b874ceea907bdf0a579}\label{classintersection__model_1_1intersection__model_a5de61330c7ff6b874ceea907bdf0a579}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!is\_valid\_link\_lanelet\_id@{is\_valid\_link\_lanelet\_id}}
+\index{is\_valid\_link\_lanelet\_id@{is\_valid\_link\_lanelet\_id}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_link\_lanelet\_id()}{is\_valid\_link\_lanelet\_id()}}
+{\footnotesize\ttfamily bool intersection\+\_\+model\+::intersection\+\_\+model\+::is\+\_\+valid\+\_\+link\+\_\+lanelet\+\_\+id (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{lanelet\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Comparing the given lanelet id with all link lanelet ids in the current intersection information to determin if a lanelet id is a link lanelet id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lanelet\+\_\+id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the lanelet id belongs to a link lanelet at the intersection 
+\end{DoxyReturn}
+
+
+Definition at line 346 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{classintersection__model_1_1intersection__model_a5de61330c7ff6b874ceea907bdf0a579_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_ad26188c4208541965a452bb4a920c113}\label{classintersection__model_1_1intersection__model_ad26188c4208541965a452bb4a920c113}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!map\_point2\_gps@{map\_point2\_gps}}
+\index{map\_point2\_gps@{map\_point2\_gps}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{map\_point2\_gps()}{map\_point2\_gps()}}
+{\footnotesize\ttfamily lanelet\+::\+GPSPoint intersection\+\_\+model\+::intersection\+\_\+model\+::map\+\_\+point2\+\_\+gps (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{z }\end{DoxyParamCaption}) const}
+
+
+
+Transform the map point to gps location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinate (meter) \\
+\hline
+{\em y} & coordinate (meter) \\
+\hline
+{\em z} & coordinate (meter) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GPS location 
+\end{DoxyReturn}
+
+
+Definition at line 580 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classintersection__model_1_1intersection__model_ad26188c4208541965a452bb4a920c113_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a9f4abd2a92777fdcf9891b2dc91fee6b}\label{classintersection__model_1_1intersection__model_a9f4abd2a92777fdcf9891b2dc91fee6b}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!mapping\_lane\_id\_2\_lanelet\_id@{mapping\_lane\_id\_2\_lanelet\_id}}
+\index{mapping\_lane\_id\_2\_lanelet\_id@{mapping\_lane\_id\_2\_lanelet\_id}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{mapping\_lane\_id\_2\_lanelet\_id()}{mapping\_lane\_id\_2\_lanelet\_id()}}
+{\footnotesize\ttfamily void intersection\+\_\+model\+::intersection\+\_\+model\+::mapping\+\_\+lane\+\_\+id\+\_\+2\+\_\+lanelet\+\_\+id (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structintersection__model_1_1map__referencepoint}{map\+\_\+referencepoint}} \&}]{ref\+\_\+point,  }\item[{const \mbox{\hyperlink{structintersection__model_1_1map__lane}{map\+\_\+lane}} \&}]{lane,  }\item[{const long}]{lane\+\_\+width,  }\item[{const std\+::vector$<$ lanelet\+::\+Const\+Lanelet $>$ \&}]{subj\+\_\+lanelets,  }\item[{std\+::unordered\+\_\+map$<$ long, lanelet\+::\+Const\+Lanelet $>$ \&}]{lane2lanelet\+\_\+m }\end{DoxyParamCaption}) const}
+
+
+
+Comparing the geometry between lane in the MAP message and geometry of the list of lanelets to determine which lanelet this lane path fall into. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ref\+\_\+point} & Reference location (latitude, longitude, elevation) of the subsequent data points \\
+\hline
+{\em lane} & MAP message lane definition includes the lane geometry, unique lane id, and connections if entry lane. \\
+\hline
+{\em lane\+\_\+width} & MAP message lane definition includes the lane width. \\
+\hline
+{\em subj\+\_\+lanelets} & List of lanelets \\
+\hline
+{\em lane2lanelet\+\_\+m} & A mapping reference to update with lane id and its relevant lanelet id \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 490 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classintersection__model_1_1intersection__model_a9f4abd2a92777fdcf9891b2dc91fee6b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a184d2317731c78f5ed4084b9bd5ef23a}\label{classintersection__model_1_1intersection__model_a184d2317731c78f5ed4084b9bd5ef23a}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!read\_json\_file@{read\_json\_file}}
+\index{read\_json\_file@{read\_json\_file}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{read\_json\_file()}{read\_json\_file()}}
+{\footnotesize\ttfamily rapidjson\+::\+Document intersection\+\_\+model\+::intersection\+\_\+model\+::read\+\_\+json\+\_\+file (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+file\+\_\+name }\end{DoxyParamCaption}) const}
+
+
+
+Read the manifest.\+json configuration file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+\_\+file\+\_\+name} & provide the path to the configuration file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An object of the document that contains the information from the configuration file. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a96cf039df5fc9902a44258e73e81f67b}\label{classintersection__model_1_1intersection__model_a96cf039df5fc9902a44258e73e81f67b}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!read\_lanelet2\_map@{read\_lanelet2\_map}}
+\index{read\_lanelet2\_map@{read\_lanelet2\_map}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{read\_lanelet2\_map()}{read\_lanelet2\_map()}}
+{\footnotesize\ttfamily void intersection\+\_\+model\+::intersection\+\_\+model\+::read\+\_\+lanelet2\+\_\+map (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Read lanelet2 map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & path to lanelet2 osm map \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 38 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classintersection__model_1_1intersection__model_a96cf039df5fc9902a44258e73e81f67b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_ab3512b1195acfea750a228f6c4fc2cd0}\label{classintersection__model_1_1intersection__model_ab3512b1195acfea750a228f6c4fc2cd0}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!update\_intersecion\_info\_by\_map\_msg@{update\_intersecion\_info\_by\_map\_msg}}
+\index{update\_intersecion\_info\_by\_map\_msg@{update\_intersecion\_info\_by\_map\_msg}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{update\_intersecion\_info\_by\_map\_msg()}{update\_intersecion\_info\_by\_map\_msg()}}
+{\footnotesize\ttfamily bool intersection\+\_\+model\+::intersection\+\_\+model\+::update\+\_\+intersecion\+\_\+info\+\_\+by\+\_\+map\+\_\+msg (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structintersection__model_1_1intersection__map}{intersection\+\_\+map}} $>$}]{int\+\_\+map\+\_\+msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 377 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classintersection__model_1_1intersection__model_ab3512b1195acfea750a228f6c4fc2cd0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_aee444e73411f8593b4ad579849fc87b7}\label{classintersection__model_1_1intersection__model_aee444e73411f8593b4ad579849fc87b7}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!update\_intersection\_info@{update\_intersection\_info}}
+\index{update\_intersection\_info@{update\_intersection\_info}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{update\_intersection\_info()}{update\_intersection\_info()}}
+{\footnotesize\ttfamily bool intersection\+\_\+model\+::intersection\+\_\+model\+::update\+\_\+intersection\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read the OSM map, project the map, and initialize all the intersection related info including\+: intersection id, intersection name, entry\+\_\+lanelet\+\_\+ids, link\+\_\+lanelet\+\_\+ids and departure\+\_\+lanelet\+\_\+ids. 
+
+\begin{DoxyReturn}{Returns}
+if the intersection information is updated successfully, return true. Otherwise false. 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{classintersection__model_1_1intersection__model_aee444e73411f8593b4ad579849fc87b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a2bfd4216fee2946a52babc8eb008c975}\label{classintersection__model_1_1intersection__model_a2bfd4216fee2946a52babc8eb008c975}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!update\_intersection\_info\_by\_all\_way\_stop\_reg@{update\_intersection\_info\_by\_all\_way\_stop\_reg}}
+\index{update\_intersection\_info\_by\_all\_way\_stop\_reg@{update\_intersection\_info\_by\_all\_way\_stop\_reg}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{update\_intersection\_info\_by\_all\_way\_stop\_reg()}{update\_intersection\_info\_by\_all\_way\_stop\_reg()}}
+{\footnotesize\ttfamily bool intersection\+\_\+model\+::intersection\+\_\+model\+::update\+\_\+intersection\+\_\+info\+\_\+by\+\_\+all\+\_\+way\+\_\+stop\+\_\+reg (\begin{DoxyParamCaption}\item[{const lanelet\+::\+Regulatory\+Element $\ast$}]{all\+\_\+way\+\_\+stop\+\_\+reg\+\_\+elem\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Based on the all\+\_\+way\+\_\+stop regulatory element and routing graph, it is able to retrieve all the entry lanelets, link lanelets and depature lanelets. If the method call is successful, return true; otherwise return false. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em all\+\_\+way\+\_\+stop\+\_\+reg\+\_\+elem\+\_\+ptr} & a pointer to an all way stop regulatory element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the intersection information is updated, otherwise false. 
+\end{DoxyReturn}
+
+
+Definition at line 125 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{classintersection__model_1_1intersection__model_a2bfd4216fee2946a52babc8eb008c975_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a5cf97605f6557f75d1452da9536e7118}\label{classintersection__model_1_1intersection__model_a5cf97605f6557f75d1452da9536e7118}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!update\_link\_departure\_lanelets\_info\_by\_entry\_lanelet@{update\_link\_departure\_lanelets\_info\_by\_entry\_lanelet}}
+\index{update\_link\_departure\_lanelets\_info\_by\_entry\_lanelet@{update\_link\_departure\_lanelets\_info\_by\_entry\_lanelet}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{update\_link\_departure\_lanelets\_info\_by\_entry\_lanelet()}{update\_link\_departure\_lanelets\_info\_by\_entry\_lanelet()}}
+{\footnotesize\ttfamily bool intersection\+\_\+model\+::intersection\+\_\+model\+::update\+\_\+link\+\_\+departure\+\_\+lanelets\+\_\+info\+\_\+by\+\_\+entry\+\_\+lanelet (\begin{DoxyParamCaption}\item[{const lanelet\+::\+Lanelet \&}]{entry\+\_\+lanelet }\end{DoxyParamCaption})}
+
+
+
+Get the following link lanelets information from the entering lanelet. Based on the link lanelets, it retrieves the following depature lanelets. 
+
+\begin{DoxyReturn}{Returns}
+true if the update for intersection model info (link lanelet info and departure lanelet info) is successful. Otherwise, not updated 
+\end{DoxyReturn}
+
+
+Definition at line 170 of file intersection\+\_\+model.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{classintersection__model_1_1intersection__model_a5cf97605f6557f75d1452da9536e7118_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classintersection__model_1_1intersection__model_a2356a55b5dd997c37d63e84581f44559}\label{classintersection__model_1_1intersection__model_a2356a55b5dd997c37d63e84581f44559}} 
+\index{intersection\_model::intersection\_model@{intersection\_model::intersection\_model}!update\_vehicle\_routing\_graph@{update\_vehicle\_routing\_graph}}
+\index{update\_vehicle\_routing\_graph@{update\_vehicle\_routing\_graph}!intersection\_model::intersection\_model@{intersection\_model::intersection\_model}}
+\doxysubsubsection{\texorpdfstring{update\_vehicle\_routing\_graph()}{update\_vehicle\_routing\_graph()}}
+{\footnotesize\ttfamily bool intersection\+\_\+model\+::intersection\+\_\+model\+::update\+\_\+vehicle\+\_\+routing\+\_\+graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize vehicle routing graph. 
+
+\begin{DoxyReturn}{Returns}
+true if the routing graph for vehicle participant is updated, otherwise false. 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file intersection\+\_\+model.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+intersection\+\_\+model/include/\mbox{\hyperlink{intersection__model_8h}{intersection\+\_\+model.\+h}}\item 
+intersection\+\_\+model/src/\mbox{\hyperlink{intersection__model_8cpp}{intersection\+\_\+model.\+cpp}}\end{DoxyCompactItemize}

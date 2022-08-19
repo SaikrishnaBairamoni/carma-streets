@@ -1,0 +1,263 @@
+\hypertarget{classstreets__vehicle__scheduler_1_1vehicle__scheduler}{}\doxysection{streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler Class Reference}
+\label{classstreets__vehicle__scheduler_1_1vehicle__scheduler}\index{streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}}
+
+
+Abstract Class for extend to implement scheduling business logic.  
+
+
+
+
+{\ttfamily \#include $<$vehicle\+\_\+scheduler.\+h$>$}
+
+
+
+Inheritance diagram for streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__vehicle__scheduler_1_1vehicle__scheduler__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a26f9acdf3e3fa08c8025bf4daebd1376}{vehicle\+\_\+scheduler}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new vehicle scheduler object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1vehicle__scheduler_ab4ebf26e4aae6538e7481220b2df3488}{$\sim$vehicle\+\_\+scheduler}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the vehicle scheduler object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a68ae44ddfa8ae16f298b2798ed93b9d2}{schedule\+\_\+vehicles}} (std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} $>$ \&vehicles, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}} $>$ \&schedule)=0
+\begin{DoxyCompactList}\small\item\em Virtual method to schedule vehicle. Different implementations of vehicle scheduler can implement custom business logic for scheduling vehicle while taking advantage of polymorphism to dynamically assign class at runtime. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classOpenAPI_1_1OAIIntersection__info}{Open\+API\+::\+OAIIntersection\+\_\+info}} $>$ \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a843b25b73b376d77df5a8d5e77f818d2}{get\+\_\+intersection\+\_\+info}} () const
+\begin{DoxyCompactList}\small\item\em Get the intersection info object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a8b666aed7fe6d72a268315baeb1f85e1}{set\+\_\+intersection\+\_\+info}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classOpenAPI_1_1OAIIntersection__info}{Open\+API\+::\+OAIIntersection\+\_\+info}} $>$ \+\_\+intersection\+\_\+info)
+\begin{DoxyCompactList}\small\item\em Set the intersection info object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a85947f43b293504a108619374c0c0dae}{estimate\+\_\+vehicles\+\_\+at\+\_\+common\+\_\+time}} (std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} $>$ \&vehicles, const u\+\_\+int64\+\_\+t timestamp) const
+\begin{DoxyCompactList}\small\item\em Method to estimate all vehicle\textquotesingle{}s speed and location at a common future time. The time needs to be time since epoch in milliseconds. To predict vehicle location and speed at future time, current kinematic information is used including speed and current acceleration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOpenAPI_1_1OAILanelet__info}{Open\+API\+::\+OAILanelet\+\_\+info}} \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1vehicle__scheduler_af8916add714bef70d8f48efc0ccfca7b}{get\+\_\+entry\+\_\+lanelet\+\_\+info}} (const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&veh) const
+\begin{DoxyCompactList}\small\item\em Helper method to get entry lane OAILanelet\+\_\+info from intersection information given a vehicle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOpenAPI_1_1OAILanelet__info}{Open\+API\+::\+OAILanelet\+\_\+info}} \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1vehicle__scheduler_af2c80eb87e5a9cabaad660544003663c}{get\+\_\+link\+\_\+lanelet\+\_\+info}} (const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&veh) const
+\begin{DoxyCompactList}\small\item\em Helper method to get link lane OAILanelet\+\_\+info from intersection information given a vehicle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classOpenAPI_1_1OAIIntersection__info}{Open\+API\+::\+OAIIntersection\+\_\+info}} $>$ \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a5fa37276e5ccb41e38cbef573e830e8e}{intersection\+\_\+info}}
+\begin{DoxyCompactList}\small\item\em shared pointer to intersection information required for scheduling. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract Class for extend to implement scheduling business logic. 
+
+Definition at line 20 of file vehicle\+\_\+scheduler.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a26f9acdf3e3fa08c8025bf4daebd1376}\label{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a26f9acdf3e3fa08c8025bf4daebd1376}} 
+\index{streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}!vehicle\_scheduler@{vehicle\_scheduler}}
+\index{vehicle\_scheduler@{vehicle\_scheduler}!streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{vehicle\_scheduler()}{vehicle\_scheduler()}}
+{\footnotesize\ttfamily streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new vehicle scheduler object. 
+
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1vehicle__scheduler_ab4ebf26e4aae6538e7481220b2df3488}\label{classstreets__vehicle__scheduler_1_1vehicle__scheduler_ab4ebf26e4aae6538e7481220b2df3488}} 
+\index{streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}!````~vehicle\_scheduler@{$\sim$vehicle\_scheduler}}
+\index{````~vehicle\_scheduler@{$\sim$vehicle\_scheduler}!streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{$\sim$vehicle\_scheduler()}{~vehicle\_scheduler()}}
+{\footnotesize\ttfamily virtual streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler\+::$\sim$vehicle\+\_\+scheduler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroy the vehicle scheduler object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a85947f43b293504a108619374c0c0dae}\label{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a85947f43b293504a108619374c0c0dae}} 
+\index{streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}!estimate\_vehicles\_at\_common\_time@{estimate\_vehicles\_at\_common\_time}}
+\index{estimate\_vehicles\_at\_common\_time@{estimate\_vehicles\_at\_common\_time}!streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{estimate\_vehicles\_at\_common\_time()}{estimate\_vehicles\_at\_common\_time()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler\+::estimate\+\_\+vehicles\+\_\+at\+\_\+common\+\_\+time (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} $>$ \&}]{vehicles,  }\item[{const u\+\_\+int64\+\_\+t}]{timestamp }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method to estimate all vehicle\textquotesingle{}s speed and location at a common future time. The time needs to be time since epoch in milliseconds. To predict vehicle location and speed at future time, current kinematic information is used including speed and current acceleration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicles} & Vehicle for which to calculate future position and speed. \\
+\hline
+{\em timestamp} & Current or future time in milliseconds since epoch \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1scheduling__exception}{scheduling\+\_\+exception}}} & if vehicle update time for any vehicle is more recent than timestamp. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 49 of file vehicle\+\_\+scheduler.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a85947f43b293504a108619374c0c0dae_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a85947f43b293504a108619374c0c0dae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1vehicle__scheduler_af8916add714bef70d8f48efc0ccfca7b}\label{classstreets__vehicle__scheduler_1_1vehicle__scheduler_af8916add714bef70d8f48efc0ccfca7b}} 
+\index{streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}!get\_entry\_lanelet\_info@{get\_entry\_lanelet\_info}}
+\index{get\_entry\_lanelet\_info@{get\_entry\_lanelet\_info}!streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{get\_entry\_lanelet\_info()}{get\_entry\_lanelet\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOpenAPI_1_1OAILanelet__info}{Open\+API\+::\+OAILanelet\+\_\+info}} streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler\+::get\+\_\+entry\+\_\+lanelet\+\_\+info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&}]{veh }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Helper method to get entry lane OAILanelet\+\_\+info from intersection information given a vehicle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em veh} & Vehicle for which to find entry lane OAILanlet\+\_\+info. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classOpenAPI_1_1OAILanelet__info}{Open\+API\+::\+OAILanelet\+\_\+info}} for entry lane. 
+\end{DoxyReturn}
+
+
+Definition at line 13 of file vehicle\+\_\+scheduler.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__vehicle__scheduler_1_1vehicle__scheduler_af8916add714bef70d8f48efc0ccfca7b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a843b25b73b376d77df5a8d5e77f818d2}\label{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a843b25b73b376d77df5a8d5e77f818d2}} 
+\index{streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}!get\_intersection\_info@{get\_intersection\_info}}
+\index{get\_intersection\_info@{get\_intersection\_info}!streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{get\_intersection\_info()}{get\_intersection\_info()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classOpenAPI_1_1OAIIntersection__info}{Open\+API\+::\+OAIIntersection\+\_\+info}} $>$ streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler\+::get\+\_\+intersection\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the intersection info object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Open\+API\+::\+OAIIntersection\+\_\+info$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 4 of file vehicle\+\_\+scheduler.\+cpp.
+
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1vehicle__scheduler_af2c80eb87e5a9cabaad660544003663c}\label{classstreets__vehicle__scheduler_1_1vehicle__scheduler_af2c80eb87e5a9cabaad660544003663c}} 
+\index{streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}!get\_link\_lanelet\_info@{get\_link\_lanelet\_info}}
+\index{get\_link\_lanelet\_info@{get\_link\_lanelet\_info}!streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{get\_link\_lanelet\_info()}{get\_link\_lanelet\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOpenAPI_1_1OAILanelet__info}{Open\+API\+::\+OAILanelet\+\_\+info}} streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler\+::get\+\_\+link\+\_\+lanelet\+\_\+info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&}]{veh }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Helper method to get link lane OAILanelet\+\_\+info from intersection information given a vehicle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em veh} & Vehicle for which to find link lane OAILanlet\+\_\+info. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classOpenAPI_1_1OAILanelet__info}{Open\+API\+::\+OAILanelet\+\_\+info}} for link lane. 
+\end{DoxyReturn}
+
+
+Definition at line 31 of file vehicle\+\_\+scheduler.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__vehicle__scheduler_1_1vehicle__scheduler_af2c80eb87e5a9cabaad660544003663c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a68ae44ddfa8ae16f298b2798ed93b9d2}\label{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a68ae44ddfa8ae16f298b2798ed93b9d2}} 
+\index{streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}!schedule\_vehicles@{schedule\_vehicles}}
+\index{schedule\_vehicles@{schedule\_vehicles}!streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{schedule\_vehicles()}{schedule\_vehicles()}}
+{\footnotesize\ttfamily virtual void streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler\+::schedule\+\_\+vehicles (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} $>$ \&}]{vehicles,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}} $>$ \&}]{schedule }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Virtual method to schedule vehicle. Different implementations of vehicle scheduler can implement custom business logic for scheduling vehicle while taking advantage of polymorphism to dynamically assign class at runtime. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicles} & unordered map of vehicles to schedule. \\
+\hline
+{\em schedule} & empty \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}} shared pointer which is returned by reference to provide calculated scheduling information. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a2572fdbb86e141df40174d618fe2a3d0}{streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+scheduler}}, and \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler_a930961b3e285b2a2d08f4276ffa22658}{streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+scheduler}}.
+
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a8b666aed7fe6d72a268315baeb1f85e1}\label{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a8b666aed7fe6d72a268315baeb1f85e1}} 
+\index{streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}!set\_intersection\_info@{set\_intersection\_info}}
+\index{set\_intersection\_info@{set\_intersection\_info}!streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{set\_intersection\_info()}{set\_intersection\_info()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler\+::set\+\_\+intersection\+\_\+info (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classOpenAPI_1_1OAIIntersection__info}{Open\+API\+::\+OAIIntersection\+\_\+info}} $>$}]{\+\_\+intersection\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+Set the intersection info object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+intersection\+\_\+info} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 8 of file vehicle\+\_\+scheduler.\+cpp.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a5fa37276e5ccb41e38cbef573e830e8e}\label{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a5fa37276e5ccb41e38cbef573e830e8e}} 
+\index{streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}!intersection\_info@{intersection\_info}}
+\index{intersection\_info@{intersection\_info}!streets\_vehicle\_scheduler::vehicle\_scheduler@{streets\_vehicle\_scheduler::vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{intersection\_info}{intersection\_info}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classOpenAPI_1_1OAIIntersection__info}{Open\+API\+::\+OAIIntersection\+\_\+info}}$>$ streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler\+::intersection\+\_\+info\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+shared pointer to intersection information required for scheduling. 
+
+
+
+Definition at line 26 of file vehicle\+\_\+scheduler.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/include/\mbox{\hyperlink{vehicle__scheduler_8h}{vehicle\+\_\+scheduler.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/src/\mbox{\hyperlink{vehicle__scheduler_8cpp}{vehicle\+\_\+scheduler.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$structstreets__vehicle__scheduler_1_1vehicle__schedule.html" title="Object to represent schedule for single vehicle." alt="" coords="5,39,196,80"/>
+<area shape="rect" id="node2" href="$structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule.html" title="Object to represent all_stop schedule for single vehicle." alt="" coords="251,5,451,47"/>
+<area shape="rect" id="node3" href="$structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule.html" title="Object to represent schedule for single vehicle." alt="" coords="244,71,459,112"/>
+</map>

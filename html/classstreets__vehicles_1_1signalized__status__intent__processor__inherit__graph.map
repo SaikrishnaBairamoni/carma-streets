@@ -1,0 +1,5 @@
+<map id="streets_vehicles::signalized_status_intent_processor" name="streets_vehicles::signalized_status_intent_processor">
+<area shape="rect" id="node1" title=" " alt="" coords="13,184,216,225"/>
+<area shape="rect" id="node2" href="$classstreets__vehicles_1_1all__stop__status__intent__processor.html" title="Status Intent processor implementation for all stop use case. Updates vehicle states based on the con..." alt="" coords="5,95,224,136"/>
+<area shape="rect" id="node3" href="$classstreets__vehicles_1_1status__intent__processor.html" title="Abstract Class to allow for customizable processing of status and intent vehicle updates...." alt="" coords="27,5,203,47"/>
+</map>

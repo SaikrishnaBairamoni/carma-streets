@@ -1,0 +1,4 @@
+<map id="message_services::message_translations::message_lanelet2_translation::distance2_cur_lanelet_end" name="message_services::message_translations::message_lanelet2_translation::distance2_cur_lanelet_end">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,236,76"/>
+<area shape="rect" id="node2" href="$classmessage__services_1_1message__translations_1_1message__lanelet2__translation.html#aad90a20416b9d7053f1072d3790665b8" title="Function to convert GPS location to a 3d point in map frame." alt="" coords="284,5,493,76"/>
+</map>

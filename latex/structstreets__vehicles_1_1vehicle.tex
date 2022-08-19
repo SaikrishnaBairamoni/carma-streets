@@ -1,0 +1,305 @@
+\hypertarget{structstreets__vehicles_1_1vehicle}{}\doxysection{streets\+\_\+vehicles\+::vehicle Struct Reference}
+\label{structstreets__vehicles_1_1vehicle}\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+
+
+Data struct for vehicle status and intent information.  
+
+
+
+
+{\ttfamily \#include $<$vehicle.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_a470605f661a8f625329ebbb10888e2b8}{\+\_\+id}}
+\item 
+double \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_a8df55ea8c6a305540ae4601f5c770843}{\+\_\+length}} = 0.\+0
+\item 
+double \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_a3a38a205ab41c1912245c3d2a3b8c907}{\+\_\+min\+\_\+gap}} = 0.\+0
+\item 
+double \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_a5c6b46bfbbb31785e7a07e96bc18ae76}{\+\_\+reaction\+\_\+time}} = 0.\+0
+\item 
+double \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_a1180998ca4eeb7d695d135a1e4a75424}{\+\_\+accel\+\_\+max}} = 0.\+0
+\item 
+double \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_a253341595deb3473620116dcf63d9927}{\+\_\+decel\+\_\+max}} = 0.\+0
+\item 
+int \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_adc3dab0260f149fc908b9b7d49e1ba99}{\+\_\+cur\+\_\+lane\+\_\+id}} = 0
+\item 
+int \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_a4ef0e2e811b0f5cb00f14b89a353c3b5}{\+\_\+entry\+\_\+lane\+\_\+id}} = 0
+\item 
+int \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_ac841c7b0f836b2ffa73161f555195d14}{\+\_\+exit\+\_\+lane\+\_\+id}} = 0
+\item 
+int \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_aaa9cbe97b2343b3f14841c1ed2bc8e3d}{\+\_\+link\+\_\+id}} = 0
+\item 
+std\+::string \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_adeea1853cfdf53e36447ff2525656ff5}{\+\_\+direction}}
+\item 
+int \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_a5397aded190b18d5ea8ee04c9b981732}{\+\_\+link\+\_\+priority}}
+\item 
+bool \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_ad833d8707254668d96de2b3401ee81b6}{\+\_\+access}} = false
+\item 
+int \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_a5aaf317105b29db5a564b0a5c5468d7d}{\+\_\+departure\+\_\+position}} =-\/1
+\item 
+u\+\_\+int64\+\_\+t \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_ab142b19b021e3ac4908714eaa94cd47e}{\+\_\+actual\+\_\+st}} = 0
+\item 
+u\+\_\+int64\+\_\+t \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_a9051ab70996c39cd47df9452bb6afe95}{\+\_\+actual\+\_\+et}} = 0
+\item 
+u\+\_\+int64\+\_\+t \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_ae136d2a443c41014973fa0ed1934cd35}{\+\_\+actual\+\_\+dt}} = 0
+\item 
+u\+\_\+int64\+\_\+t \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_a278b51810d25efcfcfb91bb13e43e6f3}{\+\_\+cur\+\_\+time}} = 0
+\item 
+double \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_a21a6378ca2401ac4bc9ca6f6364833fb}{\+\_\+cur\+\_\+distance}} = 0.\+0
+\item 
+double \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_a026375b9e6ffc8f8c8aee72465f352dc}{\+\_\+cur\+\_\+speed}} = 0.\+0
+\item 
+double \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_a1feaabc1b77f7545bcdd28833ed71943}{\+\_\+cur\+\_\+accel}} = 0.\+0
+\item 
+\mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405ac}{vehicle\+\_\+state}} \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_a54872859b3a12ee290b98e0eedd2864f}{\+\_\+cur\+\_\+state}} = \mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405aca9a116c50d133c8648404081885194300}{vehicle\+\_\+state\+::\+ND}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structstreets__vehicles_1_1future__information}{future\+\_\+information}} $>$ \mbox{\hyperlink{structstreets__vehicles_1_1vehicle_af37c524f5f0d5512606eb55d27c1ebcb}{\+\_\+future\+\_\+info}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data struct for vehicle status and intent information. 
+
+Definition at line 34 of file vehicle.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_a1180998ca4eeb7d695d135a1e4a75424}\label{structstreets__vehicles_1_1vehicle_a1180998ca4eeb7d695d135a1e4a75424}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_accel\_max@{\_accel\_max}}
+\index{\_accel\_max@{\_accel\_max}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_accel\_max}{\_accel\_max}}
+{\footnotesize\ttfamily double streets\+\_\+vehicles\+::vehicle\+::\+\_\+accel\+\_\+max = 0.\+0}
+
+
+
+Definition at line 45 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_ad833d8707254668d96de2b3401ee81b6}\label{structstreets__vehicles_1_1vehicle_ad833d8707254668d96de2b3401ee81b6}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_access@{\_access}}
+\index{\_access@{\_access}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_access}{\_access}}
+{\footnotesize\ttfamily bool streets\+\_\+vehicles\+::vehicle\+::\+\_\+access = false}
+
+
+
+Definition at line 61 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_ae136d2a443c41014973fa0ed1934cd35}\label{structstreets__vehicles_1_1vehicle_ae136d2a443c41014973fa0ed1934cd35}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_actual\_dt@{\_actual\_dt}}
+\index{\_actual\_dt@{\_actual\_dt}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_actual\_dt}{\_actual\_dt}}
+{\footnotesize\ttfamily u\+\_\+int64\+\_\+t streets\+\_\+vehicles\+::vehicle\+::\+\_\+actual\+\_\+dt = 0}
+
+
+
+Definition at line 69 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_a9051ab70996c39cd47df9452bb6afe95}\label{structstreets__vehicles_1_1vehicle_a9051ab70996c39cd47df9452bb6afe95}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_actual\_et@{\_actual\_et}}
+\index{\_actual\_et@{\_actual\_et}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_actual\_et}{\_actual\_et}}
+{\footnotesize\ttfamily u\+\_\+int64\+\_\+t streets\+\_\+vehicles\+::vehicle\+::\+\_\+actual\+\_\+et = 0}
+
+
+
+Definition at line 67 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_ab142b19b021e3ac4908714eaa94cd47e}\label{structstreets__vehicles_1_1vehicle_ab142b19b021e3ac4908714eaa94cd47e}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_actual\_st@{\_actual\_st}}
+\index{\_actual\_st@{\_actual\_st}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_actual\_st}{\_actual\_st}}
+{\footnotesize\ttfamily u\+\_\+int64\+\_\+t streets\+\_\+vehicles\+::vehicle\+::\+\_\+actual\+\_\+st = 0}
+
+
+
+Definition at line 65 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_a1feaabc1b77f7545bcdd28833ed71943}\label{structstreets__vehicles_1_1vehicle_a1feaabc1b77f7545bcdd28833ed71943}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_cur\_accel@{\_cur\_accel}}
+\index{\_cur\_accel@{\_cur\_accel}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_cur\_accel}{\_cur\_accel}}
+{\footnotesize\ttfamily double streets\+\_\+vehicles\+::vehicle\+::\+\_\+cur\+\_\+accel = 0.\+0}
+
+
+
+Definition at line 77 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_a21a6378ca2401ac4bc9ca6f6364833fb}\label{structstreets__vehicles_1_1vehicle_a21a6378ca2401ac4bc9ca6f6364833fb}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_cur\_distance@{\_cur\_distance}}
+\index{\_cur\_distance@{\_cur\_distance}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_cur\_distance}{\_cur\_distance}}
+{\footnotesize\ttfamily double streets\+\_\+vehicles\+::vehicle\+::\+\_\+cur\+\_\+distance = 0.\+0}
+
+
+
+Definition at line 73 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_adc3dab0260f149fc908b9b7d49e1ba99}\label{structstreets__vehicles_1_1vehicle_adc3dab0260f149fc908b9b7d49e1ba99}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_cur\_lane\_id@{\_cur\_lane\_id}}
+\index{\_cur\_lane\_id@{\_cur\_lane\_id}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_cur\_lane\_id}{\_cur\_lane\_id}}
+{\footnotesize\ttfamily int streets\+\_\+vehicles\+::vehicle\+::\+\_\+cur\+\_\+lane\+\_\+id = 0}
+
+
+
+Definition at line 49 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_a026375b9e6ffc8f8c8aee72465f352dc}\label{structstreets__vehicles_1_1vehicle_a026375b9e6ffc8f8c8aee72465f352dc}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_cur\_speed@{\_cur\_speed}}
+\index{\_cur\_speed@{\_cur\_speed}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_cur\_speed}{\_cur\_speed}}
+{\footnotesize\ttfamily double streets\+\_\+vehicles\+::vehicle\+::\+\_\+cur\+\_\+speed = 0.\+0}
+
+
+
+Definition at line 75 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_a54872859b3a12ee290b98e0eedd2864f}\label{structstreets__vehicles_1_1vehicle_a54872859b3a12ee290b98e0eedd2864f}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_cur\_state@{\_cur\_state}}
+\index{\_cur\_state@{\_cur\_state}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_cur\_state}{\_cur\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405ac}{vehicle\+\_\+state}} streets\+\_\+vehicles\+::vehicle\+::\+\_\+cur\+\_\+state = \mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405aca9a116c50d133c8648404081885194300}{vehicle\+\_\+state\+::\+ND}}}
+
+
+
+Definition at line 79 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_a278b51810d25efcfcfb91bb13e43e6f3}\label{structstreets__vehicles_1_1vehicle_a278b51810d25efcfcfb91bb13e43e6f3}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_cur\_time@{\_cur\_time}}
+\index{\_cur\_time@{\_cur\_time}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_cur\_time}{\_cur\_time}}
+{\footnotesize\ttfamily u\+\_\+int64\+\_\+t streets\+\_\+vehicles\+::vehicle\+::\+\_\+cur\+\_\+time = 0}
+
+
+
+Definition at line 71 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_a253341595deb3473620116dcf63d9927}\label{structstreets__vehicles_1_1vehicle_a253341595deb3473620116dcf63d9927}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_decel\_max@{\_decel\_max}}
+\index{\_decel\_max@{\_decel\_max}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_decel\_max}{\_decel\_max}}
+{\footnotesize\ttfamily double streets\+\_\+vehicles\+::vehicle\+::\+\_\+decel\+\_\+max = 0.\+0}
+
+
+
+Definition at line 47 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_a5aaf317105b29db5a564b0a5c5468d7d}\label{structstreets__vehicles_1_1vehicle_a5aaf317105b29db5a564b0a5c5468d7d}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_departure\_position@{\_departure\_position}}
+\index{\_departure\_position@{\_departure\_position}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_departure\_position}{\_departure\_position}}
+{\footnotesize\ttfamily int streets\+\_\+vehicles\+::vehicle\+::\+\_\+departure\+\_\+position =-\/1}
+
+
+
+Definition at line 63 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_adeea1853cfdf53e36447ff2525656ff5}\label{structstreets__vehicles_1_1vehicle_adeea1853cfdf53e36447ff2525656ff5}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_direction@{\_direction}}
+\index{\_direction@{\_direction}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_direction}{\_direction}}
+{\footnotesize\ttfamily std\+::string streets\+\_\+vehicles\+::vehicle\+::\+\_\+direction}
+
+
+
+Definition at line 57 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_a4ef0e2e811b0f5cb00f14b89a353c3b5}\label{structstreets__vehicles_1_1vehicle_a4ef0e2e811b0f5cb00f14b89a353c3b5}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_entry\_lane\_id@{\_entry\_lane\_id}}
+\index{\_entry\_lane\_id@{\_entry\_lane\_id}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_entry\_lane\_id}{\_entry\_lane\_id}}
+{\footnotesize\ttfamily int streets\+\_\+vehicles\+::vehicle\+::\+\_\+entry\+\_\+lane\+\_\+id = 0}
+
+
+
+Definition at line 51 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_ac841c7b0f836b2ffa73161f555195d14}\label{structstreets__vehicles_1_1vehicle_ac841c7b0f836b2ffa73161f555195d14}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_exit\_lane\_id@{\_exit\_lane\_id}}
+\index{\_exit\_lane\_id@{\_exit\_lane\_id}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_exit\_lane\_id}{\_exit\_lane\_id}}
+{\footnotesize\ttfamily int streets\+\_\+vehicles\+::vehicle\+::\+\_\+exit\+\_\+lane\+\_\+id = 0}
+
+
+
+Definition at line 53 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_af37c524f5f0d5512606eb55d27c1ebcb}\label{structstreets__vehicles_1_1vehicle_af37c524f5f0d5512606eb55d27c1ebcb}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_future\_info@{\_future\_info}}
+\index{\_future\_info@{\_future\_info}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_future\_info}{\_future\_info}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structstreets__vehicles_1_1future__information}{future\+\_\+information}}$>$ streets\+\_\+vehicles\+::vehicle\+::\+\_\+future\+\_\+info}
+
+
+
+Definition at line 81 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_a470605f661a8f625329ebbb10888e2b8}\label{structstreets__vehicles_1_1vehicle_a470605f661a8f625329ebbb10888e2b8}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_id@{\_id}}
+\index{\_id@{\_id}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_id}{\_id}}
+{\footnotesize\ttfamily std\+::string streets\+\_\+vehicles\+::vehicle\+::\+\_\+id}
+
+
+
+Definition at line 37 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_a8df55ea8c6a305540ae4601f5c770843}\label{structstreets__vehicles_1_1vehicle_a8df55ea8c6a305540ae4601f5c770843}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_length@{\_length}}
+\index{\_length@{\_length}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_length}{\_length}}
+{\footnotesize\ttfamily double streets\+\_\+vehicles\+::vehicle\+::\+\_\+length = 0.\+0}
+
+
+
+Definition at line 39 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_aaa9cbe97b2343b3f14841c1ed2bc8e3d}\label{structstreets__vehicles_1_1vehicle_aaa9cbe97b2343b3f14841c1ed2bc8e3d}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_link\_id@{\_link\_id}}
+\index{\_link\_id@{\_link\_id}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_link\_id}{\_link\_id}}
+{\footnotesize\ttfamily int streets\+\_\+vehicles\+::vehicle\+::\+\_\+link\+\_\+id = 0}
+
+
+
+Definition at line 55 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_a5397aded190b18d5ea8ee04c9b981732}\label{structstreets__vehicles_1_1vehicle_a5397aded190b18d5ea8ee04c9b981732}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_link\_priority@{\_link\_priority}}
+\index{\_link\_priority@{\_link\_priority}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_link\_priority}{\_link\_priority}}
+{\footnotesize\ttfamily int streets\+\_\+vehicles\+::vehicle\+::\+\_\+link\+\_\+priority}
+
+
+
+Definition at line 59 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_a3a38a205ab41c1912245c3d2a3b8c907}\label{structstreets__vehicles_1_1vehicle_a3a38a205ab41c1912245c3d2a3b8c907}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_min\_gap@{\_min\_gap}}
+\index{\_min\_gap@{\_min\_gap}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_min\_gap}{\_min\_gap}}
+{\footnotesize\ttfamily double streets\+\_\+vehicles\+::vehicle\+::\+\_\+min\+\_\+gap = 0.\+0}
+
+
+
+Definition at line 41 of file vehicle.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicles_1_1vehicle_a5c6b46bfbbb31785e7a07e96bc18ae76}\label{structstreets__vehicles_1_1vehicle_a5c6b46bfbbb31785e7a07e96bc18ae76}} 
+\index{streets\_vehicles::vehicle@{streets\_vehicles::vehicle}!\_reaction\_time@{\_reaction\_time}}
+\index{\_reaction\_time@{\_reaction\_time}!streets\_vehicles::vehicle@{streets\_vehicles::vehicle}}
+\doxysubsubsection{\texorpdfstring{\_reaction\_time}{\_reaction\_time}}
+{\footnotesize\ttfamily double streets\+\_\+vehicles\+::vehicle\+::\+\_\+reaction\+\_\+time = 0.\+0}
+
+
+
+Definition at line 43 of file vehicle.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+list/include/\mbox{\hyperlink{vehicle_8h}{vehicle.\+h}}\end{DoxyCompactItemize}

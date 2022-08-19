@@ -1,0 +1,184 @@
+\hypertarget{namespacesignal__phase__and__timing}{}\doxysection{signal\+\_\+phase\+\_\+and\+\_\+timing Namespace Reference}
+\label{namespacesignal__phase__and__timing}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsignal__phase__and__timing_1_1advisory__speed}{advisory\+\_\+speed}}
+\item 
+struct \mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist}{connection\+\_\+maneuver\+\_\+assist}}
+\item 
+struct \mbox{\hyperlink{structsignal__phase__and__timing_1_1intersection__state}{intersection\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__event}{movement\+\_\+event}}
+\item 
+struct \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__state}{movement\+\_\+state}}
+\item 
+class \mbox{\hyperlink{classsignal__phase__and__timing_1_1signal__phase__and__timing__exception}{signal\+\_\+phase\+\_\+and\+\_\+timing\+\_\+exception}}
+\begin{DoxyCompactList}\small\item\em Runtime error related to processing \mbox{\hyperlink{namespacesignal__phase__and__timing}{signal\+\_\+phase\+\_\+and\+\_\+timing}} JSON updates. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsignal__phase__and__timing_1_1spat}{spat}}
+\item 
+struct \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details}{time\+\_\+change\+\_\+details}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacesignal__phase__and__timing_a7a779ac32aa585dcdf0e0c132ac2b55e}{advisory\+\_\+speed\+\_\+type}} \{ \mbox{\hyperlink{namespacesignal__phase__and__timing_a7a779ac32aa585dcdf0e0c132ac2b55ea334c4a4c42fdb79d7ebc3e73b517e6f8}{none}} = 0
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a7a779ac32aa585dcdf0e0c132ac2b55ea5a8bcdee6087d7699019a81b83dd4d38}{greenwave}} = 1
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a7a779ac32aa585dcdf0e0c132ac2b55eaca2315ba39c3238a7dd347f765ca69f8}{ecodrive}} = 2
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a7a779ac32aa585dcdf0e0c132ac2b55eadcef234a574fa354c82127c50b83174a}{transit}} = 3
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3}{speed\+\_\+confidence}} \{ \newline
+\mbox{\hyperlink{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a7060e0481896e00b3f7d20f1e8e2749a}{unavailable}} = 0
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a320b82ce3b490945b9a44166dda4c7ba}{pre100ms}} = 1
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a716e6b8626b97dab122949db63e7271b}{prec10ms}} = 2
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a5b6355fc130770f74728ef2fc4d95a90}{prec5ms}} = 3
+, \newline
+\mbox{\hyperlink{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a6b0053b71112371ba61a60740c4a91bb}{prec1ms}} = 4
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a4490a163d0d86641f45391c25865dd19}{prec0\+\_\+1ms}} = 5
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3aac96e4ec729c57bf5cff18c7a41736ee}{prec0\+\_\+05ms}} = 6
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a07d250079e1cc0e1d595104c4d9a5129}{prec0\+\_\+01ms}} = 7
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14}{movement\+\_\+phase\+\_\+state}} \{ \newline
+\mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a7060e0481896e00b3f7d20f1e8e2749a}{unavailable}} =0
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14aa82fd95db10ff25dfad39f07372ebe37}{dark}} =1
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a82f58c8125d6f043623349cf7330ef62}{stop\+\_\+then\+\_\+proceed}} =2
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a03e3f63efcce21f01897bc0583979afa}{stop\+\_\+and\+\_\+remain}} =3
+, \newline
+\mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a87c08d3cfcc8f1c4b35d27cc42281892}{pre\+\_\+movement}} =4
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14ad88202b8707e05ada4e0e40c2264acc3}{permissive\+\_\+movement\+\_\+allowed}} =5
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14ababa6a65d4933ea6229e61b20668218b}{protected\+\_\+movement\+\_\+allowed}} =6
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a1ea68c259bac2ecedc44812d4913c4d2}{permissive\+\_\+clearance}} =7
+, \newline
+\mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a909f43d0494b87359c21298b5310e4fc}{protected\+\_\+clearance}} =8
+, \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14ae7bfb5169b6040cc3adbcaa21dd1bc38}{caution\+\_\+conflicting\+\_\+traffic}} =9
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacesignal__phase__and__timing_a7a779ac32aa585dcdf0e0c132ac2b55e}\label{namespacesignal__phase__and__timing_a7a779ac32aa585dcdf0e0c132ac2b55e}} 
+\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!advisory\_speed\_type@{advisory\_speed\_type}}
+\index{advisory\_speed\_type@{advisory\_speed\_type}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}
+\doxysubsubsection{\texorpdfstring{advisory\_speed\_type}{advisory\_speed\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacesignal__phase__and__timing_a7a779ac32aa585dcdf0e0c132ac2b55e}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::advisory\+\_\+speed\+\_\+type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{none@{none}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!none@{none}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a7a779ac32aa585dcdf0e0c132ac2b55ea334c4a4c42fdb79d7ebc3e73b517e6f8}\label{namespacesignal__phase__and__timing_a7a779ac32aa585dcdf0e0c132ac2b55ea334c4a4c42fdb79d7ebc3e73b517e6f8}} 
+none&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{greenwave@{greenwave}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!greenwave@{greenwave}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a7a779ac32aa585dcdf0e0c132ac2b55ea5a8bcdee6087d7699019a81b83dd4d38}\label{namespacesignal__phase__and__timing_a7a779ac32aa585dcdf0e0c132ac2b55ea5a8bcdee6087d7699019a81b83dd4d38}} 
+greenwave&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ecodrive@{ecodrive}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!ecodrive@{ecodrive}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a7a779ac32aa585dcdf0e0c132ac2b55eaca2315ba39c3238a7dd347f765ca69f8}\label{namespacesignal__phase__and__timing_a7a779ac32aa585dcdf0e0c132ac2b55eaca2315ba39c3238a7dd347f765ca69f8}} 
+ecodrive&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{transit@{transit}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!transit@{transit}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a7a779ac32aa585dcdf0e0c132ac2b55eadcef234a574fa354c82127c50b83174a}\label{namespacesignal__phase__and__timing_a7a779ac32aa585dcdf0e0c132ac2b55eadcef234a574fa354c82127c50b83174a}} 
+transit&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 10 of file advisory\+\_\+speed.\+h.
+
+\mbox{\Hypertarget{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14}\label{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14}} 
+\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!movement\_phase\_state@{movement\_phase\_state}}
+\index{movement\_phase\_state@{movement\_phase\_state}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}
+\doxysubsubsection{\texorpdfstring{movement\_phase\_state}{movement\_phase\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+phase\+\_\+state}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{unavailable@{unavailable}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!unavailable@{unavailable}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a7060e0481896e00b3f7d20f1e8e2749a}\label{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a7060e0481896e00b3f7d20f1e8e2749a}} 
+unavailable&This state is used for unknown or error. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dark@{dark}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!dark@{dark}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14aa82fd95db10ff25dfad39f07372ebe37}\label{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14aa82fd95db10ff25dfad39f07372ebe37}} 
+dark&The signal head is dark(unlit). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{stop\_then\_proceed@{stop\_then\_proceed}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!stop\_then\_proceed@{stop\_then\_proceed}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a82f58c8125d6f043623349cf7330ef62}\label{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a82f58c8125d6f043623349cf7330ef62}} 
+stop\+\_\+then\+\_\+proceed&Often called \textquotesingle{}flashing red\textquotesingle{} in US. Driver Action\+: Stop vehicle at stope line. Do not proceed unless it is safe. Note that the right to proceed either right or left when it is safe may be contained in lane description to handle what is called a \textquotesingle{}right on red\textquotesingle{}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{stop\_and\_remain@{stop\_and\_remain}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!stop\_and\_remain@{stop\_and\_remain}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a03e3f63efcce21f01897bc0583979afa}\label{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a03e3f63efcce21f01897bc0583979afa}} 
+stop\+\_\+and\+\_\+remain&e.\+g. called \textquotesingle{}red light\textquotesingle{} in US. Driver Action\+: Stop vehicle at stop line. Do not proceed. Note that the right to proceed either right or left when it is safe may be contained in lane description to handle what is called a \textquotesingle{}right on red\textquotesingle{}/ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pre\_movement@{pre\_movement}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!pre\_movement@{pre\_movement}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a87c08d3cfcc8f1c4b35d27cc42281892}\label{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a87c08d3cfcc8f1c4b35d27cc42281892}} 
+pre\+\_\+movement&Not used in the US, red+yellow partly in EU Driver Action\+: Stop vehicle. Prepare to proceed (pending green) (Prepare for transition to green/go) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{permissive\_movement\_allowed@{permissive\_movement\_allowed}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!permissive\_movement\_allowed@{permissive\_movement\_allowed}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14ad88202b8707e05ada4e0e40c2264acc3}\label{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14ad88202b8707e05ada4e0e40c2264acc3}} 
+permissive\+\_\+movement\+\_\+allowed&Often called \textquotesingle{}permissive green\textquotesingle{} un US Driver Action\+: Proceed with caution, must yield to all conflicting traffic Conflicting traffic may be present in the intersection conflict area. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{protected\_movement\_allowed@{protected\_movement\_allowed}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!protected\_movement\_allowed@{protected\_movement\_allowed}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14ababa6a65d4933ea6229e61b20668218b}\label{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14ababa6a65d4933ea6229e61b20668218b}} 
+protected\+\_\+movement\+\_\+allowed&Often called \textquotesingle{}protected green\textquotesingle{} in US Driver Action\+: Proceed, tossing caution to the wind, in indicated (allowed) direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{permissive\_clearance@{permissive\_clearance}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!permissive\_clearance@{permissive\_clearance}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a1ea68c259bac2ecedc44812d4913c4d2}\label{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a1ea68c259bac2ecedc44812d4913c4d2}} 
+permissive\+\_\+clearance&Often called \textquotesingle{}permissive yellow\textquotesingle{} in US Driver Action\+: Prepare to stop. Proceed if unable to stop, Clear Intersection Conflicting traffic may be present in the intersection conflict area. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{protected\_clearance@{protected\_clearance}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!protected\_clearance@{protected\_clearance}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a909f43d0494b87359c21298b5310e4fc}\label{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14a909f43d0494b87359c21298b5310e4fc}} 
+protected\+\_\+clearance&Often called \textquotesingle{}protected yellow\textquotesingle{} in US Driver Action\+: Prepare to stop. Proceed if unable, in indicated direction (to connected lane) Clear intersection. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{caution\_conflicting\_traffic@{caution\_conflicting\_traffic}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!caution\_conflicting\_traffic@{caution\_conflicting\_traffic}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14ae7bfb5169b6040cc3adbcaa21dd1bc38}\label{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14ae7bfb5169b6040cc3adbcaa21dd1bc38}} 
+caution\+\_\+conflicting\+\_\+traffic&Often called \textquotesingle{}flashing yellow\textquotesingle{} in US Often used for extend periods of time Driver Action\+: Proceed with caution, Conflicting traffic may be present in the intersection conflict area. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 14 of file movement\+\_\+event.\+h.
+
+\mbox{\Hypertarget{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3}\label{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3}} 
+\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!speed\_confidence@{speed\_confidence}}
+\index{speed\_confidence@{speed\_confidence}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}
+\doxysubsubsection{\texorpdfstring{speed\_confidence}{speed\_confidence}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::speed\+\_\+confidence}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{unavailable@{unavailable}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!unavailable@{unavailable}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a7060e0481896e00b3f7d20f1e8e2749a}\label{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a7060e0481896e00b3f7d20f1e8e2749a}} 
+unavailable&Not equipped or unavailable. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pre100ms@{pre100ms}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!pre100ms@{pre100ms}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a320b82ce3b490945b9a44166dda4c7ba}\label{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a320b82ce3b490945b9a44166dda4c7ba}} 
+pre100ms&100 m/s \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{prec10ms@{prec10ms}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!prec10ms@{prec10ms}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a716e6b8626b97dab122949db63e7271b}\label{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a716e6b8626b97dab122949db63e7271b}} 
+prec10ms&10 m/s \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{prec5ms@{prec5ms}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!prec5ms@{prec5ms}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a5b6355fc130770f74728ef2fc4d95a90}\label{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a5b6355fc130770f74728ef2fc4d95a90}} 
+prec5ms&5 m/s \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{prec1ms@{prec1ms}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!prec1ms@{prec1ms}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a6b0053b71112371ba61a60740c4a91bb}\label{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a6b0053b71112371ba61a60740c4a91bb}} 
+prec1ms&1 m/s \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{prec0\_1ms@{prec0\_1ms}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!prec0\_1ms@{prec0\_1ms}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a4490a163d0d86641f45391c25865dd19}\label{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a4490a163d0d86641f45391c25865dd19}} 
+prec0\+\_\+1ms&0.\+1 m/s \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{prec0\_05ms@{prec0\_05ms}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!prec0\_05ms@{prec0\_05ms}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3aac96e4ec729c57bf5cff18c7a41736ee}\label{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3aac96e4ec729c57bf5cff18c7a41736ee}} 
+prec0\+\_\+05ms&0.\+05 m/s \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{prec0\_01ms@{prec0\_01ms}!signal\_phase\_and\_timing@{signal\_phase\_and\_timing}}\index{signal\_phase\_and\_timing@{signal\_phase\_and\_timing}!prec0\_01ms@{prec0\_01ms}}}\mbox{\Hypertarget{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a07d250079e1cc0e1d595104c4d9a5129}\label{namespacesignal__phase__and__timing_a73071ea25111b378aeca7eb3d5a91bc3a07d250079e1cc0e1d595104c4d9a5129}} 
+prec0\+\_\+01ms&0.\+01 m/s \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 17 of file advisory\+\_\+speed.\+h.
+

@@ -1,0 +1,4 @@
+<map id="streets_service::streets_configuration" name="streets_service::streets_configuration">
+<area shape="rect" id="node1" title="Streets Configuration singleton scoped object that parses manifest.json configuration file and offers..." alt="" coords="46,95,221,136"/>
+<area shape="rect" id="node2" href="$classstreets__service_1_1streets__singleton.html" title=" " alt="" coords="5,5,261,47"/>
+</map>

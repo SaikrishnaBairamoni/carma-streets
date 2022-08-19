@@ -1,0 +1,443 @@
+\hypertarget{classscheduling__service_1_1scheduling__service}{}\doxysection{scheduling\+\_\+service\+::scheduling\+\_\+service Class Reference}
+\label{classscheduling__service_1_1scheduling__service}\index{scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}}
+
+
+{\ttfamily \#include $<$scheduling\+\_\+service.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classscheduling__service_1_1scheduling__service_adf95a550d79ab7a170c42630a479b833}{scheduling\+\_\+service}} ()=default
+\begin{DoxyCompactList}\small\item\em Initialize. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classscheduling__service_1_1scheduling__service_aef21bc1adf0a4ce5e240bfdb122325e8}{$\sim$scheduling\+\_\+service}} ()
+\begin{DoxyCompactList}\small\item\em stop the consumer and producer \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classscheduling__service_1_1scheduling__service_a29432e862ffe2f710ed92bd1a7ea66dd}{initialize}} (const int sleep\+\_\+millisecs, const int int\+\_\+client\+\_\+request\+\_\+attempts)
+\begin{DoxyCompactList}\small\item\em Initialize the consumer, producer, and scheduling workers. Create a vehicle list and scheduler objects and configure them. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classscheduling__service_1_1scheduling__service_af7adc4a45f194a6aace56a3eafed61fa}{start}} ()
+\begin{DoxyCompactList}\small\item\em Create 2 threads\+: The first thread consumes status and intent message and updates the vehicle list. The second thread schedule vehicles and produce the schedule plan. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classscheduling__service_1_1scheduling__service_aa901f39ddb922a8d02955220a40d92c7}{config\+\_\+vehicle\+\_\+list}} ()
+\begin{DoxyCompactList}\small\item\em Create the vehicle list processor and configure it. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classscheduling__service_1_1scheduling__service_a13bb653277956326ecc5b11cf7342460}{config\+\_\+scheduler}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classOpenAPI_1_1OAIIntersection__info}{Open\+API\+::\+OAIIntersection\+\_\+info}} $>$ intersection\+\_\+info\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Configure the scheduler object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classscheduling__service_1_1scheduling__service_a601d2d457c04f9062773a07ce8947cff}{consume\+\_\+msg}} () const
+\begin{DoxyCompactList}\small\item\em Consume the status and intent messages via kafka consumer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classscheduling__service_1_1scheduling__service_abfdd27a14878588ed8e01c84b1152357}{consume\+\_\+spat}} () const
+\begin{DoxyCompactList}\small\item\em Consume the modified spat via kafka consumer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classscheduling__service_1_1scheduling__service_a7bdd65e11e2bd2c3d4029e2f7510f2d9}{schedule\+\_\+veh}} () const
+\begin{DoxyCompactList}\small\item\em Schedule vehicles and produce the schedule plan. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classscheduling__service_1_1scheduling__service_aedb80eb05613731a0d0192e5e3823121}{configure\+\_\+csv\+\_\+logger}} () const
+\begin{DoxyCompactList}\small\item\em Method to configure spdlog\+::logger for logging scheduling metrics into daily rotating csv file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classscheduling__service_1_1scheduling__service_a8a86cc97c1202f0ec041e659a005177a}{set\+\_\+scheduling\+\_\+worker}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classscheduling__service_1_1scheduling__worker}{scheduling\+\_\+worker}} $>$ sched\+\_\+worker)
+\begin{DoxyCompactList}\small\item\em Set the scheduling worker object for unit testing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classscheduling__service_1_1scheduling__service_ab935f5e89218b93f02ed4ba648c45349}{set\+\_\+vehicle\+\_\+list}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classstreets__vehicles_1_1vehicle__list}{streets\+\_\+vehicles\+::vehicle\+\_\+list}} $>$ veh\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Set the vehicle list object for unit testing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classscheduling__service_1_1scheduling__service_a0acbcea3c17432026aa4d871e63bdf92}{set\+\_\+vehicle\+\_\+scheduler}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1vehicle__scheduler}{streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler}} $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Set the vehicle scheduler object for unit testing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classscheduling__service_1_1scheduling__service_ad1cee628ef1dba0a569236aff1113d2a}{set\+\_\+consumer\+\_\+worker}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker}{kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker}} $>$ worker)
+\begin{DoxyCompactList}\small\item\em Set the consumer worker object for unit testing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classscheduling__service_1_1scheduling__service_a7110ab08ca6178e99bfe0d34c5b6d1a2}{set\+\_\+producer\+\_\+worker}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__producer__worker}{kafka\+\_\+clients\+::kafka\+\_\+producer\+\_\+worker}} $>$ worker)
+\begin{DoxyCompactList}\small\item\em Set the producer worker object for unit testing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classscheduling__service_1_1scheduling__service_a7f6b6ec887b1ebf100ad7b8eec4a890d}{set\+\_\+spat\+\_\+consumer\+\_\+worker}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker}{kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker}} $>$ worker)
+\begin{DoxyCompactList}\small\item\em Set the spat consumer worker object for unit testing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 26 of file scheduling\+\_\+service.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classscheduling__service_1_1scheduling__service_adf95a550d79ab7a170c42630a479b833}\label{classscheduling__service_1_1scheduling__service_adf95a550d79ab7a170c42630a479b833}} 
+\index{scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}!scheduling\_service@{scheduling\_service}}
+\index{scheduling\_service@{scheduling\_service}!scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}}
+\doxysubsubsection{\texorpdfstring{scheduling\_service()}{scheduling\_service()}}
+{\footnotesize\ttfamily scheduling\+\_\+service\+::scheduling\+\_\+service\+::scheduling\+\_\+service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Initialize. 
+
+\mbox{\Hypertarget{classscheduling__service_1_1scheduling__service_aef21bc1adf0a4ce5e240bfdb122325e8}\label{classscheduling__service_1_1scheduling__service_aef21bc1adf0a4ce5e240bfdb122325e8}} 
+\index{scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}!````~scheduling\_service@{$\sim$scheduling\_service}}
+\index{````~scheduling\_service@{$\sim$scheduling\_service}!scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}}
+\doxysubsubsection{\texorpdfstring{$\sim$scheduling\_service()}{~scheduling\_service()}}
+{\footnotesize\ttfamily scheduling\+\_\+service\+::scheduling\+\_\+service\+::$\sim$scheduling\+\_\+service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+stop the consumer and producer 
+
+
+
+Definition at line 276 of file scheduling\+\_\+service.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classscheduling__service_1_1scheduling__service_a13bb653277956326ecc5b11cf7342460}\label{classscheduling__service_1_1scheduling__service_a13bb653277956326ecc5b11cf7342460}} 
+\index{scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}!config\_scheduler@{config\_scheduler}}
+\index{config\_scheduler@{config\_scheduler}!scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}}
+\doxysubsubsection{\texorpdfstring{config\_scheduler()}{config\_scheduler()}}
+{\footnotesize\ttfamily bool scheduling\+\_\+service\+::scheduling\+\_\+service\+::config\+\_\+scheduler (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classOpenAPI_1_1OAIIntersection__info}{Open\+API\+::\+OAIIntersection\+\_\+info}} $>$}]{intersection\+\_\+info\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Configure the scheduler object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intersection\+\_\+info\+\_\+ptr} & an intersection\+\_\+info object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 138 of file scheduling\+\_\+service.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscheduling__service_1_1scheduling__service_a13bb653277956326ecc5b11cf7342460_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classscheduling__service_1_1scheduling__service_a13bb653277956326ecc5b11cf7342460_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscheduling__service_1_1scheduling__service_aa901f39ddb922a8d02955220a40d92c7}\label{classscheduling__service_1_1scheduling__service_aa901f39ddb922a8d02955220a40d92c7}} 
+\index{scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}!config\_vehicle\_list@{config\_vehicle\_list}}
+\index{config\_vehicle\_list@{config\_vehicle\_list}!scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}}
+\doxysubsubsection{\texorpdfstring{config\_vehicle\_list()}{config\_vehicle\_list()}}
+{\footnotesize\ttfamily bool scheduling\+\_\+service\+::scheduling\+\_\+service\+::config\+\_\+vehicle\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create the vehicle list processor and configure it. 
+
+
+
+Definition at line 109 of file scheduling\+\_\+service.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscheduling__service_1_1scheduling__service_aa901f39ddb922a8d02955220a40d92c7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classscheduling__service_1_1scheduling__service_aa901f39ddb922a8d02955220a40d92c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscheduling__service_1_1scheduling__service_aedb80eb05613731a0d0192e5e3823121}\label{classscheduling__service_1_1scheduling__service_aedb80eb05613731a0d0192e5e3823121}} 
+\index{scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}!configure\_csv\_logger@{configure\_csv\_logger}}
+\index{configure\_csv\_logger@{configure\_csv\_logger}!scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}}
+\doxysubsubsection{\texorpdfstring{configure\_csv\_logger()}{configure\_csv\_logger()}}
+{\footnotesize\ttfamily void scheduling\+\_\+service\+::scheduling\+\_\+service\+::configure\+\_\+csv\+\_\+logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method to configure spdlog\+::logger for logging scheduling metrics into daily rotating csv file. 
+
+
+
+Definition at line 255 of file scheduling\+\_\+service.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscheduling__service_1_1scheduling__service_aedb80eb05613731a0d0192e5e3823121_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{classscheduling__service_1_1scheduling__service_aedb80eb05613731a0d0192e5e3823121_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscheduling__service_1_1scheduling__service_a601d2d457c04f9062773a07ce8947cff}\label{classscheduling__service_1_1scheduling__service_a601d2d457c04f9062773a07ce8947cff}} 
+\index{scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}!consume\_msg@{consume\_msg}}
+\index{consume\_msg@{consume\_msg}!scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}}
+\doxysubsubsection{\texorpdfstring{consume\_msg()}{consume\_msg()}}
+{\footnotesize\ttfamily void scheduling\+\_\+service\+::scheduling\+\_\+service\+::consume\+\_\+msg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consume the status and intent messages via kafka consumer. 
+
+
+
+Definition at line 169 of file scheduling\+\_\+service.\+cpp.
+
+\mbox{\Hypertarget{classscheduling__service_1_1scheduling__service_abfdd27a14878588ed8e01c84b1152357}\label{classscheduling__service_1_1scheduling__service_abfdd27a14878588ed8e01c84b1152357}} 
+\index{scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}!consume\_spat@{consume\_spat}}
+\index{consume\_spat@{consume\_spat}!scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}}
+\doxysubsubsection{\texorpdfstring{consume\_spat()}{consume\_spat()}}
+{\footnotesize\ttfamily void scheduling\+\_\+service\+::scheduling\+\_\+service\+::consume\+\_\+spat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consume the modified spat via kafka consumer. 
+
+
+
+Definition at line 189 of file scheduling\+\_\+service.\+cpp.
+
+\mbox{\Hypertarget{classscheduling__service_1_1scheduling__service_a29432e862ffe2f710ed92bd1a7ea66dd}\label{classscheduling__service_1_1scheduling__service_a29432e862ffe2f710ed92bd1a7ea66dd}} 
+\index{scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}!initialize@{initialize}}
+\index{initialize@{initialize}!scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily bool scheduling\+\_\+service\+::scheduling\+\_\+service\+::initialize (\begin{DoxyParamCaption}\item[{const int}]{sleep\+\_\+millisecs,  }\item[{const int}]{int\+\_\+client\+\_\+request\+\_\+attempts }\end{DoxyParamCaption})}
+
+
+
+Initialize the consumer, producer, and scheduling workers. Create a vehicle list and scheduler objects and configure them. 
+
+
+
+Definition at line 5 of file scheduling\+\_\+service.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscheduling__service_1_1scheduling__service_a29432e862ffe2f710ed92bd1a7ea66dd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classscheduling__service_1_1scheduling__service_a29432e862ffe2f710ed92bd1a7ea66dd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscheduling__service_1_1scheduling__service_a7bdd65e11e2bd2c3d4029e2f7510f2d9}\label{classscheduling__service_1_1scheduling__service_a7bdd65e11e2bd2c3d4029e2f7510f2d9}} 
+\index{scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}!schedule\_veh@{schedule\_veh}}
+\index{schedule\_veh@{schedule\_veh}!scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}}
+\doxysubsubsection{\texorpdfstring{schedule\_veh()}{schedule\_veh()}}
+{\footnotesize\ttfamily void scheduling\+\_\+service\+::scheduling\+\_\+service\+::schedule\+\_\+veh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Schedule vehicles and produce the schedule plan. 
+
+
+
+Definition at line 211 of file scheduling\+\_\+service.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscheduling__service_1_1scheduling__service_a7bdd65e11e2bd2c3d4029e2f7510f2d9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscheduling__service_1_1scheduling__service_ad1cee628ef1dba0a569236aff1113d2a}\label{classscheduling__service_1_1scheduling__service_ad1cee628ef1dba0a569236aff1113d2a}} 
+\index{scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}!set\_consumer\_worker@{set\_consumer\_worker}}
+\index{set\_consumer\_worker@{set\_consumer\_worker}!scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}}
+\doxysubsubsection{\texorpdfstring{set\_consumer\_worker()}{set\_consumer\_worker()}}
+{\footnotesize\ttfamily void scheduling\+\_\+service\+::scheduling\+\_\+service\+::set\+\_\+consumer\+\_\+worker (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker}{kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker}} $>$}]{worker }\end{DoxyParamCaption})}
+
+
+
+Set the consumer worker object for unit testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worker} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 304 of file scheduling\+\_\+service.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{classscheduling__service_1_1scheduling__service_ad1cee628ef1dba0a569236aff1113d2a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscheduling__service_1_1scheduling__service_a7110ab08ca6178e99bfe0d34c5b6d1a2}\label{classscheduling__service_1_1scheduling__service_a7110ab08ca6178e99bfe0d34c5b6d1a2}} 
+\index{scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}!set\_producer\_worker@{set\_producer\_worker}}
+\index{set\_producer\_worker@{set\_producer\_worker}!scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}}
+\doxysubsubsection{\texorpdfstring{set\_producer\_worker()}{set\_producer\_worker()}}
+{\footnotesize\ttfamily void scheduling\+\_\+service\+::scheduling\+\_\+service\+::set\+\_\+producer\+\_\+worker (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__producer__worker}{kafka\+\_\+clients\+::kafka\+\_\+producer\+\_\+worker}} $>$}]{worker }\end{DoxyParamCaption})}
+
+
+
+Set the producer worker object for unit testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worker} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 308 of file scheduling\+\_\+service.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{classscheduling__service_1_1scheduling__service_a7110ab08ca6178e99bfe0d34c5b6d1a2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscheduling__service_1_1scheduling__service_a8a86cc97c1202f0ec041e659a005177a}\label{classscheduling__service_1_1scheduling__service_a8a86cc97c1202f0ec041e659a005177a}} 
+\index{scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}!set\_scheduling\_worker@{set\_scheduling\_worker}}
+\index{set\_scheduling\_worker@{set\_scheduling\_worker}!scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}}
+\doxysubsubsection{\texorpdfstring{set\_scheduling\_worker()}{set\_scheduling\_worker()}}
+{\footnotesize\ttfamily void scheduling\+\_\+service\+::scheduling\+\_\+service\+::set\+\_\+scheduling\+\_\+worker (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classscheduling__service_1_1scheduling__worker}{scheduling\+\_\+worker}} $>$}]{sched\+\_\+worker }\end{DoxyParamCaption})}
+
+
+
+Set the scheduling worker object for unit testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched\+\_\+worker} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 292 of file scheduling\+\_\+service.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{classscheduling__service_1_1scheduling__service_a8a86cc97c1202f0ec041e659a005177a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscheduling__service_1_1scheduling__service_a7f6b6ec887b1ebf100ad7b8eec4a890d}\label{classscheduling__service_1_1scheduling__service_a7f6b6ec887b1ebf100ad7b8eec4a890d}} 
+\index{scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}!set\_spat\_consumer\_worker@{set\_spat\_consumer\_worker}}
+\index{set\_spat\_consumer\_worker@{set\_spat\_consumer\_worker}!scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}}
+\doxysubsubsection{\texorpdfstring{set\_spat\_consumer\_worker()}{set\_spat\_consumer\_worker()}}
+{\footnotesize\ttfamily void scheduling\+\_\+service\+::scheduling\+\_\+service\+::set\+\_\+spat\+\_\+consumer\+\_\+worker (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker}{kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker}} $>$}]{worker }\end{DoxyParamCaption})}
+
+
+
+Set the spat consumer worker object for unit testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worker} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 312 of file scheduling\+\_\+service.\+cpp.
+
+\mbox{\Hypertarget{classscheduling__service_1_1scheduling__service_ab935f5e89218b93f02ed4ba648c45349}\label{classscheduling__service_1_1scheduling__service_ab935f5e89218b93f02ed4ba648c45349}} 
+\index{scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}!set\_vehicle\_list@{set\_vehicle\_list}}
+\index{set\_vehicle\_list@{set\_vehicle\_list}!scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}}
+\doxysubsubsection{\texorpdfstring{set\_vehicle\_list()}{set\_vehicle\_list()}}
+{\footnotesize\ttfamily void scheduling\+\_\+service\+::scheduling\+\_\+service\+::set\+\_\+vehicle\+\_\+list (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classstreets__vehicles_1_1vehicle__list}{streets\+\_\+vehicles\+::vehicle\+\_\+list}} $>$}]{veh\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Set the vehicle list object for unit testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em veh\+\_\+list} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 296 of file scheduling\+\_\+service.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classscheduling__service_1_1scheduling__service_ab935f5e89218b93f02ed4ba648c45349_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscheduling__service_1_1scheduling__service_a0acbcea3c17432026aa4d871e63bdf92}\label{classscheduling__service_1_1scheduling__service_a0acbcea3c17432026aa4d871e63bdf92}} 
+\index{scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}!set\_vehicle\_scheduler@{set\_vehicle\_scheduler}}
+\index{set\_vehicle\_scheduler@{set\_vehicle\_scheduler}!scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}}
+\doxysubsubsection{\texorpdfstring{set\_vehicle\_scheduler()}{set\_vehicle\_scheduler()}}
+{\footnotesize\ttfamily void scheduling\+\_\+service\+::scheduling\+\_\+service\+::set\+\_\+vehicle\+\_\+scheduler (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1vehicle__scheduler}{streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler}} $>$}]{scheduler }\end{DoxyParamCaption})}
+
+
+
+Set the vehicle scheduler object for unit testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scheduler} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 300 of file scheduling\+\_\+service.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classscheduling__service_1_1scheduling__service_a0acbcea3c17432026aa4d871e63bdf92_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscheduling__service_1_1scheduling__service_af7adc4a45f194a6aace56a3eafed61fa}\label{classscheduling__service_1_1scheduling__service_af7adc4a45f194a6aace56a3eafed61fa}} 
+\index{scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}!start@{start}}
+\index{start@{start}!scheduling\_service::scheduling\_service@{scheduling\_service::scheduling\_service}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void scheduling\+\_\+service\+::scheduling\+\_\+service\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create 2 threads\+: The first thread consumes status and intent message and updates the vehicle list. The second thread schedule vehicles and produce the schedule plan. 
+
+
+
+Definition at line 94 of file scheduling\+\_\+service.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscheduling__service_1_1scheduling__service_af7adc4a45f194a6aace56a3eafed61fa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classscheduling__service_1_1scheduling__service_af7adc4a45f194a6aace56a3eafed61fa_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+scheduling\+\_\+service/include/\mbox{\hyperlink{scheduling__service_8h}{scheduling\+\_\+service.\+h}}\item 
+scheduling\+\_\+service/src/\mbox{\hyperlink{scheduling__service_8cpp}{scheduling\+\_\+service.\+cpp}}\end{DoxyCompactItemize}

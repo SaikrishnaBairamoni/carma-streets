@@ -1,0 +1,7 @@
+<map id="TEST_F" name="TEST_F">
+<area shape="rect" id="node1" title=" " alt="" coords="5,140,75,167"/>
+<area shape="rect" id="node2" href="$classtraffic__signal__controller__service_1_1tsc__service.html#ac8b524b54e3db0a25765546e2c136dd2" title="Initialize Kafka SPaT producer." alt="" coords="123,5,307,61"/>
+<area shape="rect" id="node3" href="$classtraffic__signal__controller__service_1_1tsc__service.html#a54e9845c840c058c682e215fe39a6e0c" title="Initialize SPaT pointer with intersection name, intersection id and phase number to signal group mapp..." alt="" coords="127,85,302,141"/>
+<area shape="rect" id="node4" href="$classtraffic__signal__controller__service_1_1tsc__service.html#a470c3a6c64e310bc4ac0da205a2aeafb" title="Initialize SPaT Worker which is responsible for standing up UDP Socket Listener and consuming Traffic..." alt="" coords="127,165,302,221"/>
+<area shape="rect" id="node5" href="$classtraffic__signal__controller__service_1_1tsc__service.html#aa4fb7763e7ae8b9e630fd7fa10bc2479" title="Method to receive UDP data from traffic signal controller and broadcast spat JSON data to the carma&#45;s..." alt="" coords="127,245,302,301"/>
+</map>

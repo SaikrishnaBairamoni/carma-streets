@@ -1,0 +1,181 @@
+\hypertarget{md_intersection_model_readme_autotoc_md21}{}\doxysection{A Library to read lanelet2 osm map}\label{md_intersection_model_readme_autotoc_md21}
+This library will read and lanelet2 osm map and take in a configurable bounding box to mark the intersection being managed. The library will store the appropriate lanelet2 objects inside this bound box including entry lanes into the intersection, linking lanes through the intersection and any regulatory elements (stop bars, stop signs, traffic lights, speed limits) inside the intersection. The \mbox{\hyperlink{namespaceintersection__model}{intersection\+\_\+model}} had methods to translate GPS location data into lane specific information like lanelet id and distance to the end of the lane for services like the message\+\_\+service to provide lane. The \mbox{\hyperlink{namespaceintersection__model}{intersection\+\_\+model}} will also return the intersection lanelet2 objects to services that need them to make sense of the lane specific updates the message\+\_\+service provides.\hypertarget{md_intersection_model_readme_autotoc_md22}{}\doxysubsection{Steps to Build intersection\+\_\+model locally}\label{md_intersection_model_readme_autotoc_md22}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{apt-\/get update  \&\& apt-\/get install -\/y cmake libboost1.65-\/all-\/dev git autotools-\/dev automake sqlite3 libsqlite3-\/dev curl libpugixml-\/dev libgeographic-\/dev qtbase5-\/dev qtbase5-\/dev-\/tools libqhttpengine-\/dev libssl-\/dev}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Clone and install googletest, librdkafka, spdlog and rapidjson in the ext/ directory}
+\DoxyCodeLine{cd carma-\/streets root directory}
+\DoxyCodeLine{mkdir ext/}
+\DoxyCodeLine{cd ext/}
+\DoxyCodeLine{git clone https://github.com/google/googletest/}
+\DoxyCodeLine{cd googletest/}
+\DoxyCodeLine{cmake .}
+\DoxyCodeLine{make}
+\DoxyCodeLine{sudo make install}
+\DoxyCodeLine{}
+\DoxyCodeLine{cd /ext}
+\DoxyCodeLine{git clone https://github.com/edenhill/librdkafka}
+\DoxyCodeLine{cd  librdkafka/}
+\DoxyCodeLine{./configure -\/-\/prefix=/usr}
+\DoxyCodeLine{make}
+\DoxyCodeLine{sudo make install}
+\DoxyCodeLine{}
+\DoxyCodeLine{cd ext/}
+\DoxyCodeLine{git clone https://github.com/gabime/spdlog.git}
+\DoxyCodeLine{cd spdlog/}
+\DoxyCodeLine{mkdir build }
+\DoxyCodeLine{cd  build}
+\DoxyCodeLine{cmake .. \&\& make -\/j}
+\DoxyCodeLine{sudo make install}
+\DoxyCodeLine{}
+\DoxyCodeLine{cd ext}
+\DoxyCodeLine{git clone  https://github.com/Tencent/rapidjson}
+\DoxyCodeLine{cd  rapidjson/}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{cmake .. \&\& make -\/j}
+\DoxyCodeLine{sudo make install}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Install kafka-\/clients library}
+\DoxyCodeLine{cd carma-\/streets/kafka\_clients}
+\DoxyCodeLine{mkdir build/}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{make ..}
+\DoxyCodeLine{make}
+\DoxyCodeLine{sudo make install}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Install PROJ, a package for coordinate transformations}
+\DoxyCodeLine{sudo git clone https://github.com/OSGeo/PROJ.git   carma-\/streets/ext/PROJ -\/-\/branch 6.2.1 \&\& \(\backslash\)}
+\DoxyCodeLine{        cd /home/carma-\/streets/PROJ \&\& \(\backslash\)}
+\DoxyCodeLine{        sudo ./autogen.sh \&\& \(\backslash\)}
+\DoxyCodeLine{        sudo ./configure \&\& \(\backslash\)}
+\DoxyCodeLine{        sudo make \&\& \(\backslash\)}
+\DoxyCodeLine{        sudo make install}
+\DoxyCodeLine{        }
+\DoxyCodeLine{\# Download a cmake module for PROJ}
+\DoxyCodeLine{cd /usr/share/cmake-\/3.10/Modules \&\& sudo curl -\/O https://raw.githubusercontent.com/mloskot/cmake-\/modules/master/modules/FindPROJ4.cmake}
+\DoxyCodeLine{}
+\DoxyCodeLine{ENV DEBIAN\_FRONTEND=noninteractive}
+\DoxyCodeLine{}
+\DoxyCodeLine{sudo apt update \&\& \(\backslash\)}
+\DoxyCodeLine{    sudo apt install -\/y lsb-\/release \&\& \(\backslash\)}
+\DoxyCodeLine{    sudo sh -\/c 'echo "{}deb http://packages.ros.org/ros/ubuntu \$(lsb\_release -\/sc) main"{} > /etc/apt/sources.list.d/ros-\/latest.list' \&\& \(\backslash\)}
+\DoxyCodeLine{    curl -\/s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-\/key add -\/}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Install CARMA Ready Lanelet2}
+\DoxyCodeLine{\# Lanelet2 is written on the assumption ROS exists. Therefore some special steps are needed for compilation}
+\DoxyCodeLine{\# First catkin\_make must be installed. The version needed is only available with the ros-\/melodic-\/catkin build}
+\DoxyCodeLine{\# This means the ros source list must be added to sudo to allow this installation}
+\DoxyCodeLine{\# Additionally, the python-\/rospkg package managment tool is required for catkin to work properly }
+\DoxyCodeLine{RUN sudo DEBIAN\_FRONTEND=noninteractive apt update \&\& \(\backslash\)}
+\DoxyCodeLine{    sudo DEBIAN\_FRONTEND=noninteractive apt install -\/y ros-\/melodic-\/catkin \&\& \(\backslash\)}
+\DoxyCodeLine{    echo "{}source /opt/ros/melodic/setup.bash"{} >> /root/.bashrc \&\& \(\backslash\)}
+\DoxyCodeLine{    echo "{}source /home/carma-\/streets/install/setup.bash"{} >> /root/.bashrc}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Once catkin is installed only the required lanelet2 packages will be pulled in from carma}
+\DoxyCodeLine{\# NOTE: The lanelet2\_python package requires additional dependencies that have not yet been installed so it is removed for now}
+\DoxyCodeLine{cd carma-\/streets/}
+\DoxyCodeLine{mkdir carma\_lanelet2 \&\& \(\backslash\)}
+\DoxyCodeLine{    cd carma\_lanelet2 \&\& \(\backslash\)}
+\DoxyCodeLine{    mkdir src \&\& \(\backslash\)}
+\DoxyCodeLine{    cd src \&\& \(\backslash\)}
+\DoxyCodeLine{    git init \&\& \(\backslash\)}
+\DoxyCodeLine{    echo "{}temp"{} \&\& \(\backslash\)}
+\DoxyCodeLine{    git remote add origin -\/f https://github.com/usdot-\/fhwa-\/stol/autoware.ai.git \&\& \(\backslash\)}
+\DoxyCodeLine{    git config core.sparsecheckout true \&\& \(\backslash\)}
+\DoxyCodeLine{    echo "{}common/hardcoded\_params/*"{} >> .git/info/sparse-\/checkout \&\& \(\backslash\)}
+\DoxyCodeLine{    echo "{}common/lanelet2\_extension/*"{} >> .git/info/sparse-\/checkout \&\& \(\backslash\)}
+\DoxyCodeLine{    echo "{}lanelet2/*"{} >> .git/info/sparse-\/checkout \&\& \(\backslash\)}
+\DoxyCodeLine{    echo "{}mrt\_cmake\_modules/*"{} >> .git/info/sparse-\/checkout \&\& \(\backslash\)}
+\DoxyCodeLine{    git pull -\/-\/depth 1 origin refactor\_lanelet2\_extension \&\& \(\backslash\)}
+\DoxyCodeLine{    git checkout refactor\_lanelet2\_extension \&\& \(\backslash\)}
+\DoxyCodeLine{    rm -\/r lanelet2/lanelet2\_python \&\& \(\backslash\)}
+\DoxyCodeLine{    rm -\/r lanelet2/lanelet2\_examples}
+\DoxyCodeLine{}
+\DoxyCodeLine{cd carma\_lanelet2/}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# In order to trick lanelet2 into building the ROS\_VERSION environment variable must be set}
+\DoxyCodeLine{\# In order to fully decouple lanelet2\_extension from ros the LANELET2\_EXTENSION\_LOGGER\_TYPE environment variable must be set}
+\DoxyCodeLine{source /opt/ros/melodic/setup.bash \&\& \(\backslash\)}
+\DoxyCodeLine{    sudo DEBIAN\_FRONTEND=noninteractive apt-\/get install -\/y python-\/rospkg \&\& \(\backslash\)}
+\DoxyCodeLine{    sudo DEBIAN\_FRONTEND=noninteractive apt-\/get install -\/y libeigen3-\/dev \&\& \(\backslash\)}
+\DoxyCodeLine{    ROS\_VERSION=1 LANELET2\_EXTENSION\_LOGGER\_TYPE=1 catkin\_make install}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Install intersection\_model}
+\DoxyCodeLine{cd carma-\/streets/intersection\_model}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{RUN cmake ..}
+\DoxyCodeLine{RUN make}
+
+\end{DoxyCode}
+ \hypertarget{md_intersection_model_readme_autotoc_md23}{}\doxysubsection{Steps to Build intersection\+\_\+model using Docker}\label{md_intersection_model_readme_autotoc_md23}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Navigate to /carma-\/streets/ directory}
+\DoxyCodeLine{docker build -\/t intersection\_model -\/f intersection\_model/Dockerfile .}
+
+\end{DoxyCode}
+ \hypertarget{md_intersection_model_readme_autotoc_md24}{}\doxysubsection{API definition}\label{md_intersection_model_readme_autotoc_md24}
+
+\begin{DoxyEnumerate}
+\item intersection model is a service used the expose intersection geometry information from MAP and lanelet2 osm map to carma-\/streets services that require this information via REST server.
+\item Intersection Geometry consists of list of entry, link, and departure lanelets which have the following fields\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{intersection\_info:}
+\DoxyCodeLine{      type: object}
+\DoxyCodeLine{      properties:}
+\DoxyCodeLine{        id:}
+\DoxyCodeLine{          type: integer}
+\DoxyCodeLine{        name:}
+\DoxyCodeLine{          type: string}
+\DoxyCodeLine{        entry\_lanelets:}
+\DoxyCodeLine{          \$ref: "{}\#/components/schemas/lanelet\_array"{}}
+\DoxyCodeLine{        link\_lanelets:}
+\DoxyCodeLine{          \$ref: "{}\#/components/schemas/lanelet\_array"{}}
+\DoxyCodeLine{        departure\_lanelets:}
+\DoxyCodeLine{          \$ref: "{}\#/components/schemas/lanelet\_array"{}}
+\DoxyCodeLine{        }
+\DoxyCodeLine{lanelet\_array:}
+\DoxyCodeLine{    description: The array of lanelets}
+\DoxyCodeLine{    type: array}
+\DoxyCodeLine{    items:}
+\DoxyCodeLine{        \$ref: "{}\#/components/schemas/lanelet\_info"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{lanelet\_info:}
+\DoxyCodeLine{    description: The information of lanelet }
+\DoxyCodeLine{    type: object}
+\DoxyCodeLine{    properties:}
+\DoxyCodeLine{      id:}
+\DoxyCodeLine{        type: integer}
+\DoxyCodeLine{      speed\_limit:}
+\DoxyCodeLine{        type: number}
+\DoxyCodeLine{        description: Unit of measure is m/s}
+\DoxyCodeLine{      conflict\_lanelet\_ids:}
+\DoxyCodeLine{        type: array}
+\DoxyCodeLine{        items:}
+\DoxyCodeLine{          type: integer}
+\DoxyCodeLine{        description: List of unique identifers for lanelets that have conflicts}
+\DoxyCodeLine{      length:}
+\DoxyCodeLine{        type: number}
+\DoxyCodeLine{        description: The length of lanelet. Unit of measure is meter}
+\DoxyCodeLine{      turn\_direction:}
+\DoxyCodeLine{        type: string}
+\DoxyCodeLine{        description: Turn direction of intersection lane}
+\DoxyCodeLine{      signal\_group\_id: }
+\DoxyCodeLine{        type: integer}
+\DoxyCodeLine{        description: The matching signal group send by the SPAT message for this lanelet}
+\DoxyCodeLine{      connecting\_lanelet\_ids:}
+\DoxyCodeLine{        description: List of unique identifers for following lanelets that are connecting the depature and entry lanelets}
+\DoxyCodeLine{        type: array}
+\DoxyCodeLine{        items:}
+\DoxyCodeLine{          type: integer}
+
+\end{DoxyCode}
+
+\item Intesection model handler and router classes inherit from the default handler and router classes from the generated library in streets\+\_\+utils/streets\+\_\+api folder. 
+\end{DoxyEnumerate}\hypertarget{md_intersection_model_readme_autotoc_md25}{}\doxysubsection{Notes}\label{md_intersection_model_readme_autotoc_md25}
+When running unit test for the intersection model, making sure the correct osm file is upload under the \mbox{\hyperlink{namespaceintersection__model}{intersection\+\_\+model}} directory. 

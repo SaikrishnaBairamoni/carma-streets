@@ -1,0 +1,30 @@
+<map id="message_services::services::vehicle_status_intent_service::start" name="message_services::services::vehicle_status_intent_service::start">
+<area shape="rect" id="node1" title="initialize variables and call run() methods to spin up threads." alt="" coords="5,756,209,812"/>
+<area shape="rect" id="node2" href="$classmessage__services_1_1services_1_1vehicle__status__intent__service.html#ad24055517d5aaa2f6ea44b7f35f3e0e9" title="Creating and running threads. Each thread is acting as consumer or producer to consume or produce mes..." alt="" coords="257,756,461,812"/>
+<area shape="rect" id="node3" href="$classmessage__services_1_1services_1_1vehicle__status__intent__service.html#a3e4969a209c1a53596fff646a47fe34b" title="Generate the vehicle status and intent message based on the latest bsm , MobilityOperation and Mobili..." alt="" coords="513,749,717,819"/>
+<area shape="rect" id="node4" href="$classmessage__services_1_1models_1_1mobilityoperation.html#a556c84b1faf40bbd5ec80daf36312ff6" title=" " alt="" coords="771,5,991,61"/>
+<area shape="rect" id="node6" href="$classmessage__services_1_1models_1_1mobilityoperation.html#af120e50b8d8d7609cfba3ff620d34f82" title=" " alt="" coords="769,86,992,127"/>
+<area shape="rect" id="node27" href="$classmessage__services_1_1models_1_1mobilityoperation.html#abb41d37473812aedacd229dc295d098b" title=" " alt="" coords="509,844,721,900"/>
+<area shape="rect" id="node28" href="$classmessage__services_1_1models_1_1mobilityoperation.html#af4081f414e3a8a3515f1191dc91811e3" title=" " alt="" coords="509,924,721,980"/>
+<area shape="rect" id="node5" href="$classmessage__services_1_1models_1_1bsm.html#ac9119ef3e4a5d64b493f49f06353b9d8" title=" " alt="" coords="781,633,980,674"/>
+<area shape="rect" id="node7" href="$classmessage__services_1_1models_1_1mobilitypath.html#a5c2a26862cf57b6ecf5a925f877ab5dc" title=" " alt="" coords="781,698,980,739"/>
+<area shape="rect" id="node8" href="$classmessage__services_1_1models_1_1mobilitypath.html#a120136307c1694b847f330a0b9ac046c" title=" " alt="" coords="777,763,984,805"/>
+<area shape="rect" id="node9" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#aaf76a35b3f6f0d7d5fa05baf753a309e" title=" " alt="" coords="781,829,980,885"/>
+<area shape="rect" id="node10" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a10b1b2d7aed2fc9206f3255319c6bc6e" title=" " alt="" coords="781,909,980,965"/>
+<area shape="rect" id="node11" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a29973042d25f00d7a6ae4274199efaae" title=" " alt="" coords="781,989,980,1045"/>
+<area shape="rect" id="node12" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a3fd11ec19fb3a5b14faacfca1a776bb6" title=" " alt="" coords="781,1069,980,1125"/>
+<area shape="rect" id="node13" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a6974225b7b4b7c54260f1d4c376dd533" title=" " alt="" coords="781,1149,980,1205"/>
+<area shape="rect" id="node14" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#aa1e269c8873f40dee9ec438b3b34fc96" title=" " alt="" coords="781,1229,980,1285"/>
+<area shape="rect" id="node15" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a84ab6a699bf963ea2777278847561853" title=" " alt="" coords="781,1309,980,1365"/>
+<area shape="rect" id="node16" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a9865793f68579515f64b02b5994c7402" title=" " alt="" coords="781,1389,980,1445"/>
+<area shape="rect" id="node17" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a75a4999e0b08e190076f4ffbc1520055" title=" " alt="" coords="781,1469,980,1525"/>
+<area shape="rect" id="node18" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a86407fd5aa5bc140dfe4eeb58857c402" title=" " alt="" coords="781,1549,980,1605"/>
+<area shape="rect" id="node19" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#ae8b641c77189056ae6888378c25c1ba7" title=" " alt="" coords="781,1629,980,1685"/>
+<area shape="rect" id="node20" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a1961108c1b43e7888913dcfa719429ce" title=" " alt="" coords="781,1709,980,1765"/>
+<area shape="rect" id="node21" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a9a2f1a0e8d094c574e458614cc4ca6a0" title=" " alt="" coords="781,152,980,208"/>
+<area shape="rect" id="node22" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a1425e23366059f0006c7e86bafed6a33" title=" " alt="" coords="781,232,980,288"/>
+<area shape="rect" id="node23" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a282954fce7bc32848e522bbba00396b7" title=" " alt="" coords="781,312,980,368"/>
+<area shape="rect" id="node24" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a2b58b6a7934632f68810871d4374f9de" title=" " alt="" coords="781,392,980,448"/>
+<area shape="rect" id="node25" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a2cefe1ed615e057a55c6fd32b85a2066" title=" " alt="" coords="781,472,980,528"/>
+<area shape="rect" id="node26" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a5355465311705ba972a13fa48de3634a" title=" " alt="" coords="781,552,980,608"/>
+</map>

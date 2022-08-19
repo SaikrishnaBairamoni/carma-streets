@@ -1,0 +1,6 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node1" title=" " alt="" coords="5,46,60,73"/>
+<area shape="rect" id="node2" href="$classsignal__opt__service_1_1signal__opt__service.html#ac5270550fc00e6e7b4f7822fcac522dc" title="Initialize the consumer and producer configurations." alt="" coords="108,31,259,87"/>
+<area shape="rect" id="node3" href="$classstreets__service_1_1streets__configuration.html#ab33a5d183c0ca2b2f0d757f5466f200b" title="Retreive configuration parameter integer value with provided name." alt="" coords="317,5,530,47"/>
+<area shape="rect" id="node4" href="$classstreets__service_1_1streets__configuration.html#a03603871626201e07690effb9f2440bf" title="Retreive configuration parameter string value with provided name." alt="" coords="307,71,540,112"/>
+</map>

@@ -1,0 +1,39 @@
+\hypertarget{vehicle__sorting_8h}{}\doxysection{streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/include/vehicle\+\_\+sorting.h File Reference}
+\label{vehicle__sorting_8h}\index{streets\_utils/streets\_vehicle\_scheduler/include/vehicle\_sorting.h@{streets\_utils/streets\_vehicle\_scheduler/include/vehicle\_sorting.h}}
+{\ttfamily \#include \char`\"{}vehicle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}scheduling\+\_\+exception.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}intersection\+\_\+schedule.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}all\+\_\+stop\+\_\+intersection\+\_\+schedule.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for vehicle\+\_\+sorting.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vehicle__sorting_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vehicle__sorting_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacestreets__vehicle__scheduler}{streets\+\_\+vehicle\+\_\+scheduler}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacestreets__vehicle__scheduler_aa9f946d7c588b2697fd379fbed72f382}{streets\+\_\+vehicle\+\_\+scheduler\+::departure\+\_\+position\+\_\+comparator}} (const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&prev\+\_\+veh, const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&next\+\_\+veh)
+\begin{DoxyCompactList}\small\item\em Comparator for vehicle collections. Used for sorting vehicle objects in a collection in ascending order with respect to their departure position value. Values lower than one are treated as unset and order last after the largest positive departure position. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacestreets__vehicle__scheduler_a62007ad8cbd331963378ff836d2ce767}{streets\+\_\+vehicle\+\_\+scheduler\+::st\+\_\+comparator}} (const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&prev\+\_\+veh, const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&next\+\_\+veh)
+\begin{DoxyCompactList}\small\item\em Comparator for vehicle collections. Used for sorting vehicle objects in a collection in ascending order with respect to their stopping time value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacestreets__vehicle__scheduler_ab550673e6a269f9f374ca3ca7ff6ba82}{streets\+\_\+vehicle\+\_\+scheduler\+::distance\+\_\+comparator}} (const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&prev\+\_\+veh, const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&next\+\_\+veh)
+\begin{DoxyCompactList}\small\item\em Comparator for vehicle collections. Used for sorting vehicle objects in a collection in ascending order with respect to their distance value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacestreets__vehicle__scheduler_ab6598f6bcdf2edaadecc3f4b68debb66}{streets\+\_\+vehicle\+\_\+scheduler\+::delay\+\_\+comparator}} (const std\+::shared\+\_\+ptr$<$ all\+\_\+stop\+\_\+intersection\+\_\+schedule $>$ \&prev\+\_\+sched, const std\+::shared\+\_\+ptr$<$ all\+\_\+stop\+\_\+intersection\+\_\+schedule $>$ \&next\+\_\+sched)
+\begin{DoxyCompactList}\small\item\em Comparator for \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}} collections. Used for sorting \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}} objects in a collection in ascending order with respect to their delay value. \end{DoxyCompactList}\end{DoxyCompactItemize}

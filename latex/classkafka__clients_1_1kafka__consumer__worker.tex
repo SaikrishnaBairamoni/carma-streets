@@ -1,0 +1,168 @@
+\hypertarget{classkafka__clients_1_1kafka__consumer__worker}{}\doxysection{kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker Class Reference}
+\label{classkafka__clients_1_1kafka__consumer__worker}\index{kafka\_clients::kafka\_consumer\_worker@{kafka\_clients::kafka\_consumer\_worker}}
+
+
+{\ttfamily \#include $<$kafka\+\_\+consumer\+\_\+worker.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker_adf3002f09100c517c7b89f822040dc1c}{kafka\+\_\+consumer\+\_\+worker}} (const std\+::string \&broker\+\_\+str, const std\+::string \&topic\+\_\+str, const std\+::string \&group\+\_\+id, int64\+\_\+t cur\+\_\+offset=0, int32\+\_\+t partition=0)
+\item 
+bool \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker_acf1e722c898d99c45c54cb16ba50d1b0}{init}} ()
+\item 
+const char $\ast$ \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker_a3578a2abd82b20715659c9784a43b035}{consume}} (int timeout\+\_\+ms)
+\item 
+void \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker_a4187daea3df819ac26e6efc65da6631d}{subscribe}} ()
+\item 
+void \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker_a43c96012dc78c2deaf7aad1cf2f7e94c}{stop}} ()
+\item 
+void \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker_a9ed1c1586aadc2b41a0d7605f6b90dc9}{print\+Curr\+Conf}} ()
+\item 
+bool \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker_a5e1fa977ccf844b1e8d9df7d45956422}{is\+\_\+running}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 112 of file kafka\+\_\+consumer\+\_\+worker.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classkafka__clients_1_1kafka__consumer__worker_adf3002f09100c517c7b89f822040dc1c}\label{classkafka__clients_1_1kafka__consumer__worker_adf3002f09100c517c7b89f822040dc1c}} 
+\index{kafka\_clients::kafka\_consumer\_worker@{kafka\_clients::kafka\_consumer\_worker}!kafka\_consumer\_worker@{kafka\_consumer\_worker}}
+\index{kafka\_consumer\_worker@{kafka\_consumer\_worker}!kafka\_clients::kafka\_consumer\_worker@{kafka\_clients::kafka\_consumer\_worker}}
+\doxysubsubsection{\texorpdfstring{kafka\_consumer\_worker()}{kafka\_consumer\_worker()}}
+{\footnotesize\ttfamily kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker\+::kafka\+\_\+consumer\+\_\+worker (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{broker\+\_\+str,  }\item[{const std\+::string \&}]{topic\+\_\+str,  }\item[{const std\+::string \&}]{group\+\_\+id,  }\item[{int64\+\_\+t}]{cur\+\_\+offset = {\ttfamily 0},  }\item[{int32\+\_\+t}]{partition = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file kafka\+\_\+consumer\+\_\+worker.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classkafka__clients_1_1kafka__consumer__worker_a3578a2abd82b20715659c9784a43b035}\label{classkafka__clients_1_1kafka__consumer__worker_a3578a2abd82b20715659c9784a43b035}} 
+\index{kafka\_clients::kafka\_consumer\_worker@{kafka\_clients::kafka\_consumer\_worker}!consume@{consume}}
+\index{consume@{consume}!kafka\_clients::kafka\_consumer\_worker@{kafka\_clients::kafka\_consumer\_worker}}
+\doxysubsubsection{\texorpdfstring{consume()}{consume()}}
+{\footnotesize\ttfamily const char $\ast$ kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker\+::consume (\begin{DoxyParamCaption}\item[{int}]{timeout\+\_\+ms }\end{DoxyParamCaption})}
+
+
+
+Definition at line 112 of file kafka\+\_\+consumer\+\_\+worker.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkafka__clients_1_1kafka__consumer__worker_a3578a2abd82b20715659c9784a43b035_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkafka__clients_1_1kafka__consumer__worker_acf1e722c898d99c45c54cb16ba50d1b0}\label{classkafka__clients_1_1kafka__consumer__worker_acf1e722c898d99c45c54cb16ba50d1b0}} 
+\index{kafka\_clients::kafka\_consumer\_worker@{kafka\_clients::kafka\_consumer\_worker}!init@{init}}
+\index{init@{init}!kafka\_clients::kafka\_consumer\_worker@{kafka\_clients::kafka\_consumer\_worker}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 13 of file kafka\+\_\+consumer\+\_\+worker.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkafka__clients_1_1kafka__consumer__worker_acf1e722c898d99c45c54cb16ba50d1b0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkafka__clients_1_1kafka__consumer__worker_acf1e722c898d99c45c54cb16ba50d1b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkafka__clients_1_1kafka__consumer__worker_a5e1fa977ccf844b1e8d9df7d45956422}\label{classkafka__clients_1_1kafka__consumer__worker_a5e1fa977ccf844b1e8d9df7d45956422}} 
+\index{kafka\_clients::kafka\_consumer\_worker@{kafka\_clients::kafka\_consumer\_worker}!is\_running@{is\_running}}
+\index{is\_running@{is\_running}!kafka\_clients::kafka\_consumer\_worker@{kafka\_clients::kafka\_consumer\_worker}}
+\doxysubsubsection{\texorpdfstring{is\_running()}{is\_running()}}
+{\footnotesize\ttfamily bool kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker\+::is\+\_\+running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 120 of file kafka\+\_\+consumer\+\_\+worker.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkafka__clients_1_1kafka__consumer__worker_a5e1fa977ccf844b1e8d9df7d45956422_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkafka__clients_1_1kafka__consumer__worker_a9ed1c1586aadc2b41a0d7605f6b90dc9}\label{classkafka__clients_1_1kafka__consumer__worker_a9ed1c1586aadc2b41a0d7605f6b90dc9}} 
+\index{kafka\_clients::kafka\_consumer\_worker@{kafka\_clients::kafka\_consumer\_worker}!printCurrConf@{printCurrConf}}
+\index{printCurrConf@{printCurrConf}!kafka\_clients::kafka\_consumer\_worker@{kafka\_clients::kafka\_consumer\_worker}}
+\doxysubsubsection{\texorpdfstring{printCurrConf()}{printCurrConf()}}
+{\footnotesize\ttfamily void kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker\+::print\+Curr\+Conf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 124 of file kafka\+\_\+consumer\+\_\+worker.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkafka__clients_1_1kafka__consumer__worker_a9ed1c1586aadc2b41a0d7605f6b90dc9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkafka__clients_1_1kafka__consumer__worker_a43c96012dc78c2deaf7aad1cf2f7e94c}\label{classkafka__clients_1_1kafka__consumer__worker_a43c96012dc78c2deaf7aad1cf2f7e94c}} 
+\index{kafka\_clients::kafka\_consumer\_worker@{kafka\_clients::kafka\_consumer\_worker}!stop@{stop}}
+\index{stop@{stop}!kafka\_clients::kafka\_consumer\_worker@{kafka\_clients::kafka\_consumer\_worker}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 89 of file kafka\+\_\+consumer\+\_\+worker.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkafka__clients_1_1kafka__consumer__worker_a43c96012dc78c2deaf7aad1cf2f7e94c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkafka__clients_1_1kafka__consumer__worker_a4187daea3df819ac26e6efc65da6631d}\label{classkafka__clients_1_1kafka__consumer__worker_a4187daea3df819ac26e6efc65da6631d}} 
+\index{kafka\_clients::kafka\_consumer\_worker@{kafka\_clients::kafka\_consumer\_worker}!subscribe@{subscribe}}
+\index{subscribe@{subscribe}!kafka\_clients::kafka\_consumer\_worker@{kafka\_clients::kafka\_consumer\_worker}}
+\doxysubsubsection{\texorpdfstring{subscribe()}{subscribe()}}
+{\footnotesize\ttfamily void kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker\+::subscribe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 96 of file kafka\+\_\+consumer\+\_\+worker.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkafka__clients_1_1kafka__consumer__worker_a4187daea3df819ac26e6efc65da6631d_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+kafka\+\_\+clients/include/\mbox{\hyperlink{kafka__consumer__worker_8h}{kafka\+\_\+consumer\+\_\+worker.\+h}}\item 
+kafka\+\_\+clients/src/\mbox{\hyperlink{kafka__consumer__worker_8cpp}{kafka\+\_\+consumer\+\_\+worker.\+cpp}}\end{DoxyCompactItemize}

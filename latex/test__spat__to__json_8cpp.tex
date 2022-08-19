@@ -1,0 +1,286 @@
+\hypertarget{test__spat__to__json_8cpp}{}\doxysection{streets\+\_\+utils/streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing/test/test\+\_\+spat\+\_\+to\+\_\+json.cpp File Reference}
+\label{test__spat__to__json_8cpp}\index{streets\_utils/streets\_signal\_phase\_and\_timing/test/test\_spat\_to\_json.cpp@{streets\_utils/streets\_signal\_phase\_and\_timing/test/test\_spat\_to\_json.cpp}}
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$spdlog/spdlog.\+h$>$}\newline
+{\ttfamily \#include $<$rapidjson/writer.\+h$>$}\newline
+{\ttfamily \#include $<$rapidjson/stringbuffer.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}spat.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}signal\+\_\+phase\+\_\+and\+\_\+timing\+\_\+exception.\+h\char`\"{}}\newline
+Include dependency graph for test\+\_\+spat\+\_\+to\+\_\+json.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__spat__to__json_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__spat__to__json_8cpp_ac29194ede5543066ec3a605ffa0a61e0}{TEST}} (spat\+\_\+to\+\_\+json, to\+\_\+from\+\_\+json\+\_\+test)
+\begin{DoxyCompactList}\small\item\em Test to Json conversion serialization and deserialization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__spat__to__json_8cpp_af00edc1e22383586f4d321e48d694233}{TEST}} (spat\+\_\+to\+\_\+json, sample\+\_\+string\+\_\+read)
+\begin{DoxyCompactList}\small\item\em Test from\+Json method with optional fields. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__spat__to__json_8cpp_a4644e08c2ba829b719a25f56bb810c8a}{TEST}} (spat\+\_\+to\+\_\+json, sample\+\_\+string\+\_\+read\+\_\+without\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Test from\+Json method with missing optional string fields. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__spat__to__json_8cpp_a26cf6554085449d951ab45d73243d8fe}{TEST}} (spat\+\_\+to\+\_\+json, sample\+\_\+string\+\_\+read\+\_\+without\+\_\+revision)
+\begin{DoxyCompactList}\small\item\em Test from\+Json method with missing required integer fields. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__spat__to__json_8cpp_adc23909f3adc2f6a43154c2fddfd7512}{TEST}} (spat\+\_\+to\+\_\+json, sample\+\_\+string\+\_\+read\+\_\+optional\+\_\+timemarks)
+\begin{DoxyCompactList}\small\item\em Test from\+Json method with missing optional integer fields. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__spat__to__json_8cpp_aa79fa089af5a0a16038c61e0148c17e3}{TEST}} (spat\+\_\+to\+\_\+json, missing\+\_\+state\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Test to Json conversion serialization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__spat__to__json_8cpp_ac4ff9fac0c141de477a363d0b35ef5cf}{TEST}} (spat\+\_\+to\+\_\+json, missing\+\_\+intersection\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Test to Json conversion serialization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__spat__to__json_8cpp_ada356a97db1e0e0c943ef2bdf6b425d9}{TEST}} (spat\+\_\+to\+\_\+json, missing\+\_\+message\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Test to Json conversion serialization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__spat__to__json_8cpp_a9f9c78113be12eeb1cf7a7d8f263972f}{TEST}} (spat\+\_\+to\+\_\+json, missing\+\_\+intersection\+\_\+status)
+\begin{DoxyCompactList}\small\item\em Test to Json conversion serialization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__spat__to__json_8cpp_ad2892c5521a158c878ae4efa558b9687}{TEST}} (spat\+\_\+to\+\_\+json, missing\+\_\+movement\+\_\+event\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Test to Json conversion serialization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__spat__to__json_8cpp_a4dd0d19172ad6fb55479b03da44286a2}{TEST}} (spat\+\_\+to\+\_\+json, missing\+\_\+movement\+\_\+state\+\_\+signal\+\_\+group\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Test to Json conversion serialization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__spat__to__json_8cpp_ac4ff9fac0c141de477a363d0b35ef5cf}\label{test__spat__to__json_8cpp_ac4ff9fac0c141de477a363d0b35ef5cf}} 
+\index{test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/11]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{spat\+\_\+to\+\_\+json}]{,  }\item[{missing\+\_\+intersection\+\_\+id}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to Json conversion serialization. 
+
+
+
+Definition at line 172 of file test\+\_\+spat\+\_\+to\+\_\+json.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{test__spat__to__json_8cpp_ac4ff9fac0c141de477a363d0b35ef5cf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test__spat__to__json_8cpp_a9f9c78113be12eeb1cf7a7d8f263972f}\label{test__spat__to__json_8cpp_a9f9c78113be12eeb1cf7a7d8f263972f}} 
+\index{test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/11]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{spat\+\_\+to\+\_\+json}]{,  }\item[{missing\+\_\+intersection\+\_\+status}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to Json conversion serialization. 
+
+
+
+Definition at line 203 of file test\+\_\+spat\+\_\+to\+\_\+json.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{test__spat__to__json_8cpp_a9f9c78113be12eeb1cf7a7d8f263972f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test__spat__to__json_8cpp_ada356a97db1e0e0c943ef2bdf6b425d9}\label{test__spat__to__json_8cpp_ada356a97db1e0e0c943ef2bdf6b425d9}} 
+\index{test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/11]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{spat\+\_\+to\+\_\+json}]{,  }\item[{missing\+\_\+message\+\_\+count}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to Json conversion serialization. 
+
+
+
+Definition at line 187 of file test\+\_\+spat\+\_\+to\+\_\+json.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{test__spat__to__json_8cpp_ada356a97db1e0e0c943ef2bdf6b425d9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test__spat__to__json_8cpp_ad2892c5521a158c878ae4efa558b9687}\label{test__spat__to__json_8cpp_ad2892c5521a158c878ae4efa558b9687}} 
+\index{test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/11]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{spat\+\_\+to\+\_\+json}]{,  }\item[{missing\+\_\+movement\+\_\+event\+\_\+list}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to Json conversion serialization. 
+
+
+
+Definition at line 220 of file test\+\_\+spat\+\_\+to\+\_\+json.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{test__spat__to__json_8cpp_ad2892c5521a158c878ae4efa558b9687_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test__spat__to__json_8cpp_a4dd0d19172ad6fb55479b03da44286a2}\label{test__spat__to__json_8cpp_a4dd0d19172ad6fb55479b03da44286a2}} 
+\index{test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/11]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{spat\+\_\+to\+\_\+json}]{,  }\item[{missing\+\_\+movement\+\_\+state\+\_\+signal\+\_\+group\+\_\+id}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to Json conversion serialization. 
+
+
+
+Definition at line 241 of file test\+\_\+spat\+\_\+to\+\_\+json.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{test__spat__to__json_8cpp_a4dd0d19172ad6fb55479b03da44286a2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test__spat__to__json_8cpp_aa79fa089af5a0a16038c61e0148c17e3}\label{test__spat__to__json_8cpp_aa79fa089af5a0a16038c61e0148c17e3}} 
+\index{test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/11]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{spat\+\_\+to\+\_\+json}]{,  }\item[{missing\+\_\+state\+\_\+list}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to Json conversion serialization. 
+
+
+
+Definition at line 159 of file test\+\_\+spat\+\_\+to\+\_\+json.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{test__spat__to__json_8cpp_aa79fa089af5a0a16038c61e0148c17e3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test__spat__to__json_8cpp_af00edc1e22383586f4d321e48d694233}\label{test__spat__to__json_8cpp_af00edc1e22383586f4d321e48d694233}} 
+\index{test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/11]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{spat\+\_\+to\+\_\+json}]{,  }\item[{sample\+\_\+string\+\_\+read}]{ }\end{DoxyParamCaption})}
+
+
+
+Test from\+Json method with optional fields. 
+
+
+
+Definition at line 83 of file test\+\_\+spat\+\_\+to\+\_\+json.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__spat__to__json_8cpp_af00edc1e22383586f4d321e48d694233_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test__spat__to__json_8cpp_adc23909f3adc2f6a43154c2fddfd7512}\label{test__spat__to__json_8cpp_adc23909f3adc2f6a43154c2fddfd7512}} 
+\index{test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/11]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{spat\+\_\+to\+\_\+json}]{,  }\item[{sample\+\_\+string\+\_\+read\+\_\+optional\+\_\+timemarks}]{ }\end{DoxyParamCaption})}
+
+
+
+Test from\+Json method with missing optional integer fields. 
+
+
+
+Definition at line 133 of file test\+\_\+spat\+\_\+to\+\_\+json.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__spat__to__json_8cpp_adc23909f3adc2f6a43154c2fddfd7512_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test__spat__to__json_8cpp_a4644e08c2ba829b719a25f56bb810c8a}\label{test__spat__to__json_8cpp_a4644e08c2ba829b719a25f56bb810c8a}} 
+\index{test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/11]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{spat\+\_\+to\+\_\+json}]{,  }\item[{sample\+\_\+string\+\_\+read\+\_\+without\+\_\+name}]{ }\end{DoxyParamCaption})}
+
+
+
+Test from\+Json method with missing optional string fields. 
+
+
+
+Definition at line 103 of file test\+\_\+spat\+\_\+to\+\_\+json.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__spat__to__json_8cpp_a4644e08c2ba829b719a25f56bb810c8a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test__spat__to__json_8cpp_a26cf6554085449d951ab45d73243d8fe}\label{test__spat__to__json_8cpp_a26cf6554085449d951ab45d73243d8fe}} 
+\index{test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/11]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{spat\+\_\+to\+\_\+json}]{,  }\item[{sample\+\_\+string\+\_\+read\+\_\+without\+\_\+revision}]{ }\end{DoxyParamCaption})}
+
+
+
+Test from\+Json method with missing required integer fields. 
+
+
+
+Definition at line 123 of file test\+\_\+spat\+\_\+to\+\_\+json.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__spat__to__json_8cpp_a26cf6554085449d951ab45d73243d8fe_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test__spat__to__json_8cpp_ac29194ede5543066ec3a605ffa0a61e0}\label{test__spat__to__json_8cpp_ac29194ede5543066ec3a605ffa0a61e0}} 
+\index{test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_spat\_to\_json.cpp@{test\_spat\_to\_json.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/11]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{spat\+\_\+to\+\_\+json}]{,  }\item[{to\+\_\+from\+\_\+json\+\_\+test}]{ }\end{DoxyParamCaption})}
+
+
+
+Test to Json conversion serialization and deserialization. 
+
+
+
+Definition at line 14 of file test\+\_\+spat\+\_\+to\+\_\+json.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__spat__to__json_8cpp_ac29194ede5543066ec3a605ffa0a61e0_cgraph}
+\end{center}
+\end{figure}

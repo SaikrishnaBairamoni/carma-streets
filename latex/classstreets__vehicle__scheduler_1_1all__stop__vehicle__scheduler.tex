@@ -1,0 +1,146 @@
+\hypertarget{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler}{}\doxysection{streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+scheduler Class Reference}
+\label{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler}\index{streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler}}
+
+
+{\ttfamily \#include $<$all\+\_\+stop\+\_\+vehicle\+\_\+scheduler.\+h$>$}
+
+
+
+Inheritance diagram for streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+scheduler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+scheduler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler_ab4a2d24aef35503f3ff8eeaacc07bb9d}{all\+\_\+stop\+\_\+vehicle\+\_\+scheduler}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new all stop vehicle scheduler object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler_ad40be3e19c0eca5e076b1e5831a7e85f}{$\sim$all\+\_\+stop\+\_\+vehicle\+\_\+scheduler}} () override=default
+\begin{DoxyCompactList}\small\item\em Destroy the all stop vehicle scheduler object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler_a930961b3e285b2a2d08f4276ffa22658}{schedule\+\_\+vehicles}} (std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} $>$ \&vehicles, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}} $>$ \&schedule) override
+\begin{DoxyCompactList}\small\item\em Method to schedule vehicles. Given and empty \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}} object and a map of vehicles and vehicle ids. This method will populate the intersection schedule with a schedule for each EV,RDV and DV in the vehicle map based on UC 1 scheduling logic to minimize delay for a all way stop intersection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler_a37514ae17d938eff80b44304ab81cdda}{set\+\_\+entering\+\_\+time\+\_\+buffer}} (const uint64\+\_\+t buffer)
+\begin{DoxyCompactList}\small\item\em Set the entering time buffer (ms). This value is used to account for the time it takes a vehicle stopped before the stop bar at an entry lane to exit the entry lane and enter the link lane once given access. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler_a4b4afb653bc02a75e3c113806c9f4004}{set\+\_\+flexibility\+\_\+limit}} (const int limit)
+\begin{DoxyCompactList}\small\item\em Set the flexibility limit. This limit controls how much departure position can change for any given vehicle between successive intersection schedule calculations. Each subsequent intersection scheduling calculation may have a slightly different departure order. This value controls how much this departure order can change.\+A value of 1 represents that vehicles departure position can change by one between two intersection schedules. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 16 of file all\+\_\+stop\+\_\+vehicle\+\_\+scheduler.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler_ab4a2d24aef35503f3ff8eeaacc07bb9d}\label{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler_ab4a2d24aef35503f3ff8eeaacc07bb9d}} 
+\index{streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler}!all\_stop\_vehicle\_scheduler@{all\_stop\_vehicle\_scheduler}}
+\index{all\_stop\_vehicle\_scheduler@{all\_stop\_vehicle\_scheduler}!streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{all\_stop\_vehicle\_scheduler()}{all\_stop\_vehicle\_scheduler()}}
+{\footnotesize\ttfamily streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+scheduler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new all stop vehicle scheduler object. 
+
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler_ad40be3e19c0eca5e076b1e5831a7e85f}\label{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler_ad40be3e19c0eca5e076b1e5831a7e85f}} 
+\index{streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler}!````~all\_stop\_vehicle\_scheduler@{$\sim$all\_stop\_vehicle\_scheduler}}
+\index{````~all\_stop\_vehicle\_scheduler@{$\sim$all\_stop\_vehicle\_scheduler}!streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{$\sim$all\_stop\_vehicle\_scheduler()}{~all\_stop\_vehicle\_scheduler()}}
+{\footnotesize\ttfamily streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+scheduler\+::$\sim$all\+\_\+stop\+\_\+vehicle\+\_\+scheduler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+Destroy the all stop vehicle scheduler object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler_a930961b3e285b2a2d08f4276ffa22658}\label{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler_a930961b3e285b2a2d08f4276ffa22658}} 
+\index{streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler}!schedule\_vehicles@{schedule\_vehicles}}
+\index{schedule\_vehicles@{schedule\_vehicles}!streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{schedule\_vehicles()}{schedule\_vehicles()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+scheduler\+::schedule\+\_\+vehicles (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} $>$ \&}]{vehicles,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}} $>$ \&}]{schedule }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method to schedule vehicles. Given and empty \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}} object and a map of vehicles and vehicle ids. This method will populate the intersection schedule with a schedule for each EV,RDV and DV in the vehicle map based on UC 1 scheduling logic to minimize delay for a all way stop intersection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicles} & A map of the vehicles to schedule, with vehicle id as keys \\
+\hline
+{\em schedule} & An all\+\_\+stop\+\_\+intersection schedule object populated with a vehicle schedule for each EV,RDV and DV in the map. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a68ae44ddfa8ae16f298b2798ed93b9d2}{streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler}}.
+
+
+
+Definition at line 9 of file all\+\_\+stop\+\_\+vehicle\+\_\+scheduler.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler_a930961b3e285b2a2d08f4276ffa22658_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler_a37514ae17d938eff80b44304ab81cdda}\label{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler_a37514ae17d938eff80b44304ab81cdda}} 
+\index{streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler}!set\_entering\_time\_buffer@{set\_entering\_time\_buffer}}
+\index{set\_entering\_time\_buffer@{set\_entering\_time\_buffer}!streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{set\_entering\_time\_buffer()}{set\_entering\_time\_buffer()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+scheduler\+::set\+\_\+entering\+\_\+time\+\_\+buffer (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Set the entering time buffer (ms). This value is used to account for the time it takes a vehicle stopped before the stop bar at an entry lane to exit the entry lane and enter the link lane once given access. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & entering time buff in milliseconds. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler_a4b4afb653bc02a75e3c113806c9f4004}\label{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler_a4b4afb653bc02a75e3c113806c9f4004}} 
+\index{streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler}!set\_flexibility\_limit@{set\_flexibility\_limit}}
+\index{set\_flexibility\_limit@{set\_flexibility\_limit}!streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{set\_flexibility\_limit()}{set\_flexibility\_limit()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+scheduler\+::set\+\_\+flexibility\+\_\+limit (\begin{DoxyParamCaption}\item[{const int}]{limit }\end{DoxyParamCaption})}
+
+
+
+Set the flexibility limit. This limit controls how much departure position can change for any given vehicle between successive intersection schedule calculations. Each subsequent intersection scheduling calculation may have a slightly different departure order. This value controls how much this departure order can change.\+A value of 1 represents that vehicles departure position can change by one between two intersection schedules. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em limit} & How much can departure position change between schedules for any vehicle. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file all\+\_\+stop\+\_\+vehicle\+\_\+scheduler.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/include/\mbox{\hyperlink{all__stop__vehicle__scheduler_8h}{all\+\_\+stop\+\_\+vehicle\+\_\+scheduler.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/src/\mbox{\hyperlink{all__stop__vehicle__scheduler_8cpp}{all\+\_\+stop\+\_\+vehicle\+\_\+scheduler.\+cpp}}\end{DoxyCompactItemize}

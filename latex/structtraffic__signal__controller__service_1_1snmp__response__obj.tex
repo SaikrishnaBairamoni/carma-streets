@@ -1,0 +1,117 @@
+\hypertarget{structtraffic__signal__controller__service_1_1snmp__response__obj}{}\doxysection{traffic\+\_\+signal\+\_\+controller\+\_\+service\+::snmp\+\_\+response\+\_\+obj Struct Reference}
+\label{structtraffic__signal__controller__service_1_1snmp__response__obj}\index{traffic\_signal\_controller\_service::snmp\_response\_obj@{traffic\_signal\_controller\_service::snmp\_response\_obj}}
+
+
+A struct to hold the value being sent to the TSC, can be integer or string. Type needs to be defined.  
+
+
+
+
+{\ttfamily \#include $<$snmp\+\_\+client.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{structtraffic__signal__controller__service_1_1snmp__response__obj_a7379a4a3fcabddd7000d9be76111c38a}{response\+\_\+type}} \{ \mbox{\hyperlink{structtraffic__signal__controller__service_1_1snmp__response__obj_a7379a4a3fcabddd7000d9be76111c38aa5d5cd46919fa987731fb2edefe0f2a0c}{INTEGER}}
+, \mbox{\hyperlink{structtraffic__signal__controller__service_1_1snmp__response__obj_a7379a4a3fcabddd7000d9be76111c38aa63b588d5559f64f89a416e656880b949}{STRING}}
+ \}
+\begin{DoxyCompactList}\small\item\em The type of value being requested or set, on the TSC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structtraffic__signal__controller__service_1_1snmp__response__obj_ae56005d5f8ab69fb245e24b51363c6e5}{operator==}} (const \mbox{\hyperlink{structtraffic__signal__controller__service_1_1snmp__response__obj}{snmp\+\_\+response\+\_\+obj}} \&obj2) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int64\+\_\+t \mbox{\hyperlink{structtraffic__signal__controller__service_1_1snmp__response__obj_abbd5d90ba42fc8e1c7747f97b965da30}{val\+\_\+int}} = 0
+\item 
+std\+::vector$<$ char $>$ \mbox{\hyperlink{structtraffic__signal__controller__service_1_1snmp__response__obj_ac6119d52c9266dab1f7fc8463155eb34}{val\+\_\+string}}
+\item 
+\mbox{\hyperlink{structtraffic__signal__controller__service_1_1snmp__response__obj_a7379a4a3fcabddd7000d9be76111c38a}{response\+\_\+type}} \mbox{\hyperlink{structtraffic__signal__controller__service_1_1snmp__response__obj_a9a3e45ceab9b7e8c6aa18fb00e242331}{type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A struct to hold the value being sent to the TSC, can be integer or string. Type needs to be defined. 
+
+Definition at line 26 of file snmp\+\_\+client.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structtraffic__signal__controller__service_1_1snmp__response__obj_a7379a4a3fcabddd7000d9be76111c38a}\label{structtraffic__signal__controller__service_1_1snmp__response__obj_a7379a4a3fcabddd7000d9be76111c38a}} 
+\index{traffic\_signal\_controller\_service::snmp\_response\_obj@{traffic\_signal\_controller\_service::snmp\_response\_obj}!response\_type@{response\_type}}
+\index{response\_type@{response\_type}!traffic\_signal\_controller\_service::snmp\_response\_obj@{traffic\_signal\_controller\_service::snmp\_response\_obj}}
+\doxysubsubsection{\texorpdfstring{response\_type}{response\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structtraffic__signal__controller__service_1_1snmp__response__obj_a7379a4a3fcabddd7000d9be76111c38a}{traffic\+\_\+signal\+\_\+controller\+\_\+service\+::snmp\+\_\+response\+\_\+obj\+::response\+\_\+type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The type of value being requested or set, on the TSC. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INTEGER@{INTEGER}!traffic\_signal\_controller\_service::snmp\_response\_obj@{traffic\_signal\_controller\_service::snmp\_response\_obj}}\index{traffic\_signal\_controller\_service::snmp\_response\_obj@{traffic\_signal\_controller\_service::snmp\_response\_obj}!INTEGER@{INTEGER}}}\mbox{\Hypertarget{structtraffic__signal__controller__service_1_1snmp__response__obj_a7379a4a3fcabddd7000d9be76111c38aa5d5cd46919fa987731fb2edefe0f2a0c}\label{structtraffic__signal__controller__service_1_1snmp__response__obj_a7379a4a3fcabddd7000d9be76111c38aa5d5cd46919fa987731fb2edefe0f2a0c}} 
+INTEGER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STRING@{STRING}!traffic\_signal\_controller\_service::snmp\_response\_obj@{traffic\_signal\_controller\_service::snmp\_response\_obj}}\index{traffic\_signal\_controller\_service::snmp\_response\_obj@{traffic\_signal\_controller\_service::snmp\_response\_obj}!STRING@{STRING}}}\mbox{\Hypertarget{structtraffic__signal__controller__service_1_1snmp__response__obj_a7379a4a3fcabddd7000d9be76111c38aa63b588d5559f64f89a416e656880b949}\label{structtraffic__signal__controller__service_1_1snmp__response__obj_a7379a4a3fcabddd7000d9be76111c38aa63b588d5559f64f89a416e656880b949}} 
+STRING&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 29 of file snmp\+\_\+client.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraffic__signal__controller__service_1_1snmp__response__obj_ae56005d5f8ab69fb245e24b51363c6e5}\label{structtraffic__signal__controller__service_1_1snmp__response__obj_ae56005d5f8ab69fb245e24b51363c6e5}} 
+\index{traffic\_signal\_controller\_service::snmp\_response\_obj@{traffic\_signal\_controller\_service::snmp\_response\_obj}!operator==@{operator==}}
+\index{operator==@{operator==}!traffic\_signal\_controller\_service::snmp\_response\_obj@{traffic\_signal\_controller\_service::snmp\_response\_obj}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool traffic\+\_\+signal\+\_\+controller\+\_\+service\+::snmp\+\_\+response\+\_\+obj\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraffic__signal__controller__service_1_1snmp__response__obj}{snmp\+\_\+response\+\_\+obj}} \&}]{obj2 }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 41 of file snmp\+\_\+client.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structtraffic__signal__controller__service_1_1snmp__response__obj_a9a3e45ceab9b7e8c6aa18fb00e242331}\label{structtraffic__signal__controller__service_1_1snmp__response__obj_a9a3e45ceab9b7e8c6aa18fb00e242331}} 
+\index{traffic\_signal\_controller\_service::snmp\_response\_obj@{traffic\_signal\_controller\_service::snmp\_response\_obj}!type@{type}}
+\index{type@{type}!traffic\_signal\_controller\_service::snmp\_response\_obj@{traffic\_signal\_controller\_service::snmp\_response\_obj}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraffic__signal__controller__service_1_1snmp__response__obj_a7379a4a3fcabddd7000d9be76111c38a}{response\+\_\+type}} traffic\+\_\+signal\+\_\+controller\+\_\+service\+::snmp\+\_\+response\+\_\+obj\+::type}
+
+
+
+Definition at line 39 of file snmp\+\_\+client.\+h.
+
+\mbox{\Hypertarget{structtraffic__signal__controller__service_1_1snmp__response__obj_abbd5d90ba42fc8e1c7747f97b965da30}\label{structtraffic__signal__controller__service_1_1snmp__response__obj_abbd5d90ba42fc8e1c7747f97b965da30}} 
+\index{traffic\_signal\_controller\_service::snmp\_response\_obj@{traffic\_signal\_controller\_service::snmp\_response\_obj}!val\_int@{val\_int}}
+\index{val\_int@{val\_int}!traffic\_signal\_controller\_service::snmp\_response\_obj@{traffic\_signal\_controller\_service::snmp\_response\_obj}}
+\doxysubsubsection{\texorpdfstring{val\_int}{val\_int}}
+{\footnotesize\ttfamily int64\+\_\+t traffic\+\_\+signal\+\_\+controller\+\_\+service\+::snmp\+\_\+response\+\_\+obj\+::val\+\_\+int = 0}
+
+
+
+Definition at line 37 of file snmp\+\_\+client.\+h.
+
+\mbox{\Hypertarget{structtraffic__signal__controller__service_1_1snmp__response__obj_ac6119d52c9266dab1f7fc8463155eb34}\label{structtraffic__signal__controller__service_1_1snmp__response__obj_ac6119d52c9266dab1f7fc8463155eb34}} 
+\index{traffic\_signal\_controller\_service::snmp\_response\_obj@{traffic\_signal\_controller\_service::snmp\_response\_obj}!val\_string@{val\_string}}
+\index{val\_string@{val\_string}!traffic\_signal\_controller\_service::snmp\_response\_obj@{traffic\_signal\_controller\_service::snmp\_response\_obj}}
+\doxysubsubsection{\texorpdfstring{val\_string}{val\_string}}
+{\footnotesize\ttfamily std\+::vector$<$char$>$ traffic\+\_\+signal\+\_\+controller\+\_\+service\+::snmp\+\_\+response\+\_\+obj\+::val\+\_\+string}
+
+
+
+Definition at line 38 of file snmp\+\_\+client.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tsc\+\_\+client\+\_\+service/include/\mbox{\hyperlink{snmp__client_8h}{snmp\+\_\+client.\+h}}\end{DoxyCompactItemize}

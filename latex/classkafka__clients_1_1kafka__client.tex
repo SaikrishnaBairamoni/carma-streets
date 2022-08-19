@@ -1,0 +1,97 @@
+\hypertarget{classkafka__clients_1_1kafka__client}{}\doxysection{kafka\+\_\+clients\+::kafka\+\_\+client Class Reference}
+\label{classkafka__clients_1_1kafka__client}\index{kafka\_clients::kafka\_client@{kafka\_clients::kafka\_client}}
+
+
+{\ttfamily \#include $<$kafka\+\_\+client.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker}{kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker}} $>$ \mbox{\hyperlink{classkafka__clients_1_1kafka__client_a654347e562e95f46170daac1f3cc5f3d}{create\+\_\+consumer}} (const std\+::string \&broker\+\_\+str, const std\+::string \&topic\+\_\+str, std\+::string \&group\+\_\+id\+\_\+str) const
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__producer__worker}{kafka\+\_\+clients\+::kafka\+\_\+producer\+\_\+worker}} $>$ \mbox{\hyperlink{classkafka__clients_1_1kafka__client_ae0e5d76c5b916a834b909ca23e657e2a}{create\+\_\+producer}} (const std\+::string \&broker\+\_\+str, const std\+::string \&topic\+\_\+str) const
+\item 
+rapidjson\+::\+Document \mbox{\hyperlink{classkafka__clients_1_1kafka__client_ab506789cf084a91e0bdf5c80a93d44cb}{read\+\_\+json\+\_\+file}} (const std\+::string \&json\+\_\+file) const
+\item 
+std\+::string \mbox{\hyperlink{classkafka__clients_1_1kafka__client_a0d7a56622cdc4f2b2cc20d9bbeee4607}{get\+\_\+value\+\_\+by\+\_\+doc}} (rapidjson\+::\+Document \&doc, const char $\ast$key) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 15 of file kafka\+\_\+client.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classkafka__clients_1_1kafka__client_a654347e562e95f46170daac1f3cc5f3d}\label{classkafka__clients_1_1kafka__client_a654347e562e95f46170daac1f3cc5f3d}} 
+\index{kafka\_clients::kafka\_client@{kafka\_clients::kafka\_client}!create\_consumer@{create\_consumer}}
+\index{create\_consumer@{create\_consumer}!kafka\_clients::kafka\_client@{kafka\_clients::kafka\_client}}
+\doxysubsubsection{\texorpdfstring{create\_consumer()}{create\_consumer()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker}{kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker}} $>$ kafka\+\_\+clients\+::kafka\+\_\+client\+::create\+\_\+consumer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{broker\+\_\+str,  }\item[{const std\+::string \&}]{topic\+\_\+str,  }\item[{std\+::string \&}]{group\+\_\+id\+\_\+str }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 5 of file kafka\+\_\+client.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkafka__clients_1_1kafka__client_a654347e562e95f46170daac1f3cc5f3d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkafka__clients_1_1kafka__client_ae0e5d76c5b916a834b909ca23e657e2a}\label{classkafka__clients_1_1kafka__client_ae0e5d76c5b916a834b909ca23e657e2a}} 
+\index{kafka\_clients::kafka\_client@{kafka\_clients::kafka\_client}!create\_producer@{create\_producer}}
+\index{create\_producer@{create\_producer}!kafka\_clients::kafka\_client@{kafka\_clients::kafka\_client}}
+\doxysubsubsection{\texorpdfstring{create\_producer()}{create\_producer()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__producer__worker}{kafka\+\_\+clients\+::kafka\+\_\+producer\+\_\+worker}} $>$ kafka\+\_\+clients\+::kafka\+\_\+client\+::create\+\_\+producer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{broker\+\_\+str,  }\item[{const std\+::string \&}]{topic\+\_\+str }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 23 of file kafka\+\_\+client.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkafka__clients_1_1kafka__client_ae0e5d76c5b916a834b909ca23e657e2a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkafka__clients_1_1kafka__client_a0d7a56622cdc4f2b2cc20d9bbeee4607}\label{classkafka__clients_1_1kafka__client_a0d7a56622cdc4f2b2cc20d9bbeee4607}} 
+\index{kafka\_clients::kafka\_client@{kafka\_clients::kafka\_client}!get\_value\_by\_doc@{get\_value\_by\_doc}}
+\index{get\_value\_by\_doc@{get\_value\_by\_doc}!kafka\_clients::kafka\_client@{kafka\_clients::kafka\_client}}
+\doxysubsubsection{\texorpdfstring{get\_value\_by\_doc()}{get\_value\_by\_doc()}}
+{\footnotesize\ttfamily std\+::string kafka\+\_\+clients\+::kafka\+\_\+client\+::get\+\_\+value\+\_\+by\+\_\+doc (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Document \&}]{doc,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkafka__clients_1_1kafka__client_a0d7a56622cdc4f2b2cc20d9bbeee4607_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkafka__clients_1_1kafka__client_ab506789cf084a91e0bdf5c80a93d44cb}\label{classkafka__clients_1_1kafka__client_ab506789cf084a91e0bdf5c80a93d44cb}} 
+\index{kafka\_clients::kafka\_client@{kafka\_clients::kafka\_client}!read\_json\_file@{read\_json\_file}}
+\index{read\_json\_file@{read\_json\_file}!kafka\_clients::kafka\_client@{kafka\_clients::kafka\_client}}
+\doxysubsubsection{\texorpdfstring{read\_json\_file()}{read\_json\_file()}}
+{\footnotesize\ttfamily rapidjson\+::\+Document kafka\+\_\+clients\+::kafka\+\_\+client\+::read\+\_\+json\+\_\+file (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+file }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkafka__clients_1_1kafka__client_ab506789cf084a91e0bdf5c80a93d44cb_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+kafka\+\_\+clients/include/\mbox{\hyperlink{kafka__client_8h}{kafka\+\_\+client.\+h}}\item 
+kafka\+\_\+clients/src/\mbox{\hyperlink{kafka__client_8cpp}{kafka\+\_\+client.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,308 @@
+\hypertarget{classOpenAPI_1_1OAIHttpRequestWorker}{}\doxysection{Open\+API\+::OAIHttp\+Request\+Worker Class Reference}
+\label{classOpenAPI_1_1OAIHttpRequestWorker}\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+
+
+{\ttfamily \#include $<$OAIHttp\+Request.\+h$>$}
+
+
+
+Inheritance diagram for Open\+API\+::OAIHttp\+Request\+Worker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classOpenAPI_1_1OAIHttpRequestWorker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Open\+API\+::OAIHttp\+Request\+Worker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classOpenAPI_1_1OAIHttpRequestWorker__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker_a668f76ebf5174efb680bf0189d3f4d0f}{on\+\_\+execution\+\_\+finished}} (\mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker}{OAIHttp\+Request\+Worker}} $\ast$worker)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker_af9586a588ab0c1f7e6ee75b419a9a5b7}{OAIHttp\+Request\+Worker}} (QObject $\ast$parent=nullptr, QNetwork\+Access\+Manager $\ast$manager=nullptr)
+\item 
+virtual \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker_a5382204f7376db01663f0c42c502ad79}{$\sim$\+OAIHttp\+Request\+Worker}} ()
+\item 
+QMap$<$ QString, QString $>$ \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker_a85149fa45d51093782939c2bcde63732}{get\+Response\+Headers}} () const
+\item 
+QString \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker_a956ba64d89ae192257247fb93a37bbf8}{http\+\_\+attribute\+\_\+encode}} (QString attribute\+\_\+name, QString input)
+\item 
+void \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker_a241304dc9d0548df76510834b44617fe}{execute}} (\mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestInput}{OAIHttp\+Request\+Input}} $\ast$input)
+\item 
+void \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker_a4cacd35a634ee9383ed40f2cb3623d2c}{set\+Time\+Out}} (int time\+Out\+Ms)
+\item 
+void \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker_ac4c0e5da7f31b1cb763da1a51cd25eb9}{set\+Working\+Directory}} (const QString \&path)
+\item 
+\mbox{\hyperlink{classOpenAPI_1_1OAIHttpFileElement}{OAIHttp\+File\+Element}} \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker_a4279c4b125a2b64db730b1bfa9b12bc9}{get\+Http\+File\+Element}} (const QString \&fieldname=QString())
+\item 
+QByte\+Array $\ast$ \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker_aa963aaf81b6956ddf02f8b952cb63bf4}{get\+Multi\+Part\+Field}} (const QString \&fieldname=QString())
+\item 
+void \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker_a9dab9eeb608f5a0230db0acfbdf8610f}{set\+Response\+Compression\+Enabled}} (bool enable)
+\item 
+void \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker_aa386809329ecdb5259d15ebf5ab3329c}{set\+Request\+Compression\+Enabled}} (bool enable)
+\item 
+int \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker_aa5bdb146ddffe45498c9d53598d1507f}{get\+Http\+Response\+Code}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+QByte\+Array \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker_aecbecbac85d55628b6cabb73f072fcb5}{response}}
+\item 
+QNetwork\+Reply\+::\+Network\+Error \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker_a3efd6243071ccbef5c9312d4db124e9d}{error\+\_\+type}}
+\item 
+QString \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker_a094214d8718ee8f0e8bcd41e1b19ae2b}{error\+\_\+str}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static QSsl\+Configuration $\ast$ \mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker_acb24ce47aac9765fd4efc7365cec2938}{ssl\+Default\+Configuration}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 60 of file OAIHttp\+Request.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestWorker_af9586a588ab0c1f7e6ee75b419a9a5b7}\label{classOpenAPI_1_1OAIHttpRequestWorker_af9586a588ab0c1f7e6ee75b419a9a5b7}} 
+\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}!OAIHttpRequestWorker@{OAIHttpRequestWorker}}
+\index{OAIHttpRequestWorker@{OAIHttpRequestWorker}!OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+\doxysubsubsection{\texorpdfstring{OAIHttpRequestWorker()}{OAIHttpRequestWorker()}}
+{\footnotesize\ttfamily Open\+API\+::\+OAIHttp\+Request\+Worker\+::\+OAIHttp\+Request\+Worker (\begin{DoxyParamCaption}\item[{QObject $\ast$}]{parent = {\ttfamily nullptr},  }\item[{QNetwork\+Access\+Manager $\ast$}]{manager = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line 59 of file OAIHttp\+Request.\+cpp.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestWorker_a5382204f7376db01663f0c42c502ad79}\label{classOpenAPI_1_1OAIHttpRequestWorker_a5382204f7376db01663f0c42c502ad79}} 
+\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}!````~OAIHttpRequestWorker@{$\sim$OAIHttpRequestWorker}}
+\index{````~OAIHttpRequestWorker@{$\sim$OAIHttpRequestWorker}!OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+\doxysubsubsection{\texorpdfstring{$\sim$OAIHttpRequestWorker()}{~OAIHttpRequestWorker()}}
+{\footnotesize\ttfamily Open\+API\+::\+OAIHttp\+Request\+Worker\+::$\sim$\+OAIHttp\+Request\+Worker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 75 of file OAIHttp\+Request.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestWorker_a241304dc9d0548df76510834b44617fe}\label{classOpenAPI_1_1OAIHttpRequestWorker_a241304dc9d0548df76510834b44617fe}} 
+\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}!execute@{execute}}
+\index{execute@{execute}!OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Open\+API\+::\+OAIHttp\+Request\+Worker\+::execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestInput}{OAIHttp\+Request\+Input}} $\ast$}]{input }\end{DoxyParamCaption})}
+
+
+
+Definition at line 177 of file OAIHttp\+Request.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenAPI_1_1OAIHttpRequestWorker_a241304dc9d0548df76510834b44617fe_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenAPI_1_1OAIHttpRequestWorker_a241304dc9d0548df76510834b44617fe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestWorker_a4279c4b125a2b64db730b1bfa9b12bc9}\label{classOpenAPI_1_1OAIHttpRequestWorker_a4279c4b125a2b64db730b1bfa9b12bc9}} 
+\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}!getHttpFileElement@{getHttpFileElement}}
+\index{getHttpFileElement@{getHttpFileElement}!OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+\doxysubsubsection{\texorpdfstring{getHttpFileElement()}{getHttpFileElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOpenAPI_1_1OAIHttpFileElement}{OAIHttp\+File\+Element}} Open\+API\+::\+OAIHttp\+Request\+Worker\+::get\+Http\+File\+Element (\begin{DoxyParamCaption}\item[{const QString \&}]{fieldname = {\ttfamily QString()} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 89 of file OAIHttp\+Request.\+cpp.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestWorker_aa5bdb146ddffe45498c9d53598d1507f}\label{classOpenAPI_1_1OAIHttpRequestWorker_aa5bdb146ddffe45498c9d53598d1507f}} 
+\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}!getHttpResponseCode@{getHttpResponseCode}}
+\index{getHttpResponseCode@{getHttpResponseCode}!OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+\doxysubsubsection{\texorpdfstring{getHttpResponseCode()}{getHttpResponseCode()}}
+{\footnotesize\ttfamily int Open\+API\+::\+OAIHttp\+Request\+Worker\+::get\+Http\+Response\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 132 of file OAIHttp\+Request.\+cpp.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestWorker_aa963aaf81b6956ddf02f8b952cb63bf4}\label{classOpenAPI_1_1OAIHttpRequestWorker_aa963aaf81b6956ddf02f8b952cb63bf4}} 
+\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}!getMultiPartField@{getMultiPartField}}
+\index{getMultiPartField@{getMultiPartField}!OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+\doxysubsubsection{\texorpdfstring{getMultiPartField()}{getMultiPartField()}}
+{\footnotesize\ttfamily QByte\+Array $\ast$ Open\+API\+::\+OAIHttp\+Request\+Worker\+::get\+Multi\+Part\+Field (\begin{DoxyParamCaption}\item[{const QString \&}]{fieldname = {\ttfamily QString()} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 100 of file OAIHttp\+Request.\+cpp.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestWorker_a85149fa45d51093782939c2bcde63732}\label{classOpenAPI_1_1OAIHttpRequestWorker_a85149fa45d51093782939c2bcde63732}} 
+\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}!getResponseHeaders@{getResponseHeaders}}
+\index{getResponseHeaders@{getResponseHeaders}!OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+\doxysubsubsection{\texorpdfstring{getResponseHeaders()}{getResponseHeaders()}}
+{\footnotesize\ttfamily QMap$<$ QString, QString $>$ Open\+API\+::\+OAIHttp\+Request\+Worker\+::get\+Response\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 85 of file OAIHttp\+Request.\+cpp.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestWorker_a956ba64d89ae192257247fb93a37bbf8}\label{classOpenAPI_1_1OAIHttpRequestWorker_a956ba64d89ae192257247fb93a37bbf8}} 
+\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}!http\_attribute\_encode@{http\_attribute\_encode}}
+\index{http\_attribute\_encode@{http\_attribute\_encode}!OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+\doxysubsubsection{\texorpdfstring{http\_attribute\_encode()}{http\_attribute\_encode()}}
+{\footnotesize\ttfamily QString Open\+API\+::\+OAIHttp\+Request\+Worker\+::http\+\_\+attribute\+\_\+encode (\begin{DoxyParamCaption}\item[{QString}]{attribute\+\_\+name,  }\item[{QString}]{input }\end{DoxyParamCaption})}
+
+
+
+Definition at line 136 of file OAIHttp\+Request.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenAPI_1_1OAIHttpRequestWorker_a956ba64d89ae192257247fb93a37bbf8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestWorker_a668f76ebf5174efb680bf0189d3f4d0f}\label{classOpenAPI_1_1OAIHttpRequestWorker_a668f76ebf5174efb680bf0189d3f4d0f}} 
+\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}!on\_execution\_finished@{on\_execution\_finished}}
+\index{on\_execution\_finished@{on\_execution\_finished}!OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+\doxysubsubsection{\texorpdfstring{on\_execution\_finished}{on\_execution\_finished}}
+{\footnotesize\ttfamily void Open\+API\+::\+OAIHttp\+Request\+Worker\+::on\+\_\+execution\+\_\+finished (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOpenAPI_1_1OAIHttpRequestWorker}{OAIHttp\+Request\+Worker}} $\ast$}]{worker }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenAPI_1_1OAIHttpRequestWorker_a668f76ebf5174efb680bf0189d3f4d0f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestWorker_aa386809329ecdb5259d15ebf5ab3329c}\label{classOpenAPI_1_1OAIHttpRequestWorker_aa386809329ecdb5259d15ebf5ab3329c}} 
+\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}!setRequestCompressionEnabled@{setRequestCompressionEnabled}}
+\index{setRequestCompressionEnabled@{setRequestCompressionEnabled}!OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+\doxysubsubsection{\texorpdfstring{setRequestCompressionEnabled()}{setRequestCompressionEnabled()}}
+{\footnotesize\ttfamily void Open\+API\+::\+OAIHttp\+Request\+Worker\+::set\+Request\+Compression\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Definition at line 128 of file OAIHttp\+Request.\+cpp.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestWorker_a9dab9eeb608f5a0230db0acfbdf8610f}\label{classOpenAPI_1_1OAIHttpRequestWorker_a9dab9eeb608f5a0230db0acfbdf8610f}} 
+\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}!setResponseCompressionEnabled@{setResponseCompressionEnabled}}
+\index{setResponseCompressionEnabled@{setResponseCompressionEnabled}!OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+\doxysubsubsection{\texorpdfstring{setResponseCompressionEnabled()}{setResponseCompressionEnabled()}}
+{\footnotesize\ttfamily void Open\+API\+::\+OAIHttp\+Request\+Worker\+::set\+Response\+Compression\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Definition at line 124 of file OAIHttp\+Request.\+cpp.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestWorker_a4cacd35a634ee9383ed40f2cb3623d2c}\label{classOpenAPI_1_1OAIHttpRequestWorker_a4cacd35a634ee9383ed40f2cb3623d2c}} 
+\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}!setTimeOut@{setTimeOut}}
+\index{setTimeOut@{setTimeOut}!OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+\doxysubsubsection{\texorpdfstring{setTimeOut()}{setTimeOut()}}
+{\footnotesize\ttfamily void Open\+API\+::\+OAIHttp\+Request\+Worker\+::set\+Time\+Out (\begin{DoxyParamCaption}\item[{int}]{time\+Out\+Ms }\end{DoxyParamCaption})}
+
+
+
+Definition at line 111 of file OAIHttp\+Request.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenAPI_1_1OAIHttpRequestWorker_a4cacd35a634ee9383ed40f2cb3623d2c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestWorker_ac4c0e5da7f31b1cb763da1a51cd25eb9}\label{classOpenAPI_1_1OAIHttpRequestWorker_ac4c0e5da7f31b1cb763da1a51cd25eb9}} 
+\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}!setWorkingDirectory@{setWorkingDirectory}}
+\index{setWorkingDirectory@{setWorkingDirectory}!OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+\doxysubsubsection{\texorpdfstring{setWorkingDirectory()}{setWorkingDirectory()}}
+{\footnotesize\ttfamily void Open\+API\+::\+OAIHttp\+Request\+Worker\+::set\+Working\+Directory (\begin{DoxyParamCaption}\item[{const QString \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Definition at line 118 of file OAIHttp\+Request.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenAPI_1_1OAIHttpRequestWorker_ac4c0e5da7f31b1cb763da1a51cd25eb9_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestWorker_a094214d8718ee8f0e8bcd41e1b19ae2b}\label{classOpenAPI_1_1OAIHttpRequestWorker_a094214d8718ee8f0e8bcd41e1b19ae2b}} 
+\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}!error\_str@{error\_str}}
+\index{error\_str@{error\_str}!OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+\doxysubsubsection{\texorpdfstring{error\_str}{error\_str}}
+{\footnotesize\ttfamily QString Open\+API\+::\+OAIHttp\+Request\+Worker\+::error\+\_\+str}
+
+
+
+Definition at line 69 of file OAIHttp\+Request.\+h.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestWorker_a3efd6243071ccbef5c9312d4db124e9d}\label{classOpenAPI_1_1OAIHttpRequestWorker_a3efd6243071ccbef5c9312d4db124e9d}} 
+\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}!error\_type@{error\_type}}
+\index{error\_type@{error\_type}!OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+\doxysubsubsection{\texorpdfstring{error\_type}{error\_type}}
+{\footnotesize\ttfamily QNetwork\+Reply\+::\+Network\+Error Open\+API\+::\+OAIHttp\+Request\+Worker\+::error\+\_\+type}
+
+
+
+Definition at line 68 of file OAIHttp\+Request.\+h.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestWorker_aecbecbac85d55628b6cabb73f072fcb5}\label{classOpenAPI_1_1OAIHttpRequestWorker_aecbecbac85d55628b6cabb73f072fcb5}} 
+\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}!response@{response}}
+\index{response@{response}!OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+\doxysubsubsection{\texorpdfstring{response}{response}}
+{\footnotesize\ttfamily QByte\+Array Open\+API\+::\+OAIHttp\+Request\+Worker\+::response}
+
+
+
+Definition at line 67 of file OAIHttp\+Request.\+h.
+
+\mbox{\Hypertarget{classOpenAPI_1_1OAIHttpRequestWorker_acb24ce47aac9765fd4efc7365cec2938}\label{classOpenAPI_1_1OAIHttpRequestWorker_acb24ce47aac9765fd4efc7365cec2938}} 
+\index{OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}!sslDefaultConfiguration@{sslDefaultConfiguration}}
+\index{sslDefaultConfiguration@{sslDefaultConfiguration}!OpenAPI::OAIHttpRequestWorker@{OpenAPI::OAIHttpRequestWorker}}
+\doxysubsubsection{\texorpdfstring{sslDefaultConfiguration}{sslDefaultConfiguration}}
+{\footnotesize\ttfamily QSsl\+Configuration $\ast$ Open\+API\+::\+OAIHttp\+Request\+Worker\+::ssl\+Default\+Configuration\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 74 of file OAIHttp\+Request.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+api/intersection\+\_\+client\+\_\+api/\mbox{\hyperlink{OAIHttpRequest_8h}{OAIHttp\+Request.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+api/intersection\+\_\+client\+\_\+api/\mbox{\hyperlink{OAIHttpRequest_8cpp}{OAIHttp\+Request.\+cpp}}\end{DoxyCompactItemize}

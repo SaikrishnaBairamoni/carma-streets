@@ -1,0 +1,986 @@
+\hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent}{}\doxysection{message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent Class Reference}
+\label{classmessage__services_1_1models_1_1vehicle__status__intent}\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+
+
+{\ttfamily \#include $<$vehicle\+\_\+status\+\_\+intent.\+h$>$}
+
+
+
+Inheritance diagram for message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classmessage__services_1_1models_1_1vehicle__status__intent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classmessage__services_1_1models_1_1vehicle__status__intent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_af5ca757aee4cab48cb329cda871a05e9}{vehicle\+\_\+status\+\_\+intent}} ()
+\item 
+virtual \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a6cdd648d978dafc8ee755afd44c89ca8}{$\sim$vehicle\+\_\+status\+\_\+intent}} ()
+\item 
+virtual void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_ab953f0563ef999acc2ecf333c4192f5c}{from\+Json\+Object}} (const rapidjson\+::\+Value \&obj)
+\item 
+virtual bool \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a9eb58b1c5439452363596d7b4877e683}{as\+Json\+Object}} (rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$writer) const
+\item 
+std\+::string \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a2a1da1adfe45353d5a4a3c1d91315d10}{get\+Vehicle\+\_\+id}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a2cefe1ed615e057a55c6fd32b85a2066}{set\+Vehicle\+\_\+id}} (std\+::string vehicle\+\_\+id)
+\item 
+double \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a79653531878aa8f80d687291a6fa3046}{get\+Cur\+\_\+speed}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a3fd11ec19fb3a5b14faacfca1a776bb6}{set\+Cur\+\_\+speed}} (double cur\+\_\+speed)
+\item 
+double \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a5cded7c774d9a200253828be40ba3e14}{get\+Cur\+\_\+accel}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_aaf76a35b3f6f0d7d5fa05baf753a309e}{set\+Cur\+\_\+accel}} (double cur\+\_\+accel)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacemessage__services_1_1models_a1881e3001e6e8295035743eb1f62a2ba}{est\+\_\+path\+\_\+t}} $>$ \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_ad31caa6565193b455cc0aa75ef2bc031}{get\+Est\+\_\+path\+\_\+v}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a75a4999e0b08e190076f4ffbc1520055}{set\+Est\+\_\+path\+\_\+v}} (std\+::vector$<$ \mbox{\hyperlink{namespacemessage__services_1_1models_a1881e3001e6e8295035743eb1f62a2ba}{est\+\_\+path\+\_\+t}} $>$ est\+\_\+path\+\_\+v)
+\item 
+long \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a832a4d9e52488e150ef02802b3188915}{get\+Actual\+\_\+enter\+\_\+timestamp}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a5e1f9a3efb982f22f60f60e4c9f9e748}{set\+Actual\+\_\+enter\+\_\+timestamp}} (long actual\+\_\+enter\+\_\+timestamp)
+\item 
+long \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a39acddb048f5057d40c2cc604d9c09b1}{get\+Actual\+\_\+stop\+\_\+timestamp}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a1d01ea8032517cc0b432cbb543c6e407}{set\+Actual\+\_\+stop\+\_\+timestamp}} (long actual\+\_\+stop\+\_\+timestamp)
+\item 
+long \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a9f7a8142e4c613ac77819ec203587467}{get\+Earliest\+\_\+stop\+\_\+timestamp}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_aa7c9379c3f2e6a403815a48400c9f178}{set\+Earliest\+\_\+stop\+\_\+timestamp}} (long earliest\+\_\+stop\+\_\+timestamp)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a0fd351b1a30cdeb547923808c0527ab1}{get\+Link\+\_\+lanelet\+\_\+id}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_ae8b641c77189056ae6888378c25c1ba7}{set\+Link\+\_\+lanelet\+\_\+id}} (int64\+\_\+t link\+\_\+lanelet\+\_\+id)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_aea410949871fdad65170a549460d9a35}{get\+Dest\+\_\+lanelet\+\_\+id}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a84ab6a699bf963ea2777278847561853}{set\+Dest\+\_\+lanelet\+\_\+id}} (int64\+\_\+t dest\+\_\+lanelet\+\_\+id)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a8731f11330e777afb8036accbdc71689}{get\+Enter\+\_\+lanelet\+\_\+id}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a9865793f68579515f64b02b5994c7402}{set\+Enter\+\_\+lanelet\+\_\+id}} (int64\+\_\+t enter\+\_\+lanelet\+\_\+id)
+\item 
+double \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a306bf9f0fbb4a7368b4fc6085d39e1d0}{get\+Cur\+\_\+distance}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a10b1b2d7aed2fc9206f3255319c6bc6e}{set\+Cur\+\_\+distance}} (double cur\+\_\+distance)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a759741ca13520bb8b3b379d7fdb1975b}{get\+Cur\+\_\+lanelet\+\_\+id}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a29973042d25f00d7a6ae4274199efaae}{set\+Cur\+\_\+lanelet\+\_\+id}} (int64\+\_\+t cur\+\_\+lanelet\+\_\+id)
+\item 
+bool \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a46db1b7da0b73786fe0991056e945047}{get\+Is\+\_\+allowed}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a86407fd5aa5bc140dfe4eeb58857c402}{set\+Is\+\_\+allowed}} (bool is\+\_\+allowed)
+\item 
+long \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a05cd853428350eb51bbd9798dd16d825}{get\+Depart\+\_\+position}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_aa1e269c8873f40dee9ec438b3b34fc96}{set\+Depart\+\_\+position}} (long depart\+\_\+position)
+\item 
+double \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_ac9bb96c0c313e45e14b664df6206686e}{get\+Minimum\+\_\+gap}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a1425e23366059f0006c7e86bafed6a33}{set\+Minimum\+\_\+gap}} (double minimum\+\_\+gap)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_aa9029cfb024cdfdede8278d2c1492aa2}{get\+Vehicle\+\_\+length}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a5355465311705ba972a13fa48de3634a}{set\+Vehicle\+\_\+length}} (uint32\+\_\+t vehicle\+\_\+length)
+\item 
+double \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_afab50734bba5479db110ef825ab35ce0}{get\+Max\+\_\+decel}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a9a2f1a0e8d094c574e458614cc4ca6a0}{set\+Max\+\_\+decel}} (double max\+\_\+decel)
+\item 
+double \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a2ad3226ede7fd8e6ed3ace9a389cdfa8}{get\+Max\+\_\+accel}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a1961108c1b43e7888913dcfa719429ce}{set\+Max\+\_\+accel}} (double max\+\_\+accel)
+\item 
+double \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_ac26a32fd6bedb4d63997f00a14596b10}{get\+React\+\_\+timestamp}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a282954fce7bc32848e522bbba00396b7}{set\+React\+\_\+timestamp}} (double react\+\_\+timestamp)
+\item 
+long \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_aa475935fec4b07d608127e5e10ea583c}{get\+Actual\+\_\+depart\+\_\+timestamp}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a33646d60b6c09bb89c0c692b41d2b7fc}{set\+Actual\+\_\+depart\+\_\+timestamp}} (long actual\+\_\+depart\+\_\+timestamp)
+\item 
+long \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_ac340f74395d7707f328dc537d0f58c53}{get\+Cur\+\_\+timestamp}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a6974225b7b4b7c54260f1d4c376dd533}{set\+Cur\+\_\+timestamp}} (long cur\+\_\+timestamp)
+\item 
+std\+::string \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a7ae3c42e43510f3bcbd79f29fc0c9ba8}{get\+Bsm\+\_\+id}} ()
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_aceeb3652addbbcb99863aec253479d41}{set\+Bsm\+\_\+id}} (std\+::string bsm\+\_\+id)
+\item 
+std\+::string \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a0e74ff97926b9d436172b6f581313223}{Get\+Turn\+\_\+direction}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a2b58b6a7934632f68810871d4374f9de}{Set\+Turn\+\_\+direction}} (std\+::string turn\+\_\+direction)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent_a0b97ee6846fccf3db15c729eb7b323ab}{operator$<$$<$}} (std\+::ostream \&out, \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent}{vehicle\+\_\+status\+\_\+intent}} \&vehicle\+\_\+status\+\_\+intent\+\_\+obj)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 22 of file vehicle\+\_\+status\+\_\+intent.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_af5ca757aee4cab48cb329cda871a05e9}\label{classmessage__services_1_1models_1_1vehicle__status__intent_af5ca757aee4cab48cb329cda871a05e9}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!vehicle\_status\_intent@{vehicle\_status\_intent}}
+\index{vehicle\_status\_intent@{vehicle\_status\_intent}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{vehicle\_status\_intent()}{vehicle\_status\_intent()}}
+{\footnotesize\ttfamily message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::vehicle\+\_\+status\+\_\+intent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a6cdd648d978dafc8ee755afd44c89ca8}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a6cdd648d978dafc8ee755afd44c89ca8}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!````~vehicle\_status\_intent@{$\sim$vehicle\_status\_intent}}
+\index{````~vehicle\_status\_intent@{$\sim$vehicle\_status\_intent}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{$\sim$vehicle\_status\_intent()}{~vehicle\_status\_intent()}}
+{\footnotesize\ttfamily message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::$\sim$vehicle\+\_\+status\+\_\+intent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 20 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a9eb58b1c5439452363596d7b4877e683}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a9eb58b1c5439452363596d7b4877e683}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!asJsonObject@{asJsonObject}}
+\index{asJsonObject@{asJsonObject}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{asJsonObject()}{asJsonObject()}}
+{\footnotesize\ttfamily bool message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::as\+Json\+Object (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$}]{writer }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classmessage__services_1_1models_1_1baseMessage_af4f0e051256d8e1377cba89120a34689}{message\+\_\+services\+::models\+::base\+Message}}.
+
+
+
+Definition at line 84 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a9eb58b1c5439452363596d7b4877e683_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_ab953f0563ef999acc2ecf333c4192f5c}\label{classmessage__services_1_1models_1_1vehicle__status__intent_ab953f0563ef999acc2ecf333c4192f5c}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!fromJsonObject@{fromJsonObject}}
+\index{fromJsonObject@{fromJsonObject}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{fromJsonObject()}{fromJsonObject()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::from\+Json\+Object (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classmessage__services_1_1models_1_1baseMessage_a4fedff3ceb673e0200e7738bd6099d5d}{message\+\_\+services\+::models\+::base\+Message}}.
+
+
+
+Definition at line 22 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_ab953f0563ef999acc2ecf333c4192f5c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_aa475935fec4b07d608127e5e10ea583c}\label{classmessage__services_1_1models_1_1vehicle__status__intent_aa475935fec4b07d608127e5e10ea583c}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getActual\_depart\_timestamp@{getActual\_depart\_timestamp}}
+\index{getActual\_depart\_timestamp@{getActual\_depart\_timestamp}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getActual\_depart\_timestamp()}{getActual\_depart\_timestamp()}}
+{\footnotesize\ttfamily long message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Actual\+\_\+depart\+\_\+timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 185 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a832a4d9e52488e150ef02802b3188915}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a832a4d9e52488e150ef02802b3188915}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getActual\_enter\_timestamp@{getActual\_enter\_timestamp}}
+\index{getActual\_enter\_timestamp@{getActual\_enter\_timestamp}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getActual\_enter\_timestamp()}{getActual\_enter\_timestamp()}}
+{\footnotesize\ttfamily long message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Actual\+\_\+enter\+\_\+timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 210 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a39acddb048f5057d40c2cc604d9c09b1}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a39acddb048f5057d40c2cc604d9c09b1}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getActual\_stop\_timestamp@{getActual\_stop\_timestamp}}
+\index{getActual\_stop\_timestamp@{getActual\_stop\_timestamp}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getActual\_stop\_timestamp()}{getActual\_stop\_timestamp()}}
+{\footnotesize\ttfamily long message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Actual\+\_\+stop\+\_\+timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 219 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a7ae3c42e43510f3bcbd79f29fc0c9ba8}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a7ae3c42e43510f3bcbd79f29fc0c9ba8}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getBsm\_id@{getBsm\_id}}
+\index{getBsm\_id@{getBsm\_id}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getBsm\_id()}{getBsm\_id()}}
+{\footnotesize\ttfamily std\+::string message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Bsm\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 352 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a5cded7c774d9a200253828be40ba3e14}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a5cded7c774d9a200253828be40ba3e14}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getCur\_accel@{getCur\_accel}}
+\index{getCur\_accel@{getCur\_accel}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getCur\_accel()}{getCur\_accel()}}
+{\footnotesize\ttfamily double message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Cur\+\_\+accel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 193 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a5cded7c774d9a200253828be40ba3e14_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a306bf9f0fbb4a7368b4fc6085d39e1d0}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a306bf9f0fbb4a7368b4fc6085d39e1d0}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getCur\_distance@{getCur\_distance}}
+\index{getCur\_distance@{getCur\_distance}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getCur\_distance()}{getCur\_distance()}}
+{\footnotesize\ttfamily double message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Cur\+\_\+distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 271 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a306bf9f0fbb4a7368b4fc6085d39e1d0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a759741ca13520bb8b3b379d7fdb1975b}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a759741ca13520bb8b3b379d7fdb1975b}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getCur\_lanelet\_id@{getCur\_lanelet\_id}}
+\index{getCur\_lanelet\_id@{getCur\_lanelet\_id}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getCur\_lanelet\_id()}{getCur\_lanelet\_id()}}
+{\footnotesize\ttfamily int64\+\_\+t message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Cur\+\_\+lanelet\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 280 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a759741ca13520bb8b3b379d7fdb1975b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a79653531878aa8f80d687291a6fa3046}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a79653531878aa8f80d687291a6fa3046}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getCur\_speed@{getCur\_speed}}
+\index{getCur\_speed@{getCur\_speed}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getCur\_speed()}{getCur\_speed()}}
+{\footnotesize\ttfamily double message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Cur\+\_\+speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 176 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a79653531878aa8f80d687291a6fa3046_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_ac340f74395d7707f328dc537d0f58c53}\label{classmessage__services_1_1models_1_1vehicle__status__intent_ac340f74395d7707f328dc537d0f58c53}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getCur\_timestamp@{getCur\_timestamp}}
+\index{getCur\_timestamp@{getCur\_timestamp}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getCur\_timestamp()}{getCur\_timestamp()}}
+{\footnotesize\ttfamily long message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Cur\+\_\+timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 245 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_ac340f74395d7707f328dc537d0f58c53_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a05cd853428350eb51bbd9798dd16d825}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a05cd853428350eb51bbd9798dd16d825}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getDepart\_position@{getDepart\_position}}
+\index{getDepart\_position@{getDepart\_position}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getDepart\_position()}{getDepart\_position()}}
+{\footnotesize\ttfamily long message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Depart\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 298 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a05cd853428350eb51bbd9798dd16d825_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_aea410949871fdad65170a549460d9a35}\label{classmessage__services_1_1models_1_1vehicle__status__intent_aea410949871fdad65170a549460d9a35}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getDest\_lanelet\_id@{getDest\_lanelet\_id}}
+\index{getDest\_lanelet\_id@{getDest\_lanelet\_id}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getDest\_lanelet\_id()}{getDest\_lanelet\_id()}}
+{\footnotesize\ttfamily int64\+\_\+t message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Dest\+\_\+lanelet\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 253 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_aea410949871fdad65170a549460d9a35_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a9f7a8142e4c613ac77819ec203587467}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a9f7a8142e4c613ac77819ec203587467}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getEarliest\_stop\_timestamp@{getEarliest\_stop\_timestamp}}
+\index{getEarliest\_stop\_timestamp@{getEarliest\_stop\_timestamp}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getEarliest\_stop\_timestamp()}{getEarliest\_stop\_timestamp()}}
+{\footnotesize\ttfamily long message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Earliest\+\_\+stop\+\_\+timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 228 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a8731f11330e777afb8036accbdc71689}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a8731f11330e777afb8036accbdc71689}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getEnter\_lanelet\_id@{getEnter\_lanelet\_id}}
+\index{getEnter\_lanelet\_id@{getEnter\_lanelet\_id}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getEnter\_lanelet\_id()}{getEnter\_lanelet\_id()}}
+{\footnotesize\ttfamily int64\+\_\+t message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Enter\+\_\+lanelet\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 262 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a8731f11330e777afb8036accbdc71689_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_ad31caa6565193b455cc0aa75ef2bc031}\label{classmessage__services_1_1models_1_1vehicle__status__intent_ad31caa6565193b455cc0aa75ef2bc031}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getEst\_path\_v@{getEst\_path\_v}}
+\index{getEst\_path\_v@{getEst\_path\_v}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getEst\_path\_v()}{getEst\_path\_v()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespacemessage__services_1_1models_a1881e3001e6e8295035743eb1f62a2ba}{est\+\_\+path\+\_\+t}} $>$ message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Est\+\_\+path\+\_\+v (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 201 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_ad31caa6565193b455cc0aa75ef2bc031_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a46db1b7da0b73786fe0991056e945047}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a46db1b7da0b73786fe0991056e945047}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getIs\_allowed@{getIs\_allowed}}
+\index{getIs\_allowed@{getIs\_allowed}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getIs\_allowed()}{getIs\_allowed()}}
+{\footnotesize\ttfamily bool message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Is\+\_\+allowed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 289 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a46db1b7da0b73786fe0991056e945047_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a0fd351b1a30cdeb547923808c0527ab1}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a0fd351b1a30cdeb547923808c0527ab1}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getLink\_lanelet\_id@{getLink\_lanelet\_id}}
+\index{getLink\_lanelet\_id@{getLink\_lanelet\_id}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getLink\_lanelet\_id()}{getLink\_lanelet\_id()}}
+{\footnotesize\ttfamily int64\+\_\+t message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Link\+\_\+lanelet\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 237 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a0fd351b1a30cdeb547923808c0527ab1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a2ad3226ede7fd8e6ed3ace9a389cdfa8}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a2ad3226ede7fd8e6ed3ace9a389cdfa8}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getMax\_accel@{getMax\_accel}}
+\index{getMax\_accel@{getMax\_accel}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getMax\_accel()}{getMax\_accel()}}
+{\footnotesize\ttfamily double message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Max\+\_\+accel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 334 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a2ad3226ede7fd8e6ed3ace9a389cdfa8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_afab50734bba5479db110ef825ab35ce0}\label{classmessage__services_1_1models_1_1vehicle__status__intent_afab50734bba5479db110ef825ab35ce0}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getMax\_decel@{getMax\_decel}}
+\index{getMax\_decel@{getMax\_decel}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getMax\_decel()}{getMax\_decel()}}
+{\footnotesize\ttfamily double message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Max\+\_\+decel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 325 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_afab50734bba5479db110ef825ab35ce0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_ac9bb96c0c313e45e14b664df6206686e}\label{classmessage__services_1_1models_1_1vehicle__status__intent_ac9bb96c0c313e45e14b664df6206686e}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getMinimum\_gap@{getMinimum\_gap}}
+\index{getMinimum\_gap@{getMinimum\_gap}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getMinimum\_gap()}{getMinimum\_gap()}}
+{\footnotesize\ttfamily double message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Minimum\+\_\+gap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 307 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_ac9bb96c0c313e45e14b664df6206686e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_ac26a32fd6bedb4d63997f00a14596b10}\label{classmessage__services_1_1models_1_1vehicle__status__intent_ac26a32fd6bedb4d63997f00a14596b10}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getReact\_timestamp@{getReact\_timestamp}}
+\index{getReact\_timestamp@{getReact\_timestamp}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getReact\_timestamp()}{getReact\_timestamp()}}
+{\footnotesize\ttfamily double message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+React\+\_\+timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 343 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_ac26a32fd6bedb4d63997f00a14596b10_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a0e74ff97926b9d436172b6f581313223}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a0e74ff97926b9d436172b6f581313223}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!GetTurn\_direction@{GetTurn\_direction}}
+\index{GetTurn\_direction@{GetTurn\_direction}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{GetTurn\_direction()}{GetTurn\_direction()}}
+{\footnotesize\ttfamily std\+::string message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::\+Get\+Turn\+\_\+direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 362 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a0e74ff97926b9d436172b6f581313223_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a2a1da1adfe45353d5a4a3c1d91315d10}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a2a1da1adfe45353d5a4a3c1d91315d10}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getVehicle\_id@{getVehicle\_id}}
+\index{getVehicle\_id@{getVehicle\_id}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getVehicle\_id()}{getVehicle\_id()}}
+{\footnotesize\ttfamily std\+::string message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Vehicle\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 168 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a2a1da1adfe45353d5a4a3c1d91315d10_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_aa9029cfb024cdfdede8278d2c1492aa2}\label{classmessage__services_1_1models_1_1vehicle__status__intent_aa9029cfb024cdfdede8278d2c1492aa2}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!getVehicle\_length@{getVehicle\_length}}
+\index{getVehicle\_length@{getVehicle\_length}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{getVehicle\_length()}{getVehicle\_length()}}
+{\footnotesize\ttfamily uint32\+\_\+t message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::get\+Vehicle\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 316 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_aa9029cfb024cdfdede8278d2c1492aa2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a33646d60b6c09bb89c0c692b41d2b7fc}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a33646d60b6c09bb89c0c692b41d2b7fc}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setActual\_depart\_timestamp@{setActual\_depart\_timestamp}}
+\index{setActual\_depart\_timestamp@{setActual\_depart\_timestamp}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setActual\_depart\_timestamp()}{setActual\_depart\_timestamp()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Actual\+\_\+depart\+\_\+timestamp (\begin{DoxyParamCaption}\item[{long}]{actual\+\_\+depart\+\_\+timestamp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 189 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a5e1f9a3efb982f22f60f60e4c9f9e748}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a5e1f9a3efb982f22f60f60e4c9f9e748}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setActual\_enter\_timestamp@{setActual\_enter\_timestamp}}
+\index{setActual\_enter\_timestamp@{setActual\_enter\_timestamp}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setActual\_enter\_timestamp()}{setActual\_enter\_timestamp()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Actual\+\_\+enter\+\_\+timestamp (\begin{DoxyParamCaption}\item[{long}]{actual\+\_\+enter\+\_\+timestamp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 214 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a1d01ea8032517cc0b432cbb543c6e407}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a1d01ea8032517cc0b432cbb543c6e407}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setActual\_stop\_timestamp@{setActual\_stop\_timestamp}}
+\index{setActual\_stop\_timestamp@{setActual\_stop\_timestamp}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setActual\_stop\_timestamp()}{setActual\_stop\_timestamp()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Actual\+\_\+stop\+\_\+timestamp (\begin{DoxyParamCaption}\item[{long}]{actual\+\_\+stop\+\_\+timestamp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 223 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_aceeb3652addbbcb99863aec253479d41}\label{classmessage__services_1_1models_1_1vehicle__status__intent_aceeb3652addbbcb99863aec253479d41}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setBsm\_id@{setBsm\_id}}
+\index{setBsm\_id@{setBsm\_id}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setBsm\_id()}{setBsm\_id()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Bsm\+\_\+id (\begin{DoxyParamCaption}\item[{std\+::string}]{bsm\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 357 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_aceeb3652addbbcb99863aec253479d41_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_aaf76a35b3f6f0d7d5fa05baf753a309e}\label{classmessage__services_1_1models_1_1vehicle__status__intent_aaf76a35b3f6f0d7d5fa05baf753a309e}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setCur\_accel@{setCur\_accel}}
+\index{setCur\_accel@{setCur\_accel}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setCur\_accel()}{setCur\_accel()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Cur\+\_\+accel (\begin{DoxyParamCaption}\item[{double}]{cur\+\_\+accel }\end{DoxyParamCaption})}
+
+
+
+Definition at line 197 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_aaf76a35b3f6f0d7d5fa05baf753a309e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a10b1b2d7aed2fc9206f3255319c6bc6e}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a10b1b2d7aed2fc9206f3255319c6bc6e}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setCur\_distance@{setCur\_distance}}
+\index{setCur\_distance@{setCur\_distance}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setCur\_distance()}{setCur\_distance()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Cur\+\_\+distance (\begin{DoxyParamCaption}\item[{double}]{cur\+\_\+distance }\end{DoxyParamCaption})}
+
+
+
+Definition at line 275 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a10b1b2d7aed2fc9206f3255319c6bc6e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a29973042d25f00d7a6ae4274199efaae}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a29973042d25f00d7a6ae4274199efaae}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setCur\_lanelet\_id@{setCur\_lanelet\_id}}
+\index{setCur\_lanelet\_id@{setCur\_lanelet\_id}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setCur\_lanelet\_id()}{setCur\_lanelet\_id()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Cur\+\_\+lanelet\+\_\+id (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{cur\+\_\+lanelet\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 284 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a29973042d25f00d7a6ae4274199efaae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a3fd11ec19fb3a5b14faacfca1a776bb6}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a3fd11ec19fb3a5b14faacfca1a776bb6}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setCur\_speed@{setCur\_speed}}
+\index{setCur\_speed@{setCur\_speed}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setCur\_speed()}{setCur\_speed()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Cur\+\_\+speed (\begin{DoxyParamCaption}\item[{double}]{cur\+\_\+speed }\end{DoxyParamCaption})}
+
+
+
+Definition at line 180 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a3fd11ec19fb3a5b14faacfca1a776bb6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a6974225b7b4b7c54260f1d4c376dd533}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a6974225b7b4b7c54260f1d4c376dd533}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setCur\_timestamp@{setCur\_timestamp}}
+\index{setCur\_timestamp@{setCur\_timestamp}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setCur\_timestamp()}{setCur\_timestamp()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Cur\+\_\+timestamp (\begin{DoxyParamCaption}\item[{long}]{cur\+\_\+timestamp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 249 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a6974225b7b4b7c54260f1d4c376dd533_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_aa1e269c8873f40dee9ec438b3b34fc96}\label{classmessage__services_1_1models_1_1vehicle__status__intent_aa1e269c8873f40dee9ec438b3b34fc96}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setDepart\_position@{setDepart\_position}}
+\index{setDepart\_position@{setDepart\_position}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setDepart\_position()}{setDepart\_position()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Depart\+\_\+position (\begin{DoxyParamCaption}\item[{long}]{depart\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Definition at line 302 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_aa1e269c8873f40dee9ec438b3b34fc96_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a84ab6a699bf963ea2777278847561853}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a84ab6a699bf963ea2777278847561853}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setDest\_lanelet\_id@{setDest\_lanelet\_id}}
+\index{setDest\_lanelet\_id@{setDest\_lanelet\_id}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setDest\_lanelet\_id()}{setDest\_lanelet\_id()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Dest\+\_\+lanelet\+\_\+id (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{dest\+\_\+lanelet\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 257 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a84ab6a699bf963ea2777278847561853_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_aa7c9379c3f2e6a403815a48400c9f178}\label{classmessage__services_1_1models_1_1vehicle__status__intent_aa7c9379c3f2e6a403815a48400c9f178}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setEarliest\_stop\_timestamp@{setEarliest\_stop\_timestamp}}
+\index{setEarliest\_stop\_timestamp@{setEarliest\_stop\_timestamp}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setEarliest\_stop\_timestamp()}{setEarliest\_stop\_timestamp()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Earliest\+\_\+stop\+\_\+timestamp (\begin{DoxyParamCaption}\item[{long}]{earliest\+\_\+stop\+\_\+timestamp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 232 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a9865793f68579515f64b02b5994c7402}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a9865793f68579515f64b02b5994c7402}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setEnter\_lanelet\_id@{setEnter\_lanelet\_id}}
+\index{setEnter\_lanelet\_id@{setEnter\_lanelet\_id}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setEnter\_lanelet\_id()}{setEnter\_lanelet\_id()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Enter\+\_\+lanelet\+\_\+id (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{enter\+\_\+lanelet\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 266 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a9865793f68579515f64b02b5994c7402_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a75a4999e0b08e190076f4ffbc1520055}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a75a4999e0b08e190076f4ffbc1520055}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setEst\_path\_v@{setEst\_path\_v}}
+\index{setEst\_path\_v@{setEst\_path\_v}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setEst\_path\_v()}{setEst\_path\_v()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Est\+\_\+path\+\_\+v (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespacemessage__services_1_1models_a1881e3001e6e8295035743eb1f62a2ba}{est\+\_\+path\+\_\+t}} $>$}]{est\+\_\+path\+\_\+v }\end{DoxyParamCaption})}
+
+
+
+Definition at line 205 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a75a4999e0b08e190076f4ffbc1520055_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a86407fd5aa5bc140dfe4eeb58857c402}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a86407fd5aa5bc140dfe4eeb58857c402}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setIs\_allowed@{setIs\_allowed}}
+\index{setIs\_allowed@{setIs\_allowed}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setIs\_allowed()}{setIs\_allowed()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Is\+\_\+allowed (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+allowed }\end{DoxyParamCaption})}
+
+
+
+Definition at line 293 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a86407fd5aa5bc140dfe4eeb58857c402_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_ae8b641c77189056ae6888378c25c1ba7}\label{classmessage__services_1_1models_1_1vehicle__status__intent_ae8b641c77189056ae6888378c25c1ba7}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setLink\_lanelet\_id@{setLink\_lanelet\_id}}
+\index{setLink\_lanelet\_id@{setLink\_lanelet\_id}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setLink\_lanelet\_id()}{setLink\_lanelet\_id()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Link\+\_\+lanelet\+\_\+id (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{link\+\_\+lanelet\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 241 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_ae8b641c77189056ae6888378c25c1ba7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a1961108c1b43e7888913dcfa719429ce}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a1961108c1b43e7888913dcfa719429ce}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setMax\_accel@{setMax\_accel}}
+\index{setMax\_accel@{setMax\_accel}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setMax\_accel()}{setMax\_accel()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Max\+\_\+accel (\begin{DoxyParamCaption}\item[{double}]{max\+\_\+accel }\end{DoxyParamCaption})}
+
+
+
+Definition at line 338 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a1961108c1b43e7888913dcfa719429ce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a9a2f1a0e8d094c574e458614cc4ca6a0}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a9a2f1a0e8d094c574e458614cc4ca6a0}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setMax\_decel@{setMax\_decel}}
+\index{setMax\_decel@{setMax\_decel}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setMax\_decel()}{setMax\_decel()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Max\+\_\+decel (\begin{DoxyParamCaption}\item[{double}]{max\+\_\+decel }\end{DoxyParamCaption})}
+
+
+
+Definition at line 329 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a9a2f1a0e8d094c574e458614cc4ca6a0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a1425e23366059f0006c7e86bafed6a33}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a1425e23366059f0006c7e86bafed6a33}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setMinimum\_gap@{setMinimum\_gap}}
+\index{setMinimum\_gap@{setMinimum\_gap}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setMinimum\_gap()}{setMinimum\_gap()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Minimum\+\_\+gap (\begin{DoxyParamCaption}\item[{double}]{minimum\+\_\+gap }\end{DoxyParamCaption})}
+
+
+
+Definition at line 311 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a1425e23366059f0006c7e86bafed6a33_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a282954fce7bc32848e522bbba00396b7}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a282954fce7bc32848e522bbba00396b7}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setReact\_timestamp@{setReact\_timestamp}}
+\index{setReact\_timestamp@{setReact\_timestamp}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setReact\_timestamp()}{setReact\_timestamp()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+React\+\_\+timestamp (\begin{DoxyParamCaption}\item[{double}]{react\+\_\+timestamp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 347 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a282954fce7bc32848e522bbba00396b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a2b58b6a7934632f68810871d4374f9de}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a2b58b6a7934632f68810871d4374f9de}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!SetTurn\_direction@{SetTurn\_direction}}
+\index{SetTurn\_direction@{SetTurn\_direction}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{SetTurn\_direction()}{SetTurn\_direction()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::\+Set\+Turn\+\_\+direction (\begin{DoxyParamCaption}\item[{std\+::string}]{turn\+\_\+direction }\end{DoxyParamCaption})}
+
+
+
+Definition at line 367 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a2b58b6a7934632f68810871d4374f9de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a2cefe1ed615e057a55c6fd32b85a2066}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a2cefe1ed615e057a55c6fd32b85a2066}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setVehicle\_id@{setVehicle\_id}}
+\index{setVehicle\_id@{setVehicle\_id}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setVehicle\_id()}{setVehicle\_id()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Vehicle\+\_\+id (\begin{DoxyParamCaption}\item[{std\+::string}]{vehicle\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 172 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a2cefe1ed615e057a55c6fd32b85a2066_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a5355465311705ba972a13fa48de3634a}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a5355465311705ba972a13fa48de3634a}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!setVehicle\_length@{setVehicle\_length}}
+\index{setVehicle\_length@{setVehicle\_length}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{setVehicle\_length()}{setVehicle\_length()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::vehicle\+\_\+status\+\_\+intent\+::set\+Vehicle\+\_\+length (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{vehicle\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Definition at line 320 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1vehicle__status__intent_a5355465311705ba972a13fa48de3634a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1vehicle__status__intent_a0b97ee6846fccf3db15c729eb7b323ab}\label{classmessage__services_1_1models_1_1vehicle__status__intent_a0b97ee6846fccf3db15c729eb7b323ab}} 
+\index{message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!message\_services::models::vehicle\_status\_intent@{message\_services::models::vehicle\_status\_intent}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{\mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent}{vehicle\+\_\+status\+\_\+intent}} \&}]{vehicle\+\_\+status\+\_\+intent\+\_\+obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 160 of file vehicle\+\_\+status\+\_\+intent.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+message\+\_\+services/src/models/\mbox{\hyperlink{vehicle__status__intent_8h}{vehicle\+\_\+status\+\_\+intent.\+h}}\item 
+message\+\_\+services/src/models/\mbox{\hyperlink{vehicle__status__intent_8cpp}{vehicle\+\_\+status\+\_\+intent.\+cpp}}\end{DoxyCompactItemize}

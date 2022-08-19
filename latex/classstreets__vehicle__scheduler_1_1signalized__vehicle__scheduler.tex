@@ -1,0 +1,228 @@
+\hypertarget{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler}{}\doxysection{streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+scheduler Class Reference}
+\label{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler}\index{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}}
+
+
+{\ttfamily \#include $<$signalized\+\_\+vehicle\+\_\+scheduler.\+h$>$}
+
+
+
+Inheritance diagram for streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+scheduler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+scheduler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_ad5549c21cf0c7d99ad6ed41192f319dc}{signalized\+\_\+vehicle\+\_\+scheduler}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new signalized vehicle scheduler object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a253b363db5dde03d2d3ad5565d900260}{$\sim$signalized\+\_\+vehicle\+\_\+scheduler}} () override=default
+\begin{DoxyCompactList}\small\item\em Destroy the signalized vehicle scheduler object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a2572fdbb86e141df40174d618fe2a3d0}{schedule\+\_\+vehicles}} (std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} $>$ \&vehicles, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}} $>$ \&schedule) override
+\begin{DoxyCompactList}\small\item\em Method to schedule vehicles. Given and empty \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}} shared pointer and a map of vehicles and vehicle ids. This method will populate the intersection schedule with a schedule for all vehicles in the vehicle map based on UC 3 scheduling logic to estimate vehicles\textquotesingle{} entering times to the intersection box based on the modified spat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a2532494d22760bd75165d7b2c25bc354}{set\+\_\+initial\+\_\+green\+\_\+buffer}} (const uint64\+\_\+t buffer)
+\begin{DoxyCompactList}\small\item\em Set the initial green buffer (ms). This value is used to account for the time it takes a vehicle before entering the intersection box at a green phase. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a0c1c065ffbe9ecd62e2a985815aa8170}{get\+\_\+initial\+\_\+green\+\_\+buffer}} () const
+\begin{DoxyCompactList}\small\item\em Get the initial green buffer (ms). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a9f16f001c3768c180d62ea66a8770151}{set\+\_\+final\+\_\+green\+\_\+buffer}} (const uint64\+\_\+t buffer)
+\begin{DoxyCompactList}\small\item\em Set the final green buffer (ms). This value is used to account for safety. The assumption is that no vehicle shall enter the intersection box after the end of a green phase minus the final green buffer. entering the intersection box at a green phase. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_afbeb97e551e87ad6340c620b51f28fe1}{get\+\_\+final\+\_\+green\+\_\+buffer}} () const
+\begin{DoxyCompactList}\small\item\em Get the final green buffer (ms). \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1spat}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::spat}} $>$ \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_aa4707ffc16fca19f724911b9f0c0e581}{get\+\_\+spat}} () const
+\begin{DoxyCompactList}\small\item\em Get the spat object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a31439c5e2c152727be5df25e109ba988}{set\+\_\+spat}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1spat}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::spat}} $>$ spat\+\_\+info)
+\begin{DoxyCompactList}\small\item\em Set the spat object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 17 of file signalized\+\_\+vehicle\+\_\+scheduler.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_ad5549c21cf0c7d99ad6ed41192f319dc}\label{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_ad5549c21cf0c7d99ad6ed41192f319dc}} 
+\index{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}!signalized\_vehicle\_scheduler@{signalized\_vehicle\_scheduler}}
+\index{signalized\_vehicle\_scheduler@{signalized\_vehicle\_scheduler}!streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{signalized\_vehicle\_scheduler()}{signalized\_vehicle\_scheduler()}}
+{\footnotesize\ttfamily streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+scheduler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new signalized vehicle scheduler object. 
+
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a253b363db5dde03d2d3ad5565d900260}\label{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a253b363db5dde03d2d3ad5565d900260}} 
+\index{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}!````~signalized\_vehicle\_scheduler@{$\sim$signalized\_vehicle\_scheduler}}
+\index{````~signalized\_vehicle\_scheduler@{$\sim$signalized\_vehicle\_scheduler}!streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{$\sim$signalized\_vehicle\_scheduler()}{~signalized\_vehicle\_scheduler()}}
+{\footnotesize\ttfamily streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+scheduler\+::$\sim$signalized\+\_\+vehicle\+\_\+scheduler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+Destroy the signalized vehicle scheduler object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_afbeb97e551e87ad6340c620b51f28fe1}\label{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_afbeb97e551e87ad6340c620b51f28fe1}} 
+\index{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}!get\_final\_green\_buffer@{get\_final\_green\_buffer}}
+\index{get\_final\_green\_buffer@{get\_final\_green\_buffer}!streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{get\_final\_green\_buffer()}{get\_final\_green\_buffer()}}
+{\footnotesize\ttfamily uint64\+\_\+t streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+scheduler\+::get\+\_\+final\+\_\+green\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the final green buffer (ms). 
+
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t final green buffer. 
+\end{DoxyReturn}
+
+
+Definition at line 387 of file signalized\+\_\+vehicle\+\_\+scheduler.\+cpp.
+
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a0c1c065ffbe9ecd62e2a985815aa8170}\label{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a0c1c065ffbe9ecd62e2a985815aa8170}} 
+\index{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}!get\_initial\_green\_buffer@{get\_initial\_green\_buffer}}
+\index{get\_initial\_green\_buffer@{get\_initial\_green\_buffer}!streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{get\_initial\_green\_buffer()}{get\_initial\_green\_buffer()}}
+{\footnotesize\ttfamily uint64\+\_\+t streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+scheduler\+::get\+\_\+initial\+\_\+green\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the initial green buffer (ms). 
+
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t initial green buffer. 
+\end{DoxyReturn}
+
+
+Definition at line 379 of file signalized\+\_\+vehicle\+\_\+scheduler.\+cpp.
+
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_aa4707ffc16fca19f724911b9f0c0e581}\label{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_aa4707ffc16fca19f724911b9f0c0e581}} 
+\index{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}!get\_spat@{get\_spat}}
+\index{get\_spat@{get\_spat}!streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{get\_spat()}{get\_spat()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1spat}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::spat}} $>$ streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+scheduler\+::get\+\_\+spat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the spat object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$signal\+\_\+phase\+\_\+and\+\_\+timing\+::spat$>$ spat object 
+\end{DoxyReturn}
+
+
+Definition at line 391 of file signalized\+\_\+vehicle\+\_\+scheduler.\+cpp.
+
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a2572fdbb86e141df40174d618fe2a3d0}\label{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a2572fdbb86e141df40174d618fe2a3d0}} 
+\index{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}!schedule\_vehicles@{schedule\_vehicles}}
+\index{schedule\_vehicles@{schedule\_vehicles}!streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{schedule\_vehicles()}{schedule\_vehicles()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+scheduler\+::schedule\+\_\+vehicles (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} $>$ \&}]{vehicles,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}} $>$ \&}]{schedule }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method to schedule vehicles. Given and empty \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}} shared pointer and a map of vehicles and vehicle ids. This method will populate the intersection schedule with a schedule for all vehicles in the vehicle map based on UC 3 scheduling logic to estimate vehicles\textquotesingle{} entering times to the intersection box based on the modified spat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicles} & A map of the vehicles to schedule, with vehicle id as keys \\
+\hline
+{\em schedule} & A signalize\+\_\+intersection schedule shared pointer populated with a vehicle schedule for all EVs and DVs in the map. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1vehicle__scheduler_a68ae44ddfa8ae16f298b2798ed93b9d2}{streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler}}.
+
+
+
+Definition at line 5 of file signalized\+\_\+vehicle\+\_\+scheduler.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a2572fdbb86e141df40174d618fe2a3d0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a9f16f001c3768c180d62ea66a8770151}\label{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a9f16f001c3768c180d62ea66a8770151}} 
+\index{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}!set\_final\_green\_buffer@{set\_final\_green\_buffer}}
+\index{set\_final\_green\_buffer@{set\_final\_green\_buffer}!streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{set\_final\_green\_buffer()}{set\_final\_green\_buffer()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+scheduler\+::set\+\_\+final\+\_\+green\+\_\+buffer (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Set the final green buffer (ms). This value is used to account for safety. The assumption is that no vehicle shall enter the intersection box after the end of a green phase minus the final green buffer. entering the intersection box at a green phase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & final green buffer in milliseconds. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 383 of file signalized\+\_\+vehicle\+\_\+scheduler.\+cpp.
+
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a2532494d22760bd75165d7b2c25bc354}\label{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a2532494d22760bd75165d7b2c25bc354}} 
+\index{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}!set\_initial\_green\_buffer@{set\_initial\_green\_buffer}}
+\index{set\_initial\_green\_buffer@{set\_initial\_green\_buffer}!streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{set\_initial\_green\_buffer()}{set\_initial\_green\_buffer()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+scheduler\+::set\+\_\+initial\+\_\+green\+\_\+buffer (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Set the initial green buffer (ms). This value is used to account for the time it takes a vehicle before entering the intersection box at a green phase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & initial green buffer in milliseconds. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 375 of file signalized\+\_\+vehicle\+\_\+scheduler.\+cpp.
+
+\mbox{\Hypertarget{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a31439c5e2c152727be5df25e109ba988}\label{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler_a31439c5e2c152727be5df25e109ba988}} 
+\index{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}!set\_spat@{set\_spat}}
+\index{set\_spat@{set\_spat}!streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler@{streets\_vehicle\_scheduler::signalized\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{set\_spat()}{set\_spat()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+vehicle\+\_\+scheduler\+::set\+\_\+spat (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1spat}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::spat}} $>$}]{spat\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+Set the spat object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spat\+\_\+info} & \mbox{\hyperlink{structsignal__phase__and__timing_1_1spat}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::spat}} object. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 395 of file signalized\+\_\+vehicle\+\_\+scheduler.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/include/\mbox{\hyperlink{signalized__vehicle__scheduler_8h}{signalized\+\_\+vehicle\+\_\+scheduler.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/src/\mbox{\hyperlink{signalized__vehicle__scheduler_8cpp}{signalized\+\_\+vehicle\+\_\+scheduler.\+cpp}}\end{DoxyCompactItemize}

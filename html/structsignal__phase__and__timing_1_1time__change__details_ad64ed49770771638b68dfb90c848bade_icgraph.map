@@ -1,0 +1,5 @@
+<map id="signal_phase_and_timing::time_change_details::toJson" name="signal_phase_and_timing::time_change_details::toJson">
+<area shape="rect" id="node1" title="Serialize Time Change Details object to rapidjson::Value for writing as JSON string." alt="" coords="247,20,433,76"/>
+<area shape="rect" id="node2" href="$test__time__change__detail_8cpp.html#a4e81148e26076046bbb3bdf767e41971" title=" " alt="" coords="67,5,137,32"/>
+<area shape="rect" id="node3" href="$structsignal__phase__and__timing_1_1movement__event.html#a6c4d996501575d1e4a23f4ec9b6302a5" title="Serialize Movement Event object to rapidjson::Value for writing as JSON string." alt="" coords="5,57,199,98"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="signal_phase_and_timing::spat::fromJson" name="signal_phase_and_timing::spat::fromJson">
+<area shape="rect" id="node1" title="Deserialize SPaT JSON into SPaT object." alt="" coords="5,42,192,83"/>
+<area shape="rect" id="node2" href="$structsignal__phase__and__timing_1_1intersection__state.html#ac73d712ab8edf86b8d9c892f6bdff5e0" title="Deserialize Intersection State JSON into Intersection State object." alt="" coords="240,35,427,91"/>
+<area shape="rect" id="node3" href="$structsignal__phase__and__timing_1_1connection__maneuver__assist.html#a0a1eb4c8b7054414b2a771d67d78404e" title="Deserialize Connection Maneuver Assist JSON into Connection Maneuver Assist object." alt="" coords="741,5,928,61"/>
+<area shape="rect" id="node4" href="$structsignal__phase__and__timing_1_1movement__state.html#add078711d1cf73ce1f433c4b34532fcc" title="Deserialize Movement State JSON into Movement State object." alt="" coords="475,71,681,113"/>
+<area shape="rect" id="node5" href="$structsignal__phase__and__timing_1_1movement__event.html#a9e78abda6f76b9e03a27859d4003fbb6" title="Deserialize Movement Event JSON into Movement Event object." alt="" coords="729,86,940,127"/>
+<area shape="rect" id="node6" href="$structsignal__phase__and__timing_1_1advisory__speed.html#ab065b8b1df30b02ea1cddeae8ca6bab6" title="Deserialize Advisory Speed JSON into Advisory Speed object." alt="" coords="988,49,1187,90"/>
+<area shape="rect" id="node7" href="$structsignal__phase__and__timing_1_1time__change__details.html#ae11ac44a006b7b7d43c64b764d8ede52" title="Deserialize Time Change Details JSON into Time Change Details object." alt="" coords="994,115,1181,171"/>
+</map>

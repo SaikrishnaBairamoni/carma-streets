@@ -1,0 +1,197 @@
+\hypertarget{classtraffic__signal__controller__service_1_1tsc__state}{}\doxysection{traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+state Class Reference}
+\label{classtraffic__signal__controller__service_1_1tsc__state}\index{traffic\_signal\_controller\_service::tsc\_state@{traffic\_signal\_controller\_service::tsc\_state}}
+
+
+{\ttfamily \#include $<$monitor\+\_\+tsc\+\_\+state.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__state_aedb4290f73cd4cfd58b04e1e05969781}{tsc\+\_\+state}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtraffic__signal__controller__service_1_1snmp__client}{snmp\+\_\+client}} $>$ \mbox{\hyperlink{classtraffic__signal__controller__service_1_1snmp__client}{snmp\+\_\+client}})
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__state}{tsc\+\_\+state}} class. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ int, \mbox{\hyperlink{structtraffic__signal__controller__service_1_1signal__group__state}{signal\+\_\+group\+\_\+state}} $>$ \& \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__state_a27876c0c6172cbb37788cadd97bf6ff3}{get\+\_\+signal\+\_\+group\+\_\+state\+\_\+map}} ()
+\begin{DoxyCompactList}\small\item\em Return reference to signal group state map. \end{DoxyCompactList}\item 
+const std\+::unordered\+\_\+map$<$ int, int $>$ \& \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__state_a9af1335fd676f86de7fcbd38493d3985}{get\+\_\+ped\+\_\+phase\+\_\+map}} ()
+\begin{DoxyCompactList}\small\item\em Returns a map of pedestrian phases to signal group ids. \end{DoxyCompactList}\item 
+const std\+::unordered\+\_\+map$<$ int, int $>$ \& \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__state_a40c96f54a5eb802026f93906dc1b77d8}{get\+\_\+vehicle\+\_\+phase\+\_\+map}} ()
+\begin{DoxyCompactList}\small\item\em Returns a map of pedestrian phases to signal group ids. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__state_af051312a2931c0f7db32b3d0439a2e6b}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initialize \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__state}{tsc\+\_\+state}} by making SNMP calls to TSC for phase sequence and timing information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__state_af739a1bdb23638f28315e8680f407fdd}{add\+\_\+future\+\_\+movement\+\_\+events}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1spat}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::spat}} $>$ spat\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Updates spat with future movement events for vehicle phases. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 38 of file monitor\+\_\+tsc\+\_\+state.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__state_aedb4290f73cd4cfd58b04e1e05969781}\label{classtraffic__signal__controller__service_1_1tsc__state_aedb4290f73cd4cfd58b04e1e05969781}} 
+\index{traffic\_signal\_controller\_service::tsc\_state@{traffic\_signal\_controller\_service::tsc\_state}!tsc\_state@{tsc\_state}}
+\index{tsc\_state@{tsc\_state}!traffic\_signal\_controller\_service::tsc\_state@{traffic\_signal\_controller\_service::tsc\_state}}
+\doxysubsubsection{\texorpdfstring{tsc\_state()}{tsc\_state()}}
+{\footnotesize\ttfamily traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+state\+::tsc\+\_\+state (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtraffic__signal__controller__service_1_1snmp__client}{snmp\+\_\+client}} $>$}]{snmp\+\_\+client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor for the \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__state}{tsc\+\_\+state}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classtraffic__signal__controller__service_1_1snmp__client}{snmp\+\_\+client}}} & A pointer to an \mbox{\hyperlink{classtraffic__signal__controller__service_1_1snmp__client}{snmp\+\_\+client}} worker with a connection established to a traffic signal controller \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file monitor\+\_\+tsc\+\_\+state.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__state_af739a1bdb23638f28315e8680f407fdd}\label{classtraffic__signal__controller__service_1_1tsc__state_af739a1bdb23638f28315e8680f407fdd}} 
+\index{traffic\_signal\_controller\_service::tsc\_state@{traffic\_signal\_controller\_service::tsc\_state}!add\_future\_movement\_events@{add\_future\_movement\_events}}
+\index{add\_future\_movement\_events@{add\_future\_movement\_events}!traffic\_signal\_controller\_service::tsc\_state@{traffic\_signal\_controller\_service::tsc\_state}}
+\doxysubsubsection{\texorpdfstring{add\_future\_movement\_events()}{add\_future\_movement\_events()}}
+{\footnotesize\ttfamily void traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+state\+::add\+\_\+future\+\_\+movement\+\_\+events (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1spat}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::spat}} $>$}]{spat\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Updates spat with future movement events for vehicle phases. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spat\+\_\+ptr} & pointer to spat message to update \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if update was successful, false if it failed 
+\end{DoxyReturn}
+
+
+Definition at line 117 of file monitor\+\_\+tsc\+\_\+state.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{classtraffic__signal__controller__service_1_1tsc__state_af739a1bdb23638f28315e8680f407fdd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1tsc__state_af739a1bdb23638f28315e8680f407fdd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__state_a9af1335fd676f86de7fcbd38493d3985}\label{classtraffic__signal__controller__service_1_1tsc__state_a9af1335fd676f86de7fcbd38493d3985}} 
+\index{traffic\_signal\_controller\_service::tsc\_state@{traffic\_signal\_controller\_service::tsc\_state}!get\_ped\_phase\_map@{get\_ped\_phase\_map}}
+\index{get\_ped\_phase\_map@{get\_ped\_phase\_map}!traffic\_signal\_controller\_service::tsc\_state@{traffic\_signal\_controller\_service::tsc\_state}}
+\doxysubsubsection{\texorpdfstring{get\_ped\_phase\_map()}{get\_ped\_phase\_map()}}
+{\footnotesize\ttfamily const std\+::unordered\+\_\+map$<$ int, int $>$ \& traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+state\+::get\+\_\+ped\+\_\+phase\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a map of pedestrian phases to signal group ids. 
+
+\begin{DoxyReturn}{Returns}
+a map of pedestrian phases to signal group ids 
+\end{DoxyReturn}
+
+
+Definition at line 445 of file monitor\+\_\+tsc\+\_\+state.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1tsc__state_a9af1335fd676f86de7fcbd38493d3985_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__state_a27876c0c6172cbb37788cadd97bf6ff3}\label{classtraffic__signal__controller__service_1_1tsc__state_a27876c0c6172cbb37788cadd97bf6ff3}} 
+\index{traffic\_signal\_controller\_service::tsc\_state@{traffic\_signal\_controller\_service::tsc\_state}!get\_signal\_group\_state\_map@{get\_signal\_group\_state\_map}}
+\index{get\_signal\_group\_state\_map@{get\_signal\_group\_state\_map}!traffic\_signal\_controller\_service::tsc\_state@{traffic\_signal\_controller\_service::tsc\_state}}
+\doxysubsubsection{\texorpdfstring{get\_signal\_group\_state\_map()}{get\_signal\_group\_state\_map()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ int, \mbox{\hyperlink{structtraffic__signal__controller__service_1_1signal__group__state}{signal\+\_\+group\+\_\+state}} $>$ \& traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+state\+::get\+\_\+signal\+\_\+group\+\_\+state\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return reference to signal group state map. 
+
+\begin{DoxyReturn}{Returns}
+std\+::unordered\+\_\+map$<$int, signal\+\_\+group\+\_\+state$>$\& 
+\end{DoxyReturn}
+
+
+Definition at line 455 of file monitor\+\_\+tsc\+\_\+state.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1tsc__state_a27876c0c6172cbb37788cadd97bf6ff3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__state_a40c96f54a5eb802026f93906dc1b77d8}\label{classtraffic__signal__controller__service_1_1tsc__state_a40c96f54a5eb802026f93906dc1b77d8}} 
+\index{traffic\_signal\_controller\_service::tsc\_state@{traffic\_signal\_controller\_service::tsc\_state}!get\_vehicle\_phase\_map@{get\_vehicle\_phase\_map}}
+\index{get\_vehicle\_phase\_map@{get\_vehicle\_phase\_map}!traffic\_signal\_controller\_service::tsc\_state@{traffic\_signal\_controller\_service::tsc\_state}}
+\doxysubsubsection{\texorpdfstring{get\_vehicle\_phase\_map()}{get\_vehicle\_phase\_map()}}
+{\footnotesize\ttfamily const std\+::unordered\+\_\+map$<$ int, int $>$ \& traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+state\+::get\+\_\+vehicle\+\_\+phase\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a map of pedestrian phases to signal group ids. 
+
+\begin{DoxyReturn}{Returns}
+a map of pedestrian phases to signal group ids 
+\end{DoxyReturn}
+
+
+Definition at line 450 of file monitor\+\_\+tsc\+\_\+state.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1tsc__state_a40c96f54a5eb802026f93906dc1b77d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1tsc__state_af051312a2931c0f7db32b3d0439a2e6b}\label{classtraffic__signal__controller__service_1_1tsc__state_af051312a2931c0f7db32b3d0439a2e6b}} 
+\index{traffic\_signal\_controller\_service::tsc\_state@{traffic\_signal\_controller\_service::tsc\_state}!initialize@{initialize}}
+\index{initialize@{initialize}!traffic\_signal\_controller\_service::tsc\_state@{traffic\_signal\_controller\_service::tsc\_state}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily bool traffic\+\_\+signal\+\_\+controller\+\_\+service\+::tsc\+\_\+state\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__state}{tsc\+\_\+state}} by making SNMP calls to TSC for phase sequence and timing information. 
+
+\begin{DoxyReturn}{Returns}
+true if initialization is successful. 
+\end{DoxyReturn}
+
+
+Definition at line 10 of file monitor\+\_\+tsc\+\_\+state.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1tsc__state_af051312a2931c0f7db32b3d0439a2e6b_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tsc\+\_\+client\+\_\+service/include/\mbox{\hyperlink{monitor__tsc__state_8h}{monitor\+\_\+tsc\+\_\+state.\+h}}\item 
+tsc\+\_\+client\+\_\+service/src/\mbox{\hyperlink{monitor__tsc__state_8cpp}{monitor\+\_\+tsc\+\_\+state.\+cpp}}\end{DoxyCompactItemize}

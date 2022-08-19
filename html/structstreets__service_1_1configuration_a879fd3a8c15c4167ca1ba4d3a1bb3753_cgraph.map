@@ -1,0 +1,4 @@
+<map id="streets_service::configuration::fromJson" name="streets_service::configuration::fromJson">
+<area shape="rect" id="node1" title="Method to translate json object to configuration struct." alt="" coords="5,5,220,47"/>
+<area shape="rect" id="node2" href="$ntcip__1202__ext_8h.html#a576de7b60eacee3f1a70393a005502cd" title="Returns std::string representation of ntcip_1202_ext message including phase_times array." alt="" coords="268,13,347,39"/>
+</map>

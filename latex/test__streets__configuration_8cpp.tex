@@ -1,0 +1,169 @@
+\hypertarget{test__streets__configuration_8cpp}{}\doxysection{streets\+\_\+utils/streets\+\_\+service\+\_\+base/test/test\+\_\+streets\+\_\+configuration.cpp File Reference}
+\label{test__streets__configuration_8cpp}\index{streets\_utils/streets\_service\_base/test/test\_streets\_configuration.cpp@{streets\_utils/streets\_service\_base/test/test\_streets\_configuration.cpp}}
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$spdlog/spdlog.\+h$>$}\newline
+{\ttfamily \#include $<$rapidjson/ostreamwrapper.\+h$>$}\newline
+{\ttfamily \#include $<$rapidjson/writer.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}streets\+\_\+singleton.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}streets\+\_\+configuration.\+h\char`\"{}}\newline
+Include dependency graph for test\+\_\+streets\+\_\+configuration.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__streets__configuration_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{test__streets__configuration_8cpp_a2f2eef0ee4477f3fe5874703a66e997f}{RAPIDJSON\+\_\+\+HAS\+\_\+\+STDSTRING}}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{test__streets__configuration_8cpp_aec01f209707b708e05d66b8aea60dcac}{create\+\_\+test\+\_\+configuration}} (const std\+::string \&filepath)
+\begin{DoxyCompactList}\small\item\em Helper methon to create manifest.\+json file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test__streets__configuration_8cpp_af602b984852dcc80c264fa5b4b29cc56}{update\+\_\+configuration}} (const std\+::string \&filepath, const std\+::string \&new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Update string param3 inside manifest.\+json. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test__streets__configuration_8cpp_a229dc0a819319a9fa3e7129562aed63a}{clear\+\_\+configuration\+\_\+files}} ()
+\item 
+\mbox{\hyperlink{test__streets__configuration_8cpp_a24de62641443addd8b02eae41bef40e1}{TEST}} (test\+\_\+streets\+\_\+configuration, missing\+\_\+configuration\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Tested singleton initialization without manifest.\+json configuration file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__streets__configuration_8cpp_a0ff8330bebe170a7c6d66028ac75ee5d}{TEST}} (test\+\_\+streets\+\_\+configuration, get\+\_\+config)
+\begin{DoxyCompactList}\small\item\em Tested get\+\_\+config methods with created manifest.\+json file including updates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{test__streets__configuration_8cpp_a2f2eef0ee4477f3fe5874703a66e997f}\label{test__streets__configuration_8cpp_a2f2eef0ee4477f3fe5874703a66e997f}} 
+\index{test\_streets\_configuration.cpp@{test\_streets\_configuration.cpp}!RAPIDJSON\_HAS\_STDSTRING@{RAPIDJSON\_HAS\_STDSTRING}}
+\index{RAPIDJSON\_HAS\_STDSTRING@{RAPIDJSON\_HAS\_STDSTRING}!test\_streets\_configuration.cpp@{test\_streets\_configuration.cpp}}
+\doxysubsubsection{\texorpdfstring{RAPIDJSON\_HAS\_STDSTRING}{RAPIDJSON\_HAS\_STDSTRING}}
+{\footnotesize\ttfamily \#define RAPIDJSON\+\_\+\+HAS\+\_\+\+STDSTRING~1}
+
+
+
+Definition at line 1 of file test\+\_\+streets\+\_\+configuration.\+cpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__streets__configuration_8cpp_a229dc0a819319a9fa3e7129562aed63a}\label{test__streets__configuration_8cpp_a229dc0a819319a9fa3e7129562aed63a}} 
+\index{test\_streets\_configuration.cpp@{test\_streets\_configuration.cpp}!clear\_configuration\_files@{clear\_configuration\_files}}
+\index{clear\_configuration\_files@{clear\_configuration\_files}!test\_streets\_configuration.cpp@{test\_streets\_configuration.cpp}}
+\doxysubsubsection{\texorpdfstring{clear\_configuration\_files()}{clear\_configuration\_files()}}
+{\footnotesize\ttfamily void clear\+\_\+configuration\+\_\+files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Remove all .json configuration files 
+
+Definition at line 100 of file test\+\_\+streets\+\_\+configuration.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{test__streets__configuration_8cpp_a229dc0a819319a9fa3e7129562aed63a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test__streets__configuration_8cpp_aec01f209707b708e05d66b8aea60dcac}\label{test__streets__configuration_8cpp_aec01f209707b708e05d66b8aea60dcac}} 
+\index{test\_streets\_configuration.cpp@{test\_streets\_configuration.cpp}!create\_test\_configuration@{create\_test\_configuration}}
+\index{create\_test\_configuration@{create\_test\_configuration}!test\_streets\_configuration.cpp@{test\_streets\_configuration.cpp}}
+\doxysubsubsection{\texorpdfstring{create\_test\_configuration()}{create\_test\_configuration()}}
+{\footnotesize\ttfamily void create\+\_\+test\+\_\+configuration (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Helper methon to create manifest.\+json file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & where to create manifest.\+json file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 17 of file test\+\_\+streets\+\_\+configuration.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{test__streets__configuration_8cpp_aec01f209707b708e05d66b8aea60dcac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test__streets__configuration_8cpp_a0ff8330bebe170a7c6d66028ac75ee5d}\label{test__streets__configuration_8cpp_a0ff8330bebe170a7c6d66028ac75ee5d}} 
+\index{test\_streets\_configuration.cpp@{test\_streets\_configuration.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_streets\_configuration.cpp@{test\_streets\_configuration.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{test\+\_\+streets\+\_\+configuration}]{,  }\item[{get\+\_\+config}]{ }\end{DoxyParamCaption})}
+
+
+
+Tested get\+\_\+config methods with created manifest.\+json file including updates. 
+
+
+
+Definition at line 115 of file test\+\_\+streets\+\_\+configuration.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{test__streets__configuration_8cpp_a0ff8330bebe170a7c6d66028ac75ee5d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test__streets__configuration_8cpp_a24de62641443addd8b02eae41bef40e1}\label{test__streets__configuration_8cpp_a24de62641443addd8b02eae41bef40e1}} 
+\index{test\_streets\_configuration.cpp@{test\_streets\_configuration.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_streets\_configuration.cpp@{test\_streets\_configuration.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{test\+\_\+streets\+\_\+configuration}]{,  }\item[{missing\+\_\+configuration\+\_\+file}]{ }\end{DoxyParamCaption})}
+
+
+
+Tested singleton initialization without manifest.\+json configuration file. 
+
+
+
+Definition at line 108 of file test\+\_\+streets\+\_\+configuration.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{test__streets__configuration_8cpp_a24de62641443addd8b02eae41bef40e1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test__streets__configuration_8cpp_af602b984852dcc80c264fa5b4b29cc56}\label{test__streets__configuration_8cpp_af602b984852dcc80c264fa5b4b29cc56}} 
+\index{test\_streets\_configuration.cpp@{test\_streets\_configuration.cpp}!update\_configuration@{update\_configuration}}
+\index{update\_configuration@{update\_configuration}!test\_streets\_configuration.cpp@{test\_streets\_configuration.cpp}}
+\doxysubsubsection{\texorpdfstring{update\_configuration()}{update\_configuration()}}
+{\footnotesize\ttfamily void update\+\_\+configuration (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filepath,  }\item[{const std\+::string \&}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Update string param3 inside manifest.\+json. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & to manifest.\+json \\
+\hline
+{\em new\+\_\+value} & to update param3 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 73 of file test\+\_\+streets\+\_\+configuration.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__streets__configuration_8cpp_af602b984852dcc80c264fa5b4b29cc56_icgraph}
+\end{center}
+\end{figure}

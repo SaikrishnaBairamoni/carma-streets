@@ -1,0 +1,4 @@
+<map id="streets_vehicles::all_stop_status_intent_processor::read_payload" name="streets_vehicles::all_stop_status_intent_processor::read_payload">
+<area shape="rect" id="node1" title="Reads payload element in status and intent vehicle update." alt="" coords="5,5,224,61"/>
+<area shape="rect" id="node2" href="$classstreets__vehicles_1_1all__stop__status__intent__processor.html#ae4a3f6bc8f4d1066c476a6b8d5e8e2f9" title="Updates vehicle state based on previous state and stopping condition." alt="" coords="272,5,491,61"/>
+</map>

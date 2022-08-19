@@ -1,0 +1,4 @@
+<map id="intersection_model::intersection_model::find_link_lanelet_id_by_enter_depart_lanelet_ids" name="intersection_model::intersection_model::find_link_lanelet_id_by_enter_depart_lanelet_ids">
+<area shape="rect" id="node1" title="Determine the connection lanelet for a pair of enter and departure lanelet at the intersection." alt="" coords="108,5,321,76"/>
+<area shape="rect" id="node2" href="$test__intersection__model_8cpp.html#ac63643f8d42571a06423386f33e80b5e" title=" " alt="" coords="5,27,60,54"/>
+</map>

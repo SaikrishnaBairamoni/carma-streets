@@ -1,0 +1,35 @@
+\hypertarget{all__stop__intersection__schedule_8h}{}\doxysection{streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/include/all\+\_\+stop\+\_\+intersection\+\_\+schedule.h File Reference}
+\label{all__stop__intersection__schedule_8h}\index{streets\_utils/streets\_vehicle\_scheduler/include/all\_stop\_intersection\_schedule.h@{streets\_utils/streets\_vehicle\_scheduler/include/all\_stop\_intersection\_schedule.h}}
+{\ttfamily \#include $<$spdlog/spdlog.\+h$>$}\newline
+{\ttfamily \#include $<$rapidjson/rapidjson.\+h$>$}\newline
+{\ttfamily \#include $<$rapidjson/writer.\+h$>$}\newline
+{\ttfamily \#include $<$rapidjson/stringbuffer.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}intersection\+\_\+schedule.\+h\char`\"{}}\newline
+Include dependency graph for all\+\_\+stop\+\_\+intersection\+\_\+schedule.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{all__stop__intersection__schedule_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{all__stop__intersection__schedule_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule}{streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+schedule}}
+\begin{DoxyCompactList}\small\item\em Object to represent all\+\_\+stop schedule for single vehicle. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__intersection__schedule}{streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+intersection\+\_\+schedule}}
+\begin{DoxyCompactList}\small\item\em Struct to store vehicle schedules for all vehicle in an intersection. Includes a timestamp in milliseconds since epoch. Also includes a get\+\_\+delay method that will get each vehicle schedules delay and sum them for a total intersection delay. Delay is the difference between scheduled Entering Time (et) and scheduled Stopping time (st) and represents the time a vehicle would be waiting at the stop bar before gaining access to the intersection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacestreets__vehicle__scheduler}{streets\+\_\+vehicle\+\_\+scheduler}}
+\end{DoxyCompactItemize}

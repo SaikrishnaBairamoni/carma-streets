@@ -1,0 +1,4 @@
+<map id="intersection_model::map_msg_worker::get_map_msg_ptr" name="intersection_model::map_msg_worker::get_map_msg_ptr">
+<area shape="rect" id="node1" title="Get the const map msg ptr object and prevent external class from modifying it." alt="" coords="108,5,283,61"/>
+<area shape="rect" id="node2" href="$test__map__msg__worker_8cpp.html#a1d27846f076ef8769f32cd4cc952d5ea" title=" " alt="" coords="5,20,60,47"/>
+</map>

@@ -1,0 +1,171 @@
+\hypertarget{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule}{}\doxysection{streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+intersection\+\_\+schedule Struct Reference}
+\label{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule}\index{streets\_vehicle\_scheduler::signalized\_intersection\_schedule@{streets\_vehicle\_scheduler::signalized\_intersection\_schedule}}
+
+
+Struct to store vehicle schedules for all vehicle in an intersection. Includes a timestamp in milliseconds since epoch.  
+
+
+
+
+{\ttfamily \#include $<$signalized\+\_\+intersection\+\_\+schedule.\+h$>$}
+
+
+
+Inheritance diagram for streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+intersection\+\_\+schedule\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+intersection\+\_\+schedule\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_a935f5bf59947698a004ee70500e7e774}{signalized\+\_\+intersection\+\_\+schedule}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new signalized intersection schedule object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_a94ac63646f7c6e459dab3ba3a9548274}{$\sim$signalized\+\_\+intersection\+\_\+schedule}} () override=default
+\begin{DoxyCompactList}\small\item\em Destroy the signalized intersection schedule object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_ab70810eba625236eb7b706dd72fb3dc7}{to\+CSV}} () const override
+\begin{DoxyCompactList}\small\item\em Method to turn schedule into CSV string. Each vehicle schedule is represented by a single row and all rows for a given schedule share a timestamp. The values in each row represent the following properties\+: \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_a7afc1e1bcb2229d598de2be93b253a80}{to\+Json}} () const override
+\begin{DoxyCompactList}\small\item\em Method to write intersection schedule as JSON scheduling message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule}{signalized\+\_\+vehicle\+\_\+schedule}} $>$ \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_a3b09d9fc484f0294af2f7ae4fe7b195b}{vehicle\+\_\+schedules}}
+\begin{DoxyCompactList}\small\item\em Vector of all scheduled vehicles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct to store vehicle schedules for all vehicle in an intersection. Includes a timestamp in milliseconds since epoch. 
+
+Definition at line 58 of file signalized\+\_\+intersection\+\_\+schedule.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_a935f5bf59947698a004ee70500e7e774}\label{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_a935f5bf59947698a004ee70500e7e774}} 
+\index{streets\_vehicle\_scheduler::signalized\_intersection\_schedule@{streets\_vehicle\_scheduler::signalized\_intersection\_schedule}!signalized\_intersection\_schedule@{signalized\_intersection\_schedule}}
+\index{signalized\_intersection\_schedule@{signalized\_intersection\_schedule}!streets\_vehicle\_scheduler::signalized\_intersection\_schedule@{streets\_vehicle\_scheduler::signalized\_intersection\_schedule}}
+\doxysubsubsection{\texorpdfstring{signalized\_intersection\_schedule()}{signalized\_intersection\_schedule()}}
+{\footnotesize\ttfamily streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+intersection\+\_\+schedule\+::signalized\+\_\+intersection\+\_\+schedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new signalized intersection schedule object. 
+
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_a94ac63646f7c6e459dab3ba3a9548274}\label{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_a94ac63646f7c6e459dab3ba3a9548274}} 
+\index{streets\_vehicle\_scheduler::signalized\_intersection\_schedule@{streets\_vehicle\_scheduler::signalized\_intersection\_schedule}!````~signalized\_intersection\_schedule@{$\sim$signalized\_intersection\_schedule}}
+\index{````~signalized\_intersection\_schedule@{$\sim$signalized\_intersection\_schedule}!streets\_vehicle\_scheduler::signalized\_intersection\_schedule@{streets\_vehicle\_scheduler::signalized\_intersection\_schedule}}
+\doxysubsubsection{\texorpdfstring{$\sim$signalized\_intersection\_schedule()}{~signalized\_intersection\_schedule()}}
+{\footnotesize\ttfamily streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+intersection\+\_\+schedule\+::$\sim$signalized\+\_\+intersection\+\_\+schedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+Destroy the signalized intersection schedule object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_ab70810eba625236eb7b706dd72fb3dc7}\label{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_ab70810eba625236eb7b706dd72fb3dc7}} 
+\index{streets\_vehicle\_scheduler::signalized\_intersection\_schedule@{streets\_vehicle\_scheduler::signalized\_intersection\_schedule}!toCSV@{toCSV}}
+\index{toCSV@{toCSV}!streets\_vehicle\_scheduler::signalized\_intersection\_schedule@{streets\_vehicle\_scheduler::signalized\_intersection\_schedule}}
+\doxysubsubsection{\texorpdfstring{toCSV()}{toCSV()}}
+{\footnotesize\ttfamily std\+::string streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+intersection\+\_\+schedule\+::to\+CSV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method to turn schedule into CSV string. Each vehicle schedule is represented by a single row and all rows for a given schedule share a timestamp. The values in each row represent the following properties\+: 
+
+timestamp ,v\+\_\+id ,entry\+\_\+lane ,link\+\_\+id ,eet ,et, state
+
+\begin{DoxyReturn}{Returns}
+std\+::string CSV entry 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule_af027b201909e9d003c961d054edb623f}{streets\+\_\+vehicle\+\_\+scheduler\+::intersection\+\_\+schedule}}.
+
+
+
+Definition at line 6 of file signalized\+\_\+intersection\+\_\+schedule.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_ab70810eba625236eb7b706dd72fb3dc7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_ab70810eba625236eb7b706dd72fb3dc7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_a7afc1e1bcb2229d598de2be93b253a80}\label{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_a7afc1e1bcb2229d598de2be93b253a80}} 
+\index{streets\_vehicle\_scheduler::signalized\_intersection\_schedule@{streets\_vehicle\_scheduler::signalized\_intersection\_schedule}!toJson@{toJson}}
+\index{toJson@{toJson}!streets\_vehicle\_scheduler::signalized\_intersection\_schedule@{streets\_vehicle\_scheduler::signalized\_intersection\_schedule}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily std\+::string streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+intersection\+\_\+schedule\+::to\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method to write intersection schedule as JSON scheduling message. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string\& reference. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule_abf2990ad805708f9aa0e8c24b4c76be8}{streets\+\_\+vehicle\+\_\+scheduler\+::intersection\+\_\+schedule}}.
+
+
+
+Definition at line 30 of file signalized\+\_\+intersection\+\_\+schedule.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_a7afc1e1bcb2229d598de2be93b253a80_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_a3b09d9fc484f0294af2f7ae4fe7b195b}\label{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_a3b09d9fc484f0294af2f7ae4fe7b195b}} 
+\index{streets\_vehicle\_scheduler::signalized\_intersection\_schedule@{streets\_vehicle\_scheduler::signalized\_intersection\_schedule}!vehicle\_schedules@{vehicle\_schedules}}
+\index{vehicle\_schedules@{vehicle\_schedules}!streets\_vehicle\_scheduler::signalized\_intersection\_schedule@{streets\_vehicle\_scheduler::signalized\_intersection\_schedule}}
+\doxysubsubsection{\texorpdfstring{vehicle\_schedules}{vehicle\_schedules}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule}{signalized\+\_\+vehicle\+\_\+schedule}}$>$ streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+intersection\+\_\+schedule\+::vehicle\+\_\+schedules}
+
+
+
+Vector of all scheduled vehicles. 
+
+
+
+Definition at line 72 of file signalized\+\_\+intersection\+\_\+schedule.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/include/\mbox{\hyperlink{signalized__intersection__schedule_8h}{signalized\+\_\+intersection\+\_\+schedule.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/src/\mbox{\hyperlink{signalized__intersection__schedule_8cpp}{signalized\+\_\+intersection\+\_\+schedule.\+cpp}}\end{DoxyCompactItemize}

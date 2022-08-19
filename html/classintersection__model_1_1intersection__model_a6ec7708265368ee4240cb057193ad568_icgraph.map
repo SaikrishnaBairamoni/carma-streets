@@ -1,0 +1,4 @@
+<map id="intersection_model::intersection_model::get_conflict_lanelets_info" name="intersection_model::intersection_model::get_conflict_lanelets_info">
+<area shape="rect" id="node1" title="Get list of conflict lanelet ids relative to the given link lanelet id." alt="" coords="108,5,304,61"/>
+<area shape="rect" id="node2" href="$test__intersection__model_8cpp.html#a6f83dfd791d74e6d080755eee8384eff" title=" " alt="" coords="5,20,60,47"/>
+</map>

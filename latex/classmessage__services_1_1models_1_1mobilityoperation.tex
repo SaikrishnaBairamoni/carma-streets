@@ -1,0 +1,336 @@
+\hypertarget{classmessage__services_1_1models_1_1mobilityoperation}{}\doxysection{message\+\_\+services\+::models\+::mobilityoperation Class Reference}
+\label{classmessage__services_1_1models_1_1mobilityoperation}\index{message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}}
+
+
+{\ttfamily \#include $<$mobilityoperation.\+h$>$}
+
+
+
+Inheritance diagram for message\+\_\+services\+::models\+::mobilityoperation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classmessage__services_1_1models_1_1mobilityoperation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for message\+\_\+services\+::models\+::mobilityoperation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classmessage__services_1_1models_1_1mobilityoperation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation_a30c8d1158cfc71e74c5efca5582e7195}{mobilityoperation}} ()
+\item 
+virtual \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation_aa3b3cc72e127f82b39bba4ddc609b435}{$\sim$mobilityoperation}} ()
+\item 
+virtual void \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation_a68e0d75ea6a2e2ecc18d5588bb946637}{from\+Json\+Object}} (const rapidjson\+::\+Value \&obj)
+\item 
+virtual bool \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation_aaf4e9acf15c287b9380f33787fbeadf1}{as\+Json\+Object}} (rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$writer) const
+\item 
+std\+::string \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation_a556c84b1faf40bbd5ec80daf36312ff6}{get\+\_\+value\+\_\+from\+\_\+strategy\+\_\+params}} (std\+::string key) const
+\item 
+std\+::string \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation_abb41d37473812aedacd229dc295d098b}{generate\+\_\+hash\+\_\+bsm\+\_\+msg\+\_\+id}} (std\+::string temprary\+\_\+id, long msg\+\_\+count, long sec\+\_\+mark)
+\item 
+std\+::string \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation_af4081f414e3a8a3515f1191dc91811e3}{generate\+\_\+hash\+\_\+sender\+\_\+timestamp\+\_\+id}} (std\+::string sender\+\_\+bsm\+\_\+id, uint64\+\_\+t timestamp)
+\item 
+std\+::string \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation_a9b640ee6d30bcd6a1b9548367f246555}{get\+Strategy\+\_\+params}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation_aee2f18923b83bbfda262711daba910cb}{set\+Strategy\+\_\+params}} (std\+::string strategy\+\_\+params)
+\item 
+std\+::string \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation_ae494ac3adca59be35c8042aae8c4b6b2}{get\+Strategy}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation_a49d21a75bfa5a95557de2698faa6519e}{set\+Strategy}} (std\+::string strategy)
+\item 
+\mbox{\hyperlink{namespacemessage__services_1_1models_a570b713faafff4221c10023ae8051c77}{mobility\+\_\+header\+\_\+t}} \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation_af120e50b8d8d7609cfba3ff620d34f82}{get\+Header}} () const
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation_a988bc9f2b356b2e729786fbeb8b603ac}{set\+Header}} (\mbox{\hyperlink{namespacemessage__services_1_1models_a570b713faafff4221c10023ae8051c77}{mobility\+\_\+header\+\_\+t}} header)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+std\+::time\+\_\+t \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation_a723624d65aa1c08a1ccb5a9b4f075457}{msg\+\_\+received\+\_\+timestamp\+\_\+}} = std\+::chrono\+::duration\+\_\+cast$<$std\+::chrono\+::milliseconds$>$(std\+::chrono\+::system\+\_\+clock\+::now().time\+\_\+since\+\_\+epoch()).count()
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation_ae078e497ea6b88543d77e6200be8d5b9}{operator$<$$<$}} (std\+::ostream \&out, \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation}{mobilityoperation}} \&mobilityoperation\+\_\+obj)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 16 of file mobilityoperation.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1mobilityoperation_a30c8d1158cfc71e74c5efca5582e7195}\label{classmessage__services_1_1models_1_1mobilityoperation_a30c8d1158cfc71e74c5efca5582e7195}} 
+\index{message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}!mobilityoperation@{mobilityoperation}}
+\index{mobilityoperation@{mobilityoperation}!message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{mobilityoperation()}{mobilityoperation()}}
+{\footnotesize\ttfamily message\+\_\+services\+::models\+::mobilityoperation\+::mobilityoperation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file mobilityoperation.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1mobilityoperation_aa3b3cc72e127f82b39bba4ddc609b435}\label{classmessage__services_1_1models_1_1mobilityoperation_aa3b3cc72e127f82b39bba4ddc609b435}} 
+\index{message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}!````~mobilityoperation@{$\sim$mobilityoperation}}
+\index{````~mobilityoperation@{$\sim$mobilityoperation}!message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{$\sim$mobilityoperation()}{~mobilityoperation()}}
+{\footnotesize\ttfamily message\+\_\+services\+::models\+::mobilityoperation\+::$\sim$mobilityoperation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 18 of file mobilityoperation.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1mobilityoperation_aaf4e9acf15c287b9380f33787fbeadf1}\label{classmessage__services_1_1models_1_1mobilityoperation_aaf4e9acf15c287b9380f33787fbeadf1}} 
+\index{message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}!asJsonObject@{asJsonObject}}
+\index{asJsonObject@{asJsonObject}!message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{asJsonObject()}{asJsonObject()}}
+{\footnotesize\ttfamily bool message\+\_\+services\+::models\+::mobilityoperation\+::as\+Json\+Object (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Writer$<$ rapidjson\+::\+String\+Buffer $>$ $\ast$}]{writer }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classmessage__services_1_1models_1_1baseMessage_af4f0e051256d8e1377cba89120a34689}{message\+\_\+services\+::models\+::base\+Message}}.
+
+
+
+Definition at line 88 of file mobilityoperation.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1mobilityoperation_aaf4e9acf15c287b9380f33787fbeadf1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1mobilityoperation_a68e0d75ea6a2e2ecc18d5588bb946637}\label{classmessage__services_1_1models_1_1mobilityoperation_a68e0d75ea6a2e2ecc18d5588bb946637}} 
+\index{message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}!fromJsonObject@{fromJsonObject}}
+\index{fromJsonObject@{fromJsonObject}!message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{fromJsonObject()}{fromJsonObject()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::mobilityoperation\+::from\+Json\+Object (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classmessage__services_1_1models_1_1baseMessage_a4fedff3ceb673e0200e7738bd6099d5d}{message\+\_\+services\+::models\+::base\+Message}}.
+
+
+
+Definition at line 34 of file mobilityoperation.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1mobilityoperation_a68e0d75ea6a2e2ecc18d5588bb946637_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1mobilityoperation_abb41d37473812aedacd229dc295d098b}\label{classmessage__services_1_1models_1_1mobilityoperation_abb41d37473812aedacd229dc295d098b}} 
+\index{message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}!generate\_hash\_bsm\_msg\_id@{generate\_hash\_bsm\_msg\_id}}
+\index{generate\_hash\_bsm\_msg\_id@{generate\_hash\_bsm\_msg\_id}!message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{generate\_hash\_bsm\_msg\_id()}{generate\_hash\_bsm\_msg\_id()}}
+{\footnotesize\ttfamily std\+::string message\+\_\+services\+::models\+::mobilityoperation\+::generate\+\_\+hash\+\_\+bsm\+\_\+msg\+\_\+id (\begin{DoxyParamCaption}\item[{std\+::string}]{temprary\+\_\+id,  }\item[{long}]{msg\+\_\+count,  }\item[{long}]{sec\+\_\+mark }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file mobilityoperation.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1mobilityoperation_abb41d37473812aedacd229dc295d098b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1mobilityoperation_af4081f414e3a8a3515f1191dc91811e3}\label{classmessage__services_1_1models_1_1mobilityoperation_af4081f414e3a8a3515f1191dc91811e3}} 
+\index{message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}!generate\_hash\_sender\_timestamp\_id@{generate\_hash\_sender\_timestamp\_id}}
+\index{generate\_hash\_sender\_timestamp\_id@{generate\_hash\_sender\_timestamp\_id}!message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{generate\_hash\_sender\_timestamp\_id()}{generate\_hash\_sender\_timestamp\_id()}}
+{\footnotesize\ttfamily std\+::string message\+\_\+services\+::models\+::mobilityoperation\+::generate\+\_\+hash\+\_\+sender\+\_\+timestamp\+\_\+id (\begin{DoxyParamCaption}\item[{std\+::string}]{sender\+\_\+bsm\+\_\+id,  }\item[{uint64\+\_\+t}]{timestamp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file mobilityoperation.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1mobilityoperation_af4081f414e3a8a3515f1191dc91811e3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1mobilityoperation_a556c84b1faf40bbd5ec80daf36312ff6}\label{classmessage__services_1_1models_1_1mobilityoperation_a556c84b1faf40bbd5ec80daf36312ff6}} 
+\index{message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}!get\_value\_from\_strategy\_params@{get\_value\_from\_strategy\_params}}
+\index{get\_value\_from\_strategy\_params@{get\_value\_from\_strategy\_params}!message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{get\_value\_from\_strategy\_params()}{get\_value\_from\_strategy\_params()}}
+{\footnotesize\ttfamily std\+::string message\+\_\+services\+::models\+::mobilityoperation\+::get\+\_\+value\+\_\+from\+\_\+strategy\+\_\+params (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 118 of file mobilityoperation.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1mobilityoperation_a556c84b1faf40bbd5ec80daf36312ff6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1mobilityoperation_af120e50b8d8d7609cfba3ff620d34f82}\label{classmessage__services_1_1models_1_1mobilityoperation_af120e50b8d8d7609cfba3ff620d34f82}} 
+\index{message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}!getHeader@{getHeader}}
+\index{getHeader@{getHeader}!message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{getHeader()}{getHeader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemessage__services_1_1models_a570b713faafff4221c10023ae8051c77}{mobility\+\_\+header\+\_\+t}} message\+\_\+services\+::models\+::mobilityoperation\+::get\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 163 of file mobilityoperation.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1mobilityoperation_af120e50b8d8d7609cfba3ff620d34f82_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1mobilityoperation_ae494ac3adca59be35c8042aae8c4b6b2}\label{classmessage__services_1_1models_1_1mobilityoperation_ae494ac3adca59be35c8042aae8c4b6b2}} 
+\index{message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}!getStrategy@{getStrategy}}
+\index{getStrategy@{getStrategy}!message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{getStrategy()}{getStrategy()}}
+{\footnotesize\ttfamily std\+::string message\+\_\+services\+::models\+::mobilityoperation\+::get\+Strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 179 of file mobilityoperation.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1mobilityoperation_ae494ac3adca59be35c8042aae8c4b6b2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1mobilityoperation_a9b640ee6d30bcd6a1b9548367f246555}\label{classmessage__services_1_1models_1_1mobilityoperation_a9b640ee6d30bcd6a1b9548367f246555}} 
+\index{message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}!getStrategy\_params@{getStrategy\_params}}
+\index{getStrategy\_params@{getStrategy\_params}!message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{getStrategy\_params()}{getStrategy\_params()}}
+{\footnotesize\ttfamily std\+::string message\+\_\+services\+::models\+::mobilityoperation\+::get\+Strategy\+\_\+params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 171 of file mobilityoperation.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1mobilityoperation_a9b640ee6d30bcd6a1b9548367f246555_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1mobilityoperation_a988bc9f2b356b2e729786fbeb8b603ac}\label{classmessage__services_1_1models_1_1mobilityoperation_a988bc9f2b356b2e729786fbeb8b603ac}} 
+\index{message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}!setHeader@{setHeader}}
+\index{setHeader@{setHeader}!message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{setHeader()}{setHeader()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::mobilityoperation\+::set\+Header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacemessage__services_1_1models_a570b713faafff4221c10023ae8051c77}{mobility\+\_\+header\+\_\+t}}}]{header }\end{DoxyParamCaption})}
+
+
+
+Definition at line 167 of file mobilityoperation.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1mobilityoperation_a988bc9f2b356b2e729786fbeb8b603ac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1mobilityoperation_a49d21a75bfa5a95557de2698faa6519e}\label{classmessage__services_1_1models_1_1mobilityoperation_a49d21a75bfa5a95557de2698faa6519e}} 
+\index{message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}!setStrategy@{setStrategy}}
+\index{setStrategy@{setStrategy}!message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{setStrategy()}{setStrategy()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::mobilityoperation\+::set\+Strategy (\begin{DoxyParamCaption}\item[{std\+::string}]{strategy }\end{DoxyParamCaption})}
+
+
+
+Definition at line 183 of file mobilityoperation.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1mobilityoperation_a49d21a75bfa5a95557de2698faa6519e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1mobilityoperation_aee2f18923b83bbfda262711daba910cb}\label{classmessage__services_1_1models_1_1mobilityoperation_aee2f18923b83bbfda262711daba910cb}} 
+\index{message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}!setStrategy\_params@{setStrategy\_params}}
+\index{setStrategy\_params@{setStrategy\_params}!message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{setStrategy\_params()}{setStrategy\_params()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::models\+::mobilityoperation\+::set\+Strategy\+\_\+params (\begin{DoxyParamCaption}\item[{std\+::string}]{strategy\+\_\+params }\end{DoxyParamCaption})}
+
+
+
+Definition at line 175 of file mobilityoperation.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1models_1_1mobilityoperation_aee2f18923b83bbfda262711daba910cb_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1mobilityoperation_ae078e497ea6b88543d77e6200be8d5b9}\label{classmessage__services_1_1models_1_1mobilityoperation_ae078e497ea6b88543d77e6200be8d5b9}} 
+\index{message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{\mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation}{mobilityoperation}} \&}]{mobilityoperation\+\_\+obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 151 of file mobilityoperation.\+cpp.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1models_1_1mobilityoperation_a723624d65aa1c08a1ccb5a9b4f075457}\label{classmessage__services_1_1models_1_1mobilityoperation_a723624d65aa1c08a1ccb5a9b4f075457}} 
+\index{message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}!msg\_received\_timestamp\_@{msg\_received\_timestamp\_}}
+\index{msg\_received\_timestamp\_@{msg\_received\_timestamp\_}!message\_services::models::mobilityoperation@{message\_services::models::mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{msg\_received\_timestamp\_}{msg\_received\_timestamp\_}}
+{\footnotesize\ttfamily std\+::time\+\_\+t message\+\_\+services\+::models\+::mobilityoperation\+::msg\+\_\+received\+\_\+timestamp\+\_\+ = std\+::chrono\+::duration\+\_\+cast$<$std\+::chrono\+::milliseconds$>$(std\+::chrono\+::system\+\_\+clock\+::now().time\+\_\+since\+\_\+epoch()).count()}
+
+
+
+Definition at line 30 of file mobilityoperation.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+message\+\_\+services/src/models/\mbox{\hyperlink{mobilityoperation_8h}{mobilityoperation.\+h}}\item 
+message\+\_\+services/src/models/\mbox{\hyperlink{mobilityoperation_8cpp}{mobilityoperation.\+cpp}}\end{DoxyCompactItemize}

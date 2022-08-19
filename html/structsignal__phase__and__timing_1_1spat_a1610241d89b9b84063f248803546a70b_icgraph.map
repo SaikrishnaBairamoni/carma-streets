@@ -1,0 +1,4 @@
+<map id="signal_phase_and_timing::spat::toJson" name="signal_phase_and_timing::spat::toJson">
+<area shape="rect" id="node1" title="Serialize SPaT object to rapidjson::Value for writing as JSON string." alt="" coords="108,5,295,47"/>
+<area shape="rect" id="node2" href="$test__spat__to__json_8cpp.html#ac29194ede5543066ec3a605ffa0a61e0" title="Test to Json conversion serialization and deserialization." alt="" coords="5,13,60,39"/>
+</map>

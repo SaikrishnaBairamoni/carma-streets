@@ -1,0 +1,4 @@
+<map id="intersection_model::intersection_model::update_intersection_info_by_all_way_stop_reg" name="intersection_model::intersection_model::update_intersection_info_by_all_way_stop_reg">
+<area shape="rect" id="node1" title="Based on the all_way_stop regulatory element and routing graph, it is able to retrieve all the entry ..." alt="" coords="108,5,305,76"/>
+<area shape="rect" id="node2" href="$test__intersection__model_8cpp.html#a53edeae69f4541b6392ad04ab2d1ff14" title=" " alt="" coords="5,27,60,54"/>
+</map>

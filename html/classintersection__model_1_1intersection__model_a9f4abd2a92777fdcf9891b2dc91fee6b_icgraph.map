@@ -1,0 +1,4 @@
+<map id="intersection_model::intersection_model::mapping_lane_id_2_lanelet_id" name="intersection_model::intersection_model::mapping_lane_id_2_lanelet_id">
+<area shape="rect" id="node1" title="Comparing the geometry between lane in the MAP message and geometry of the list of lanelets to determ..." alt="" coords="108,5,335,61"/>
+<area shape="rect" id="node2" href="$test__intersection__model_8cpp.html#a7cf456fa77e7dcb49ac6b53bb4c3118d" title=" " alt="" coords="5,20,60,47"/>
+</map>

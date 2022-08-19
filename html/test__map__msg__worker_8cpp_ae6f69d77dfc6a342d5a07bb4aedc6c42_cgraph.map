@@ -1,0 +1,6 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node1" title=" " alt="" coords="5,60,60,87"/>
+<area shape="rect" id="node2" href="$classintersection__model_1_1map__msg__worker.html#aa18c01177386e52a8c31c185ac3a9f9b" title="Get the const map msg ptr object and prevent external class from modifying it." alt="" coords="120,5,295,61"/>
+<area shape="rect" id="node3" href="$classintersection__model_1_1map__msg__worker.html#ad59f4cb6f6e4afc090fdda3937f1b672" title="Update intesection map structure. It will only update when both kafka consumer consumes MAP message a..." alt="" coords="108,85,307,141"/>
+<area shape="rect" id="node4" href="$classintersection__model_1_1map__msg__worker.html#a0d72b27c573747d7dd6b32ef6fae34ab" title="parse MAP msg json string with rapidjson document" alt="" coords="355,85,544,141"/>
+</map>

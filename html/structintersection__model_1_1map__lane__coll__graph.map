@@ -1,0 +1,4 @@
+<map id="intersection_model::map_lane" name="intersection_model::map_lane">
+<area shape="rect" id="node1" title=" " alt="" coords="10,109,157,151"/>
+<area shape="rect" id="node2" href="$structintersection__model_1_1map__referencelane.html" title=" " alt="" coords="5,5,161,47"/>
+</map>

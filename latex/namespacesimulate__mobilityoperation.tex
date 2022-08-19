@@ -1,0 +1,116 @@
+\hypertarget{namespacesimulate__mobilityoperation}{}\doxysection{simulate\+\_\+mobilityoperation Namespace Reference}
+\label{namespacesimulate__mobilityoperation}\index{simulate\_mobilityoperation@{simulate\_mobilityoperation}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacesimulate__mobilityoperation_acf408b61066fdf6b4ee4737e568dc5ba}{read\+\_\+json}} (json\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesimulate__mobilityoperation_a131be43ac3085e242a652e30af598f28}{producer}}
+\item 
+int \mbox{\hyperlink{namespacesimulate__mobilityoperation_a2c39e7ee01a8e135f48a28ce8c2eb91f}{count}} = 10
+\item 
+int \mbox{\hyperlink{namespacesimulate__mobilityoperation_ab24f24a1cd38758c2b7d1bbc309e2099}{i}} = 0
+\item 
+def \mbox{\hyperlink{namespacesimulate__mobilityoperation_a19549c30f68d13d8870bc2875a0ef26e}{data}} = \mbox{\hyperlink{namespacesimulate__mobilityoperation_acf408b61066fdf6b4ee4737e568dc5ba}{read\+\_\+json}}(\textquotesingle{}mobilityoperation.\+json\textquotesingle{})
+\item 
+string \mbox{\hyperlink{namespacesimulate__mobilityoperation_a5e2eb405c9e19653e75ab7e8e81219d8}{strategy\+\_\+params}} = \char`\"{}msg\+\_\+count\+:\char`\"{} + \textbackslash{}
+\item 
+int \mbox{\hyperlink{namespacesimulate__mobilityoperation_a53dff21a6d447ca660693de3432b79d0}{timestamp}} = int(\mbox{\hyperlink{namespacesimulate__mobilityoperation_a19549c30f68d13d8870bc2875a0ef26e}{data}}\mbox{[}\char`\"{}metadata\char`\"{}\mbox{]}\mbox{[}\char`\"{}timestamp\char`\"{}\mbox{]}) + i
+\item 
+\mbox{\hyperlink{namespacesimulate__mobilityoperation_a02b310e14e64dbfde60a7efde691ec5a}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacesimulate__mobilityoperation_acf408b61066fdf6b4ee4737e568dc5ba}\label{namespacesimulate__mobilityoperation_acf408b61066fdf6b4ee4737e568dc5ba}} 
+\index{simulate\_mobilityoperation@{simulate\_mobilityoperation}!read\_json@{read\_json}}
+\index{read\_json@{read\_json}!simulate\_mobilityoperation@{simulate\_mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{read\_json()}{read\_json()}}
+{\footnotesize\ttfamily def simulate\+\_\+mobilityoperation.\+read\+\_\+json (\begin{DoxyParamCaption}\item[{}]{json\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file simulate\+\_\+mobilityoperation.\+py.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesimulate__mobilityoperation_a2c39e7ee01a8e135f48a28ce8c2eb91f}\label{namespacesimulate__mobilityoperation_a2c39e7ee01a8e135f48a28ce8c2eb91f}} 
+\index{simulate\_mobilityoperation@{simulate\_mobilityoperation}!count@{count}}
+\index{count@{count}!simulate\_mobilityoperation@{simulate\_mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily int simulate\+\_\+mobilityoperation.\+count = 10}
+
+
+
+Definition at line 18 of file simulate\+\_\+mobilityoperation.\+py.
+
+\mbox{\Hypertarget{namespacesimulate__mobilityoperation_a19549c30f68d13d8870bc2875a0ef26e}\label{namespacesimulate__mobilityoperation_a19549c30f68d13d8870bc2875a0ef26e}} 
+\index{simulate\_mobilityoperation@{simulate\_mobilityoperation}!data@{data}}
+\index{data@{data}!simulate\_mobilityoperation@{simulate\_mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily def simulate\+\_\+mobilityoperation.\+data = \mbox{\hyperlink{namespacesimulate__mobilityoperation_acf408b61066fdf6b4ee4737e568dc5ba}{read\+\_\+json}}(\textquotesingle{}mobilityoperation.\+json\textquotesingle{})}
+
+
+
+Definition at line 21 of file simulate\+\_\+mobilityoperation.\+py.
+
+\mbox{\Hypertarget{namespacesimulate__mobilityoperation_ab24f24a1cd38758c2b7d1bbc309e2099}\label{namespacesimulate__mobilityoperation_ab24f24a1cd38758c2b7d1bbc309e2099}} 
+\index{simulate\_mobilityoperation@{simulate\_mobilityoperation}!i@{i}}
+\index{i@{i}!simulate\_mobilityoperation@{simulate\_mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily int simulate\+\_\+mobilityoperation.\+i = 0}
+
+
+
+Definition at line 19 of file simulate\+\_\+mobilityoperation.\+py.
+
+\mbox{\Hypertarget{namespacesimulate__mobilityoperation_a131be43ac3085e242a652e30af598f28}\label{namespacesimulate__mobilityoperation_a131be43ac3085e242a652e30af598f28}} 
+\index{simulate\_mobilityoperation@{simulate\_mobilityoperation}!producer@{producer}}
+\index{producer@{producer}!simulate\_mobilityoperation@{simulate\_mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{producer}{producer}}
+{\footnotesize\ttfamily simulate\+\_\+mobilityoperation.\+producer}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  KafkaProducer(bootstrap\_servers=[\textcolor{stringliteral}{"{}127.0.0.1:9092"{}}],}
+\DoxyCodeLine{2                              value\_serializer=\textcolor{keyword}{lambda} x: json.dumps(x).encode(\textcolor{stringliteral}{'utf-\/8'}))}
+
+\end{DoxyCode}
+
+
+Definition at line 16 of file simulate\+\_\+mobilityoperation.\+py.
+
+\mbox{\Hypertarget{namespacesimulate__mobilityoperation_a5e2eb405c9e19653e75ab7e8e81219d8}\label{namespacesimulate__mobilityoperation_a5e2eb405c9e19653e75ab7e8e81219d8}} 
+\index{simulate\_mobilityoperation@{simulate\_mobilityoperation}!strategy\_params@{strategy\_params}}
+\index{strategy\_params@{strategy\_params}!simulate\_mobilityoperation@{simulate\_mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{strategy\_params}{strategy\_params}}
+{\footnotesize\ttfamily string simulate\+\_\+mobilityoperation.\+strategy\+\_\+params = \char`\"{}msg\+\_\+count\+:\char`\"{} + \textbackslash{}}
+
+
+
+Definition at line 22 of file simulate\+\_\+mobilityoperation.\+py.
+
+\mbox{\Hypertarget{namespacesimulate__mobilityoperation_a53dff21a6d447ca660693de3432b79d0}\label{namespacesimulate__mobilityoperation_a53dff21a6d447ca660693de3432b79d0}} 
+\index{simulate\_mobilityoperation@{simulate\_mobilityoperation}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!simulate\_mobilityoperation@{simulate\_mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily int simulate\+\_\+mobilityoperation.\+timestamp = int(\mbox{\hyperlink{namespacesimulate__mobilityoperation_a19549c30f68d13d8870bc2875a0ef26e}{data}}\mbox{[}\char`\"{}metadata\char`\"{}\mbox{]}\mbox{[}\char`\"{}timestamp\char`\"{}\mbox{]}) + i}
+
+
+
+Definition at line 26 of file simulate\+\_\+mobilityoperation.\+py.
+
+\mbox{\Hypertarget{namespacesimulate__mobilityoperation_a02b310e14e64dbfde60a7efde691ec5a}\label{namespacesimulate__mobilityoperation_a02b310e14e64dbfde60a7efde691ec5a}} 
+\index{simulate\_mobilityoperation@{simulate\_mobilityoperation}!value@{value}}
+\index{value@{value}!simulate\_mobilityoperation@{simulate\_mobilityoperation}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily simulate\+\_\+mobilityoperation.\+value}
+
+
+
+Definition at line 28 of file simulate\+\_\+mobilityoperation.\+py.
+

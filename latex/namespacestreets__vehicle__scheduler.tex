@@ -1,0 +1,156 @@
+\hypertarget{namespacestreets__vehicle__scheduler}{}\doxysection{streets\+\_\+vehicle\+\_\+scheduler Namespace Reference}
+\label{namespacestreets__vehicle__scheduler}\index{streets\_vehicle\_scheduler@{streets\_vehicle\_scheduler}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule}{all\+\_\+stop\+\_\+vehicle\+\_\+schedule}}
+\begin{DoxyCompactList}\small\item\em Object to represent all\+\_\+stop schedule for single vehicle. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__intersection__schedule}{all\+\_\+stop\+\_\+intersection\+\_\+schedule}}
+\begin{DoxyCompactList}\small\item\em Struct to store vehicle schedules for all vehicle in an intersection. Includes a timestamp in milliseconds since epoch. Also includes a get\+\_\+delay method that will get each vehicle schedules delay and sum them for a total intersection delay. Delay is the difference between scheduled Entering Time (et) and scheduled Stopping time (st) and represents the time a vehicle would be waiting at the stop bar before gaining access to the intersection. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler}{all\+\_\+stop\+\_\+vehicle\+\_\+scheduler}}
+\item 
+struct \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1vehicle__schedule}{vehicle\+\_\+schedule}}
+\begin{DoxyCompactList}\small\item\em Object to represent schedule for single vehicle. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}}
+\begin{DoxyCompactList}\small\item\em Struct to store vehicle schedules for all vehicle in an intersection. Includes a timestamp in milliseconds since epoch. Also includes a get\+\_\+delay method that will get each vehicle schedules delay and sum them for a total intersection delay. Delay is the difference between scheduled Entering Time (et) and scheduled Stopping time (st) and represents the time a vehicle would be waiting at the stop bar before gaining access to the intersection. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1scheduling__exception}{scheduling\+\_\+exception}}
+\begin{DoxyCompactList}\small\item\em Runtime error related to processing status intent vehicle updates. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__vehicle__schedule}{signalized\+\_\+vehicle\+\_\+schedule}}
+\begin{DoxyCompactList}\small\item\em Object to represent schedule for single vehicle. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule}{signalized\+\_\+intersection\+\_\+schedule}}
+\begin{DoxyCompactList}\small\item\em Struct to store vehicle schedules for all vehicle in an intersection. Includes a timestamp in milliseconds since epoch. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler}{signalized\+\_\+vehicle\+\_\+scheduler}}
+\item 
+class \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1vehicle__scheduler}{vehicle\+\_\+scheduler}}
+\begin{DoxyCompactList}\small\item\em Abstract Class for extend to implement scheduling business logic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacestreets__vehicle__scheduler_aa9f946d7c588b2697fd379fbed72f382}{departure\+\_\+position\+\_\+comparator}} (const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&prev\+\_\+veh, const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&next\+\_\+veh)
+\begin{DoxyCompactList}\small\item\em Comparator for vehicle collections. Used for sorting vehicle objects in a collection in ascending order with respect to their departure position value. Values lower than one are treated as unset and order last after the largest positive departure position. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacestreets__vehicle__scheduler_a62007ad8cbd331963378ff836d2ce767}{st\+\_\+comparator}} (const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&prev\+\_\+veh, const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&next\+\_\+veh)
+\begin{DoxyCompactList}\small\item\em Comparator for vehicle collections. Used for sorting vehicle objects in a collection in ascending order with respect to their stopping time value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacestreets__vehicle__scheduler_ab550673e6a269f9f374ca3ca7ff6ba82}{distance\+\_\+comparator}} (const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&prev\+\_\+veh, const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&next\+\_\+veh)
+\begin{DoxyCompactList}\small\item\em Comparator for vehicle collections. Used for sorting vehicle objects in a collection in ascending order with respect to their distance value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacestreets__vehicle__scheduler_ab6598f6bcdf2edaadecc3f4b68debb66}{delay\+\_\+comparator}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__intersection__schedule}{all\+\_\+stop\+\_\+intersection\+\_\+schedule}} $>$ \&prev\+\_\+sched, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__intersection__schedule}{all\+\_\+stop\+\_\+intersection\+\_\+schedule}} $>$ \&next\+\_\+sched)
+\begin{DoxyCompactList}\small\item\em Comparator for \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}} collections. Used for sorting \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}} objects in a collection in ascending order with respect to their delay value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacestreets__vehicle__scheduler_ab6598f6bcdf2edaadecc3f4b68debb66}\label{namespacestreets__vehicle__scheduler_ab6598f6bcdf2edaadecc3f4b68debb66}} 
+\index{streets\_vehicle\_scheduler@{streets\_vehicle\_scheduler}!delay\_comparator@{delay\_comparator}}
+\index{delay\_comparator@{delay\_comparator}!streets\_vehicle\_scheduler@{streets\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{delay\_comparator()}{delay\_comparator()}}
+{\footnotesize\ttfamily bool streets\+\_\+vehicle\+\_\+scheduler\+::delay\+\_\+comparator (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__intersection__schedule}{all\+\_\+stop\+\_\+intersection\+\_\+schedule}} $>$ \&}]{prev\+\_\+sched,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__intersection__schedule}{all\+\_\+stop\+\_\+intersection\+\_\+schedule}} $>$ \&}]{next\+\_\+sched }\end{DoxyParamCaption})}
+
+
+
+Comparator for \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}} collections. Used for sorting \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}} objects in a collection in ascending order with respect to their delay value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prev\+\_\+sched} & first \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}}. \\
+\hline
+{\em next\+\_\+sched} & next \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{intersection\+\_\+schedule}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if first should come before next. 
+
+false if first should not come before next. 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file vehicle\+\_\+sorting.\+cpp.
+
+\mbox{\Hypertarget{namespacestreets__vehicle__scheduler_aa9f946d7c588b2697fd379fbed72f382}\label{namespacestreets__vehicle__scheduler_aa9f946d7c588b2697fd379fbed72f382}} 
+\index{streets\_vehicle\_scheduler@{streets\_vehicle\_scheduler}!departure\_position\_comparator@{departure\_position\_comparator}}
+\index{departure\_position\_comparator@{departure\_position\_comparator}!streets\_vehicle\_scheduler@{streets\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{departure\_position\_comparator()}{departure\_position\_comparator()}}
+{\footnotesize\ttfamily bool streets\+\_\+vehicle\+\_\+scheduler\+::departure\+\_\+position\+\_\+comparator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&}]{prev\+\_\+veh,  }\item[{const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&}]{next\+\_\+veh }\end{DoxyParamCaption})}
+
+
+
+Comparator for vehicle collections. Used for sorting vehicle objects in a collection in ascending order with respect to their departure position value. Values lower than one are treated as unset and order last after the largest positive departure position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prev\+\_\+veh} & first vehicle. \\
+\hline
+{\em next\+\_\+veh} & next vehicle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if first should come before next. 
+
+false if first should not come before next. 
+\end{DoxyReturn}
+
+
+Definition at line 4 of file vehicle\+\_\+sorting.\+cpp.
+
+\mbox{\Hypertarget{namespacestreets__vehicle__scheduler_ab550673e6a269f9f374ca3ca7ff6ba82}\label{namespacestreets__vehicle__scheduler_ab550673e6a269f9f374ca3ca7ff6ba82}} 
+\index{streets\_vehicle\_scheduler@{streets\_vehicle\_scheduler}!distance\_comparator@{distance\_comparator}}
+\index{distance\_comparator@{distance\_comparator}!streets\_vehicle\_scheduler@{streets\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{distance\_comparator()}{distance\_comparator()}}
+{\footnotesize\ttfamily bool streets\+\_\+vehicle\+\_\+scheduler\+::distance\+\_\+comparator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&}]{prev\+\_\+veh,  }\item[{const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&}]{next\+\_\+veh }\end{DoxyParamCaption})}
+
+
+
+Comparator for vehicle collections. Used for sorting vehicle objects in a collection in ascending order with respect to their distance value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prev\+\_\+veh} & first vehicle. \\
+\hline
+{\em next\+\_\+veh} & next vehicle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if first should come before next. 
+
+false if first should not come before next. 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file vehicle\+\_\+sorting.\+cpp.
+
+\mbox{\Hypertarget{namespacestreets__vehicle__scheduler_a62007ad8cbd331963378ff836d2ce767}\label{namespacestreets__vehicle__scheduler_a62007ad8cbd331963378ff836d2ce767}} 
+\index{streets\_vehicle\_scheduler@{streets\_vehicle\_scheduler}!st\_comparator@{st\_comparator}}
+\index{st\_comparator@{st\_comparator}!streets\_vehicle\_scheduler@{streets\_vehicle\_scheduler}}
+\doxysubsubsection{\texorpdfstring{st\_comparator()}{st\_comparator()}}
+{\footnotesize\ttfamily bool streets\+\_\+vehicle\+\_\+scheduler\+::st\+\_\+comparator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&}]{prev\+\_\+veh,  }\item[{const \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} \&}]{next\+\_\+veh }\end{DoxyParamCaption})}
+
+
+
+Comparator for vehicle collections. Used for sorting vehicle objects in a collection in ascending order with respect to their stopping time value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prev\+\_\+veh} & first vehicle. \\
+\hline
+{\em next\+\_\+veh} & next vehicle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if first should come before next. 
+
+false if first should not come before next. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1scheduling__exception}{scheduling\+\_\+exception}}} & if stopping time is 0 which is an invalid stopping time and can not be sorted. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 14 of file vehicle\+\_\+sorting.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{namespacestreets__vehicle__scheduler_a62007ad8cbd331963378ff836d2ce767_cgraph}
+\end{center}
+\end{figure}

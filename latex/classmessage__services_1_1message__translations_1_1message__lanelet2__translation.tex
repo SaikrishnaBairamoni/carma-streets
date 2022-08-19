@@ -1,0 +1,331 @@
+\hypertarget{classmessage__services_1_1message__translations_1_1message__lanelet2__translation}{}\doxysection{message\+\_\+services\+::message\+\_\+translations\+::message\+\_\+lanelet2\+\_\+translation Class Reference}
+\label{classmessage__services_1_1message__translations_1_1message__lanelet2__translation}\index{message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}}
+
+
+{\ttfamily \#include $<$message\+\_\+lanelet2\+\_\+translation.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_af16291021737d698c1205310c27a36f0}{message\+\_\+lanelet2\+\_\+translation}} ()
+\item 
+\mbox{\hyperlink{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_abdd27ffa11966b8344b13713c524fa7c}{message\+\_\+lanelet2\+\_\+translation}} (std\+::string filename)
+\item 
+\mbox{\hyperlink{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_af45f00b59e5247aecb6bc17f2eb64dc3}{$\sim$message\+\_\+lanelet2\+\_\+translation}} ()
+\item 
+bool \mbox{\hyperlink{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a6aa017f9885603dc1d36c7ae1af0724e}{read\+\_\+lanelet2\+\_\+map}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Read lanelet2 map. \end{DoxyCompactList}\item 
+lanelet\+::\+Lanelet \mbox{\hyperlink{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a24e2be3abe3cbe33ff04b9101e615378}{get\+\_\+cur\+\_\+lanelet\+\_\+by\+\_\+loc\+\_\+and\+\_\+direction}} (double lat, double lon, double elev, std\+::string turn\+\_\+direction, \mbox{\hyperlink{structmessage__services_1_1models_1_1trajectory}{models\+::trajectory}} \&trajectory) const
+\item 
+lanelet\+::\+Lanelet \mbox{\hyperlink{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a568b314c4f7eaa10ede9d9cb3030a974}{get\+\_\+cur\+\_\+lanelet\+\_\+by\+\_\+point\+\_\+and\+\_\+direction}} (lanelet\+::\+Basic\+Point3d subj\+\_\+point3d, std\+::string turn\+\_\+direction, \mbox{\hyperlink{structmessage__services_1_1models_1_1trajectory}{models\+::trajectory}} \&trajectory) const
+\item 
+std\+::vector$<$ lanelet\+::\+Lanelet $>$ \mbox{\hyperlink{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a171bf6b007d7aefae8b1e1254e2c58ab}{get\+\_\+cur\+\_\+lanelets\+\_\+by\+\_\+point}} (lanelet\+::\+Basic\+Point3d subj\+\_\+point3d) const
+\item 
+double \mbox{\hyperlink{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a36279637c5cf92197ba62c4e16c7d39e}{distance2\+\_\+cur\+\_\+lanelet\+\_\+end}} (double lat, double lon, double elev, lanelet\+::\+Lanelet subj\+\_\+lanelet, std\+::string turn\+\_\+direction, \mbox{\hyperlink{structmessage__services_1_1models_1_1trajectory}{models\+::trajectory}} \&trajectory) const
+\item 
+double \mbox{\hyperlink{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_af87ee952849044c5175b1b257386271b}{distance2\+\_\+cur\+\_\+lanelet\+\_\+end}} (lanelet\+::\+Basic\+Point3d point, lanelet\+::\+Lanelet subj\+\_\+lanelet, std\+::string turn\+\_\+direction, \mbox{\hyperlink{structmessage__services_1_1models_1_1trajectory}{models\+::trajectory}} \&trajectory) const
+\item 
+bool \mbox{\hyperlink{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a876c6e1cd0fff32b90f2d3dff5a8f5a8}{update\+\_\+vehicle\+\_\+routing\+\_\+graph}} ()
+\begin{DoxyCompactList}\small\item\em Initialize vehicle routing graph. \end{DoxyCompactList}\item 
+std\+::map$<$ int64\+\_\+t, \mbox{\hyperlink{namespacemessage__services_1_1models_adadf916283b2bc01c875dce103fadcae}{models\+::intersection\+\_\+lanelet\+\_\+type}} $>$ \mbox{\hyperlink{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a4821d1fd75c245e9a29c80dd711f375f}{get\+\_\+lanelet\+\_\+types\+\_\+ids}} (lanelet\+::\+Lanelet subj\+\_\+lanelet, std\+::string turn\+\_\+direction) const
+\item 
+lanelet\+::\+Basic\+Point3d \mbox{\hyperlink{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_aefd7df784db21bfbf5737072ea3119e4}{ecef\+\_\+2\+\_\+map\+\_\+point}} (std\+::int32\+\_\+t ecef\+\_\+x, std\+::int32\+\_\+t ecef\+\_\+y, std\+::int32\+\_\+t ecef\+\_\+z) const
+\begin{DoxyCompactList}\small\item\em Function to convert ecef location to a 2d point in map frame. \end{DoxyCompactList}\item 
+lanelet\+::\+Basic\+Point3d \mbox{\hyperlink{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_aad90a20416b9d7053f1072d3790665b8}{gps\+\_\+2\+\_\+map\+\_\+point}} (double lat, double lon, double elev) const
+\begin{DoxyCompactList}\small\item\em Function to convert GPS location to a 3d point in map frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 56 of file message\+\_\+lanelet2\+\_\+translation.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_af16291021737d698c1205310c27a36f0}\label{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_af16291021737d698c1205310c27a36f0}} 
+\index{message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}!message\_lanelet2\_translation@{message\_lanelet2\_translation}}
+\index{message\_lanelet2\_translation@{message\_lanelet2\_translation}!message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}}
+\doxysubsubsection{\texorpdfstring{message\_lanelet2\_translation()}{message\_lanelet2\_translation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily message\+\_\+services\+::message\+\_\+translations\+::message\+\_\+lanelet2\+\_\+translation\+::message\+\_\+lanelet2\+\_\+translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file message\+\_\+lanelet2\+\_\+translation.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_abdd27ffa11966b8344b13713c524fa7c}\label{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_abdd27ffa11966b8344b13713c524fa7c}} 
+\index{message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}!message\_lanelet2\_translation@{message\_lanelet2\_translation}}
+\index{message\_lanelet2\_translation@{message\_lanelet2\_translation}!message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}}
+\doxysubsubsection{\texorpdfstring{message\_lanelet2\_translation()}{message\_lanelet2\_translation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily message\+\_\+services\+::message\+\_\+translations\+::message\+\_\+lanelet2\+\_\+translation\+::message\+\_\+lanelet2\+\_\+translation (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file message\+\_\+lanelet2\+\_\+translation.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_abdd27ffa11966b8344b13713c524fa7c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_af45f00b59e5247aecb6bc17f2eb64dc3}\label{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_af45f00b59e5247aecb6bc17f2eb64dc3}} 
+\index{message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}!````~message\_lanelet2\_translation@{$\sim$message\_lanelet2\_translation}}
+\index{````~message\_lanelet2\_translation@{$\sim$message\_lanelet2\_translation}!message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}}
+\doxysubsubsection{\texorpdfstring{$\sim$message\_lanelet2\_translation()}{~message\_lanelet2\_translation()}}
+{\footnotesize\ttfamily message\+\_\+services\+::message\+\_\+translations\+::message\+\_\+lanelet2\+\_\+translation\+::$\sim$message\+\_\+lanelet2\+\_\+translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file message\+\_\+lanelet2\+\_\+translation.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a36279637c5cf92197ba62c4e16c7d39e}\label{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a36279637c5cf92197ba62c4e16c7d39e}} 
+\index{message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}!distance2\_cur\_lanelet\_end@{distance2\_cur\_lanelet\_end}}
+\index{distance2\_cur\_lanelet\_end@{distance2\_cur\_lanelet\_end}!message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}}
+\doxysubsubsection{\texorpdfstring{distance2\_cur\_lanelet\_end()}{distance2\_cur\_lanelet\_end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double message\+\_\+services\+::message\+\_\+translations\+::message\+\_\+lanelet2\+\_\+translation\+::distance2\+\_\+cur\+\_\+lanelet\+\_\+end (\begin{DoxyParamCaption}\item[{double}]{lat,  }\item[{double}]{lon,  }\item[{double}]{elev,  }\item[{lanelet\+::\+Lanelet}]{subj\+\_\+lanelet,  }\item[{std\+::string}]{turn\+\_\+direction,  }\item[{\mbox{\hyperlink{structmessage__services_1_1models_1_1trajectory}{models\+::trajectory}} \&}]{trajectory }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 204 of file message\+\_\+lanelet2\+\_\+translation.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a36279637c5cf92197ba62c4e16c7d39e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a36279637c5cf92197ba62c4e16c7d39e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_af87ee952849044c5175b1b257386271b}\label{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_af87ee952849044c5175b1b257386271b}} 
+\index{message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}!distance2\_cur\_lanelet\_end@{distance2\_cur\_lanelet\_end}}
+\index{distance2\_cur\_lanelet\_end@{distance2\_cur\_lanelet\_end}!message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}}
+\doxysubsubsection{\texorpdfstring{distance2\_cur\_lanelet\_end()}{distance2\_cur\_lanelet\_end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double message\+\_\+services\+::message\+\_\+translations\+::message\+\_\+lanelet2\+\_\+translation\+::distance2\+\_\+cur\+\_\+lanelet\+\_\+end (\begin{DoxyParamCaption}\item[{lanelet\+::\+Basic\+Point3d}]{point,  }\item[{lanelet\+::\+Lanelet}]{subj\+\_\+lanelet,  }\item[{std\+::string}]{turn\+\_\+direction,  }\item[{\mbox{\hyperlink{structmessage__services_1_1models_1_1trajectory}{models\+::trajectory}} \&}]{trajectory }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 210 of file message\+\_\+lanelet2\+\_\+translation.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_aefd7df784db21bfbf5737072ea3119e4}\label{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_aefd7df784db21bfbf5737072ea3119e4}} 
+\index{message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}!ecef\_2\_map\_point@{ecef\_2\_map\_point}}
+\index{ecef\_2\_map\_point@{ecef\_2\_map\_point}!message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}}
+\doxysubsubsection{\texorpdfstring{ecef\_2\_map\_point()}{ecef\_2\_map\_point()}}
+{\footnotesize\ttfamily lanelet\+::\+Basic\+Point3d message\+\_\+services\+::message\+\_\+translations\+::message\+\_\+lanelet2\+\_\+translation\+::ecef\+\_\+2\+\_\+map\+\_\+point (\begin{DoxyParamCaption}\item[{std\+::int32\+\_\+t}]{ecef\+\_\+x,  }\item[{std\+::int32\+\_\+t}]{ecef\+\_\+y,  }\item[{std\+::int32\+\_\+t}]{ecef\+\_\+z }\end{DoxyParamCaption}) const}
+
+
+
+Function to convert ecef location to a 2d point in map frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ecef\+\_\+point} & ecef location point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+2d point in map frame 
+\end{DoxyReturn}
+
+
+Definition at line 249 of file message\+\_\+lanelet2\+\_\+translation.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_aefd7df784db21bfbf5737072ea3119e4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a24e2be3abe3cbe33ff04b9101e615378}\label{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a24e2be3abe3cbe33ff04b9101e615378}} 
+\index{message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}!get\_cur\_lanelet\_by\_loc\_and\_direction@{get\_cur\_lanelet\_by\_loc\_and\_direction}}
+\index{get\_cur\_lanelet\_by\_loc\_and\_direction@{get\_cur\_lanelet\_by\_loc\_and\_direction}!message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}}
+\doxysubsubsection{\texorpdfstring{get\_cur\_lanelet\_by\_loc\_and\_direction()}{get\_cur\_lanelet\_by\_loc\_and\_direction()}}
+{\footnotesize\ttfamily lanelet\+::\+Lanelet message\+\_\+services\+::message\+\_\+translations\+::message\+\_\+lanelet2\+\_\+translation\+::get\+\_\+cur\+\_\+lanelet\+\_\+by\+\_\+loc\+\_\+and\+\_\+direction (\begin{DoxyParamCaption}\item[{double}]{lat,  }\item[{double}]{lon,  }\item[{double}]{elev,  }\item[{std\+::string}]{turn\+\_\+direction,  }\item[{\mbox{\hyperlink{structmessage__services_1_1models_1_1trajectory}{models\+::trajectory}} \&}]{trajectory }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 83 of file message\+\_\+lanelet2\+\_\+translation.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a24e2be3abe3cbe33ff04b9101e615378_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a24e2be3abe3cbe33ff04b9101e615378_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a568b314c4f7eaa10ede9d9cb3030a974}\label{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a568b314c4f7eaa10ede9d9cb3030a974}} 
+\index{message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}!get\_cur\_lanelet\_by\_point\_and\_direction@{get\_cur\_lanelet\_by\_point\_and\_direction}}
+\index{get\_cur\_lanelet\_by\_point\_and\_direction@{get\_cur\_lanelet\_by\_point\_and\_direction}!message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}}
+\doxysubsubsection{\texorpdfstring{get\_cur\_lanelet\_by\_point\_and\_direction()}{get\_cur\_lanelet\_by\_point\_and\_direction()}}
+{\footnotesize\ttfamily lanelet\+::\+Lanelet message\+\_\+services\+::message\+\_\+translations\+::message\+\_\+lanelet2\+\_\+translation\+::get\+\_\+cur\+\_\+lanelet\+\_\+by\+\_\+point\+\_\+and\+\_\+direction (\begin{DoxyParamCaption}\item[{lanelet\+::\+Basic\+Point3d}]{subj\+\_\+point3d,  }\item[{std\+::string}]{turn\+\_\+direction,  }\item[{\mbox{\hyperlink{structmessage__services_1_1models_1_1trajectory}{models\+::trajectory}} \&}]{trajectory }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 116 of file message\+\_\+lanelet2\+\_\+translation.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a568b314c4f7eaa10ede9d9cb3030a974_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a568b314c4f7eaa10ede9d9cb3030a974_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a171bf6b007d7aefae8b1e1254e2c58ab}\label{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a171bf6b007d7aefae8b1e1254e2c58ab}} 
+\index{message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}!get\_cur\_lanelets\_by\_point@{get\_cur\_lanelets\_by\_point}}
+\index{get\_cur\_lanelets\_by\_point@{get\_cur\_lanelets\_by\_point}!message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}}
+\doxysubsubsection{\texorpdfstring{get\_cur\_lanelets\_by\_point()}{get\_cur\_lanelets\_by\_point()}}
+{\footnotesize\ttfamily std\+::vector$<$ lanelet\+::\+Lanelet $>$ message\+\_\+services\+::message\+\_\+translations\+::message\+\_\+lanelet2\+\_\+translation\+::get\+\_\+cur\+\_\+lanelets\+\_\+by\+\_\+point (\begin{DoxyParamCaption}\item[{lanelet\+::\+Basic\+Point3d}]{subj\+\_\+point3d }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 89 of file message\+\_\+lanelet2\+\_\+translation.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a171bf6b007d7aefae8b1e1254e2c58ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a4821d1fd75c245e9a29c80dd711f375f}\label{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a4821d1fd75c245e9a29c80dd711f375f}} 
+\index{message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}!get\_lanelet\_types\_ids@{get\_lanelet\_types\_ids}}
+\index{get\_lanelet\_types\_ids@{get\_lanelet\_types\_ids}!message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}}
+\doxysubsubsection{\texorpdfstring{get\_lanelet\_types\_ids()}{get\_lanelet\_types\_ids()}}
+{\footnotesize\ttfamily std\+::map$<$ int64\+\_\+t, \mbox{\hyperlink{namespacemessage__services_1_1models_adadf916283b2bc01c875dce103fadcae}{models\+::intersection\+\_\+lanelet\+\_\+type}} $>$ message\+\_\+services\+::message\+\_\+translations\+::message\+\_\+lanelet2\+\_\+translation\+::get\+\_\+lanelet\+\_\+types\+\_\+ids (\begin{DoxyParamCaption}\item[{lanelet\+::\+Lanelet}]{subj\+\_\+lanelet,  }\item[{std\+::string}]{turn\+\_\+direction }\end{DoxyParamCaption}) const}
+
+Checking whether the current lanelet is link lanelet. The link lanelet\textquotesingle{}s previous lanelet is entry lanelet, and entry lanelet has the all\+\_\+way\+\_\+stop regulatory element
+
+Definition at line 276 of file message\+\_\+lanelet2\+\_\+translation.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a4821d1fd75c245e9a29c80dd711f375f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_aad90a20416b9d7053f1072d3790665b8}\label{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_aad90a20416b9d7053f1072d3790665b8}} 
+\index{message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}!gps\_2\_map\_point@{gps\_2\_map\_point}}
+\index{gps\_2\_map\_point@{gps\_2\_map\_point}!message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}}
+\doxysubsubsection{\texorpdfstring{gps\_2\_map\_point()}{gps\_2\_map\_point()}}
+{\footnotesize\ttfamily lanelet\+::\+Basic\+Point3d message\+\_\+services\+::message\+\_\+translations\+::message\+\_\+lanelet2\+\_\+translation\+::gps\+\_\+2\+\_\+map\+\_\+point (\begin{DoxyParamCaption}\item[{double}]{lat,  }\item[{double}]{lon,  }\item[{double}]{elev }\end{DoxyParamCaption}) const}
+
+
+
+Function to convert GPS location to a 3d point in map frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em GPS} & location point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+3d point in map frame 
+\end{DoxyReturn}
+
+
+Definition at line 255 of file message\+\_\+lanelet2\+\_\+translation.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_aad90a20416b9d7053f1072d3790665b8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a6aa017f9885603dc1d36c7ae1af0724e}\label{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a6aa017f9885603dc1d36c7ae1af0724e}} 
+\index{message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}!read\_lanelet2\_map@{read\_lanelet2\_map}}
+\index{read\_lanelet2\_map@{read\_lanelet2\_map}!message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}}
+\doxysubsubsection{\texorpdfstring{read\_lanelet2\_map()}{read\_lanelet2\_map()}}
+{\footnotesize\ttfamily bool message\+\_\+services\+::message\+\_\+translations\+::message\+\_\+lanelet2\+\_\+translation\+::read\+\_\+lanelet2\+\_\+map (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Read lanelet2 map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & path to lanelet2 osm map. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if no exception and map pointer is updated. 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file message\+\_\+lanelet2\+\_\+translation.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a6aa017f9885603dc1d36c7ae1af0724e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a876c6e1cd0fff32b90f2d3dff5a8f5a8}\label{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a876c6e1cd0fff32b90f2d3dff5a8f5a8}} 
+\index{message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}!update\_vehicle\_routing\_graph@{update\_vehicle\_routing\_graph}}
+\index{update\_vehicle\_routing\_graph@{update\_vehicle\_routing\_graph}!message\_services::message\_translations::message\_lanelet2\_translation@{message\_services::message\_translations::message\_lanelet2\_translation}}
+\doxysubsubsection{\texorpdfstring{update\_vehicle\_routing\_graph()}{update\_vehicle\_routing\_graph()}}
+{\footnotesize\ttfamily bool message\+\_\+services\+::message\+\_\+translations\+::message\+\_\+lanelet2\+\_\+translation\+::update\+\_\+vehicle\+\_\+routing\+\_\+graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize vehicle routing graph. 
+
+\begin{DoxyReturn}{Returns}
+true if the routing graph for vehicle participant is updated, otherwise false. 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file message\+\_\+lanelet2\+\_\+translation.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1message__translations_1_1message__lanelet2__translation_a876c6e1cd0fff32b90f2d3dff5a8f5a8_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+message\+\_\+services/include/\mbox{\hyperlink{message__lanelet2__translation_8h}{message\+\_\+lanelet2\+\_\+translation.\+h}}\item 
+message\+\_\+services/lib/\mbox{\hyperlink{message__lanelet2__translation_8cpp}{message\+\_\+lanelet2\+\_\+translation.\+cpp}}\end{DoxyCompactItemize}

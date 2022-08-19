@@ -1,0 +1,270 @@
+\hypertarget{classmessage__services_1_1workers_1_1vehicle__status__intent__worker}{}\doxysection{message\+\_\+services\+::workers\+::vehicle\+\_\+status\+\_\+intent\+\_\+worker Class Reference}
+\label{classmessage__services_1_1workers_1_1vehicle__status__intent__worker}\index{message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}}
+
+
+{\ttfamily \#include $<$vehicle\+\_\+status\+\_\+intent\+\_\+worker.\+h$>$}
+
+
+
+Inheritance diagram for message\+\_\+services\+::workers\+::vehicle\+\_\+status\+\_\+intent\+\_\+worker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{classmessage__services_1_1workers_1_1vehicle__status__intent__worker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for message\+\_\+services\+::workers\+::vehicle\+\_\+status\+\_\+intent\+\_\+worker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{classmessage__services_1_1workers_1_1vehicle__status__intent__worker__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a0b538812105f819ed42c01ecd0fcb7f9}{vehicle\+\_\+status\+\_\+intent\+\_\+worker}} ()
+\item 
+\mbox{\hyperlink{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a47c09db9f6e85814d80c9861e16ebc7c}{$\sim$vehicle\+\_\+status\+\_\+intent\+\_\+worker}} ()
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent}{models\+::vehicle\+\_\+status\+\_\+intent}} $>$ \& \mbox{\hyperlink{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a6aee44d51857707cf9006138bb322a9c}{get\+\_\+curr\+\_\+map}} ()
+\begin{DoxyCompactList}\small\item\em Return the vector of vehicle\+\_\+status\+\_\+intent stored in the \mbox{\hyperlink{classmessage__services_1_1workers_1_1vehicle__status__intent__worker}{vehicle\+\_\+status\+\_\+intent\+\_\+worker}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_aba0e734ef382604c2c1334774bb497b7}{process\+\_\+incoming\+\_\+msg}} (const std\+::string json\+\_\+str)
+\item 
+void \mbox{\hyperlink{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a94860377d60b4b8eb6b3fa7bd150e26b}{pop\+\_\+element\+\_\+from\+\_\+map}} (std\+::string key)
+\begin{DoxyCompactList}\small\item\em Remove an element from vehicle\+\_\+status\+\_\+intent vector based on the element position. If the position is greater than the deque current size, the last element is removed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a0fca51325cb92540f94543004bea9953}{update\+\_\+by\+\_\+incoming\+\_\+bsm\+\_\+msg}} (\mbox{\hyperlink{classmessage__services_1_1models_1_1bsm}{models\+::bsm}} bsm)
+\begin{DoxyCompactList}\small\item\em Update the vehicle status and intent base on the bsm info. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a0203b3d7780e0bbdd10eebbb99eaf2a0}{update\+\_\+insert\+\_\+by\+\_\+incoming\+\_\+mobilityoperation\+\_\+msg}} (\mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation}{models\+::mobilityoperation}} mo)
+\begin{DoxyCompactList}\small\item\em If the vehicle id from the Mobility\+Operation message exist in vehicle status and intent map, update the vehicle status and intent base on the Mobility\+Operation info. If the vehicle id from the Mobility\+Operation message does not exist in vehicle status and intent map, insert a new the vehicle status and intent object to the map base on the Mobility\+Operation info. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a26398faa5205b06efa6d35291d17288e}{update\+\_\+insert\+\_\+by\+\_\+incoming\+\_\+mobilitypath\+\_\+msg}} (\mbox{\hyperlink{classmessage__services_1_1models_1_1mobilitypath}{models\+::mobilitypath}} mp)
+\begin{DoxyCompactList}\small\item\em If the vehicle id from the mobilitypath message exist in vehicle status and intent map, update the vehicle status and intent base on the mobilitypath info. If the vehicle id from the mobilitypath message does not exist in vehicle status and intent map, insert a new the vehicle status and intent object to the map base on the mobilitypath info. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mutex \mbox{\hyperlink{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a186dc54d0dbd56eb5bbd5fc1d41eac88}{worker\+\_\+mtx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file vehicle\+\_\+status\+\_\+intent\+\_\+worker.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a0b538812105f819ed42c01ecd0fcb7f9}\label{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a0b538812105f819ed42c01ecd0fcb7f9}} 
+\index{message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}!vehicle\_status\_intent\_worker@{vehicle\_status\_intent\_worker}}
+\index{vehicle\_status\_intent\_worker@{vehicle\_status\_intent\_worker}!message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}}
+\doxysubsubsection{\texorpdfstring{vehicle\_status\_intent\_worker()}{vehicle\_status\_intent\_worker()}}
+{\footnotesize\ttfamily message\+\_\+services\+::workers\+::vehicle\+\_\+status\+\_\+intent\+\_\+worker\+::vehicle\+\_\+status\+\_\+intent\+\_\+worker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file vehicle\+\_\+status\+\_\+intent\+\_\+worker.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a47c09db9f6e85814d80c9861e16ebc7c}\label{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a47c09db9f6e85814d80c9861e16ebc7c}} 
+\index{message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}!````~vehicle\_status\_intent\_worker@{$\sim$vehicle\_status\_intent\_worker}}
+\index{````~vehicle\_status\_intent\_worker@{$\sim$vehicle\_status\_intent\_worker}!message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}}
+\doxysubsubsection{\texorpdfstring{$\sim$vehicle\_status\_intent\_worker()}{~vehicle\_status\_intent\_worker()}}
+{\footnotesize\ttfamily message\+\_\+services\+::workers\+::vehicle\+\_\+status\+\_\+intent\+\_\+worker\+::$\sim$vehicle\+\_\+status\+\_\+intent\+\_\+worker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file vehicle\+\_\+status\+\_\+intent\+\_\+worker.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a6aee44d51857707cf9006138bb322a9c}\label{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a6aee44d51857707cf9006138bb322a9c}} 
+\index{message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}!get\_curr\_map@{get\_curr\_map}}
+\index{get\_curr\_map@{get\_curr\_map}!message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}}
+\doxysubsubsection{\texorpdfstring{get\_curr\_map()}{get\_curr\_map()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent}{models\+::vehicle\+\_\+status\+\_\+intent}} $>$ \& message\+\_\+services\+::workers\+::vehicle\+\_\+status\+\_\+intent\+\_\+worker\+::get\+\_\+curr\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the vector of vehicle\+\_\+status\+\_\+intent stored in the \mbox{\hyperlink{classmessage__services_1_1workers_1_1vehicle__status__intent__worker}{vehicle\+\_\+status\+\_\+intent\+\_\+worker}}. 
+
+
+
+Definition at line 14 of file vehicle\+\_\+status\+\_\+intent\+\_\+worker.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a6aee44d51857707cf9006138bb322a9c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a94860377d60b4b8eb6b3fa7bd150e26b}\label{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a94860377d60b4b8eb6b3fa7bd150e26b}} 
+\index{message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}!pop\_element\_from\_map@{pop\_element\_from\_map}}
+\index{pop\_element\_from\_map@{pop\_element\_from\_map}!message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}}
+\doxysubsubsection{\texorpdfstring{pop\_element\_from\_map()}{pop\_element\_from\_map()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::workers\+::vehicle\+\_\+status\+\_\+intent\+\_\+worker\+::pop\+\_\+element\+\_\+from\+\_\+map (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption})}
+
+
+
+Remove an element from vehicle\+\_\+status\+\_\+intent vector based on the element position. If the position is greater than the deque current size, the last element is removed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em long} & Current element position in the vehicle\+\_\+status\+\_\+intent deque. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file vehicle\+\_\+status\+\_\+intent\+\_\+worker.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a94860377d60b4b8eb6b3fa7bd150e26b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_aba0e734ef382604c2c1334774bb497b7}\label{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_aba0e734ef382604c2c1334774bb497b7}} 
+\index{message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}!process\_incoming\_msg@{process\_incoming\_msg}}
+\index{process\_incoming\_msg@{process\_incoming\_msg}!message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}}
+\doxysubsubsection{\texorpdfstring{process\_incoming\_msg()}{process\_incoming\_msg()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::workers\+::vehicle\+\_\+status\+\_\+intent\+\_\+worker\+::process\+\_\+incoming\+\_\+msg (\begin{DoxyParamCaption}\item[{const std\+::string}]{json\+\_\+str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classmessage__services_1_1workers_1_1base__worker_a2ad5dc4783ea3fe10147aa8d3e1f0e27}{message\+\_\+services\+::workers\+::base\+\_\+worker}}.
+
+
+
+Definition at line 118 of file vehicle\+\_\+status\+\_\+intent\+\_\+worker.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a0fca51325cb92540f94543004bea9953}\label{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a0fca51325cb92540f94543004bea9953}} 
+\index{message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}!update\_by\_incoming\_bsm\_msg@{update\_by\_incoming\_bsm\_msg}}
+\index{update\_by\_incoming\_bsm\_msg@{update\_by\_incoming\_bsm\_msg}!message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}}
+\doxysubsubsection{\texorpdfstring{update\_by\_incoming\_bsm\_msg()}{update\_by\_incoming\_bsm\_msg()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::workers\+::vehicle\+\_\+status\+\_\+intent\+\_\+worker\+::update\+\_\+by\+\_\+incoming\+\_\+bsm\+\_\+msg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmessage__services_1_1models_1_1bsm}{models\+::bsm}}}]{bsm }\end{DoxyParamCaption})}
+
+
+
+Update the vehicle status and intent base on the bsm info. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bsm\+\_\+obj} & an instance of bsm \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file vehicle\+\_\+status\+\_\+intent\+\_\+worker.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a0fca51325cb92540f94543004bea9953_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a0fca51325cb92540f94543004bea9953_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a0203b3d7780e0bbdd10eebbb99eaf2a0}\label{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a0203b3d7780e0bbdd10eebbb99eaf2a0}} 
+\index{message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}!update\_insert\_by\_incoming\_mobilityoperation\_msg@{update\_insert\_by\_incoming\_mobilityoperation\_msg}}
+\index{update\_insert\_by\_incoming\_mobilityoperation\_msg@{update\_insert\_by\_incoming\_mobilityoperation\_msg}!message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}}
+\doxysubsubsection{\texorpdfstring{update\_insert\_by\_incoming\_mobilityoperation\_msg()}{update\_insert\_by\_incoming\_mobilityoperation\_msg()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::workers\+::vehicle\+\_\+status\+\_\+intent\+\_\+worker\+::update\+\_\+insert\+\_\+by\+\_\+incoming\+\_\+mobilityoperation\+\_\+msg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation}{models\+::mobilityoperation}}}]{mo }\end{DoxyParamCaption})}
+
+
+
+If the vehicle id from the Mobility\+Operation message exist in vehicle status and intent map, update the vehicle status and intent base on the Mobility\+Operation info. If the vehicle id from the Mobility\+Operation message does not exist in vehicle status and intent map, insert a new the vehicle status and intent object to the map base on the Mobility\+Operation info. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mo\+\_\+obj} & an instance of mobilityoperation \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 41 of file vehicle\+\_\+status\+\_\+intent\+\_\+worker.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a0203b3d7780e0bbdd10eebbb99eaf2a0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a0203b3d7780e0bbdd10eebbb99eaf2a0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a26398faa5205b06efa6d35291d17288e}\label{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a26398faa5205b06efa6d35291d17288e}} 
+\index{message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}!update\_insert\_by\_incoming\_mobilitypath\_msg@{update\_insert\_by\_incoming\_mobilitypath\_msg}}
+\index{update\_insert\_by\_incoming\_mobilitypath\_msg@{update\_insert\_by\_incoming\_mobilitypath\_msg}!message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}}
+\doxysubsubsection{\texorpdfstring{update\_insert\_by\_incoming\_mobilitypath\_msg()}{update\_insert\_by\_incoming\_mobilitypath\_msg()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::workers\+::vehicle\+\_\+status\+\_\+intent\+\_\+worker\+::update\+\_\+insert\+\_\+by\+\_\+incoming\+\_\+mobilitypath\+\_\+msg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmessage__services_1_1models_1_1mobilitypath}{models\+::mobilitypath}}}]{mp }\end{DoxyParamCaption})}
+
+
+
+If the vehicle id from the mobilitypath message exist in vehicle status and intent map, update the vehicle status and intent base on the mobilitypath info. If the vehicle id from the mobilitypath message does not exist in vehicle status and intent map, insert a new the vehicle status and intent object to the map base on the mobilitypath info. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mp\+\_\+obj} & an instance of mobilitypath \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 88 of file vehicle\+\_\+status\+\_\+intent\+\_\+worker.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a26398faa5205b06efa6d35291d17288e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a26398faa5205b06efa6d35291d17288e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a186dc54d0dbd56eb5bbd5fc1d41eac88}\label{classmessage__services_1_1workers_1_1vehicle__status__intent__worker_a186dc54d0dbd56eb5bbd5fc1d41eac88}} 
+\index{message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}!worker\_mtx@{worker\_mtx}}
+\index{worker\_mtx@{worker\_mtx}!message\_services::workers::vehicle\_status\_intent\_worker@{message\_services::workers::vehicle\_status\_intent\_worker}}
+\doxysubsubsection{\texorpdfstring{worker\_mtx}{worker\_mtx}}
+{\footnotesize\ttfamily std\+::mutex message\+\_\+services\+::workers\+::vehicle\+\_\+status\+\_\+intent\+\_\+worker\+::worker\+\_\+mtx}
+
+
+
+Definition at line 28 of file vehicle\+\_\+status\+\_\+intent\+\_\+worker.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+message\+\_\+services/include/\mbox{\hyperlink{vehicle__status__intent__worker_8h}{vehicle\+\_\+status\+\_\+intent\+\_\+worker.\+h}}\item 
+message\+\_\+services/src/workers/\mbox{\hyperlink{vehicle__status__intent__worker_8cpp}{vehicle\+\_\+status\+\_\+intent\+\_\+worker.\+cpp}}\end{DoxyCompactItemize}

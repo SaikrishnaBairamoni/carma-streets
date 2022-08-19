@@ -1,0 +1,59 @@
+\hypertarget{classscheduling__service_1_1scheduling__worker}{}\doxysection{scheduling\+\_\+service\+::scheduling\+\_\+worker Class Reference}
+\label{classscheduling__service_1_1scheduling__worker}\index{scheduling\_service::scheduling\_worker@{scheduling\_service::scheduling\_worker}}
+
+
+{\ttfamily \#include $<$scheduling\+\_\+worker.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{streets\+\_\+vehicle\+\_\+scheduler\+::intersection\+\_\+schedule}} $>$ \mbox{\hyperlink{classscheduling__service_1_1scheduling__worker_ae8e70252fc78b11963c52a73b8af8025}{schedule\+\_\+vehicles}} (std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} $>$ veh\+\_\+map, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1vehicle__scheduler}{streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler}} $>$ scheduler) const
+\begin{DoxyCompactList}\small\item\em Runs the scheduler\textquotesingle{}s schedule\+\_\+veh method to schedule all vehicles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 24 of file scheduling\+\_\+worker.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classscheduling__service_1_1scheduling__worker_ae8e70252fc78b11963c52a73b8af8025}\label{classscheduling__service_1_1scheduling__worker_ae8e70252fc78b11963c52a73b8af8025}} 
+\index{scheduling\_service::scheduling\_worker@{scheduling\_service::scheduling\_worker}!schedule\_vehicles@{schedule\_vehicles}}
+\index{schedule\_vehicles@{schedule\_vehicles}!scheduling\_service::scheduling\_worker@{scheduling\_service::scheduling\_worker}}
+\doxysubsubsection{\texorpdfstring{schedule\_vehicles()}{schedule\_vehicles()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule}{streets\+\_\+vehicle\+\_\+scheduler\+::intersection\+\_\+schedule}} $>$ scheduling\+\_\+service\+::scheduling\+\_\+worker\+::schedule\+\_\+vehicles (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}} $>$}]{veh\+\_\+map,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classstreets__vehicle__scheduler_1_1vehicle__scheduler}{streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+scheduler}} $>$}]{scheduler }\end{DoxyParamCaption}) const}
+
+
+
+Runs the scheduler\textquotesingle{}s schedule\+\_\+veh method to schedule all vehicles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em veh\+\_\+list} & The vehicle list object. \\
+\hline
+{\em scheduler} & The scheduler object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An intersection schedule object that contains vehicles\textquotesingle{} estimated critical time points. 
+\end{DoxyReturn}
+
+
+Definition at line 7 of file scheduling\+\_\+worker.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscheduling__service_1_1scheduling__worker_ae8e70252fc78b11963c52a73b8af8025_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+scheduling\+\_\+service/include/\mbox{\hyperlink{scheduling__worker_8h}{scheduling\+\_\+worker.\+h}}\item 
+scheduling\+\_\+service/src/\mbox{\hyperlink{scheduling__worker_8cpp}{scheduling\+\_\+worker.\+cpp}}\end{DoxyCompactItemize}

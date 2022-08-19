@@ -1,0 +1,5 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node1" title=" " alt="" coords="5,60,60,87"/>
+<area shape="rect" id="node2" href="$classintersection__model_1_1intersection__model.html#a6ec7708265368ee4240cb057193ad568" title="Get list of conflict lanelet ids relative to the given link lanelet id." alt="" coords="108,5,304,61"/>
+<area shape="rect" id="node3" href="$classintersection__model_1_1intersection__model.html#aee444e73411f8593b4ad579849fc87b7" title="Read the OSM map, project the map, and initialize all the intersection related info including: inters..." alt="" coords="111,85,301,141"/>
+</map>

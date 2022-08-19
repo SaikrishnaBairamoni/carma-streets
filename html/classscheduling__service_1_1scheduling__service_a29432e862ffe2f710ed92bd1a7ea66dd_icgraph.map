@@ -1,0 +1,5 @@
+<map id="scheduling_service::scheduling_service::initialize" name="scheduling_service::scheduling_service::initialize">
+<area shape="rect" id="node1" title="Initialize the consumer, producer, and scheduling workers. Create a vehicle list and scheduler object..." alt="" coords="108,16,263,72"/>
+<area shape="rect" id="node2" href="$scheduling__service_2src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node3" href="$test__scheduling__service_8cpp.html#a936bb88be085a80ad308c709106781b4" title=" " alt="" coords="5,56,60,83"/>
+</map>

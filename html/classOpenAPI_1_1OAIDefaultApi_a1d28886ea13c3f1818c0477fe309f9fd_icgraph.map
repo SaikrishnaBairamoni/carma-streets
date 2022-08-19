@@ -1,0 +1,8 @@
+<map id="OpenAPI::OAIDefaultApi::getIntersectionInfoSignal" name="OpenAPI::OAIDefaultApi::getIntersectionInfoSignal">
+<area shape="rect" id="node1" title=" " alt="" coords="539,93,732,134"/>
+<area shape="rect" id="node2" href="$classscheduling__service_1_1intersection__client.html#ad6bd9f3f48ee4e352798f418b88b730a" title="Send http GET request to intersection model at rate of configured HZ until it gets the intersection i..." alt="" coords="270,5,465,61"/>
+<area shape="rect" id="node4" href="$classsignal__opt__service_1_1signal__opt__messages__worker.html#a1d815ad34177410cafc59d7bf9944d53" title="Send http GET request to intersection model at rate of configured HZ until it gets the valid (!..." alt="" coords="244,85,491,141"/>
+<area shape="rect" id="node5" href="$classtraffic__signal__controller__service_1_1intersection__client.html#ad6bd9f3f48ee4e352798f418b88b730a" title=" " alt="" coords="248,165,487,221"/>
+<area shape="rect" id="node3" href="$classscheduling__service_1_1intersection__client.html#ac510cca78365a620384ff9faeaad572f" title="Updating the intersection info." alt="" coords="5,5,196,61"/>
+<area shape="rect" id="node6" href="$tsc__client__service_2test_2test__intersection__client_8cpp.html#a9f8f9b990e0824fa9ca591b07103a85c" title=" " alt="" coords="73,180,128,207"/>
+</map>

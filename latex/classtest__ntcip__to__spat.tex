@@ -1,0 +1,168 @@
+\hypertarget{classtest__ntcip__to__spat}{}\doxysection{test\+\_\+ntcip\+\_\+to\+\_\+spat Class Reference}
+\label{classtest__ntcip__to__spat}\index{test\_ntcip\_to\_spat@{test\_ntcip\_to\_spat}}
+
+
+Inheritance diagram for test\+\_\+ntcip\+\_\+to\+\_\+spat\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classtest__ntcip__to__spat__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for test\+\_\+ntcip\+\_\+to\+\_\+spat\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{classtest__ntcip__to__spat__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtest__ntcip__to__spat_a372a1005ee7b9c512d1da811a5ad315e}{read\+\_\+next\+\_\+line}} ()
+\begin{DoxyCompactList}\small\item\em Read next line of ntcip\+\_\+spat\+\_\+data. Each line represents a single ntcip spat message in string hex format. This string hex is convert to bytes and read them into the spat\+\_\+ntcip\+\_\+data object. \end{DoxyCompactList}\item 
+std\+::vector$<$ char $>$ \mbox{\hyperlink{classtest__ntcip__to__spat_a735d63b55329cb7b81a61de4caa9067f}{hex\+\_\+to\+\_\+bytes}} (const std\+::string \&hex)
+\begin{DoxyCompactList}\small\item\em Convert string hex to char byte vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1spat}{spat}} $>$ \mbox{\hyperlink{classtest__ntcip__to__spat_a02bdfe1d0829f1480f11caf4fd5b44c6}{spat\+\_\+ptr}}
+\item 
+\mbox{\hyperlink{structntcip_1_1ntcip__1202__ext}{ntcip\+\_\+1202\+\_\+ext}} \mbox{\hyperlink{classtest__ntcip__to__spat_a2245b662767234aad6a22d32e52c564a}{spat\+\_\+ntcip\+\_\+data}}
+\item 
+std\+::ifstream \mbox{\hyperlink{classtest__ntcip__to__spat_a4ab305ca086a0ae41e8ea0c47f586675}{file}}
+\item 
+std\+::unordered\+\_\+map$<$ int, int $>$ \mbox{\hyperlink{classtest__ntcip__to__spat_ab90514f3e8c8a79b0058fbb98f177fca}{phase\+\_\+to\+\_\+signal\+\_\+group}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtest__ntcip__to__spat_ac87b2f87c605f594355d847467b3003a}{Set\+Up}} () override
+\item 
+void \mbox{\hyperlink{classtest__ntcip__to__spat_a240fe0b2a64ae5afa269a27ddf9fa187}{Tear\+Down}} () override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 14 of file test\+\_\+ntcip\+\_\+to\+\_\+spat.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtest__ntcip__to__spat_a735d63b55329cb7b81a61de4caa9067f}\label{classtest__ntcip__to__spat_a735d63b55329cb7b81a61de4caa9067f}} 
+\index{test\_ntcip\_to\_spat@{test\_ntcip\_to\_spat}!hex\_to\_bytes@{hex\_to\_bytes}}
+\index{hex\_to\_bytes@{hex\_to\_bytes}!test\_ntcip\_to\_spat@{test\_ntcip\_to\_spat}}
+\doxysubsubsection{\texorpdfstring{hex\_to\_bytes()}{hex\_to\_bytes()}}
+{\footnotesize\ttfamily std\+::vector$<$char$>$ test\+\_\+ntcip\+\_\+to\+\_\+spat\+::hex\+\_\+to\+\_\+bytes (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hex }\end{DoxyParamCaption})}
+
+
+
+Convert string hex to char byte vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hex} & string hex to conver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$char$>$ byte vector 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file test\+\_\+ntcip\+\_\+to\+\_\+spat.\+cpp.
+
+\mbox{\Hypertarget{classtest__ntcip__to__spat_a372a1005ee7b9c512d1da811a5ad315e}\label{classtest__ntcip__to__spat_a372a1005ee7b9c512d1da811a5ad315e}} 
+\index{test\_ntcip\_to\_spat@{test\_ntcip\_to\_spat}!read\_next\_line@{read\_next\_line}}
+\index{read\_next\_line@{read\_next\_line}!test\_ntcip\_to\_spat@{test\_ntcip\_to\_spat}}
+\doxysubsubsection{\texorpdfstring{read\_next\_line()}{read\_next\_line()}}
+{\footnotesize\ttfamily void test\+\_\+ntcip\+\_\+to\+\_\+spat\+::read\+\_\+next\+\_\+line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read next line of ntcip\+\_\+spat\+\_\+data. Each line represents a single ntcip spat message in string hex format. This string hex is convert to bytes and read them into the spat\+\_\+ntcip\+\_\+data object. 
+
+
+
+Definition at line 31 of file test\+\_\+ntcip\+\_\+to\+\_\+spat.\+cpp.
+
+\mbox{\Hypertarget{classtest__ntcip__to__spat_ac87b2f87c605f594355d847467b3003a}\label{classtest__ntcip__to__spat_ac87b2f87c605f594355d847467b3003a}} 
+\index{test\_ntcip\_to\_spat@{test\_ntcip\_to\_spat}!SetUp@{SetUp}}
+\index{SetUp@{SetUp}!test\_ntcip\_to\_spat@{test\_ntcip\_to\_spat}}
+\doxysubsubsection{\texorpdfstring{SetUp()}{SetUp()}}
+{\footnotesize\ttfamily void test\+\_\+ntcip\+\_\+to\+\_\+spat\+::\+Set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 58 of file test\+\_\+ntcip\+\_\+to\+\_\+spat.\+cpp.
+
+\mbox{\Hypertarget{classtest__ntcip__to__spat_a240fe0b2a64ae5afa269a27ddf9fa187}\label{classtest__ntcip__to__spat_a240fe0b2a64ae5afa269a27ddf9fa187}} 
+\index{test\_ntcip\_to\_spat@{test\_ntcip\_to\_spat}!TearDown@{TearDown}}
+\index{TearDown@{TearDown}!test\_ntcip\_to\_spat@{test\_ntcip\_to\_spat}}
+\doxysubsubsection{\texorpdfstring{TearDown()}{TearDown()}}
+{\footnotesize\ttfamily void test\+\_\+ntcip\+\_\+to\+\_\+spat\+::\+Tear\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 73 of file test\+\_\+ntcip\+\_\+to\+\_\+spat.\+cpp.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classtest__ntcip__to__spat_a4ab305ca086a0ae41e8ea0c47f586675}\label{classtest__ntcip__to__spat_a4ab305ca086a0ae41e8ea0c47f586675}} 
+\index{test\_ntcip\_to\_spat@{test\_ntcip\_to\_spat}!file@{file}}
+\index{file@{file}!test\_ntcip\_to\_spat@{test\_ntcip\_to\_spat}}
+\doxysubsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily std\+::ifstream test\+\_\+ntcip\+\_\+to\+\_\+spat\+::file}
+
+
+
+Definition at line 20 of file test\+\_\+ntcip\+\_\+to\+\_\+spat.\+cpp.
+
+\mbox{\Hypertarget{classtest__ntcip__to__spat_ab90514f3e8c8a79b0058fbb98f177fca}\label{classtest__ntcip__to__spat_ab90514f3e8c8a79b0058fbb98f177fca}} 
+\index{test\_ntcip\_to\_spat@{test\_ntcip\_to\_spat}!phase\_to\_signal\_group@{phase\_to\_signal\_group}}
+\index{phase\_to\_signal\_group@{phase\_to\_signal\_group}!test\_ntcip\_to\_spat@{test\_ntcip\_to\_spat}}
+\doxysubsubsection{\texorpdfstring{phase\_to\_signal\_group}{phase\_to\_signal\_group}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$int,int$>$ test\+\_\+ntcip\+\_\+to\+\_\+spat\+::phase\+\_\+to\+\_\+signal\+\_\+group}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{                \{1,8\},\{2,7\},\{3,6\},\{4,5\},\{5,4\},\{6,3\},\{7,2\},\{8,1\}}
+\DoxyCodeLine{        \}}
+
+\end{DoxyCode}
+
+
+Definition at line 22 of file test\+\_\+ntcip\+\_\+to\+\_\+spat.\+cpp.
+
+\mbox{\Hypertarget{classtest__ntcip__to__spat_a2245b662767234aad6a22d32e52c564a}\label{classtest__ntcip__to__spat_a2245b662767234aad6a22d32e52c564a}} 
+\index{test\_ntcip\_to\_spat@{test\_ntcip\_to\_spat}!spat\_ntcip\_data@{spat\_ntcip\_data}}
+\index{spat\_ntcip\_data@{spat\_ntcip\_data}!test\_ntcip\_to\_spat@{test\_ntcip\_to\_spat}}
+\doxysubsubsection{\texorpdfstring{spat\_ntcip\_data}{spat\_ntcip\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structntcip_1_1ntcip__1202__ext}{ntcip\+\_\+1202\+\_\+ext}} test\+\_\+ntcip\+\_\+to\+\_\+spat\+::spat\+\_\+ntcip\+\_\+data}
+
+
+
+Definition at line 18 of file test\+\_\+ntcip\+\_\+to\+\_\+spat.\+cpp.
+
+\mbox{\Hypertarget{classtest__ntcip__to__spat_a02bdfe1d0829f1480f11caf4fd5b44c6}\label{classtest__ntcip__to__spat_a02bdfe1d0829f1480f11caf4fd5b44c6}} 
+\index{test\_ntcip\_to\_spat@{test\_ntcip\_to\_spat}!spat\_ptr@{spat\_ptr}}
+\index{spat\_ptr@{spat\_ptr}!test\_ntcip\_to\_spat@{test\_ntcip\_to\_spat}}
+\doxysubsubsection{\texorpdfstring{spat\_ptr}{spat\_ptr}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structsignal__phase__and__timing_1_1spat}{spat}}$>$ test\+\_\+ntcip\+\_\+to\+\_\+spat\+::spat\+\_\+ptr}
+
+
+
+Definition at line 16 of file test\+\_\+ntcip\+\_\+to\+\_\+spat.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing/test/\mbox{\hyperlink{test__ntcip__to__spat_8cpp}{test\+\_\+ntcip\+\_\+to\+\_\+spat.\+cpp}}\end{DoxyCompactItemize}

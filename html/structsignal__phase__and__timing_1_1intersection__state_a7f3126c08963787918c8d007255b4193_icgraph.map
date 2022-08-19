@@ -1,0 +1,5 @@
+<map id="signal_phase_and_timing::intersection_state::convert_offset" name="signal_phase_and_timing::intersection_state::convert_offset">
+<area shape="rect" id="node1" title="Convert time offset (in tenths of seconds) from current time (NTCIP SPaT timing information units) to..." alt="" coords="475,5,661,61"/>
+<area shape="rect" id="node2" href="$structsignal__phase__and__timing_1_1intersection__state.html#a01285f8060241eec1adbaa0c5e97a1df" title="Method to update movement_state with signal_group_id using ntcip spat data." alt="" coords="240,5,427,61"/>
+<area shape="rect" id="node3" href="$structsignal__phase__and__timing_1_1intersection__state.html#adb8a7d8693ba85ab08f3c0e31afe4935" title="Clears old movement event data for all movement_states. Adds one movement_event to the state_time_spe..." alt="" coords="5,5,192,61"/>
+</map>

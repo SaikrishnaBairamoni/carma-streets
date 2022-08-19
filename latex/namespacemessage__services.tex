@@ -1,0 +1,57 @@
+\hypertarget{namespacemessage__services}{}\doxysection{message\+\_\+services Namespace Reference}
+\label{namespacemessage__services}\index{message\_services@{message\_services}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemessage__services_1_1message__translations}{message\+\_\+translations}}
+\item 
+ \mbox{\hyperlink{namespacemessage__services_1_1models}{models}}
+\item 
+ \mbox{\hyperlink{namespacemessage__services_1_1services}{services}}
+\item 
+ \mbox{\hyperlink{namespacemessage__services_1_1workers}{workers}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\hypertarget{namespacemessage__services_autotoc_md26}{}\doxysubsection{Location\+ECEF.\+msg}\label{namespacemessage__services_autotoc_md26}
+\hypertarget{namespacemessage__services_autotoc_md27}{}\doxysubsection{This is used to describe a global location in}\label{namespacemessage__services_autotoc_md27}
+\hypertarget{namespacemessage__services_autotoc_md28}{}\doxysubsection{\char`\"{}earth-\/centered, earth-\/fixed\char`\"{} (\+ECEF) frame in centimeters.}\label{namespacemessage__services_autotoc_md28}
+\hypertarget{namespacemessage__services_autotoc_md29}{}\doxysubsection{Location unavailable can be represented by (0, 0, 0)}\label{namespacemessage__services_autotoc_md29}
+\hypertarget{namespacemessage__services_autotoc_md30}{}\doxysubsection{X coordinate in ECEF frame}\label{namespacemessage__services_autotoc_md30}
+\hypertarget{namespacemessage__services_autotoc_md31}{}\doxysubsection{the range for this value is \mbox{[}-\/638363700, 638363700\mbox{]}}\label{namespacemessage__services_autotoc_md31}
+int32 ecef\+\_\+x\hypertarget{namespacemessage__services_autotoc_md32}{}\doxysubsection{Y coordinate in ECEF frame}\label{namespacemessage__services_autotoc_md32}
+\hypertarget{namespacemessage__services_autotoc_md33}{}\doxysubsection{the range for this value is \mbox{[}-\/638363700, 638363700\mbox{]}}\label{namespacemessage__services_autotoc_md33}
+int32 ecef\+\_\+y\hypertarget{namespacemessage__services_autotoc_md34}{}\doxysubsection{Z coordinate in ECEF frame}\label{namespacemessage__services_autotoc_md34}
+\hypertarget{namespacemessage__services_autotoc_md35}{}\doxysubsection{the range for this value is \mbox{[}-\/636225200, 636225200\mbox{]}}\label{namespacemessage__services_autotoc_md35}
+int32 ecef\+\_\+z\hypertarget{namespacemessage__services_autotoc_md36}{}\doxysubsection{GPS timestamp in milliseconds}\label{namespacemessage__services_autotoc_md36}
+uint64 timestamp\hypertarget{namespacemessage__services_autotoc_md37}{}\doxysubsection{Location\+Offset\+ECEF.\+msg}\label{namespacemessage__services_autotoc_md37}
+\hypertarget{namespacemessage__services_autotoc_md38}{}\doxysubsection{Location offset is used to describe a trajectory based on}\label{namespacemessage__services_autotoc_md38}
+\hypertarget{namespacemessage__services_autotoc_md39}{}\doxysubsection{the combination of start location and a list of offsets.}\label{namespacemessage__services_autotoc_md39}
+\hypertarget{namespacemessage__services_autotoc_md40}{}\doxysubsection{Each offset indicates the offset from last offset/location in}\label{namespacemessage__services_autotoc_md40}
+\hypertarget{namespacemessage__services_autotoc_md41}{}\doxysubsection{centimeters. The time interval between each pair of neighbor}\label{namespacemessage__services_autotoc_md41}
+\hypertarget{namespacemessage__services_autotoc_md42}{}\doxysubsection{points should be 0.\+1 second. So the length of trajectory}\label{namespacemessage__services_autotoc_md42}
+\hypertarget{namespacemessage__services_autotoc_md43}{}\doxysubsection{will depend on the vehicle current speed.}\label{namespacemessage__services_autotoc_md43}
+\hypertarget{namespacemessage__services_autotoc_md44}{}\doxysubsection{offset in X coordinate of ECEF frame}\label{namespacemessage__services_autotoc_md44}
+\hypertarget{namespacemessage__services_autotoc_md45}{}\doxysubsection{the x, y, z range is in \mbox{[}-\/500, 501\mbox{]} and 501 means offset unavailable}\label{namespacemessage__services_autotoc_md45}
+int16 offset\+\_\+x\hypertarget{namespacemessage__services_autotoc_md46}{}\doxysubsection{offset in Y coordinate of ECEF frame}\label{namespacemessage__services_autotoc_md46}
+int16 offset\+\_\+y\hypertarget{namespacemessage__services_autotoc_md47}{}\doxysubsection{offset in Z coordinate of ECEF frame}\label{namespacemessage__services_autotoc_md47}
+int16 offset\+\_\+z\hypertarget{namespacemessage__services_autotoc_md48}{}\doxysubsection{sender\textquotesingle{}s static ID which is its license plate}\label{namespacemessage__services_autotoc_md48}
+\hypertarget{namespacemessage__services_autotoc_md49}{}\doxysubsection{Example\+: \char`\"{}\+USDOT-\/49096\char`\"{} (the maximum length is 14)}\label{namespacemessage__services_autotoc_md49}
+string sender\+\_\+id\hypertarget{namespacemessage__services_autotoc_md50}{}\doxysubsection{recipient\textquotesingle{}s static ID}\label{namespacemessage__services_autotoc_md50}
+\hypertarget{namespacemessage__services_autotoc_md51}{}\doxysubsection{Empty string indicates a broadcast message}\label{namespacemessage__services_autotoc_md51}
+string recipient\+\_\+id\hypertarget{namespacemessage__services_autotoc_md52}{}\doxysubsection{sender\textquotesingle{}s dynamic ID which is its BSM id in hex string}\label{namespacemessage__services_autotoc_md52}
+\hypertarget{namespacemessage__services_autotoc_md53}{}\doxysubsection{Example\+: \char`\"{}\+FFFFFFFF\char`\"{}}\label{namespacemessage__services_autotoc_md53}
+string sender\+\_\+bsm\+\_\+id\hypertarget{namespacemessage__services_autotoc_md54}{}\doxysubsection{random GUID that identifies this particular plan for future reference}\label{namespacemessage__services_autotoc_md54}
+\hypertarget{namespacemessage__services_autotoc_md55}{}\doxysubsection{Example\+: \char`\"{}b937d2f6-\/e618-\/4867-\/920b-\/c1f74f98ef1f\char`\"{}}\label{namespacemessage__services_autotoc_md55}
+string plan\+\_\+id\hypertarget{namespacemessage__services_autotoc_md56}{}\doxysubsection{time when this message is created}\label{namespacemessage__services_autotoc_md56}
+\hypertarget{namespacemessage__services_autotoc_md57}{}\doxysubsection{A UNIX timestamp in milliseconds, which indicates the time elapsed since UNIX epoch}\label{namespacemessage__services_autotoc_md57}
+\hypertarget{namespacemessage__services_autotoc_md58}{}\doxysubsection{Example\+: \char`\"{}9223372036854775807\char`\"{}}\label{namespacemessage__services_autotoc_md58}
+uint64 timestamp\hypertarget{namespacemessage__services_autotoc_md59}{}\doxysubsection{Trajectory.\+msg}\label{namespacemessage__services_autotoc_md59}
+\hypertarget{namespacemessage__services_autotoc_md60}{}\doxysubsection{This message uses one start location in ECEF frame and a list of offset}\label{namespacemessage__services_autotoc_md60}
+\hypertarget{namespacemessage__services_autotoc_md61}{}\doxysubsection{points relative to X, Y and Z of start point to represent a trajectory.}\label{namespacemessage__services_autotoc_md61}
+\hypertarget{namespacemessage__services_autotoc_md62}{}\doxysubsection{The time interval between each pair of points should be 0.\+1 seconds.}\label{namespacemessage__services_autotoc_md62}
+\hypertarget{namespacemessage__services_autotoc_md63}{}\doxysubsection{start location in ECEF frame}\label{namespacemessage__services_autotoc_md63}
+cav\+\_\+msgs/\+Location\+ECEF location\hypertarget{namespacemessage__services_autotoc_md64}{}\doxysubsection{a list of offsets describing current trajectory}\label{namespacemessage__services_autotoc_md64}
+cav\+\_\+msgs/\+Location\+Offset\+ECEF\mbox{[}\mbox{]} offsets\hypertarget{namespacemessage__services_autotoc_md65}{}\doxysubsection{The maximum number of points which can be included in a mobility message containing a trajectory over DSRC}\label{namespacemessage__services_autotoc_md65}
+uint16 MAX\+\_\+\+POINTS\+\_\+\+IN\+\_\+\+MESSAGE=60 

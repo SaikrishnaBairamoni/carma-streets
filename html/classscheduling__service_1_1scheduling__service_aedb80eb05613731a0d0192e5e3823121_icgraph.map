@@ -1,0 +1,5 @@
+<map id="scheduling_service::scheduling_service::configure_csv_logger" name="scheduling_service::scheduling_service::configure_csv_logger">
+<area shape="rect" id="node1" title="Method to configure spdlog::logger for logging scheduling metrics into daily rotating csv file." alt="" coords="123,16,289,72"/>
+<area shape="rect" id="node2" href="$test__scheduling__service_8cpp.html#a74a71cef7485f41323416fb29efe7d14" title=" " alt="" coords="13,5,67,32"/>
+<area shape="rect" id="node3" href="$test__all__stop__scheduling__worker_8cpp.html#a658111754f34c8abfc1ff46c981de086" title=" " alt="" coords="5,56,75,83"/>
+</map>

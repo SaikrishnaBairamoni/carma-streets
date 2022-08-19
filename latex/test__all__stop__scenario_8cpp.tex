@@ -1,0 +1,53 @@
+\hypertarget{test__all__stop__scenario_8cpp}{}\doxysection{streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/test/test\+\_\+all\+\_\+stop\+\_\+scenario.cpp File Reference}
+\label{test__all__stop__scenario_8cpp}\index{streets\_utils/streets\_vehicle\_scheduler/test/test\_all\_stop\_scenario.cpp@{streets\_utils/streets\_vehicle\_scheduler/test/test\_all\_stop\_scenario.cpp}}
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$spdlog/spdlog.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}vehicle\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}all\+\_\+stop\+\_\+vehicle\+\_\+scheduler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}all\+\_\+stop\+\_\+intersection\+\_\+schedule.\+h\char`\"{}}\newline
+Include dependency graph for test\+\_\+all\+\_\+stop\+\_\+scenario.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__all__stop__scenario_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__all__stop__scenario_8cpp_a984608d660f95d196b9b880da5cc06a1}{TEST\+\_\+F}} (all\+\_\+stop\+\_\+scenario\+\_\+test, one\+\_\+dv\+\_\+two\+\_\+rdvs)
+\begin{DoxyCompactList}\small\item\em This unit test considers 1 DV (TEST\+\_\+\+DV\+\_\+01) and 2 RDVs (TEST\+\_\+\+RDV\+\_\+01 and TEST\+\_\+\+RDV\+\_\+02). The DV is inside the intersection box. TEST\+\_\+\+RDV\+\_\+02 does not have a conflict direction with TEST\+\_\+\+DV\+\_\+01 and TEST\+\_\+\+RDV\+\_\+01. But TEST\+\_\+\+RDV\+\_\+01 has a conflicting direction with TEST\+\_\+\+DV\+\_\+01. TEST\+\_\+\+RDV\+\_\+01 and TEST\+\_\+\+RDV\+\_\+02 stopped at the stop bar at the same time (schedule.\+timestamp -\/ 1000). Initially, TEST\+\_\+\+RDV\+\_\+01 is set to departure position 2 and TEST\+\_\+\+RDV\+\_\+02 is assigned to departure position 3. The expected departure sequence is\+: 1-\/TEST\+\_\+\+DV\+\_\+01, 2-\/TEST\+\_\+\+RDV\+\_\+02, 3-\/TEST\+\_\+\+RDV\+\_\+01 This test checks if the schedule plan information (e.\+g., est, st, et, dt, access, dp, state) is correct. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{test__all__stop__scenario_8cpp_a6da0f18b686ec9c3e7fb7aed47b4a96f}{TEST\+\_\+F}} (all\+\_\+stop\+\_\+scenario\+\_\+test, two\+\_\+dvs\+\_\+two\+\_\+rdvs\+\_\+three\+\_\+evs)
+\begin{DoxyCompactList}\small\item\em This unit test considers 2 DVs (TEST\+\_\+\+DV\+\_\+0111 and TEST\+\_\+\+DV\+\_\+02), 2 RDVs (TEST\+\_\+\+RDV\+\_\+01 and TEST\+\_\+\+RDV\+\_\+02), and 3 EVs (TEST\+\_\+\+EV\+\_\+01, TEST\+\_\+\+EV\+\_\+02, TEST\+\_\+\+EV\+\_\+03). Both DVs are inside the intersection box and they don\textquotesingle{}t have conflicting directions. TEST\+\_\+\+RDV\+\_\+01 does not have a conflict direction with TEST\+\_\+\+DV\+\_\+02, but it has a conflict direction with TEST\+\_\+\+DV\+\_\+01, and TEST\+\_\+\+RDV\+\_\+02. TEST\+\_\+\+RDV\+\_\+02 does not have a conflict direction with TEST\+\_\+\+DV\+\_\+01, but it has a conflict direction with TEST\+\_\+\+DV\+\_\+02, and TEST\+\_\+\+RDV\+\_\+01. TEST\+\_\+\+EV\+\_\+02 and TEST\+\_\+\+EV\+\_\+03 are located in the same entry lane where TEST\+\_\+\+EV\+\_\+02 is closer to the stop bar that TEST\+\_\+\+EV\+\_\+03. Initially, TEST\+\_\+\+RDV\+\_\+01 is set to departure position 2 and TEST\+\_\+\+RDV\+\_\+02 is assigned to departure position 3. The expected departure sequence is\+: 1-\/TEST\+\_\+\+DV\+\_\+01, 2-\/TEST\+\_\+\+DV\+\_\+02, 3-\/TEST\+\_\+\+RDV\+\_\+02, 4-\/TEST\+\_\+\+RDV\+\_\+01, 5-\/TEST\+\_\+\+EV\+\_\+02, 6-\/TEST\+\_\+\+EV\+\_\+01, 7-\/TEST\+\_\+\+EV\+\_\+03 This test checks if the schedule plan information (e.\+g., est, st, et, dt, access, dp, state) is correct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__all__stop__scenario_8cpp_a984608d660f95d196b9b880da5cc06a1}\label{test__all__stop__scenario_8cpp_a984608d660f95d196b9b880da5cc06a1}} 
+\index{test\_all\_stop\_scenario.cpp@{test\_all\_stop\_scenario.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_all\_stop\_scenario.cpp@{test\_all\_stop\_scenario.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{all\+\_\+stop\+\_\+scenario\+\_\+test}]{,  }\item[{one\+\_\+dv\+\_\+two\+\_\+rdvs}]{ }\end{DoxyParamCaption})}
+
+
+
+This unit test considers 1 DV (TEST\+\_\+\+DV\+\_\+01) and 2 RDVs (TEST\+\_\+\+RDV\+\_\+01 and TEST\+\_\+\+RDV\+\_\+02). The DV is inside the intersection box. TEST\+\_\+\+RDV\+\_\+02 does not have a conflict direction with TEST\+\_\+\+DV\+\_\+01 and TEST\+\_\+\+RDV\+\_\+01. But TEST\+\_\+\+RDV\+\_\+01 has a conflicting direction with TEST\+\_\+\+DV\+\_\+01. TEST\+\_\+\+RDV\+\_\+01 and TEST\+\_\+\+RDV\+\_\+02 stopped at the stop bar at the same time (schedule.\+timestamp -\/ 1000). Initially, TEST\+\_\+\+RDV\+\_\+01 is set to departure position 2 and TEST\+\_\+\+RDV\+\_\+02 is assigned to departure position 3. The expected departure sequence is\+: 1-\/TEST\+\_\+\+DV\+\_\+01, 2-\/TEST\+\_\+\+RDV\+\_\+02, 3-\/TEST\+\_\+\+RDV\+\_\+01 This test checks if the schedule plan information (e.\+g., est, st, et, dt, access, dp, state) is correct. 
+
+
+
+Definition at line 62 of file test\+\_\+all\+\_\+stop\+\_\+scenario.\+cpp.
+
+\mbox{\Hypertarget{test__all__stop__scenario_8cpp_a6da0f18b686ec9c3e7fb7aed47b4a96f}\label{test__all__stop__scenario_8cpp_a6da0f18b686ec9c3e7fb7aed47b4a96f}} 
+\index{test\_all\_stop\_scenario.cpp@{test\_all\_stop\_scenario.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_all\_stop\_scenario.cpp@{test\_all\_stop\_scenario.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{all\+\_\+stop\+\_\+scenario\+\_\+test}]{,  }\item[{two\+\_\+dvs\+\_\+two\+\_\+rdvs\+\_\+three\+\_\+evs}]{ }\end{DoxyParamCaption})}
+
+
+
+This unit test considers 2 DVs (TEST\+\_\+\+DV\+\_\+0111 and TEST\+\_\+\+DV\+\_\+02), 2 RDVs (TEST\+\_\+\+RDV\+\_\+01 and TEST\+\_\+\+RDV\+\_\+02), and 3 EVs (TEST\+\_\+\+EV\+\_\+01, TEST\+\_\+\+EV\+\_\+02, TEST\+\_\+\+EV\+\_\+03). Both DVs are inside the intersection box and they don\textquotesingle{}t have conflicting directions. TEST\+\_\+\+RDV\+\_\+01 does not have a conflict direction with TEST\+\_\+\+DV\+\_\+02, but it has a conflict direction with TEST\+\_\+\+DV\+\_\+01, and TEST\+\_\+\+RDV\+\_\+02. TEST\+\_\+\+RDV\+\_\+02 does not have a conflict direction with TEST\+\_\+\+DV\+\_\+01, but it has a conflict direction with TEST\+\_\+\+DV\+\_\+02, and TEST\+\_\+\+RDV\+\_\+01. TEST\+\_\+\+EV\+\_\+02 and TEST\+\_\+\+EV\+\_\+03 are located in the same entry lane where TEST\+\_\+\+EV\+\_\+02 is closer to the stop bar that TEST\+\_\+\+EV\+\_\+03. Initially, TEST\+\_\+\+RDV\+\_\+01 is set to departure position 2 and TEST\+\_\+\+RDV\+\_\+02 is assigned to departure position 3. The expected departure sequence is\+: 1-\/TEST\+\_\+\+DV\+\_\+01, 2-\/TEST\+\_\+\+DV\+\_\+02, 3-\/TEST\+\_\+\+RDV\+\_\+02, 4-\/TEST\+\_\+\+RDV\+\_\+01, 5-\/TEST\+\_\+\+EV\+\_\+02, 6-\/TEST\+\_\+\+EV\+\_\+01, 7-\/TEST\+\_\+\+EV\+\_\+03 This test checks if the schedule plan information (e.\+g., est, st, et, dt, access, dp, state) is correct. 
+
+
+
+Definition at line 183 of file test\+\_\+all\+\_\+stop\+\_\+scenario.\+cpp.
+

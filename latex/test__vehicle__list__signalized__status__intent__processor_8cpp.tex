@@ -1,0 +1,65 @@
+\hypertarget{test__vehicle__list__signalized__status__intent__processor_8cpp}{}\doxysection{streets\+\_\+utils/streets\+\_\+vehicle\+\_\+list/test/test\+\_\+vehicle\+\_\+list\+\_\+signalized\+\_\+status\+\_\+intent\+\_\+processor.cpp File Reference}
+\label{test__vehicle__list__signalized__status__intent__processor_8cpp}\index{streets\_utils/streets\_vehicle\_list/test/test\_vehicle\_list\_signalized\_status\_intent\_processor.cpp@{streets\_utils/streets\_vehicle\_list/test/test\_vehicle\_list\_signalized\_status\_intent\_processor.cpp}}
+{\ttfamily \#include \char`\"{}vehicle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vehicle\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}status\+\_\+intent\+\_\+processing\+\_\+exception.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}status\+\_\+intent\+\_\+processor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}signalized\+\_\+status\+\_\+intent\+\_\+processor.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$rapidjson/rapidjson.\+h$>$}\newline
+{\ttfamily \#include $<$rapidjson/document.\+h$>$}\newline
+{\ttfamily \#include $<$rapidjson/istreamwrapper.\+h$>$}\newline
+{\ttfamily \#include $<$rapidjson/writer.\+h$>$}\newline
+{\ttfamily \#include $<$rapidjson/stringbuffer.\+h$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$spdlog/spdlog.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+Include dependency graph for test\+\_\+vehicle\+\_\+list\+\_\+signalized\+\_\+status\+\_\+intent\+\_\+processor.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__vehicle__list__signalized__status__intent__processor_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__vehicle__list__signalized__status__intent__processor_8cpp_ac4f2ae3c4a0ff0bbcca9a6608342f460}{TEST\+\_\+F}} (vehicle\+\_\+list\+\_\+signalized\+\_\+status\+\_\+intent\+\_\+processor\+\_\+test, parse\+\_\+valid\+\_\+json)
+\item 
+\mbox{\hyperlink{test__vehicle__list__signalized__status__intent__processor_8cpp_ad6606b42e25db913d27ca64631e1b79a}{TEST\+\_\+F}} (vehicle\+\_\+list\+\_\+signalized\+\_\+status\+\_\+intent\+\_\+processor\+\_\+test, parse\+\_\+invalid\+\_\+json)
+\item 
+\mbox{\hyperlink{test__vehicle__list__signalized__status__intent__processor_8cpp_a2cca9533b868878dd6f0f4da1e680367}{TEST\+\_\+F}} (vehicle\+\_\+list\+\_\+signalized\+\_\+status\+\_\+intent\+\_\+processor\+\_\+test, parse\+\_\+timeout\+\_\+json)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__vehicle__list__signalized__status__intent__processor_8cpp_ad6606b42e25db913d27ca64631e1b79a}\label{test__vehicle__list__signalized__status__intent__processor_8cpp_ad6606b42e25db913d27ca64631e1b79a}} 
+\index{test\_vehicle\_list\_signalized\_status\_intent\_processor.cpp@{test\_vehicle\_list\_signalized\_status\_intent\_processor.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_vehicle\_list\_signalized\_status\_intent\_processor.cpp@{test\_vehicle\_list\_signalized\_status\_intent\_processor.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{vehicle\+\_\+list\+\_\+signalized\+\_\+status\+\_\+intent\+\_\+processor\+\_\+test}]{,  }\item[{parse\+\_\+invalid\+\_\+json}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 179 of file test\+\_\+vehicle\+\_\+list\+\_\+signalized\+\_\+status\+\_\+intent\+\_\+processor.\+cpp.
+
+\mbox{\Hypertarget{test__vehicle__list__signalized__status__intent__processor_8cpp_a2cca9533b868878dd6f0f4da1e680367}\label{test__vehicle__list__signalized__status__intent__processor_8cpp_a2cca9533b868878dd6f0f4da1e680367}} 
+\index{test\_vehicle\_list\_signalized\_status\_intent\_processor.cpp@{test\_vehicle\_list\_signalized\_status\_intent\_processor.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_vehicle\_list\_signalized\_status\_intent\_processor.cpp@{test\_vehicle\_list\_signalized\_status\_intent\_processor.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{vehicle\+\_\+list\+\_\+signalized\+\_\+status\+\_\+intent\+\_\+processor\+\_\+test}]{,  }\item[{parse\+\_\+timeout\+\_\+json}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 210 of file test\+\_\+vehicle\+\_\+list\+\_\+signalized\+\_\+status\+\_\+intent\+\_\+processor.\+cpp.
+
+\mbox{\Hypertarget{test__vehicle__list__signalized__status__intent__processor_8cpp_ac4f2ae3c4a0ff0bbcca9a6608342f460}\label{test__vehicle__list__signalized__status__intent__processor_8cpp_ac4f2ae3c4a0ff0bbcca9a6608342f460}} 
+\index{test\_vehicle\_list\_signalized\_status\_intent\_processor.cpp@{test\_vehicle\_list\_signalized\_status\_intent\_processor.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_vehicle\_list\_signalized\_status\_intent\_processor.cpp@{test\_vehicle\_list\_signalized\_status\_intent\_processor.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{vehicle\+\_\+list\+\_\+signalized\+\_\+status\+\_\+intent\+\_\+processor\+\_\+test}]{,  }\item[{parse\+\_\+valid\+\_\+json}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 93 of file test\+\_\+vehicle\+\_\+list\+\_\+signalized\+\_\+status\+\_\+intent\+\_\+processor.\+cpp.
+

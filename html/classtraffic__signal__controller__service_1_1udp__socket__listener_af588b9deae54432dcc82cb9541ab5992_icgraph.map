@@ -1,0 +1,4 @@
+<map id="traffic_signal_controller_service::udp_socket_listener::receive" name="traffic_signal_controller_service::udp_socket_listener::receive">
+<area shape="rect" id="node1" title=" " alt="" coords="228,5,441,61"/>
+<area shape="rect" id="node2" href="$namespacetraffic__signal__controller__service.html#ac96a7df8c6fd2892468eb64569f5dde8" title="Test UDP socket timeout parameter. Test should timeout after 2 seconds of not receiving data." alt="" coords="5,13,180,54"/>
+</map>

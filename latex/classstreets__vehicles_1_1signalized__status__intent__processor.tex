@@ -1,0 +1,96 @@
+\hypertarget{classstreets__vehicles_1_1signalized__status__intent__processor}{}\doxysection{streets\+\_\+vehicles\+::signalized\+\_\+status\+\_\+intent\+\_\+processor Class Reference}
+\label{classstreets__vehicles_1_1signalized__status__intent__processor}\index{streets\_vehicles::signalized\_status\_intent\_processor@{streets\_vehicles::signalized\_status\_intent\_processor}}
+
+
+{\ttfamily \#include $<$signalized\+\_\+status\+\_\+intent\+\_\+processor.\+h$>$}
+
+
+
+Inheritance diagram for streets\+\_\+vehicles\+::signalized\+\_\+status\+\_\+intent\+\_\+processor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classstreets__vehicles_1_1signalized__status__intent__processor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for streets\+\_\+vehicles\+::signalized\+\_\+status\+\_\+intent\+\_\+processor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classstreets__vehicles_1_1signalized__status__intent__processor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstreets__vehicles_1_1signalized__status__intent__processor_a8803569788ab85961f1573f85c54292c}{signalized\+\_\+status\+\_\+intent\+\_\+processor}} ()
+\item 
+\mbox{\hyperlink{classstreets__vehicles_1_1signalized__status__intent__processor_a120475f30db1764ae7f787160b10ae80}{$\sim$signalized\+\_\+status\+\_\+intent\+\_\+processor}} () override=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classstreets__vehicles_1_1signalized__status__intent__processor_a50ef00017c88c5b111bab425b28de778}{update\+\_\+vehicle\+\_\+state}} (\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} \&\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}}) const
+\begin{DoxyCompactList}\small\item\em Updates vehicle state based on previous state and stopping condition. Override the all\+\_\+stop\+\_\+processor vehicle update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 11 of file signalized\+\_\+status\+\_\+intent\+\_\+processor.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstreets__vehicles_1_1signalized__status__intent__processor_a8803569788ab85961f1573f85c54292c}\label{classstreets__vehicles_1_1signalized__status__intent__processor_a8803569788ab85961f1573f85c54292c}} 
+\index{streets\_vehicles::signalized\_status\_intent\_processor@{streets\_vehicles::signalized\_status\_intent\_processor}!signalized\_status\_intent\_processor@{signalized\_status\_intent\_processor}}
+\index{signalized\_status\_intent\_processor@{signalized\_status\_intent\_processor}!streets\_vehicles::signalized\_status\_intent\_processor@{streets\_vehicles::signalized\_status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{signalized\_status\_intent\_processor()}{signalized\_status\_intent\_processor()}}
+{\footnotesize\ttfamily streets\+\_\+vehicles\+::signalized\+\_\+status\+\_\+intent\+\_\+processor\+::signalized\+\_\+status\+\_\+intent\+\_\+processor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file signalized\+\_\+status\+\_\+intent\+\_\+processor.\+h.
+
+\mbox{\Hypertarget{classstreets__vehicles_1_1signalized__status__intent__processor_a120475f30db1764ae7f787160b10ae80}\label{classstreets__vehicles_1_1signalized__status__intent__processor_a120475f30db1764ae7f787160b10ae80}} 
+\index{streets\_vehicles::signalized\_status\_intent\_processor@{streets\_vehicles::signalized\_status\_intent\_processor}!````~signalized\_status\_intent\_processor@{$\sim$signalized\_status\_intent\_processor}}
+\index{````~signalized\_status\_intent\_processor@{$\sim$signalized\_status\_intent\_processor}!streets\_vehicles::signalized\_status\_intent\_processor@{streets\_vehicles::signalized\_status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{$\sim$signalized\_status\_intent\_processor()}{~signalized\_status\_intent\_processor()}}
+{\footnotesize\ttfamily streets\+\_\+vehicles\+::signalized\+\_\+status\+\_\+intent\+\_\+processor\+::$\sim$signalized\+\_\+status\+\_\+intent\+\_\+processor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstreets__vehicles_1_1signalized__status__intent__processor_a50ef00017c88c5b111bab425b28de778}\label{classstreets__vehicles_1_1signalized__status__intent__processor_a50ef00017c88c5b111bab425b28de778}} 
+\index{streets\_vehicles::signalized\_status\_intent\_processor@{streets\_vehicles::signalized\_status\_intent\_processor}!update\_vehicle\_state@{update\_vehicle\_state}}
+\index{update\_vehicle\_state@{update\_vehicle\_state}!streets\_vehicles::signalized\_status\_intent\_processor@{streets\_vehicles::signalized\_status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{update\_vehicle\_state()}{update\_vehicle\_state()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicles\+::signalized\+\_\+status\+\_\+intent\+\_\+processor\+::update\+\_\+vehicle\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} \&}]{vehicle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Updates vehicle state based on previous state and stopping condition. Override the all\+\_\+stop\+\_\+processor vehicle update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicle} & reference to update \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classstreets__vehicles_1_1all__stop__status__intent__processor_ae4a3f6bc8f4d1066c476a6b8d5e8e2f9}{streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor}}.
+
+
+
+Definition at line 6 of file signalized\+\_\+status\+\_\+intent\+\_\+processor.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+list/include/\mbox{\hyperlink{signalized__status__intent__processor_8h}{signalized\+\_\+status\+\_\+intent\+\_\+processor.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+list/src/message\+\_\+processors/\mbox{\hyperlink{signalized__status__intent__processor_8cpp}{signalized\+\_\+status\+\_\+intent\+\_\+processor.\+cpp}}\end{DoxyCompactItemize}

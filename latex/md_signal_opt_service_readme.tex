@@ -1,0 +1,47 @@
+\hypertarget{md_signal_opt_service_readme_autotoc_md79}{}\doxysubsection{Introduction}\label{md_signal_opt_service_readme_autotoc_md79}
+The SO (Signal Optimization) service is the CARMA-\/\+Streets service responsible for optimizing traffic signal controller phase order and duration. The SO service is responsible for fixing a configurable amount of future phases on the traffic signal controller. On each phase transition (Yellow and Red clearance interval), the SO service will determine a new phase and duration to append to the list of fixed phases. The SO service does this by monitoring traffic signal state and planned state, vehicles within the intersection communication area, and the latest intersection geometry.
+
+The SO service depends on message service, intersection model and TSC (Traffic Signal Controller) service. It subscribes to message service to get the vehicle status and intent information, calls the \href{https://github.com/usdot-fhwa-stol/carma-streets/tree/develop/streets_utils/streets_vehicle_list}{\texttt{ vehicle list library}} to persist the vehicle. It sends HTTP GET requests to intersection model for configured time period to get the latest intersection geometry update, including the signal group ids for each link lanelet. It subscribes to the TSC service outgoing J2735 based JSON SPaT kafka topic to get information about current and future signal state. The JSON SPaT information is processed and persisted using the \href{https://github.com/usdot-fhwa-stol/carma-streets/tree/develop/streets_utils/streets_signal_phase_and_timing}{\texttt{ streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing}} library .\hypertarget{md_signal_opt_service_readme_autotoc_md80}{}\doxysection{Configuration parameters}\label{md_signal_opt_service_readme_autotoc_md80}
+\hypertarget{md_signal_opt_service_readme_autotoc_md81}{}\doxysubsection{Kafka topic names}\label{md_signal_opt_service_readme_autotoc_md81}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Topic Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Topic Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+tsc\+\_\+spat\+\_\+msg\+\_\+in   &The topic is used to transfer message between signal optimization and TSC (Traffic Signal Controller) services. The message is carma-\/streets internal \href{https://github.com/usdot-fhwa-stol/carma-streets/tree/develop/streets_utils/streets_signal_phase_and_timing}{\texttt{ spat messages in JSON format.}}    \\\cline{1-2}
+vehicle\+\_\+status\+\_\+intent\+\_\+output   &This topic is used to transfer message between signal optimization and message services. The message format refers to \href{https://usdot-carma.atlassian.net/wiki/spaces/CRMTSMO/pages/2182873096/CARMA+Streets+Message+Data+Collection}{\texttt{ confluence page.}}   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md_signal_opt_service_readme_autotoc_md82}{}\doxysubsection{Additional parameters}\label{md_signal_opt_service_readme_autotoc_md82}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Parameter Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Parameter Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+sleep\+\_\+millisecs   &The number of milliseconds the current iteration should sleep for.    \\\cline{1-2}
+int\+\_\+client\+\_\+request\+\_\+attempts   &The maximum numbers of loop to send HTTP request to intersection model to get the latest intersection geometry information.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md_signal_opt_service_readme_autotoc_md83}{}\doxysection{Implementation}\label{md_signal_opt_service_readme_autotoc_md83}
+The SO service consist of two main classes. The first is the {\ttfamily signal\+\_\+opt\+\_\+messages\+\_\+worker}. This is a worker class the holds the pointers to all the persisted data. This includes\+:
+\begin{DoxyItemize}
+\item {\ttfamily intersection\+\_\+info} (intersection geometry),
+\item {\ttfamily spat} (traffic signal current and future state information)
+\item {\ttfamily vehicle\+\_\+list} (vehicle currently in the intersection).
+
+{\ttfamily add\+\_\+vehicle\+\_\+update} takes a string JSON status\+\_\+and\+\_\+intent message as a parameter and simply calls {\ttfamily vehicle\+\_\+list\+::process\+\_\+update(const std\+::string \&json)} . This will allow the {\ttfamily vehicle\+\_\+list} to process a {\ttfamily status\+\_\+and\+\_\+intent} message and update its map of vehicles to reflect the information from this update.
+\end{DoxyItemize}
+
+{\ttfamily update\+\_\+spat} takes a string JSON modified SPaT message (see streets\+\_\+utils/streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing documentation) and calls from {\ttfamily from\+Json(const std\+::string \&json)}. This will cause the {\ttfamily spat} object to read and reflect the updated information.
+
+{\ttfamily request\+\_\+intersection\+\_\+info} will poll the intersection\+\_\+info REST endpoint on the {\bfseries{\mbox{\hyperlink{namespaceintersection__model}{intersection\+\_\+model}}}} service for the intersection geometry information until it receives valid information, including signal group id\textquotesingle{}s for every link lanelet in the intersection. This method is currently only called on startup.
+
+This worker class contains methods to update this persisted data and the get shared pointers to it. The second class is the {\ttfamily \mbox{\hyperlink{namespacesignal__opt__service}{signal\+\_\+opt\+\_\+service}}}. This class initializes and instance of the `signal\+\_\+opt\+\_\+message\+\_\+worker', reads in configuration parameters from the {\ttfamily manifest.\+json} and creates threads for kafka consumers for the {\bfseries{status\+\_\+and\+\_\+intent}} and {\bfseries{spat}} messages. These kafka consumers will call the {\ttfamily signal\+\_\+opt\+\_\+messages\+\_\+worker} methods to update the stored persistence objects \+: {\ttfamily vehicle\+\_\+list} and {\ttfamily spat}. 

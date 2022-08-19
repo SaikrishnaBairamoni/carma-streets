@@ -1,0 +1,211 @@
+\hypertarget{classsignal__opt__service_1_1signal__opt__messages__worker}{}\doxysection{signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+messages\+\_\+worker Class Reference}
+\label{classsignal__opt__service_1_1signal__opt__messages__worker}\index{signal\_opt\_service::signal\_opt\_messages\_worker@{signal\_opt\_service::signal\_opt\_messages\_worker}}
+
+
+{\ttfamily \#include $<$signal\+\_\+opt\+\_\+messages\+\_\+worker.\+h$>$}
+
+
+
+Inheritance diagram for signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+messages\+\_\+worker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classsignal__opt__service_1_1signal__opt__messages__worker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+messages\+\_\+worker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classsignal__opt__service_1_1signal__opt__messages__worker__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsignal__opt__service_1_1signal__opt__messages__worker_aea7d4734734713b2d6c3007c082f9f5d}{signal\+\_\+opt\+\_\+messages\+\_\+worker}} ()
+\item 
+\mbox{\hyperlink{classsignal__opt__service_1_1signal__opt__messages__worker_a48fb01d06c89d82c45370c1186aa736b}{$\sim$signal\+\_\+opt\+\_\+messages\+\_\+worker}} ()=default
+\item 
+bool \mbox{\hyperlink{classsignal__opt__service_1_1signal__opt__messages__worker_a3e8ec178741956f8e1f30d5fa5e0dc1a}{add\+\_\+update\+\_\+vehicle}} (const std\+::string \&vehicle\+\_\+json) const
+\begin{DoxyCompactList}\small\item\em Vehicle string from kafka stream in JSON format. Calling vehicle list library to persist vehicles. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsignal__opt__service_1_1signal__opt__messages__worker_aa4808dcf2abffc7ae346232958c5e339}{update\+\_\+spat}} (const std\+::string \&spat\+\_\+json)
+\begin{DoxyCompactList}\small\item\em Spat string from kafka stream in JSON format. Updating the spat with the latest spat info calling the signal\+\_\+phase\+\_\+timing library. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsignal__opt__service_1_1signal__opt__messages__worker_a1d815ad34177410cafc59d7bf9944d53}{request\+\_\+intersection\+\_\+info}} ()
+\begin{DoxyCompactList}\small\item\em Send http GET request to intersection model at rate of configured HZ until it gets the valid (!= 0) signal group id from the intersection info. Updating the intersection info with the http response that has the valid signal group id, and stop sending any more GET request. \end{DoxyCompactList}\item 
+const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classOpenAPI_1_1OAIIntersection__info}{Open\+API\+::\+OAIIntersection\+\_\+info}} $>$ \& \mbox{\hyperlink{classsignal__opt__service_1_1signal__opt__messages__worker_a4b1466bac7425e2a286fc82c8fe83c58}{get\+\_\+intersection\+\_\+info}} () const
+\begin{DoxyCompactList}\small\item\em Get the const intersection info pointer which does not allow caller to update the intersection info. \end{DoxyCompactList}\item 
+const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classstreets__vehicles_1_1vehicle__list}{streets\+\_\+vehicles\+::vehicle\+\_\+list}} $>$ \& \mbox{\hyperlink{classsignal__opt__service_1_1signal__opt__messages__worker_a79fb2ef0781f6f4a9a09b68dd91237cb}{get\+\_\+vehicle\+\_\+list}} () const
+\begin{DoxyCompactList}\small\item\em Get the const vehicle list pointer which does not allow caller to update the vehicle list. \end{DoxyCompactList}\item 
+const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1spat}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::spat}} $>$ \& \mbox{\hyperlink{classsignal__opt__service_1_1signal__opt__messages__worker_a7d3755735be7c3fcfe503eb4b1833c49}{get\+\_\+latest\+\_\+spat}} () const
+\begin{DoxyCompactList}\small\item\em Get the latest spat object pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 22 of file signal\+\_\+opt\+\_\+messages\+\_\+worker.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsignal__opt__service_1_1signal__opt__messages__worker_aea7d4734734713b2d6c3007c082f9f5d}\label{classsignal__opt__service_1_1signal__opt__messages__worker_aea7d4734734713b2d6c3007c082f9f5d}} 
+\index{signal\_opt\_service::signal\_opt\_messages\_worker@{signal\_opt\_service::signal\_opt\_messages\_worker}!signal\_opt\_messages\_worker@{signal\_opt\_messages\_worker}}
+\index{signal\_opt\_messages\_worker@{signal\_opt\_messages\_worker}!signal\_opt\_service::signal\_opt\_messages\_worker@{signal\_opt\_service::signal\_opt\_messages\_worker}}
+\doxysubsubsection{\texorpdfstring{signal\_opt\_messages\_worker()}{signal\_opt\_messages\_worker()}}
+{\footnotesize\ttfamily signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+messages\+\_\+worker\+::signal\+\_\+opt\+\_\+messages\+\_\+worker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file signal\+\_\+opt\+\_\+messages\+\_\+worker.\+cpp.
+
+\mbox{\Hypertarget{classsignal__opt__service_1_1signal__opt__messages__worker_a48fb01d06c89d82c45370c1186aa736b}\label{classsignal__opt__service_1_1signal__opt__messages__worker_a48fb01d06c89d82c45370c1186aa736b}} 
+\index{signal\_opt\_service::signal\_opt\_messages\_worker@{signal\_opt\_service::signal\_opt\_messages\_worker}!````~signal\_opt\_messages\_worker@{$\sim$signal\_opt\_messages\_worker}}
+\index{````~signal\_opt\_messages\_worker@{$\sim$signal\_opt\_messages\_worker}!signal\_opt\_service::signal\_opt\_messages\_worker@{signal\_opt\_service::signal\_opt\_messages\_worker}}
+\doxysubsubsection{\texorpdfstring{$\sim$signal\_opt\_messages\_worker()}{~signal\_opt\_messages\_worker()}}
+{\footnotesize\ttfamily signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+messages\+\_\+worker\+::$\sim$signal\+\_\+opt\+\_\+messages\+\_\+worker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsignal__opt__service_1_1signal__opt__messages__worker_a3e8ec178741956f8e1f30d5fa5e0dc1a}\label{classsignal__opt__service_1_1signal__opt__messages__worker_a3e8ec178741956f8e1f30d5fa5e0dc1a}} 
+\index{signal\_opt\_service::signal\_opt\_messages\_worker@{signal\_opt\_service::signal\_opt\_messages\_worker}!add\_update\_vehicle@{add\_update\_vehicle}}
+\index{add\_update\_vehicle@{add\_update\_vehicle}!signal\_opt\_service::signal\_opt\_messages\_worker@{signal\_opt\_service::signal\_opt\_messages\_worker}}
+\doxysubsubsection{\texorpdfstring{add\_update\_vehicle()}{add\_update\_vehicle()}}
+{\footnotesize\ttfamily bool signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+messages\+\_\+worker\+::add\+\_\+update\+\_\+vehicle (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{vehicle\+\_\+json }\end{DoxyParamCaption}) const}
+
+
+
+Vehicle string from kafka stream in JSON format. Calling vehicle list library to persist vehicles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicle\+\_\+json} & Vehicle string from kafka stream in JSON format. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the vehicle list is updated. 
+
+false if the vehilce list is not updated. 
+\end{DoxyReturn}
+
+
+Definition at line 14 of file signal\+\_\+opt\+\_\+messages\+\_\+worker.\+cpp.
+
+\mbox{\Hypertarget{classsignal__opt__service_1_1signal__opt__messages__worker_a4b1466bac7425e2a286fc82c8fe83c58}\label{classsignal__opt__service_1_1signal__opt__messages__worker_a4b1466bac7425e2a286fc82c8fe83c58}} 
+\index{signal\_opt\_service::signal\_opt\_messages\_worker@{signal\_opt\_service::signal\_opt\_messages\_worker}!get\_intersection\_info@{get\_intersection\_info}}
+\index{get\_intersection\_info@{get\_intersection\_info}!signal\_opt\_service::signal\_opt\_messages\_worker@{signal\_opt\_service::signal\_opt\_messages\_worker}}
+\doxysubsubsection{\texorpdfstring{get\_intersection\_info()}{get\_intersection\_info()}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classOpenAPI_1_1OAIIntersection__info}{Open\+API\+::\+OAIIntersection\+\_\+info}} $>$ \& signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+messages\+\_\+worker\+::get\+\_\+intersection\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the const intersection info pointer which does not allow caller to update the intersection info. 
+
+\begin{DoxyReturn}{Returns}
+A constant intersection info pointer to prevent any update 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file signal\+\_\+opt\+\_\+messages\+\_\+worker.\+cpp.
+
+\mbox{\Hypertarget{classsignal__opt__service_1_1signal__opt__messages__worker_a7d3755735be7c3fcfe503eb4b1833c49}\label{classsignal__opt__service_1_1signal__opt__messages__worker_a7d3755735be7c3fcfe503eb4b1833c49}} 
+\index{signal\_opt\_service::signal\_opt\_messages\_worker@{signal\_opt\_service::signal\_opt\_messages\_worker}!get\_latest\_spat@{get\_latest\_spat}}
+\index{get\_latest\_spat@{get\_latest\_spat}!signal\_opt\_service::signal\_opt\_messages\_worker@{signal\_opt\_service::signal\_opt\_messages\_worker}}
+\doxysubsubsection{\texorpdfstring{get\_latest\_spat()}{get\_latest\_spat()}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1spat}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::spat}} $>$ \& signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+messages\+\_\+worker\+::get\+\_\+latest\+\_\+spat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the latest spat object pointer. 
+
+\begin{DoxyReturn}{Returns}
+A constant spat pointer to prevent any update 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file signal\+\_\+opt\+\_\+messages\+\_\+worker.\+cpp.
+
+\mbox{\Hypertarget{classsignal__opt__service_1_1signal__opt__messages__worker_a79fb2ef0781f6f4a9a09b68dd91237cb}\label{classsignal__opt__service_1_1signal__opt__messages__worker_a79fb2ef0781f6f4a9a09b68dd91237cb}} 
+\index{signal\_opt\_service::signal\_opt\_messages\_worker@{signal\_opt\_service::signal\_opt\_messages\_worker}!get\_vehicle\_list@{get\_vehicle\_list}}
+\index{get\_vehicle\_list@{get\_vehicle\_list}!signal\_opt\_service::signal\_opt\_messages\_worker@{signal\_opt\_service::signal\_opt\_messages\_worker}}
+\doxysubsubsection{\texorpdfstring{get\_vehicle\_list()}{get\_vehicle\_list()}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classstreets__vehicles_1_1vehicle__list}{streets\+\_\+vehicles\+::vehicle\+\_\+list}} $>$ \& signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+messages\+\_\+worker\+::get\+\_\+vehicle\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the const vehicle list pointer which does not allow caller to update the vehicle list. 
+
+\begin{DoxyReturn}{Returns}
+A constant vehicle list pointer to prevent any update 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file signal\+\_\+opt\+\_\+messages\+\_\+worker.\+cpp.
+
+\mbox{\Hypertarget{classsignal__opt__service_1_1signal__opt__messages__worker_a1d815ad34177410cafc59d7bf9944d53}\label{classsignal__opt__service_1_1signal__opt__messages__worker_a1d815ad34177410cafc59d7bf9944d53}} 
+\index{signal\_opt\_service::signal\_opt\_messages\_worker@{signal\_opt\_service::signal\_opt\_messages\_worker}!request\_intersection\_info@{request\_intersection\_info}}
+\index{request\_intersection\_info@{request\_intersection\_info}!signal\_opt\_service::signal\_opt\_messages\_worker@{signal\_opt\_service::signal\_opt\_messages\_worker}}
+\doxysubsubsection{\texorpdfstring{request\_intersection\_info()}{request\_intersection\_info()}}
+{\footnotesize\ttfamily bool signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+messages\+\_\+worker\+::request\+\_\+intersection\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Send http GET request to intersection model at rate of configured HZ until it gets the valid (!= 0) signal group id from the intersection info. Updating the intersection info with the http response that has the valid signal group id, and stop sending any more GET request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int\+\_\+info} & Http response from intersection model \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if intersection information is updated upon receiving valid signal group id. 
+
+false if intersection information is not updated. 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file signal\+\_\+opt\+\_\+messages\+\_\+worker.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsignal__opt__service_1_1signal__opt__messages__worker_a1d815ad34177410cafc59d7bf9944d53_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsignal__opt__service_1_1signal__opt__messages__worker_aa4808dcf2abffc7ae346232958c5e339}\label{classsignal__opt__service_1_1signal__opt__messages__worker_aa4808dcf2abffc7ae346232958c5e339}} 
+\index{signal\_opt\_service::signal\_opt\_messages\_worker@{signal\_opt\_service::signal\_opt\_messages\_worker}!update\_spat@{update\_spat}}
+\index{update\_spat@{update\_spat}!signal\_opt\_service::signal\_opt\_messages\_worker@{signal\_opt\_service::signal\_opt\_messages\_worker}}
+\doxysubsubsection{\texorpdfstring{update\_spat()}{update\_spat()}}
+{\footnotesize\ttfamily bool signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+messages\+\_\+worker\+::update\+\_\+spat (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{spat\+\_\+json }\end{DoxyParamCaption})}
+
+
+
+Spat string from kafka stream in JSON format. Updating the spat with the latest spat info calling the signal\+\_\+phase\+\_\+timing library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spat\+\_\+json} & Spat string from kafka stream in JSON format. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the Spat object is updated. 
+
+false if the Spat object is not updated. 
+\end{DoxyReturn}
+
+
+Definition at line 24 of file signal\+\_\+opt\+\_\+messages\+\_\+worker.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+signal\+\_\+opt\+\_\+service/include/\mbox{\hyperlink{signal__opt__messages__worker_8h}{signal\+\_\+opt\+\_\+messages\+\_\+worker.\+h}}\item 
+signal\+\_\+opt\+\_\+service/src/\mbox{\hyperlink{signal__opt__messages__worker_8cpp}{signal\+\_\+opt\+\_\+messages\+\_\+worker.\+cpp}}\end{DoxyCompactItemize}

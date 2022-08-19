@@ -1,0 +1,4 @@
+<map id="traffic_signal_controller_service::monitor_states_exception" name="traffic_signal_controller_service::monitor_states_exception">
+<area shape="rect" id="node1" title="Runtime error related to SNMP client used to communicate with Traffic Signal Controller (NTCIP)." alt="" coords="5,80,188,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="27,5,166,32"/>
+</map>

@@ -1,0 +1,169 @@
+\hypertarget{classsignal__opt__service_1_1signal__opt__service}{}\doxysection{signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+service Class Reference}
+\label{classsignal__opt__service_1_1signal__opt__service}\index{signal\_opt\_service::signal\_opt\_service@{signal\_opt\_service::signal\_opt\_service}}
+
+
+{\ttfamily \#include $<$signal\+\_\+opt\+\_\+service.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsignal__opt__service_1_1signal__opt__service_afd84585cb22897ece5f6cb02cebdf4c9}{signal\+\_\+opt\+\_\+service}} ()=default
+\begin{DoxyCompactList}\small\item\em Initialize the consumer and producer configurations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsignal__opt__service_1_1signal__opt__service_a0d08faf7254086e5e9507957fa4b2acc}{$\sim$signal\+\_\+opt\+\_\+service}} ()
+\begin{DoxyCompactList}\small\item\em stop the consumer and producer \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsignal__opt__service_1_1signal__opt__service_ac5270550fc00e6e7b4f7822fcac522dc}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the consumer and producer configurations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsignal__opt__service_1_1signal__opt__service_a27c7129220640b4974bdb247ab1bbc26}{start}} () const
+\begin{DoxyCompactList}\small\item\em Create threads and consume messages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsignal__opt__service_1_1signal__opt__service_a37dcccaf7c65aa1ff8b974e52cfe4850}{consume\+\_\+msg}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker}{kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker}} $>$ consumer, \mbox{\hyperlink{namespacesignal__opt__service_a4f380fdb90d9f7f62085c821fb7db3e4}{CONSUME\+\_\+\+MSG\+\_\+\+TYPE}} consume\+\_\+msg\+\_\+type) const
+\begin{DoxyCompactList}\small\item\em Consume the different types of kafka stream via kafka consumers. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsignal__opt__service_1_1signal__opt__service_a605d6fc843afcaf4f667be4bd8db65c4}{update\+\_\+intersection\+\_\+info}} (unsigned long sleep\+\_\+millisecs, unsigned long int\+\_\+client\+\_\+request\+\_\+attempts) const
+\begin{DoxyCompactList}\small\item\em Updating the intersection info. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 14 of file signal\+\_\+opt\+\_\+service.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsignal__opt__service_1_1signal__opt__service_afd84585cb22897ece5f6cb02cebdf4c9}\label{classsignal__opt__service_1_1signal__opt__service_afd84585cb22897ece5f6cb02cebdf4c9}} 
+\index{signal\_opt\_service::signal\_opt\_service@{signal\_opt\_service::signal\_opt\_service}!signal\_opt\_service@{signal\_opt\_service}}
+\index{signal\_opt\_service@{signal\_opt\_service}!signal\_opt\_service::signal\_opt\_service@{signal\_opt\_service::signal\_opt\_service}}
+\doxysubsubsection{\texorpdfstring{signal\_opt\_service()}{signal\_opt\_service()}}
+{\footnotesize\ttfamily signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Initialize the consumer and producer configurations. 
+
+\mbox{\Hypertarget{classsignal__opt__service_1_1signal__opt__service_a0d08faf7254086e5e9507957fa4b2acc}\label{classsignal__opt__service_1_1signal__opt__service_a0d08faf7254086e5e9507957fa4b2acc}} 
+\index{signal\_opt\_service::signal\_opt\_service@{signal\_opt\_service::signal\_opt\_service}!````~signal\_opt\_service@{$\sim$signal\_opt\_service}}
+\index{````~signal\_opt\_service@{$\sim$signal\_opt\_service}!signal\_opt\_service::signal\_opt\_service@{signal\_opt\_service::signal\_opt\_service}}
+\doxysubsubsection{\texorpdfstring{$\sim$signal\_opt\_service()}{~signal\_opt\_service()}}
+{\footnotesize\ttfamily signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+service\+::$\sim$signal\+\_\+opt\+\_\+service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+stop the consumer and producer 
+
+
+
+Definition at line 122 of file signal\+\_\+opt\+\_\+service.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsignal__opt__service_1_1signal__opt__service_a37dcccaf7c65aa1ff8b974e52cfe4850}\label{classsignal__opt__service_1_1signal__opt__service_a37dcccaf7c65aa1ff8b974e52cfe4850}} 
+\index{signal\_opt\_service::signal\_opt\_service@{signal\_opt\_service::signal\_opt\_service}!consume\_msg@{consume\_msg}}
+\index{consume\_msg@{consume\_msg}!signal\_opt\_service::signal\_opt\_service@{signal\_opt\_service::signal\_opt\_service}}
+\doxysubsubsection{\texorpdfstring{consume\_msg()}{consume\_msg()}}
+{\footnotesize\ttfamily void signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+service\+::consume\+\_\+msg (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker}{kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker}} $>$}]{consumer,  }\item[{\mbox{\hyperlink{namespacesignal__opt__service_a4f380fdb90d9f7f62085c821fb7db3e4}{CONSUME\+\_\+\+MSG\+\_\+\+TYPE}}}]{consume\+\_\+msg\+\_\+type }\end{DoxyParamCaption}) const}
+
+
+
+Consume the different types of kafka stream via kafka consumers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg\+\_\+json} & The consumed kafka stream in JSON format \\
+\hline
+{\em consume\+\_\+msg\+\_\+type} & The type of message consumed by the kafka consumer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 66 of file signal\+\_\+opt\+\_\+service.\+cpp.
+
+\mbox{\Hypertarget{classsignal__opt__service_1_1signal__opt__service_ac5270550fc00e6e7b4f7822fcac522dc}\label{classsignal__opt__service_1_1signal__opt__service_ac5270550fc00e6e7b4f7822fcac522dc}} 
+\index{signal\_opt\_service::signal\_opt\_service@{signal\_opt\_service::signal\_opt\_service}!initialize@{initialize}}
+\index{initialize@{initialize}!signal\_opt\_service::signal\_opt\_service@{signal\_opt\_service::signal\_opt\_service}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily bool signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+service\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the consumer and producer configurations. 
+
+
+
+Definition at line 5 of file signal\+\_\+opt\+\_\+service.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsignal__opt__service_1_1signal__opt__service_ac5270550fc00e6e7b4f7822fcac522dc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{classsignal__opt__service_1_1signal__opt__service_ac5270550fc00e6e7b4f7822fcac522dc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsignal__opt__service_1_1signal__opt__service_a27c7129220640b4974bdb247ab1bbc26}\label{classsignal__opt__service_1_1signal__opt__service_a27c7129220640b4974bdb247ab1bbc26}} 
+\index{signal\_opt\_service::signal\_opt\_service@{signal\_opt\_service::signal\_opt\_service}!start@{start}}
+\index{start@{start}!signal\_opt\_service::signal\_opt\_service@{signal\_opt\_service::signal\_opt\_service}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+service\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Create threads and consume messages. 
+
+
+
+Definition at line 58 of file signal\+\_\+opt\+\_\+service.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{classsignal__opt__service_1_1signal__opt__service_a27c7129220640b4974bdb247ab1bbc26_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsignal__opt__service_1_1signal__opt__service_a605d6fc843afcaf4f667be4bd8db65c4}\label{classsignal__opt__service_1_1signal__opt__service_a605d6fc843afcaf4f667be4bd8db65c4}} 
+\index{signal\_opt\_service::signal\_opt\_service@{signal\_opt\_service::signal\_opt\_service}!update\_intersection\_info@{update\_intersection\_info}}
+\index{update\_intersection\_info@{update\_intersection\_info}!signal\_opt\_service::signal\_opt\_service@{signal\_opt\_service::signal\_opt\_service}}
+\doxysubsubsection{\texorpdfstring{update\_intersection\_info()}{update\_intersection\_info()}}
+{\footnotesize\ttfamily bool signal\+\_\+opt\+\_\+service\+::signal\+\_\+opt\+\_\+service\+::update\+\_\+intersection\+\_\+info (\begin{DoxyParamCaption}\item[{unsigned long}]{sleep\+\_\+millisecs,  }\item[{unsigned long}]{int\+\_\+client\+\_\+request\+\_\+attempts }\end{DoxyParamCaption}) const}
+
+
+
+Updating the intersection info. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sleep\+\_\+millisecs} & The current thread sleep for milliseconds after each update attempt \\
+\hline
+{\em int\+\_\+client\+\_\+request\+\_\+attempts} & The number of attempts for the loop \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean. True if intersection information is updated, otherwise failed to update intersection information 
+\end{DoxyReturn}
+
+
+Definition at line 102 of file signal\+\_\+opt\+\_\+service.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{classsignal__opt__service_1_1signal__opt__service_a605d6fc843afcaf4f667be4bd8db65c4_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+signal\+\_\+opt\+\_\+service/include/\mbox{\hyperlink{signal__opt__service_8h}{signal\+\_\+opt\+\_\+service.\+h}}\item 
+signal\+\_\+opt\+\_\+service/src/\mbox{\hyperlink{signal__opt__service_8cpp}{signal\+\_\+opt\+\_\+service.\+cpp}}\end{DoxyCompactItemize}

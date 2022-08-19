@@ -1,0 +1,124 @@
+\hypertarget{classmessage__services_1_1services_1_1mobility__operation__service}{}\doxysection{message\+\_\+services\+::services\+::mobility\+\_\+operation\+\_\+service Class Reference}
+\label{classmessage__services_1_1services_1_1mobility__operation__service}\index{message\_services::services::mobility\_operation\_service@{message\_services::services::mobility\_operation\_service}}
+
+
+{\ttfamily \#include $<$mobility\+\_\+operation\+\_\+service.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmessage__services_1_1services_1_1mobility__operation__service_ab471b49757dd3f4c1253c7d7c27c5f48}{mobility\+\_\+operation\+\_\+service}} ()
+\item 
+\mbox{\hyperlink{classmessage__services_1_1services_1_1mobility__operation__service_a060973f79ce79732a095f97acb9318ac}{$\sim$mobility\+\_\+operation\+\_\+service}} ()
+\item 
+bool \mbox{\hyperlink{classmessage__services_1_1services_1_1mobility__operation__service_a5602d51d9c173ec205ad7adc033c598e}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em read configuration file and determine the producer and consumer topics, bootstrap server \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmessage__services_1_1services_1_1mobility__operation__service_a293fefb7a3af910c186f8eddf84a233f}{start}} ()
+\begin{DoxyCompactList}\small\item\em initialize variables and call \mbox{\hyperlink{classmessage__services_1_1services_1_1mobility__operation__service_aa0f71843cf06e1b8d1d9850e650eb1a8}{run()}} methods to spin up threads. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmessage__services_1_1services_1_1mobility__operation__service_aa0f71843cf06e1b8d1d9850e650eb1a8}{run}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmessage__services_1_1workers_1_1mobilityoperation__worker}{message\+\_\+services\+::workers\+::mobilityoperation\+\_\+worker}} $>$ mo\+\_\+w\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Creating and running threads. Each thread is acting as consumer or producer to consume or produce messages to topics. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{classmessage__services_1_1services_1_1mobility__operation__service_a3f6d6876a47678ff6bde39e8099bc722}{msg\+\_\+consumer}} (std\+::shared\+\_\+ptr$<$ T $>$ msg\+\_\+ptr, std\+::string topic, std\+::string group\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Consume a message from particular topic and convert the message as an object. Then append the message to its corresponding worker. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{classmessage__services_1_1services_1_1mobility__operation__service_afa42081006973521907d5f2717719ebb}{MANIFEST\+\_\+\+CONFIG\+\_\+\+FILE\+\_\+\+PATH}} = \char`\"{}../manifest.\+json\char`\"{}
+\begin{DoxyCompactList}\small\item\em configuration file name \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file mobility\+\_\+operation\+\_\+service.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1services_1_1mobility__operation__service_ab471b49757dd3f4c1253c7d7c27c5f48}\label{classmessage__services_1_1services_1_1mobility__operation__service_ab471b49757dd3f4c1253c7d7c27c5f48}} 
+\index{message\_services::services::mobility\_operation\_service@{message\_services::services::mobility\_operation\_service}!mobility\_operation\_service@{mobility\_operation\_service}}
+\index{mobility\_operation\_service@{mobility\_operation\_service}!message\_services::services::mobility\_operation\_service@{message\_services::services::mobility\_operation\_service}}
+\doxysubsubsection{\texorpdfstring{mobility\_operation\_service()}{mobility\_operation\_service()}}
+{\footnotesize\ttfamily message\+\_\+services\+::services\+::mobility\+\_\+operation\+\_\+service\+::mobility\+\_\+operation\+\_\+service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmessage__services_1_1services_1_1mobility__operation__service_a060973f79ce79732a095f97acb9318ac}\label{classmessage__services_1_1services_1_1mobility__operation__service_a060973f79ce79732a095f97acb9318ac}} 
+\index{message\_services::services::mobility\_operation\_service@{message\_services::services::mobility\_operation\_service}!````~mobility\_operation\_service@{$\sim$mobility\_operation\_service}}
+\index{````~mobility\_operation\_service@{$\sim$mobility\_operation\_service}!message\_services::services::mobility\_operation\_service@{message\_services::services::mobility\_operation\_service}}
+\doxysubsubsection{\texorpdfstring{$\sim$mobility\_operation\_service()}{~mobility\_operation\_service()}}
+{\footnotesize\ttfamily message\+\_\+services\+::services\+::mobility\+\_\+operation\+\_\+service\+::$\sim$mobility\+\_\+operation\+\_\+service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1services_1_1mobility__operation__service_a5602d51d9c173ec205ad7adc033c598e}\label{classmessage__services_1_1services_1_1mobility__operation__service_a5602d51d9c173ec205ad7adc033c598e}} 
+\index{message\_services::services::mobility\_operation\_service@{message\_services::services::mobility\_operation\_service}!initialize@{initialize}}
+\index{initialize@{initialize}!message\_services::services::mobility\_operation\_service@{message\_services::services::mobility\_operation\_service}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily bool message\+\_\+services\+::services\+::mobility\+\_\+operation\+\_\+service\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+read configuration file and determine the producer and consumer topics, bootstrap server 
+
+\mbox{\Hypertarget{classmessage__services_1_1services_1_1mobility__operation__service_a3f6d6876a47678ff6bde39e8099bc722}\label{classmessage__services_1_1services_1_1mobility__operation__service_a3f6d6876a47678ff6bde39e8099bc722}} 
+\index{message\_services::services::mobility\_operation\_service@{message\_services::services::mobility\_operation\_service}!msg\_consumer@{msg\_consumer}}
+\index{msg\_consumer@{msg\_consumer}!message\_services::services::mobility\_operation\_service@{message\_services::services::mobility\_operation\_service}}
+\doxysubsubsection{\texorpdfstring{msg\_consumer()}{msg\_consumer()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void message\+\_\+services\+::services\+::mobility\+\_\+operation\+\_\+service\+::msg\+\_\+consumer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ T $>$}]{msg\+\_\+ptr,  }\item[{std\+::string}]{topic,  }\item[{std\+::string}]{group\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Consume a message from particular topic and convert the message as an object. Then append the message to its corresponding worker. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointers} & to object that will store the message consumed. topic from which the message is from. The group id of the consumer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmessage__services_1_1services_1_1mobility__operation__service_aa0f71843cf06e1b8d1d9850e650eb1a8}\label{classmessage__services_1_1services_1_1mobility__operation__service_aa0f71843cf06e1b8d1d9850e650eb1a8}} 
+\index{message\_services::services::mobility\_operation\_service@{message\_services::services::mobility\_operation\_service}!run@{run}}
+\index{run@{run}!message\_services::services::mobility\_operation\_service@{message\_services::services::mobility\_operation\_service}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::services\+::mobility\+\_\+operation\+\_\+service\+::run (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmessage__services_1_1workers_1_1mobilityoperation__worker}{message\+\_\+services\+::workers\+::mobilityoperation\+\_\+worker}} $>$}]{mo\+\_\+w\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Creating and running threads. Each thread is acting as consumer or producer to consume or produce messages to topics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointers} & to workers that will be used to work on messages that are consumed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmessage__services_1_1services_1_1mobility__operation__service_a293fefb7a3af910c186f8eddf84a233f}\label{classmessage__services_1_1services_1_1mobility__operation__service_a293fefb7a3af910c186f8eddf84a233f}} 
+\index{message\_services::services::mobility\_operation\_service@{message\_services::services::mobility\_operation\_service}!start@{start}}
+\index{start@{start}!message\_services::services::mobility\_operation\_service@{message\_services::services::mobility\_operation\_service}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::services\+::mobility\+\_\+operation\+\_\+service\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initialize variables and call \mbox{\hyperlink{classmessage__services_1_1services_1_1mobility__operation__service_aa0f71843cf06e1b8d1d9850e650eb1a8}{run()}} methods to spin up threads. 
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1services_1_1mobility__operation__service_afa42081006973521907d5f2717719ebb}\label{classmessage__services_1_1services_1_1mobility__operation__service_afa42081006973521907d5f2717719ebb}} 
+\index{message\_services::services::mobility\_operation\_service@{message\_services::services::mobility\_operation\_service}!MANIFEST\_CONFIG\_FILE\_PATH@{MANIFEST\_CONFIG\_FILE\_PATH}}
+\index{MANIFEST\_CONFIG\_FILE\_PATH@{MANIFEST\_CONFIG\_FILE\_PATH}!message\_services::services::mobility\_operation\_service@{message\_services::services::mobility\_operation\_service}}
+\doxysubsubsection{\texorpdfstring{MANIFEST\_CONFIG\_FILE\_PATH}{MANIFEST\_CONFIG\_FILE\_PATH}}
+{\footnotesize\ttfamily const std\+::string message\+\_\+services\+::services\+::mobility\+\_\+operation\+\_\+service\+::\+MANIFEST\+\_\+\+CONFIG\+\_\+\+FILE\+\_\+\+PATH = \char`\"{}../manifest.\+json\char`\"{}}
+
+
+
+configuration file name 
+
+
+
+Definition at line 34 of file mobility\+\_\+operation\+\_\+service.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+message\+\_\+services/include/\mbox{\hyperlink{mobility__operation__service_8h}{mobility\+\_\+operation\+\_\+service.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,78 @@
+\hypertarget{md_streets_utils_streets_vehicle_scheduler_README_autotoc_md100}{}\doxysection{Introduction}\label{md_streets_utils_streets_vehicle_scheduler_README_autotoc_md100}
+This library is intended to contain the vehicle scheduling business logic for {\bfseries{CARMA Streets}}. This library consists of two main classes\+: the {\bfseries{intersection\+\_\+schedule}} struct and the {\bfseries{vehicle\+\_\+scheduler}} abstract class.\hypertarget{md_streets_utils_streets_vehicle_scheduler_README_autotoc_md101}{}\doxysubsection{Intersection Schedule}\label{md_streets_utils_streets_vehicle_scheduler_README_autotoc_md101}
+The intersection schedule is the data object that holds the {\bfseries{vehicle\+\_\+schedule(s)}} for all vehicles in the intersection. Each {\bfseries{vehicle\+\_\+schedule}} contains the {\bfseries{vehicle ID}} {\ttfamily v\+\_\+id}, the current planned {\bfseries{stopping time}} {\ttfamily st}, the current planned {\bfseries{entering time}} {\ttfamily et}, the current planned {\bfseries{departure time}} {\ttfamily dt}, the current planned {\bfseries{departure position}} {\ttfamily dp}, and a boolean flag indicating whether the vehicle has {\bfseries{access}} to the intersection {\ttfamily access}. Below is an sample JSON for a stopped controlled intersection. {\bfseries{Note}} \+: The JSON serialization will need to be overriden for {\bfseries{signalized}} intersection\+\_\+type for UC 3. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  "{}metadata"{}:\{}
+\DoxyCodeLine{    "{}timestamp"{}: 12312, // Timestamp in milliseconds }
+\DoxyCodeLine{    "{}intersection\_type"{}:"{}stop\_controlled"{} // Type of intersection for which the schedule applies}
+\DoxyCodeLine{  \},}
+\DoxyCodeLine{  "{}payload"{}: [}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{      "{}v\_id"{}: "{}DOT-\/608"{},}
+\DoxyCodeLine{      "{}st"{}: 123123,}
+\DoxyCodeLine{      "{}et"{}: 123123,}
+\DoxyCodeLine{      "{}dt"{}: 123213,}
+\DoxyCodeLine{      "{}dp"{}: 2,}
+\DoxyCodeLine{      "{}access"{}: 0}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{      \{}
+\DoxyCodeLine{      "{}v\_id"{}: "{}DOT-\/513"{},}
+\DoxyCodeLine{      "{}st"{}: 123123,}
+\DoxyCodeLine{      "{}et"{}: 123123,}
+\DoxyCodeLine{      "{}dt"{}: 123213,}
+\DoxyCodeLine{      "{}dp"{}: 2,}
+\DoxyCodeLine{      "{}access"{}: 0}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{  ]  }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \hypertarget{md_streets_utils_streets_vehicle_scheduler_README_autotoc_md102}{}\doxysubsection{Vehicle scheduler}\label{md_streets_utils_streets_vehicle_scheduler_README_autotoc_md102}
+The {\ttfamily vehicle\+\_\+scheduler} class is an abstract class meant to be extended to implement custom scheduling logic (see {\ttfamily all\+\_\+stop\+\_\+vehicle\+\_\+scheduler}). This class contains a protected members that stores information about intersection geometry ({\ttfamily intersection\+\_\+info}) . To implement custom scheduling business logic simply extend this class and implement the virtual method {\ttfamily schedule\+\_\+vehicles} which takes in a map of {\ttfamily vehicles} with vehicle string IDs as keys and an empty {\ttfamily intersection\+\_\+schedule}. To produce an {\ttfamily intersection\+\_\+schedule}, simply call this method and pass it a map of {\ttfamily vehicles} obtained from the {\ttfamily vehicle\+\_\+list\+::get\+\_\+vehicles()} method and an empty intersection\+\_\+schedule. Using pass by reference, the implemented method should populate this intersection schedule with vehicle\+\_\+schedule(s) for all the relevant vehicles in the intersection. Below is an example custom vehicle scheduler.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{class custom\_vehicle\_scheduler : public vehicle\_scheduler \{}
+\DoxyCodeLine{  ...}
+\DoxyCodeLine{  /**}
+\DoxyCodeLine{  * @param vehicles a populated map of vehicles inside the intersection. Key values correspond to vehicle static IDs. This should be obtained from }
+\DoxyCodeLine{  *     the vehicle\_list::get\_vehicles() method}
+\DoxyCodeLine{  * @param intersection\_schedule an empty intersection\_schedule to be populated by this method. Using pass by reference the previously empty }
+\DoxyCodeLine{  *     intersection\_schedule should be populated with vehicle\_schedules for any relevant vehicles in the intersection if this method}
+\DoxyCodeLine{  *     executes without throung any scheduling\_exception (s).}
+\DoxyCodeLine{  **/ }
+\DoxyCodeLine{  void schedule\_vehicles( std::unordered\_map<std::string,streets\_vehicles::vehicle> \&vehicles, intersection\_schedule \&schedule) override \{}
+\DoxyCodeLine{    // Custom implementation}
+\DoxyCodeLine{    // Populate intersection\_schedule with vehicle\_schedule(s) for relevant vehicles included in vehicles map}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Below is an example of using a custom vehicle scheduler. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{intersection\_info\_ptr = std::make\_shared<OpenAPI::OAIIntersection\_info>(); // Note: obtaining intersection information requires using intersection\_client\_api.}
+\DoxyCodeLine{                                                                           // Please refer to streets\_utils/streets\_api/intersection\_client\_api for }
+\DoxyCodeLine{                                                                           // documentation about retreiving intersection information from intersection model}
+\DoxyCodeLine{}
+\DoxyCodeLine{vehicle\_list\_ptr = std::make\_shared<streets\_vehicles::vehicle\_list>();     // Note: obtaining vehicle information requires using streets\_vehicle\_list library.}
+\DoxyCodeLine{                                                                           // Please refer to streets\_utils/streets\_vehicle\_list/ for documentation about }
+\DoxyCodeLine{                                                                           //  using vehicle list to consume status and intent msgs}
+\DoxyCodeLine{// Create vehicle\_scheduler ptr and use custom implementation}
+\DoxyCodeLine{std::shared\_ptr<streets\_vehicle\_scheduler::vehicle\_scheduler> scheduler\_ptr = std::make\_shared<streets\_vehicle\_scheduler::custom\_vehicle\_scheduler>();}
+\DoxyCodeLine{// Set intersection information for scheduler}
+\DoxyCodeLine{scheduler\_ptr-\/>set\_intersection\_info(intersection\_info\_ptr);}
+\DoxyCodeLine{// Get current vehicles from vehicle\_list}
+\DoxyCodeLine{auto veh\_map = \_vehicle\_list\_ptr -\/> get\_vehicles();}
+\DoxyCodeLine{// Empty schedule}
+\DoxyCodeLine{streets\_vehicle\_scheduler::intersection\_schedule int\_schedule;}
+\DoxyCodeLine{// Schedule vehicles/populate schedule}
+\DoxyCodeLine{scheduler\_ptr.schedule\_vehicles(veh\_map, int\_schedule);}
+\DoxyCodeLine{// Serialize schedule to JSON}
+\DoxyCodeLine{std::string msg\_to\_send = int\_schedule.toJson();}
+
+\end{DoxyCode}
+ 

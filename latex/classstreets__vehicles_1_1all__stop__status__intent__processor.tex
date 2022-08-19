@@ -1,0 +1,374 @@
+\hypertarget{classstreets__vehicles_1_1all__stop__status__intent__processor}{}\doxysection{streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor Class Reference}
+\label{classstreets__vehicles_1_1all__stop__status__intent__processor}\index{streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}}
+
+
+Status Intent processor implementation for all stop use case. Updates vehicle states based on the condition that all vehicles must stop before entering a stop sign controlled intersection.  
+
+
+
+
+{\ttfamily \#include $<$all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor.\+h$>$}
+
+
+
+Inheritance diagram for streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classstreets__vehicles_1_1all__stop__status__intent__processor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classstreets__vehicles_1_1all__stop__status__intent__processor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstreets__vehicles_1_1all__stop__status__intent__processor_af0bc8ce9258293c04a798cff18eee398}{all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor}} (const double stopping\+\_\+distance=1.\+0, const double stopping\+\_\+speed=0.\+1, const uint64\+\_\+t timeout=30000)
+\begin{DoxyCompactList}\small\item\em Construct a new all stop status intent processor object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__vehicles_1_1all__stop__status__intent__processor_ab9df0a1a3f5a77fe4fcd0b405bfab0f4}{set\+\_\+stopping\+\_\+distance}} (const double stopping\+\_\+distance)
+\begin{DoxyCompactList}\small\item\em Set stopping\+\_\+distance stopping condition. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__vehicles_1_1all__stop__status__intent__processor_af89822b6c6f045b584f622f7a604b33b}{set\+\_\+stopping\+\_\+speed}} (const double stopping\+\_\+speed)
+\begin{DoxyCompactList}\small\item\em Set stopping\+\_\+speed stopping condition. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__vehicles_1_1all__stop__status__intent__processor_a7308fe8b861031993792d0c95cf82d90}{from\+\_\+json}} (const rapidjson\+::\+Generic\+Object$<$ true, rapidjson\+::\+Value $>$ \&json, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} \&\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}}) const override
+\begin{DoxyCompactList}\small\item\em Process JSON status and intent update and convert it to an streets\+\_\+vehicle\+\_\+update. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classstreets__vehicles_1_1all__stop__status__intent__processor_a701e67611fa726d7693f82b3302f0324}{get\+\_\+timeout}} () const override
+\begin{DoxyCompactList}\small\item\em Get the timeout in milliseconds. Timeout value controls when updates are no longer considered valid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__vehicles_1_1all__stop__status__intent__processor_a12a1b270d0eced95feb9e5062420a6f6}{set\+\_\+timeout}} (const uint64\+\_\+t timeout) override
+\begin{DoxyCompactList}\small\item\em Set the timeout in milliseconds Timeout value controls when updates are no longer considered valid. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classstreets__vehicles_1_1all__stop__status__intent__processor_a141c395b9b3fde39caa20a5433c1c3aa}{$\sim$all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor}} () override=default
+\begin{DoxyCompactList}\small\item\em Destroy the all stop status intent processor object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classstreets__vehicles_1_1all__stop__status__intent__processor_a4315db81a214ecf564076d78397cb467}{read\+\_\+metadata}} (const rapidjson\+::\+Generic\+Object$<$ true, rapidjson\+::\+Value $>$ \&json, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} \&\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}}) const
+\begin{DoxyCompactList}\small\item\em Reads metadata element in status and intent vehicle update. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__vehicles_1_1all__stop__status__intent__processor_aecf488ec3917a0ca3ca8ca2c627f24fc}{read\+\_\+payload}} (const rapidjson\+::\+Generic\+Object$<$ true, rapidjson\+::\+Value $>$ \&json, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} \&\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}}) const
+\begin{DoxyCompactList}\small\item\em Reads payload element in status and intent vehicle update. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__vehicles_1_1all__stop__status__intent__processor_a5fb338e07c0bd7aa48c490d29823dd0d}{read\+\_\+est\+\_\+path}} (const rapidjson\+::\+Generic\+Array$<$ true, rapidjson\+::\+Value $>$ \&json, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} \&\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}}) const
+\begin{DoxyCompactList}\small\item\em Reads estimated path element in status and intent vehicle update. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classstreets__vehicles_1_1all__stop__status__intent__processor_ae4a3f6bc8f4d1066c476a6b8d5e8e2f9}{update\+\_\+vehicle\+\_\+state}} (\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} \&\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}}) const
+\begin{DoxyCompactList}\small\item\em Updates vehicle state based on previous state and stopping condition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Status Intent processor implementation for all stop use case. Updates vehicle states based on the condition that all vehicles must stop before entering a stop sign controlled intersection. 
+
+\begin{DoxyAuthor}{Author}
+Paul Bourelly 
+\end{DoxyAuthor}
+
+
+Definition at line 18 of file all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstreets__vehicles_1_1all__stop__status__intent__processor_af0bc8ce9258293c04a798cff18eee398}\label{classstreets__vehicles_1_1all__stop__status__intent__processor_af0bc8ce9258293c04a798cff18eee398}} 
+\index{streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}!all\_stop\_status\_intent\_processor@{all\_stop\_status\_intent\_processor}}
+\index{all\_stop\_status\_intent\_processor@{all\_stop\_status\_intent\_processor}!streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{all\_stop\_status\_intent\_processor()}{all\_stop\_status\_intent\_processor()}}
+{\footnotesize\ttfamily streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor (\begin{DoxyParamCaption}\item[{const double}]{stopping\+\_\+distance = {\ttfamily 1.0},  }\item[{const double}]{stopping\+\_\+speed = {\ttfamily 0.1},  }\item[{const uint64\+\_\+t}]{timeout = {\ttfamily 30000} }\end{DoxyParamCaption})}
+
+
+
+Construct a new all stop status intent processor object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stopping\+\_\+distance} & min distance from stop line in meters to be considered stopped(default = 5 m). \\
+\hline
+{\em stopping\+\_\+speed} & min speed in m/s to be considered stopped(default = 0.\+1 m/s). \\
+\hline
+{\em timeout} & time interval after which vehicle updates will no longer be considered valid in milliseconds(default = 30s). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor.\+h.
+
+\mbox{\Hypertarget{classstreets__vehicles_1_1all__stop__status__intent__processor_a141c395b9b3fde39caa20a5433c1c3aa}\label{classstreets__vehicles_1_1all__stop__status__intent__processor_a141c395b9b3fde39caa20a5433c1c3aa}} 
+\index{streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}!````~all\_stop\_status\_intent\_processor@{$\sim$all\_stop\_status\_intent\_processor}}
+\index{````~all\_stop\_status\_intent\_processor@{$\sim$all\_stop\_status\_intent\_processor}!streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{$\sim$all\_stop\_status\_intent\_processor()}{~all\_stop\_status\_intent\_processor()}}
+{\footnotesize\ttfamily streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor\+::$\sim$all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+Destroy the all stop status intent processor object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstreets__vehicles_1_1all__stop__status__intent__processor_a7308fe8b861031993792d0c95cf82d90}\label{classstreets__vehicles_1_1all__stop__status__intent__processor_a7308fe8b861031993792d0c95cf82d90}} 
+\index{streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}!from\_json@{from\_json}}
+\index{from\_json@{from\_json}!streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{from\_json()}{from\_json()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor\+::from\+\_\+json (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Generic\+Object$<$ true, rapidjson\+::\+Value $>$ \&}]{json,  }\item[{\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} \&}]{vehicle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Process JSON status and intent update and convert it to an streets\+\_\+vehicle\+\_\+update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status\+\_\+intent\+\_\+msg} & rapidjson\+::\+Value JSON status and intent update. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+streets\+\_\+vehicle\+\_\+update. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor_aade7f4f98fdf41c0c9d512f6a9494d95}{streets\+\_\+vehicles\+::status\+\_\+intent\+\_\+processor}}.
+
+
+
+Definition at line 6 of file all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__vehicles_1_1all__stop__status__intent__processor_a7308fe8b861031993792d0c95cf82d90_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__vehicles_1_1all__stop__status__intent__processor_a701e67611fa726d7693f82b3302f0324}\label{classstreets__vehicles_1_1all__stop__status__intent__processor_a701e67611fa726d7693f82b3302f0324}} 
+\index{streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}!get\_timeout@{get\_timeout}}
+\index{get\_timeout@{get\_timeout}!streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{get\_timeout()}{get\_timeout()}}
+{\footnotesize\ttfamily uint64\+\_\+t streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor\+::get\+\_\+timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the timeout in milliseconds. Timeout value controls when updates are no longer considered valid. 
+
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t timeout value in milliseconds. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor_a59822b56e0589dba350c907f79385e76}{streets\+\_\+vehicles\+::status\+\_\+intent\+\_\+processor}}.
+
+
+
+Definition at line 276 of file all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor.\+cpp.
+
+\mbox{\Hypertarget{classstreets__vehicles_1_1all__stop__status__intent__processor_a5fb338e07c0bd7aa48c490d29823dd0d}\label{classstreets__vehicles_1_1all__stop__status__intent__processor_a5fb338e07c0bd7aa48c490d29823dd0d}} 
+\index{streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}!read\_est\_path@{read\_est\_path}}
+\index{read\_est\_path@{read\_est\_path}!streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{read\_est\_path()}{read\_est\_path()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor\+::read\+\_\+est\+\_\+path (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Generic\+Array$<$ true, rapidjson\+::\+Value $>$ \&}]{json,  }\item[{\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} \&}]{vehicle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Reads estimated path element in status and intent vehicle update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & est\+\_\+path json object \\
+\hline
+{\em vehicle} & reference to update \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 208 of file all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classstreets__vehicles_1_1all__stop__status__intent__processor_a5fb338e07c0bd7aa48c490d29823dd0d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__vehicles_1_1all__stop__status__intent__processor_a5fb338e07c0bd7aa48c490d29823dd0d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__vehicles_1_1all__stop__status__intent__processor_a4315db81a214ecf564076d78397cb467}\label{classstreets__vehicles_1_1all__stop__status__intent__processor_a4315db81a214ecf564076d78397cb467}} 
+\index{streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}!read\_metadata@{read\_metadata}}
+\index{read\_metadata@{read\_metadata}!streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{read\_metadata()}{read\_metadata()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor\+::read\+\_\+metadata (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Generic\+Object$<$ true, rapidjson\+::\+Value $>$ \&}]{json,  }\item[{\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} \&}]{vehicle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Reads metadata element in status and intent vehicle update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & metadata json object. \\
+\hline
+{\em vehicle} & reference to update. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classstreets__vehicles_1_1all__stop__status__intent__processor_a4315db81a214ecf564076d78397cb467_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__vehicles_1_1all__stop__status__intent__processor_a4315db81a214ecf564076d78397cb467_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__vehicles_1_1all__stop__status__intent__processor_aecf488ec3917a0ca3ca8ca2c627f24fc}\label{classstreets__vehicles_1_1all__stop__status__intent__processor_aecf488ec3917a0ca3ca8ca2c627f24fc}} 
+\index{streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}!read\_payload@{read\_payload}}
+\index{read\_payload@{read\_payload}!streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{read\_payload()}{read\_payload()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor\+::read\+\_\+payload (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Generic\+Object$<$ true, rapidjson\+::\+Value $>$ \&}]{json,  }\item[{\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} \&}]{vehicle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Reads payload element in status and intent vehicle update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & payload json object. \\
+\hline
+{\em vehicle} & reference to update. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__vehicles_1_1all__stop__status__intent__processor_aecf488ec3917a0ca3ca8ca2c627f24fc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__vehicles_1_1all__stop__status__intent__processor_aecf488ec3917a0ca3ca8ca2c627f24fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__vehicles_1_1all__stop__status__intent__processor_ab9df0a1a3f5a77fe4fcd0b405bfab0f4}\label{classstreets__vehicles_1_1all__stop__status__intent__processor_ab9df0a1a3f5a77fe4fcd0b405bfab0f4}} 
+\index{streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}!set\_stopping\_distance@{set\_stopping\_distance}}
+\index{set\_stopping\_distance@{set\_stopping\_distance}!streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{set\_stopping\_distance()}{set\_stopping\_distance()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor\+::set\+\_\+stopping\+\_\+distance (\begin{DoxyParamCaption}\item[{const double}]{stopping\+\_\+distance }\end{DoxyParamCaption})}
+
+
+
+Set stopping\+\_\+distance stopping condition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stopping\+\_\+distance} & max distance from stop line at which vehicle can be considered stopped in meters. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 280 of file all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor.\+cpp.
+
+\mbox{\Hypertarget{classstreets__vehicles_1_1all__stop__status__intent__processor_af89822b6c6f045b584f622f7a604b33b}\label{classstreets__vehicles_1_1all__stop__status__intent__processor_af89822b6c6f045b584f622f7a604b33b}} 
+\index{streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}!set\_stopping\_speed@{set\_stopping\_speed}}
+\index{set\_stopping\_speed@{set\_stopping\_speed}!streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{set\_stopping\_speed()}{set\_stopping\_speed()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor\+::set\+\_\+stopping\+\_\+speed (\begin{DoxyParamCaption}\item[{const double}]{stopping\+\_\+speed }\end{DoxyParamCaption})}
+
+
+
+Set stopping\+\_\+speed stopping condition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stopping\+\_\+speed} & max speed at which vehicle can be considered stopped in m/s. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 284 of file all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor.\+cpp.
+
+\mbox{\Hypertarget{classstreets__vehicles_1_1all__stop__status__intent__processor_a12a1b270d0eced95feb9e5062420a6f6}\label{classstreets__vehicles_1_1all__stop__status__intent__processor_a12a1b270d0eced95feb9e5062420a6f6}} 
+\index{streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}!set\_timeout@{set\_timeout}}
+\index{set\_timeout@{set\_timeout}!streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{set\_timeout()}{set\_timeout()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor\+::set\+\_\+timeout (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the timeout in milliseconds Timeout value controls when updates are no longer considered valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timeout} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor_a274ba0955f451100de8e340545538542}{streets\+\_\+vehicles\+::status\+\_\+intent\+\_\+processor}}.
+
+
+
+Definition at line 272 of file all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor.\+cpp.
+
+\mbox{\Hypertarget{classstreets__vehicles_1_1all__stop__status__intent__processor_ae4a3f6bc8f4d1066c476a6b8d5e8e2f9}\label{classstreets__vehicles_1_1all__stop__status__intent__processor_ae4a3f6bc8f4d1066c476a6b8d5e8e2f9}} 
+\index{streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}!update\_vehicle\_state@{update\_vehicle\_state}}
+\index{update\_vehicle\_state@{update\_vehicle\_state}!streets\_vehicles::all\_stop\_status\_intent\_processor@{streets\_vehicles::all\_stop\_status\_intent\_processor}}
+\doxysubsubsection{\texorpdfstring{update\_vehicle\_state()}{update\_vehicle\_state()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicles\+::all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor\+::update\+\_\+vehicle\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} \&}]{vehicle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Updates vehicle state based on previous state and stopping condition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicle} & reference to update \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classstreets__vehicles_1_1signalized__status__intent__processor_a50ef00017c88c5b111bab425b28de778}{streets\+\_\+vehicles\+::signalized\+\_\+status\+\_\+intent\+\_\+processor}}.
+
+
+
+Definition at line 166 of file all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__vehicles_1_1all__stop__status__intent__processor_ae4a3f6bc8f4d1066c476a6b8d5e8e2f9_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+list/include/\mbox{\hyperlink{all__stop__status__intent__processor_8h}{all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+list/src/message\+\_\+processors/\mbox{\hyperlink{all__stop__status__intent__processor_8cpp}{all\+\_\+stop\+\_\+status\+\_\+intent\+\_\+processor.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,113 @@
+\hypertarget{classtraffic__signal__controller__service_1_1spat__worker}{}\doxysection{traffic\+\_\+signal\+\_\+controller\+\_\+service\+::spat\+\_\+worker Class Reference}
+\label{classtraffic__signal__controller__service_1_1spat__worker}\index{traffic\_signal\_controller\_service::spat\_worker@{traffic\_signal\_controller\_service::spat\_worker}}
+
+
+{\ttfamily \#include $<$spat\+\_\+worker.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraffic__signal__controller__service_1_1spat__worker_a3a679b92d5d397cf74684a90ab56dab8}{spat\+\_\+worker}} (const std\+::string \&ip, const int \&port, const int \&socket\+\_\+timeout, const bool use\+\_\+msg\+\_\+timestamp)
+\begin{DoxyCompactList}\small\item\em Construct a new Spat Worker object. This will initialize the member variables to the values assigned in the manifest json file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtraffic__signal__controller__service_1_1spat__worker_ac79506c9870fa7010c7c4403939a87cb}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initilaize UDP Listener socket. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtraffic__signal__controller__service_1_1spat__worker_aa38e623a3c2a391069809669672e4014}{receive\+\_\+spat}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1spat}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::spat}} $>$ \+\_\+spat\+\_\+ptr) const
+\begin{DoxyCompactList}\small\item\em Create a UDP socket to the ip and port member variables. If it is successfully created, the received NTCIP SPaT packets and print out their content. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 15 of file spat\+\_\+worker.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1spat__worker_a3a679b92d5d397cf74684a90ab56dab8}\label{classtraffic__signal__controller__service_1_1spat__worker_a3a679b92d5d397cf74684a90ab56dab8}} 
+\index{traffic\_signal\_controller\_service::spat\_worker@{traffic\_signal\_controller\_service::spat\_worker}!spat\_worker@{spat\_worker}}
+\index{spat\_worker@{spat\_worker}!traffic\_signal\_controller\_service::spat\_worker@{traffic\_signal\_controller\_service::spat\_worker}}
+\doxysubsubsection{\texorpdfstring{spat\_worker()}{spat\_worker()}}
+{\footnotesize\ttfamily traffic\+\_\+signal\+\_\+controller\+\_\+service\+::spat\+\_\+worker\+::spat\+\_\+worker (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ip,  }\item[{const int \&}]{port,  }\item[{const int \&}]{socket\+\_\+timeout,  }\item[{const bool}]{use\+\_\+msg\+\_\+timestamp }\end{DoxyParamCaption})}
+
+
+
+Construct a new Spat Worker object. This will initialize the member variables to the values assigned in the manifest json file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip} & The ip address of the \mbox{\hyperlink{classtraffic__signal__controller__service_1_1tsc__service}{tsc\+\_\+service}} \\
+\hline
+{\em port} & The ethernet port to receive spat messages on \\
+\hline
+{\em socket\+Timeout} & Timeout, in seconds, for udp socket to TSC \\
+\hline
+{\em use\+\_\+msg\+\_\+timestamp} & bool flag which controls whether \mbox{\hyperlink{classtraffic__signal__controller__service_1_1spat__worker}{spat\+\_\+worker}} will use timestamp received from TSC of local system time to populate spat message. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 8 of file spat\+\_\+worker.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1spat__worker_ac79506c9870fa7010c7c4403939a87cb}\label{classtraffic__signal__controller__service_1_1spat__worker_ac79506c9870fa7010c7c4403939a87cb}} 
+\index{traffic\_signal\_controller\_service::spat\_worker@{traffic\_signal\_controller\_service::spat\_worker}!initialize@{initialize}}
+\index{initialize@{initialize}!traffic\_signal\_controller\_service::spat\_worker@{traffic\_signal\_controller\_service::spat\_worker}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily bool traffic\+\_\+signal\+\_\+controller\+\_\+service\+::spat\+\_\+worker\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initilaize UDP Listener socket. 
+
+\begin{DoxyReturn}{Returns}
+true if initialization is successful. 
+
+false if initialization is unsuccessful. 
+\end{DoxyReturn}
+
+
+Definition at line 14 of file spat\+\_\+worker.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classtraffic__signal__controller__service_1_1spat__worker_ac79506c9870fa7010c7c4403939a87cb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1spat__worker_aa38e623a3c2a391069809669672e4014}\label{classtraffic__signal__controller__service_1_1spat__worker_aa38e623a3c2a391069809669672e4014}} 
+\index{traffic\_signal\_controller\_service::spat\_worker@{traffic\_signal\_controller\_service::spat\_worker}!receive\_spat@{receive\_spat}}
+\index{receive\_spat@{receive\_spat}!traffic\_signal\_controller\_service::spat\_worker@{traffic\_signal\_controller\_service::spat\_worker}}
+\doxysubsubsection{\texorpdfstring{receive\_spat()}{receive\_spat()}}
+{\footnotesize\ttfamily void traffic\+\_\+signal\+\_\+controller\+\_\+service\+::spat\+\_\+worker\+::receive\+\_\+spat (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1spat}{signal\+\_\+phase\+\_\+and\+\_\+timing\+::spat}} $>$}]{\+\_\+spat\+\_\+ptr }\end{DoxyParamCaption}) const}
+
+
+
+Create a UDP socket to the ip and port member variables. If it is successfully created, the received NTCIP SPaT packets and print out their content. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classtraffic__signal__controller__service_1_1udp__socket__listener__exception}{udp\+\_\+socket\+\_\+listener\+\_\+exception}}} & if the UDP socket fails to connect or the connection times out. The connection will timout after a configurable ammount of time if no data is received at UDP socket. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 23 of file spat\+\_\+worker.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classtraffic__signal__controller__service_1_1spat__worker_aa38e623a3c2a391069809669672e4014_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tsc\+\_\+client\+\_\+service/include/\mbox{\hyperlink{spat__worker_8h}{spat\+\_\+worker.\+h}}\item 
+tsc\+\_\+client\+\_\+service/src/\mbox{\hyperlink{spat__worker_8cpp}{spat\+\_\+worker.\+cpp}}\end{DoxyCompactItemize}

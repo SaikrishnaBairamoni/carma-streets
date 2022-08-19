@@ -1,0 +1,6 @@
+<map id="traffic_signal_controller_service::tsc_service::produce_spat_json" name="traffic_signal_controller_service::tsc_service::produce_spat_json">
+<area shape="rect" id="node1" title="Method to receive UDP data from traffic signal controller and broadcast spat JSON data to the carma&#45;s..." alt="" coords="351,27,525,83"/>
+<area shape="rect" id="node2" href="$classtraffic__signal__controller__service_1_1tsc__service.html#a9e2ac871cb45ef4a98354ca5bc49b25b" title="Method to start all threads included in the tsc_service." alt="" coords="108,5,303,47"/>
+<area shape="rect" id="node4" href="$test__tsc__service_8cpp.html#aecd04f28df9d7d854f749254d2d5cb84" title=" " alt="" coords="171,71,240,98"/>
+<area shape="rect" id="node3" href="$tsc__client__service_2src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,60,39"/>
+</map>

@@ -1,0 +1,221 @@
+\hypertarget{structsignal__phase__and__timing_1_1movement__event}{}\doxysection{signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+event Struct Reference}
+\label{structsignal__phase__and__timing_1_1movement__event}\index{signal\_phase\_and\_timing::movement\_event@{signal\_phase\_and\_timing::movement\_event}}
+
+
+{\ttfamily \#include $<$movement\+\_\+event.\+h$>$}
+
+
+
+Collaboration diagram for signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+event\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{structsignal__phase__and__timing_1_1movement__event__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+rapidjson\+::\+Value \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__event_a6c4d996501575d1e4a23f4ec9b6302a5}{to\+Json}} (rapidjson\+::\+Document\+::\+Allocator\+Type \&allocator) const
+\begin{DoxyCompactList}\small\item\em Serialize Movement Event object to rapidjson\+::\+Value for writing as JSON string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__event_a9e78abda6f76b9e03a27859d4003fbb6}{from\+Json}} (const rapidjson\+::\+Value \&val)
+\begin{DoxyCompactList}\small\item\em Deserialize Movement Event JSON into Movement Event object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__event_a8e94151e3b0f53eacd2048ed71539bc5}{operator==}} (const \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__event}{movement\+\_\+event}} \&other) const
+\begin{DoxyCompactList}\small\item\em Equals operator to asses whether two objects contain equivalent data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__event_a778f1d6d3e74342ccb3984ac914fd248}{operator!=}} (const \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__event}{movement\+\_\+event}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns the inverse of equals operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14}{movement\+\_\+phase\+\_\+state}} \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__event_a6915afd2a08ca17039c92830ee633a30}{event\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Consisting of Phase state (the basic 11 states) Directional, protected or permissive state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details}{time\+\_\+change\+\_\+details}} \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__event_a6250e85c7ca1b039806b6326812648d3}{timing}}
+\begin{DoxyCompactList}\small\item\em Timing data in UTC time stamps for events. This includes state and min/max end times of phase confidence and estimated next occurrence. \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1advisory__speed}{advisory\+\_\+speed}} $>$ \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__event_a93d9f5d5ef86806e6c4c1418fa0682ee}{speeds}}
+\begin{DoxyCompactList}\small\item\em Various speed advisories for use by general and specific types of vehicles supporting green-\/wave and other flow needs (units m/s) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 110 of file movement\+\_\+event.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1movement__event_a9e78abda6f76b9e03a27859d4003fbb6}\label{structsignal__phase__and__timing_1_1movement__event_a9e78abda6f76b9e03a27859d4003fbb6}} 
+\index{signal\_phase\_and\_timing::movement\_event@{signal\_phase\_and\_timing::movement\_event}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!signal\_phase\_and\_timing::movement\_event@{signal\_phase\_and\_timing::movement\_event}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily void signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+event\+::from\+Json (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Deserialize Movement Event JSON into Movement Event object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Movement Event JSON. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file movement\+\_\+event.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1movement__event_a9e78abda6f76b9e03a27859d4003fbb6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1movement__event_a9e78abda6f76b9e03a27859d4003fbb6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1movement__event_a778f1d6d3e74342ccb3984ac914fd248}\label{structsignal__phase__and__timing_1_1movement__event_a778f1d6d3e74342ccb3984ac914fd248}} 
+\index{signal\_phase\_and\_timing::movement\_event@{signal\_phase\_and\_timing::movement\_event}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!signal\_phase\_and\_timing::movement\_event@{signal\_phase\_and\_timing::movement\_event}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+event\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__event}{movement\+\_\+event}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns the inverse of equals operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & second object to compare current object with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both objects do not contain equivalent data. 
+
+false if both objects do contain equivalent data. 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file movement\+\_\+event.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1movement__event_a778f1d6d3e74342ccb3984ac914fd248_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1movement__event_a8e94151e3b0f53eacd2048ed71539bc5}\label{structsignal__phase__and__timing_1_1movement__event_a8e94151e3b0f53eacd2048ed71539bc5}} 
+\index{signal\_phase\_and\_timing::movement\_event@{signal\_phase\_and\_timing::movement\_event}!operator==@{operator==}}
+\index{operator==@{operator==}!signal\_phase\_and\_timing::movement\_event@{signal\_phase\_and\_timing::movement\_event}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+event\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsignal__phase__and__timing_1_1movement__event}{movement\+\_\+event}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Equals operator to asses whether two objects contain equivalent data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em compare} & second object to compare current object with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both object contain equivalent data. 
+
+false if not. 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file movement\+\_\+event.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1movement__event_a8e94151e3b0f53eacd2048ed71539bc5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1movement__event_a6c4d996501575d1e4a23f4ec9b6302a5}\label{structsignal__phase__and__timing_1_1movement__event_a6c4d996501575d1e4a23f4ec9b6302a5}} 
+\index{signal\_phase\_and\_timing::movement\_event@{signal\_phase\_and\_timing::movement\_event}!toJson@{toJson}}
+\index{toJson@{toJson}!signal\_phase\_and\_timing::movement\_event@{signal\_phase\_and\_timing::movement\_event}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily rapidjson\+::\+Value signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+event\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Document\+::\+Allocator\+Type \&}]{allocator }\end{DoxyParamCaption}) const}
+
+
+
+Serialize Movement Event object to rapidjson\+::\+Value for writing as JSON string. 
+
+\begin{DoxyReturn}{Returns}
+rapidjson\+::\+Value serialize Movement Event object 
+\end{DoxyReturn}
+
+
+Definition at line 5 of file movement\+\_\+event.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1movement__event_a6c4d996501575d1e4a23f4ec9b6302a5_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1movement__event_a6915afd2a08ca17039c92830ee633a30}\label{structsignal__phase__and__timing_1_1movement__event_a6915afd2a08ca17039c92830ee633a30}} 
+\index{signal\_phase\_and\_timing::movement\_event@{signal\_phase\_and\_timing::movement\_event}!event\_state@{event\_state}}
+\index{event\_state@{event\_state}!signal\_phase\_and\_timing::movement\_event@{signal\_phase\_and\_timing::movement\_event}}
+\doxysubsubsection{\texorpdfstring{event\_state}{event\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesignal__phase__and__timing_a89bd5b280352669f719b2c36a9dc2a14}{movement\+\_\+phase\+\_\+state}} signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+event\+::event\+\_\+state}
+
+
+
+Consisting of Phase state (the basic 11 states) Directional, protected or permissive state. 
+
+
+
+Definition at line 115 of file movement\+\_\+event.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1movement__event_a93d9f5d5ef86806e6c4c1418fa0682ee}\label{structsignal__phase__and__timing_1_1movement__event_a93d9f5d5ef86806e6c4c1418fa0682ee}} 
+\index{signal\_phase\_and\_timing::movement\_event@{signal\_phase\_and\_timing::movement\_event}!speeds@{speeds}}
+\index{speeds@{speeds}!signal\_phase\_and\_timing::movement\_event@{signal\_phase\_and\_timing::movement\_event}}
+\doxysubsubsection{\texorpdfstring{speeds}{speeds}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{structsignal__phase__and__timing_1_1advisory__speed}{advisory\+\_\+speed}}$>$ signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+event\+::speeds}
+
+
+
+Various speed advisories for use by general and specific types of vehicles supporting green-\/wave and other flow needs (units m/s) 
+
+
+
+Definition at line 127 of file movement\+\_\+event.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1movement__event_a6250e85c7ca1b039806b6326812648d3}\label{structsignal__phase__and__timing_1_1movement__event_a6250e85c7ca1b039806b6326812648d3}} 
+\index{signal\_phase\_and\_timing::movement\_event@{signal\_phase\_and\_timing::movement\_event}!timing@{timing}}
+\index{timing@{timing}!signal\_phase\_and\_timing::movement\_event@{signal\_phase\_and\_timing::movement\_event}}
+\doxysubsubsection{\texorpdfstring{timing}{timing}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsignal__phase__and__timing_1_1time__change__details}{time\+\_\+change\+\_\+details}} signal\+\_\+phase\+\_\+and\+\_\+timing\+::movement\+\_\+event\+::timing}
+
+
+
+Timing data in UTC time stamps for events. This includes state and min/max end times of phase confidence and estimated next occurrence. 
+
+
+
+Definition at line 121 of file movement\+\_\+event.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing/include/\mbox{\hyperlink{movement__event_8h}{movement\+\_\+event.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing/src/models/\mbox{\hyperlink{movement__event_8cpp}{movement\+\_\+event.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="scheduling_service::scheduling_service::initialize" name="scheduling_service::scheduling_service::initialize">
+<area shape="rect" id="node1" title="Initialize the consumer, producer, and scheduling workers. Create a vehicle list and scheduler object..." alt="" coords="5,31,160,87"/>
+<area shape="rect" id="node2" href="$classstreets__service_1_1streets__configuration.html#a48f38b0b6ecb3043cc051b624f12824b" title="Retreive configuration parameter boolean value with provide name." alt="" coords="208,5,456,47"/>
+<area shape="rect" id="node3" href="$classstreets__service_1_1streets__configuration.html#a03603871626201e07690effb9f2440bf" title="Retreive configuration parameter string value with provided name." alt="" coords="215,71,449,112"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node1" title=" " alt="" coords="5,64,60,91"/>
+<area shape="rect" id="node2" href="$classintersection__model_1_1intersection__model.html#a3b97832c22d8c30c2530e1f523c809b6" title="Getter for lanelet2 map." alt="" coords="109,5,264,61"/>
+<area shape="rect" id="node3" href="$classintersection__model_1_1intersection__model.html#a480e7966ce3d9bd7422f1d59fcf6bae0" title="Retrieve the speed_limit of the current lanelet." alt="" coords="108,86,265,157"/>
+</map>

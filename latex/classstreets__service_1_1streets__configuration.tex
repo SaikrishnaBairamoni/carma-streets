@@ -1,0 +1,450 @@
+\hypertarget{classstreets__service_1_1streets__configuration}{}\doxysection{streets\+\_\+service\+::streets\+\_\+configuration Class Reference}
+\label{classstreets__service_1_1streets__configuration}\index{streets\_service::streets\_configuration@{streets\_service::streets\_configuration}}
+
+
+Streets \mbox{\hyperlink{structConfiguration}{Configuration}} singleton scoped object that parses manifest.\+json configuration file and offers static access to the configuration parameter values. Singleton also configures default multisink logger file and terminal logger.  
+
+
+
+
+{\ttfamily \#include $<$streets\+\_\+configuration.\+h$>$}
+
+
+
+Inheritance diagram for streets\+\_\+service\+::streets\+\_\+configuration\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{classstreets__service_1_1streets__configuration__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for streets\+\_\+service\+::streets\+\_\+configuration\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{classstreets__service_1_1streets__configuration__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classstreets__service_1_1streets__configuration_a03603871626201e07690effb9f2440bf}{get\+\_\+string\+\_\+config}} (const std\+::string \&config\+\_\+param\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Retreive configuration parameter string value with provided name. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classstreets__service_1_1streets__configuration_ab33a5d183c0ca2b2f0d757f5466f200b}{get\+\_\+int\+\_\+config}} (const std\+::string \&config\+\_\+param\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Retreive configuration parameter integer value with provided name. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{classstreets__service_1_1streets__configuration_ae1ce5cdd4b4d28cc8e4034c429aabb66}{get\+\_\+double\+\_\+config}} (const std\+::string \&config\+\_\+param\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Retreive configuration parameter double value with provide name. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classstreets__service_1_1streets__configuration_a48f38b0b6ecb3043cc051b624f12824b}{get\+\_\+boolean\+\_\+config}} (const std\+::string \&config\+\_\+param\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Retreive configuration parameter boolean value with provide name. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classstreets__service_1_1streets__configuration_a8f1dd2ae49aae6b730a041889177c8e6}{initialize\+\_\+logger}} ()
+\begin{DoxyCompactList}\small\item\em Static method to initialize spdlog default logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+rapidjson\+::\+Document \mbox{\hyperlink{classstreets__service_1_1streets__configuration_acf5b0a74be5323a4efe6e623f230ef85}{parse\+\_\+configuration\+\_\+file}} ()
+\begin{DoxyCompactList}\small\item\em Parse manifest.\+json configuration file for CARMA-\/\+Streets service and update configurations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__service_1_1streets__configuration_add8020786e63d730992680e57bde66b3}{update\+\_\+configuration}} (const rapidjson\+::\+Document \&doc)
+\begin{DoxyCompactList}\small\item\em Update configuration parameters using json Document. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__service_1_1streets__configuration_ac3be4830490f02d88d5fa5c23c8aa5e1}{update\+\_\+log\+\_\+level}} (const rapidjson\+::\+Document \&doc)
+\begin{DoxyCompactList}\small\item\em Update loglevel for logger using json Document. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__service_1_1streets__configuration_abf6b664ead9e4d6f9f77c2ad26cec13b}{parse\+\_\+configurations\+\_\+array}} (const rapidjson\+::\+Generic\+Array$<$ true, rapidjson\+::\+Value $>$ \&arr)
+\begin{DoxyCompactList}\small\item\em Helper method that reads the configurations array inside the manifest.\+json configuration file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__service_1_1streets__configuration_a3a54dfe5fa3466b8568229a458d344fc}{configure\+\_\+logger}} (const rapidjson\+::\+Document \&doc) const
+\begin{DoxyCompactList}\small\item\em Method to read service level configurations from manifest.\+json file to configure default logger and set log level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__service_1_1streets__configuration_a73e05345064161cb34c629881622c068}{create\+\_\+default\+\_\+logger}} (const std\+::string \&service\+\_\+name) const
+\begin{DoxyCompactList}\small\item\em Method to configuration spdlog default multisink logger. Includes a file sink which rotates daily and terminal sink. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__service_1_1streets__configuration_af65edea791c4df09b00836dd0dbf164d}{set\+\_\+loglevel}} (const std\+::string \&loglevel) const
+\begin{DoxyCompactList}\small\item\em Method to set the spdlog\+::default. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__service_1_1streets__configuration_a595d66c854ec6d7bb85d975721b5cde3}{check\+\_\+update}} ()
+\begin{DoxyCompactList}\small\item\em Method to check last modified time of file to see if a file update is necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static T \& \mbox{\hyperlink{classstreets__service_1_1streets__configuration_ab852bda1883b9725a90b35a9e118b3f0}{get\+\_\+singleton}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classstreets__service_1_1streets__configuration_abd4f1d45bc4408d5ed68ded4e27cb8ed}{streets\+\_\+singleton$<$ streets\+\_\+configuration $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Streets \mbox{\hyperlink{structConfiguration}{Configuration}} singleton scoped object that parses manifest.\+json configuration file and offers static access to the configuration parameter values. Singleton also configures default multisink logger file and terminal logger. 
+
+Definition at line 27 of file streets\+\_\+configuration.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstreets__service_1_1streets__configuration_a595d66c854ec6d7bb85d975721b5cde3}\label{classstreets__service_1_1streets__configuration_a595d66c854ec6d7bb85d975721b5cde3}} 
+\index{streets\_service::streets\_configuration@{streets\_service::streets\_configuration}!check\_update@{check\_update}}
+\index{check\_update@{check\_update}!streets\_service::streets\_configuration@{streets\_service::streets\_configuration}}
+\doxysubsubsection{\texorpdfstring{check\_update()}{check\_update()}}
+{\footnotesize\ttfamily void streets\+\_\+service\+::streets\+\_\+configuration\+::check\+\_\+update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method to check last modified time of file to see if a file update is necessary. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classstreets__service_1_1streets__configuration__exception}{streets\+\_\+configuration\+\_\+exception}}} & if update\+\_\+configurations fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 206 of file streets\+\_\+configuration.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__service_1_1streets__configuration_a595d66c854ec6d7bb85d975721b5cde3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__service_1_1streets__configuration_a3a54dfe5fa3466b8568229a458d344fc}\label{classstreets__service_1_1streets__configuration_a3a54dfe5fa3466b8568229a458d344fc}} 
+\index{streets\_service::streets\_configuration@{streets\_service::streets\_configuration}!configure\_logger@{configure\_logger}}
+\index{configure\_logger@{configure\_logger}!streets\_service::streets\_configuration@{streets\_service::streets\_configuration}}
+\doxysubsubsection{\texorpdfstring{configure\_logger()}{configure\_logger()}}
+{\footnotesize\ttfamily void streets\+\_\+service\+::streets\+\_\+configuration\+::configure\+\_\+logger (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Document \&}]{doc }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method to read service level configurations from manifest.\+json file to configure default logger and set log level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em doc} & rapidjson\+::\+Document containing parse manifest.\+json configuration file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file streets\+\_\+configuration.\+cpp.
+
+\mbox{\Hypertarget{classstreets__service_1_1streets__configuration_a73e05345064161cb34c629881622c068}\label{classstreets__service_1_1streets__configuration_a73e05345064161cb34c629881622c068}} 
+\index{streets\_service::streets\_configuration@{streets\_service::streets\_configuration}!create\_default\_logger@{create\_default\_logger}}
+\index{create\_default\_logger@{create\_default\_logger}!streets\_service::streets\_configuration@{streets\_service::streets\_configuration}}
+\doxysubsubsection{\texorpdfstring{create\_default\_logger()}{create\_default\_logger()}}
+{\footnotesize\ttfamily void streets\+\_\+service\+::streets\+\_\+configuration\+::create\+\_\+default\+\_\+logger (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{service\+\_\+name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method to configuration spdlog default multisink logger. Includes a file sink which rotates daily and terminal sink. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\+\_\+name} & string which is obtained form the manifest.\+json configuration file and used as part of the naming convention for log files. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 178 of file streets\+\_\+configuration.\+cpp.
+
+\mbox{\Hypertarget{classstreets__service_1_1streets__configuration_a48f38b0b6ecb3043cc051b624f12824b}\label{classstreets__service_1_1streets__configuration_a48f38b0b6ecb3043cc051b624f12824b}} 
+\index{streets\_service::streets\_configuration@{streets\_service::streets\_configuration}!get\_boolean\_config@{get\_boolean\_config}}
+\index{get\_boolean\_config@{get\_boolean\_config}!streets\_service::streets\_configuration@{streets\_service::streets\_configuration}}
+\doxysubsubsection{\texorpdfstring{get\_boolean\_config()}{get\_boolean\_config()}}
+{\footnotesize\ttfamily bool streets\+\_\+service\+::streets\+\_\+configuration\+::get\+\_\+boolean\+\_\+config (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{config\+\_\+param\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retreive configuration parameter boolean value with provide name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config\+\_\+param\+\_\+name} & configuration parameter name. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classstreets__service_1_1streets__configuration__exception}{streets\+\_\+configuration\+\_\+exception}}} & if configuration is not of data\+\_\+type BOOL. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+bool configuration value. 
+\end{DoxyReturn}
+
+
+Definition at line 149 of file streets\+\_\+configuration.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__service_1_1streets__configuration_a48f38b0b6ecb3043cc051b624f12824b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__service_1_1streets__configuration_ae1ce5cdd4b4d28cc8e4034c429aabb66}\label{classstreets__service_1_1streets__configuration_ae1ce5cdd4b4d28cc8e4034c429aabb66}} 
+\index{streets\_service::streets\_configuration@{streets\_service::streets\_configuration}!get\_double\_config@{get\_double\_config}}
+\index{get\_double\_config@{get\_double\_config}!streets\_service::streets\_configuration@{streets\_service::streets\_configuration}}
+\doxysubsubsection{\texorpdfstring{get\_double\_config()}{get\_double\_config()}}
+{\footnotesize\ttfamily double streets\+\_\+service\+::streets\+\_\+configuration\+::get\+\_\+double\+\_\+config (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{config\+\_\+param\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retreive configuration parameter double value with provide name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config\+\_\+param\+\_\+name} & configuration parameter name. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classstreets__service_1_1streets__configuration__exception}{streets\+\_\+configuration\+\_\+exception}}} & if configuration is not of data\+\_\+type DOUBLE. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+double configuration value. 
+\end{DoxyReturn}
+
+
+Definition at line 134 of file streets\+\_\+configuration.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__service_1_1streets__configuration_ae1ce5cdd4b4d28cc8e4034c429aabb66_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__service_1_1streets__configuration_ab33a5d183c0ca2b2f0d757f5466f200b}\label{classstreets__service_1_1streets__configuration_ab33a5d183c0ca2b2f0d757f5466f200b}} 
+\index{streets\_service::streets\_configuration@{streets\_service::streets\_configuration}!get\_int\_config@{get\_int\_config}}
+\index{get\_int\_config@{get\_int\_config}!streets\_service::streets\_configuration@{streets\_service::streets\_configuration}}
+\doxysubsubsection{\texorpdfstring{get\_int\_config()}{get\_int\_config()}}
+{\footnotesize\ttfamily int streets\+\_\+service\+::streets\+\_\+configuration\+::get\+\_\+int\+\_\+config (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{config\+\_\+param\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retreive configuration parameter integer value with provided name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config\+\_\+param\+\_\+name} & configuration parameter name. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classstreets__service_1_1streets__configuration__exception}{streets\+\_\+configuration\+\_\+exception}}} & if configuration is not of data\+\_\+type INTEGER. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+int configuration value. 
+\end{DoxyReturn}
+
+
+Definition at line 118 of file streets\+\_\+configuration.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__service_1_1streets__configuration_ab33a5d183c0ca2b2f0d757f5466f200b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__service_1_1streets__configuration_ab852bda1883b9725a90b35a9e118b3f0}\label{classstreets__service_1_1streets__configuration_ab852bda1883b9725a90b35a9e118b3f0}} 
+\index{streets\_service::streets\_configuration@{streets\_service::streets\_configuration}!get\_singleton@{get\_singleton}}
+\index{get\_singleton@{get\_singleton}!streets\_service::streets\_configuration@{streets\_service::streets\_configuration}}
+\doxysubsubsection{\texorpdfstring{get\_singleton()}{get\_singleton()}}
+{\footnotesize\ttfamily static T\& \mbox{\hyperlink{classstreets__service_1_1streets__singleton}{streets\+\_\+service\+::streets\+\_\+singleton}}$<$ T $>$\+::get\+\_\+singleton\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Method for static singleton instance retrieval \begin{DoxyReturn}{Returns}
+T singleton instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstreets__service_1_1streets__configuration_a03603871626201e07690effb9f2440bf}\label{classstreets__service_1_1streets__configuration_a03603871626201e07690effb9f2440bf}} 
+\index{streets\_service::streets\_configuration@{streets\_service::streets\_configuration}!get\_string\_config@{get\_string\_config}}
+\index{get\_string\_config@{get\_string\_config}!streets\_service::streets\_configuration@{streets\_service::streets\_configuration}}
+\doxysubsubsection{\texorpdfstring{get\_string\_config()}{get\_string\_config()}}
+{\footnotesize\ttfamily std\+::string streets\+\_\+service\+::streets\+\_\+configuration\+::get\+\_\+string\+\_\+config (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{config\+\_\+param\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retreive configuration parameter string value with provided name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config\+\_\+param\+\_\+name} & configuration parameter name. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classstreets__service_1_1streets__configuration__exception}{streets\+\_\+configuration\+\_\+exception}}} & if configuration is not of data\+\_\+type STRING. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+string configuration value. 
+\end{DoxyReturn}
+
+
+Definition at line 103 of file streets\+\_\+configuration.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__service_1_1streets__configuration_a03603871626201e07690effb9f2440bf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__service_1_1streets__configuration_a8f1dd2ae49aae6b730a041889177c8e6}\label{classstreets__service_1_1streets__configuration_a8f1dd2ae49aae6b730a041889177c8e6}} 
+\index{streets\_service::streets\_configuration@{streets\_service::streets\_configuration}!initialize\_logger@{initialize\_logger}}
+\index{initialize\_logger@{initialize\_logger}!streets\_service::streets\_configuration@{streets\_service::streets\_configuration}}
+\doxysubsubsection{\texorpdfstring{initialize\_logger()}{initialize\_logger()}}
+{\footnotesize\ttfamily void streets\+\_\+service\+::streets\+\_\+configuration\+::initialize\+\_\+logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Static method to initialize spdlog default logger. 
+
+
+
+Definition at line 200 of file streets\+\_\+configuration.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__service_1_1streets__configuration_a8f1dd2ae49aae6b730a041889177c8e6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__service_1_1streets__configuration_acf5b0a74be5323a4efe6e623f230ef85}\label{classstreets__service_1_1streets__configuration_acf5b0a74be5323a4efe6e623f230ef85}} 
+\index{streets\_service::streets\_configuration@{streets\_service::streets\_configuration}!parse\_configuration\_file@{parse\_configuration\_file}}
+\index{parse\_configuration\_file@{parse\_configuration\_file}!streets\_service::streets\_configuration@{streets\_service::streets\_configuration}}
+\doxysubsubsection{\texorpdfstring{parse\_configuration\_file()}{parse\_configuration\_file()}}
+{\footnotesize\ttfamily rapidjson\+::\+Document streets\+\_\+service\+::streets\+\_\+configuration\+::parse\+\_\+configuration\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Parse manifest.\+json configuration file for CARMA-\/\+Streets service and update configurations. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classstreets__service_1_1streets__configuration__exception}{streets\+\_\+configuration\+\_\+exception}}} & if cannot open manifest.\+json configuration file or has json parse error. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+rapidjson\+::\+Document containing parsed manifest.\+json. 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file streets\+\_\+configuration.\+cpp.
+
+\mbox{\Hypertarget{classstreets__service_1_1streets__configuration_abf6b664ead9e4d6f9f77c2ad26cec13b}\label{classstreets__service_1_1streets__configuration_abf6b664ead9e4d6f9f77c2ad26cec13b}} 
+\index{streets\_service::streets\_configuration@{streets\_service::streets\_configuration}!parse\_configurations\_array@{parse\_configurations\_array}}
+\index{parse\_configurations\_array@{parse\_configurations\_array}!streets\_service::streets\_configuration@{streets\_service::streets\_configuration}}
+\doxysubsubsection{\texorpdfstring{parse\_configurations\_array()}{parse\_configurations\_array()}}
+{\footnotesize\ttfamily void streets\+\_\+service\+::streets\+\_\+configuration\+::parse\+\_\+configurations\+\_\+array (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Generic\+Array$<$ true, rapidjson\+::\+Value $>$ \&}]{arr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Helper method that reads the configurations array inside the manifest.\+json configuration file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & rapidjson\+::\+Generic\+Array holding values from configurations element of the manifest.\+json file. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classstreets__service_1_1streets__configuration__exception}{streets\+\_\+configuration\+\_\+exception}}} & if configurations json object array is incorrectly formatted. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 77 of file streets\+\_\+configuration.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classstreets__service_1_1streets__configuration_abf6b664ead9e4d6f9f77c2ad26cec13b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classstreets__service_1_1streets__configuration_af65edea791c4df09b00836dd0dbf164d}\label{classstreets__service_1_1streets__configuration_af65edea791c4df09b00836dd0dbf164d}} 
+\index{streets\_service::streets\_configuration@{streets\_service::streets\_configuration}!set\_loglevel@{set\_loglevel}}
+\index{set\_loglevel@{set\_loglevel}!streets\_service::streets\_configuration@{streets\_service::streets\_configuration}}
+\doxysubsubsection{\texorpdfstring{set\_loglevel()}{set\_loglevel()}}
+{\footnotesize\ttfamily void streets\+\_\+service\+::streets\+\_\+configuration\+::set\+\_\+loglevel (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{loglevel }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method to set the spdlog\+::default. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classstreets__service_1_1streets__configuration__exception}{streets\+\_\+configuration\+\_\+exception}}} & if default logger has not been configured and registered. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 165 of file streets\+\_\+configuration.\+cpp.
+
+\mbox{\Hypertarget{classstreets__service_1_1streets__configuration_add8020786e63d730992680e57bde66b3}\label{classstreets__service_1_1streets__configuration_add8020786e63d730992680e57bde66b3}} 
+\index{streets\_service::streets\_configuration@{streets\_service::streets\_configuration}!update\_configuration@{update\_configuration}}
+\index{update\_configuration@{update\_configuration}!streets\_service::streets\_configuration@{streets\_service::streets\_configuration}}
+\doxysubsubsection{\texorpdfstring{update\_configuration()}{update\_configuration()}}
+{\footnotesize\ttfamily void streets\+\_\+service\+::streets\+\_\+configuration\+::update\+\_\+configuration (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Document \&}]{doc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Update configuration parameters using json Document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em doc} & rapidjson\+::\+Document containing parsed manifest.\+json file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 57 of file streets\+\_\+configuration.\+cpp.
+
+\mbox{\Hypertarget{classstreets__service_1_1streets__configuration_ac3be4830490f02d88d5fa5c23c8aa5e1}\label{classstreets__service_1_1streets__configuration_ac3be4830490f02d88d5fa5c23c8aa5e1}} 
+\index{streets\_service::streets\_configuration@{streets\_service::streets\_configuration}!update\_log\_level@{update\_log\_level}}
+\index{update\_log\_level@{update\_log\_level}!streets\_service::streets\_configuration@{streets\_service::streets\_configuration}}
+\doxysubsubsection{\texorpdfstring{update\_log\_level()}{update\_log\_level()}}
+{\footnotesize\ttfamily void streets\+\_\+service\+::streets\+\_\+configuration\+::update\+\_\+log\+\_\+level (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Document \&}]{doc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Update loglevel for logger using json Document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em doc} & rapidjson\+::\+Document containing parsed manifest.\+json file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 67 of file streets\+\_\+configuration.\+cpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classstreets__service_1_1streets__configuration_abd4f1d45bc4408d5ed68ded4e27cb8ed}\label{classstreets__service_1_1streets__configuration_abd4f1d45bc4408d5ed68ded4e27cb8ed}} 
+\index{streets\_service::streets\_configuration@{streets\_service::streets\_configuration}!streets\_singleton$<$ streets\_configuration $>$@{streets\_singleton$<$ streets\_configuration $>$}}
+\index{streets\_singleton$<$ streets\_configuration $>$@{streets\_singleton$<$ streets\_configuration $>$}!streets\_service::streets\_configuration@{streets\_service::streets\_configuration}}
+\doxysubsubsection{\texorpdfstring{streets\_singleton$<$ streets\_configuration $>$}{streets\_singleton< streets\_configuration >}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classstreets__service_1_1streets__singleton}{streets\+\_\+singleton}}$<$ \mbox{\hyperlink{classstreets__service_1_1streets__configuration}{streets\+\_\+configuration}} $>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 1 of file streets\+\_\+configuration.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+service\+\_\+base/include/\mbox{\hyperlink{streets__configuration_8h}{streets\+\_\+configuration.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+service\+\_\+base/src/\mbox{\hyperlink{streets__configuration_8cpp}{streets\+\_\+configuration.\+cpp}}\end{DoxyCompactItemize}

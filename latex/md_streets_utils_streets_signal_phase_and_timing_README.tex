@@ -1,0 +1,159 @@
+\hypertarget{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md90}{}\doxysection{Introduction}\label{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md90}
+This CARMA-\/\+Streets library is meant to handle JSON serialization and deserialization for the CARMA-\/\+Streets internal SPaT JSON message. The message structure is heavily based on the J2735 SPaT message but does not contain any regional extension data since we are currently not using it. Below is a sample SPaT JSON message created by this library. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    "{}time\_stamp"{}:130,}
+\DoxyCodeLine{    "{}name"{}:"{}"{},}
+\DoxyCodeLine{    "{}intersections"{}:[}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            "{}name"{}:"{}West Intersection"{},}
+\DoxyCodeLine{            "{}id"{}:1909,}
+\DoxyCodeLine{            "{}revision"{}:123,}
+\DoxyCodeLine{            "{}status"{}:"{}01001001001"{},}
+\DoxyCodeLine{            "{}moy"{}:34232,}
+\DoxyCodeLine{            "{}time\_stamp"{}:130,}
+\DoxyCodeLine{            "{}enabled\_lanes"{}:[1,3,5],}
+\DoxyCodeLine{            "{}states"{}:[}
+\DoxyCodeLine{                \{}
+\DoxyCodeLine{                    "{}movement\_name"{}:"{}Right Turn"{},}
+\DoxyCodeLine{                    "{}signal\_group"{}:4,}
+\DoxyCodeLine{                    "{}state\_time\_speed"{}:[}
+\DoxyCodeLine{                        \{}
+\DoxyCodeLine{                            "{}event\_state"{}:3,}
+\DoxyCodeLine{                            "{}timing"{}:\{}
+\DoxyCodeLine{                                "{}start\_time"{}:0,  }
+\DoxyCodeLine{                                "{}min\_end\_time"{}:0,}
+\DoxyCodeLine{                                "{}max\_end\_time"{}:0,}
+\DoxyCodeLine{                                "{}likely\_time"{}:0,}
+\DoxyCodeLine{                                "{}confidence"{}:0}
+\DoxyCodeLine{                            \},}
+\DoxyCodeLine{                            "{}speeds"{}:[}
+\DoxyCodeLine{                                \{}
+\DoxyCodeLine{                                    "{}type"{}:0,}
+\DoxyCodeLine{                                    "{}speed\_limit"{}:4,}
+\DoxyCodeLine{                                    "{}speed\_confidence"{}:1,}
+\DoxyCodeLine{                                    "{}distance"{}:5,}
+\DoxyCodeLine{                                    "{}class"{}:5}
+\DoxyCodeLine{                                \}}
+\DoxyCodeLine{                            ]}
+\DoxyCodeLine{                        \}],}
+\DoxyCodeLine{                        "{}maneuver\_assist\_list"{}:[}
+\DoxyCodeLine{                            \{}
+\DoxyCodeLine{                                "{}connection\_id"{}:7,}
+\DoxyCodeLine{                                "{}queue\_length"{}:4,}
+\DoxyCodeLine{                                "{}available\_storage\_length"{}:8,}
+\DoxyCodeLine{                                "{}wait\_on\_stop"{}:true,}
+\DoxyCodeLine{                                "{}ped\_bicycle\_detect"{}:false}
+\DoxyCodeLine{                            \}]}
+\DoxyCodeLine{                \}],}
+\DoxyCodeLine{                "{}maneuver\_assist\_list"{}:[}
+\DoxyCodeLine{                    \{}
+\DoxyCodeLine{                        "{}connection\_id"{}:7,}
+\DoxyCodeLine{                        "{}queue\_length"{}:4,}
+\DoxyCodeLine{                        "{}available\_storage\_length"{}:8,}
+\DoxyCodeLine{                        "{}wait\_on\_stop"{}:true,}
+\DoxyCodeLine{                        "{}ped\_bicycle\_detect"{}:false}
+\DoxyCodeLine{                    \}]}
+\DoxyCodeLine{        \}]}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \hypertarget{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md91}{}\doxysection{SPa\+T Traffic Signal State Information}\label{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md91}
+The two relevant portions of the SPaT JSON message for managing traffic signal {\bfseries{states}} Movement\+List and the {\bfseries{state-\/time-\/speed}} Movement\+Event\+List. The {\bfseries{states}} Movement\+List is a list of Movement\+States. Each describes the state of a particular movement in the intersection. These can be identified by their {\bfseries{signal\+\_\+group\+\_\+id}} which is the unique identifier for the signal group that controls this movement. Inside each Movement\+State there is a {\bfseries{state-\/time-\/speed}} Movement\+Event\+List. This is a list of Movement\+Events. Each Movement\+Event has information about the phase as a Movement\+Phase\+State enumeration and timing information about the start and end time of the described phase. Each Movement\+Event\+List can hold 16 possible Movement\+Events (limitation of J2735 not this data type) to describe a current phase and up to 15 future phases. Each Movement\+Event contains {\bfseries{timing}} information which will include at minimum, {\bfseries{start\+\_\+time}} and {\bfseries{min\+\_\+end\+\_\+time}}. These fields will represent the start and end time for each phase and are represented as tenths of a second in the current or next hour in units of 1/10th second from UTC time.\+A range of 0$\sim$36000 covers one hour.\+The values 35991..35999 are used when a leap second occurs.\+The value 36000 is used to indicate time $>$3600 seconds. 36001 is to be used when value undefined or unknown. Note that this is NOT expressed in GPS time or in local time Below is an example JSON for the described objects.(J2735 Time\+Mark definition). 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{"{}states"{}:[}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        "{}signal\_group"{}:1,}
+\DoxyCodeLine{        "{}state\_time\_speed"{}:[}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                "{}event\_state"{}:3,  // RED light see movement\_phase\_state}
+\DoxyCodeLine{                "{}timing"{}:\{}
+\DoxyCodeLine{                    "{}start\_time"{}:0,  }
+\DoxyCodeLine{                    "{}min\_end\_time"{}:10000}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{            \},}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                "{}event\_state"{}:6,  // Protected GREEN light see movement\_phase\_state}
+\DoxyCodeLine{                "{}timing"{}:\{}
+\DoxyCodeLine{                    "{}start\_time"{}:10000,  }
+\DoxyCodeLine{                    "{}min\_end\_time"{}:25000}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{            \},}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                "{}event\_state"{}:8,  // Protected YELLOW light see movement\_phase\_state}
+\DoxyCodeLine{                "{}timing"{}:\{}
+\DoxyCodeLine{                    "{}start\_time"{}:25000,  }
+\DoxyCodeLine{                    "{}min\_end\_time"{}:30000}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{            \}]}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{     \{}
+\DoxyCodeLine{        "{}signal\_group"{}:2,}
+\DoxyCodeLine{        "{}state\_time\_speed"{}:[}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                "{}event\_state"{}:6,  // Protect GREEN light see movement\_phase\_state}
+\DoxyCodeLine{                "{}timing"{}:\{}
+\DoxyCodeLine{                    "{}start\_time"{}:0,  }
+\DoxyCodeLine{                    "{}min\_end\_time"{}:5000}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{            \},}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                "{}event\_state"{}:8,  // Protected YELLOW light see movement\_phase\_state}
+\DoxyCodeLine{                "{}timing"{}:\{}
+\DoxyCodeLine{                    "{}start\_time"{}:5000,  }
+\DoxyCodeLine{                    "{}min\_end\_time"{}:10000}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{            \},}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                "{}event\_state"{}:3,  // RED light see movement\_phase\_state}
+\DoxyCodeLine{                "{}timing"{}:\{}
+\DoxyCodeLine{                    "{}start\_time"{}:10000,  }
+\DoxyCodeLine{                    "{}min\_end\_time"{}:30000}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{            \}]}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{]}
+
+\end{DoxyCode}
+\hypertarget{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md92}{}\doxysection{Including Library}\label{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md92}
+To include this library in your CARMA-\/\+Streets service simply add the following to your CMake\+List.\+txt. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{find\_package( streets\_signal\_phase\_and\_timing\_lib REQUIRED )}
+\DoxyCodeLine{...}
+\DoxyCodeLine{target\_link\_libraries( <target> PUBLIC streets\_signal\_phase\_and\_timing\_lib )}
+
+\end{DoxyCode}
+\hypertarget{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md93}{}\doxysection{Initializing SPa\+T Object for consuming NTCIP UDP data}\label{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md93}
+This {\ttfamily spat} object contains methods to update based on json SPaT updates or ntcip\+\_\+1202\+\_\+ext UDP data. For updating using JSON SPaT messages no initialization is required since each update will contain all the required information. Below is an example of how to consume an update. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::string json; // This string needs to be populated with JSON spat update.}
+\DoxyCodeLine{auto spat\_ptr = std::make\_shared<signal\_phase\_and\_timing::spat>();}
+\DoxyCodeLine{// Method to update spat based on SPaT JSON update}
+\DoxyCodeLine{spat\_ptr-\/>fromJson( json )}
+
+\end{DoxyCode}
+
+
+For consuming {\bfseries{NTCIP}} UDP update messages the {\ttfamily spat} requires initialization since it requires mapping information between phase numbers (from NTCIP) to signal group ids (from J2735), intersection name, and intersection id not included in the UDP message. An example below illustrates this process. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{auto spat\_ptr = std::make\_shared<signal\_phase\_and\_timing::spat>();}
+\DoxyCodeLine{}
+\DoxyCodeLine{// Initialize methods takes parameters : std::string intersection\_name (corresponds to J2735 intersection name from MAP }
+\DoxyCodeLine{// SPaT), int intersection\_id (corresponds to J2735 intersection id from MAP and SPaT), std::unordered\_hashmap<int,int>}
+\DoxyCodeLine{// phase\_number\_to\_signal\_group (Map of phase numbers from NTCIP to signal groups defined in MAP. This information can be}
+\DoxyCodeLine{// obtained from the channeltable in the NTCIP server on the TSC, see monitor\_tsc\_state in tsc\_service) }
+\DoxyCodeLine{}
+\DoxyCodeLine{spat\_ptr-\/>initialize\_intersection( intersection\_name, intersection\_id, phase\_number\_to\_signal\_group)}
+\DoxyCodeLine{}
+\DoxyCodeLine{std::vector<char> udp\_packet                            // buffer of udp message( this needs to be populated from UDP socket!)}
+\DoxyCodeLine{ntcip::ntcip\_1202\_ext ntcip\_1202\_data;                  // struct with byte mapping to values for udp message}
+\DoxyCodeLine{}
+\DoxyCodeLine{// copy buffer into struct}
+\DoxyCodeLine{std::memcpy(\&ntcip\_1202\_data, spat\_buf.data(), spat\_buf.size()); }
+\DoxyCodeLine{}
+\DoxyCodeLine{spat\_ptr-\/>update(ntcip\_1202\_data, \_use\_msg\_timestamp);  // use struct to update spat, bool flag controls whether to use }
+\DoxyCodeLine{                                                        // host machine unix time(if false) or NTCIP UDP message timestamp }
+\DoxyCodeLine{                                                        // (if true) }
+
+\end{DoxyCode}
+ 

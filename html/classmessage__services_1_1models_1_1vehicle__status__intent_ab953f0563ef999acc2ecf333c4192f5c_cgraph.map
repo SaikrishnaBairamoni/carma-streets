@@ -1,0 +1,12 @@
+<map id="message_services::models::vehicle_status_intent::fromJsonObject" name="message_services::models::vehicle_status_intent::fromJsonObject">
+<area shape="rect" id="node1" title=" " alt="" coords="5,325,204,381"/>
+<area shape="rect" id="node2" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#aaf76a35b3f6f0d7d5fa05baf753a309e" title=" " alt="" coords="252,5,451,61"/>
+<area shape="rect" id="node3" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a3fd11ec19fb3a5b14faacfca1a776bb6" title=" " alt="" coords="252,85,451,141"/>
+<area shape="rect" id="node4" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a6974225b7b4b7c54260f1d4c376dd533" title=" " alt="" coords="252,165,451,221"/>
+<area shape="rect" id="node5" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a86407fd5aa5bc140dfe4eeb58857c402" title=" " alt="" coords="252,245,451,301"/>
+<area shape="rect" id="node6" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a1961108c1b43e7888913dcfa719429ce" title=" " alt="" coords="252,325,451,381"/>
+<area shape="rect" id="node7" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a9a2f1a0e8d094c574e458614cc4ca6a0" title=" " alt="" coords="252,405,451,461"/>
+<area shape="rect" id="node8" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a1425e23366059f0006c7e86bafed6a33" title=" " alt="" coords="252,485,451,541"/>
+<area shape="rect" id="node9" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a2cefe1ed615e057a55c6fd32b85a2066" title=" " alt="" coords="252,565,451,621"/>
+<area shape="rect" id="node10" href="$classmessage__services_1_1models_1_1vehicle__status__intent.html#a5355465311705ba972a13fa48de3634a" title=" " alt="" coords="252,645,451,701"/>
+</map>

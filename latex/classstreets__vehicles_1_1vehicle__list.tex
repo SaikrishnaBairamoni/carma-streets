@@ -1,0 +1,194 @@
+\hypertarget{classstreets__vehicles_1_1vehicle__list}{}\doxysection{streets\+\_\+vehicles\+::vehicle\+\_\+list Class Reference}
+\label{classstreets__vehicles_1_1vehicle__list}\index{streets\_vehicles::vehicle\_list@{streets\_vehicles::vehicle\_list}}
+
+
+Class to store vehicle information for all vehicles in an intersection. Contains pointer to a \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} which holds business logic to process status and intent vehicle updates. To implement custom message processing simply extend \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} and set this object to be the message processor for you vehicle list.  
+
+
+
+
+{\ttfamily \#include $<$vehicle\+\_\+list.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstreets__vehicles_1_1vehicle__list_a3c2f833e66447f0efb287a315dbe4103}{vehicle\+\_\+list}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new vehicle list object. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} $>$ \mbox{\hyperlink{classstreets__vehicles_1_1vehicle__list_a1d9105cbed952c64d0618d6e4bb6f6c4}{get\+\_\+vehicles}} ()
+\begin{DoxyCompactList}\small\item\em Get the vehicles map. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} $>$ \mbox{\hyperlink{classstreets__vehicles_1_1vehicle__list_a202a7cdf741d9d64857288dd797b075f}{get\+\_\+vehicles\+\_\+by\+\_\+lane}} (const int lane\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get the vehicles by lane id. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} $>$ \mbox{\hyperlink{classstreets__vehicles_1_1vehicle__list_a64abd8cac7ed0858117cd997de976afc}{get\+\_\+vehicles\+\_\+by\+\_\+state}} (const \mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405ac}{vehicle\+\_\+state}} state)
+\begin{DoxyCompactList}\small\item\em Get the vehicles by state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__vehicles_1_1vehicle__list_a4c70ccdc6e01a3bda8dd6ede9a29ad46}{process\+\_\+update}} (const std\+::string \&update)
+\begin{DoxyCompactList}\small\item\em Process JSON status and intent update into vehicle update and modifies vehicle map with update. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__vehicles_1_1vehicle__list_a96b773f80c8d5f05291ac4c75cc293e9}{set\+\_\+processor}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} $>$ \+\_\+processor)
+\begin{DoxyCompactList}\small\item\em Set the \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} to allow for customizable update processing. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} $>$ \mbox{\hyperlink{classstreets__vehicles_1_1vehicle__list_ada45864c474184e09e08f52488fd9e84}{get\+\_\+processor}} ()
+\begin{DoxyCompactList}\small\item\em Get the processor object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstreets__vehicles_1_1vehicle__list_a3a8d9a00c7071e4221b4677035974557}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear vehicle list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to store vehicle information for all vehicles in an intersection. Contains pointer to a \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} which holds business logic to process status and intent vehicle updates. To implement custom message processing simply extend \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} and set this object to be the message processor for you vehicle list. 
+
+\begin{DoxyAuthor}{Author}
+Paul Bourelly 
+\end{DoxyAuthor}
+
+
+Definition at line 22 of file vehicle\+\_\+list.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstreets__vehicles_1_1vehicle__list_a3c2f833e66447f0efb287a315dbe4103}\label{classstreets__vehicles_1_1vehicle__list_a3c2f833e66447f0efb287a315dbe4103}} 
+\index{streets\_vehicles::vehicle\_list@{streets\_vehicles::vehicle\_list}!vehicle\_list@{vehicle\_list}}
+\index{vehicle\_list@{vehicle\_list}!streets\_vehicles::vehicle\_list@{streets\_vehicles::vehicle\_list}}
+\doxysubsubsection{\texorpdfstring{vehicle\_list()}{vehicle\_list()}}
+{\footnotesize\ttfamily streets\+\_\+vehicles\+::vehicle\+\_\+list\+::vehicle\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new vehicle list object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstreets__vehicles_1_1vehicle__list_a3a8d9a00c7071e4221b4677035974557}\label{classstreets__vehicles_1_1vehicle__list_a3a8d9a00c7071e4221b4677035974557}} 
+\index{streets\_vehicles::vehicle\_list@{streets\_vehicles::vehicle\_list}!clear@{clear}}
+\index{clear@{clear}!streets\_vehicles::vehicle\_list@{streets\_vehicles::vehicle\_list}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicles\+::vehicle\+\_\+list\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear vehicle list. 
+
+
+
+Definition at line 113 of file vehicle\+\_\+list.\+cpp.
+
+\mbox{\Hypertarget{classstreets__vehicles_1_1vehicle__list_ada45864c474184e09e08f52488fd9e84}\label{classstreets__vehicles_1_1vehicle__list_ada45864c474184e09e08f52488fd9e84}} 
+\index{streets\_vehicles::vehicle\_list@{streets\_vehicles::vehicle\_list}!get\_processor@{get\_processor}}
+\index{get\_processor@{get\_processor}!streets\_vehicles::vehicle\_list@{streets\_vehicles::vehicle\_list}}
+\doxysubsubsection{\texorpdfstring{get\_processor()}{get\_processor()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} $>$ streets\+\_\+vehicles\+::vehicle\+\_\+list\+::get\+\_\+processor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the processor object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$status\+\_\+intent\+\_\+processor$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 108 of file vehicle\+\_\+list.\+cpp.
+
+\mbox{\Hypertarget{classstreets__vehicles_1_1vehicle__list_a1d9105cbed952c64d0618d6e4bb6f6c4}\label{classstreets__vehicles_1_1vehicle__list_a1d9105cbed952c64d0618d6e4bb6f6c4}} 
+\index{streets\_vehicles::vehicle\_list@{streets\_vehicles::vehicle\_list}!get\_vehicles@{get\_vehicles}}
+\index{get\_vehicles@{get\_vehicles}!streets\_vehicles::vehicle\_list@{streets\_vehicles::vehicle\_list}}
+\doxysubsubsection{\texorpdfstring{get\_vehicles()}{get\_vehicles()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} $>$ streets\+\_\+vehicles\+::vehicle\+\_\+list\+::get\+\_\+vehicles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the vehicles map. 
+
+\begin{DoxyReturn}{Returns}
+std\+::unordered\+\_\+map$<$std\+::string, vehicle$>$ . 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file vehicle\+\_\+list.\+cpp.
+
+\mbox{\Hypertarget{classstreets__vehicles_1_1vehicle__list_a202a7cdf741d9d64857288dd797b075f}\label{classstreets__vehicles_1_1vehicle__list_a202a7cdf741d9d64857288dd797b075f}} 
+\index{streets\_vehicles::vehicle\_list@{streets\_vehicles::vehicle\_list}!get\_vehicles\_by\_lane@{get\_vehicles\_by\_lane}}
+\index{get\_vehicles\_by\_lane@{get\_vehicles\_by\_lane}!streets\_vehicles::vehicle\_list@{streets\_vehicles::vehicle\_list}}
+\doxysubsubsection{\texorpdfstring{get\_vehicles\_by\_lane()}{get\_vehicles\_by\_lane()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} $>$ streets\+\_\+vehicles\+::vehicle\+\_\+list\+::get\+\_\+vehicles\+\_\+by\+\_\+lane (\begin{DoxyParamCaption}\item[{const int}]{lane\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Get the vehicles by lane id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lane\+\_\+id} & lanelet2 map lane id. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$vehicle$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 6 of file vehicle\+\_\+list.\+cpp.
+
+\mbox{\Hypertarget{classstreets__vehicles_1_1vehicle__list_a64abd8cac7ed0858117cd997de976afc}\label{classstreets__vehicles_1_1vehicle__list_a64abd8cac7ed0858117cd997de976afc}} 
+\index{streets\_vehicles::vehicle\_list@{streets\_vehicles::vehicle\_list}!get\_vehicles\_by\_state@{get\_vehicles\_by\_state}}
+\index{get\_vehicles\_by\_state@{get\_vehicles\_by\_state}!streets\_vehicles::vehicle\_list@{streets\_vehicles::vehicle\_list}}
+\doxysubsubsection{\texorpdfstring{get\_vehicles\_by\_state()}{get\_vehicles\_by\_state()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{vehicle}} $>$ streets\+\_\+vehicles\+::vehicle\+\_\+list\+::get\+\_\+vehicles\+\_\+by\+\_\+state (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405ac}{vehicle\+\_\+state}}}]{state }\end{DoxyParamCaption})}
+
+
+
+Get the vehicles by state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$vehicle$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 19 of file vehicle\+\_\+list.\+cpp.
+
+\mbox{\Hypertarget{classstreets__vehicles_1_1vehicle__list_a4c70ccdc6e01a3bda8dd6ede9a29ad46}\label{classstreets__vehicles_1_1vehicle__list_a4c70ccdc6e01a3bda8dd6ede9a29ad46}} 
+\index{streets\_vehicles::vehicle\_list@{streets\_vehicles::vehicle\_list}!process\_update@{process\_update}}
+\index{process\_update@{process\_update}!streets\_vehicles::vehicle\_list@{streets\_vehicles::vehicle\_list}}
+\doxysubsubsection{\texorpdfstring{process\_update()}{process\_update()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicles\+::vehicle\+\_\+list\+::process\+\_\+update (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{update }\end{DoxyParamCaption})}
+
+
+
+Process JSON status and intent update into vehicle update and modifies vehicle map with update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & std\+::string status and intent JSON vehicle update \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 68 of file vehicle\+\_\+list.\+cpp.
+
+\mbox{\Hypertarget{classstreets__vehicles_1_1vehicle__list_a96b773f80c8d5f05291ac4c75cc293e9}\label{classstreets__vehicles_1_1vehicle__list_a96b773f80c8d5f05291ac4c75cc293e9}} 
+\index{streets\_vehicles::vehicle\_list@{streets\_vehicles::vehicle\_list}!set\_processor@{set\_processor}}
+\index{set\_processor@{set\_processor}!streets\_vehicles::vehicle\_list@{streets\_vehicles::vehicle\_list}}
+\doxysubsubsection{\texorpdfstring{set\_processor()}{set\_processor()}}
+{\footnotesize\ttfamily void streets\+\_\+vehicles\+::vehicle\+\_\+list\+::set\+\_\+processor (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} $>$}]{\+\_\+processor }\end{DoxyParamCaption})}
+
+
+
+Set the \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} to allow for customizable update processing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em processor} & \mbox{\hyperlink{classstreets__vehicles_1_1status__intent__processor}{status\+\_\+intent\+\_\+processor}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 103 of file vehicle\+\_\+list.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+list/include/\mbox{\hyperlink{vehicle__list_8h}{vehicle\+\_\+list.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+list/src/models/\mbox{\hyperlink{vehicle__list_8cpp}{vehicle\+\_\+list.\+cpp}}\end{DoxyCompactItemize}

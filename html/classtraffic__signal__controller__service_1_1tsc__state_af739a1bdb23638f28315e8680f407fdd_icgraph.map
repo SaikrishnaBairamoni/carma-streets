@@ -1,0 +1,4 @@
+<map id="traffic_signal_controller_service::tsc_state::add_future_movement_events" name="traffic_signal_controller_service::tsc_state::add_future_movement_events">
+<area shape="rect" id="node1" title="Updates spat with future movement events for vehicle phases." alt="" coords="228,5,425,61"/>
+<area shape="rect" id="node2" href="$namespacetraffic__signal__controller__service.html#a2e61301881178ff2164bf915d22837bb" title=" " alt="" coords="5,13,180,54"/>
+</map>

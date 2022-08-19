@@ -1,0 +1,5 @@
+<map id="traffic_signal_controller_service::tsc_service::initialize" name="traffic_signal_controller_service::tsc_service::initialize">
+<area shape="rect" id="node1" title="Method to initialize the tsc_service." alt="" coords="123,16,297,72"/>
+<area shape="rect" id="node2" href="$tsc__client__service_2src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="13,5,67,32"/>
+<area shape="rect" id="node3" href="$test__tsc__service_8cpp.html#af4eed5e74ebbe9565fc52a1fe46bb9d1" title=" " alt="" coords="5,56,75,83"/>
+</map>

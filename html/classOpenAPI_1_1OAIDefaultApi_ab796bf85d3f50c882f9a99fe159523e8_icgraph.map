@@ -1,0 +1,16 @@
+<map id="OpenAPI::OAIDefaultApi::abortRequestsSignal" name="OpenAPI::OAIDefaultApi::abortRequestsSignal">
+<area shape="rect" id="node1" title=" " alt="" coords="764,169,941,211"/>
+<area shape="rect" id="node2" href="$classOpenAPI_1_1OAIDefaultApi.html#a195d7cf55511d96e0d367db548ce6572" title=" " alt="" coords="539,5,716,47"/>
+<area shape="rect" id="node3" href="$classOpenAPI_1_1OAIDefaultApi.html#a0fc1f5bb1e8b2492cbfdd828e562a519" title=" " alt="" coords="539,71,716,112"/>
+<area shape="rect" id="node4" href="$classOpenAPI_1_1OAIDefaultApi.html#a682ffe8581eaecb7e32df4d3c66b6762" title=" " alt="" coords="539,136,716,177"/>
+<area shape="rect" id="node12" href="$classOpenAPI_1_1OAIDefaultApi.html#ad98fac116cce0c0da2857a821286288e" title=" " alt="" coords="539,201,716,243"/>
+<area shape="rect" id="node13" href="$classOpenAPI_1_1OAIDefaultApi.html#ae94784bf95d9dccf1ed6b4d7a977d5ac" title=" " alt="" coords="539,267,716,308"/>
+<area shape="rect" id="node14" href="$classOpenAPI_1_1OAIDefaultApi.html#a650caa304c144a93bbc145e997a6d144" title=" " alt="" coords="539,332,716,373"/>
+<area shape="rect" id="node5" href="$classintersection__client.html#ac4063ca052789e068be838131e2b57f6" title=" " alt="" coords="296,23,439,64"/>
+<area shape="rect" id="node7" href="$classscheduling__service_1_1intersection__client.html#ad6bd9f3f48ee4e352798f418b88b730a" title="Send http GET request to intersection model at rate of configured HZ until it gets the intersection i..." alt="" coords="270,89,465,145"/>
+<area shape="rect" id="node9" href="$classsignal__opt__service_1_1signal__opt__messages__worker.html#a1d815ad34177410cafc59d7bf9944d53" title="Send http GET request to intersection model at rate of configured HZ until it gets the valid (!..." alt="" coords="244,169,491,225"/>
+<area shape="rect" id="node10" href="$classtraffic__signal__controller__service_1_1intersection__client.html#ad6bd9f3f48ee4e352798f418b88b730a" title=" " alt="" coords="248,249,487,305"/>
+<area shape="rect" id="node6" href="$examples_2qt__rest__clients__api_2intersection__client_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="73,30,128,57"/>
+<area shape="rect" id="node8" href="$classscheduling__service_1_1intersection__client.html#ac510cca78365a620384ff9faeaad572f" title="Updating the intersection info." alt="" coords="5,89,196,145"/>
+<area shape="rect" id="node11" href="$tsc__client__service_2test_2test__intersection__client_8cpp.html#a9f8f9b990e0824fa9ca591b07103a85c" title=" " alt="" coords="73,263,128,290"/>
+</map>

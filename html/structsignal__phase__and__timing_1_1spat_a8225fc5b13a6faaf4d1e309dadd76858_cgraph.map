@@ -1,0 +1,4 @@
+<map id="signal_phase_and_timing::spat::initialize_intersection" name="signal_phase_and_timing::spat::initialize_intersection">
+<area shape="rect" id="node1" title="Method to initialize intersection information not provided in the ntcip SPaT UDP message but necessar..." alt="" coords="5,13,212,54"/>
+<area shape="rect" id="node2" href="$structsignal__phase__and__timing_1_1intersection__state.html#aca7f3528dc9e42b152c0e4537468fd79" title="Initialize list&lt;movement_state&gt; to include a movement for each phase_numer/signal_group entry in the ..." alt="" coords="260,5,463,61"/>
+</map>

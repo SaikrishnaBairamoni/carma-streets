@@ -1,0 +1,11 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node1" title=" " alt="" coords="5,78,60,105"/>
+<area shape="rect" id="node2" href="$classtraffic__signal__controller__service_1_1intersection__client.html#ad6bd9f3f48ee4e352798f418b88b730a" title=" " alt="" coords="108,63,347,119"/>
+<area shape="rect" id="node3" href="$classOpenAPI_1_1OAIIntersection__info.html#adf6e28ef3d4823f3d591c5793b28015e" title=" " alt="" coords="395,5,580,47"/>
+<area shape="rect" id="node4" href="$classOpenAPI_1_1OAIDefaultApi.html#a682ffe8581eaecb7e32df4d3c66b6762" title=" " alt="" coords="399,71,576,112"/>
+<area shape="rect" id="node9" href="$classOpenAPI_1_1OAIIntersection__info.html#acace7999c0bb220673f9306ee7de4860" title=" " alt="" coords="395,136,580,177"/>
+<area shape="rect" id="node5" href="$classOpenAPI_1_1OAIHttpRequestWorker.html#a241304dc9d0548df76510834b44617fe" title=" " alt="" coords="628,5,863,47"/>
+<area shape="rect" id="node7" href="$classOpenAPI_1_1OAIHttpRequestWorker.html#a4cacd35a634ee9383ed40f2cb3623d2c" title=" " alt="" coords="628,71,863,112"/>
+<area shape="rect" id="node8" href="$classOpenAPI_1_1OAIHttpRequestWorker.html#ac4c0e5da7f31b1cb763da1a51cd25eb9" title=" " alt="" coords="628,136,863,177"/>
+<area shape="rect" id="node6" href="$classOpenAPI_1_1OAIHttpRequestWorker.html#a956ba64d89ae192257247fb93a37bbf8" title=" " alt="" coords="911,5,1145,47"/>
+</map>

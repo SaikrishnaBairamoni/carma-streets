@@ -1,0 +1,5 @@
+<map id="OpenAPI::OAILanelet_info::setConnectingLaneletIds" name="OpenAPI::OAILanelet_info::setConnectingLaneletIds">
+<area shape="rect" id="node1" title=" " alt="" coords="252,53,475,94"/>
+<area shape="rect" id="node2" href="$classIntersectionModelAPI_1_1IntersectionModelHandler.html#a93629c379a778d8ffdce415466f6cbdb" title="Get the Intersection Info object." alt="" coords="5,5,204,61"/>
+<area shape="rect" id="node3" href="$classIntersectionModelAPI_1_1IntersectionModelHandler.html#ae41985a418728df00ac59979b5dbd17e" title="Get the list of entry lanelets for the intersection." alt="" coords="5,85,204,141"/>
+</map>

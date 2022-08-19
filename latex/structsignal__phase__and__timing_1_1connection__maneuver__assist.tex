@@ -1,0 +1,232 @@
+\hypertarget{structsignal__phase__and__timing_1_1connection__maneuver__assist}{}\doxysection{signal\+\_\+phase\+\_\+and\+\_\+timing\+::connection\+\_\+maneuver\+\_\+assist Struct Reference}
+\label{structsignal__phase__and__timing_1_1connection__maneuver__assist}\index{signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}}
+
+
+{\ttfamily \#include $<$connection\+\_\+maneuver\+\_\+assist.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+rapidjson\+::\+Value \mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist_ac9d89b4be71fc4bf98c8f4a1c175d08b}{to\+Json}} (rapidjson\+::\+Document\+::\+Allocator\+Type \&allocator) const
+\begin{DoxyCompactList}\small\item\em Serialize Connection Maneuver Assist object to rapidjson\+::\+Value for writing as JSON string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist_a0a1eb4c8b7054414b2a771d67d78404e}{from\+Json}} (const rapidjson\+::\+Value \&val)
+\begin{DoxyCompactList}\small\item\em Deserialize Connection Maneuver Assist JSON into Connection Maneuver Assist object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist_a6254e1d976472c463fe9e771f318436f}{operator==}} (const \mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist}{connection\+\_\+maneuver\+\_\+assist}} \&other) const
+\begin{DoxyCompactList}\small\item\em Equals operator to asses whether two objects contain equivalent data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist_a238c4011461f3c1aecdf55c4009a3ee6}{operator!=}} (const \mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist}{connection\+\_\+maneuver\+\_\+assist}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns the inverse of equals operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist_a27cec91f7517fa45f81237e430a7fa41}{connection\+\_\+id}} = 0
+\begin{DoxyCompactList}\small\item\em The common connection\+Id used by all lanes which this data applies to ( this value traces to Connects\+TO entries in lanes) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist_a57bbd0ca0229027c0e5267cc35fa49aa}{queue\+\_\+length}} = 0
+\begin{DoxyCompactList}\small\item\em The distance from the stop line to the back edge of the last vehicle in queue, as measured along the center line. (Units = meters) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist_a1e6ed40423cb48714c7ccdf0a61bef4f}{available\+\_\+storage\+\_\+length}} = 0
+\begin{DoxyCompactList}\small\item\em Distance (e.\+g. beginning from the downstream stop-\/line up to a given distance) with a high probability for successfully executing the connecting maneuver between two lane during current cycle. Used for enhancing the awareness of vehicles to anticipate if they can pass the stop line of the lane. Used for optimizing the green wave, due to knowledge of vehicles waiting in front of a red light (downstream). The element next\+Time in Time\+Change\+Details in the containing data frame contains the next timemark at which an active phase is expected, to form a storage flush interval. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist_af6ef42514ed79b0769e8862ac636cb11}{wait\+\_\+on\+\_\+stop}}
+\begin{DoxyCompactList}\small\item\em If \char`\"{}true\char`\"{}, the vehicles on this specific connecting maneuver have to stop on the stop-\/line and not to enter the collision area. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist_a724884d4285e01fd8eb9c7e2245561cf}{ped\+\_\+bicycle\+\_\+detect}}
+\begin{DoxyCompactList}\small\item\em true if ANY ped or bicycles are detecting crossing the above lanes. Set to false, ONLY if there is a high certainty that there are none present, otherwise element is not sent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 12 of file connection\+\_\+maneuver\+\_\+assist.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1connection__maneuver__assist_a0a1eb4c8b7054414b2a771d67d78404e}\label{structsignal__phase__and__timing_1_1connection__maneuver__assist_a0a1eb4c8b7054414b2a771d67d78404e}} 
+\index{signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily void signal\+\_\+phase\+\_\+and\+\_\+timing\+::connection\+\_\+maneuver\+\_\+assist\+::from\+Json (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Deserialize Connection Maneuver Assist JSON into Connection Maneuver Assist object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Connection Maneuver Assist JSON. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file connection\+\_\+maneuver\+\_\+assist.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1connection__maneuver__assist_a0a1eb4c8b7054414b2a771d67d78404e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1connection__maneuver__assist_a238c4011461f3c1aecdf55c4009a3ee6}\label{structsignal__phase__and__timing_1_1connection__maneuver__assist_a238c4011461f3c1aecdf55c4009a3ee6}} 
+\index{signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool signal\+\_\+phase\+\_\+and\+\_\+timing\+::connection\+\_\+maneuver\+\_\+assist\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist}{connection\+\_\+maneuver\+\_\+assist}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns the inverse of equals operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & second object to compare current object with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both objects do not contain equivalent data. 
+
+false if both objects do contain equivalent data. 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file connection\+\_\+maneuver\+\_\+assist.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1connection__maneuver__assist_a238c4011461f3c1aecdf55c4009a3ee6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1connection__maneuver__assist_a6254e1d976472c463fe9e771f318436f}\label{structsignal__phase__and__timing_1_1connection__maneuver__assist_a6254e1d976472c463fe9e771f318436f}} 
+\index{signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}!operator==@{operator==}}
+\index{operator==@{operator==}!signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool signal\+\_\+phase\+\_\+and\+\_\+timing\+::connection\+\_\+maneuver\+\_\+assist\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsignal__phase__and__timing_1_1connection__maneuver__assist}{connection\+\_\+maneuver\+\_\+assist}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Equals operator to asses whether two objects contain equivalent data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em compare} & second object to compare current object with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both object contain equivalent data. 
+
+false if not. 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file connection\+\_\+maneuver\+\_\+assist.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsignal__phase__and__timing_1_1connection__maneuver__assist_a6254e1d976472c463fe9e771f318436f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1connection__maneuver__assist_ac9d89b4be71fc4bf98c8f4a1c175d08b}\label{structsignal__phase__and__timing_1_1connection__maneuver__assist_ac9d89b4be71fc4bf98c8f4a1c175d08b}} 
+\index{signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}!toJson@{toJson}}
+\index{toJson@{toJson}!signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily rapidjson\+::\+Value signal\+\_\+phase\+\_\+and\+\_\+timing\+::connection\+\_\+maneuver\+\_\+assist\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Document\+::\+Allocator\+Type \&}]{allocator }\end{DoxyParamCaption}) const}
+
+
+
+Serialize Connection Maneuver Assist object to rapidjson\+::\+Value for writing as JSON string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allocator} & for writing JSON object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rapidjson\+::\+Value serialize Connection Maneuver Assist object. 
+\end{DoxyReturn}
+
+
+Definition at line 5 of file connection\+\_\+maneuver\+\_\+assist.\+cpp.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1connection__maneuver__assist_a1e6ed40423cb48714c7ccdf0a61bef4f}\label{structsignal__phase__and__timing_1_1connection__maneuver__assist_a1e6ed40423cb48714c7ccdf0a61bef4f}} 
+\index{signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}!available\_storage\_length@{available\_storage\_length}}
+\index{available\_storage\_length@{available\_storage\_length}!signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}}
+\doxysubsubsection{\texorpdfstring{available\_storage\_length}{available\_storage\_length}}
+{\footnotesize\ttfamily uint16\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::connection\+\_\+maneuver\+\_\+assist\+::available\+\_\+storage\+\_\+length = 0}
+
+
+
+Distance (e.\+g. beginning from the downstream stop-\/line up to a given distance) with a high probability for successfully executing the connecting maneuver between two lane during current cycle. Used for enhancing the awareness of vehicles to anticipate if they can pass the stop line of the lane. Used for optimizing the green wave, due to knowledge of vehicles waiting in front of a red light (downstream). The element next\+Time in Time\+Change\+Details in the containing data frame contains the next timemark at which an active phase is expected, to form a storage flush interval. 
+
+
+
+Definition at line 35 of file connection\+\_\+maneuver\+\_\+assist.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1connection__maneuver__assist_a27cec91f7517fa45f81237e430a7fa41}\label{structsignal__phase__and__timing_1_1connection__maneuver__assist_a27cec91f7517fa45f81237e430a7fa41}} 
+\index{signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}!connection\_id@{connection\_id}}
+\index{connection\_id@{connection\_id}!signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}}
+\doxysubsubsection{\texorpdfstring{connection\_id}{connection\_id}}
+{\footnotesize\ttfamily int signal\+\_\+phase\+\_\+and\+\_\+timing\+::connection\+\_\+maneuver\+\_\+assist\+::connection\+\_\+id = 0}
+
+
+
+The common connection\+Id used by all lanes which this data applies to ( this value traces to Connects\+TO entries in lanes) 
+
+
+
+Definition at line 17 of file connection\+\_\+maneuver\+\_\+assist.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1connection__maneuver__assist_a724884d4285e01fd8eb9c7e2245561cf}\label{structsignal__phase__and__timing_1_1connection__maneuver__assist_a724884d4285e01fd8eb9c7e2245561cf}} 
+\index{signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}!ped\_bicycle\_detect@{ped\_bicycle\_detect}}
+\index{ped\_bicycle\_detect@{ped\_bicycle\_detect}!signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}}
+\doxysubsubsection{\texorpdfstring{ped\_bicycle\_detect}{ped\_bicycle\_detect}}
+{\footnotesize\ttfamily bool signal\+\_\+phase\+\_\+and\+\_\+timing\+::connection\+\_\+maneuver\+\_\+assist\+::ped\+\_\+bicycle\+\_\+detect}
+
+
+
+true if ANY ped or bicycles are detecting crossing the above lanes. Set to false, ONLY if there is a high certainty that there are none present, otherwise element is not sent. 
+
+
+
+Definition at line 47 of file connection\+\_\+maneuver\+\_\+assist.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1connection__maneuver__assist_a57bbd0ca0229027c0e5267cc35fa49aa}\label{structsignal__phase__and__timing_1_1connection__maneuver__assist_a57bbd0ca0229027c0e5267cc35fa49aa}} 
+\index{signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}!queue\_length@{queue\_length}}
+\index{queue\_length@{queue\_length}!signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}}
+\doxysubsubsection{\texorpdfstring{queue\_length}{queue\_length}}
+{\footnotesize\ttfamily uint16\+\_\+t signal\+\_\+phase\+\_\+and\+\_\+timing\+::connection\+\_\+maneuver\+\_\+assist\+::queue\+\_\+length = 0}
+
+
+
+The distance from the stop line to the back edge of the last vehicle in queue, as measured along the center line. (Units = meters) 
+
+
+
+Definition at line 25 of file connection\+\_\+maneuver\+\_\+assist.\+h.
+
+\mbox{\Hypertarget{structsignal__phase__and__timing_1_1connection__maneuver__assist_af6ef42514ed79b0769e8862ac636cb11}\label{structsignal__phase__and__timing_1_1connection__maneuver__assist_af6ef42514ed79b0769e8862ac636cb11}} 
+\index{signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}!wait\_on\_stop@{wait\_on\_stop}}
+\index{wait\_on\_stop@{wait\_on\_stop}!signal\_phase\_and\_timing::connection\_maneuver\_assist@{signal\_phase\_and\_timing::connection\_maneuver\_assist}}
+\doxysubsubsection{\texorpdfstring{wait\_on\_stop}{wait\_on\_stop}}
+{\footnotesize\ttfamily bool signal\+\_\+phase\+\_\+and\+\_\+timing\+::connection\+\_\+maneuver\+\_\+assist\+::wait\+\_\+on\+\_\+stop}
+
+
+
+If \char`\"{}true\char`\"{}, the vehicles on this specific connecting maneuver have to stop on the stop-\/line and not to enter the collision area. 
+
+
+
+Definition at line 41 of file connection\+\_\+maneuver\+\_\+assist.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing/include/\mbox{\hyperlink{connection__maneuver__assist_8h}{connection\+\_\+maneuver\+\_\+assist.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+signal\+\_\+phase\+\_\+and\+\_\+timing/src/models/\mbox{\hyperlink{connection__maneuver__assist_8cpp}{connection\+\_\+maneuver\+\_\+assist.\+cpp}}\end{DoxyCompactItemize}

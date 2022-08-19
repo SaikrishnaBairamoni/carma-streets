@@ -1,0 +1,128 @@
+\hypertarget{structstreets__vehicle__scheduler_1_1intersection__schedule}{}\doxysection{streets\+\_\+vehicle\+\_\+scheduler\+::intersection\+\_\+schedule Struct Reference}
+\label{structstreets__vehicle__scheduler_1_1intersection__schedule}\index{streets\_vehicle\_scheduler::intersection\_schedule@{streets\_vehicle\_scheduler::intersection\_schedule}}
+
+
+Struct to store vehicle schedules for all vehicle in an intersection. Includes a timestamp in milliseconds since epoch. Also includes a get\+\_\+delay method that will get each vehicle schedules delay and sum them for a total intersection delay. Delay is the difference between scheduled Entering Time (et) and scheduled Stopping time (st) and represents the time a vehicle would be waiting at the stop bar before gaining access to the intersection.  
+
+
+
+
+{\ttfamily \#include $<$intersection\+\_\+schedule.\+h$>$}
+
+
+
+Inheritance diagram for streets\+\_\+vehicle\+\_\+scheduler\+::intersection\+\_\+schedule\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structstreets__vehicle__scheduler_1_1intersection__schedule__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule_aa2ff2134e02ecd7918061d92396b0df7}{intersection\+\_\+schedule}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new intersection schedule object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule_a9fd78bb397ea833e8e1fc07530ce51f8}{$\sim$intersection\+\_\+schedule}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the intersection schedule object. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule_af027b201909e9d003c961d054edb623f}{to\+CSV}} () const =0
+\begin{DoxyCompactList}\small\item\em Method to turn schedule into CSV string. Each vehicle schedule is represented by a single row and all rows for a given schedule share a timestamp. The values in each row represent the following properties\+: \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule_abf2990ad805708f9aa0e8c24b4c76be8}{to\+Json}} () const =0
+\begin{DoxyCompactList}\small\item\em Method to write intersection schedule as JSON scheduling message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+u\+\_\+int64\+\_\+t \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1intersection__schedule_ad8c673b720928c7e181c7777ede5d3d4}{timestamp}} = 0
+\begin{DoxyCompactList}\small\item\em Time since epoch in milliseconds timestamp for intersection schedule. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct to store vehicle schedules for all vehicle in an intersection. Includes a timestamp in milliseconds since epoch. Also includes a get\+\_\+delay method that will get each vehicle schedules delay and sum them for a total intersection delay. Delay is the difference between scheduled Entering Time (et) and scheduled Stopping time (st) and represents the time a vehicle would be waiting at the stop bar before gaining access to the intersection. 
+
+Definition at line 53 of file intersection\+\_\+schedule.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1intersection__schedule_aa2ff2134e02ecd7918061d92396b0df7}\label{structstreets__vehicle__scheduler_1_1intersection__schedule_aa2ff2134e02ecd7918061d92396b0df7}} 
+\index{streets\_vehicle\_scheduler::intersection\_schedule@{streets\_vehicle\_scheduler::intersection\_schedule}!intersection\_schedule@{intersection\_schedule}}
+\index{intersection\_schedule@{intersection\_schedule}!streets\_vehicle\_scheduler::intersection\_schedule@{streets\_vehicle\_scheduler::intersection\_schedule}}
+\doxysubsubsection{\texorpdfstring{intersection\_schedule()}{intersection\_schedule()}}
+{\footnotesize\ttfamily streets\+\_\+vehicle\+\_\+scheduler\+::intersection\+\_\+schedule\+::intersection\+\_\+schedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new intersection schedule object. 
+
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1intersection__schedule_a9fd78bb397ea833e8e1fc07530ce51f8}\label{structstreets__vehicle__scheduler_1_1intersection__schedule_a9fd78bb397ea833e8e1fc07530ce51f8}} 
+\index{streets\_vehicle\_scheduler::intersection\_schedule@{streets\_vehicle\_scheduler::intersection\_schedule}!````~intersection\_schedule@{$\sim$intersection\_schedule}}
+\index{````~intersection\_schedule@{$\sim$intersection\_schedule}!streets\_vehicle\_scheduler::intersection\_schedule@{streets\_vehicle\_scheduler::intersection\_schedule}}
+\doxysubsubsection{\texorpdfstring{$\sim$intersection\_schedule()}{~intersection\_schedule()}}
+{\footnotesize\ttfamily virtual streets\+\_\+vehicle\+\_\+scheduler\+::intersection\+\_\+schedule\+::$\sim$intersection\+\_\+schedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroy the intersection schedule object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1intersection__schedule_af027b201909e9d003c961d054edb623f}\label{structstreets__vehicle__scheduler_1_1intersection__schedule_af027b201909e9d003c961d054edb623f}} 
+\index{streets\_vehicle\_scheduler::intersection\_schedule@{streets\_vehicle\_scheduler::intersection\_schedule}!toCSV@{toCSV}}
+\index{toCSV@{toCSV}!streets\_vehicle\_scheduler::intersection\_schedule@{streets\_vehicle\_scheduler::intersection\_schedule}}
+\doxysubsubsection{\texorpdfstring{toCSV()}{toCSV()}}
+{\footnotesize\ttfamily virtual std\+::string streets\+\_\+vehicle\+\_\+scheduler\+::intersection\+\_\+schedule\+::to\+CSV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Method to turn schedule into CSV string. Each vehicle schedule is represented by a single row and all rows for a given schedule share a timestamp. The values in each row represent the following properties\+: 
+
+timestamp ,v\+\_\+id ,entry\+\_\+lane ,link\+\_\+id
+
+\begin{DoxyReturn}{Returns}
+std\+::string CSV entry 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_ab70810eba625236eb7b706dd72fb3dc7}{streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+intersection\+\_\+schedule}}, and \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__intersection__schedule_a0c5f99dbf969cf98474aeb2c73c5bb7b}{streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+intersection\+\_\+schedule}}.
+
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1intersection__schedule_abf2990ad805708f9aa0e8c24b4c76be8}\label{structstreets__vehicle__scheduler_1_1intersection__schedule_abf2990ad805708f9aa0e8c24b4c76be8}} 
+\index{streets\_vehicle\_scheduler::intersection\_schedule@{streets\_vehicle\_scheduler::intersection\_schedule}!toJson@{toJson}}
+\index{toJson@{toJson}!streets\_vehicle\_scheduler::intersection\_schedule@{streets\_vehicle\_scheduler::intersection\_schedule}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily virtual std\+::string streets\+\_\+vehicle\+\_\+scheduler\+::intersection\+\_\+schedule\+::to\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Method to write intersection schedule as JSON scheduling message. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string\& reference. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1signalized__intersection__schedule_a7afc1e1bcb2229d598de2be93b253a80}{streets\+\_\+vehicle\+\_\+scheduler\+::signalized\+\_\+intersection\+\_\+schedule}}, and \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__intersection__schedule_a9f6500415a84f3693d8113166d193f89}{streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+intersection\+\_\+schedule}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1intersection__schedule_ad8c673b720928c7e181c7777ede5d3d4}\label{structstreets__vehicle__scheduler_1_1intersection__schedule_ad8c673b720928c7e181c7777ede5d3d4}} 
+\index{streets\_vehicle\_scheduler::intersection\_schedule@{streets\_vehicle\_scheduler::intersection\_schedule}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!streets\_vehicle\_scheduler::intersection\_schedule@{streets\_vehicle\_scheduler::intersection\_schedule}}
+\doxysubsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily u\+\_\+int64\+\_\+t streets\+\_\+vehicle\+\_\+scheduler\+::intersection\+\_\+schedule\+::timestamp = 0}
+
+
+
+Time since epoch in milliseconds timestamp for intersection schedule. 
+
+
+
+Definition at line 67 of file intersection\+\_\+schedule.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/include/\mbox{\hyperlink{intersection__schedule_8h}{intersection\+\_\+schedule.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,178 @@
+\hypertarget{classtraffic__signal__controller__service_1_1snmp__client}{}\doxysection{traffic\+\_\+signal\+\_\+controller\+\_\+service\+::snmp\+\_\+client Class Reference}
+\label{classtraffic__signal__controller__service_1_1snmp__client}\index{traffic\_signal\_controller\_service::snmp\_client@{traffic\_signal\_controller\_service::snmp\_client}}
+
+
+{\ttfamily \#include $<$snmp\+\_\+client.\+h$>$}
+
+
+
+Inheritance diagram for traffic\+\_\+signal\+\_\+controller\+\_\+service\+::snmp\+\_\+client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classtraffic__signal__controller__service_1_1snmp__client__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraffic__signal__controller__service_1_1snmp__client_aa4aba2f1bf38bf03672e6f666cd54b51}{snmp\+\_\+client}} (const std\+::string \&ip, const int \&port, const std\+::string \&community=\char`\"{}public\char`\"{}, int snmp\+\_\+version=0, int timeout=100)
+\begin{DoxyCompactList}\small\item\em Constructor for Traffic Signal Controller Service client. Uses the arguments provided to establish an snmp connection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtraffic__signal__controller__service_1_1snmp__client_a5401f9ad0e151a9313f93aec4454a53b}{snmp\+\_\+client}} ()=delete
+\item 
+virtual bool \mbox{\hyperlink{classtraffic__signal__controller__service_1_1snmp__client_aae8b1a53ede8a44967b8d3f75f68f58c}{process\+\_\+snmp\+\_\+request}} (const std\+::string \&input\+\_\+oid, const \mbox{\hyperlink{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61}{request\+\_\+type}} \&\mbox{\hyperlink{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61}{request\+\_\+type}}, \mbox{\hyperlink{structtraffic__signal__controller__service_1_1snmp__response__obj}{snmp\+\_\+response\+\_\+obj}} \&val)
+\begin{DoxyCompactList}\small\item\em Returns true or false depending on whether the request could be processed for given input OID at the Traffic Signal Controller. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classtraffic__signal__controller__service_1_1snmp__client_a2ab85fc29c24873b43ae26c9eb5fa555}{log\+\_\+error}} (const int \&status, const \mbox{\hyperlink{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61}{request\+\_\+type}} \&\mbox{\hyperlink{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61}{request\+\_\+type}}, snmp\+\_\+pdu $\ast$response) const
+\begin{DoxyCompactList}\small\item\em Finds error type from status and logs an error. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classtraffic__signal__controller__service_1_1snmp__client_a941a982d632653cf009eeeb158de1a91}{$\sim$snmp\+\_\+client}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for client. Closes the snmp session. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 47 of file snmp\+\_\+client.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1snmp__client_aa4aba2f1bf38bf03672e6f666cd54b51}\label{classtraffic__signal__controller__service_1_1snmp__client_aa4aba2f1bf38bf03672e6f666cd54b51}} 
+\index{traffic\_signal\_controller\_service::snmp\_client@{traffic\_signal\_controller\_service::snmp\_client}!snmp\_client@{snmp\_client}}
+\index{snmp\_client@{snmp\_client}!traffic\_signal\_controller\_service::snmp\_client@{traffic\_signal\_controller\_service::snmp\_client}}
+\doxysubsubsection{\texorpdfstring{snmp\_client()}{snmp\_client()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily traffic\+\_\+signal\+\_\+controller\+\_\+service\+::snmp\+\_\+client\+::snmp\+\_\+client (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ip,  }\item[{const int \&}]{port,  }\item[{const std\+::string \&}]{community = {\ttfamily \char`\"{}public\char`\"{}},  }\item[{int}]{snmp\+\_\+version = {\ttfamily 0},  }\item[{int}]{timeout = {\ttfamily 100} }\end{DoxyParamCaption})}
+
+
+
+Constructor for Traffic Signal Controller Service client. Uses the arguments provided to establish an snmp connection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip} & The ip ,as a string, for the tsc\+\_\+client\+\_\+service to establish an snmp communication with. \\
+\hline
+{\em port} & Target port as integer on the host for snmp communication. \\
+\hline
+{\em community} & The community id as a string. Defaults to \char`\"{}public\char`\"{} if unassigned. \\
+\hline
+{\em snmp\+\_\+version} & The snmp\+\_\+version as defined in net-\/snmp.\+Default to 0 if unassigned. net-\/snmp version definition\+: SNMP\+\_\+\+VERSION\+\_\+1\+:0 SNMP\+\_\+\+VERSION\+\_\+2c\+:1 SNMP\+\_\+\+VERSION\+\_\+2u\+:2 SNMP\+\_\+\+VERSION\+\_\+3\+:3"{} \\
+\hline
+{\em timeout} & The time in microseconds after which an snmp session request expires. Defaults to 100 if unassigned \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file snmp\+\_\+client.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classtraffic__signal__controller__service_1_1snmp__client_aa4aba2f1bf38bf03672e6f666cd54b51_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1snmp__client_a5401f9ad0e151a9313f93aec4454a53b}\label{classtraffic__signal__controller__service_1_1snmp__client_a5401f9ad0e151a9313f93aec4454a53b}} 
+\index{traffic\_signal\_controller\_service::snmp\_client@{traffic\_signal\_controller\_service::snmp\_client}!snmp\_client@{snmp\_client}}
+\index{snmp\_client@{snmp\_client}!traffic\_signal\_controller\_service::snmp\_client@{traffic\_signal\_controller\_service::snmp\_client}}
+\doxysubsubsection{\texorpdfstring{snmp\_client()}{snmp\_client()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily traffic\+\_\+signal\+\_\+controller\+\_\+service\+::snmp\+\_\+client\+::snmp\+\_\+client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1snmp__client_a941a982d632653cf009eeeb158de1a91}\label{classtraffic__signal__controller__service_1_1snmp__client_a941a982d632653cf009eeeb158de1a91}} 
+\index{traffic\_signal\_controller\_service::snmp\_client@{traffic\_signal\_controller\_service::snmp\_client}!````~snmp\_client@{$\sim$snmp\_client}}
+\index{````~snmp\_client@{$\sim$snmp\_client}!traffic\_signal\_controller\_service::snmp\_client@{traffic\_signal\_controller\_service::snmp\_client}}
+\doxysubsubsection{\texorpdfstring{$\sim$snmp\_client()}{~snmp\_client()}}
+{\footnotesize\ttfamily traffic\+\_\+signal\+\_\+controller\+\_\+service\+::snmp\+\_\+client\+::$\sim$snmp\+\_\+client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for client. Closes the snmp session. 
+
+
+
+Definition at line 48 of file snmp\+\_\+client.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1snmp__client_a2ab85fc29c24873b43ae26c9eb5fa555}\label{classtraffic__signal__controller__service_1_1snmp__client_a2ab85fc29c24873b43ae26c9eb5fa555}} 
+\index{traffic\_signal\_controller\_service::snmp\_client@{traffic\_signal\_controller\_service::snmp\_client}!log\_error@{log\_error}}
+\index{log\_error@{log\_error}!traffic\_signal\_controller\_service::snmp\_client@{traffic\_signal\_controller\_service::snmp\_client}}
+\doxysubsubsection{\texorpdfstring{log\_error()}{log\_error()}}
+{\footnotesize\ttfamily void traffic\+\_\+signal\+\_\+controller\+\_\+service\+::snmp\+\_\+client\+::log\+\_\+error (\begin{DoxyParamCaption}\item[{const int \&}]{status,  }\item[{const \mbox{\hyperlink{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61}{request\+\_\+type}} \&}]{request\+\_\+type,  }\item[{snmp\+\_\+pdu $\ast$}]{response }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Finds error type from status and logs an error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & The integer value corresponding to net-\/snmp defined errors. macros considered are STAT\+\_\+\+SUCCESS(0) and STAT\+\_\+\+TIMEOUT(2) \\
+\hline
+{\em request\+\_\+type} & The request type for which the error is being logged (GET/\+SET). \\
+\hline
+{\em response} & The snmp\+\_\+pdu struct \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 179 of file snmp\+\_\+client.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1snmp__client_a2ab85fc29c24873b43ae26c9eb5fa555_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtraffic__signal__controller__service_1_1snmp__client_aae8b1a53ede8a44967b8d3f75f68f58c}\label{classtraffic__signal__controller__service_1_1snmp__client_aae8b1a53ede8a44967b8d3f75f68f58c}} 
+\index{traffic\_signal\_controller\_service::snmp\_client@{traffic\_signal\_controller\_service::snmp\_client}!process\_snmp\_request@{process\_snmp\_request}}
+\index{process\_snmp\_request@{process\_snmp\_request}!traffic\_signal\_controller\_service::snmp\_client@{traffic\_signal\_controller\_service::snmp\_client}}
+\doxysubsubsection{\texorpdfstring{process\_snmp\_request()}{process\_snmp\_request()}}
+{\footnotesize\ttfamily bool traffic\+\_\+signal\+\_\+controller\+\_\+service\+::snmp\+\_\+client\+::process\+\_\+snmp\+\_\+request (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input\+\_\+oid,  }\item[{const \mbox{\hyperlink{namespacetraffic__signal__controller__service_aa91e53dd22b41ddac648a9b468615b61}{request\+\_\+type}} \&}]{request\+\_\+type,  }\item[{\mbox{\hyperlink{structtraffic__signal__controller__service_1_1snmp__response__obj}{snmp\+\_\+response\+\_\+obj}} \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns true or false depending on whether the request could be processed for given input OID at the Traffic Signal Controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+oid} & The OID to request information for. \\
+\hline
+{\em request\+\_\+type} & The request type for which the error is being logged. Accepted values are \char`\"{}\+GET\char`\"{} and \char`\"{}\+SET\char`\"{} only. \\
+\hline
+{\em value\+\_\+int} & The integer value for the object returned by reference. For \char`\"{}\+SET\char`\"{} it is the value to be set. For \char`\"{}\+GET\char`\"{}, it is the value returned for the returned object by reference. This is an optional argument, if not provided, defaults to 0. \\
+\hline
+{\em value\+\_\+str} & String value for the object, returned by reference. Optional argument, if not provided the value is set as an empty string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer value at the oid, returns false if value cannot be set/requested or oid doesn\textquotesingle{}t have an integer value to return. 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file snmp\+\_\+client.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtraffic__signal__controller__service_1_1snmp__client_aae8b1a53ede8a44967b8d3f75f68f58c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classtraffic__signal__controller__service_1_1snmp__client_aae8b1a53ede8a44967b8d3f75f68f58c_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tsc\+\_\+client\+\_\+service/include/\mbox{\hyperlink{snmp__client_8h}{snmp\+\_\+client.\+h}}\item 
+tsc\+\_\+client\+\_\+service/src/\mbox{\hyperlink{snmp__client_8cpp}{snmp\+\_\+client.\+cpp}}\end{DoxyCompactItemize}

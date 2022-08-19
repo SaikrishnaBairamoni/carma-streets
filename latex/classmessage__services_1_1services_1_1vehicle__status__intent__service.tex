@@ -1,0 +1,256 @@
+\hypertarget{classmessage__services_1_1services_1_1vehicle__status__intent__service}{}\doxysection{message\+\_\+services\+::services\+::vehicle\+\_\+status\+\_\+intent\+\_\+service Class Reference}
+\label{classmessage__services_1_1services_1_1vehicle__status__intent__service}\index{message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}}
+
+
+{\ttfamily \#include $<$vehicle\+\_\+status\+\_\+intent\+\_\+service.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmessage__services_1_1services_1_1vehicle__status__intent__service_a257602e1d44824c7dd62df8ed5c5d2c0}{vehicle\+\_\+status\+\_\+intent\+\_\+service}} ()
+\item 
+\mbox{\hyperlink{classmessage__services_1_1services_1_1vehicle__status__intent__service_a8cf177c69275dd3df6e35085eb011bce}{$\sim$vehicle\+\_\+status\+\_\+intent\+\_\+service}} ()
+\item 
+bool \mbox{\hyperlink{classmessage__services_1_1services_1_1vehicle__status__intent__service_a037ead29156388388d54f0e15234cfb7}{initialize}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmessage__services_1_1message__translations_1_1message__lanelet2__translation}{message\+\_\+translations\+::message\+\_\+lanelet2\+\_\+translation}} $>$ msg\+\_\+translate\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em read configuration file and determine the producer and consumer topics, bootstrap server \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmessage__services_1_1services_1_1vehicle__status__intent__service_a1f00f479f5268cf6cd38a128d009b184}{start}} ()
+\begin{DoxyCompactList}\small\item\em initialize variables and call \mbox{\hyperlink{classmessage__services_1_1services_1_1vehicle__status__intent__service_ad24055517d5aaa2f6ea44b7f35f3e0e9}{run()}} methods to spin up threads. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmessage__services_1_1services_1_1vehicle__status__intent__service_ad24055517d5aaa2f6ea44b7f35f3e0e9}{run}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmessage__services_1_1workers_1_1bsm__worker}{message\+\_\+services\+::workers\+::bsm\+\_\+worker}} $>$ bsm\+\_\+w\+\_\+ptr, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmessage__services_1_1workers_1_1mobilitypath__worker}{message\+\_\+services\+::workers\+::mobilitypath\+\_\+worker}} $>$ mp\+\_\+w\+\_\+ptr, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmessage__services_1_1workers_1_1mobilityoperation__worker}{message\+\_\+services\+::workers\+::mobilityoperation\+\_\+worker}} $>$ mo\+\_\+w\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Creating and running threads. Each thread is acting as consumer or producer to consume or produce messages to topics. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent}{models\+::vehicle\+\_\+status\+\_\+intent}} \mbox{\hyperlink{classmessage__services_1_1services_1_1vehicle__status__intent__service_a3e4969a209c1a53596fff646a47fe34b}{compose\+\_\+vehicle\+\_\+status\+\_\+intent}} (\mbox{\hyperlink{classmessage__services_1_1models_1_1bsm}{models\+::bsm}} \&bsm, \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation}{models\+::mobilityoperation}} \&mo, \mbox{\hyperlink{classmessage__services_1_1models_1_1mobilitypath}{models\+::mobilitypath}} \&mp)
+\begin{DoxyCompactList}\small\item\em Generate the vehicle status and intent message based on the latest bsm , Mobility\+Operation and Mobility\+Path objects. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{classmessage__services_1_1services_1_1vehicle__status__intent__service_a98b6f8369a238e3e1b9504e806fcdc5f}{msg\+\_\+consumer}} (std\+::shared\+\_\+ptr$<$ T $>$ msg\+\_\+ptr, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker}{kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker}} $>$ consumer\+\_\+worker)
+\begin{DoxyCompactList}\small\item\em Consume a message from particular topic and convert the message as an object. Then append the message to its corresponding worker. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmessage__services_1_1services_1_1vehicle__status__intent__service_af352d0ba25bcc6b1ddb30efd1a76889c}{publish\+\_\+msg}} (T msg, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__producer__worker}{kafka\+\_\+clients\+::kafka\+\_\+producer\+\_\+worker}} $>$ producer\+\_\+worker)
+\begin{DoxyCompactList}\small\item\em Producer a message to a topic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{classmessage__services_1_1services_1_1vehicle__status__intent__service_a26cfe2406a39eb81a8187d4abc481680}{MANIFEST\+\_\+\+CONFIG\+\_\+\+FILE\+\_\+\+PATH}} = \char`\"{}../manifest.\+json\char`\"{}
+\begin{DoxyCompactList}\small\item\em configuration file name \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 32 of file vehicle\+\_\+status\+\_\+intent\+\_\+service.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1services_1_1vehicle__status__intent__service_a257602e1d44824c7dd62df8ed5c5d2c0}\label{classmessage__services_1_1services_1_1vehicle__status__intent__service_a257602e1d44824c7dd62df8ed5c5d2c0}} 
+\index{message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}!vehicle\_status\_intent\_service@{vehicle\_status\_intent\_service}}
+\index{vehicle\_status\_intent\_service@{vehicle\_status\_intent\_service}!message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}}
+\doxysubsubsection{\texorpdfstring{vehicle\_status\_intent\_service()}{vehicle\_status\_intent\_service()}}
+{\footnotesize\ttfamily message\+\_\+services\+::services\+::vehicle\+\_\+status\+\_\+intent\+\_\+service\+::vehicle\+\_\+status\+\_\+intent\+\_\+service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 11 of file vehicle\+\_\+status\+\_\+intent\+\_\+service.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1services_1_1vehicle__status__intent__service_a8cf177c69275dd3df6e35085eb011bce}\label{classmessage__services_1_1services_1_1vehicle__status__intent__service_a8cf177c69275dd3df6e35085eb011bce}} 
+\index{message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}!````~vehicle\_status\_intent\_service@{$\sim$vehicle\_status\_intent\_service}}
+\index{````~vehicle\_status\_intent\_service@{$\sim$vehicle\_status\_intent\_service}!message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}}
+\doxysubsubsection{\texorpdfstring{$\sim$vehicle\_status\_intent\_service()}{~vehicle\_status\_intent\_service()}}
+{\footnotesize\ttfamily message\+\_\+services\+::services\+::vehicle\+\_\+status\+\_\+intent\+\_\+service\+::$\sim$vehicle\+\_\+status\+\_\+intent\+\_\+service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 82 of file vehicle\+\_\+status\+\_\+intent\+\_\+service.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1services_1_1vehicle__status__intent__service_a3e4969a209c1a53596fff646a47fe34b}\label{classmessage__services_1_1services_1_1vehicle__status__intent__service_a3e4969a209c1a53596fff646a47fe34b}} 
+\index{message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}!compose\_vehicle\_status\_intent@{compose\_vehicle\_status\_intent}}
+\index{compose\_vehicle\_status\_intent@{compose\_vehicle\_status\_intent}!message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}}
+\doxysubsubsection{\texorpdfstring{compose\_vehicle\_status\_intent()}{compose\_vehicle\_status\_intent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmessage__services_1_1models_1_1vehicle__status__intent}{models\+::vehicle\+\_\+status\+\_\+intent}} message\+\_\+services\+::services\+::vehicle\+\_\+status\+\_\+intent\+\_\+service\+::compose\+\_\+vehicle\+\_\+status\+\_\+intent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmessage__services_1_1models_1_1bsm}{models\+::bsm}} \&}]{bsm,  }\item[{\mbox{\hyperlink{classmessage__services_1_1models_1_1mobilityoperation}{models\+::mobilityoperation}} \&}]{mo,  }\item[{\mbox{\hyperlink{classmessage__services_1_1models_1_1mobilitypath}{models\+::mobilitypath}} \&}]{mp }\end{DoxyParamCaption})}
+
+
+
+Generate the vehicle status and intent message based on the latest bsm , Mobility\+Operation and Mobility\+Path objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointers} & to object that will store the latest messages \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 241 of file vehicle\+\_\+status\+\_\+intent\+\_\+service.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmessage__services_1_1services_1_1vehicle__status__intent__service_a3e4969a209c1a53596fff646a47fe34b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1services_1_1vehicle__status__intent__service_a3e4969a209c1a53596fff646a47fe34b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1services_1_1vehicle__status__intent__service_a037ead29156388388d54f0e15234cfb7}\label{classmessage__services_1_1services_1_1vehicle__status__intent__service_a037ead29156388388d54f0e15234cfb7}} 
+\index{message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}!initialize@{initialize}}
+\index{initialize@{initialize}!message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily bool message\+\_\+services\+::services\+::vehicle\+\_\+status\+\_\+intent\+\_\+service\+::initialize (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmessage__services_1_1message__translations_1_1message__lanelet2__translation}{message\+\_\+translations\+::message\+\_\+lanelet2\+\_\+translation}} $>$}]{msg\+\_\+translate\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+read configuration file and determine the producer and consumer topics, bootstrap server 
+
+
+
+Definition at line 15 of file vehicle\+\_\+status\+\_\+intent\+\_\+service.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1services_1_1vehicle__status__intent__service_a037ead29156388388d54f0e15234cfb7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1services_1_1vehicle__status__intent__service_a037ead29156388388d54f0e15234cfb7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1services_1_1vehicle__status__intent__service_a98b6f8369a238e3e1b9504e806fcdc5f}\label{classmessage__services_1_1services_1_1vehicle__status__intent__service_a98b6f8369a238e3e1b9504e806fcdc5f}} 
+\index{message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}!msg\_consumer@{msg\_consumer}}
+\index{msg\_consumer@{msg\_consumer}!message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}}
+\doxysubsubsection{\texorpdfstring{msg\_consumer()}{msg\_consumer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void message\+\_\+services\+::services\+::vehicle\+\_\+status\+\_\+intent\+\_\+service\+::msg\+\_\+consumer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ T $>$}]{msg\+\_\+ptr,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__consumer__worker}{kafka\+\_\+clients\+::kafka\+\_\+consumer\+\_\+worker}} $>$}]{consumer\+\_\+worker }\end{DoxyParamCaption})}
+
+
+
+Consume a message from particular topic and convert the message as an object. Then append the message to its corresponding worker. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointers} & to object that will store the message consumed. topic from which the message is from. The group id of the consumer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 397 of file vehicle\+\_\+status\+\_\+intent\+\_\+service.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1services_1_1vehicle__status__intent__service_af352d0ba25bcc6b1ddb30efd1a76889c}\label{classmessage__services_1_1services_1_1vehicle__status__intent__service_af352d0ba25bcc6b1ddb30efd1a76889c}} 
+\index{message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}!publish\_msg@{publish\_msg}}
+\index{publish\_msg@{publish\_msg}!message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}}
+\doxysubsubsection{\texorpdfstring{publish\_msg()}{publish\_msg()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void message\+\_\+services\+::services\+::vehicle\+\_\+status\+\_\+intent\+\_\+service\+::publish\+\_\+msg (\begin{DoxyParamCaption}\item[{T}]{msg,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkafka__clients_1_1kafka__producer__worker}{kafka\+\_\+clients\+::kafka\+\_\+producer\+\_\+worker}} $>$}]{producer\+\_\+worker }\end{DoxyParamCaption})}
+
+
+
+Producer a message to a topic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to object that will be published, and a topic name \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 417 of file vehicle\+\_\+status\+\_\+intent\+\_\+service.\+cpp.
+
+\mbox{\Hypertarget{classmessage__services_1_1services_1_1vehicle__status__intent__service_ad24055517d5aaa2f6ea44b7f35f3e0e9}\label{classmessage__services_1_1services_1_1vehicle__status__intent__service_ad24055517d5aaa2f6ea44b7f35f3e0e9}} 
+\index{message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}!run@{run}}
+\index{run@{run}!message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::services\+::vehicle\+\_\+status\+\_\+intent\+\_\+service\+::run (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmessage__services_1_1workers_1_1bsm__worker}{message\+\_\+services\+::workers\+::bsm\+\_\+worker}} $>$}]{bsm\+\_\+w\+\_\+ptr,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmessage__services_1_1workers_1_1mobilitypath__worker}{message\+\_\+services\+::workers\+::mobilitypath\+\_\+worker}} $>$}]{mp\+\_\+w\+\_\+ptr,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmessage__services_1_1workers_1_1mobilityoperation__worker}{message\+\_\+services\+::workers\+::mobilityoperation\+\_\+worker}} $>$}]{mo\+\_\+w\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Creating and running threads. Each thread is acting as consumer or producer to consume or produce messages to topics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointers} & to workers that will be used to work on messages that are consumed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 109 of file vehicle\+\_\+status\+\_\+intent\+\_\+service.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmessage__services_1_1services_1_1vehicle__status__intent__service_ad24055517d5aaa2f6ea44b7f35f3e0e9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1services_1_1vehicle__status__intent__service_ad24055517d5aaa2f6ea44b7f35f3e0e9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmessage__services_1_1services_1_1vehicle__status__intent__service_a1f00f479f5268cf6cd38a128d009b184}\label{classmessage__services_1_1services_1_1vehicle__status__intent__service_a1f00f479f5268cf6cd38a128d009b184}} 
+\index{message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}!start@{start}}
+\index{start@{start}!message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void message\+\_\+services\+::services\+::vehicle\+\_\+status\+\_\+intent\+\_\+service\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initialize variables and call \mbox{\hyperlink{classmessage__services_1_1services_1_1vehicle__status__intent__service_ad24055517d5aaa2f6ea44b7f35f3e0e9}{run()}} methods to spin up threads. 
+
+
+
+Definition at line 100 of file vehicle\+\_\+status\+\_\+intent\+\_\+service.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmessage__services_1_1services_1_1vehicle__status__intent__service_a1f00f479f5268cf6cd38a128d009b184_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmessage__services_1_1services_1_1vehicle__status__intent__service_a1f00f479f5268cf6cd38a128d009b184_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classmessage__services_1_1services_1_1vehicle__status__intent__service_a26cfe2406a39eb81a8187d4abc481680}\label{classmessage__services_1_1services_1_1vehicle__status__intent__service_a26cfe2406a39eb81a8187d4abc481680}} 
+\index{message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}!MANIFEST\_CONFIG\_FILE\_PATH@{MANIFEST\_CONFIG\_FILE\_PATH}}
+\index{MANIFEST\_CONFIG\_FILE\_PATH@{MANIFEST\_CONFIG\_FILE\_PATH}!message\_services::services::vehicle\_status\_intent\_service@{message\_services::services::vehicle\_status\_intent\_service}}
+\doxysubsubsection{\texorpdfstring{MANIFEST\_CONFIG\_FILE\_PATH}{MANIFEST\_CONFIG\_FILE\_PATH}}
+{\footnotesize\ttfamily const std\+::string message\+\_\+services\+::services\+::vehicle\+\_\+status\+\_\+intent\+\_\+service\+::\+MANIFEST\+\_\+\+CONFIG\+\_\+\+FILE\+\_\+\+PATH = \char`\"{}../manifest.\+json\char`\"{}}
+
+
+
+configuration file name 
+
+
+
+Definition at line 86 of file vehicle\+\_\+status\+\_\+intent\+\_\+service.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+message\+\_\+services/include/\mbox{\hyperlink{vehicle__status__intent__service_8h}{vehicle\+\_\+status\+\_\+intent\+\_\+service.\+h}}\item 
+message\+\_\+services/src/services/\mbox{\hyperlink{vehicle__status__intent__service_8cpp}{vehicle\+\_\+status\+\_\+intent\+\_\+service.\+cpp}}\end{DoxyCompactItemize}

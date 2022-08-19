@@ -1,0 +1,226 @@
+\hypertarget{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule}{}\doxysection{streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+schedule Struct Reference}
+\label{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule}\index{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}}
+
+
+Object to represent all\+\_\+stop schedule for single vehicle.  
+
+
+
+
+{\ttfamily \#include $<$all\+\_\+stop\+\_\+intersection\+\_\+schedule.\+h$>$}
+
+
+
+Inheritance diagram for streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+schedule\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+schedule\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a17e9d0104416f0419ae871670850b9c3}{all\+\_\+stop\+\_\+vehicle\+\_\+schedule}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new all\+\_\+stop vehicle schedule object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_aec07c5a66f398a798ef513b691e7ed84}{$\sim$all\+\_\+stop\+\_\+vehicle\+\_\+schedule}} () override=default
+\begin{DoxyCompactList}\small\item\em Destroy the all\+\_\+stop vehicle schedule object. \end{DoxyCompactList}\item 
+rapidjson\+::\+Value \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a2726d915b4abd31525531fd583aafc50}{to\+Json}} (rapidjson\+::\+Document\+::\+Allocator\+Type \&allocator) const override
+\begin{DoxyCompactList}\small\item\em Write vehicle schedule as rapidjson\+::\+Value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+u\+\_\+int64\+\_\+t \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_aa0731dcf4322f99d8793262aee907147}{est}} = 0
+\begin{DoxyCompactList}\small\item\em Earliest possible stopping time based on kinematic information and lanelet speed limit and length. Stopping time is the time since epoch in milliseconds when the vehicle will arrive at the stop bar. \end{DoxyCompactList}\item 
+u\+\_\+int64\+\_\+t \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_afa84a7abfc51bcf1494e9306993814b2}{st}} = 0
+\begin{DoxyCompactList}\small\item\em Stopping time considering preceding vehicle limitations. Stopping time is the time since epoch in milliseconds when the vehicle will arrive at the stop bar. \end{DoxyCompactList}\item 
+u\+\_\+int64\+\_\+t \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a7590a81d8cd1d8bb37f1a99e66ec0197}{et}} = 0
+\begin{DoxyCompactList}\small\item\em Entering time considering already scheduled vehicles. Entering time is the time since epoch in milliseconds when the vehicle will enter the intersection box. \end{DoxyCompactList}\item 
+u\+\_\+int64\+\_\+t \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_ab735125526f509961867602dc459f8e6}{dt}} = 0
+\begin{DoxyCompactList}\small\item\em Departure time considering already scheduled vehicles. Departure time is the time since epoch in milliseconds when the vehicle will depart from the intersection box. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a6bbade68e4c22a7bf0ac1fe77120ae02}{dp}} = -\/1
+\begin{DoxyCompactList}\small\item\em Departure position. This is an index to indicate the order in which vehicles are granted access to the intersection. This index starts at 1 and no two vehicles should ever hold the same index. Negative values are considered invalid but are initial values set before vehicle is scheduled. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a50640de602629b4f186ab3b8e0a51510}{access}} = false
+\begin{DoxyCompactList}\small\item\em Bool flag indicating whether vehicle has access to enter the intersection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405ac}{streets\+\_\+vehicles\+::vehicle\+\_\+state}} \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a1cfe6f93f9f59877dd3585f1f6dbf5c0}{state}} = \mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405aca9a116c50d133c8648404081885194300}{streets\+\_\+vehicles\+::vehicle\+\_\+state\+::\+ND}}
+\begin{DoxyCompactList}\small\item\em Vehicle State (. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Object to represent all\+\_\+stop schedule for single vehicle. 
+
+Definition at line 13 of file all\+\_\+stop\+\_\+intersection\+\_\+schedule.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a17e9d0104416f0419ae871670850b9c3}\label{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a17e9d0104416f0419ae871670850b9c3}} 
+\index{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}!all\_stop\_vehicle\_schedule@{all\_stop\_vehicle\_schedule}}
+\index{all\_stop\_vehicle\_schedule@{all\_stop\_vehicle\_schedule}!streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{all\_stop\_vehicle\_schedule()}{all\_stop\_vehicle\_schedule()}}
+{\footnotesize\ttfamily streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+schedule\+::all\+\_\+stop\+\_\+vehicle\+\_\+schedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new all\+\_\+stop vehicle schedule object. 
+
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_aec07c5a66f398a798ef513b691e7ed84}\label{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_aec07c5a66f398a798ef513b691e7ed84}} 
+\index{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}!````~all\_stop\_vehicle\_schedule@{$\sim$all\_stop\_vehicle\_schedule}}
+\index{````~all\_stop\_vehicle\_schedule@{$\sim$all\_stop\_vehicle\_schedule}!streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{$\sim$all\_stop\_vehicle\_schedule()}{~all\_stop\_vehicle\_schedule()}}
+{\footnotesize\ttfamily streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+schedule\+::$\sim$all\+\_\+stop\+\_\+vehicle\+\_\+schedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+Destroy the all\+\_\+stop vehicle schedule object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a2726d915b4abd31525531fd583aafc50}\label{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a2726d915b4abd31525531fd583aafc50}} 
+\index{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}!toJson@{toJson}}
+\index{toJson@{toJson}!streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily rapidjson\+::\+Value streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+schedule\+::to\+Json (\begin{DoxyParamCaption}\item[{rapidjson\+::\+Document\+::\+Allocator\+Type \&}]{allocator }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Write vehicle schedule as rapidjson\+::\+Value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allocator} & json document allocator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rapidjson\+::\+Value 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{structstreets__vehicle__scheduler_1_1vehicle__schedule_ab1a23876fbb6958eb224d8ce05a52d2e}{streets\+\_\+vehicle\+\_\+scheduler\+::vehicle\+\_\+schedule}}.
+
+
+
+Definition at line 67 of file all\+\_\+stop\+\_\+intersection\+\_\+schedule.\+cpp.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a50640de602629b4f186ab3b8e0a51510}\label{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a50640de602629b4f186ab3b8e0a51510}} 
+\index{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}!access@{access}}
+\index{access@{access}!streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{access}{access}}
+{\footnotesize\ttfamily bool streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+schedule\+::access = false}
+
+
+
+Bool flag indicating whether vehicle has access to enter the intersection. 
+
+
+
+Definition at line 56 of file all\+\_\+stop\+\_\+intersection\+\_\+schedule.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a6bbade68e4c22a7bf0ac1fe77120ae02}\label{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a6bbade68e4c22a7bf0ac1fe77120ae02}} 
+\index{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}!dp@{dp}}
+\index{dp@{dp}!streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{dp}{dp}}
+{\footnotesize\ttfamily int streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+schedule\+::dp = -\/1}
+
+
+
+Departure position. This is an index to indicate the order in which vehicles are granted access to the intersection. This index starts at 1 and no two vehicles should ever hold the same index. Negative values are considered invalid but are initial values set before vehicle is scheduled. 
+
+
+
+Definition at line 52 of file all\+\_\+stop\+\_\+intersection\+\_\+schedule.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_ab735125526f509961867602dc459f8e6}\label{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_ab735125526f509961867602dc459f8e6}} 
+\index{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}!dt@{dt}}
+\index{dt@{dt}!streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{dt}{dt}}
+{\footnotesize\ttfamily u\+\_\+int64\+\_\+t streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+schedule\+::dt = 0}
+
+
+
+Departure time considering already scheduled vehicles. Departure time is the time since epoch in milliseconds when the vehicle will depart from the intersection box. 
+
+
+
+Definition at line 45 of file all\+\_\+stop\+\_\+intersection\+\_\+schedule.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_aa0731dcf4322f99d8793262aee907147}\label{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_aa0731dcf4322f99d8793262aee907147}} 
+\index{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}!est@{est}}
+\index{est@{est}!streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{est}{est}}
+{\footnotesize\ttfamily u\+\_\+int64\+\_\+t streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+schedule\+::est = 0}
+
+
+
+Earliest possible stopping time based on kinematic information and lanelet speed limit and length. Stopping time is the time since epoch in milliseconds when the vehicle will arrive at the stop bar. 
+
+
+
+Definition at line 29 of file all\+\_\+stop\+\_\+intersection\+\_\+schedule.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a7590a81d8cd1d8bb37f1a99e66ec0197}\label{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a7590a81d8cd1d8bb37f1a99e66ec0197}} 
+\index{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}!et@{et}}
+\index{et@{et}!streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{et}{et}}
+{\footnotesize\ttfamily u\+\_\+int64\+\_\+t streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+schedule\+::et = 0}
+
+
+
+Entering time considering already scheduled vehicles. Entering time is the time since epoch in milliseconds when the vehicle will enter the intersection box. 
+
+
+
+Definition at line 39 of file all\+\_\+stop\+\_\+intersection\+\_\+schedule.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_afa84a7abfc51bcf1494e9306993814b2}\label{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_afa84a7abfc51bcf1494e9306993814b2}} 
+\index{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}!st@{st}}
+\index{st@{st}!streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{st}{st}}
+{\footnotesize\ttfamily u\+\_\+int64\+\_\+t streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+schedule\+::st = 0}
+
+
+
+Stopping time considering preceding vehicle limitations. Stopping time is the time since epoch in milliseconds when the vehicle will arrive at the stop bar. 
+
+
+
+Definition at line 34 of file all\+\_\+stop\+\_\+intersection\+\_\+schedule.\+h.
+
+\mbox{\Hypertarget{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a1cfe6f93f9f59877dd3585f1f6dbf5c0}\label{structstreets__vehicle__scheduler_1_1all__stop__vehicle__schedule_a1cfe6f93f9f59877dd3585f1f6dbf5c0}} 
+\index{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}!state@{state}}
+\index{state@{state}!streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule@{streets\_vehicle\_scheduler::all\_stop\_vehicle\_schedule}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405ac}{streets\+\_\+vehicles\+::vehicle\+\_\+state}} streets\+\_\+vehicle\+\_\+scheduler\+::all\+\_\+stop\+\_\+vehicle\+\_\+schedule\+::state = \mbox{\hyperlink{namespacestreets__vehicles_a41f5c896d8020c141aa96235cf1405aca9a116c50d133c8648404081885194300}{streets\+\_\+vehicles\+::vehicle\+\_\+state\+::\+ND}}}
+
+
+
+Vehicle State (. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structstreets__vehicles_1_1vehicle}{streets\+\_\+vehicles\+::vehicle}}) 
+\end{DoxySeeAlso}
+
+
+Definition at line 60 of file all\+\_\+stop\+\_\+intersection\+\_\+schedule.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/include/\mbox{\hyperlink{all__stop__intersection__schedule_8h}{all\+\_\+stop\+\_\+intersection\+\_\+schedule.\+h}}\item 
+streets\+\_\+utils/streets\+\_\+vehicle\+\_\+scheduler/src/\mbox{\hyperlink{all__stop__intersection__schedule_8cpp}{all\+\_\+stop\+\_\+intersection\+\_\+schedule.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,92 @@
+\hypertarget{namespacesimulate__bsm}{}\doxysection{simulate\+\_\+bsm Namespace Reference}
+\label{namespacesimulate__bsm}\index{simulate\_bsm@{simulate\_bsm}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacesimulate__bsm_ad21dfaf5e5570adbbc44c79cd1cbf844}{read\+\_\+json}} (json\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesimulate__bsm_a88896685ca027b80cae5cd3cca4003ea}{producer}}
+\item 
+int \mbox{\hyperlink{namespacesimulate__bsm_a76f645adf8af768fa959ecb6f90d7831}{count}} = 10
+\item 
+int \mbox{\hyperlink{namespacesimulate__bsm_a29b8e2f01a805057636de5ad54422c21}{i}} = 0
+\item 
+def \mbox{\hyperlink{namespacesimulate__bsm_a2aaf0142837b674c6cfa6006cf335bc7}{data}} = \mbox{\hyperlink{namespacesimulate__bsm_ad21dfaf5e5570adbbc44c79cd1cbf844}{read\+\_\+json}}(\textquotesingle{}bsm.\+json\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacesimulate__bsm_a4e420317ae55cdf52ea0066e7a2b5fba}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacesimulate__bsm_ad21dfaf5e5570adbbc44c79cd1cbf844}\label{namespacesimulate__bsm_ad21dfaf5e5570adbbc44c79cd1cbf844}} 
+\index{simulate\_bsm@{simulate\_bsm}!read\_json@{read\_json}}
+\index{read\_json@{read\_json}!simulate\_bsm@{simulate\_bsm}}
+\doxysubsubsection{\texorpdfstring{read\_json()}{read\_json()}}
+{\footnotesize\ttfamily def simulate\+\_\+bsm.\+read\+\_\+json (\begin{DoxyParamCaption}\item[{}]{json\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file simulate\+\_\+bsm.\+py.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesimulate__bsm_a76f645adf8af768fa959ecb6f90d7831}\label{namespacesimulate__bsm_a76f645adf8af768fa959ecb6f90d7831}} 
+\index{simulate\_bsm@{simulate\_bsm}!count@{count}}
+\index{count@{count}!simulate\_bsm@{simulate\_bsm}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily int simulate\+\_\+bsm.\+count = 10}
+
+
+
+Definition at line 18 of file simulate\+\_\+bsm.\+py.
+
+\mbox{\Hypertarget{namespacesimulate__bsm_a2aaf0142837b674c6cfa6006cf335bc7}\label{namespacesimulate__bsm_a2aaf0142837b674c6cfa6006cf335bc7}} 
+\index{simulate\_bsm@{simulate\_bsm}!data@{data}}
+\index{data@{data}!simulate\_bsm@{simulate\_bsm}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily def simulate\+\_\+bsm.\+data = \mbox{\hyperlink{namespacesimulate__bsm_ad21dfaf5e5570adbbc44c79cd1cbf844}{read\+\_\+json}}(\textquotesingle{}bsm.\+json\textquotesingle{})}
+
+
+
+Definition at line 21 of file simulate\+\_\+bsm.\+py.
+
+\mbox{\Hypertarget{namespacesimulate__bsm_a29b8e2f01a805057636de5ad54422c21}\label{namespacesimulate__bsm_a29b8e2f01a805057636de5ad54422c21}} 
+\index{simulate\_bsm@{simulate\_bsm}!i@{i}}
+\index{i@{i}!simulate\_bsm@{simulate\_bsm}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily int simulate\+\_\+bsm.\+i = 0}
+
+
+
+Definition at line 19 of file simulate\+\_\+bsm.\+py.
+
+\mbox{\Hypertarget{namespacesimulate__bsm_a88896685ca027b80cae5cd3cca4003ea}\label{namespacesimulate__bsm_a88896685ca027b80cae5cd3cca4003ea}} 
+\index{simulate\_bsm@{simulate\_bsm}!producer@{producer}}
+\index{producer@{producer}!simulate\_bsm@{simulate\_bsm}}
+\doxysubsubsection{\texorpdfstring{producer}{producer}}
+{\footnotesize\ttfamily simulate\+\_\+bsm.\+producer}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  KafkaProducer(bootstrap\_servers=[\textcolor{stringliteral}{"{}127.0.0.1:9092"{}}],}
+\DoxyCodeLine{2                              value\_serializer=\textcolor{keyword}{lambda} x: json.dumps(x).encode(\textcolor{stringliteral}{'utf-\/8'}))}
+
+\end{DoxyCode}
+
+
+Definition at line 16 of file simulate\+\_\+bsm.\+py.
+
+\mbox{\Hypertarget{namespacesimulate__bsm_a4e420317ae55cdf52ea0066e7a2b5fba}\label{namespacesimulate__bsm_a4e420317ae55cdf52ea0066e7a2b5fba}} 
+\index{simulate\_bsm@{simulate\_bsm}!value@{value}}
+\index{value@{value}!simulate\_bsm@{simulate\_bsm}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily simulate\+\_\+bsm.\+value}
+
+
+
+Definition at line 24 of file simulate\+\_\+bsm.\+py.
+

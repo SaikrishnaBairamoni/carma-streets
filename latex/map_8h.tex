@@ -1,0 +1,83 @@
+\hypertarget{map_8h}{}\doxysection{intersection\+\_\+model/include/map.h File Reference}
+\label{map_8h}\index{intersection\_model/include/map.h@{intersection\_model/include/map.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$spdlog/spdlog.\+h$>$}\newline
+Include dependency graph for map.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{map_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{map_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1map__referencelane}{intersection\+\_\+model\+::map\+\_\+referencelane}}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1map__connection}{intersection\+\_\+model\+::map\+\_\+connection}}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1map__node}{intersection\+\_\+model\+::map\+\_\+node}}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1map__lane}{intersection\+\_\+model\+::map\+\_\+lane}}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1map__group}{intersection\+\_\+model\+::map\+\_\+group}}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1map__referencepoint}{intersection\+\_\+model\+::map\+\_\+referencepoint}}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1map__geometry}{intersection\+\_\+model\+::map\+\_\+geometry}}
+\item 
+struct \mbox{\hyperlink{structintersection__model_1_1intersection__map}{intersection\+\_\+model\+::intersection\+\_\+map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceintersection__model}{intersection\+\_\+model}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespaceintersection__model_a9665ff9720af0b25d1c6a216e7bf66b4}{intersection\+\_\+model\+::map\+\_\+type}} \{ \mbox{\hyperlink{namespaceintersection__model_a9665ff9720af0b25d1c6a216e7bf66b4a26fef4087b2c10cb5ab7e4a5f5436ff4}{intersection\+\_\+model\+::intersection}} = 1
+, \mbox{\hyperlink{namespaceintersection__model_a9665ff9720af0b25d1c6a216e7bf66b4a63f15d788c265b303ddfebff7b8503d3}{intersection\+\_\+model\+::roadway}} = 2
+ \}
+\item 
+enum class \mbox{\hyperlink{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5a}{intersection\+\_\+model\+::map\+\_\+message\+\_\+attributes}} \{ \mbox{\hyperlink{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5aa8c6ac9887f33b5f79188a4eae7fb2803}{intersection\+\_\+model\+::elevation}} = 1
+, \mbox{\hyperlink{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5aa5f7e3405d1d04dae7c8affc36714d0fe}{intersection\+\_\+model\+::decimeter}} = 2
+, \mbox{\hyperlink{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5aa65a383f3960a0cb2b8b0ace54817d575}{intersection\+\_\+model\+::geometric}} = 4
+, \mbox{\hyperlink{namespaceintersection__model_a46cdfc6ed74c650a70c2f6cd1ade7a5aa8e204e51a4d94ac694300a67a5793078}{intersection\+\_\+model\+::navigational}} = 8
+ \}
+\item 
+enum class \mbox{\hyperlink{namespaceintersection__model_a636d7a45dcacadc8139f3e24e3d6393d}{intersection\+\_\+model\+::map\+\_\+node\+\_\+attributes}} \{ \mbox{\hyperlink{namespaceintersection__model_a636d7a45dcacadc8139f3e24e3d6393daeaae26a6fb20ed3ef54fb23bfa0b1fcc}{intersection\+\_\+model\+::width}} = 1
+, \mbox{\hyperlink{namespaceintersection__model_a636d7a45dcacadc8139f3e24e3d6393daf59dcd306ec32930f1e78a1d82280b48}{intersection\+\_\+model\+::packed}} = 2
+ \}
+\item 
+enum class \mbox{\hyperlink{namespaceintersection__model_ae4b706d1cdee7b78ec5df5cf141a3e1a}{intersection\+\_\+model\+::map\+\_\+group\+\_\+direction}} \{ \mbox{\hyperlink{namespaceintersection__model_ae4b706d1cdee7b78ec5df5cf141a3e1aaf36acfa3674037fc4f43dab0f06c14b0}{intersection\+\_\+model\+::approach}} = 1
+, \mbox{\hyperlink{namespaceintersection__model_ae4b706d1cdee7b78ec5df5cf141a3e1aa9928c88a1235388e8d82bcc09db13c7c}{intersection\+\_\+model\+::egress}} = 2
+ \}
+\item 
+enum class \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8}{intersection\+\_\+model\+::map\+\_\+lane\+\_\+type}} \{ \newline
+\mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a5a76e813d6a0a40548b91acc11557bd2}{intersection\+\_\+model\+::vehicle}} = 1
+, \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a5a317d3dd3f7a2f675975a6d0c11c629}{intersection\+\_\+model\+::computed}} = 2
+, \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a9d12c2a0e16c88b9a8d8e8f9f05350bc}{intersection\+\_\+model\+::pedestrian}} = 3
+, \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a0bd6506986ec42e732ffb866d33bb14e}{intersection\+\_\+model\+::special}} = 4
+, \newline
+\mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a0e6f2aa57946950687930fd3e48c11ff}{intersection\+\_\+model\+::crosswalk}} = 10
+, \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8adde2c7ad63ad86d6a18de781205d194f}{intersection\+\_\+model\+::bike}} = 11
+, \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8ab788ae8f05bb1f7184564c71a5963d95}{intersection\+\_\+model\+::sidewalk}} = 12
+, \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8afa9c8ab925b4a1cd4c75b1886fac8f61}{intersection\+\_\+model\+::barrier}} = 13
+, \newline
+\mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a409b522f10afa7c261f950129ce23ba8}{intersection\+\_\+model\+::striping}} = 14
+, \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a8caf877ecc26ccba4de1770e20a71605}{intersection\+\_\+model\+::tracked\+Vehicle}} = 15
+, \mbox{\hyperlink{namespaceintersection__model_aa7ffa99ba647ab571c0bbeb2591c40b8a3ac156eead4ae6b40e9c498d532b4448}{intersection\+\_\+model\+::parking}} = 16
+ \}
+\end{DoxyCompactItemize}
