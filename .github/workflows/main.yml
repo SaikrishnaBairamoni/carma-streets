@@ -22,7 +22,7 @@ jobs:
       - name: spg
         run: git clone https://github.com/edenhill/librdkafka
              cd librdkafka/
-             ./configure --prefix=/usr
+             ./configure 
              make
              make install && \
              git clone https://github.com/gabime/spdlog.git
