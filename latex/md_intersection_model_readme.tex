@@ -1,5 +1,5 @@
-\hypertarget{md_intersection_model_readme_autotoc_md21}{}\doxysection{A Library to read lanelet2 osm map}\label{md_intersection_model_readme_autotoc_md21}
-This library will read and lanelet2 osm map and take in a configurable bounding box to mark the intersection being managed. The library will store the appropriate lanelet2 objects inside this bound box including entry lanes into the intersection, linking lanes through the intersection and any regulatory elements (stop bars, stop signs, traffic lights, speed limits) inside the intersection. The \mbox{\hyperlink{namespaceintersection__model}{intersection\+\_\+model}} had methods to translate GPS location data into lane specific information like lanelet id and distance to the end of the lane for services like the message\+\_\+service to provide lane. The \mbox{\hyperlink{namespaceintersection__model}{intersection\+\_\+model}} will also return the intersection lanelet2 objects to services that need them to make sense of the lane specific updates the message\+\_\+service provides.\hypertarget{md_intersection_model_readme_autotoc_md22}{}\doxysubsection{Steps to Build intersection\+\_\+model locally}\label{md_intersection_model_readme_autotoc_md22}
+\hypertarget{md_intersection_model_readme_autotoc_md18}{}\doxysection{A Library to read lanelet2 osm map}\label{md_intersection_model_readme_autotoc_md18}
+This library will read and lanelet2 osm map and take in a configurable bounding box to mark the intersection being managed. The library will store the appropriate lanelet2 objects inside this bound box including entry lanes into the intersection, linking lanes through the intersection and any regulatory elements (stop bars, stop signs, traffic lights, speed limits) inside the intersection. The \mbox{\hyperlink{namespaceintersection__model}{intersection\+\_\+model}} had methods to translate GPS location data into lane specific information like lanelet id and distance to the end of the lane for services like the message\+\_\+service to provide lane. The \mbox{\hyperlink{namespaceintersection__model}{intersection\+\_\+model}} will also return the intersection lanelet2 objects to services that need them to make sense of the lane specific updates the message\+\_\+service provides.\hypertarget{md_intersection_model_readme_autotoc_md19}{}\doxysubsection{Steps to Build intersection\+\_\+model locally}\label{md_intersection_model_readme_autotoc_md19}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{apt-\/get update  \&\& apt-\/get install -\/y cmake libboost1.65-\/all-\/dev git autotools-\/dev automake sqlite3 libsqlite3-\/dev curl libpugixml-\/dev libgeographic-\/dev qtbase5-\/dev qtbase5-\/dev-\/tools libqhttpengine-\/dev libssl-\/dev}
@@ -112,14 +112,14 @@ This library will read and lanelet2 osm map and take in a configurable bounding 
 \DoxyCodeLine{RUN make}
 
 \end{DoxyCode}
- \hypertarget{md_intersection_model_readme_autotoc_md23}{}\doxysubsection{Steps to Build intersection\+\_\+model using Docker}\label{md_intersection_model_readme_autotoc_md23}
+ \hypertarget{md_intersection_model_readme_autotoc_md20}{}\doxysubsection{Steps to Build intersection\+\_\+model using Docker}\label{md_intersection_model_readme_autotoc_md20}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{Navigate to /carma-\/streets/ directory}
 \DoxyCodeLine{docker build -\/t intersection\_model -\/f intersection\_model/Dockerfile .}
 
 \end{DoxyCode}
- \hypertarget{md_intersection_model_readme_autotoc_md24}{}\doxysubsection{API definition}\label{md_intersection_model_readme_autotoc_md24}
+ \hypertarget{md_intersection_model_readme_autotoc_md21}{}\doxysubsection{API definition}\label{md_intersection_model_readme_autotoc_md21}
 
 \begin{DoxyEnumerate}
 \item intersection model is a service used the expose intersection geometry information from MAP and lanelet2 osm map to carma-\/streets services that require this information via REST server.
@@ -177,5 +177,5 @@ This library will read and lanelet2 osm map and take in a configurable bounding 
 \end{DoxyCode}
 
 \item Intesection model handler and router classes inherit from the default handler and router classes from the generated library in streets\+\_\+utils/streets\+\_\+api folder. 
-\end{DoxyEnumerate}\hypertarget{md_intersection_model_readme_autotoc_md25}{}\doxysubsection{Notes}\label{md_intersection_model_readme_autotoc_md25}
+\end{DoxyEnumerate}\hypertarget{md_intersection_model_readme_autotoc_md22}{}\doxysubsection{Notes}\label{md_intersection_model_readme_autotoc_md22}
 When running unit test for the intersection model, making sure the correct osm file is upload under the \mbox{\hyperlink{namespaceintersection__model}{intersection\+\_\+model}} directory. 

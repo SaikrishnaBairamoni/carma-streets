@@ -1,4 +1,4 @@
-\hypertarget{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md90}{}\doxysection{Introduction}\label{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md90}
+\hypertarget{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md87}{}\doxysection{Introduction}\label{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md87}
 This CARMA-\/\+Streets library is meant to handle JSON serialization and deserialization for the CARMA-\/\+Streets internal SPaT JSON message. The message structure is heavily based on the J2735 SPaT message but does not contain any regional extension data since we are currently not using it. Below is a sample SPaT JSON message created by this library. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\{}
@@ -58,7 +58,7 @@ This CARMA-\/\+Streets library is meant to handle JSON serialization and deseria
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}
- \hypertarget{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md91}{}\doxysection{SPa\+T Traffic Signal State Information}\label{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md91}
+ \hypertarget{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md88}{}\doxysection{SPa\+T Traffic Signal State Information}\label{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md88}
 The two relevant portions of the SPaT JSON message for managing traffic signal {\bfseries{states}} Movement\+List and the {\bfseries{state-\/time-\/speed}} Movement\+Event\+List. The {\bfseries{states}} Movement\+List is a list of Movement\+States. Each describes the state of a particular movement in the intersection. These can be identified by their {\bfseries{signal\+\_\+group\+\_\+id}} which is the unique identifier for the signal group that controls this movement. Inside each Movement\+State there is a {\bfseries{state-\/time-\/speed}} Movement\+Event\+List. This is a list of Movement\+Events. Each Movement\+Event has information about the phase as a Movement\+Phase\+State enumeration and timing information about the start and end time of the described phase. Each Movement\+Event\+List can hold 16 possible Movement\+Events (limitation of J2735 not this data type) to describe a current phase and up to 15 future phases. Each Movement\+Event contains {\bfseries{timing}} information which will include at minimum, {\bfseries{start\+\_\+time}} and {\bfseries{min\+\_\+end\+\_\+time}}. These fields will represent the start and end time for each phase and are represented as tenths of a second in the current or next hour in units of 1/10th second from UTC time.\+A range of 0$\sim$36000 covers one hour.\+The values 35991..35999 are used when a leap second occurs.\+The value 36000 is used to indicate time $>$3600 seconds. 36001 is to be used when value undefined or unknown. Note that this is NOT expressed in GPS time or in local time Below is an example JSON for the described objects.(J2735 Time\+Mark definition). 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{"{}states"{}:[}
@@ -115,7 +115,7 @@ The two relevant portions of the SPaT JSON message for managing traffic signal {
 \DoxyCodeLine{]}
 
 \end{DoxyCode}
-\hypertarget{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md92}{}\doxysection{Including Library}\label{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md92}
+\hypertarget{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md89}{}\doxysection{Including Library}\label{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md89}
 To include this library in your CARMA-\/\+Streets service simply add the following to your CMake\+List.\+txt. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{find\_package( streets\_signal\_phase\_and\_timing\_lib REQUIRED )}
@@ -123,7 +123,7 @@ To include this library in your CARMA-\/\+Streets service simply add the followi
 \DoxyCodeLine{target\_link\_libraries( <target> PUBLIC streets\_signal\_phase\_and\_timing\_lib )}
 
 \end{DoxyCode}
-\hypertarget{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md93}{}\doxysection{Initializing SPa\+T Object for consuming NTCIP UDP data}\label{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md93}
+\hypertarget{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md90}{}\doxysection{Initializing SPa\+T Object for consuming NTCIP UDP data}\label{md_streets_utils_streets_signal_phase_and_timing_README_autotoc_md90}
 This {\ttfamily spat} object contains methods to update based on json SPaT updates or ntcip\+\_\+1202\+\_\+ext UDP data. For updating using JSON SPaT messages no initialization is required since each update will contain all the required information. Below is an example of how to consume an update. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{std::string json; // This string needs to be populated with JSON spat update.}

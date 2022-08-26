@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.1-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,6 +10,12 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-zephyr.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +29,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Carma-streets
+   &#160;<span id="projectnumber">v4.2.0</span>
    </div>
+   <div id="projectbrief">CARMA Streets is a component of CARMA ecosystem that improves the efficiency and performance of the Transportation Systems Management and Operations (TSMO) strategies.</div>
   </td>
  </tr>
  </tbody>
@@ -45,6 +54,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('md_streets_utils_streets_service_base_README.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,19 +85,18 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
 <div class="title">Streets Service Base Library </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md85"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md82"></a>
 Introduction</h1>
 <p>This is the <code>streets_service_base</code> library meant to be the base of each new CARMA-Streets service. It contains a extensible templated singleton implementation that allows for the creation of singleton scoped objects in CARMA-Streets services with static access. This means that by extending this class you can implement a class of which there can only ever be a single instance and which is statically retrievable using the <code>streets_singleton::get_singleton()</code> method. This library also includes an implemented singleton <code>streets_configuration</code> class which standardizes how CARMA-Streets services will read configuration parameters from <code>manifest.json</code> configuration files. This <code>streets_configuration</code> singleton parses the <code>manifest.json</code> configuration file and then allows for static retrieval of configuration parameters using the <code>get_int_config()</code>,<code>get_double_config</code>,<code>get_string_config()</code>, and <code>get_bool_config()</code> methods.</p>
-<h1><a class="anchor" id="autotoc_md86"></a>
+<h1><a class="anchor" id="autotoc_md83"></a>
 Streets Singleton</h1>
 <p>Library offers access to the <code>streets_singleton</code> class. This is a templated, extensible class that stores and offers static retrieval of a single instance of itself, which is lazily initialized (not initialized until retrieved for the first time). To ensure that new instances of this class can not be created the constructors are deleted or hidden using private or protected access.</p>
-<h1><a class="anchor" id="autotoc_md87"></a>
+<h1><a class="anchor" id="autotoc_md84"></a>
 Streets Configuration</h1>
 <p>Library creates <code>streets_configuration</code> singleton which standardizes the <code>manifest.json</code> configuration file parsing and configuration parameter retrieval. Extending <code>streets_singleton</code> allows <code>streets_configuration</code> to be limited to singleton scope ( single instance ) and offer static methods for configuration parameter retrieval. <code>streets_configuration</code> also parses some service required configurations like <b>loglevel</b> and <b>service_name</b> to create and configure a <code>spdlog::async_loggerr</code> with a <code>spdlog::sinks::daily_file_sink_mt</code> and a <code>spdlog::sinks::stdout_color_sink_mt</code>.</p>
 <p>Example <code>manifest.json</code> configuration file. </p><div class="fragment"><div class="line">{</div>
@@ -104,7 +129,7 @@ Streets Configuration</h1>
 <div class="line">        }</div>
 <div class="line">    ]</div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md88"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md85"></a>
 Include streets_service_base_lib::streets_service_base_lib</h1>
 <p>Streets Service Base <code>CMakeList.txt</code> includes an install target which will install this library as a CMake package. The library along with it's dependencies can then be included by simply using the find_package() instruction.</p>
 <div class="fragment"><div class="line">find_package(streets_service_base_lib COMPONENT streets_service_base_lib)</div>
@@ -112,9 +137,26 @@ Include streets_service_base_lib::streets_service_base_lib</h1>
 <div class="line">target_link_library( target PUBLIC streets_service_base_lib::streets_service_base_lib)</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Fri Aug 26 2022 14:01:50 for Carma-streets by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+    toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+    toggleButton.title = "Toggle Light/Dark Mode"
+    $(document).ready(function(){
+      document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+    })
+    // every resize will remove the button, which is why it has to be added again:
+    $(window).resize(function(){
+      document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+    })
+  })
+</script>
 </body>
 </html>

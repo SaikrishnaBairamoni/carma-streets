@@ -1,0 +1,27 @@
+var structsignal__phase__and__timing_1_1intersection__state =
+[
+    [ "convert_min_mills2epoch_ts", "structsignal__phase__and__timing_1_1intersection__state.html#a4fde3ad2fb225f963f411ad66e72066f", null ],
+    [ "convert_offset", "structsignal__phase__and__timing_1_1intersection__state.html#a7f3126c08963787918c8d007255b4193", null ],
+    [ "fromJson", "structsignal__phase__and__timing_1_1intersection__state.html#ac73d712ab8edf86b8d9c892f6bdff5e0", null ],
+    [ "get_epoch_timestamp", "structsignal__phase__and__timing_1_1intersection__state.html#a8bc23ba89dd6c079735485173ba6d6d5", null ],
+    [ "get_movement", "structsignal__phase__and__timing_1_1intersection__state.html#a0212a92fdea9a7f1f5959d002ba7dda9", null ],
+    [ "initialize_movement_states", "structsignal__phase__and__timing_1_1intersection__state.html#aca7f3528dc9e42b152c0e4537468fd79", null ],
+    [ "operator!=", "structsignal__phase__and__timing_1_1intersection__state.html#a19acfe5a1d6bdd80a61d086b52579f8b", null ],
+    [ "operator==", "structsignal__phase__and__timing_1_1intersection__state.html#ac42d471e1b9b4bf7924ffb93bd6892e9", null ],
+    [ "set_timestamp_local", "structsignal__phase__and__timing_1_1intersection__state.html#a480dafe7aae5c872f14d1f60c8627636", null ],
+    [ "set_timestamp_ntcip", "structsignal__phase__and__timing_1_1intersection__state.html#a5aa5329bedd738f5579cf045975d87a9", null ],
+    [ "toJson", "structsignal__phase__and__timing_1_1intersection__state.html#ae992920af2fdef8ffd0cf29da74e0ac9", null ],
+    [ "update_movement_state", "structsignal__phase__and__timing_1_1intersection__state.html#a01285f8060241eec1adbaa0c5e97a1df", null ],
+    [ "update_movements", "structsignal__phase__and__timing_1_1intersection__state.html#adb8a7d8693ba85ab08f3c0e31afe4935", null ],
+    [ "enabled_lanes", "structsignal__phase__and__timing_1_1intersection__state.html#a8c616e91f927f3803dcd2367e12a4eb9", null ],
+    [ "id", "structsignal__phase__and__timing_1_1intersection__state.html#ada34bde87ec24eb85810d408cd13f69f", null ],
+    [ "maneuver_assist_list", "structsignal__phase__and__timing_1_1intersection__state.html#a608bced258a6e40c5b975021b3a6bc02", null ],
+    [ "MIN_TO_SECONDS", "structsignal__phase__and__timing_1_1intersection__state.html#ad71bed5c8cd56cac8dcd041c5fd5a83e", null ],
+    [ "moy", "structsignal__phase__and__timing_1_1intersection__state.html#a0a0ee55cccc9fb11add9902564ad504e", null ],
+    [ "name", "structsignal__phase__and__timing_1_1intersection__state.html#a6da9216f423d4fdb2d754ea68e276e73", null ],
+    [ "revision", "structsignal__phase__and__timing_1_1intersection__state.html#a7ec8a1a400233389a5640c48bda4d1e3", null ],
+    [ "SECOND_TO_MILLISECONDS", "structsignal__phase__and__timing_1_1intersection__state.html#aebaed676aff07f126fe01e1319b4c605", null ],
+    [ "states", "structsignal__phase__and__timing_1_1intersection__state.html#a7ede63a37705e6c5cdce68883fe78a7d", null ],
+    [ "status", "structsignal__phase__and__timing_1_1intersection__state.html#abbd9ce5f7a9b4930e5cdfeaf84ddbe02", null ],
+    [ "time_stamp", "structsignal__phase__and__timing_1_1intersection__state.html#a51c19a8652fc7761cb9e632fc01a9dd2", null ]
+];
