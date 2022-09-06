@@ -45,9 +45,7 @@ jobs:
             # And push
             git push https://${GIT_TOKEN}@github.com/SaikrishnaBairamoni/carma-streets.git
  
- version: 2
-  jobs:
-     build:
+     general:
        # Correct indentation
        branches:
          ignore: gh-pages   
