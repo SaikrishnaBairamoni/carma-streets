@@ -49,7 +49,6 @@ jobs:
           command: yarn run gh-pages --message "[skip ci] generate docs" --dist target/doc            
  
 general:
-    branches:
-      ignore: gh-pages
-    steps:
-      - run: echo "Skipping tests on gh-pages branch"  
+  branches:
+    ignore:
+      - gh-pages 
