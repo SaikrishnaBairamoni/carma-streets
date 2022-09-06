@@ -42,7 +42,7 @@ jobs:
           name: Deploy docs to gh-pages branch
           command: gh-pages --dotfiles --message "[skip ci] Updates" --dist /html
   version: 2
-  build:
+  car:
     jobs:
       - build:
           filters:  # using regex filters requires the entire branch to match
