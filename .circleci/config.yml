@@ -15,10 +15,7 @@ jobs:
           #keys:
             #- v1-dependencies-{{ checksum "requirements.txt" }}
             # fallback to using the latest cache if no exact match is found
-            #- v1-dependencies-
-          branches:
-            ignore:
-              - gh-pages            
+            #- v1-dependencies-         
       - run:
           name: install doxygen latex components
           command: |
@@ -27,10 +24,7 @@ jobs:
             #sudo apt-get -y -qq update
             #sudo apt-get -y install build-essential checkinstall
             ls -la
-            pwd
-          branches:
-            ignore:
-              - gh-pages            
+            pwd         
       - run:
           name: Create the Doxygen
           command: |
@@ -50,11 +44,14 @@ jobs:
             git commit -m "moved html from develop"
             # And push
             git push https://${GIT_TOKEN}@github.com/SaikrishnaBairamoni/carma-streets.git
-          branches:
-            ignore:
-              - gh-pages
- 
-general:
-  branches:
-    ignore:
-      - gh-pages 
+workflows:
+  version: 2
+  build: 
+    jobs:
+      - build
+          filters:
+            tags:
+              only: /^\d+\.\d+\.\d+$/
+            branches:
+              ignore:
+                - gh-pages
