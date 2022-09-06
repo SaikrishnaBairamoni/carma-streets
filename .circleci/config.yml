@@ -44,8 +44,7 @@ jobs:
             git commit -m "moved html from develop"
             # And push
             git push https://${GIT_TOKEN}@github.com/SaikrishnaBairamoni/carma-streets.git
-  build:
-    machine: true
+  general:
     branches:
       ignore: gh-pages
     steps:
