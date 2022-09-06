@@ -44,14 +44,15 @@ jobs:
             git commit -m "moved html from develop"
             # And push
             git push https://${GIT_TOKEN}@github.com/SaikrishnaBairamoni/carma-streets.git
+
 workflows:
   version: 2
-  build: 
+  dev_stage_pre-prod:
     jobs:
-      - build
-    filters:
-      tags:
-      only: /^\d+\.\d+\.\d+$/
-      branches:
-        ignore:
-         - gh-pages
+      - build:
+          filters:  # using regex filters requires the entire branch to match
+            branches:
+              only:  # only branches matching the below regex filters will run
+                - develop
+              ignore:
+                - gh-pages    
