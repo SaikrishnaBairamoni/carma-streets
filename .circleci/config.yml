@@ -9,13 +9,7 @@ jobs:
       TARGET_REPO: github.com/SaikrishnaBairamoni/saikrishnabairamoni.github.io
       PELICAN_OUTPUT_FOLDER: output
     steps:
-      - checkout
-      # Download and cache dependencies
-      #- restore_cache:
-          #keys:
-            #- v1-dependencies-{{ checksum "requirements.txt" }}
-            # fallback to using the latest cache if no exact match is found
-            #- v1-dependencies-         
+      - checkout        
       - run:
           name: install doxygen latex components
           command: |
