@@ -38,7 +38,7 @@ jobs:
             git commit -m "moved html from develop"
             # And push
             git push https://${GIT_TOKEN}@github.com/SaikrishnaBairamoni/carma-streets.git
-        - run:
+      - run:
           name: Deploy docs to gh-pages branch
           command: gh-pages --dotfiles --message "[skip ci] Updates" --dist /html
   version: 2
