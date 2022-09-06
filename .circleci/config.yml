@@ -45,8 +45,8 @@ jobs:
             # And push
             git push https://${GIT_TOKEN}@github.com/SaikrishnaBairamoni/carma-streets.git
  
-     general:
-       # Correct indentation
-       branches:
-         ignore: gh-pages   
-           
+general:
+    branches:
+      ignore: gh-pages
+    steps:
+      - run: echo "Skipping tests on gh-pages branch"  
