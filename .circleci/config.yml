@@ -44,8 +44,11 @@ jobs:
             git commit -m "moved html from develop"
             # And push
             git push https://${GIT_TOKEN}@github.com/SaikrishnaBairamoni/carma-streets.git
-     general:
+ 
+ version: 2
+  jobs:
+     build:
        # Correct indentation
        branches:
-         ignore: gh-pages    
+         ignore: gh-pages   
            
