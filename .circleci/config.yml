@@ -41,7 +41,7 @@ jobs:
 
 workflows:
   version: 2
-  dev_stage_pre-prod:
+  build:
     jobs:
       - build:
           filters:  # using regex filters requires the entire branch to match
