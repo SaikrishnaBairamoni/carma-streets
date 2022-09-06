@@ -44,9 +44,8 @@ jobs:
             git commit -m "moved html from develop"
             # And push
             git push https://${GIT_TOKEN}@github.com/SaikrishnaBairamoni/carma-streets.git
-  general:
-    branches:
-      ignore: gh-pages
-    steps:
-      - run: echo "Skipping tests on gh-pages branch"      
+     ignore:
+       # Correct indentation
+       branches:
+         ignore: gh-pages    
            
