@@ -1,4 +1,0 @@
-<map id="message_services::workers::vehicle_status_intent_worker::update_insert_by_incoming_mobilitypath_msg" name="message_services::workers::vehicle_status_intent_worker::update_insert_by_incoming_mobilitypath_msg">
-<area shape="rect" id="node1" title="If the vehicle id from the mobilitypath message exist in vehicle status and intent map,..." alt="" coords="108,5,323,76"/>
-<area shape="rect" id="node2" href="$test__vehicle__status__intent__worker_8cpp.html#a0c78db406cdaf30b35d5ee87269c2466" title=" " alt="" coords="5,27,60,54"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="streets_utils/streets_vehicle_scheduler/include/intersection_schedule.h" name="streets_utils/streets_vehicle_scheduler/include/intersection_schedule.h">
-<area shape="rect" id="node1" title=" " alt="" coords="178,5,376,61"/>
-<area shape="rect" id="node2" title=" " alt="" coords="151,184,275,211"/>
-<area shape="rect" id="node3" title=" " alt="" coords="27,109,186,136"/>
-<area shape="rect" id="node4" title=" " alt="" coords="210,109,344,136"/>
-<area shape="rect" id="node5" title=" " alt="" coords="368,109,540,136"/>
-<area shape="rect" id="node6" href="$vehicle_8h.html" title=" " alt="" coords="564,109,646,136"/>
-<area shape="rect" id="node7" title=" " alt="" coords="524,184,686,211"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title=" " alt="" coords="5,46,60,73"/>
-<area shape="rect" id="node2" href="$classscheduling__service_1_1scheduling__service.html#a29432e862ffe2f710ed92bd1a7ea66dd" title="Initialize the consumer, producer, and scheduling workers. Create a vehicle list and scheduler object..." alt="" coords="108,31,263,87"/>
-<area shape="rect" id="node3" href="$classstreets__service_1_1streets__configuration.html#a48f38b0b6ecb3043cc051b624f12824b" title="Retreive configuration parameter boolean value with provide name." alt="" coords="311,5,559,47"/>
-<area shape="rect" id="node4" href="$classstreets__service_1_1streets__configuration.html#a03603871626201e07690effb9f2440bf" title="Retreive configuration parameter string value with provided name." alt="" coords="318,71,551,112"/>
-</map>

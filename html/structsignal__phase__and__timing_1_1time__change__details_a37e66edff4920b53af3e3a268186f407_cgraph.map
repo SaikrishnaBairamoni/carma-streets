@@ -1,4 +1,0 @@
-<map id="signal_phase_and_timing::time_change_details::get_epoch_max_end_time" name="signal_phase_and_timing::time_change_details::get_epoch_max_end_time">
-<area shape="rect" id="node1" title="Get the epoch timestamp of the max end timestamp." alt="" coords="5,5,207,61"/>
-<area shape="rect" id="node2" href="$structsignal__phase__and__timing_1_1time__change__details.html#a74ace40856526a37410e434bcee7917a" title="Convert current hours of the year and milliseconds of the current hours into epoch timestamp in milli..." alt="" coords="255,5,513,61"/>
-</map>

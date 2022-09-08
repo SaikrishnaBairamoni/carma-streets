@@ -1,4 +1,0 @@
-<map id="streets_vehicle_scheduler::vehicle_scheduler::estimate_vehicles_at_common_time" name="streets_vehicle_scheduler::vehicle_scheduler::estimate_vehicles_at_common_time">
-<area shape="rect" id="node1" title="Method to estimate all vehicle&#39;s speed and location at a common future time. The time needs to be tim..." alt="" coords="5,5,219,61"/>
-<area shape="rect" id="node2" href="$ntcip__1202__ext_8h.html#a576de7b60eacee3f1a70393a005502cd" title="Returns std::string representation of ntcip_1202_ext message including phase_times array." alt="" coords="267,20,345,47"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="signal_phase_and_timing::movement_event::fromJson" name="signal_phase_and_timing::movement_event::fromJson">
-<area shape="rect" id="node1" title="Deserialize Movement Event JSON into Movement Event object." alt="" coords="5,43,216,84"/>
-<area shape="rect" id="node2" href="$structsignal__phase__and__timing_1_1advisory__speed.html#ab065b8b1df30b02ea1cddeae8ca6bab6" title="Deserialize Advisory Speed JSON into Advisory Speed object." alt="" coords="264,5,463,47"/>
-<area shape="rect" id="node3" href="$structsignal__phase__and__timing_1_1time__change__details.html#ae11ac44a006b7b7d43c64b764d8ede52" title="Deserialize Time Change Details JSON into Time Change Details object." alt="" coords="270,71,457,127"/>
-</map>

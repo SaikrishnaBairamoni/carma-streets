@@ -1,4 +1,0 @@
-<map id="signal_phase_and_timing::intersection_state::get_epoch_timestamp" name="signal_phase_and_timing::intersection_state::get_epoch_timestamp">
-<area shape="rect" id="node1" title="Get the epoch timestamp of the intersection state timestamp." alt="" coords="5,5,192,61"/>
-<area shape="rect" id="node2" href="$structsignal__phase__and__timing_1_1intersection__state.html#a4fde3ad2fb225f963f411ad66e72066f" title="Convert current mimutes of the year and milliseconds of the current minute into epoch timestamp in mi..." alt="" coords="240,5,448,61"/>
-</map>

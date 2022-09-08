@@ -1,6 +1,0 @@
-<map id="traffic_signal_controller_service::TEST" name="traffic_signal_controller_service::TEST">
-<area shape="rect" id="node1" title=" " alt="" coords="5,50,180,91"/>
-<area shape="rect" id="node2" href="$classtraffic__signal__controller__service_1_1tsc__state.html#af739a1bdb23638f28315e8680f407fdd" title="Updates spat with future movement events for vehicle phases." alt="" coords="243,5,440,61"/>
-<area shape="rect" id="node4" href="$classstreets__service_1_1streets__configuration.html#a8f1dd2ae49aae6b730a041889177c8e6" title="Static method to initialize spdlog default logger." alt="" coords="228,86,455,127"/>
-<area shape="rect" id="node3" href="$ntcip__1202__ext_8h.html#a576de7b60eacee3f1a70393a005502cd" title="Returns std::string representation of ntcip_1202_ext message including phase_times array." alt="" coords="503,20,581,47"/>
-</map>

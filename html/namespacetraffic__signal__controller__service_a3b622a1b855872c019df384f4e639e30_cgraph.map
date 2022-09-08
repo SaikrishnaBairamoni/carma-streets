@@ -1,5 +1,0 @@
-<map id="traffic_signal_controller_service::TEST" name="traffic_signal_controller_service::TEST">
-<area shape="rect" id="node1" title="Attempt to listen on a IP that is not the host of the service should fail." alt="" coords="5,13,180,54"/>
-<area shape="rect" id="node2" href="$classtraffic__signal__controller__service_1_1udp__socket__listener.html#ab8db65687e8eaf74c7eb8142af58f9e0" title=" " alt="" coords="228,5,441,61"/>
-<area shape="rect" id="node3" href="$ntcip__1202__ext_8h.html#a576de7b60eacee3f1a70393a005502cd" title="Returns std::string representation of ntcip_1202_ext message including phase_times array." alt="" coords="489,20,568,47"/>
-</map>

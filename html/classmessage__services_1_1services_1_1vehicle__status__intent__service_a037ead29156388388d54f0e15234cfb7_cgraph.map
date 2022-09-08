@@ -1,6 +1,0 @@
-<map id="message_services::services::vehicle_status_intent_service::initialize" name="message_services::services::vehicle_status_intent_service::initialize">
-<area shape="rect" id="node1" title="read configuration file and determine the producer and consumer topics, bootstrap server" alt="" coords="5,63,209,119"/>
-<area shape="rect" id="node2" href="$classstreets__service_1_1streets__configuration.html#a48f38b0b6ecb3043cc051b624f12824b" title="Retreive configuration parameter boolean value with provide name." alt="" coords="257,5,505,47"/>
-<area shape="rect" id="node3" href="$classstreets__service_1_1streets__configuration.html#ab33a5d183c0ca2b2f0d757f5466f200b" title="Retreive configuration parameter integer value with provided name." alt="" coords="275,71,488,112"/>
-<area shape="rect" id="node4" href="$classstreets__service_1_1streets__configuration.html#a03603871626201e07690effb9f2440bf" title="Retreive configuration parameter string value with provided name." alt="" coords="265,136,498,177"/>
-</map>

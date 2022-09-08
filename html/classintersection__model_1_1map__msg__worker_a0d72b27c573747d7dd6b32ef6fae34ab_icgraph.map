@@ -1,6 +1,0 @@
-<map id="intersection_model::map_msg_worker::parse_JSON_string" name="intersection_model::map_msg_worker::parse_JSON_string">
-<area shape="rect" id="node1" title="parse MAP msg json string with rapidjson document" alt="" coords="355,24,544,80"/>
-<area shape="rect" id="node2" href="$test__map__msg__worker_8cpp.html#a7c75dc6959cf9e47c8fab12525c94bb2" title=" " alt="" coords="180,5,235,32"/>
-<area shape="rect" id="node3" href="$classintersection__model_1_1map__msg__worker.html#ad59f4cb6f6e4afc090fdda3937f1b672" title="Update intesection map structure. It will only update when both kafka consumer consumes MAP message a..." alt="" coords="108,56,307,112"/>
-<area shape="rect" id="node4" href="$test__map__msg__worker_8cpp.html#ae6f69d77dfc6a342d5a07bb4aedc6c42" title=" " alt="" coords="5,71,60,97"/>
-</map>

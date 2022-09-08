@@ -1,6 +1,0 @@
-<map id="OpenAPI::OAIIntersection_info::getLinkLanelets" name="OpenAPI::OAIIntersection_info::getLinkLanelets">
-<area shape="rect" id="node1" title=" " alt="" coords="403,43,588,84"/>
-<area shape="rect" id="node2" href="$classintersection__client.html#ac4063ca052789e068be838131e2b57f6" title=" " alt="" coords="160,5,303,47"/>
-<area shape="rect" id="node4" href="$classsignal__opt__service_1_1signal__opt__messages__worker.html#a1d815ad34177410cafc59d7bf9944d53" title="Send http GET request to intersection model at rate of configured HZ until it gets the valid (!..." alt="" coords="108,71,355,127"/>
-<area shape="rect" id="node3" href="$examples_2qt__rest__clients__api_2intersection__client_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,60,39"/>
-</map>

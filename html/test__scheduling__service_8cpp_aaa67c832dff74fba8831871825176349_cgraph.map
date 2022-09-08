@@ -1,6 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title=" " alt="" coords="5,46,60,73"/>
-<area shape="rect" id="node2" href="$classscheduling__service_1_1scheduling__service.html#a13bb653277956326ecc5b11cf7342460" title="Configure the scheduler object." alt="" coords="108,31,263,87"/>
-<area shape="rect" id="node3" href="$classstreets__service_1_1streets__configuration.html#ab33a5d183c0ca2b2f0d757f5466f200b" title="Retreive configuration parameter integer value with provided name." alt="" coords="321,5,534,47"/>
-<area shape="rect" id="node4" href="$classstreets__service_1_1streets__configuration.html#a03603871626201e07690effb9f2440bf" title="Retreive configuration parameter string value with provided name." alt="" coords="311,71,544,112"/>
-</map>

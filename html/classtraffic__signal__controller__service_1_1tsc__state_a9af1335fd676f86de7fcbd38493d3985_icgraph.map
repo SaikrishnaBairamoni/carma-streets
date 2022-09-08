@@ -1,4 +1,0 @@
-<map id="traffic_signal_controller_service::tsc_state::get_ped_phase_map" name="traffic_signal_controller_service::tsc_state::get_ped_phase_map">
-<area shape="rect" id="node1" title="Returns a map of pedestrian phases to signal group ids." alt="" coords="228,5,403,61"/>
-<area shape="rect" id="node2" href="$namespacetraffic__signal__controller__service.html#a1a1dc1930253a08735579df21709cd07" title=" " alt="" coords="5,13,180,54"/>
-</map>

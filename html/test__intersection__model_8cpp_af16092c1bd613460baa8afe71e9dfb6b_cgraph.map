@@ -1,6 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title=" " alt="" coords="5,115,60,142"/>
-<area shape="rect" id="node2" href="$classintersection__model_1_1intersection__model.html#a9dcde064181b3547cf611adf4af8a9da" title="Convert the centerline geometry of lane defined in J2735 MAP to a list of lanelet2 points in the OSM ..." alt="" coords="121,5,286,76"/>
-<area shape="rect" id="node3" href="$classintersection__model_1_1intersection__model.html#a96cf039df5fc9902a44258e73e81f67b" title="Read lanelet2 map." alt="" coords="126,101,281,157"/>
-<area shape="rect" id="node4" href="$classintersection__model_1_1intersection__model.html#aee444e73411f8593b4ad579849fc87b7" title="Read the OSM map, project the map, and initialize all the intersection related info including: inters..." alt="" coords="108,181,299,237"/>
-</map>

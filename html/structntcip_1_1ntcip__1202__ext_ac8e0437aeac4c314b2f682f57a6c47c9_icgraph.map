@@ -1,6 +1,0 @@
-<map id="ntcip::ntcip_1202_ext::get_phase_green_status" name="ntcip::ntcip_1202_ext::get_phase_green_status">
-<area shape="rect" id="node1" title="Returns green state of phase." alt="" coords="475,43,663,84"/>
-<area shape="rect" id="node2" href="$structntcip_1_1ntcip__1202__ext.html#a3599a4daef1eff847beb567329bb364e" title="Returns std::string representation of ntcip_1202_ext message including phase_times array." alt="" coords="253,5,414,47"/>
-<area shape="rect" id="node3" href="$structsignal__phase__and__timing_1_1intersection__state.html#a01285f8060241eec1adbaa0c5e97a1df" title="Method to update movement_state with signal_group_id using ntcip spat data." alt="" coords="240,71,427,127"/>
-<area shape="rect" id="node4" href="$structsignal__phase__and__timing_1_1intersection__state.html#adb8a7d8693ba85ab08f3c0e31afe4935" title="Clears old movement event data for all movement_states. Adds one movement_event to the state_time_spe..." alt="" coords="5,71,192,127"/>
-</map>

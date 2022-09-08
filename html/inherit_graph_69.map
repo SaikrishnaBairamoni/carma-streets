@@ -1,5 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classstreets__vehicles_1_1status__intent__processor.html" title="Abstract Class to allow for customizable processing of status and intent vehicle updates...." alt="" coords="5,5,181,47"/>
-<area shape="rect" id="node2" href="$classstreets__vehicles_1_1all__stop__status__intent__processor.html" title="Status Intent processor implementation for all stop use case. Updates vehicle states based on the con..." alt="" coords="229,5,448,47"/>
-<area shape="rect" id="node3" href="$classstreets__vehicles_1_1signalized__status__intent__processor.html" title=" " alt="" coords="496,5,699,47"/>
-</map>

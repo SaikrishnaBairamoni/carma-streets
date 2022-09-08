@@ -1,4 +1,0 @@
-<map id="intersection_model::intersection_model::compute_points_2_lanelet_avg_distance" name="intersection_model::intersection_model::compute_points_2_lanelet_avg_distance">
-<area shape="rect" id="node1" title="Compute the average distance between a linestring and lanelet." alt="" coords="108,5,309,76"/>
-<area shape="rect" id="node2" href="$test__intersection__model_8cpp.html#a0f13788102494f81d142ad4485129d0c" title=" " alt="" coords="5,27,60,54"/>
-</map>

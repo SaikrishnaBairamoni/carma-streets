@@ -1,7 +1,0 @@
-<map id="message_services::models::bsmCoreData" name="message_services::models::bsmCoreData">
-<area shape="rect" id="node1" title=" " alt="" coords="315,104,513,145"/>
-<area shape="rect" id="node2" href="$structmessage__services_1_1models_1_1VehicleSize.html" title=" " alt="" coords="5,5,204,47"/>
-<area shape="rect" id="node3" href="$structmessage__services_1_1models_1_1AccelerationSet4Way.html" title=" " alt="" coords="5,71,204,112"/>
-<area shape="rect" id="node4" href="$structmessage__services_1_1models_1_1PositionalAccuracy.html" title=" " alt="" coords="5,136,204,177"/>
-<area shape="rect" id="node5" href="$structmessage__services_1_1models_1_1BrakeSystemStatus.html" title=" " alt="" coords="5,201,204,243"/>
-</map>

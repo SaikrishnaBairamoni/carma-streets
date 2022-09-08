@@ -1,4 +1,0 @@
-<map id="message_services::workers::vehicle_status_intent_worker::update_by_incoming_bsm_msg" name="message_services::workers::vehicle_status_intent_worker::update_by_incoming_bsm_msg">
-<area shape="rect" id="node1" title="Update the vehicle status and intent base on the bsm info." alt="" coords="108,5,324,76"/>
-<area shape="rect" id="node2" href="$test__vehicle__status__intent__worker_8cpp.html#a05051e2432226c476a65da532e75d1e7" title=" " alt="" coords="5,27,60,54"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="signal_phase_and_timing::movement_event::operator==" name="signal_phase_and_timing::movement_event::operator==">
-<area shape="rect" id="node1" title="Equals operator to asses whether two objects contain equivalent data." alt="" coords="277,5,508,47"/>
-<area shape="rect" id="node2" href="$structsignal__phase__and__timing_1_1movement__event.html#a778f1d6d3e74342ccb3984ac914fd248" title="Returns the inverse of equals operator." alt="" coords="5,5,229,47"/>
-</map>

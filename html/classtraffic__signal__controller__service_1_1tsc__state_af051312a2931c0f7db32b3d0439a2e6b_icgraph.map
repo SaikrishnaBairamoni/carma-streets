@@ -1,4 +1,0 @@
-<map id="traffic_signal_controller_service::tsc_state::initialize" name="traffic_signal_controller_service::tsc_state::initialize">
-<area shape="rect" id="node1" title="Initialize tsc_state by making SNMP calls to TSC for phase sequence and timing information." alt="" coords="228,5,435,47"/>
-<area shape="rect" id="node2" href="$namespacetraffic__signal__controller__service.html#a1a1dc1930253a08735579df21709cd07" title=" " alt="" coords="5,5,180,47"/>
-</map>

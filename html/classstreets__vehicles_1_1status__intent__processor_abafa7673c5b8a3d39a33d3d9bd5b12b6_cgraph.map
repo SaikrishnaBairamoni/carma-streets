@@ -1,4 +1,0 @@
-<map id="streets_vehicles::status_intent_processor::process_status_intent" name="streets_vehicles::status_intent_processor::process_status_intent">
-<area shape="rect" id="node1" title="Process JSON status and intent update and convert it to an streets_vehicle_update." alt="" coords="5,5,200,61"/>
-<area shape="rect" id="node2" href="$classstreets__vehicles_1_1status__intent__processor.html#aade7f4f98fdf41c0c9d512f6a9494d95" title="Process JSON status and intent Object and update vehicle." alt="" coords="248,13,459,54"/>
-</map>

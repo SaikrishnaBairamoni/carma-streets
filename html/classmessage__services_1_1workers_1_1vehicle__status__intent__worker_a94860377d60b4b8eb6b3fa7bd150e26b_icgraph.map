@@ -1,4 +1,0 @@
-<map id="message_services::workers::vehicle_status_intent_worker::pop_element_from_map" name="message_services::workers::vehicle_status_intent_worker::pop_element_from_map">
-<area shape="rect" id="node1" title="Remove an element from vehicle_status_intent vector based on the element position...." alt="" coords="108,5,348,61"/>
-<area shape="rect" id="node2" href="$test__vehicle__status__intent__worker_8cpp.html#a0c78db406cdaf30b35d5ee87269c2466" title=" " alt="" coords="5,20,60,47"/>
-</map>

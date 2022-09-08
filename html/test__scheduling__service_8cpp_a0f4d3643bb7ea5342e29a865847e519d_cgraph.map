@@ -1,7 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title=" " alt="" coords="5,78,60,105"/>
-<area shape="rect" id="node2" href="$classscheduling__service_1_1scheduling__service.html#aa901f39ddb922a8d02955220a40d92c7" title="Create the vehicle list processor and configure it." alt="" coords="108,63,263,119"/>
-<area shape="rect" id="node3" href="$classstreets__service_1_1streets__configuration.html#ae1ce5cdd4b4d28cc8e4034c429aabb66" title="Retreive configuration parameter double value with provide name." alt="" coords="311,5,551,47"/>
-<area shape="rect" id="node4" href="$classstreets__service_1_1streets__configuration.html#ab33a5d183c0ca2b2f0d757f5466f200b" title="Retreive configuration parameter integer value with provided name." alt="" coords="324,71,537,112"/>
-<area shape="rect" id="node5" href="$classstreets__service_1_1streets__configuration.html#a03603871626201e07690effb9f2440bf" title="Retreive configuration parameter string value with provided name." alt="" coords="314,136,547,177"/>
-</map>

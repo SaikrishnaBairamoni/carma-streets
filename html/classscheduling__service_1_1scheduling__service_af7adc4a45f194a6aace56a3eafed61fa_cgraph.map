@@ -1,4 +1,0 @@
-<map id="scheduling_service::scheduling_service::start" name="scheduling_service::scheduling_service::start">
-<area shape="rect" id="node1" title="Create 2 threads: The first thread consumes status and intent message and updates the vehicle list...." alt="" coords="5,5,160,61"/>
-<area shape="rect" id="node2" href="$classstreets__service_1_1streets__configuration.html#a03603871626201e07690effb9f2440bf" title="Retreive configuration parameter string value with provided name." alt="" coords="208,13,441,54"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="streets_vehicles::all_stop_status_intent_processor::read_est_path" name="streets_vehicles::all_stop_status_intent_processor::read_est_path">
-<area shape="rect" id="node1" title="Reads estimated path element in status and intent vehicle update." alt="" coords="5,5,224,61"/>
-<area shape="rect" id="node2" href="$ntcip__1202__ext_8h.html#a576de7b60eacee3f1a70393a005502cd" title="Returns std::string representation of ntcip_1202_ext message including phase_times array." alt="" coords="272,20,351,47"/>
-</map>

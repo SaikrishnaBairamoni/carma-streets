@@ -1,7 +1,0 @@
-<map id="signal_phase_and_timing::time_change_details::convert_hour_tenth_secs2epoch_ts" name="signal_phase_and_timing::time_change_details::convert_hour_tenth_secs2epoch_ts">
-<area shape="rect" id="node1" title="Convert current hours of the year and milliseconds of the current hours into epoch timestamp in milli..." alt="" coords="255,125,513,181"/>
-<area shape="rect" id="node2" href="$structsignal__phase__and__timing_1_1time__change__details.html#a37e66edff4920b53af3e3a268186f407" title="Get the epoch timestamp of the max end timestamp." alt="" coords="5,5,207,61"/>
-<area shape="rect" id="node3" href="$structsignal__phase__and__timing_1_1time__change__details.html#ace57d6d7e92d000560753346277a4e20" title="Get the epoch timestamp of the min end timestamp." alt="" coords="7,85,205,141"/>
-<area shape="rect" id="node4" href="$structsignal__phase__and__timing_1_1time__change__details.html#adeca62d30921732346c615faaf64a9ec" title="Get the epoch timestamp of the next end timestamp" alt="" coords="13,165,199,221"/>
-<area shape="rect" id="node5" href="$structsignal__phase__and__timing_1_1time__change__details.html#a650a958f01c7a1fd2e845c08e27fb88e" title="Get the epoch timestamp of the start timestamp." alt="" coords="13,245,199,301"/>
-</map>

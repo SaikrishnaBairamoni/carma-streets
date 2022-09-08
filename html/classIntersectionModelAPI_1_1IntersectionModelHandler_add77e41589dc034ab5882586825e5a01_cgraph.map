@@ -1,7 +1,0 @@
-<map id="IntersectionModelAPI::IntersectionModelHandler::listLinkLanelets" name="IntersectionModelAPI::IntersectionModelHandler::listLinkLanelets">
-<area shape="rect" id="node1" title="Get the list of link lanelets for the intersection." alt="" coords="5,97,204,153"/>
-<area shape="rect" id="node2" href="$classOpenAPI_1_1OAILanelet__info.html#a794cac974b4418934d66a3255266f2a5" title=" " alt="" coords="261,5,417,47"/>
-<area shape="rect" id="node3" href="$classOpenAPI_1_1OAILanelet__info.html#a416e72147c5b6b17009ac9bccb928efa" title=" " alt="" coords="261,71,417,112"/>
-<area shape="rect" id="node4" href="$classOpenAPI_1_1OAILanelet__info.html#a88f182ae07c3fb18bc530afe9e7cd739" title=" " alt="" coords="252,136,425,177"/>
-<area shape="rect" id="node5" href="$classOpenAPI_1_1OAILanelet__info.html#a67ee86888134602a96eab83faef7d285" title=" " alt="" coords="261,201,417,243"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="streets_vehicle_scheduler::all_stop_intersection_schedule::toCSV" name="streets_vehicle_scheduler::all_stop_intersection_schedule::toCSV">
-<area shape="rect" id="node1" title="Method to turn schedule into CSV string. Each vehicle schedule is represented by a single row and all..." alt="" coords="5,5,196,61"/>
-<area shape="rect" id="node2" href="$ntcip__1202__ext_8h.html#a576de7b60eacee3f1a70393a005502cd" title="Returns std::string representation of ntcip_1202_ext message including phase_times array." alt="" coords="244,20,323,47"/>
-</map>

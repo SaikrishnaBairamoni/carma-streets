@@ -1,6 +1,0 @@
-<map id="OpenAPI::OAILanelet_info::setSignalGroupId" name="OpenAPI::OAILanelet_info::setSignalGroupId">
-<area shape="rect" id="node1" title=" " alt="" coords="252,93,425,134"/>
-<area shape="rect" id="node2" href="$classIntersectionModelAPI_1_1IntersectionModelHandler.html#ab5e910c0381e00c870b5c4f6dbb2926b" title="Get the Conflict Lanelets object." alt="" coords="5,5,204,61"/>
-<area shape="rect" id="node3" href="$classIntersectionModelAPI_1_1IntersectionModelHandler.html#a93629c379a778d8ffdce415466f6cbdb" title="Get the Intersection Info object." alt="" coords="5,85,204,141"/>
-<area shape="rect" id="node4" href="$classIntersectionModelAPI_1_1IntersectionModelHandler.html#add77e41589dc034ab5882586825e5a01" title="Get the list of link lanelets for the intersection." alt="" coords="5,165,204,221"/>
-</map>

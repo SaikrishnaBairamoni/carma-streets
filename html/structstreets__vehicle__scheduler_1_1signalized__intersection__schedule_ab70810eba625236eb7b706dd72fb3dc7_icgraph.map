@@ -1,4 +1,0 @@
-<map id="streets_vehicle_scheduler::signalized_intersection_schedule::toCSV" name="streets_vehicle_scheduler::signalized_intersection_schedule::toCSV">
-<area shape="rect" id="node1" title="Method to turn schedule into CSV string. Each vehicle schedule is represented by a single row and all..." alt="" coords="123,5,313,61"/>
-<area shape="rect" id="node2" href="$test__signalized__json__csv__schedule_8cpp.html#acfa73e2a4f03df8e32e6dcaaeed807ae" title="Test with multiple vehicle for csv schedule." alt="" coords="5,20,75,47"/>
-</map>
