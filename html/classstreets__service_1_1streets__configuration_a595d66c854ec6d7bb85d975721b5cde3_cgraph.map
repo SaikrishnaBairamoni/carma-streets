@@ -1,4 +1,0 @@
-<map id="streets_service::streets_configuration::check_update" name="streets_service::streets_configuration::check_update">
-<area shape="rect" id="node1" title="Method to check last modified time of file to see if a file update is necessary." alt="" coords="5,5,217,47"/>
-<area shape="rect" id="node2" href="$test__streets__configuration_8cpp.html#af602b984852dcc80c264fa5b4b29cc56" title="Update string param3 inside manifest.json." alt="" coords="265,13,424,39"/>
-</map>

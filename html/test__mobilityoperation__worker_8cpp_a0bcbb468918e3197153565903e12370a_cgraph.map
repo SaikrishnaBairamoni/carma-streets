@@ -1,7 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title=" " alt="" coords="5,60,60,87"/>
-<area shape="rect" id="node2" href="$classmessage__services_1_1workers_1_1mobilityoperation__worker.html#a694f5d3a661ad6aa317f65d11ed51df3" title="Return the vector of mobilityoperation stored in the mobilityoperation_worker." alt="" coords="108,5,309,61"/>
-<area shape="rect" id="node3" href="$classmessage__services_1_1workers_1_1mobilityoperation__worker.html#ae24cd70a331bae649090db3abed28f7f" title=" " alt="" coords="108,85,309,141"/>
-<area shape="rect" id="node4" href="$classmessage__services_1_1models_1_1baseMessage.html#a3f9c04935a000829b2ef25300d2fb57b" title=" " alt="" coords="357,93,556,134"/>
-<area shape="rect" id="node5" href="$classmessage__services_1_1models_1_1baseMessage.html#a4fedff3ceb673e0200e7738bd6099d5d" title=" " alt="" coords="604,93,831,134"/>
-</map>

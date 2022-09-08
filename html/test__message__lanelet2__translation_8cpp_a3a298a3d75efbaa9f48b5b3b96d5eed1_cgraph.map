@@ -1,8 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title=" " alt="" coords="5,126,60,153"/>
-<area shape="rect" id="node2" href="$classmessage__services_1_1message__translations_1_1message__lanelet2__translation.html#a24e2be3abe3cbe33ff04b9101e615378" title=" " alt="" coords="108,104,353,175"/>
-<area shape="rect" id="node3" href="$classmessage__services_1_1message__translations_1_1message__lanelet2__translation.html#a568b314c4f7eaa10ede9d9cb3030a974" title=" " alt="" coords="401,45,611,130"/>
-<area shape="rect" id="node6" href="$classmessage__services_1_1message__translations_1_1message__lanelet2__translation.html#aad90a20416b9d7053f1072d3790665b8" title="Function to convert GPS location to a 3d point in map frame." alt="" coords="401,155,611,225"/>
-<area shape="rect" id="node4" href="$classmessage__services_1_1message__translations_1_1message__lanelet2__translation.html#aefd7df784db21bfbf5737072ea3119e4" title="Function to convert ecef location to a 2d point in map frame." alt="" coords="659,5,868,76"/>
-<area shape="rect" id="node5" href="$classmessage__services_1_1message__translations_1_1message__lanelet2__translation.html#a171bf6b007d7aefae8b1e1254e2c58ab" title=" " alt="" coords="659,100,868,171"/>
-</map>

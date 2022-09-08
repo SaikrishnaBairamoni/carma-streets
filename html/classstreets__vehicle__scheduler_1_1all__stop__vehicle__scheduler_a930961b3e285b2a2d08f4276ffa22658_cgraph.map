@@ -1,5 +1,0 @@
-<map id="streets_vehicle_scheduler::all_stop_vehicle_scheduler::schedule_vehicles" name="streets_vehicle_scheduler::all_stop_vehicle_scheduler::schedule_vehicles">
-<area shape="rect" id="node1" title="Method to schedule vehicles. Given and empty intersection_schedule object and a map of vehicles and v..." alt="" coords="5,5,211,61"/>
-<area shape="rect" id="node2" href="$classstreets__vehicle__scheduler_1_1vehicle__scheduler.html#a85947f43b293504a108619374c0c0dae" title="Method to estimate all vehicle&#39;s speed and location at a common future time. The time needs to be tim..." alt="" coords="259,5,472,61"/>
-<area shape="rect" id="node3" href="$ntcip__1202__ext_8h.html#a576de7b60eacee3f1a70393a005502cd" title="Returns std::string representation of ntcip_1202_ext message including phase_times array." alt="" coords="520,20,599,47"/>
-</map>

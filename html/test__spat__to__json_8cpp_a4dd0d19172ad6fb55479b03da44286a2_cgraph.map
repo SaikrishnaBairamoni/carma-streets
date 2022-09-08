@@ -1,4 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title="Test to Json conversion serialization." alt="" coords="5,13,60,39"/>
-<area shape="rect" id="node2" href="$structsignal__phase__and__timing_1_1spat.html#a1610241d89b9b84063f248803546a70b" title="Serialize SPaT object to rapidjson::Value for writing as JSON string." alt="" coords="108,5,295,47"/>
-</map>

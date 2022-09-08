@@ -1,6 +1,0 @@
-<map id="message_services::services::vehicle_status_intent_service::run" name="message_services::services::vehicle_status_intent_service::run">
-<area shape="rect" id="node1" title="Creating and running threads. Each thread is acting as consumer or producer to consume or produce mes..." alt="" coords="569,5,773,61"/>
-<area shape="rect" id="node2" href="$classmessage__services_1_1services_1_1vehicle__status__intent__service.html#a1f00f479f5268cf6cd38a128d009b184" title="initialize variables and call run() methods to spin up threads." alt="" coords="317,5,521,61"/>
-<area shape="rect" id="node3" href="$message__services_8cpp.html#ab4838180becdec72c62eb8756c933d97" title=" " alt="" coords="108,13,269,54"/>
-<area shape="rect" id="node4" href="$message__services_8cpp.html#a217dbf8b442f20279ea00b898af96f52" title=" " alt="" coords="5,20,60,47"/>
-</map>

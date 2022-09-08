@@ -1,6 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title=" " alt="" coords="5,100,60,127"/>
-<area shape="rect" id="node2" href="$classintersection__model_1_1intersection__model.html#a7967e15bbce9062a48c43f82b6d89124" title="Transform the GPS location into map point using porjector." alt="" coords="108,5,263,61"/>
-<area shape="rect" id="node3" href="$classintersection__model_1_1intersection__model.html#ad26188c4208541965a452bb4a920c113" title="Transform the map point to gps location." alt="" coords="108,85,263,141"/>
-<area shape="rect" id="node4" href="$classintersection__model_1_1intersection__model.html#a96cf039df5fc9902a44258e73e81f67b" title="Read lanelet2 map." alt="" coords="108,165,263,221"/>
-</map>

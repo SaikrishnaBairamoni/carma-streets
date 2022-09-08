@@ -1,4 +1,0 @@
-<map id="intersection_model::intersection_model::get_enter_lanelet_by_id" name="intersection_model::intersection_model::get_enter_lanelet_by_id">
-<area shape="rect" id="node1" title="Get the enter lanelet by id object from the list of intersection entering lanelets." alt="" coords="108,5,295,61"/>
-<area shape="rect" id="node2" href="$test__intersection__model_8cpp.html#a0f13788102494f81d142ad4485129d0c" title=" " alt="" coords="5,20,60,47"/>
-</map>

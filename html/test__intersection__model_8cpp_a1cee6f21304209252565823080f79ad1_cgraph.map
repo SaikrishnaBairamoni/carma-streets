@@ -1,7 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title=" " alt="" coords="5,140,60,167"/>
-<area shape="rect" id="node2" href="$classintersection__model_1_1intersection__model.html#a332baac17fc17875f98425e734f7b1e7" title="Get list of entry lanelet ids." alt="" coords="112,5,295,61"/>
-<area shape="rect" id="node3" href="$classintersection__model_1_1intersection__model.html#a3deb407fbd9c48e6ad4e2ced720cabb0" title="Get intersection metadata." alt="" coords="120,85,287,141"/>
-<area shape="rect" id="node4" href="$classintersection__model_1_1intersection__model.html#a96cf039df5fc9902a44258e73e81f67b" title="Read lanelet2 map." alt="" coords="126,165,281,221"/>
-<area shape="rect" id="node5" href="$classintersection__model_1_1intersection__model.html#aee444e73411f8593b4ad579849fc87b7" title="Read the OSM map, project the map, and initialize all the intersection related info including: inters..." alt="" coords="108,245,299,301"/>
-</map>

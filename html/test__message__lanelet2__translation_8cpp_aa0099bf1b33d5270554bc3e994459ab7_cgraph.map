@@ -1,7 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title=" " alt="" coords="5,107,60,134"/>
-<area shape="rect" id="node2" href="$classmessage__services_1_1message__translations_1_1message__lanelet2__translation.html#aefd7df784db21bfbf5737072ea3119e4" title="Function to convert ecef location to a 2d point in map frame." alt="" coords="365,5,575,76"/>
-<area shape="rect" id="node3" href="$classmessage__services_1_1message__translations_1_1message__lanelet2__translation.html#a568b314c4f7eaa10ede9d9cb3030a974" title=" " alt="" coords="108,78,317,163"/>
-<area shape="rect" id="node5" href="$classmessage__services_1_1message__translations_1_1message__lanelet2__translation.html#a4821d1fd75c245e9a29c80dd711f375f" title=" " alt="" coords="108,188,317,259"/>
-<area shape="rect" id="node4" href="$classmessage__services_1_1message__translations_1_1message__lanelet2__translation.html#a171bf6b007d7aefae8b1e1254e2c58ab" title=" " alt="" coords="365,100,575,171"/>
-</map>

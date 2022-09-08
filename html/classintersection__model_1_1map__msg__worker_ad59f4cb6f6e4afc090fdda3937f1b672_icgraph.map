@@ -1,4 +1,0 @@
-<map id="intersection_model::map_msg_worker::update_map_msg" name="intersection_model::map_msg_worker::update_map_msg">
-<area shape="rect" id="node1" title="Update intesection map structure. It will only update when both kafka consumer consumes MAP message a..." alt="" coords="108,5,307,61"/>
-<area shape="rect" id="node2" href="$test__map__msg__worker_8cpp.html#ae6f69d77dfc6a342d5a07bb4aedc6c42" title=" " alt="" coords="5,20,60,47"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="TEST_F" name="TEST_F">
-<area shape="rect" id="node1" title=" " alt="" coords="5,20,75,47"/>
-<area shape="rect" id="node2" href="$structsignal__phase__and__timing_1_1intersection__state.html#ae992920af2fdef8ffd0cf29da74e0ac9" title="Serialize Intersection State object to rapidjson::Value for writing as JSON string." alt="" coords="123,5,309,61"/>
-</map>

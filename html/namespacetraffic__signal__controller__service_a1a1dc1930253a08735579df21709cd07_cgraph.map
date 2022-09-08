@@ -1,9 +1,0 @@
-<map id="traffic_signal_controller_service::TEST" name="traffic_signal_controller_service::TEST">
-<area shape="rect" id="node1" title=" " alt="" coords="5,210,180,251"/>
-<area shape="rect" id="node2" href="$classtraffic__signal__controller__service_1_1tsc__state.html#a9af1335fd676f86de7fcbd38493d3985" title="Returns a map of pedestrian phases to signal group ids." alt="" coords="254,5,429,61"/>
-<area shape="rect" id="node3" href="$classtraffic__signal__controller__service_1_1tsc__state.html#a27876c0c6172cbb37788cadd97bf6ff3" title="Return reference to signal group state map." alt="" coords="247,85,435,141"/>
-<area shape="rect" id="node4" href="$classtraffic__signal__controller__service_1_1tsc__state.html#a40c96f54a5eb802026f93906dc1b77d8" title="Returns a map of pedestrian phases to signal group ids." alt="" coords="254,165,429,221"/>
-<area shape="rect" id="node5" href="$classtraffic__signal__controller__service_1_1tsc__state.html#af051312a2931c0f7db32b3d0439a2e6b" title="Initialize tsc_state by making SNMP calls to TSC for phase sequence and timing information." alt="" coords="238,246,445,287"/>
-<area shape="rect" id="node6" href="$classstreets__service_1_1streets__configuration.html#a8f1dd2ae49aae6b730a041889177c8e6" title="Static method to initialize spdlog default logger." alt="" coords="228,311,455,353"/>
-<area shape="rect" id="node7" href="$ntcip__1202__ext_8h.html#a576de7b60eacee3f1a70393a005502cd" title="Returns std::string representation of ntcip_1202_ext message including phase_times array." alt="" coords="302,377,381,404"/>
-</map>

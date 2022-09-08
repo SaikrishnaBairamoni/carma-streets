@@ -1,5 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title=" " alt="" coords="5,20,60,47"/>
-<area shape="rect" id="node2" href="$classscheduling__service_1_1scheduling__service.html#aedb80eb05613731a0d0192e5e3823121" title="Method to configure spdlog::logger for logging scheduling metrics into daily rotating csv file." alt="" coords="108,5,275,61"/>
-<area shape="rect" id="node3" href="$classstreets__service_1_1streets__configuration.html#a03603871626201e07690effb9f2440bf" title="Retreive configuration parameter string value with provided name." alt="" coords="323,13,556,54"/>
-</map>

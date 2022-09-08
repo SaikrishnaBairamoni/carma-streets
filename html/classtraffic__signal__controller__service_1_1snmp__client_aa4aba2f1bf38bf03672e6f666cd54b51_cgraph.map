@@ -1,4 +1,0 @@
-<map id="traffic_signal_controller_service::snmp_client::snmp_client" name="traffic_signal_controller_service::snmp_client::snmp_client">
-<area shape="rect" id="node1" title="Constructor for Traffic Signal Controller Service client. Uses the arguments provided to establish an..." alt="" coords="5,5,180,61"/>
-<area shape="rect" id="node2" href="$ntcip__1202__ext_8h.html#a576de7b60eacee3f1a70393a005502cd" title="Returns std::string representation of ntcip_1202_ext message including phase_times array." alt="" coords="228,20,307,47"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classmessage__services_1_1workers_1_1base__worker.html" title=" " alt="" coords="5,104,207,145"/>
-<area shape="rect" id="node2" href="$classmessage__services_1_1workers_1_1bsm__worker.html" title=" " alt="" coords="264,5,465,47"/>
-<area shape="rect" id="node3" href="$classmessage__services_1_1workers_1_1mobilityoperation__worker.html" title=" " alt="" coords="264,71,465,112"/>
-<area shape="rect" id="node4" href="$classmessage__services_1_1workers_1_1mobilitypath__worker.html" title=" " alt="" coords="264,136,465,177"/>
-<area shape="rect" id="node5" href="$classmessage__services_1_1workers_1_1vehicle__status__intent__worker.html" title=" " alt="" coords="255,201,475,243"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classstreets__vehicle__scheduler_1_1vehicle__scheduler.html" title="Abstract Class for extend to implement scheduling business logic." alt="" coords="5,39,196,80"/>
-<area shape="rect" id="node2" href="$classstreets__vehicle__scheduler_1_1all__stop__vehicle__scheduler.html" title=" " alt="" coords="251,5,457,47"/>
-<area shape="rect" id="node3" href="$classstreets__vehicle__scheduler_1_1signalized__vehicle__scheduler.html" title=" " alt="" coords="244,71,464,112"/>
-</map>

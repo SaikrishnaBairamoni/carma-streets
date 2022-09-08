@@ -1,4 +1,0 @@
-<map id="ntcip::ntcip_1202_ext_phasetime::get_spat_ovp_max_time_to_change" name="ntcip::ntcip_1202_ext_phasetime::get_spat_ovp_max_time_to_change">
-<area shape="rect" id="node1" title="Get spat_ovp_max_time_to_change and convert from netwrok byte order to host byte order." alt="" coords="216,5,416,61"/>
-<area shape="rect" id="node2" href="$structntcip_1_1ntcip__1202__ext__phasetime.html#a6821fa39f38b2204fac86cc42235fcd2" title="Convert information to string." alt="" coords="5,13,168,54"/>
-</map>

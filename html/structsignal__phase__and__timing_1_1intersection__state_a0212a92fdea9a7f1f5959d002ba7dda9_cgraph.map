@@ -1,4 +1,0 @@
-<map id="signal_phase_and_timing::intersection_state::get_movement" name="signal_phase_and_timing::intersection_state::get_movement">
-<area shape="rect" id="node1" title="Return reference to movement_state for signal group." alt="" coords="5,5,192,61"/>
-<area shape="rect" id="node2" href="$ntcip__1202__ext_8h.html#a576de7b60eacee3f1a70393a005502cd" title="Returns std::string representation of ntcip_1202_ext message including phase_times array." alt="" coords="240,20,319,47"/>
-</map>

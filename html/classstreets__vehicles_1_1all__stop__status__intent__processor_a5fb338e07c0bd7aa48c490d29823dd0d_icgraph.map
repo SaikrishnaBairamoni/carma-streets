@@ -1,4 +1,0 @@
-<map id="streets_vehicles::all_stop_status_intent_processor::read_est_path" name="streets_vehicles::all_stop_status_intent_processor::read_est_path">
-<area shape="rect" id="node1" title="Reads estimated path element in status and intent vehicle update." alt="" coords="272,5,491,61"/>
-<area shape="rect" id="node2" href="$classstreets__vehicles_1_1all__stop__status__intent__processor.html#a7308fe8b861031993792d0c95cf82d90" title="Process JSON status and intent update and convert it to an streets_vehicle_update." alt="" coords="5,5,224,61"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="signal_phase_and_timing::spat::update_intersection_state" name="signal_phase_and_timing::spat::update_intersection_state">
-<area shape="rect" id="node1" title="Method to update the front entry in the intersections list of intersection_state(s) with the provided..." alt="" coords="240,5,475,47"/>
-<area shape="rect" id="node2" href="$structsignal__phase__and__timing_1_1spat.html#abf3e0ae490abd77f4c168e34222c21dc" title="Update spat object data using ntcip_1202_ext data received via UDP socket. Bool flag to control wheth..." alt="" coords="5,5,192,47"/>
-</map>

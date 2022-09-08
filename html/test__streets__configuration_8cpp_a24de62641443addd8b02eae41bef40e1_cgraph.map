@@ -1,4 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title="Tested singleton initialization without manifest.json configuration file." alt="" coords="5,13,60,39"/>
-<area shape="rect" id="node2" href="$classstreets__service_1_1streets__configuration.html#a48f38b0b6ecb3043cc051b624f12824b" title="Retreive configuration parameter boolean value with provide name." alt="" coords="108,5,356,47"/>
-</map>

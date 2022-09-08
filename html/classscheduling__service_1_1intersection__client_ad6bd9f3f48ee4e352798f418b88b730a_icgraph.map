@@ -1,4 +1,0 @@
-<map id="scheduling_service::intersection_client::request_intersection_info" name="scheduling_service::intersection_client::request_intersection_info">
-<area shape="rect" id="node1" title="Send http GET request to intersection model at rate of configured HZ until it gets the intersection i..." alt="" coords="244,5,439,61"/>
-<area shape="rect" id="node2" href="$classscheduling__service_1_1intersection__client.html#ac510cca78365a620384ff9faeaad572f" title="Updating the intersection info." alt="" coords="5,5,196,61"/>
-</map>

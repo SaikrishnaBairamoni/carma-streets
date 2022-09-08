@@ -1,7 +1,0 @@
-<map id="signal_phase_and_timing::spat::update" name="signal_phase_and_timing::spat::update">
-<area shape="rect" id="node1" title="Update spat object data using ntcip_1202_ext data received via UDP socket. Bool flag to control wheth..." alt="" coords="5,119,192,161"/>
-<area shape="rect" id="node2" href="$structntcip_1_1ntcip__1202__ext.html#af186e0f2ed0ef770ecc230c4af031a59" title="Returns 3 bytes translated into seconds of the UTC day message timestamp." alt="" coords="263,5,452,61"/>
-<area shape="rect" id="node3" href="$structsignal__phase__and__timing_1_1spat.html#ac664acbcf145d92f92605e3bfde11ce7" title="Method to set SPaT timestamp based on system time." alt="" coords="256,86,459,127"/>
-<area shape="rect" id="node4" href="$structsignal__phase__and__timing_1_1spat.html#a59f4842ab1588deac2746ecdafcd29b3" title="Method to set SPaT timestamp based on NTCIP message timestamp. The NTCIP message timestamp consists o..." alt="" coords="256,151,459,193"/>
-<area shape="rect" id="node5" href="$structsignal__phase__and__timing_1_1spat.html#ae02c2e6b6a732834be0f8472270f7931" title="Method to update the front entry in the intersections list of intersection_state(s) with the provided..." alt="" coords="240,217,475,258"/>
-</map>

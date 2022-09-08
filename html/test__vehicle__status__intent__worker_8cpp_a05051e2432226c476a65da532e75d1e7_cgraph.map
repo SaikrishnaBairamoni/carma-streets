@@ -1,6 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title=" " alt="" coords="5,64,60,91"/>
-<area shape="rect" id="node2" href="$classmessage__services_1_1workers_1_1vehicle__status__intent__worker.html#a6aee44d51857707cf9006138bb322a9c" title="Return the vector of vehicle_status_intent stored in the vehicle_status_intent_worker." alt="" coords="115,5,317,61"/>
-<area shape="rect" id="node3" href="$classmessage__services_1_1workers_1_1vehicle__status__intent__worker.html#a0fca51325cb92540f94543004bea9953" title="Update the vehicle status and intent base on the bsm info." alt="" coords="108,86,324,157"/>
-<area shape="rect" id="node4" href="$classmessage__services_1_1models_1_1bsm.html#ac9119ef3e4a5d64b493f49f06353b9d8" title=" " alt="" coords="372,101,571,142"/>
-</map>

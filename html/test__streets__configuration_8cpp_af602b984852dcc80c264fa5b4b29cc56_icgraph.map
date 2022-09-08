@@ -1,5 +1,0 @@
-<map id="update_configuration" name="update_configuration">
-<area shape="rect" id="node1" title="Update string param3 inside manifest.json." alt="" coords="265,42,424,69"/>
-<area shape="rect" id="node2" href="$classstreets__service_1_1streets__configuration.html#a595d66c854ec6d7bb85d975721b5cde3" title="Method to check last modified time of file to see if a file update is necessary." alt="" coords="5,5,217,47"/>
-<area shape="rect" id="node3" href="$test__streets__configuration_8cpp.html#a0ff8330bebe170a7c6d66028ac75ee5d" title="Tested get_config methods with created manifest.json file including updates." alt="" coords="84,71,139,98"/>
-</map>

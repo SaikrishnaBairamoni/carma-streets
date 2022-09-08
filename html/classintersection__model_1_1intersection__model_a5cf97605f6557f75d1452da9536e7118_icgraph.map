@@ -1,4 +1,0 @@
-<map id="intersection_model::intersection_model::update_link_departure_lanelets_info_by_entry_lanelet" name="intersection_model::intersection_model::update_link_departure_lanelets_info_by_entry_lanelet">
-<area shape="rect" id="node1" title="Get the following link lanelets information from the entering lanelet. Based on the link lanelets,..." alt="" coords="108,5,285,91"/>
-<area shape="rect" id="node2" href="$test__intersection__model_8cpp.html#acafe24a22c0f313e364d4b4e2f7d90df" title=" " alt="" coords="5,35,60,61"/>
-</map>

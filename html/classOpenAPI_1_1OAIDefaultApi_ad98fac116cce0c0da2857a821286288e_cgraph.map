@@ -1,7 +1,0 @@
-<map id="OpenAPI::OAIDefaultApi::listDepartureLanelets" name="OpenAPI::OAIDefaultApi::listDepartureLanelets">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,183,112"/>
-<area shape="rect" id="node2" href="$classOpenAPI_1_1OAIHttpRequestWorker.html#a241304dc9d0548df76510834b44617fe" title=" " alt="" coords="231,5,465,47"/>
-<area shape="rect" id="node4" href="$classOpenAPI_1_1OAIHttpRequestWorker.html#a4cacd35a634ee9383ed40f2cb3623d2c" title=" " alt="" coords="231,71,465,112"/>
-<area shape="rect" id="node5" href="$classOpenAPI_1_1OAIHttpRequestWorker.html#ac4c0e5da7f31b1cb763da1a51cd25eb9" title=" " alt="" coords="231,136,465,177"/>
-<area shape="rect" id="node3" href="$classOpenAPI_1_1OAIHttpRequestWorker.html#a956ba64d89ae192257247fb93a37bbf8" title=" " alt="" coords="513,5,748,47"/>
-</map>

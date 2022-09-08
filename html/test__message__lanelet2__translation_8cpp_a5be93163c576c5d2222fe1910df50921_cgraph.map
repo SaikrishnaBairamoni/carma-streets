@@ -1,6 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title=" " alt="" coords="5,75,60,102"/>
-<area shape="rect" id="node2" href="$classmessage__services_1_1message__translations_1_1message__lanelet2__translation.html#a36279637c5cf92197ba62c4e16c7d39e" title=" " alt="" coords="108,5,339,76"/>
-<area shape="rect" id="node4" href="$classmessage__services_1_1message__translations_1_1message__lanelet2__translation.html#a171bf6b007d7aefae8b1e1254e2c58ab" title=" " alt="" coords="119,100,328,171"/>
-<area shape="rect" id="node3" href="$classmessage__services_1_1message__translations_1_1message__lanelet2__translation.html#aad90a20416b9d7053f1072d3790665b8" title="Function to convert GPS location to a 3d point in map frame." alt="" coords="387,5,596,76"/>
-</map>

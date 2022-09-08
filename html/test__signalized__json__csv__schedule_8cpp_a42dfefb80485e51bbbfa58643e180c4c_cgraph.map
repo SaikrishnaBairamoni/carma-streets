@@ -1,4 +1,0 @@
-<map id="TEST_F" name="TEST_F">
-<area shape="rect" id="node1" title="Test with multiple vehicle for json schedule." alt="" coords="5,20,75,47"/>
-<area shape="rect" id="node2" href="$structstreets__vehicle__scheduler_1_1signalized__intersection__schedule.html#a7afc1e1bcb2229d598de2be93b253a80" title="Method to write intersection schedule as JSON scheduling message." alt="" coords="123,5,313,61"/>
-</map>
