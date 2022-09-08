@@ -27,3 +27,8 @@ jobs:
       - run:
           name: Deploy docs to gh-pages branch
           command: gh-pages --dotfiles --message "[skip ci] Updates" --dist /html
+          
+general:
+  branches:
+    ignore:
+      - gh-pages          
