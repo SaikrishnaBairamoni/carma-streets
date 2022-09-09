@@ -1,18 +1,10 @@
 version: 2
 jobs:
   build:
+    filters:
+      branches:
+        ignore: gh-pages
     docker:
-      - image:  cimg/python:3.8.10-node
-    working_directory: ~/repo
-    environment:
-      BRANCH: develop
-      TARGET_REPO: github.com/SaikrishnaBairamoni/saikrishnabairamoni.github.io
-      PELICAN_OUTPUT_FOLDER: output
+      - image: ubuntu:latest
     steps:
-      - checkout
-      # Download and cache dependencies
-      #- restore_cache:
-          #keys:
-            #- v1-dependencies-{{ checksum "requirements.txt" }}
-            # fallback to using the latest cache if no exact match is found
-            #- v1-dependencies-
+      - run: echo Skipping gh-pages build
