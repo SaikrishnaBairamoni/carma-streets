@@ -1,12 +1,10 @@
 version: 2
 jobs:
   build:
+    filters:
+      branches:
+        ignore: gh-pages
     docker:
-      - image:  cimg/python:3.8.10-node
-    working_directory: ~/repo
-    environment:
-      BRANCH: develop
-      TARGET_REPO: 
-      PELICAN_OUTPUT_FOLDER: output
+      - image: ubuntu:latest
     steps:
-      - checkout
+      - run: echo Skipping gh-pages build
