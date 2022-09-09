@@ -19,16 +19,14 @@ jobs:
             #sudo apt-get -y install build-essential checkinstall
             ls -la
             pwd         
-      - run:
-          name: Create the Doxygen
-          command: |
-            ls -la
-            pwd
-      - run:
-          name: Deploy docs to gh-pages branch
-          command: gh-pages --dotfiles --message "[skip ci] Updates" --dist /html
-          
-general:
-  branches:
-    ignore:
-      - gh-pages          
+            
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build:
+          filters:
+           branches:
+              ignore: gh-pages
+           tags:
+              only: /^[\.0-9]*$/
