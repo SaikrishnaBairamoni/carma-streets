@@ -9,50 +9,24 @@ jobs:
       TARGET_REPO: github.com/SaikrishnaBairamoni/saikrishnabairamoni.github.io
       PELICAN_OUTPUT_FOLDER: output
     steps:
-      - checkout
-      # Download and cache dependencies
-      #- restore_cache:
-          #keys:
-            #- v1-dependencies-{{ checksum "requirements.txt" }}
-            # fallback to using the latest cache if no exact match is found
-            #- v1-dependencies-         
+      - checkout        
       - run:
           name: install doxygen latex components
           command: |
-            sudo apt-get update; sudo apt-get install -y doxygen graphviz texlive-full
-            sudo apt-get install git wget tar unzip cmake -y
+            #sudo apt-get update; sudo apt-get install -y doxygen graphviz texlive-full
+            #sudo apt-get install git wget tar unzip cmake -y
             #sudo apt-get -y -qq update
             #sudo apt-get -y install build-essential checkinstall
             ls -la
             pwd         
-      - run:
-          name: Create the Doxygen
-          command: |
-            #git clone -o mine git@github.com:shundhammer/libyui.git
-            git config --global user.email "Saikrishna.Bairamoni@leidos.com"
-            git config --global user.name "SaikrishnaBairamoni"
-            #git clone -o mine https://github.com/SaikrishnaBairamoni/carma-streets.git
-            #cd carma-streets
-            #git commit -am "Generated API doc"
-            #git push -f mine gh-pages    
-            #git push -f mine gh-pages:gh-pages
-            # First switch to the gh-pages branch
-            git checkout gh-pages
-            #Next checkout the specific file you wish to add to the gh-pages branch
-            git checkout develop -- /home/circleci/repo/html
-            # Perfom the commit
-            git commit -m "moved html from develop"
-            # And push
-            git push https://${GIT_TOKEN}@github.com/SaikrishnaBairamoni/carma-streets.git
-
+            
 workflows:
   version: 2
-  dev_stage_pre-prod:
+  build:
     jobs:
       - build:
-          filters:  # using regex filters requires the entire branch to match
-            branches:
-              only:  # only branches matching the below regex filters will run
-                - develop
-              ignore:
-                - gh-pages    
+          filters:
+           branches:
+              ignore: gh-pages
+           tags:
+              only: /^[\.0-9]*$/
