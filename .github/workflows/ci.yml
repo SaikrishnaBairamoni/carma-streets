@@ -9,7 +9,7 @@ jobs:
     defaults:
       run:
         shell: bash
-    runs-on: ubuntu-latest-8-cores
+    runs-on: ubuntu-latest
     container:
       image: ubuntu:jammy-20230126
       env:
